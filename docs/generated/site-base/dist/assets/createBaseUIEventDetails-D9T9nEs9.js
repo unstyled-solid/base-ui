@@ -1,0 +1,1 @@
+function e(e,t,n,r){let i=!1,a=!1;return{reason:e,event:t??new Event(`base-ui`),trigger:n,cancel(){i=!0},allowPropagation(){a=!0},get isCanceled(){return i},get isPropagationAllowed(){return a},...r}}function t(e,t,n){return{reason:e,event:t??new Event(`base-ui`),...n}}export{t as n,e as t};

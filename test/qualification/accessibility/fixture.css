@@ -1,0 +1,17 @@
+/* Minimal consumer-owned visibility/focus styling. This does not certify product contrast. */
+html { font: 16px system-ui; color: CanvasText; background: Canvas; }
+body { margin: 1rem; }
+main { padding: 1rem; max-width: 40rem; }
+button, input, [role="button"], [role="checkbox"], [role="switch"], [role="radio"], [role="tab"] {
+  padding: .5rem; margin: .25rem; border: 1px solid ButtonText; background: ButtonFace; color: ButtonText;
+}
+:focus-visible { outline: 3px solid Highlight; outline-offset: 2px; }
+[role="dialog"], [role="alertdialog"], [role="listbox"], [data-testid="popup"] {
+  background: Canvas; color: CanvasText; border: 2px solid CanvasText; padding: 1rem; max-width: 80vw;
+}
+[data-testid="outer"], [data-testid="inner"] { position: fixed; inset: 15% auto auto 15%; }
+[data-testid="inner"] { inset: 25% auto auto 25%; }
+[data-testid="viewport"] { position: fixed; bottom: 1rem; inset-inline-end: 1rem; }
+[data-testid="panel"] { overflow: hidden; transition: height 120ms linear; }
+@media (prefers-reduced-motion: reduce) { [data-testid="panel"] { transition: none; } }
+@media (forced-colors: active) { :focus-visible { outline-color: Highlight; } }

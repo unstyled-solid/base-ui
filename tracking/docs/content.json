@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "ticket": "bsolid-docs-content",
+  "status": "implementation-ready-for-orchestrator-review",
+  "source": {
+    "repository": "https://github.com/mui/base-ui",
+    "checkout": "upstream/base-ui",
+    "sha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "verifiedParitySha": null,
+    "checkoutCleanAtVerification": true
+  },
+  "owns": [
+    "docs/upstream/**",
+    "docs/upstream-manifest.json",
+    "docs/content/transforms/**",
+    "docs/scripts/sync/**",
+    "tracking/docs/content.json"
+  ],
+  "artifacts": {
+    "originalInputs": "docs/upstream/base-ui",
+    "snapshot": "docs/upstream/snapshot.json",
+    "manifest": "docs/upstream-manifest.json",
+    "pages": "docs/upstream/generated/pages",
+    "report": "docs/upstream/generated/report.json",
+    "contract": "docs/content/transforms/README.md",
+    "entrypoint": "docs/scripts/sync/index.mjs",
+    "tests": "docs/scripts/sync/content.test.mjs"
+  },
+  "inventory": {
+    "publicMdxPages": 84,
+    "capturedByteIdenticalInputs": 739,
+    "excludedReactGeneratedTypeTables": 42,
+    "generatedOutputsIncludingManifestAndReport": 86,
+    "sourceLinkedSemanticFlags": 2188,
+    "reusedPureHelpers": 4,
+    "fontLicenseReviews": 5,
+    "unknownNodePolicy": "Fail with source location and handler-mapping guidance; never discard or execute unsupported MDX.",
+    "pageDispositionPolicy": "Semantic review required; upstream React release history explicitly scoped; production-error page is upstream-reference-only."
+  },
+  "sourceToTarget": [
+    {
+      "source": "docs/src/app/(docs)/**/page.mdx",
+      "target": "docs/upstream/generated/pages/**/page.json",
+      "mapping": "Exact individual hashes, destinations, parsed imports, routes, headings, metadata and semantic flags in docs/upstream-manifest.json."
+    },
+    {
+      "source": "Referenced demo imports, transitive local source/CSS/assets, docs/src/css/**",
+      "target": "docs/upstream/base-ui/**",
+      "mapping": "Parser-derived dependency edges; renderer/factory boundaries and excluded React type output are explicitly inventoried, not executed."
+    },
+    {
+      "source": "docs/src/mdx/remarkHeadingTags.mjs; docs/src/components/QuickNav/{remarkQuickNavExcludeHeading,rehypeSlug}.mjs; docs/scripts/generateLlmTxt/mdxNodeHelpers.mjs",
+      "target": "Same paths under docs/upstream/base-ui",
+      "mapping": "Unmodified pure helpers reused during transformation; pinned docs-package source, hashes and MIT license records included."
+    }
+  ],
+  "checks": [
+    {
+      "command": "rtk pnpm docs:sync --check --verify-upstream",
+      "result": "passed",
+      "evidence": "Normal workspace command; all captured source hashes match clean pinned checkout, 84 pages / 86 outputs, changed=[]; no temporary resolver."
+    },
+    {
+      "command": "rtk pnpm docs:test:content",
+      "result": "passed",
+      "evidence": "11 tests passed, 0 failed/skipped. Actual resolved parser versions; structural package-only edits; Button prose/anatomy; metadata/route links; source heading IDs/badges/duplicates; fail-closed unknown nodes/expressions/spreads; unchanged React release meaning; CSS URL parsing; two byte-identical full builds; targeted fixture mutation; check-only/write/symlink boundaries; offline check without checkout; corruption and obsolete-output detection."
+    },
+    {
+      "command": "Targeted mutation test in docs/scripts/sync/content.test.mjs",
+      "result": "passed",
+      "evidence": "Changed Button fixture title regenerated only its page and source manifest; authored docs/components/button sentinel and unrelated Field output mtime/bytes remained unchanged. Canonical inputs were not edited."
+    },
+    {
+      "command": "rtk proxy bd dep cycles",
+      "result": "passed",
+      "evidence": "No dependency cycles after creating followups and linking docs-complete."
+    },
+    {
+      "command": "rtk git diff --check",
+      "result": "passed",
+      "evidence": "Tracked shared-tree diff whitespace check only; untracked content correctness is covered by importer/hash/Node tests."
+    }
+  ],
+  "toolingHistory": {
+    "initialBlocker": "Root docs:sync command and parser packages were initially absent; exact scripts/dependencies requested in bsolid-dist-contract notes.",
+    "boundedWorkaround": "One isolated pnpm install of exact parser versions succeeded in 1.8 seconds, outside workspace; temporary Node resolution hook allowed implementation checks while owner integrated shared files.",
+    "finalOutcome": "Distribution owner integrated root scripts and dependencies; normal workspace commands now pass without temporary tooling. No active content-tooling execution blocker remains.",
+    "sharedManifestEditsByContentWorker": false
+  },
+  "followups": [
+    {
+      "id": "bsolid-docs-content-command-integration",
+      "state": "commands-and-exact-parser-resolution-now-pass-owner-review-pending",
+      "finalGate": "bsolid-docs-complete"
+    },
+    {
+      "id": "bsolid-docs-content-semantic-integration",
+      "state": "open",
+      "finalGate": "bsolid-docs-complete"
+    },
+    {
+      "id": "bsolid-docs-content-font-provenance",
+      "state": "open",
+      "finalGate": "bsolid-docs-complete"
+    },
+    {
+      "id": "bsolid-docs-content-final-render-replay",
+      "state": "deferred-final-only-browser-execution",
+      "finalGate": "bsolid-docs-complete"
+    }
+  ],
+  "qualification": {
+    "browserExecuted": false,
+    "renderedSiteParityVerified": false,
+    "solidExampleOrApiParityVerified": false,
+    "semanticOverlayRequirement": "Every adaptation and bounded site/demo/API handler requires source-linked review and real downstream output. All imported pages remain publishable=false.",
+    "assetRequirement": "Five font records use SPDX NOASSERTION/license-review-required pending explicit redistribution provenance; source CSS stays byte-identical.",
+    "finalGates": ["bsolid-docs-complete", "bsolid-browser", "bsolid-accessibility", "bsolid-release-ready"]
+  },
+  "handoff": {
+    "ticketLeftOpen": true,
+    "componentFragmentsEdited": false,
+    "centralDocsInfrastructureEdited": false,
+    "upstreamOrReferenceEdited": false,
+    "committedPushedOrPublished": false,
+    "ownershipConflicts": [],
+    "contracts": "Source JSON AST is non-executable. /react routes map to /solid except upstream React release history. baseui-solid2 is a private workspace identity, not a publication claim. Consumers read snapshots/generated records and implement their own owned overlays and real API/demo registries."
+  }
+}

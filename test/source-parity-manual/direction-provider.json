@@ -1,0 +1,36 @@
+{
+  "upstreamFile": "packages/react/src/direction-provider/DirectionProvider.test.tsx",
+  "targetFile": "test/integration/RootCrossFamily.test.tsx",
+  "sourceCommit": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "cases": [
+    {
+      "title": "defaults useDirection to ltr outside a provider",
+      "parameters": [],
+      "predicates": [],
+      "lane": "jsdom and browser",
+      "sequence": ["render direction probe without provider"],
+      "assertions": ["probe text contains ltr"],
+      "initialDisposition": "missing",
+      "disposition": "matched",
+      "targetTitles": ["defaults useDirection to ltr outside a provider"],
+      "evidence": "Added the same default-context text assertion. Existing RTL Toolbar integration exercised configured direction, but did not assert the default without a provider.",
+      "adaptation": "Solid useDirection returns an accessor; call it in the probe JSX rather than snapshotting its value.",
+      "verification": "pending final parallel lane runs"
+    },
+    {
+      "title": "provides the configured direction to descendants",
+      "parameters": { "initialDirection": "rtl", "nextDirection": "ltr" },
+      "predicates": [],
+      "lane": "jsdom and browser",
+      "sequence": ["render provider with rtl and descendant probe", "assert rtl", "set live direction prop to ltr", "assert ltr"],
+      "assertions": ["probe text initially contains rtl", "probe text after update contains ltr"],
+      "initialDisposition": "missing",
+      "disposition": "matched",
+      "targetTitles": ["provides the configured direction to descendants"],
+      "evidence": "Added upstream update sequence and both text assertions, plus original-host identity. Existing cross-family RTL keyboard coverage had no provider direction update.",
+      "adaptation": "Existing renderProps factory supplies live props, and descendant reads the native context accessor in JSX.",
+      "verification": "pending final parallel lane runs"
+    }
+  ],
+  "targetOnly": "Existing RootCrossFamily registrations retained verbatim; they have not yet been classified against their own source families."
+}

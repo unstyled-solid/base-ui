@@ -1,0 +1,7 @@
+var e=`{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": { "types": ["node", "vite/client", "@vitest/browser-playwright"] },
+  "include": ["entry.ts", "**/index.tsx"],
+  "exclude": [".cache"]
+}
+`;export{e as default};

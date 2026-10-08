@@ -1,0 +1,8 @@
+[submodule "upstream/base-ui"]
+	path = upstream/base-ui
+	url = https://github.com/mui/base-ui.git
+	branch = master
+[submodule "upstream/solid-floating-ui"]
+	path = upstream/solid-floating-ui
+	url = https://github.com/lxsmnsyc/solid-floating-ui.git
+	branch = main

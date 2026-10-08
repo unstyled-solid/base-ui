@@ -1,0 +1,27 @@
+$ node scripts/test/run.mjs ssr createRenderElement NumberField Tabs Tooltip Avatar Accordion Collapsible Select Slider OTPField Combobox --no-watch
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=forks maxWorkers=2 TZ=UTC
+ ✓ |solid2-server| packages/solid/src/tooltip/Tooltip.source-inventory.ssr.test.ts (2 tests) 18ms
+ ✓ |solid2-server| packages/solid/src/slider/Slider.ssr.test.tsx (5 tests) 40ms
+ ✓ |solid2-server| packages/solid/src/otp-field/root/OTPFieldRoot.ssr.test.tsx (7 tests) 21ms
+ ✓ |solid2-server| packages/solid/src/accordion/Accordion.ssr.test.tsx (3 tests) 18ms
+ ✓ |solid2-server| packages/solid/src/tooltip/Tooltip.ssr.test.tsx (2 tests) 12ms
+ ✓ |solid2-server| packages/solid/src/combobox/root/ComboboxRoot.ssr.test.tsx (4 tests) 27ms
+ ✓ |solid2-server| packages/solid/src/avatar/Avatar.ssr.test.tsx (4 tests) 11ms
+ ✓ |solid2-server| packages/solid/src/tabs/indicator/TabsIndicator.ssr.test.tsx (2 tests) 23ms
+ ✓ |solid2-server| packages/solid/src/collapsible/panel/CollapsiblePanel.ssr.test.tsx (2 tests) 12ms
+ ✓ |solid2-server| packages/solid/src/select/root/SelectRoot.ssr.test.tsx (2 tests) 14ms
+ ✓ |solid2-server| packages/solid/src/number-field/NumberField.ssr.test.tsx (5 tests) 26ms
+ ✓ |solid2-server| packages/solid/src/tabs/root/TabsRoot.ssr.test.tsx (2 tests) 14ms
+ ✓ |solid2-server| packages/solid/src/internals/createRenderElement.ssr.test.tsx (1 test) 5ms
+ ✓ |solid2-server| packages/solid/src/internals/labelable-provider/SliderLabels.ssr.test.tsx (1 test) 21ms
+
+ Test Files  14 passed (14)
+      Tests  42 passed (42)
+   Start at  18:54:27
+   Duration  2.62s (transform 2.51s, setup 378ms, import 3.38s, tests 262ms, environment 1ms)
+
+[HARNESS_FINAL] passed; files=14 failedFiles=0; passed=42 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0

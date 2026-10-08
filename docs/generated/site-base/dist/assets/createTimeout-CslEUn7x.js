@@ -1,0 +1,1 @@
+import{F as e}from"../islands.js";var t=class e{static create(){return new e}currentId=0;start(e,t){this.clear(),this.currentId=setTimeout(()=>{this.currentId=0,t()},e)}isStarted(){return this.currentId!==0}clear=()=>{this.currentId!==0&&(clearTimeout(this.currentId),this.currentId=0)};disposeEffect=()=>this.clear};function n(){let n=t.create();return e(n.clear),n}export{n,t};

@@ -1,0 +1,2147 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/handbook/typescript/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "0b567171d59f500e711decb035f236e11c45add3fca2c787ca75e01787378c4b",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/handbook/typescript",
+  "route": "/solid/handbook/typescript",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "TypeScript",
+  "subtitle": "A guide to using TypeScript with Base UI.",
+  "metadata": {
+    "keywords": [
+      "Base UI TypeScript",
+      "Component Props Namespace",
+      "Combobox ChangeEventDetails",
+      "Popover Positioner State",
+      "Toast Actions Ref Types",
+      "Use Render Component Props",
+      "Handbook TypeScript",
+      "Type Definitions",
+      "Type Safety",
+      "Generics",
+      "Component Types",
+      "Props Types",
+      "Event Types",
+      "Ref Types",
+      "Type Inference",
+      "Strongly Typed Components"
+    ],
+    "description": "A guide to using TypeScript with Base UI."
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "TypeScript",
+      "properties": {
+        "id": "typescript"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Namespaces",
+      "properties": {
+        "id": "namespaces"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:6:1"
+    },
+    {
+      "depth": 3,
+      "text": "Props",
+      "properties": {
+        "id": "props"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:13:1"
+    },
+    {
+      "depth": 3,
+      "text": "State",
+      "properties": {
+        "id": "state"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:25:1"
+    },
+    {
+      "depth": 3,
+      "text": "Events",
+      "properties": {
+        "id": "events"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:48:1"
+    },
+    {
+      "depth": 3,
+      "text": "Other accessible types",
+      "properties": {
+        "id": "other-accessible-types"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:66:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A guide to using TypeScript with Base UI."
+      },
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:4:1"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:17:1",
+      "detail": "Tooltip.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:17:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:30:1",
+      "detail": "Popover.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:30:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:30:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:56:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:73:57",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/typescript/page.mdx:73:121",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "TypeScript",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 13,
+                "offset": 12
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 13,
+            "offset": 12
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "typescript"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A guide to using TypeScript with Base UI.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 24
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 52,
+                    "offset": 65
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 14
+              },
+              "end": {
+                "line": 3,
+                "column": 63,
+                "offset": 76
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 14
+          },
+          "end": {
+            "line": 3,
+            "column": 63,
+            "offset": 76
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 7,
+                "offset": 83
+              },
+              "end": {
+                "line": 4,
+                "column": 25,
+                "offset": 101
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A guide to using TypeScript with Base UI.",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 26,
+                "offset": 102
+              },
+              "end": {
+                "line": 4,
+                "column": 77,
+                "offset": 153
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 77
+          },
+          "end": {
+            "line": 4,
+            "column": 80,
+            "offset": 156
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Namespaces",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 4,
+                "offset": 161
+              },
+              "end": {
+                "line": 6,
+                "column": 14,
+                "offset": 171
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 158
+          },
+          "end": {
+            "line": 6,
+            "column": 14,
+            "offset": 171
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "namespaces"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI uses namespaces to organize types. Every component has two core interfaces:",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 1,
+                "offset": 173
+              },
+              "end": {
+                "line": 8,
+                "column": 84,
+                "offset": 256
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 8,
+            "column": 1,
+            "offset": 173
+          },
+          "end": {
+            "line": 8,
+            "column": 84,
+            "offset": 256
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "Props",
+                    "position": {
+                      "start": {
+                        "line": 10,
+                        "column": 3,
+                        "offset": 260
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 10,
+                        "offset": 267
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " (such as ",
+                    "position": {
+                      "start": {
+                        "line": 10,
+                        "column": 10,
+                        "offset": 267
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 20,
+                        "offset": 277
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Tooltip.Root.Props",
+                    "position": {
+                      "start": {
+                        "line": 10,
+                        "column": 20,
+                        "offset": 277
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 40,
+                        "offset": 297
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 10,
+                        "column": 40,
+                        "offset": 297
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 41,
+                        "offset": 298
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 10,
+                    "column": 3,
+                    "offset": 260
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 41,
+                    "offset": 298
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 10,
+                "column": 1,
+                "offset": 258
+              },
+              "end": {
+                "line": 10,
+                "column": 41,
+                "offset": 298
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "State",
+                    "position": {
+                      "start": {
+                        "line": 11,
+                        "column": 3,
+                        "offset": 301
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 10,
+                        "offset": 308
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " (such as ",
+                    "position": {
+                      "start": {
+                        "line": 11,
+                        "column": 10,
+                        "offset": 308
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 20,
+                        "offset": 318
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Tooltip.Root.State",
+                    "position": {
+                      "start": {
+                        "line": 11,
+                        "column": 20,
+                        "offset": 318
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 40,
+                        "offset": 338
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 11,
+                        "column": 40,
+                        "offset": 338
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 41,
+                        "offset": 339
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 11,
+                    "column": 3,
+                    "offset": 301
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 41,
+                    "offset": 339
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 1,
+                "offset": 299
+              },
+              "end": {
+                "line": 11,
+                "column": 41,
+                "offset": 339
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 258
+          },
+          "end": {
+            "line": 11,
+            "column": 41,
+            "offset": 339
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Props",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 5,
+                "offset": 345
+              },
+              "end": {
+                "line": 13,
+                "column": 10,
+                "offset": 350
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 341
+          },
+          "end": {
+            "line": 13,
+            "column": 10,
+            "offset": 350
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "props"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When creating wrapping components, you can use the ",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 352
+              },
+              "end": {
+                "line": 15,
+                "column": 52,
+                "offset": 403
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Props",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 52,
+                "offset": 403
+              },
+              "end": {
+                "line": 15,
+                "column": 59,
+                "offset": 410
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " type to accept all of the underlying Base UI props for the component.",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 59,
+                "offset": 410
+              },
+              "end": {
+                "line": 15,
+                "column": 129,
+                "offset": 480
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 352
+          },
+          "end": {
+            "line": 15,
+            "column": 129,
+            "offset": 480
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Prop types\"",
+        "value": "import { Tooltip } from 'baseui-solid2/tooltip';\n\nfunction MyTooltip(props: Tooltip.Root.Props) {\n  return <Tooltip.Root {...props} />;\n}",
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 482
+          },
+          "end": {
+            "line": 23,
+            "column": 4,
+            "offset": 650
+          }
+        },
+        "data": {
+          "sourceValue": "import { Tooltip } from '@base-ui/react/tooltip';\n\nfunction MyTooltip(props: Tooltip.Root.Props) {\n  return <Tooltip.Root {...props} />;\n}",
+          "references": [
+            {
+              "value": "@base-ui/react/tooltip",
+              "start": 25,
+              "end": 47,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/tooltip",
+              "start": 25,
+              "end": 47,
+              "kind": "import",
+              "replacement": "baseui-solid2/tooltip"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "State",
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 5,
+                "offset": 656
+              },
+              "end": {
+                "line": 25,
+                "column": 10,
+                "offset": 661
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 25,
+            "column": 1,
+            "offset": 652
+          },
+          "end": {
+            "line": 25,
+            "column": 10,
+            "offset": 661
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "state"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 1,
+                "offset": 663
+              },
+              "end": {
+                "line": 27,
+                "column": 5,
+                "offset": 667
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "State",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 5,
+                "offset": 667
+              },
+              "end": {
+                "line": 27,
+                "column": 12,
+                "offset": 674
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " type is the internal state of the component.\nFor example, ",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 12,
+                "offset": 674
+              },
+              "end": {
+                "line": 28,
+                "column": 14,
+                "offset": 733
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Positioner",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 14,
+                "offset": 733
+              },
+              "end": {
+                "line": 28,
+                "column": 26,
+                "offset": 745
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " components (such as ",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 26,
+                "offset": 745
+              },
+              "end": {
+                "line": 28,
+                "column": 47,
+                "offset": 766
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Positioner>",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 47,
+                "offset": 766
+              },
+              "end": {
+                "line": 28,
+                "column": 69,
+                "offset": 788
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ") have state that describes the position of the element in relation to their anchor.",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 69,
+                "offset": 788
+              },
+              "end": {
+                "line": 28,
+                "column": 153,
+                "offset": 872
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 27,
+            "column": 1,
+            "offset": 663
+          },
+          "end": {
+            "line": 28,
+            "column": 153,
+            "offset": 872
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Positioner state\"",
+        "value": "function renderPositioner(props: Popover.Positioner.Props, state: Popover.Positioner.State) {\n  return (\n    <div {...props}>\n      <ul>\n        <li>The popover is {state.open ? 'open' : 'closed'}</li>\n        <li>I am on the {state.side} side of the anchor</li>\n        <li>I am aligned at the {state.align} of the side</li>\n        <li>The anchor is {state.anchorHidden ? 'hidden' : 'visible'}</li>\n      </ul>\n      {props.children}\n    </div>\n  );\n}\n\n<Popover.Positioner render={renderPositioner} />;",
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 874
+          },
+          "end": {
+            "line": 46,
+            "column": 4,
+            "offset": 1414
+          }
+        },
+        "data": {
+          "sourceValue": "function renderPositioner(props: Popover.Positioner.Props, state: Popover.Positioner.State) {\n  return (\n    <div {...props}>\n      <ul>\n        <li>The popover is {state.open ? 'open' : 'closed'}</li>\n        <li>I am on the {state.side} side of the anchor</li>\n        <li>I am aligned at the {state.align} of the side</li>\n        <li>The anchor is {state.anchorHidden ? 'hidden' : 'visible'}</li>\n      </ul>\n      {props.children}\n    </div>\n  );\n}\n\n<Popover.Positioner render={renderPositioner} />;",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Events",
+            "position": {
+              "start": {
+                "line": 48,
+                "column": 5,
+                "offset": 1420
+              },
+              "end": {
+                "line": 48,
+                "column": 11,
+                "offset": 1426
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 48,
+            "column": 1,
+            "offset": 1416
+          },
+          "end": {
+            "line": 48,
+            "column": 11,
+            "offset": 1426
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "events"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Types relating to custom Base UI events are also exported on component parts' namespaces.",
+            "position": {
+              "start": {
+                "line": 50,
+                "column": 1,
+                "offset": 1428
+              },
+              "end": {
+                "line": 50,
+                "column": 90,
+                "offset": 1517
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 50,
+            "column": 1,
+            "offset": 1428
+          },
+          "end": {
+            "line": 50,
+            "column": 90,
+            "offset": 1517
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "ChangeEventDetails",
+                    "position": {
+                      "start": {
+                        "line": 52,
+                        "column": 3,
+                        "offset": 1521
+                      },
+                      "end": {
+                        "line": 52,
+                        "column": 23,
+                        "offset": 1541
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " (such as ",
+                    "position": {
+                      "start": {
+                        "line": 52,
+                        "column": 23,
+                        "offset": 1541
+                      },
+                      "end": {
+                        "line": 52,
+                        "column": 33,
+                        "offset": 1551
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Combobox.Root.ChangeEventDetails",
+                    "position": {
+                      "start": {
+                        "line": 52,
+                        "column": 33,
+                        "offset": 1551
+                      },
+                      "end": {
+                        "line": 52,
+                        "column": 67,
+                        "offset": 1585
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ") is the object passed to change handlers like ",
+                    "position": {
+                      "start": {
+                        "line": 52,
+                        "column": 67,
+                        "offset": 1585
+                      },
+                      "end": {
+                        "line": 52,
+                        "column": 114,
+                        "offset": 1632
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "onValueChange",
+                    "position": {
+                      "start": {
+                        "line": 52,
+                        "column": 114,
+                        "offset": 1632
+                      },
+                      "end": {
+                        "line": 52,
+                        "column": 129,
+                        "offset": 1647
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 52,
+                        "column": 129,
+                        "offset": 1647
+                      },
+                      "end": {
+                        "line": 52,
+                        "column": 130,
+                        "offset": 1648
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 52,
+                    "column": 3,
+                    "offset": 1521
+                  },
+                  "end": {
+                    "line": 52,
+                    "column": 130,
+                    "offset": 1648
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 1,
+                "offset": 1519
+              },
+              "end": {
+                "line": 52,
+                "column": 130,
+                "offset": 1648
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "OpenChangeEventDetails",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 3,
+                        "offset": 1651
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 27,
+                        "offset": 1675
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " (such as ",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 27,
+                        "offset": 1675
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 37,
+                        "offset": 1685
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Combobox.Root.OpenChangeEventDetails",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 37,
+                        "offset": 1685
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 75,
+                        "offset": 1723
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ") is the object passed to ",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 75,
+                        "offset": 1723
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 101,
+                        "offset": 1749
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "onOpenChange",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 101,
+                        "offset": 1749
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 115,
+                        "offset": 1763
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " on components whose ",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 115,
+                        "offset": 1763
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 136,
+                        "offset": 1784
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "ChangeEventDetails",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 136,
+                        "offset": 1784
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 156,
+                        "offset": 1804
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " is shared with other handlers. It extends ",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 156,
+                        "offset": 1804
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 199,
+                        "offset": 1847
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "ChangeEventDetails",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 199,
+                        "offset": 1847
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 219,
+                        "offset": 1867
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " with ",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 219,
+                        "offset": 1867
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 225,
+                        "offset": 1873
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "preventUnmountOnClose()",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 225,
+                        "offset": 1873
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 250,
+                        "offset": 1898
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 250,
+                        "offset": 1898
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 251,
+                        "offset": 1899
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 53,
+                    "column": 3,
+                    "offset": 1651
+                  },
+                  "end": {
+                    "line": 53,
+                    "column": 251,
+                    "offset": 1899
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 1,
+                "offset": 1649
+              },
+              "end": {
+                "line": 53,
+                "column": 251,
+                "offset": 1899
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "ChangeEventReason",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 3,
+                        "offset": 1902
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 22,
+                        "offset": 1921
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " (such as ",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 22,
+                        "offset": 1921
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 32,
+                        "offset": 1931
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Combobox.Root.ChangeEventReason",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 32,
+                        "offset": 1931
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 65,
+                        "offset": 1964
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ") is the union of possible reason strings for a change event.",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 65,
+                        "offset": 1964
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 126,
+                        "offset": 2025
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 54,
+                    "column": 3,
+                    "offset": 1902
+                  },
+                  "end": {
+                    "line": 54,
+                    "column": 126,
+                    "offset": 2025
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 1900
+              },
+              "end": {
+                "line": 54,
+                "column": 126,
+                "offset": 2025
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 52,
+            "column": 1,
+            "offset": 1519
+          },
+          "end": {
+            "line": 54,
+            "column": 126,
+            "offset": 2025
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Change event types\"",
+        "value": "function onValueChange(value: string, eventDetails: Combobox.Root.ChangeEventDetails) {\n  console.log(value, eventDetails);\n}\n\nfunction onOpenChange(open: boolean, eventDetails: Combobox.Root.OpenChangeEventDetails) {\n  console.log(open, eventDetails);\n}",
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 2027
+          },
+          "end": {
+            "line": 64,
+            "column": 4,
+            "offset": 2319
+          }
+        },
+        "data": {
+          "sourceValue": "function onValueChange(value: string, eventDetails: Combobox.Root.ChangeEventDetails) {\n  console.log(value, eventDetails);\n}\n\nfunction onOpenChange(open: boolean, eventDetails: Combobox.Root.OpenChangeEventDetails) {\n  console.log(open, eventDetails);\n}",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Other accessible types",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 5,
+                "offset": 2325
+              },
+              "end": {
+                "line": 66,
+                "column": 27,
+                "offset": 2347
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 66,
+            "column": 1,
+            "offset": 2321
+          },
+          "end": {
+            "line": 66,
+            "column": 27,
+            "offset": 2347
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "other-accessible-types"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Depending on the component API, other types are also exported on component parts or utility functions.\nThe following list is non-exhaustive, and each of these are documented where necessary.",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 1,
+                "offset": 2349
+              },
+              "end": {
+                "line": 69,
+                "column": 88,
+                "offset": 2539
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 68,
+            "column": 1,
+            "offset": 2349
+          },
+          "end": {
+            "line": 69,
+            "column": 88,
+            "offset": 2539
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Popups have an ",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 3,
+                        "offset": 2543
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 18,
+                        "offset": 2558
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "actionsRef",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 18,
+                        "offset": 2558
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 30,
+                        "offset": 2570
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop to access imperative methods. For example, ",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 30,
+                        "offset": 2570
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 79,
+                        "offset": 2619
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Menu.Root.Actions",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 79,
+                        "offset": 2619
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 98,
+                        "offset": 2638
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " gives access to the shape of the ",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 98,
+                        "offset": 2638
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 132,
+                        "offset": 2672
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "actionsRef",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 132,
+                        "offset": 2672
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 144,
+                        "offset": 2684
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " object prop on ",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 144,
+                        "offset": 2684
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 160,
+                        "offset": 2700
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Menu.Root>",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 160,
+                        "offset": 2700
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 173,
+                        "offset": 2713
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 173,
+                        "offset": 2713
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 174,
+                        "offset": 2714
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 71,
+                    "column": 3,
+                    "offset": 2543
+                  },
+                  "end": {
+                    "line": 71,
+                    "column": 174,
+                    "offset": 2714
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 71,
+                "column": 1,
+                "offset": 2541
+              },
+              "end": {
+                "line": 71,
+                "column": 174,
+                "offset": 2714
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The ",
+                    "position": {
+                      "start": {
+                        "line": 72,
+                        "column": 3,
+                        "offset": 2717
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 7,
+                        "offset": 2721
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "toast",
+                    "position": {
+                      "start": {
+                        "line": 72,
+                        "column": 7,
+                        "offset": 2721
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 14,
+                        "offset": 2728
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " object on ",
+                    "position": {
+                      "start": {
+                        "line": 72,
+                        "column": 14,
+                        "offset": 2728
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 25,
+                        "offset": 2739
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Toast.Root>",
+                    "position": {
+                      "start": {
+                        "line": 72,
+                        "column": 25,
+                        "offset": 2739
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 39,
+                        "offset": 2753
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " is a complex object with many properties. ",
+                    "position": {
+                      "start": {
+                        "line": 72,
+                        "column": 39,
+                        "offset": 2753
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 82,
+                        "offset": 2796
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Toast.Root.ToastObject",
+                    "position": {
+                      "start": {
+                        "line": 72,
+                        "column": 82,
+                        "offset": 2796
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 106,
+                        "offset": 2820
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " gives access to this interface.",
+                    "position": {
+                      "start": {
+                        "line": 72,
+                        "column": 106,
+                        "offset": 2820
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 138,
+                        "offset": 2852
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 72,
+                    "column": 3,
+                    "offset": 2717
+                  },
+                  "end": {
+                    "line": 72,
+                    "column": 138,
+                    "offset": 2852
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 72,
+                "column": 1,
+                "offset": 2715
+              },
+              "end": {
+                "line": 72,
+                "column": 138,
+                "offset": 2852
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Components that have a ",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 3,
+                        "offset": 2855
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 26,
+                        "offset": 2878
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "render",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 26,
+                        "offset": 2878
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 34,
+                        "offset": 2886
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop have an extended ",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 34,
+                        "offset": 2886
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 57,
+                        "offset": 2909
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "React.ComponentProps",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 57,
+                        "offset": 2909
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 79,
+                        "offset": 2931
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " type, enhanced with a ",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 79,
+                        "offset": 2931
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 102,
+                        "offset": 2954
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "render",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 102,
+                        "offset": 2954
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 110,
+                        "offset": 2962
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop. The ",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 110,
+                        "offset": 2962
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 121,
+                        "offset": 2973
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "useRender.ComponentProps",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 121,
+                        "offset": 2973
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 147,
+                        "offset": 2999
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " type on the function gives access to this interface.",
+                    "position": {
+                      "start": {
+                        "line": 73,
+                        "column": 147,
+                        "offset": 2999
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 200,
+                        "offset": 3052
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 73,
+                    "column": 3,
+                    "offset": 2855
+                  },
+                  "end": {
+                    "line": 73,
+                    "column": 200,
+                    "offset": 3052
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 73,
+                "column": 1,
+                "offset": 2853
+              },
+              "end": {
+                "line": 73,
+                "column": 200,
+                "offset": 3052
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 71,
+            "column": 1,
+            "offset": 2541
+          },
+          "end": {
+            "line": 73,
+            "column": 200,
+            "offset": 3052
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI TypeScript',\n    'Component Props Namespace',\n    'Combobox ChangeEventDetails',\n    'Popover Positioner State',\n    'Toast Actions Ref Types',\n    'Use Render Component Props',\n    'Handbook TypeScript',\n    'Type Definitions',\n    'Type Safety',\n    'Generics',\n    'Component Types',\n    'Props Types',\n    'Event Types',\n    'Ref Types',\n    'Type Inference',\n    'Strongly Typed Components',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 75,
+            "column": 1,
+            "offset": 3054
+          },
+          "end": {
+            "line": 94,
+            "column": 3,
+            "offset": 3511
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 95,
+        "column": 1,
+        "offset": 3512
+      }
+    }
+  }
+}

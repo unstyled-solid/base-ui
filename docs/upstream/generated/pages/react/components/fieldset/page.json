@@ -1,0 +1,700 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/fieldset/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "e559698602525594343b772f66be3fdd6cf4f16f59d07cec0a220088a0652986",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/fieldset",
+  "route": "/solid/components/fieldset",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Fieldset",
+  "subtitle": "A native fieldset element with an easily stylable legend.",
+  "metadata": {
+    "keywords": [
+      "React Fieldset",
+      "Fieldset Component",
+      "Form Field Grouping",
+      "Form Fieldset",
+      "Form Group",
+      "Input Grouping",
+      "Custom Legend Styling",
+      "Fieldset Legend",
+      "Accessible Fieldset",
+      "Headless React Components",
+      "Form Section Labeling",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React fieldset component with an easily stylable legend."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoFieldsetHero",
+      "imported": "DemoFieldsetHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/fieldset/demos/hero#DemoFieldsetHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesFieldset",
+      "imported": "TypesFieldset",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/fieldset/types#TypesFieldset"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Fieldset",
+      "properties": {
+        "id": "fieldset"
+      },
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:14:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:26:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:30:1"
+    },
+    {
+      "depth": 3,
+      "text": "Legend",
+      "properties": {
+        "id": "legend"
+      },
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:34:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React fieldset component with an easily stylable legend."
+      },
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:5:1"
+    },
+    {
+      "name": "DemoFieldsetHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:12:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/fieldset/demos/hero#DemoFieldsetHero"
+    },
+    {
+      "name": "TypesFieldset.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:32:1",
+      "reference": "api:docs/src/app/(docs)/react/components/fieldset/types#TypesFieldset"
+    },
+    {
+      "name": "TypesFieldset.Legend",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:36:1",
+      "reference": "api:docs/src/app/(docs)/react/components/fieldset/types#TypesFieldset"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:5:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:12:1",
+      "detail": "Site must implement DemoFieldsetHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:18:1",
+      "detail": "Fieldset.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:18:1",
+      "detail": "Fieldset.Legend",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:18:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:32:1",
+      "detail": "Site must implement TypesFieldset.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:36:1",
+      "detail": "Site must implement TypesFieldset.Legend; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/fieldset/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Fieldset",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 11,
+                "offset": 10
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 11,
+            "offset": 10
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "fieldset"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A native fieldset element with an easily stylable legend.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 22
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 68,
+                    "offset": 79
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 12
+              },
+              "end": {
+                "line": 3,
+                "column": 79,
+                "offset": 90
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 12
+          },
+          "end": {
+            "line": 3,
+            "column": 79,
+            "offset": 90
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 100
+              },
+              "end": {
+                "line": 6,
+                "column": 21,
+                "offset": 118
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React fieldset component with an easily stylable legend.",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 3,
+                "offset": 121
+              },
+              "end": {
+                "line": 7,
+                "column": 94,
+                "offset": 212
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 92
+          },
+          "end": {
+            "line": 8,
+            "column": 3,
+            "offset": 215
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoFieldsetHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 217
+          },
+          "end": {
+            "line": 10,
+            "column": 49,
+            "offset": 265
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoFieldsetHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 267
+          },
+          "end": {
+            "line": 12,
+            "column": 21,
+            "offset": 287
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/fieldset/demos/hero#DemoFieldsetHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 4,
+                "offset": 292
+              },
+              "end": {
+                "line": 14,
+                "column": 11,
+                "offset": 299
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 289
+          },
+          "end": {
+            "line": 14,
+            "column": 11,
+            "offset": 299
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 301
+              },
+              "end": {
+                "line": 16,
+                "column": 45,
+                "offset": 345
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 301
+          },
+          "end": {
+            "line": 16,
+            "column": 45,
+            "offset": 345
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Fieldset } from 'baseui-solid2/fieldset';\n\n<Fieldset.Root>\n  <Fieldset.Legend />\n</Fieldset.Root>;",
+        "position": {
+          "start": {
+            "line": 18,
+            "column": 1,
+            "offset": 347
+          },
+          "end": {
+            "line": 24,
+            "column": 4,
+            "offset": 482
+          }
+        },
+        "data": {
+          "sourceValue": "import { Fieldset } from '@base-ui/react/fieldset';\n\n<Fieldset.Root>\n  <Fieldset.Legend />\n</Fieldset.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/fieldset",
+              "start": 26,
+              "end": 49,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/fieldset",
+              "start": 26,
+              "end": 49,
+              "kind": "import",
+              "replacement": "baseui-solid2/fieldset"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 26,
+                "column": 4,
+                "offset": 487
+              },
+              "end": {
+                "line": 26,
+                "column": 17,
+                "offset": 500
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 26,
+            "column": 1,
+            "offset": 484
+          },
+          "end": {
+            "line": 26,
+            "column": 17,
+            "offset": 500
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesFieldset } from './types';",
+        "position": {
+          "start": {
+            "line": 28,
+            "column": 1,
+            "offset": 502
+          },
+          "end": {
+            "line": 28,
+            "column": 41,
+            "offset": 542
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 30,
+                "column": 5,
+                "offset": 548
+              },
+              "end": {
+                "line": 30,
+                "column": 9,
+                "offset": 552
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 544
+          },
+          "end": {
+            "line": 30,
+            "column": 9,
+            "offset": 552
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesFieldset.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 32,
+            "column": 1,
+            "offset": 554
+          },
+          "end": {
+            "line": 32,
+            "column": 23,
+            "offset": 576
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/fieldset/types#TypesFieldset"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Legend",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 5,
+                "offset": 582
+              },
+              "end": {
+                "line": 34,
+                "column": 11,
+                "offset": 588
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 34,
+            "column": 1,
+            "offset": 578
+          },
+          "end": {
+            "line": 34,
+            "column": 11,
+            "offset": 588
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "legend"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesFieldset.Legend",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 36,
+            "column": 1,
+            "offset": 590
+          },
+          "end": {
+            "line": 36,
+            "column": 25,
+            "offset": 614
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/fieldset/types#TypesFieldset"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Fieldset',\n    'Fieldset Component',\n    'Form Field Grouping',\n    'Form Fieldset',\n    'Form Group',\n    'Input Grouping',\n    'Custom Legend Styling',\n    'Fieldset Legend',\n    'Accessible Fieldset',\n    'Headless React Components',\n    'Form Section Labeling',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 616
+          },
+          "end": {
+            "line": 53,
+            "column": 3,
+            "offset": 955
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 54,
+        "column": 1,
+        "offset": 956
+      }
+    }
+  }
+}

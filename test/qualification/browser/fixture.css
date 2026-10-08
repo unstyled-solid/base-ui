@@ -1,0 +1,8 @@
+/* Identical layout inputs in both hosts. No transitions, reset of component attrs or behavior. */
+body { margin: 16px; font: 16px Arial, sans-serif; }
+button, input { font: inherit; }
+[data-testid="trigger"], [data-testid="input"] { width: 180px; }
+[data-testid="popup"] { background: white; border: 1px solid black; padding: 8px; }
+[role="option"] { padding: 8px; }
+[data-testid="backdrop"] { position: fixed; inset: 0; background: #0003; }
+[role="dialog"] { position: fixed; top: 100px; left: 200px; width: 300px; }

@@ -1,0 +1,8 @@
+{
+  "repositoryUrl": "https://github.com/lxsmnsyc/solid-floating-ui.git",
+  "branch": "main",
+  "submodulePath": "upstream/solid-floating-ui",
+  "baselineSourceSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+  "fetchedCandidateSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+  "verifiedParitySha": null
+}

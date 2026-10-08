@@ -1,0 +1,3876 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/slider/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "361d3b319ecbac9c565d596c7b4d70f05b42a4ef933820ce061b86bbdc848139",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/slider",
+  "route": "/solid/components/slider",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Slider",
+  "subtitle": "An easily stylable range input.",
+  "metadata": {
+    "keywords": [
+      "React Slider",
+      "Range Slider Component",
+      "Range Input",
+      "Range Control",
+      "Track Control",
+      "Value Selector",
+      "Keyboard Slider Control",
+      "Dual Slider",
+      "Double Slider",
+      "Two-Handle Slider",
+      "Multi Thumb Slider",
+      "Thumb Alignment Edge",
+      "Accessible Slider",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React slider component that works like a range input and is easy to style."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoSliderHero",
+      "imported": "DemoSliderHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/hero#DemoSliderHero"
+    },
+    {
+      "from": "./demos/range-slider",
+      "local": "DemoSliderRangeSlider",
+      "imported": "DemoSliderRangeSlider",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/range-slider#DemoSliderRangeSlider"
+    },
+    {
+      "from": "./demos/steps",
+      "local": "DemoSliderSteps",
+      "imported": "DemoSliderSteps",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/steps#DemoSliderSteps"
+    },
+    {
+      "from": "./demos/marks",
+      "local": "DemoSliderMarks",
+      "imported": "DemoSliderMarks",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/marks#DemoSliderMarks"
+    },
+    {
+      "from": "./demos/edge-alignment",
+      "local": "DemoSliderEdgeAlignment",
+      "imported": "DemoSliderEdgeAlignment",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/edge-alignment#DemoSliderEdgeAlignment"
+    },
+    {
+      "from": "./demos/vertical",
+      "local": "DemoSliderVertical",
+      "imported": "DemoSliderVertical",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/vertical#DemoSliderVertical"
+    },
+    {
+      "from": "./types",
+      "local": "TypesSlider",
+      "imported": "TypesSlider",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Slider",
+      "properties": {
+        "id": "slider"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:17:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:36:1"
+    },
+    {
+      "depth": 3,
+      "text": "Labeling a slider",
+      "properties": {
+        "id": "labeling-a-slider"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:38:1"
+    },
+    {
+      "depth": 3,
+      "text": "Range slider",
+      "properties": {
+        "id": "range-slider"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:86:1"
+    },
+    {
+      "depth": 3,
+      "text": "Steps",
+      "properties": {
+        "id": "steps"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:99:1"
+    },
+    {
+      "depth": 3,
+      "text": "Marks",
+      "properties": {
+        "id": "marks"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:107:1"
+    },
+    {
+      "depth": 3,
+      "text": "Thumb alignment",
+      "properties": {
+        "id": "thumb-alignment"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:117:1"
+    },
+    {
+      "depth": 3,
+      "text": "Vertical",
+      "properties": {
+        "id": "vertical"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:127:1"
+    },
+    {
+      "depth": 3,
+      "text": "Form integration",
+      "properties": {
+        "id": "form-integration"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:135:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:175:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:179:1"
+    },
+    {
+      "depth": 3,
+      "text": "Label",
+      "properties": {
+        "id": "label"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:183:1"
+    },
+    {
+      "depth": 3,
+      "text": "Value",
+      "properties": {
+        "id": "value"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:187:1"
+    },
+    {
+      "depth": 3,
+      "text": "Control",
+      "properties": {
+        "id": "control"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:191:1"
+    },
+    {
+      "depth": 3,
+      "text": "Track",
+      "properties": {
+        "id": "track"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:195:1"
+    },
+    {
+      "depth": 3,
+      "text": "Indicator",
+      "properties": {
+        "id": "indicator"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:199:1"
+    },
+    {
+      "depth": 3,
+      "text": "Thumb",
+      "properties": {
+        "id": "thumb"
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:203:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#labeling-a-slider",
+      "target": "#labeling-a-slider",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:15:167"
+    },
+    {
+      "source": "/react/handbook/forms",
+      "target": "/solid/handbook/forms",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:15:215"
+    },
+    {
+      "source": "#steps",
+      "target": "#steps",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:115:69"
+    },
+    {
+      "source": "/react/components/fieldset",
+      "target": "/solid/components/fieldset",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:154:49"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React slider component that works like a range input and is easy to style."
+      },
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:4:1"
+    },
+    {
+      "name": "DemoSliderHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/hero#DemoSliderHero"
+    },
+    {
+      "name": "DemoSliderRangeSlider",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:97:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/range-slider#DemoSliderRangeSlider"
+    },
+    {
+      "name": "DemoSliderSteps",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:105:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/steps#DemoSliderSteps"
+    },
+    {
+      "name": "DemoSliderMarks",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:113:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/marks#DemoSliderMarks"
+    },
+    {
+      "name": "DemoSliderEdgeAlignment",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:125:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/edge-alignment#DemoSliderEdgeAlignment"
+    },
+    {
+      "name": "DemoSliderVertical",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:133:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/vertical#DemoSliderVertical"
+    },
+    {
+      "name": "TypesSlider.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:181:1",
+      "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+    },
+    {
+      "name": "TypesSlider.Label",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:185:1",
+      "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+    },
+    {
+      "name": "TypesSlider.Value",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:189:1",
+      "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+    },
+    {
+      "name": "TypesSlider.Control",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:193:1",
+      "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+    },
+    {
+      "name": "TypesSlider.Track",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:197:1",
+      "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+    },
+    {
+      "name": "TypesSlider.Indicator",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:201:1",
+      "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+    },
+    {
+      "name": "TypesSlider.Thumb",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:205:1",
+      "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:11:1",
+      "detail": "Site must implement DemoSliderHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:21:1",
+      "detail": "Slider.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:21:1",
+      "detail": "Slider.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:21:1",
+      "detail": "Slider.Value",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:21:1",
+      "detail": "Slider.Control",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:21:1",
+      "detail": "Slider.Track",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:21:1",
+      "detail": "Slider.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:21:1",
+      "detail": "Slider.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:21:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:42:1",
+      "detail": "Slider.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:42:1",
+      "detail": "Slider.Control",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:42:1",
+      "detail": "Slider.Track",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:42:1",
+      "detail": "Slider.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:42:1",
+      "detail": "Slider.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:42:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:56:1",
+      "detail": "Slider.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:56:1",
+      "detail": "Slider.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:56:1",
+      "detail": "Slider.Control",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:56:1",
+      "detail": "Slider.Track",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:56:1",
+      "detail": "Slider.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:56:1",
+      "detail": "Slider.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:56:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:71:1",
+      "detail": "Slider.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:71:1",
+      "detail": "Slider.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:71:1",
+      "detail": "Slider.Control",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:71:1",
+      "detail": "Slider.Track",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:71:1",
+      "detail": "Slider.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:71:1",
+      "detail": "Slider.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:71:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:97:1",
+      "detail": "Site must implement DemoSliderRangeSlider; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:105:1",
+      "detail": "Site must implement DemoSliderSteps; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:113:1",
+      "detail": "Site must implement DemoSliderMarks; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:121:62",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:125:1",
+      "detail": "Site must implement DemoSliderEdgeAlignment; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:133:1",
+      "detail": "Site must implement DemoSliderVertical; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:139:1",
+      "detail": "Form",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:139:1",
+      "detail": "Slider.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:139:1",
+      "detail": "Slider.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:139:1",
+      "detail": "Slider.Control",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:139:1",
+      "detail": "Slider.Track",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:139:1",
+      "detail": "Slider.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:139:1",
+      "detail": "Slider.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:139:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Field.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Fieldset.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Slider.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Fieldset.Legend",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Slider.Control",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Slider.Track",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Slider.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Slider.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:156:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:181:1",
+      "detail": "Site must implement TypesSlider.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:185:1",
+      "detail": "Site must implement TypesSlider.Label; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:189:1",
+      "detail": "Site must implement TypesSlider.Value; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:193:1",
+      "detail": "Site must implement TypesSlider.Control; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:197:1",
+      "detail": "Site must implement TypesSlider.Track; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:201:1",
+      "detail": "Site must implement TypesSlider.Indicator; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:205:1",
+      "detail": "Site must implement TypesSlider.Thumb; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/slider/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Slider",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 9,
+                "offset": 8
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 9,
+            "offset": 8
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "slider"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "An easily stylable range input.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 20
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 42,
+                    "offset": 51
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 10
+              },
+              "end": {
+                "line": 3,
+                "column": 53,
+                "offset": 62
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 10
+          },
+          "end": {
+            "line": 3,
+            "column": 53,
+            "offset": 62
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 71
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 89
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React slider component that works like a range input and is easy to style.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 92
+              },
+              "end": {
+                "line": 6,
+                "column": 112,
+                "offset": 201
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 63
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 204
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoSliderHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 206
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "offset": 252
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoSliderHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 254
+          },
+          "end": {
+            "line": 11,
+            "column": 19,
+            "offset": 272
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/hero#DemoSliderHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 277
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 293
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 274
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 293
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Form controls must have an accessible name",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 5,
+                            "offset": 299
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 47,
+                            "offset": 341
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 3,
+                        "offset": 297
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 343
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": Prefer ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 343
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 58,
+                        "offset": 352
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Slider.Label>",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 58,
+                        "offset": 352
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 74,
+                        "offset": 368
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", or provide an ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 74,
+                        "offset": 368
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 90,
+                        "offset": 384
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "aria-label",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 90,
+                        "offset": 384
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 396
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " on each ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 396
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 111,
+                        "offset": 405
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Slider.Thumb>",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 111,
+                        "offset": 405
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 127,
+                        "offset": 421
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " when no visible label is rendered. See ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 127,
+                        "offset": 421
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 167,
+                        "offset": 461
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#labeling-a-slider",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Labeling a slider",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 168,
+                            "offset": 462
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 185,
+                            "offset": 479
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 167,
+                        "offset": 461
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 206,
+                        "offset": 500
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 206,
+                        "offset": 500
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 215,
+                        "offset": 509
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/handbook/forms",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "forms guide",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 216,
+                            "offset": 510
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 227,
+                            "offset": 521
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 215,
+                        "offset": 509
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 251,
+                        "offset": 545
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 251,
+                        "offset": 545
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 252,
+                        "offset": 546
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 15,
+                    "column": 3,
+                    "offset": 297
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 252,
+                    "offset": 546
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 295
+              },
+              "end": {
+                "line": 15,
+                "column": 252,
+                "offset": 546
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 295
+          },
+          "end": {
+            "line": 15,
+            "column": 252,
+            "offset": 546
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 4,
+                "offset": 551
+              },
+              "end": {
+                "line": 17,
+                "column": 11,
+                "offset": 558
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 548
+          },
+          "end": {
+            "line": 17,
+            "column": 11,
+            "offset": 558
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 560
+              },
+              "end": {
+                "line": 19,
+                "column": 45,
+                "offset": 604
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 19,
+            "column": 1,
+            "offset": 560
+          },
+          "end": {
+            "line": 19,
+            "column": 45,
+            "offset": 604
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Slider } from 'baseui-solid2/slider';\n\n<Slider.Root>\n  <Slider.Label />\n  <Slider.Value />\n  <Slider.Control>\n    <Slider.Track>\n      <Slider.Indicator />\n      <Slider.Thumb />\n    </Slider.Track>\n  </Slider.Control>\n</Slider.Root>;",
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 606
+          },
+          "end": {
+            "line": 34,
+            "column": 4,
+            "offset": 877
+          }
+        },
+        "data": {
+          "sourceValue": "import { Slider } from '@base-ui/react/slider';\n\n<Slider.Root>\n  <Slider.Label />\n  <Slider.Value />\n  <Slider.Control>\n    <Slider.Track>\n      <Slider.Indicator />\n      <Slider.Thumb />\n    </Slider.Track>\n  </Slider.Control>\n</Slider.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/slider",
+              "start": 24,
+              "end": 45,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/slider",
+              "start": 24,
+              "end": 45,
+              "kind": "import",
+              "replacement": "baseui-solid2/slider"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 4,
+                "offset": 882
+              },
+              "end": {
+                "line": 36,
+                "column": 12,
+                "offset": 890
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 36,
+            "column": 1,
+            "offset": 879
+          },
+          "end": {
+            "line": 36,
+            "column": 12,
+            "offset": 890
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Labeling a slider",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 5,
+                "offset": 896
+              },
+              "end": {
+                "line": 38,
+                "column": 22,
+                "offset": 913
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 892
+          },
+          "end": {
+            "line": 38,
+            "column": 22,
+            "offset": 913
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "labeling-a-slider"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A single-thumb slider without a visible label (such as a volume control) can be labeled using ",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 1,
+                "offset": 915
+              },
+              "end": {
+                "line": 40,
+                "column": 95,
+                "offset": 1009
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "aria-label",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 95,
+                "offset": 1009
+              },
+              "end": {
+                "line": 40,
+                "column": 107,
+                "offset": 1021
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " on ",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 107,
+                "offset": 1021
+              },
+              "end": {
+                "line": 40,
+                "column": 111,
+                "offset": 1025
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Slider.Thumb>",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 111,
+                "offset": 1025
+              },
+              "end": {
+                "line": 40,
+                "column": 127,
+                "offset": 1041
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 127,
+                "offset": 1041
+              },
+              "end": {
+                "line": 40,
+                "column": 128,
+                "offset": 1042
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 40,
+            "column": 1,
+            "offset": 915
+          },
+          "end": {
+            "line": 40,
+            "column": 128,
+            "offset": 1042
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Slider with invisible label\"",
+        "value": "<Slider.Root>\n  <Slider.Control>\n    <Slider.Track>\n      <Slider.Indicator />\n      {/* @highlight */}\n      <Slider.Thumb aria-label=\"Volume\" />\n    </Slider.Track>\n  </Slider.Control>\n</Slider.Root>",
+        "position": {
+          "start": {
+            "line": 42,
+            "column": 1,
+            "offset": 1044
+          },
+          "end": {
+            "line": 52,
+            "column": 4,
+            "offset": 1292
+          }
+        },
+        "data": {
+          "sourceValue": "<Slider.Root>\n  <Slider.Control>\n    <Slider.Track>\n      <Slider.Indicator />\n      {/* @highlight */}\n      <Slider.Thumb aria-label=\"Volume\" />\n    </Slider.Track>\n  </Slider.Control>\n</Slider.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A visible label can be created using ",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 1294
+              },
+              "end": {
+                "line": 54,
+                "column": 38,
+                "offset": 1331
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Slider.Label>",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 38,
+                "offset": 1331
+              },
+              "end": {
+                "line": 54,
+                "column": 54,
+                "offset": 1347
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 54,
+                "offset": 1347
+              },
+              "end": {
+                "line": 54,
+                "column": 55,
+                "offset": 1348
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 54,
+            "column": 1,
+            "offset": 1294
+          },
+          "end": {
+            "line": 54,
+            "column": 55,
+            "offset": 1348
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Slider with visible label\"",
+        "value": "<Slider.Root>\n  {/* @highlight */}\n  <Slider.Label>Volume</Slider.Label>\n  <Slider.Control>\n    <Slider.Track>\n      <Slider.Indicator />\n      <Slider.Thumb />\n    </Slider.Track>\n  </Slider.Control>\n</Slider.Root>",
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 1350
+          },
+          "end": {
+            "line": 67,
+            "column": 4,
+            "offset": 1610
+          }
+        },
+        "data": {
+          "sourceValue": "<Slider.Root>\n  {/* @highlight */}\n  <Slider.Label>Volume</Slider.Label>\n  <Slider.Control>\n    <Slider.Track>\n      <Slider.Indicator />\n      <Slider.Thumb />\n    </Slider.Track>\n  </Slider.Control>\n</Slider.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For a multi-thumb range slider with a visible label, add ",
+            "position": {
+              "start": {
+                "line": 69,
+                "column": 1,
+                "offset": 1612
+              },
+              "end": {
+                "line": 69,
+                "column": 58,
+                "offset": 1669
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "aria-label",
+            "position": {
+              "start": {
+                "line": 69,
+                "column": 58,
+                "offset": 1669
+              },
+              "end": {
+                "line": 69,
+                "column": 70,
+                "offset": 1681
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " on each ",
+            "position": {
+              "start": {
+                "line": 69,
+                "column": 70,
+                "offset": 1681
+              },
+              "end": {
+                "line": 69,
+                "column": 79,
+                "offset": 1690
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Slider.Thumb>",
+            "position": {
+              "start": {
+                "line": 69,
+                "column": 79,
+                "offset": 1690
+              },
+              "end": {
+                "line": 69,
+                "column": 95,
+                "offset": 1706
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to distinguish them:",
+            "position": {
+              "start": {
+                "line": 69,
+                "column": 95,
+                "offset": 1706
+              },
+              "end": {
+                "line": 69,
+                "column": 116,
+                "offset": 1727
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 69,
+            "column": 1,
+            "offset": 1612
+          },
+          "end": {
+            "line": 69,
+            "column": 116,
+            "offset": 1727
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Labeling multi-thumb range sliders\"",
+        "value": "<Slider.Root defaultValue={[25, 75]}>\n  <Slider.Label>Price range</Slider.Label>\n  <Slider.Control>\n    <Slider.Track>\n      <Slider.Indicator />\n      {/* @highlight-start */}\n      <Slider.Thumb index={0} aria-label=\"Minimum price\" />\n      <Slider.Thumb index={1} aria-label=\"Maximum price\" />\n      {/* @highlight-end */}\n    </Slider.Track>\n  </Slider.Control>\n</Slider.Root>",
+        "position": {
+          "start": {
+            "line": 71,
+            "column": 1,
+            "offset": 1729
+          },
+          "end": {
+            "line": 84,
+            "column": 4,
+            "offset": 2163
+          }
+        },
+        "data": {
+          "sourceValue": "<Slider.Root defaultValue={[25, 75]}>\n  <Slider.Label>Price range</Slider.Label>\n  <Slider.Control>\n    <Slider.Track>\n      <Slider.Indicator />\n      {/* @highlight-start */}\n      <Slider.Thumb index={0} aria-label=\"Minimum price\" />\n      <Slider.Thumb index={1} aria-label=\"Maximum price\" />\n      {/* @highlight-end */}\n    </Slider.Track>\n  </Slider.Control>\n</Slider.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Range slider",
+            "position": {
+              "start": {
+                "line": 86,
+                "column": 5,
+                "offset": 2169
+              },
+              "end": {
+                "line": 86,
+                "column": 17,
+                "offset": 2181
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 86,
+            "column": 1,
+            "offset": 2165
+          },
+          "end": {
+            "line": 86,
+            "column": 17,
+            "offset": 2181
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "range-slider"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To create a range slider:",
+            "position": {
+              "start": {
+                "line": 88,
+                "column": 1,
+                "offset": 2183
+              },
+              "end": {
+                "line": 88,
+                "column": 26,
+                "offset": 2208
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 88,
+            "column": 1,
+            "offset": 2183
+          },
+          "end": {
+            "line": 88,
+            "column": 26,
+            "offset": 2208
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Pass an array of values and place a ",
+                    "position": {
+                      "start": {
+                        "line": 90,
+                        "column": 4,
+                        "offset": 2213
+                      },
+                      "end": {
+                        "line": 90,
+                        "column": 40,
+                        "offset": 2249
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Slider.Thumb>",
+                    "position": {
+                      "start": {
+                        "line": 90,
+                        "column": 40,
+                        "offset": 2249
+                      },
+                      "end": {
+                        "line": 90,
+                        "column": 56,
+                        "offset": 2265
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " for each value in the array",
+                    "position": {
+                      "start": {
+                        "line": 90,
+                        "column": 56,
+                        "offset": 2265
+                      },
+                      "end": {
+                        "line": 90,
+                        "column": 84,
+                        "offset": 2293
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 90,
+                    "column": 4,
+                    "offset": 2213
+                  },
+                  "end": {
+                    "line": 90,
+                    "column": 84,
+                    "offset": 2293
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 1,
+                "offset": 2210
+              },
+              "end": {
+                "line": 90,
+                "column": 84,
+                "offset": 2293
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Additionally for server-side rendering, specify a numeric ",
+                    "position": {
+                      "start": {
+                        "line": 91,
+                        "column": 4,
+                        "offset": 2297
+                      },
+                      "end": {
+                        "line": 91,
+                        "column": 62,
+                        "offset": 2355
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "index",
+                    "position": {
+                      "start": {
+                        "line": 91,
+                        "column": 62,
+                        "offset": 2355
+                      },
+                      "end": {
+                        "line": 91,
+                        "column": 69,
+                        "offset": 2362
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " for each thumb that corresponds to the index of its value in the value array",
+                    "position": {
+                      "start": {
+                        "line": 91,
+                        "column": 69,
+                        "offset": 2362
+                      },
+                      "end": {
+                        "line": 91,
+                        "column": 146,
+                        "offset": 2439
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 91,
+                    "column": 4,
+                    "offset": 2297
+                  },
+                  "end": {
+                    "line": 91,
+                    "column": 146,
+                    "offset": 2439
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 1,
+                "offset": 2294
+              },
+              "end": {
+                "line": 91,
+                "column": 146,
+                "offset": 2439
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 90,
+            "column": 1,
+            "offset": 2210
+          },
+          "end": {
+            "line": 91,
+            "column": 146,
+            "offset": 2439
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Thumbs can be configured to behave differently when they collide during pointer interactions using the ",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 1,
+                "offset": 2441
+              },
+              "end": {
+                "line": 93,
+                "column": 104,
+                "offset": 2544
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "thumbCollisionBehavior",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 104,
+                "offset": 2544
+              },
+              "end": {
+                "line": 93,
+                "column": 128,
+                "offset": 2568
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop on ",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 128,
+                "offset": 2568
+              },
+              "end": {
+                "line": 93,
+                "column": 137,
+                "offset": 2577
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Slider.Root>",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 137,
+                "offset": 2577
+              },
+              "end": {
+                "line": 93,
+                "column": 152,
+                "offset": 2592
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 152,
+                "offset": 2592
+              },
+              "end": {
+                "line": 93,
+                "column": 153,
+                "offset": 2593
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 93,
+            "column": 1,
+            "offset": 2441
+          },
+          "end": {
+            "line": 93,
+            "column": 153,
+            "offset": 2593
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoSliderRangeSlider } from './demos/range-slider';",
+        "position": {
+          "start": {
+            "line": 95,
+            "column": 1,
+            "offset": 2595
+          },
+          "end": {
+            "line": 95,
+            "column": 62,
+            "offset": 2656
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoSliderRangeSlider",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 97,
+            "column": 1,
+            "offset": 2658
+          },
+          "end": {
+            "line": 97,
+            "column": 26,
+            "offset": 2683
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/range-slider#DemoSliderRangeSlider"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Steps",
+            "position": {
+              "start": {
+                "line": 99,
+                "column": 5,
+                "offset": 2689
+              },
+              "end": {
+                "line": 99,
+                "column": 10,
+                "offset": 2694
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 99,
+            "column": 1,
+            "offset": 2685
+          },
+          "end": {
+            "line": 99,
+            "column": 10,
+            "offset": 2694
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "steps"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the ",
+            "position": {
+              "start": {
+                "line": 101,
+                "column": 1,
+                "offset": 2696
+              },
+              "end": {
+                "line": 101,
+                "column": 9,
+                "offset": 2704
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "step",
+            "position": {
+              "start": {
+                "line": 101,
+                "column": 9,
+                "offset": 2704
+              },
+              "end": {
+                "line": 101,
+                "column": 15,
+                "offset": 2710
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to snap the value to multiples of a given increment, and ",
+            "position": {
+              "start": {
+                "line": 101,
+                "column": 15,
+                "offset": 2710
+              },
+              "end": {
+                "line": 101,
+                "column": 78,
+                "offset": 2773
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "largeStep",
+            "position": {
+              "start": {
+                "line": 101,
+                "column": 78,
+                "offset": 2773
+              },
+              "end": {
+                "line": 101,
+                "column": 89,
+                "offset": 2784
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to control the increment when using Page Up/Page Down or Shift + Arrow Up/Arrow Down.",
+            "position": {
+              "start": {
+                "line": 101,
+                "column": 89,
+                "offset": 2784
+              },
+              "end": {
+                "line": 101,
+                "column": 175,
+                "offset": 2870
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 101,
+            "column": 1,
+            "offset": 2696
+          },
+          "end": {
+            "line": 101,
+            "column": 175,
+            "offset": 2870
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoSliderSteps } from './demos/steps';",
+        "position": {
+          "start": {
+            "line": 103,
+            "column": 1,
+            "offset": 2872
+          },
+          "end": {
+            "line": 103,
+            "column": 49,
+            "offset": 2920
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoSliderSteps",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 105,
+            "column": 1,
+            "offset": 2922
+          },
+          "end": {
+            "line": 105,
+            "column": 20,
+            "offset": 2941
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/steps#DemoSliderSteps"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Marks",
+            "position": {
+              "start": {
+                "line": 107,
+                "column": 5,
+                "offset": 2947
+              },
+              "end": {
+                "line": 107,
+                "column": 10,
+                "offset": 2952
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 107,
+            "column": 1,
+            "offset": 2943
+          },
+          "end": {
+            "line": 107,
+            "column": 10,
+            "offset": 2952
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "marks"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Render your own tick marks, positioning each mark along the track as a percentage of the value range.",
+            "position": {
+              "start": {
+                "line": 109,
+                "column": 1,
+                "offset": 2954
+              },
+              "end": {
+                "line": 109,
+                "column": 102,
+                "offset": 3055
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 109,
+            "column": 1,
+            "offset": 2954
+          },
+          "end": {
+            "line": 109,
+            "column": 102,
+            "offset": 3055
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoSliderMarks } from './demos/marks';",
+        "position": {
+          "start": {
+            "line": 111,
+            "column": 1,
+            "offset": 3057
+          },
+          "end": {
+            "line": 111,
+            "column": 49,
+            "offset": 3105
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoSliderMarks",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 113,
+            "column": 1,
+            "offset": 3107
+          },
+          "end": {
+            "line": 113,
+            "column": 20,
+            "offset": 3126
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/marks#DemoSliderMarks"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Marks are independent of the value's granularity—pair them with the ",
+            "position": {
+              "start": {
+                "line": 115,
+                "column": 1,
+                "offset": 3128
+              },
+              "end": {
+                "line": 115,
+                "column": 69,
+                "offset": 3196
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "#steps",
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "step",
+                "position": {
+                  "start": {
+                    "line": 115,
+                    "column": 70,
+                    "offset": 3197
+                  },
+                  "end": {
+                    "line": 115,
+                    "column": 76,
+                    "offset": 3203
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 115,
+                "column": 69,
+                "offset": 3196
+              },
+              "end": {
+                "line": 115,
+                "column": 85,
+                "offset": 3212
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to snap the thumb to each mark.",
+            "position": {
+              "start": {
+                "line": 115,
+                "column": 85,
+                "offset": 3212
+              },
+              "end": {
+                "line": 115,
+                "column": 122,
+                "offset": 3249
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 115,
+            "column": 1,
+            "offset": 3128
+          },
+          "end": {
+            "line": 115,
+            "column": 122,
+            "offset": 3249
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Thumb alignment",
+            "position": {
+              "start": {
+                "line": 117,
+                "column": 5,
+                "offset": 3255
+              },
+              "end": {
+                "line": 117,
+                "column": 20,
+                "offset": 3270
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 117,
+            "column": 1,
+            "offset": 3251
+          },
+          "end": {
+            "line": 117,
+            "column": 20,
+            "offset": 3270
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "thumb-alignment"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Set ",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 1,
+                "offset": 3272
+              },
+              "end": {
+                "line": 119,
+                "column": 5,
+                "offset": 3276
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "thumbAlignment=\"edge\"",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 5,
+                "offset": 3276
+              },
+              "end": {
+                "line": 119,
+                "column": 28,
+                "offset": 3299
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to inset the thumb such that its edge aligns with the edge of the control when the value is at ",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 28,
+                "offset": 3299
+              },
+              "end": {
+                "line": 119,
+                "column": 124,
+                "offset": 3395
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "min",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 124,
+                "offset": 3395
+              },
+              "end": {
+                "line": 119,
+                "column": 129,
+                "offset": 3400
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 129,
+                "offset": 3400
+              },
+              "end": {
+                "line": 119,
+                "column": 133,
+                "offset": 3404
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "max",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 133,
+                "offset": 3404
+              },
+              "end": {
+                "line": 119,
+                "column": 138,
+                "offset": 3409
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", without overflowing the control like the default ",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 138,
+                "offset": 3409
+              },
+              "end": {
+                "line": 119,
+                "column": 189,
+                "offset": 3460
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "\"center\"",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 189,
+                "offset": 3460
+              },
+              "end": {
+                "line": 119,
+                "column": 199,
+                "offset": 3470
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " alignment.",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 199,
+                "offset": 3470
+              },
+              "end": {
+                "line": 119,
+                "column": 210,
+                "offset": 3481
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 119,
+            "column": 1,
+            "offset": 3272
+          },
+          "end": {
+            "line": 119,
+            "column": 210,
+            "offset": 3481
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A client-only alternative ",
+            "position": {
+              "start": {
+                "line": 121,
+                "column": 1,
+                "offset": 3483
+              },
+              "end": {
+                "line": 121,
+                "column": 27,
+                "offset": 3509
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "thumbAlignment=\"edge-client-only\"",
+            "position": {
+              "start": {
+                "line": 121,
+                "column": 27,
+                "offset": 3509
+              },
+              "end": {
+                "line": 121,
+                "column": 62,
+                "offset": 3544
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " can be used to reduce bundle size but only renders after React hydration.",
+            "position": {
+              "start": {
+                "line": 121,
+                "column": 62,
+                "offset": 3544
+              },
+              "end": {
+                "line": 121,
+                "column": 136,
+                "offset": 3618
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 121,
+            "column": 1,
+            "offset": 3483
+          },
+          "end": {
+            "line": 121,
+            "column": 136,
+            "offset": 3618
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoSliderEdgeAlignment } from './demos/edge-alignment';",
+        "position": {
+          "start": {
+            "line": 123,
+            "column": 1,
+            "offset": 3620
+          },
+          "end": {
+            "line": 123,
+            "column": 66,
+            "offset": 3685
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoSliderEdgeAlignment",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 125,
+            "column": 1,
+            "offset": 3687
+          },
+          "end": {
+            "line": 125,
+            "column": 28,
+            "offset": 3714
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/edge-alignment#DemoSliderEdgeAlignment"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Vertical",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 5,
+                "offset": 3720
+              },
+              "end": {
+                "line": 127,
+                "column": 13,
+                "offset": 3728
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 127,
+            "column": 1,
+            "offset": 3716
+          },
+          "end": {
+            "line": 127,
+            "column": 13,
+            "offset": 3728
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "vertical"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Set ",
+            "position": {
+              "start": {
+                "line": 129,
+                "column": 1,
+                "offset": 3730
+              },
+              "end": {
+                "line": 129,
+                "column": 5,
+                "offset": 3734
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "orientation=\"vertical\"",
+            "position": {
+              "start": {
+                "line": 129,
+                "column": 5,
+                "offset": 3734
+              },
+              "end": {
+                "line": 129,
+                "column": 29,
+                "offset": 3758
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " on ",
+            "position": {
+              "start": {
+                "line": 129,
+                "column": 29,
+                "offset": 3758
+              },
+              "end": {
+                "line": 129,
+                "column": 33,
+                "offset": 3762
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Slider.Root>",
+            "position": {
+              "start": {
+                "line": 129,
+                "column": 33,
+                "offset": 3762
+              },
+              "end": {
+                "line": 129,
+                "column": 48,
+                "offset": 3777
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to build a vertical slider.",
+            "position": {
+              "start": {
+                "line": 129,
+                "column": 48,
+                "offset": 3777
+              },
+              "end": {
+                "line": 129,
+                "column": 76,
+                "offset": 3805
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 129,
+            "column": 1,
+            "offset": 3730
+          },
+          "end": {
+            "line": 129,
+            "column": 76,
+            "offset": 3805
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoSliderVertical } from './demos/vertical';",
+        "position": {
+          "start": {
+            "line": 131,
+            "column": 1,
+            "offset": 3807
+          },
+          "end": {
+            "line": 131,
+            "column": 55,
+            "offset": 3861
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoSliderVertical",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 133,
+            "column": 1,
+            "offset": 3863
+          },
+          "end": {
+            "line": 133,
+            "column": 23,
+            "offset": 3885
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/slider/demos/vertical#DemoSliderVertical"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Form integration",
+            "position": {
+              "start": {
+                "line": 135,
+                "column": 5,
+                "offset": 3891
+              },
+              "end": {
+                "line": 135,
+                "column": 21,
+                "offset": 3907
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 135,
+            "column": 1,
+            "offset": 3887
+          },
+          "end": {
+            "line": 135,
+            "column": 21,
+            "offset": 3907
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "form-integration"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To use a slider in a form, pass the slider ",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 1,
+                "offset": 3909
+              },
+              "end": {
+                "line": 137,
+                "column": 44,
+                "offset": 3952
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "name",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 44,
+                "offset": 3952
+              },
+              "end": {
+                "line": 137,
+                "column": 50,
+                "offset": 3958
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to ",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 50,
+                "offset": 3958
+              },
+              "end": {
+                "line": 137,
+                "column": 54,
+                "offset": 3962
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Slider.Root>",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 54,
+                "offset": 3962
+              },
+              "end": {
+                "line": 137,
+                "column": 69,
+                "offset": 3977
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 69,
+                "offset": 3977
+              },
+              "end": {
+                "line": 137,
+                "column": 70,
+                "offset": 3978
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 137,
+            "column": 1,
+            "offset": 3909
+          },
+          "end": {
+            "line": 137,
+            "column": 70,
+            "offset": 3978
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using Slider in a form\"",
+        "value": "<Form>\n  {/* @highlight */}\n  <Slider.Root name=\"volume\">\n    <Slider.Label>Volume</Slider.Label>\n    <Slider.Control>\n      <Slider.Track>\n        <Slider.Indicator />\n        <Slider.Thumb />\n      </Slider.Track>\n    </Slider.Control>\n  </Slider.Root>\n</Form>",
+        "position": {
+          "start": {
+            "line": 139,
+            "column": 1,
+            "offset": 3980
+          },
+          "end": {
+            "line": 152,
+            "column": 4,
+            "offset": 4284
+          }
+        },
+        "data": {
+          "sourceValue": "<Form>\n  {/* @highlight */}\n  <Slider.Root name=\"volume\">\n    <Slider.Label>Volume</Slider.Label>\n    <Slider.Control>\n      <Slider.Track>\n        <Slider.Indicator />\n        <Slider.Thumb />\n      </Slider.Track>\n    </Slider.Control>\n  </Slider.Root>\n</Form>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For grouped multi-thumb range sliders in forms, ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 1,
+                "offset": 4286
+              },
+              "end": {
+                "line": 154,
+                "column": 49,
+                "offset": 4334
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/fieldset",
+            "children": [
+              {
+                "type": "text",
+                "value": "Fieldset",
+                "position": {
+                  "start": {
+                    "line": 154,
+                    "column": 50,
+                    "offset": 4335
+                  },
+                  "end": {
+                    "line": 154,
+                    "column": 58,
+                    "offset": 4343
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 49,
+                "offset": 4334
+              },
+              "end": {
+                "line": 154,
+                "column": 87,
+                "offset": 4372
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " can provide the shared visible label while each thumb keeps its own ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 87,
+                "offset": 4372
+              },
+              "end": {
+                "line": 154,
+                "column": 156,
+                "offset": 4441
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "aria-label",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 156,
+                "offset": 4441
+              },
+              "end": {
+                "line": 154,
+                "column": 168,
+                "offset": 4453
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 168,
+                "offset": 4453
+              },
+              "end": {
+                "line": 154,
+                "column": 169,
+                "offset": 4454
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 154,
+            "column": 1,
+            "offset": 4286
+          },
+          "end": {
+            "line": 154,
+            "column": 169,
+            "offset": 4454
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using Fieldset with a multi-thumb slider\"",
+        "value": "<Field.Root>\n  {/* @highlight-start */}\n  <Fieldset.Root render={<Slider.Root defaultValue={[25, 75]} />}>\n    <Fieldset.Legend>Price range</Fieldset.Legend>\n    {/* @highlight-end */}\n    <Slider.Control>\n      <Slider.Track>\n        <Slider.Indicator />\n        {/* @highlight-start */}\n        <Slider.Thumb index={0} aria-label=\"Minimum price\" />\n        <Slider.Thumb index={1} aria-label=\"Maximum price\" />\n        {/* @highlight-end */}\n      </Slider.Track>\n    </Slider.Control>\n  </Fieldset.Root>\n</Field.Root>",
+        "position": {
+          "start": {
+            "line": 156,
+            "column": 1,
+            "offset": 4456
+          },
+          "end": {
+            "line": 173,
+            "column": 4,
+            "offset": 5036
+          }
+        },
+        "data": {
+          "sourceValue": "<Field.Root>\n  {/* @highlight-start */}\n  <Fieldset.Root render={<Slider.Root defaultValue={[25, 75]} />}>\n    <Fieldset.Legend>Price range</Fieldset.Legend>\n    {/* @highlight-end */}\n    <Slider.Control>\n      <Slider.Track>\n        <Slider.Indicator />\n        {/* @highlight-start */}\n        <Slider.Thumb index={0} aria-label=\"Minimum price\" />\n        <Slider.Thumb index={1} aria-label=\"Maximum price\" />\n        {/* @highlight-end */}\n      </Slider.Track>\n    </Slider.Control>\n  </Fieldset.Root>\n</Field.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 175,
+                "column": 4,
+                "offset": 5041
+              },
+              "end": {
+                "line": 175,
+                "column": 17,
+                "offset": 5054
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 175,
+            "column": 1,
+            "offset": 5038
+          },
+          "end": {
+            "line": 175,
+            "column": 17,
+            "offset": 5054
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesSlider } from './types';",
+        "position": {
+          "start": {
+            "line": 177,
+            "column": 1,
+            "offset": 5056
+          },
+          "end": {
+            "line": 177,
+            "column": 39,
+            "offset": 5094
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 179,
+                "column": 5,
+                "offset": 5100
+              },
+              "end": {
+                "line": 179,
+                "column": 9,
+                "offset": 5104
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 179,
+            "column": 1,
+            "offset": 5096
+          },
+          "end": {
+            "line": 179,
+            "column": 9,
+            "offset": 5104
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSlider.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 181,
+            "column": 1,
+            "offset": 5106
+          },
+          "end": {
+            "line": 181,
+            "column": 21,
+            "offset": 5126
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Label",
+            "position": {
+              "start": {
+                "line": 183,
+                "column": 5,
+                "offset": 5132
+              },
+              "end": {
+                "line": 183,
+                "column": 10,
+                "offset": 5137
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 183,
+            "column": 1,
+            "offset": 5128
+          },
+          "end": {
+            "line": 183,
+            "column": 10,
+            "offset": 5137
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "label"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSlider.Label",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 185,
+            "column": 1,
+            "offset": 5139
+          },
+          "end": {
+            "line": 185,
+            "column": 22,
+            "offset": 5160
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Value",
+            "position": {
+              "start": {
+                "line": 187,
+                "column": 5,
+                "offset": 5166
+              },
+              "end": {
+                "line": 187,
+                "column": 10,
+                "offset": 5171
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 187,
+            "column": 1,
+            "offset": 5162
+          },
+          "end": {
+            "line": 187,
+            "column": 10,
+            "offset": 5171
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "value"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSlider.Value",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 189,
+            "column": 1,
+            "offset": 5173
+          },
+          "end": {
+            "line": 189,
+            "column": 22,
+            "offset": 5194
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Control",
+            "position": {
+              "start": {
+                "line": 191,
+                "column": 5,
+                "offset": 5200
+              },
+              "end": {
+                "line": 191,
+                "column": 12,
+                "offset": 5207
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 191,
+            "column": 1,
+            "offset": 5196
+          },
+          "end": {
+            "line": 191,
+            "column": 12,
+            "offset": 5207
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "control"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSlider.Control",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 193,
+            "column": 1,
+            "offset": 5209
+          },
+          "end": {
+            "line": 193,
+            "column": 24,
+            "offset": 5232
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Track",
+            "position": {
+              "start": {
+                "line": 195,
+                "column": 5,
+                "offset": 5238
+              },
+              "end": {
+                "line": 195,
+                "column": 10,
+                "offset": 5243
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 195,
+            "column": 1,
+            "offset": 5234
+          },
+          "end": {
+            "line": 195,
+            "column": 10,
+            "offset": 5243
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "track"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSlider.Track",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 197,
+            "column": 1,
+            "offset": 5245
+          },
+          "end": {
+            "line": 197,
+            "column": 22,
+            "offset": 5266
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Indicator",
+            "position": {
+              "start": {
+                "line": 199,
+                "column": 5,
+                "offset": 5272
+              },
+              "end": {
+                "line": 199,
+                "column": 14,
+                "offset": 5281
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 199,
+            "column": 1,
+            "offset": 5268
+          },
+          "end": {
+            "line": 199,
+            "column": 14,
+            "offset": 5281
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "indicator"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSlider.Indicator",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 201,
+            "column": 1,
+            "offset": 5283
+          },
+          "end": {
+            "line": 201,
+            "column": 26,
+            "offset": 5308
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Thumb",
+            "position": {
+              "start": {
+                "line": 203,
+                "column": 5,
+                "offset": 5314
+              },
+              "end": {
+                "line": 203,
+                "column": 10,
+                "offset": 5319
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 203,
+            "column": 1,
+            "offset": 5310
+          },
+          "end": {
+            "line": 203,
+            "column": 10,
+            "offset": 5319
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "thumb"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSlider.Thumb",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 205,
+            "column": 1,
+            "offset": 5321
+          },
+          "end": {
+            "line": 205,
+            "column": 22,
+            "offset": 5342
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/slider/types#TypesSlider"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Slider',\n    'Range Slider Component',\n    'Range Input',\n    'Range Control',\n    'Track Control',\n    'Value Selector',\n    'Keyboard Slider Control',\n    'Dual Slider',\n    'Double Slider',\n    'Two-Handle Slider',\n    'Multi Thumb Slider',\n    'Thumb Alignment Edge',\n    'Accessible Slider',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 207,
+            "column": 1,
+            "offset": 5344
+          },
+          "end": {
+            "line": 225,
+            "column": 3,
+            "offset": 5747
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 226,
+        "column": 1,
+        "offset": 5748
+      }
+    }
+  }
+}

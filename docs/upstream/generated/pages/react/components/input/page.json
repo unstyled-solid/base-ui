@@ -1,0 +1,897 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/input/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "f15597571ca1f8b3b09fb377b8d0e924de9df57e04d684cb83ec5c24b4bfbff2",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/input",
+  "route": "/solid/components/input",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Input",
+  "subtitle": "A native input element that automatically works with Field.",
+  "metadata": {
+    "keywords": [
+      "React Input",
+      "Input Component",
+      "Input Field",
+      "Form Input Field",
+      "Text Field",
+      "Text Input",
+      "Text Box",
+      "Form Input",
+      "Textarea Alternative",
+      "Controlled Input",
+      "Form Element",
+      "Accessible Input",
+      "Headless React Components",
+      "Unstyled Input",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React input component."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoInputHero",
+      "imported": "DemoInputHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/input/demos/hero#DemoInputHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesInput",
+      "imported": "TypesInput",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/input/types#TypesInput"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Input",
+      "properties": {
+        "id": "input"
+      },
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:17:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:27:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "/react/components/field",
+      "target": "/solid/components/field",
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:4:56"
+    },
+    {
+      "source": "/react/handbook/forms",
+      "target": "/solid/handbook/forms",
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:15:129"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React input component."
+      },
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:7:1"
+    },
+    {
+      "name": "DemoInputHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/input/demos/hero#DemoInputHero"
+    },
+    {
+      "name": "TypesInput",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:31:1",
+      "reference": "api:docs/src/app/(docs)/react/components/input/types#TypesInput"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:7:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:11:1",
+      "detail": "Site must implement DemoInputHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:21:1",
+      "detail": "Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:21:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:31:1",
+      "detail": "Site must implement TypesInput; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/input/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Input",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 8,
+                "offset": 7
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 8,
+            "offset": 7
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "input"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Subtitle",
+        "attributes": [],
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "A native input element that automatically works with ",
+                "position": {
+                  "start": {
+                    "line": 4,
+                    "column": 3,
+                    "offset": 22
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 56,
+                    "offset": 75
+                  }
+                }
+              },
+              {
+                "type": "link",
+                "title": null,
+                "url": "/solid/components/field",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Field",
+                    "position": {
+                      "start": {
+                        "line": 4,
+                        "column": 57,
+                        "offset": 76
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 62,
+                        "offset": 81
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 4,
+                    "column": 56,
+                    "offset": 75
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 88,
+                    "offset": 107
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "value": ".",
+                "position": {
+                  "start": {
+                    "line": 4,
+                    "column": 88,
+                    "offset": 107
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 89,
+                    "offset": 108
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 3,
+                "offset": 22
+              },
+              "end": {
+                "line": 4,
+                "column": 89,
+                "offset": 108
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 9
+          },
+          "end": {
+            "line": 5,
+            "column": 12,
+            "offset": 120
+          }
+        },
+        "data": {
+          "handler": "subtitle"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 7,
+                "offset": 128
+              },
+              "end": {
+                "line": 7,
+                "column": 25,
+                "offset": 146
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React input component.",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 26,
+                "offset": 147
+              },
+              "end": {
+                "line": 7,
+                "column": 83,
+                "offset": 204
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 7,
+            "column": 1,
+            "offset": 122
+          },
+          "end": {
+            "line": 7,
+            "column": 86,
+            "offset": 207
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoInputHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 209
+          },
+          "end": {
+            "line": 9,
+            "column": 46,
+            "offset": 254
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoInputHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 256
+          },
+          "end": {
+            "line": 11,
+            "column": 18,
+            "offset": 273
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/input/demos/hero#DemoInputHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 278
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 294
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 275
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 294
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Form controls must have an accessible name",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 5,
+                            "offset": 300
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 47,
+                            "offset": 342
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 3,
+                        "offset": 298
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 344
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": It can be created using a ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 344
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 77,
+                        "offset": 372
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<label>",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 77,
+                        "offset": 372
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 86,
+                        "offset": 381
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " element or the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 86,
+                        "offset": 381
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 397
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Field",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 397
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 109,
+                        "offset": 404
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " component. See the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 109,
+                        "offset": 404
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 129,
+                        "offset": 424
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/handbook/forms",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "forms guide",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 130,
+                            "offset": 425
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 141,
+                            "offset": 436
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 129,
+                        "offset": 424
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 165,
+                        "offset": 460
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 165,
+                        "offset": 460
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 166,
+                        "offset": 461
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 15,
+                    "column": 3,
+                    "offset": 298
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 166,
+                    "offset": 461
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 296
+              },
+              "end": {
+                "line": 15,
+                "column": 166,
+                "offset": 461
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 296
+          },
+          "end": {
+            "line": 15,
+            "column": 166,
+            "offset": 461
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 4,
+                "offset": 466
+              },
+              "end": {
+                "line": 17,
+                "column": 11,
+                "offset": 473
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 463
+          },
+          "end": {
+            "line": 17,
+            "column": 11,
+            "offset": 473
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and use it as a single part:",
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 475
+              },
+              "end": {
+                "line": 19,
+                "column": 50,
+                "offset": 524
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 19,
+            "column": 1,
+            "offset": 475
+          },
+          "end": {
+            "line": 19,
+            "column": 50,
+            "offset": 524
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Input } from 'baseui-solid2/input';\n\n<Input />;",
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 526
+          },
+          "end": {
+            "line": 25,
+            "column": 4,
+            "offset": 610
+          }
+        },
+        "data": {
+          "sourceValue": "import { Input } from '@base-ui/react/input';\n\n<Input />;",
+          "references": [
+            {
+              "value": "@base-ui/react/input",
+              "start": 23,
+              "end": 43,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/input",
+              "start": 23,
+              "end": 43,
+              "kind": "import",
+              "replacement": "baseui-solid2/input"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 4,
+                "offset": 615
+              },
+              "end": {
+                "line": 27,
+                "column": 17,
+                "offset": 628
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 27,
+            "column": 1,
+            "offset": 612
+          },
+          "end": {
+            "line": 27,
+            "column": 17,
+            "offset": 628
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesInput } from './types';",
+        "position": {
+          "start": {
+            "line": 29,
+            "column": 1,
+            "offset": 630
+          },
+          "end": {
+            "line": 29,
+            "column": 38,
+            "offset": 667
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesInput",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 669
+          },
+          "end": {
+            "line": 31,
+            "column": 15,
+            "offset": 683
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/input/types#TypesInput"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Input',\n    'Input Component',\n    'Input Field',\n    'Form Input Field',\n    'Text Field',\n    'Text Input',\n    'Text Box',\n    'Form Input',\n    'Textarea Alternative',\n    'Controlled Input',\n    'Form Element',\n    'Accessible Input',\n    'Headless React Components',\n    'Unstyled Input',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 685
+          },
+          "end": {
+            "line": 51,
+            "column": 3,
+            "offset": 1053
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 52,
+        "column": 1,
+        "offset": 1054
+      }
+    }
+  }
+}

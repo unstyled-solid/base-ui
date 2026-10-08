@@ -1,0 +1,14 @@
+var e=`.Text {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: oklch(14.5% 0 0deg);
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+  }
+
+  strong& {
+    font-weight: 700;
+  }
+}
+`;export{e as default};

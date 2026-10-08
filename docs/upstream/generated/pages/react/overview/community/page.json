@@ -1,0 +1,2453 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/overview/community/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "3db32b036909b9f6957415ed8bf8759d607bbcab1d171a0024aeb6ea7a9ddb03",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/overview/community",
+  "route": "/solid/overview/community",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Community",
+  "subtitle": "The Base UI ecosystem, support channels, and ways to stay up to date.",
+  "metadata": {
+    "keywords": [
+      "Base UI Community",
+      "Base UI shadcn",
+      "Base UI shadcn/ui",
+      "Base UI GitHub",
+      "Base UI Discord",
+      "Base UI X",
+      "Base UI Bluesky",
+      "Base UI Styling",
+      "Base UI Ecosystem",
+      "Base UI Support",
+      "Headless React Community",
+      "Accessible React Components"
+    ],
+    "description": "Learn how to use Base UI with styles, where to get help, how to stay up to date, and how to contribute."
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Community",
+      "properties": {
+        "id": "community"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "shadcn/ui",
+      "properties": {
+        "id": "shadcnui"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:9:1"
+    },
+    {
+      "depth": 2,
+      "text": "Styled libraries",
+      "properties": {
+        "id": "styled-libraries"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Unofficial ports",
+      "properties": {
+        "id": "unofficial-ports"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:25:1"
+    },
+    {
+      "depth": 2,
+      "text": "Get help and contribute",
+      "properties": {
+        "id": "get-help-and-contribute"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:31:1"
+    },
+    {
+      "depth": 3,
+      "text": "GitHub",
+      "properties": {
+        "id": "github"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:33:1"
+    },
+    {
+      "depth": 3,
+      "text": "Discord",
+      "properties": {
+        "id": "discord"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:38:1"
+    },
+    {
+      "depth": 2,
+      "text": "Stay up to date",
+      "properties": {
+        "id": "stay-up-to-date"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:42:1"
+    },
+    {
+      "depth": 3,
+      "text": "X",
+      "properties": {
+        "id": "x"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:44:1"
+    },
+    {
+      "depth": 3,
+      "text": "Bluesky",
+      "properties": {
+        "id": "bluesky"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:48:1"
+    },
+    {
+      "depth": 3,
+      "text": "GitHub releases",
+      "properties": {
+        "id": "github-releases"
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:52:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "https://ui.shadcn.com/",
+      "target": "https://ui.shadcn.com/",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:11:1"
+    },
+    {
+      "source": "https://ui.shadcn.com/create",
+      "target": "https://ui.shadcn.com/create",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:11:239"
+    },
+    {
+      "source": "https://kumo-ui.com",
+      "target": "https://kumo-ui.com",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:17:3"
+    },
+    {
+      "source": "https://coss.com/ui",
+      "target": "https://coss.com/ui",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:18:3"
+    },
+    {
+      "source": "https://cal.com",
+      "target": "https://cal.com",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:18:93"
+    },
+    {
+      "source": "https://www.usefragments.com",
+      "target": "https://www.usefragments.com",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:19:3"
+    },
+    {
+      "source": "https://www.lumiui.dev",
+      "target": "https://www.lumiui.dev",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:20:3"
+    },
+    {
+      "source": "https://www.olyxui.com",
+      "target": "https://www.olyxui.com",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:21:3"
+    },
+    {
+      "source": "https://reui.io",
+      "target": "https://reui.io",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:22:3"
+    },
+    {
+      "source": "https://figui.dev",
+      "target": "https://figui.dev",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:23:3"
+    },
+    {
+      "source": "https://github.com/msviderok/base-ui-solid",
+      "target": "https://github.com/msviderok/base-ui-solid",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:27:3"
+    },
+    {
+      "source": "https://github.com/vuepont/base-ui-vue",
+      "target": "https://github.com/vuepont/base-ui-vue",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:28:3"
+    },
+    {
+      "source": "https://github.com/radix-ng/primitives",
+      "target": "https://github.com/radix-ng/primitives",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:29:3"
+    },
+    {
+      "source": "https://github.com/mui/base-ui",
+      "target": "https://github.com/mui/base-ui",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:36:59"
+    },
+    {
+      "source": "https://base-ui.com/r/discord",
+      "target": "https://base-ui.com/r/discord",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:40:65"
+    },
+    {
+      "source": "https://x.com/base_ui",
+      "target": "https://x.com/base_ui",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:46:80"
+    },
+    {
+      "source": "https://bsky.app/profile/base-ui.com",
+      "target": "https://bsky.app/profile/base-ui.com",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:50:15"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/releases",
+      "target": "https://github.com/mui/base-ui/releases",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:54:31"
+    },
+    {
+      "source": "/react/overview/releases",
+      "target": "/upstream/react/overview/releases",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:56:45"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "Learn how to use Base UI with styles, where to get help, how to stay up to date, and how to contribute."
+      },
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:4:1"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "community-support",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:1:1",
+      "detail": "Upstream ecosystem listings do not establish Solid compatibility.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:20:36",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/overview/community/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Community",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 12,
+                "offset": 11
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12,
+            "offset": 11
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "community"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "The Base UI ecosystem, support channels, and ways to stay up to date.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 23
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 80,
+                    "offset": 92
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 13
+              },
+              "end": {
+                "line": 3,
+                "column": 91,
+                "offset": 103
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 91,
+            "offset": 103
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 112
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 130
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "Learn how to use Base UI with styles, where to get help, how to stay up to date, and how to contribute.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 133
+              },
+              "end": {
+                "line": 6,
+                "column": 116,
+                "offset": 246
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 104
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 249
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "shadcn/ui",
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 4,
+                "offset": 254
+              },
+              "end": {
+                "line": 9,
+                "column": 13,
+                "offset": 263
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 251
+          },
+          "end": {
+            "line": 9,
+            "column": 13,
+            "offset": 263
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "shadcnui"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://ui.shadcn.com/",
+            "children": [
+              {
+                "type": "text",
+                "value": "shadcn/ui",
+                "position": {
+                  "start": {
+                    "line": 11,
+                    "column": 2,
+                    "offset": 266
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 11,
+                    "offset": 275
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 1,
+                "offset": 265
+              },
+              "end": {
+                "line": 11,
+                "column": 36,
+                "offset": 300
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " uses Base UI as its unstyled foundation. If you want Tailwind-styled wrapper components and higher-level APIs without building that layer yourself, you can create a component library with the shadcn/ui ",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 36,
+                "offset": 300
+              },
+              "end": {
+                "line": 11,
+                "column": 239,
+                "offset": 503
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://ui.shadcn.com/create",
+            "children": [
+              {
+                "type": "text",
+                "value": "create",
+                "position": {
+                  "start": {
+                    "line": 11,
+                    "column": 240,
+                    "offset": 504
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 246,
+                    "offset": 510
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 239,
+                "offset": 503
+              },
+              "end": {
+                "line": 11,
+                "column": 277,
+                "offset": 541
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " tool.",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 277,
+                "offset": 541
+              },
+              "end": {
+                "line": 11,
+                "column": 283,
+                "offset": 547
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 265
+          },
+          "end": {
+            "line": 11,
+            "column": 283,
+            "offset": 547
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Styled libraries",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 552
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 568
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 549
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 568
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "styled-libraries"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Here's a non-exhaustive list of open-source styled libraries built with Base UI:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 570
+              },
+              "end": {
+                "line": 15,
+                "column": 81,
+                "offset": 650
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 570
+          },
+          "end": {
+            "line": 15,
+            "column": 81,
+            "offset": 650
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://kumo-ui.com",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Kumo",
+                        "position": {
+                          "start": {
+                            "line": 17,
+                            "column": 4,
+                            "offset": 655
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 8,
+                            "offset": 659
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 3,
+                        "offset": 654
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 30,
+                        "offset": 681
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": Cloudflare's component library for building modern web applications.",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 30,
+                        "offset": 681
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 100,
+                        "offset": 751
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 17,
+                    "column": 3,
+                    "offset": 654
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 100,
+                    "offset": 751
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 652
+              },
+              "end": {
+                "line": 17,
+                "column": 100,
+                "offset": 751
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://coss.com/ui",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "coss ui",
+                        "position": {
+                          "start": {
+                            "line": 18,
+                            "column": 4,
+                            "offset": 755
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 11,
+                            "offset": 762
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 3,
+                        "offset": 754
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 33,
+                        "offset": 784
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": a modern UI component library. Built by the people behind ",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 33,
+                        "offset": 784
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 93,
+                        "offset": 844
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://cal.com",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "cal.com",
+                        "position": {
+                          "start": {
+                            "line": 18,
+                            "column": 94,
+                            "offset": 845
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 101,
+                            "offset": 852
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 93,
+                        "offset": 844
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 119,
+                        "offset": 870
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 119,
+                        "offset": 870
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 120,
+                        "offset": 871
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 18,
+                    "column": 3,
+                    "offset": 754
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 120,
+                    "offset": 871
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 18,
+                "column": 1,
+                "offset": 752
+              },
+              "end": {
+                "line": 18,
+                "column": 120,
+                "offset": 871
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://www.usefragments.com",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Fragments",
+                        "position": {
+                          "start": {
+                            "line": 19,
+                            "column": 4,
+                            "offset": 875
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 13,
+                            "offset": 884
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 19,
+                        "column": 3,
+                        "offset": 874
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 44,
+                        "offset": 915
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": a design system platform that includes a component library built on Base UI.",
+                    "position": {
+                      "start": {
+                        "line": 19,
+                        "column": 44,
+                        "offset": 915
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 122,
+                        "offset": 993
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 19,
+                    "column": 3,
+                    "offset": 874
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 122,
+                    "offset": 993
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 872
+              },
+              "end": {
+                "line": 19,
+                "column": 122,
+                "offset": 993
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://www.lumiui.dev",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Lumi UI",
+                        "position": {
+                          "start": {
+                            "line": 20,
+                            "column": 4,
+                            "offset": 997
+                          },
+                          "end": {
+                            "line": 20,
+                            "column": 11,
+                            "offset": 1004
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 20,
+                        "column": 3,
+                        "offset": 996
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 36,
+                        "offset": 1029
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": composable React components.",
+                    "position": {
+                      "start": {
+                        "line": 20,
+                        "column": 36,
+                        "offset": 1029
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 66,
+                        "offset": 1059
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 20,
+                    "column": 3,
+                    "offset": 996
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 66,
+                    "offset": 1059
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 20,
+                "column": 1,
+                "offset": 994
+              },
+              "end": {
+                "line": 20,
+                "column": 66,
+                "offset": 1059
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://www.olyxui.com",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Olyx UI",
+                        "position": {
+                          "start": {
+                            "line": 21,
+                            "column": 4,
+                            "offset": 1063
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 11,
+                            "offset": 1070
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 21,
+                        "column": 3,
+                        "offset": 1062
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 36,
+                        "offset": 1095
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": composable components styled with native CSS and HCT color system.",
+                    "position": {
+                      "start": {
+                        "line": 21,
+                        "column": 36,
+                        "offset": 1095
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 104,
+                        "offset": 1163
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 21,
+                    "column": 3,
+                    "offset": 1062
+                  },
+                  "end": {
+                    "line": 21,
+                    "column": 104,
+                    "offset": 1163
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 21,
+                "column": 1,
+                "offset": 1060
+              },
+              "end": {
+                "line": 21,
+                "column": 104,
+                "offset": 1163
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://reui.io",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "ReUI",
+                        "position": {
+                          "start": {
+                            "line": 22,
+                            "column": 4,
+                            "offset": 1167
+                          },
+                          "end": {
+                            "line": 22,
+                            "column": 8,
+                            "offset": 1171
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 22,
+                        "column": 3,
+                        "offset": 1166
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 26,
+                        "offset": 1189
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": a large collection of components and templates built on shadcn/ui.",
+                    "position": {
+                      "start": {
+                        "line": 22,
+                        "column": 26,
+                        "offset": 1189
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 94,
+                        "offset": 1257
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 22,
+                    "column": 3,
+                    "offset": 1166
+                  },
+                  "end": {
+                    "line": 22,
+                    "column": 94,
+                    "offset": 1257
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 1,
+                "offset": 1164
+              },
+              "end": {
+                "line": 22,
+                "column": 94,
+                "offset": 1257
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://figui.dev",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "FigUI",
+                        "position": {
+                          "start": {
+                            "line": 23,
+                            "column": 4,
+                            "offset": 1261
+                          },
+                          "end": {
+                            "line": 23,
+                            "column": 9,
+                            "offset": 1266
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 23,
+                        "column": 3,
+                        "offset": 1260
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 29,
+                        "offset": 1286
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": a Figma UI3 style component library for building Figma plugins.",
+                    "position": {
+                      "start": {
+                        "line": 23,
+                        "column": 29,
+                        "offset": 1286
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 94,
+                        "offset": 1351
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 23,
+                    "column": 3,
+                    "offset": 1260
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 94,
+                    "offset": 1351
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 23,
+                "column": 1,
+                "offset": 1258
+              },
+              "end": {
+                "line": 23,
+                "column": 94,
+                "offset": 1351
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 652
+          },
+          "end": {
+            "line": 23,
+            "column": 94,
+            "offset": 1351
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Unofficial ports",
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 4,
+                "offset": 1356
+              },
+              "end": {
+                "line": 25,
+                "column": 20,
+                "offset": 1372
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 25,
+            "column": 1,
+            "offset": 1353
+          },
+          "end": {
+            "line": 25,
+            "column": 20,
+            "offset": 1372
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "unofficial-ports"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/msviderok/base-ui-solid",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "base-ui-solid",
+                        "position": {
+                          "start": {
+                            "line": 27,
+                            "column": 4,
+                            "offset": 1377
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 17,
+                            "offset": 1390
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 27,
+                        "column": 3,
+                        "offset": 1376
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 62,
+                        "offset": 1435
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": unofficial port of Base UI to SolidJS.",
+                    "position": {
+                      "start": {
+                        "line": 27,
+                        "column": 62,
+                        "offset": 1435
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 102,
+                        "offset": 1475
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 27,
+                    "column": 3,
+                    "offset": 1376
+                  },
+                  "end": {
+                    "line": 27,
+                    "column": 102,
+                    "offset": 1475
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 1,
+                "offset": 1374
+              },
+              "end": {
+                "line": 27,
+                "column": 102,
+                "offset": 1475
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/vuepont/base-ui-vue",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "base-ui-vue",
+                        "position": {
+                          "start": {
+                            "line": 28,
+                            "column": 4,
+                            "offset": 1479
+                          },
+                          "end": {
+                            "line": 28,
+                            "column": 15,
+                            "offset": 1490
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 28,
+                        "column": 3,
+                        "offset": 1478
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 56,
+                        "offset": 1531
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": unofficial port of Base UI to Vue.",
+                    "position": {
+                      "start": {
+                        "line": 28,
+                        "column": 56,
+                        "offset": 1531
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 92,
+                        "offset": 1567
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 28,
+                    "column": 3,
+                    "offset": 1478
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 92,
+                    "offset": 1567
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 1,
+                "offset": 1476
+              },
+              "end": {
+                "line": 28,
+                "column": 92,
+                "offset": 1567
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/radix-ng/primitives",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "radix-ng",
+                        "position": {
+                          "start": {
+                            "line": 29,
+                            "column": 4,
+                            "offset": 1571
+                          },
+                          "end": {
+                            "line": 29,
+                            "column": 12,
+                            "offset": 1579
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 29,
+                        "column": 3,
+                        "offset": 1570
+                      },
+                      "end": {
+                        "line": 29,
+                        "column": 53,
+                        "offset": 1620
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": unofficial Angular adaptation of Base UI architecture and behavior (originally a Radix UI port).",
+                    "position": {
+                      "start": {
+                        "line": 29,
+                        "column": 53,
+                        "offset": 1620
+                      },
+                      "end": {
+                        "line": 29,
+                        "column": 151,
+                        "offset": 1718
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 29,
+                    "column": 3,
+                    "offset": 1570
+                  },
+                  "end": {
+                    "line": 29,
+                    "column": 151,
+                    "offset": 1718
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 29,
+                "column": 1,
+                "offset": 1568
+              },
+              "end": {
+                "line": 29,
+                "column": 151,
+                "offset": 1718
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 27,
+            "column": 1,
+            "offset": 1374
+          },
+          "end": {
+            "line": 29,
+            "column": 151,
+            "offset": 1718
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Get help and contribute",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 4,
+                "offset": 1723
+              },
+              "end": {
+                "line": 31,
+                "column": 27,
+                "offset": 1746
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 1720
+          },
+          "end": {
+            "line": 31,
+            "column": 27,
+            "offset": 1746
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "get-help-and-contribute"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "GitHub",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 5,
+                "offset": 1752
+              },
+              "end": {
+                "line": 33,
+                "column": 11,
+                "offset": 1758
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 1748
+          },
+          "end": {
+            "line": 33,
+            "column": 11,
+            "offset": 1758
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "github"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI is an open-source project.\nIf you want to file a bug report or contribute, visit our ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 1,
+                "offset": 1760
+              },
+              "end": {
+                "line": 36,
+                "column": 59,
+                "offset": 1853
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://github.com/mui/base-ui",
+            "children": [
+              {
+                "type": "text",
+                "value": "GitHub",
+                "position": {
+                  "start": {
+                    "line": 36,
+                    "column": 60,
+                    "offset": 1854
+                  },
+                  "end": {
+                    "line": 36,
+                    "column": 66,
+                    "offset": 1860
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 59,
+                "offset": 1853
+              },
+              "end": {
+                "line": 36,
+                "column": 99,
+                "offset": 1893
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 99,
+                "offset": 1893
+              },
+              "end": {
+                "line": 36,
+                "column": 100,
+                "offset": 1894
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 1760
+          },
+          "end": {
+            "line": 36,
+            "column": 100,
+            "offset": 1894
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Discord",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 5,
+                "offset": 1900
+              },
+              "end": {
+                "line": 38,
+                "column": 12,
+                "offset": 1907
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 1896
+          },
+          "end": {
+            "line": 38,
+            "column": 12,
+            "offset": 1907
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "discord"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For community support, questions, tips, and showcases, join our ",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 1,
+                "offset": 1909
+              },
+              "end": {
+                "line": 40,
+                "column": 65,
+                "offset": 1973
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://base-ui.com/r/discord",
+            "children": [
+              {
+                "type": "text",
+                "value": "Discord",
+                "position": {
+                  "start": {
+                    "line": 40,
+                    "column": 66,
+                    "offset": 1974
+                  },
+                  "end": {
+                    "line": 40,
+                    "column": 73,
+                    "offset": 1981
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 65,
+                "offset": 1973
+              },
+              "end": {
+                "line": 40,
+                "column": 105,
+                "offset": 2013
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 105,
+                "offset": 2013
+              },
+              "end": {
+                "line": 40,
+                "column": 106,
+                "offset": 2014
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 40,
+            "column": 1,
+            "offset": 1909
+          },
+          "end": {
+            "line": 40,
+            "column": 106,
+            "offset": 2014
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Stay up to date",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 4,
+                "offset": 2019
+              },
+              "end": {
+                "line": 42,
+                "column": 19,
+                "offset": 2034
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 42,
+            "column": 1,
+            "offset": 2016
+          },
+          "end": {
+            "line": 42,
+            "column": 19,
+            "offset": 2034
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "stay-up-to-date"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "X",
+            "position": {
+              "start": {
+                "line": 44,
+                "column": 5,
+                "offset": 2040
+              },
+              "end": {
+                "line": 44,
+                "column": 6,
+                "offset": 2041
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 44,
+            "column": 1,
+            "offset": 2036
+          },
+          "end": {
+            "line": 44,
+            "column": 6,
+            "offset": 2041
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "x"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The best way to stay up to date on new releases and announcements is to follow ",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 1,
+                "offset": 2043
+              },
+              "end": {
+                "line": 46,
+                "column": 80,
+                "offset": 2122
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://x.com/base_ui",
+            "children": [
+              {
+                "type": "text",
+                "value": "@base_ui",
+                "position": {
+                  "start": {
+                    "line": 46,
+                    "column": 81,
+                    "offset": 2123
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 89,
+                    "offset": 2131
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 80,
+                "offset": 2122
+              },
+              "end": {
+                "line": 46,
+                "column": 113,
+                "offset": 2155
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " on X.",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 113,
+                "offset": 2155
+              },
+              "end": {
+                "line": 46,
+                "column": 119,
+                "offset": 2161
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 46,
+            "column": 1,
+            "offset": 2043
+          },
+          "end": {
+            "line": 46,
+            "column": 119,
+            "offset": 2161
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Bluesky",
+            "position": {
+              "start": {
+                "line": 48,
+                "column": 5,
+                "offset": 2167
+              },
+              "end": {
+                "line": 48,
+                "column": 12,
+                "offset": 2174
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 48,
+            "column": 1,
+            "offset": 2163
+          },
+          "end": {
+            "line": 48,
+            "column": 12,
+            "offset": 2174
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "bluesky"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "We're also on ",
+            "position": {
+              "start": {
+                "line": 50,
+                "column": 1,
+                "offset": 2176
+              },
+              "end": {
+                "line": 50,
+                "column": 15,
+                "offset": 2190
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://bsky.app/profile/base-ui.com",
+            "children": [
+              {
+                "type": "text",
+                "value": "Bluesky",
+                "position": {
+                  "start": {
+                    "line": 50,
+                    "column": 16,
+                    "offset": 2191
+                  },
+                  "end": {
+                    "line": 50,
+                    "column": 23,
+                    "offset": 2198
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 50,
+                "column": 15,
+                "offset": 2190
+              },
+              "end": {
+                "line": 50,
+                "column": 62,
+                "offset": 2237
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 50,
+                "column": 62,
+                "offset": 2237
+              },
+              "end": {
+                "line": 50,
+                "column": 63,
+                "offset": 2238
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 50,
+            "column": 1,
+            "offset": 2176
+          },
+          "end": {
+            "line": 50,
+            "column": 63,
+            "offset": 2238
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "GitHub releases",
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 5,
+                "offset": 2244
+              },
+              "end": {
+                "line": 52,
+                "column": 20,
+                "offset": 2259
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 52,
+            "column": 1,
+            "offset": 2240
+          },
+          "end": {
+            "line": 52,
+            "column": 20,
+            "offset": 2259
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "github-releases"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can also subscribe to the ",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 2261
+              },
+              "end": {
+                "line": 54,
+                "column": 31,
+                "offset": 2291
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://github.com/mui/base-ui/releases",
+            "children": [
+              {
+                "type": "text",
+                "value": "GitHub releases",
+                "position": {
+                  "start": {
+                    "line": 54,
+                    "column": 32,
+                    "offset": 2292
+                  },
+                  "end": {
+                    "line": 54,
+                    "column": 47,
+                    "offset": 2307
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 31,
+                "offset": 2291
+              },
+              "end": {
+                "line": 54,
+                "column": 89,
+                "offset": 2349
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to get notified.",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 89,
+                "offset": 2349
+              },
+              "end": {
+                "line": 54,
+                "column": 106,
+                "offset": 2366
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 54,
+            "column": 1,
+            "offset": 2261
+          },
+          "end": {
+            "line": 54,
+            "column": 106,
+            "offset": 2366
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Detailed release notes are published on our ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 1,
+                "offset": 2368
+              },
+              "end": {
+                "line": 56,
+                "column": 45,
+                "offset": 2412
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/upstream/react/overview/releases",
+            "children": [
+              {
+                "type": "text",
+                "value": "releases",
+                "position": {
+                  "start": {
+                    "line": 56,
+                    "column": 46,
+                    "offset": 2413
+                  },
+                  "end": {
+                    "line": 56,
+                    "column": 54,
+                    "offset": 2421
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 45,
+                "offset": 2412
+              },
+              "end": {
+                "line": 56,
+                "column": 81,
+                "offset": 2448
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " page as well.",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 81,
+                "offset": 2448
+              },
+              "end": {
+                "line": 56,
+                "column": 95,
+                "offset": 2462
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 2368
+          },
+          "end": {
+            "line": 56,
+            "column": 95,
+            "offset": 2462
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI Community',\n    'Base UI shadcn',\n    'Base UI shadcn/ui',\n    'Base UI GitHub',\n    'Base UI Discord',\n    'Base UI X',\n    'Base UI Bluesky',\n    'Base UI Styling',\n    'Base UI Ecosystem',\n    'Base UI Support',\n    'Headless React Community',\n    'Accessible React Components',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 2464
+          },
+          "end": {
+            "line": 73,
+            "column": 3,
+            "offset": 2806
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 74,
+        "column": 1,
+        "offset": 2807
+      }
+    }
+  }
+}

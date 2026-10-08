@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import { renderToString, generateHydrationScript, isServer } from '@solidjs/web';
+import { App } from './app';
+assert.equal(isServer, true);
+assert.equal(typeof document, 'undefined');
+assert.equal(typeof window, 'undefined');
+const errors: string[] = [];
+const html = renderToString(() => <App />, { renderId: 'packed-', onError: error => errors.push(String(error)) });
+assert.deepEqual(errors, []);
+assert(html.includes('Package toggle') && html.includes('base-ui-disable-scrollbar'), 'SSR lost components/styles');
+assert(html.includes('packed-consumer-nonce'), 'SSR lost CSP nonce');
+await fs.writeFile('ssr-result.json', JSON.stringify({ html, bootstrap: generateHydrationScript(), isServer, errors }, null, 2));

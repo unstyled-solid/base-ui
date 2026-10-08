@@ -1,0 +1,27 @@
+var e=`// Adapted from mui/base-ui 19511bb171f3b360b006c94cf6d07e53cb446505; MIT.
+import { createSignal, createUniqueId, onCleanup, onSettled, omit, For } from 'solid-js';
+import type { Component } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
+import type { JSX, ComponentProps } from '@solidjs/web';
+import { Avatar } from 'baseui-solid2/avatar';
+import styles from './index.module.css';
+
+export default function ExampleAvatar() {
+  return (
+    <div style={{ display: 'flex', gap: '1rem' }}>
+      <Avatar.Root class={styles.Root}>
+        <Avatar.Image
+          src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?w=128&h=128&dpr=2&q=80"
+          width="48"
+          height="48"
+          class={styles.Image}
+        />
+        <Avatar.Fallback delay={600} class={styles.Fallback}>
+          LT
+        </Avatar.Fallback>
+      </Avatar.Root>
+      <Avatar.Root class={styles.Root}>LT</Avatar.Root>
+    </div>
+  );
+}
+`;export{e as default};

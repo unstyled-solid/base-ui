@@ -1,0 +1,5 @@
+{
+  "extends": "../../../tsconfig.json",
+  "include": ["./host.tsx", "./protocol.ts", "./retained.config.ts"],
+  "exclude": ["./.cache"]
+}

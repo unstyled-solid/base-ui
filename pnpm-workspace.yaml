@@ -1,0 +1,17 @@
+packages:
+  - packages/solid
+
+# RC packages use caret dependencies internally; never drift to another RC.
+overrides:
+  solid-js: 2.0.0-rc.13
+  '@solidjs/signals': 2.0.0-rc.13
+  '@solidjs/web': 2.0.0-rc.13
+  '@solidjs/compiler': 2.0.0-rc.13
+  '@solidjs/babel-plugin': 2.0.0-rc.13
+  '@floating-ui/core': 1.8.0
+  '@floating-ui/utils': 0.2.12
+
+strictPeerDependencies: true
+autoInstallPeers: false
+patchedDependencies:
+  '@solidjs/signals@2.0.0-rc.13': docs/patches/@solidjs__signals@2.0.0-rc.13.patch

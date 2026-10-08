@@ -1,0 +1,1 @@
+import{A as e}from"../islands.js";function t(t,n){let r=e(),i=n?`${n}-${r}`:r;return()=>(typeof t==`function`?t():t)??i}function n(e){return t(e,`base-ui`)}export{n as t};

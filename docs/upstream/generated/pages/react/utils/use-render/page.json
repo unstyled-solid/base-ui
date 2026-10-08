@@ -1,0 +1,3300 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/utils/use-render/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "9be0382a76ff450f29d714e0f4ce3089143c22e8dbd8af4ed232df6be5b8e20e",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/utils/use-render",
+  "route": "/solid/utils/use-render",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "useRender",
+  "subtitle": "Hook for enabling a render prop in custom components.",
+  "metadata": {
+    "keywords": [
+      "Base UI useRender",
+      "React Render Prop Hook",
+      "Merge Props Helper",
+      "Merge Refs Hook",
+      "Radix asChild Migration",
+      "Component Composition",
+      "Props Spreading",
+      "Ref Forwarding",
+      "Custom Components",
+      "asChild Pattern",
+      "Slot Pattern"
+    ],
+    "description": "Hook for enabling a render prop in custom components."
+  },
+  "imports": [
+    {
+      "from": "./demos/render",
+      "local": "DemoUseRenderRender",
+      "imported": "DemoUseRenderRender",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/utils/use-render/demos/render#DemoUseRenderRender"
+    },
+    {
+      "from": "./demos/render-callback",
+      "local": "DemoUseRenderRenderCallback",
+      "imported": "DemoUseRenderRenderCallback",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/utils/use-render/demos/render-callback#DemoUseRenderRenderCallback"
+    },
+    {
+      "from": "./types",
+      "local": "TypesUseRender",
+      "imported": "TypesUseRender",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/utils/use-render/types#TypesUseRender"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "useRender",
+      "properties": {
+        "id": "userender"
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:9:1"
+    },
+    {
+      "depth": 2,
+      "text": "Merging props",
+      "properties": {
+        "id": "merging-props"
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:23:1"
+    },
+    {
+      "depth": 2,
+      "text": "Merging refs",
+      "properties": {
+        "id": "merging-refs"
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:52:1"
+    },
+    {
+      "depth": 2,
+      "text": "TypeScript",
+      "properties": {
+        "id": "typescript"
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:100:1"
+    },
+    {
+      "depth": 2,
+      "text": "Migrating from Radix UI",
+      "properties": {
+        "id": "migrating-from-radix-ui"
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:129:1"
+    },
+    {
+      "depth": 2,
+      "text": "Render prop and polymorphism",
+      "properties": {
+        "id": "render-prop-and-polymorphism"
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:166:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:172:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#examples",
+      "target": "#examples",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:77:5"
+    },
+    {
+      "source": "/react/handbook/composition",
+      "target": "/solid/handbook/composition",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:131:127"
+    },
+    {
+      "source": "/react/components/button",
+      "target": "/solid/components/button",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:170:367"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "Hook for enabling a render prop in custom components."
+      },
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:5:1"
+    },
+    {
+      "name": "DemoUseRenderRender",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:15:1",
+      "reference": "demo:docs/src/app/(docs)/react/utils/use-render/demos/render#DemoUseRenderRender"
+    },
+    {
+      "name": "DemoUseRenderRenderCallback",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:21:1",
+      "reference": "demo:docs/src/app/(docs)/react/utils/use-render/demos/render-callback#DemoUseRenderRenderCallback"
+    },
+    {
+      "name": "TypesUseRender",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:182:1",
+      "reference": "api:docs/src/app/(docs)/react/utils/use-render/types#TypesUseRender"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:1:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:7:5",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:15:1",
+      "detail": "Site must implement DemoUseRenderRender; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:21:1",
+      "detail": "Site must implement DemoUseRenderRenderCallback; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:25:17",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:28:4",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:33:1",
+      "detail": "Component",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:33:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:33:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:33:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:54:225",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:56:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:56:14",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:58:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:58:1",
+      "detail": "React.useRef",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:58:1",
+      "detail": "useRender",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:58:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:58:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:75:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:75:45",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:77:26",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:77:80",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:77:100",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:79:1",
+      "detail": "React.useRef",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:79:1",
+      "detail": "useRender",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:79:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:79:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:104:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:105:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:107:1",
+      "detail": "useRender",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:107:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:107:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:135:1",
+      "detail": "Comp",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:135:1",
+      "detail": "Button",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:135:1",
+      "detail": "MyButton",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-className",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:135:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:135:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:135:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:149:13",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:151:1",
+      "detail": "useRender",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:151:1",
+      "detail": "Button",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:151:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:151:1",
+      "detail": "MyButton",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-className",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:151:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:151:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:151:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:176:1",
+      "detail": "useRender",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:176:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:176:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:182:1",
+      "detail": "Site must implement TypesUseRender; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/utils/use-render/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "useRender",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 12,
+                "offset": 11
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12,
+            "offset": 11
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "userender"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Hook for enabling a render prop in custom components.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 23
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 64,
+                    "offset": 76
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 13
+              },
+              "end": {
+                "line": 3,
+                "column": 75,
+                "offset": 87
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 75,
+            "offset": 87
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 7,
+                "offset": 95
+              },
+              "end": {
+                "line": 5,
+                "column": 25,
+                "offset": 113
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "Hook for enabling a render prop in custom components.",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 26,
+                "offset": 114
+              },
+              "end": {
+                "line": 5,
+                "column": 89,
+                "offset": 177
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 89
+          },
+          "end": {
+            "line": 5,
+            "column": 92,
+            "offset": 180
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 1,
+                "offset": 182
+              },
+              "end": {
+                "line": 7,
+                "column": 5,
+                "offset": 186
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "useRender",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 5,
+                "offset": 186
+              },
+              "end": {
+                "line": 7,
+                "column": 16,
+                "offset": 197
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " hook lets you build custom components that provide a ",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 16,
+                "offset": 197
+              },
+              "end": {
+                "line": 7,
+                "column": 70,
+                "offset": 251
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 70,
+                "offset": 251
+              },
+              "end": {
+                "line": 7,
+                "column": 78,
+                "offset": 259
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to override the default rendered element.",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 78,
+                "offset": 259
+              },
+              "end": {
+                "line": 7,
+                "column": 125,
+                "offset": 306
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 7,
+            "column": 1,
+            "offset": 182
+          },
+          "end": {
+            "line": 7,
+            "column": 125,
+            "offset": 306
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 4,
+                "offset": 311
+              },
+              "end": {
+                "line": 9,
+                "column": 12,
+                "offset": 319
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 308
+          },
+          "end": {
+            "line": 9,
+            "column": 12,
+            "offset": 319
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A ",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 1,
+                "offset": 321
+              },
+              "end": {
+                "line": 11,
+                "column": 3,
+                "offset": 323
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 3,
+                "offset": 323
+              },
+              "end": {
+                "line": 11,
+                "column": 11,
+                "offset": 331
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop for a custom Text component lets consumers use it to replace the default rendered ",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 11,
+                "offset": 331
+              },
+              "end": {
+                "line": 11,
+                "column": 99,
+                "offset": 419
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "p",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 99,
+                "offset": 419
+              },
+              "end": {
+                "line": 11,
+                "column": 102,
+                "offset": 422
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " element with a different tag or component.",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 102,
+                "offset": 422
+              },
+              "end": {
+                "line": 11,
+                "column": 145,
+                "offset": 465
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 321
+          },
+          "end": {
+            "line": 11,
+            "column": 145,
+            "offset": 465
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoUseRenderRender } from './demos/render';",
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 467
+          },
+          "end": {
+            "line": 13,
+            "column": 54,
+            "offset": 520
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoUseRenderRender",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 522
+          },
+          "end": {
+            "line": 15,
+            "column": 24,
+            "offset": 545
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/utils/use-render/demos/render#DemoUseRenderRender"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The callback version of the ",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 547
+              },
+              "end": {
+                "line": 17,
+                "column": 29,
+                "offset": 575
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 29,
+                "offset": 575
+              },
+              "end": {
+                "line": 17,
+                "column": 37,
+                "offset": 583
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop enables more control of how props are spread, and also passes the internal ",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 37,
+                "offset": 583
+              },
+              "end": {
+                "line": 17,
+                "column": 118,
+                "offset": 664
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "state",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 118,
+                "offset": 664
+              },
+              "end": {
+                "line": 17,
+                "column": 125,
+                "offset": 671
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " of a component.",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 125,
+                "offset": 671
+              },
+              "end": {
+                "line": 17,
+                "column": 141,
+                "offset": 687
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 547
+          },
+          "end": {
+            "line": 17,
+            "column": 141,
+            "offset": 687
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoUseRenderRenderCallback } from './demos/render-callback';",
+        "position": {
+          "start": {
+            "line": 19,
+            "column": 1,
+            "offset": 689
+          },
+          "end": {
+            "line": 19,
+            "column": 71,
+            "offset": 759
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoUseRenderRenderCallback",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 761
+          },
+          "end": {
+            "line": 21,
+            "column": 32,
+            "offset": 792
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/utils/use-render/demos/render-callback#DemoUseRenderRenderCallback"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Merging props",
+            "position": {
+              "start": {
+                "line": 23,
+                "column": 4,
+                "offset": 797
+              },
+              "end": {
+                "line": 23,
+                "column": 17,
+                "offset": 810
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 23,
+            "column": 1,
+            "offset": 794
+          },
+          "end": {
+            "line": 23,
+            "column": 17,
+            "offset": 810
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "merging-props"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 1,
+                "offset": 812
+              },
+              "end": {
+                "line": 25,
+                "column": 5,
+                "offset": 816
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "mergeProps",
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 5,
+                "offset": 816
+              },
+              "end": {
+                "line": 25,
+                "column": 17,
+                "offset": 828
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " function merges two or more sets of React props together. It safely merges three types of props:",
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 17,
+                "offset": 828
+              },
+              "end": {
+                "line": 25,
+                "column": 114,
+                "offset": 925
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 25,
+            "column": 1,
+            "offset": 812
+          },
+          "end": {
+            "line": 25,
+            "column": 114,
+            "offset": 925
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Event handlers, so that all are invoked",
+                    "position": {
+                      "start": {
+                        "line": 27,
+                        "column": 4,
+                        "offset": 930
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 43,
+                        "offset": 969
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 27,
+                    "column": 4,
+                    "offset": 930
+                  },
+                  "end": {
+                    "line": 27,
+                    "column": 43,
+                    "offset": 969
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 1,
+                "offset": 927
+              },
+              "end": {
+                "line": 27,
+                "column": 43,
+                "offset": 969
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "className",
+                    "position": {
+                      "start": {
+                        "line": 28,
+                        "column": 4,
+                        "offset": 973
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 15,
+                        "offset": 984
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " strings",
+                    "position": {
+                      "start": {
+                        "line": 28,
+                        "column": 15,
+                        "offset": 984
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 23,
+                        "offset": 992
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 28,
+                    "column": 4,
+                    "offset": 973
+                  },
+                  "end": {
+                    "line": 28,
+                    "column": 23,
+                    "offset": 992
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 1,
+                "offset": 970
+              },
+              "end": {
+                "line": 28,
+                "column": 23,
+                "offset": 992
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "style",
+                    "position": {
+                      "start": {
+                        "line": 29,
+                        "column": 4,
+                        "offset": 996
+                      },
+                      "end": {
+                        "line": 29,
+                        "column": 11,
+                        "offset": 1003
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " properties",
+                    "position": {
+                      "start": {
+                        "line": 29,
+                        "column": 11,
+                        "offset": 1003
+                      },
+                      "end": {
+                        "line": 29,
+                        "column": 22,
+                        "offset": 1014
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 29,
+                    "column": 4,
+                    "offset": 996
+                  },
+                  "end": {
+                    "line": 29,
+                    "column": 22,
+                    "offset": 1014
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 29,
+                "column": 1,
+                "offset": 993
+              },
+              "end": {
+                "line": 29,
+                "column": 22,
+                "offset": 1014
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 27,
+            "column": 1,
+            "offset": 927
+          },
+          "end": {
+            "line": 29,
+            "column": 22,
+            "offset": 1014
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "mergeProps",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 1,
+                "offset": 1016
+              },
+              "end": {
+                "line": 31,
+                "column": 13,
+                "offset": 1028
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " merges objects from left to right, so that subsequent objects' properties in the arguments overwrite previous ones. Merging props is useful when creating custom components, as well as inside the callback version of the ",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 13,
+                "offset": 1028
+              },
+              "end": {
+                "line": 31,
+                "column": 233,
+                "offset": 1248
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 233,
+                "offset": 1248
+              },
+              "end": {
+                "line": 31,
+                "column": 241,
+                "offset": 1256
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop for any Base UI component.",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 241,
+                "offset": 1256
+              },
+              "end": {
+                "line": 31,
+                "column": 273,
+                "offset": 1288
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 1016
+          },
+          "end": {
+            "line": 31,
+            "column": 273,
+            "offset": 1288
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using mergeProps in the render callback\"",
+        "value": "import { mergeProps } from 'baseui-solid2/merge-props';\nimport styles from './index.module.css';\n\nfunction Button() {\n  return (\n    <Component\n      render={(props, state) => (\n        <button\n          {...mergeProps<'button'>(props, {\n            className: styles.Button,\n          })}\n        />\n      )}\n    />\n  );\n}",
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 1290
+          },
+          "end": {
+            "line": 50,
+            "column": 4,
+            "offset": 1673
+          }
+        },
+        "data": {
+          "sourceValue": "import { mergeProps } from '@base-ui/react/merge-props';\nimport styles from './index.module.css';\n\nfunction Button() {\n  return (\n    <Component\n      render={(props, state) => (\n        <button\n          {...mergeProps<'button'>(props, {\n            className: styles.Button,\n          })}\n        />\n      )}\n    />\n  );\n}",
+          "references": [
+            {
+              "value": "@base-ui/react/merge-props",
+              "start": 28,
+              "end": 54,
+              "kind": "import"
+            },
+            {
+              "value": "./index.module.css",
+              "start": 77,
+              "end": 95,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/merge-props",
+              "start": 28,
+              "end": 54,
+              "kind": "import",
+              "replacement": "baseui-solid2/merge-props"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Merging refs",
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 4,
+                "offset": 1678
+              },
+              "end": {
+                "line": 52,
+                "column": 16,
+                "offset": 1690
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 52,
+            "column": 1,
+            "offset": 1675
+          },
+          "end": {
+            "line": 52,
+            "column": 16,
+            "offset": 1690
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "merging-refs"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When building custom components, you often need to control a ref internally while still letting external consumers pass their own—merging refs lets both parties have access to the underlying DOM element. The ",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 1692
+              },
+              "end": {
+                "line": 54,
+                "column": 209,
+                "offset": 1900
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "ref",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 209,
+                "offset": 1900
+              },
+              "end": {
+                "line": 54,
+                "column": 214,
+                "offset": 1905
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " option in ",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 214,
+                "offset": 1905
+              },
+              "end": {
+                "line": 54,
+                "column": 225,
+                "offset": 1916
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "useRender",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 225,
+                "offset": 1916
+              },
+              "end": {
+                "line": 54,
+                "column": 236,
+                "offset": 1927
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " enables this, which holds an array of refs to be merged together.",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 236,
+                "offset": 1927
+              },
+              "end": {
+                "line": 54,
+                "column": 302,
+                "offset": 1993
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 54,
+            "column": 1,
+            "offset": 1692
+          },
+          "end": {
+            "line": 54,
+            "column": 302,
+            "offset": 1993
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In React 19, ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 1,
+                "offset": 1995
+              },
+              "end": {
+                "line": 56,
+                "column": 14,
+                "offset": 2008
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "React.forwardRef()",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 14,
+                "offset": 2008
+              },
+              "end": {
+                "line": 56,
+                "column": 34,
+                "offset": 2028
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is not needed when building primitive components, as the external ref prop is already contained inside ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 34,
+                "offset": 2028
+              },
+              "end": {
+                "line": 56,
+                "column": 138,
+                "offset": 2132
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "props",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 138,
+                "offset": 2132
+              },
+              "end": {
+                "line": 56,
+                "column": 145,
+                "offset": 2139
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". Your internal ref can be passed to ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 145,
+                "offset": 2139
+              },
+              "end": {
+                "line": 56,
+                "column": 182,
+                "offset": 2176
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "ref",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 182,
+                "offset": 2176
+              },
+              "end": {
+                "line": 56,
+                "column": 187,
+                "offset": 2181
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to be merged with ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 187,
+                "offset": 2181
+              },
+              "end": {
+                "line": 56,
+                "column": 206,
+                "offset": 2200
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "props.ref",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 206,
+                "offset": 2200
+              },
+              "end": {
+                "line": 56,
+                "column": 217,
+                "offset": 2211
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 217,
+                "offset": 2211
+              },
+              "end": {
+                "line": 56,
+                "column": 218,
+                "offset": 2212
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 1995
+          },
+          "end": {
+            "line": 56,
+            "column": 218,
+            "offset": 2212
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"React 19\"",
+        "value": "function Text({ render, ...props }: TextProps) {\n  const internalRef = React.useRef<HTMLElement | null>(null); {/* @highlight-text \"internalRef\" */}\n\n  const element = useRender({\n    defaultTagName: 'p',\n    {/* @highlight-start */}\n    ref: internalRef, {/* @highlight-text \"internalRef\" */}\n    {/* @highlight-end */}\n    props,\n    render,\n  });\n\n  return element;\n}",
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 2214
+          },
+          "end": {
+            "line": 73,
+            "column": 4,
+            "offset": 2612
+          }
+        },
+        "data": {
+          "sourceValue": "function Text({ render, ...props }: TextProps) {\n  const internalRef = React.useRef<HTMLElement | null>(null); {/* @highlight-text \"internalRef\" */}\n\n  const element = useRender({\n    defaultTagName: 'p',\n    {/* @highlight-start */}\n    ref: internalRef, {/* @highlight-text \"internalRef\" */}\n    {/* @highlight-end */}\n    props,\n    render,\n  });\n\n  return element;\n}",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 209,
+              "message": "Property assignment expected."
+            },
+            {
+              "start": 238,
+              "message": "',' expected."
+            },
+            {
+              "start": 241,
+              "message": "',' expected."
+            },
+            {
+              "start": 298,
+              "message": "',' expected."
+            },
+            {
+              "start": 325,
+              "message": "',' expected."
+            },
+            {
+              "start": 346,
+              "message": "Argument expression expected."
+            },
+            {
+              "start": 347,
+              "message": "Declaration or statement expected."
+            },
+            {
+              "start": 369,
+              "message": "Declaration or statement expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In older versions of React, you need to use ",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 1,
+                "offset": 2614
+              },
+              "end": {
+                "line": 75,
+                "column": 45,
+                "offset": 2658
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "React.forwardRef()",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 45,
+                "offset": 2658
+              },
+              "end": {
+                "line": 75,
+                "column": 65,
+                "offset": 2678
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and add the forwarded ref to the ",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 65,
+                "offset": 2678
+              },
+              "end": {
+                "line": 75,
+                "column": 99,
+                "offset": 2712
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "ref",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 99,
+                "offset": 2712
+              },
+              "end": {
+                "line": 75,
+                "column": 104,
+                "offset": 2717
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " array along with your own internal ref.",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 104,
+                "offset": 2717
+              },
+              "end": {
+                "line": 75,
+                "column": 144,
+                "offset": 2757
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 75,
+            "column": 1,
+            "offset": 2614
+          },
+          "end": {
+            "line": 75,
+            "column": 144,
+            "offset": 2757
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 1,
+                "offset": 2759
+              },
+              "end": {
+                "line": 77,
+                "column": 5,
+                "offset": 2763
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "#examples",
+            "children": [
+              {
+                "type": "text",
+                "value": "examples",
+                "position": {
+                  "start": {
+                    "line": 77,
+                    "column": 6,
+                    "offset": 2764
+                  },
+                  "end": {
+                    "line": 77,
+                    "column": 14,
+                    "offset": 2772
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 5,
+                "offset": 2763
+              },
+              "end": {
+                "line": 77,
+                "column": 26,
+                "offset": 2784
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " above assume React 19, and should be modified to use ",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 26,
+                "offset": 2784
+              },
+              "end": {
+                "line": 77,
+                "column": 80,
+                "offset": 2838
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "React.forwardRef()",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 80,
+                "offset": 2838
+              },
+              "end": {
+                "line": 77,
+                "column": 100,
+                "offset": 2858
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to support React 18 and 17.",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 100,
+                "offset": 2858
+              },
+              "end": {
+                "line": 77,
+                "column": 128,
+                "offset": 2886
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 77,
+            "column": 1,
+            "offset": 2759
+          },
+          "end": {
+            "line": 77,
+            "column": 128,
+            "offset": 2886
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"React 18 and 17\"",
+        "value": "const Text = React.forwardRef(function Text(\n  { render, ...props }: TextProps,\n  forwardedRef: React.ForwardedRef<HTMLElement>, //@highlight-text \"forwardedRef\"\n) {\n  const internalRef = React.useRef<HTMLElement | null>(null); // @highlight-text \"internalRef\"\n\n  const element = useRender({\n    defaultTagName: 'p',\n    // @highlight-start\n    // @highlight-text \"internalRef\" \"forwardedRef\"\n    ref: [forwardedRef, internalRef],\n    // @highlight-end\n    props,\n    render,\n  });\n\n  return element;\n});",
+        "position": {
+          "start": {
+            "line": 79,
+            "column": 1,
+            "offset": 2888
+          },
+          "end": {
+            "line": 98,
+            "column": 4,
+            "offset": 3427
+          }
+        },
+        "data": {
+          "sourceValue": "const Text = React.forwardRef(function Text(\n  { render, ...props }: TextProps,\n  forwardedRef: React.ForwardedRef<HTMLElement>, //@highlight-text \"forwardedRef\"\n) {\n  const internalRef = React.useRef<HTMLElement | null>(null); // @highlight-text \"internalRef\"\n\n  const element = useRender({\n    defaultTagName: 'p',\n    // @highlight-start\n    // @highlight-text \"internalRef\" \"forwardedRef\"\n    ref: [forwardedRef, internalRef],\n    // @highlight-end\n    props,\n    render,\n  });\n\n  return element;\n});",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "TypeScript",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 4,
+                "offset": 3432
+              },
+              "end": {
+                "line": 100,
+                "column": 14,
+                "offset": 3442
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 100,
+            "column": 1,
+            "offset": 3429
+          },
+          "end": {
+            "line": 100,
+            "column": 14,
+            "offset": 3442
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "typescript"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To type props, there are two interfaces:",
+            "position": {
+              "start": {
+                "line": 102,
+                "column": 1,
+                "offset": 3444
+              },
+              "end": {
+                "line": 102,
+                "column": 41,
+                "offset": 3484
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 102,
+            "column": 1,
+            "offset": 3444
+          },
+          "end": {
+            "line": 102,
+            "column": 41,
+            "offset": 3484
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "useRender.ComponentProps",
+                    "position": {
+                      "start": {
+                        "line": 104,
+                        "column": 3,
+                        "offset": 3488
+                      },
+                      "end": {
+                        "line": 104,
+                        "column": 29,
+                        "offset": 3514
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " for a component's external (public) props. It types the ",
+                    "position": {
+                      "start": {
+                        "line": 104,
+                        "column": 29,
+                        "offset": 3514
+                      },
+                      "end": {
+                        "line": 104,
+                        "column": 86,
+                        "offset": 3571
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "render",
+                    "position": {
+                      "start": {
+                        "line": 104,
+                        "column": 86,
+                        "offset": 3571
+                      },
+                      "end": {
+                        "line": 104,
+                        "column": 94,
+                        "offset": 3579
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop and HTML attributes.",
+                    "position": {
+                      "start": {
+                        "line": 104,
+                        "column": 94,
+                        "offset": 3579
+                      },
+                      "end": {
+                        "line": 104,
+                        "column": 120,
+                        "offset": 3605
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 104,
+                    "column": 3,
+                    "offset": 3488
+                  },
+                  "end": {
+                    "line": 104,
+                    "column": 120,
+                    "offset": 3605
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 1,
+                "offset": 3486
+              },
+              "end": {
+                "line": 104,
+                "column": 120,
+                "offset": 3605
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "useRender.ElementProps",
+                    "position": {
+                      "start": {
+                        "line": 105,
+                        "column": 3,
+                        "offset": 3608
+                      },
+                      "end": {
+                        "line": 105,
+                        "column": 27,
+                        "offset": 3632
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " for the element's internal (private) props. It types HTML attributes alone.",
+                    "position": {
+                      "start": {
+                        "line": 105,
+                        "column": 27,
+                        "offset": 3632
+                      },
+                      "end": {
+                        "line": 105,
+                        "column": 103,
+                        "offset": 3708
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 105,
+                    "column": 3,
+                    "offset": 3608
+                  },
+                  "end": {
+                    "line": 105,
+                    "column": 103,
+                    "offset": 3708
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 105,
+                "column": 1,
+                "offset": 3606
+              },
+              "end": {
+                "line": 105,
+                "column": 103,
+                "offset": 3708
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 104,
+            "column": 1,
+            "offset": 3486
+          },
+          "end": {
+            "line": 105,
+            "column": 103,
+            "offset": 3708
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Typing props\"",
+        "value": "// @highlight\ninterface ButtonProps extends useRender.ComponentProps<'button'> {}\n\nfunction Button({ render, ...props }: ButtonProps) {\n  // @highlight\n  const defaultProps: useRender.ElementProps<'button'> = {\n    className: styles.Button,\n    type: 'button',\n    children: 'Click me',\n  };\n\n  const element = useRender({\n    defaultTagName: 'button',\n    render,\n    props: mergeProps<'button'>(defaultProps, props),\n  });\n\n  return element;\n}",
+        "position": {
+          "start": {
+            "line": 107,
+            "column": 1,
+            "offset": 3710
+          },
+          "end": {
+            "line": 127,
+            "column": 4,
+            "offset": 4187
+          }
+        },
+        "data": {
+          "sourceValue": "// @highlight\ninterface ButtonProps extends useRender.ComponentProps<'button'> {}\n\nfunction Button({ render, ...props }: ButtonProps) {\n  // @highlight\n  const defaultProps: useRender.ElementProps<'button'> = {\n    className: styles.Button,\n    type: 'button',\n    children: 'Click me',\n  };\n\n  const element = useRender({\n    defaultTagName: 'button',\n    render,\n    props: mergeProps<'button'>(defaultProps, props),\n  });\n\n  return element;\n}",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Migrating from Radix UI",
+            "position": {
+              "start": {
+                "line": 129,
+                "column": 4,
+                "offset": 4192
+              },
+              "end": {
+                "line": 129,
+                "column": 27,
+                "offset": 4215
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 129,
+            "column": 1,
+            "offset": 4189
+          },
+          "end": {
+            "line": 129,
+            "column": 27,
+            "offset": 4215
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "migrating-from-radix-ui"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Radix UI uses an ",
+            "position": {
+              "start": {
+                "line": 131,
+                "column": 1,
+                "offset": 4217
+              },
+              "end": {
+                "line": 131,
+                "column": 18,
+                "offset": 4234
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "asChild",
+            "position": {
+              "start": {
+                "line": 131,
+                "column": 18,
+                "offset": 4234
+              },
+              "end": {
+                "line": 131,
+                "column": 27,
+                "offset": 4243
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop, while Base UI uses a ",
+            "position": {
+              "start": {
+                "line": 131,
+                "column": 27,
+                "offset": 4243
+              },
+              "end": {
+                "line": 131,
+                "column": 55,
+                "offset": 4271
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 131,
+                "column": 55,
+                "offset": 4271
+              },
+              "end": {
+                "line": 131,
+                "column": 63,
+                "offset": 4279
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop. Learn more about how composition works in Base UI in the ",
+            "position": {
+              "start": {
+                "line": 131,
+                "column": 63,
+                "offset": 4279
+              },
+              "end": {
+                "line": 131,
+                "column": 127,
+                "offset": 4343
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/handbook/composition",
+            "children": [
+              {
+                "type": "text",
+                "value": "composition guide",
+                "position": {
+                  "start": {
+                    "line": 131,
+                    "column": 128,
+                    "offset": 4344
+                  },
+                  "end": {
+                    "line": 131,
+                    "column": 145,
+                    "offset": 4361
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 131,
+                "column": 127,
+                "offset": 4343
+              },
+              "end": {
+                "line": 131,
+                "column": 175,
+                "offset": 4391
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 131,
+                "column": 175,
+                "offset": 4391
+              },
+              "end": {
+                "line": 131,
+                "column": 176,
+                "offset": 4392
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 131,
+            "column": 1,
+            "offset": 4217
+          },
+          "end": {
+            "line": 131,
+            "column": 176,
+            "offset": 4392
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In Radix UI, the ",
+            "position": {
+              "start": {
+                "line": 133,
+                "column": 1,
+                "offset": 4394
+              },
+              "end": {
+                "line": 133,
+                "column": 18,
+                "offset": 4411
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Slot",
+            "position": {
+              "start": {
+                "line": 133,
+                "column": 18,
+                "offset": 4411
+              },
+              "end": {
+                "line": 133,
+                "column": 24,
+                "offset": 4417
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " component lets you implement an ",
+            "position": {
+              "start": {
+                "line": 133,
+                "column": 24,
+                "offset": 4417
+              },
+              "end": {
+                "line": 133,
+                "column": 57,
+                "offset": 4450
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "asChild",
+            "position": {
+              "start": {
+                "line": 133,
+                "column": 57,
+                "offset": 4450
+              },
+              "end": {
+                "line": 133,
+                "column": 66,
+                "offset": 4459
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop.",
+            "position": {
+              "start": {
+                "line": 133,
+                "column": 66,
+                "offset": 4459
+              },
+              "end": {
+                "line": 133,
+                "column": 72,
+                "offset": 4465
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 133,
+            "column": 1,
+            "offset": 4394
+          },
+          "end": {
+            "line": 133,
+            "column": 72,
+            "offset": 4465
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Radix UI Slot component\"",
+        "value": "import { Slot } from 'radix-ui';\n\nfunction Button({ asChild, ...props }) {\n  const Comp = asChild ? Slot.Root : 'button';\n  return <Comp {...props} />;\n}\n\n// Usage\n<Button asChild>\n  <MyButton className=\"primary\">Submit</MyButton>\n</Button>;",
+        "position": {
+          "start": {
+            "line": 135,
+            "column": 1,
+            "offset": 4467
+          },
+          "end": {
+            "line": 147,
+            "column": 4,
+            "offset": 4751
+          }
+        },
+        "data": {
+          "sourceValue": "import { Slot } from 'radix-ui';\n\nfunction Button({ asChild, ...props }) {\n  const Comp = asChild ? Slot.Root : 'button';\n  return <Comp {...props} />;\n}\n\n// Usage\n<Button asChild>\n  <MyButton className=\"primary\">Submit</MyButton>\n</Button>;",
+          "references": [
+            {
+              "value": "radix-ui",
+              "start": 22,
+              "end": 30,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In Base UI, ",
+            "position": {
+              "start": {
+                "line": 149,
+                "column": 1,
+                "offset": 4753
+              },
+              "end": {
+                "line": 149,
+                "column": 13,
+                "offset": 4765
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "useRender",
+            "position": {
+              "start": {
+                "line": 149,
+                "column": 13,
+                "offset": 4765
+              },
+              "end": {
+                "line": 149,
+                "column": 24,
+                "offset": 4776
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " lets you implement a ",
+            "position": {
+              "start": {
+                "line": 149,
+                "column": 24,
+                "offset": 4776
+              },
+              "end": {
+                "line": 149,
+                "column": 46,
+                "offset": 4798
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 149,
+                "column": 46,
+                "offset": 4798
+              },
+              "end": {
+                "line": 149,
+                "column": 54,
+                "offset": 4806
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop. The example below is the equivalent implementation to the Radix example above.",
+            "position": {
+              "start": {
+                "line": 149,
+                "column": 54,
+                "offset": 4806
+              },
+              "end": {
+                "line": 149,
+                "column": 139,
+                "offset": 4891
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 149,
+            "column": 1,
+            "offset": 4753
+          },
+          "end": {
+            "line": 149,
+            "column": 139,
+            "offset": 4891
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Base UI render prop\"",
+        "value": "import { useRender } from 'baseui-solid2/use-render';\n\nfunction Button({ render, ...props }) {\n  return useRender({\n    defaultTagName: 'button',\n    render,\n    props,\n  });\n}\n\n// Usage\n<Button render={<MyButton className=\"primary\" />}>Submit</Button>;",
+        "position": {
+          "start": {
+            "line": 151,
+            "column": 1,
+            "offset": 4893
+          },
+          "end": {
+            "line": 164,
+            "column": 4,
+            "offset": 5186
+          }
+        },
+        "data": {
+          "sourceValue": "import { useRender } from '@base-ui/react/use-render';\n\nfunction Button({ render, ...props }) {\n  return useRender({\n    defaultTagName: 'button',\n    render,\n    props,\n  });\n}\n\n// Usage\n<Button render={<MyButton className=\"primary\" />}>Submit</Button>;",
+          "references": [
+            {
+              "value": "@base-ui/react/use-render",
+              "start": 27,
+              "end": 52,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/use-render",
+              "start": 27,
+              "end": 52,
+              "kind": "import",
+              "replacement": "baseui-solid2/use-render"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Render prop and polymorphism",
+            "position": {
+              "start": {
+                "line": 166,
+                "column": 4,
+                "offset": 5191
+              },
+              "end": {
+                "line": 166,
+                "column": 32,
+                "offset": 5219
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 166,
+            "column": 1,
+            "offset": 5188
+          },
+          "end": {
+            "line": 166,
+            "column": 32,
+            "offset": 5219
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "render-prop-and-polymorphism"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 1,
+                "offset": 5221
+              },
+              "end": {
+                "line": 168,
+                "column": 5,
+                "offset": 5225
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 5,
+                "offset": 5225
+              },
+              "end": {
+                "line": 168,
+                "column": 13,
+                "offset": 5233
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop is primarily designed for composing event handlers and behavioral props. In most cases it should render the same tag as the default element.",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 13,
+                "offset": 5233
+              },
+              "end": {
+                "line": 168,
+                "column": 159,
+                "offset": 5379
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 168,
+            "column": 1,
+            "offset": 5221
+          },
+          "end": {
+            "line": 168,
+            "column": 159,
+            "offset": 5379
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Using ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 1,
+                "offset": 5381
+              },
+              "end": {
+                "line": 170,
+                "column": 7,
+                "offset": 5387
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 7,
+                "offset": 5387
+              },
+              "end": {
+                "line": 170,
+                "column": 15,
+                "offset": 5395
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for polymorphism (rendering a different tag) requires more care, as some default props may not be valid on the new element. For example, ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 15,
+                "offset": 5395
+              },
+              "end": {
+                "line": 170,
+                "column": 153,
+                "offset": 5533
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "type=\"button\"",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 153,
+                "offset": 5533
+              },
+              "end": {
+                "line": 170,
+                "column": 168,
+                "offset": 5548
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is only valid on a ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 168,
+                "offset": 5548
+              },
+              "end": {
+                "line": 170,
+                "column": 188,
+                "offset": 5568
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<button>",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 188,
+                "offset": 5568
+              },
+              "end": {
+                "line": 170,
+                "column": 198,
+                "offset": 5578
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". Since the component can't know what element ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 198,
+                "offset": 5578
+              },
+              "end": {
+                "line": 170,
+                "column": 244,
+                "offset": 5624
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 244,
+                "offset": 5624
+              },
+              "end": {
+                "line": 170,
+                "column": 252,
+                "offset": 5632
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " will produce at render time and before hydration, props like these need an explicit signal. This is why Base UI's ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 252,
+                "offset": 5632
+              },
+              "end": {
+                "line": 170,
+                "column": 367,
+                "offset": 5747
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/button",
+            "children": [
+              {
+                "type": "text",
+                "value": "Button",
+                "position": {
+                  "start": {
+                    "line": 170,
+                    "column": 368,
+                    "offset": 5748
+                  },
+                  "end": {
+                    "line": 170,
+                    "column": 374,
+                    "offset": 5754
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 367,
+                "offset": 5747
+              },
+              "end": {
+                "line": 170,
+                "column": 401,
+                "offset": 5781
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " provides a ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 401,
+                "offset": 5781
+              },
+              "end": {
+                "line": 170,
+                "column": 413,
+                "offset": 5793
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "nativeButton",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 413,
+                "offset": 5793
+              },
+              "end": {
+                "line": 170,
+                "column": 427,
+                "offset": 5807
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to control which defaults are applied.",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 427,
+                "offset": 5807
+              },
+              "end": {
+                "line": 170,
+                "column": 471,
+                "offset": 5851
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 170,
+            "column": 1,
+            "offset": 5381
+          },
+          "end": {
+            "line": 170,
+            "column": 471,
+            "offset": 5851
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 4,
+                "offset": 5856
+              },
+              "end": {
+                "line": 172,
+                "column": 17,
+                "offset": 5869
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 172,
+            "column": 1,
+            "offset": 5853
+          },
+          "end": {
+            "line": 172,
+            "column": 17,
+            "offset": 5869
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesUseRender } from './types';",
+        "position": {
+          "start": {
+            "line": 174,
+            "column": 1,
+            "offset": 5871
+          },
+          "end": {
+            "line": 174,
+            "column": 42,
+            "offset": 5912
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Usage\"",
+        "value": "const element = useRender({\n  // Input parameters\n});",
+        "position": {
+          "start": {
+            "line": 176,
+            "column": 1,
+            "offset": 5914
+          },
+          "end": {
+            "line": 180,
+            "column": 4,
+            "offset": 5992
+          }
+        },
+        "data": {
+          "sourceValue": "const element = useRender({\n  // Input parameters\n});",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesUseRender",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 182,
+            "column": 1,
+            "offset": 5994
+          },
+          "end": {
+            "line": 182,
+            "column": 19,
+            "offset": 6012
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/utils/use-render/types#TypesUseRender"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI useRender',\n    'React Render Prop Hook',\n    'Merge Props Helper',\n    'Merge Refs Hook',\n    'Radix asChild Migration',\n    'Component Composition',\n    'Props Spreading',\n    'Ref Forwarding',\n    'Custom Components',\n    'asChild Pattern',\n    'Slot Pattern',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 184,
+            "column": 1,
+            "offset": 6014
+          },
+          "end": {
+            "line": 198,
+            "column": 3,
+            "offset": 6338
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 199,
+        "column": 1,
+        "offset": 6339
+      }
+    }
+  }
+}

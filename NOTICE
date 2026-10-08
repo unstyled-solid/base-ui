@@ -1,0 +1,47 @@
+Base UI for Solid 2 (private workspace identity: baseui-solid2)
+
+Derived from Base UI, https://github.com/mui/base-ui
+Canonical source: 19511bb171f3b360b006c94cf6d07e53cb446505
+Copyright (c) 2019 Material-UI SAS
+Licensed under the MIT License; the complete original text is in LICENSE.
+Solid adaptations are independent work and do not imply MUI endorsement.
+Retain all source-local third-party notices when adapting upstream files.
+
+Floating UI DOM/core 1.8.0 and utils 0.2.12 are external MIT-licensed
+dependencies, not bundled copies of the React binding. Their own packages
+retain their licenses. Solid runtime/renderer remain external peer packages.
+
+The geometry lifecycle and virtual-reference/DPR portions of
+floating-ui-react/hooks/createFloating are informed by solid-floating-ui,
+https://github.com/lxsmnsyc/solid-floating-ui at
+0492e49b746deed543dbc167a9a58ed1210c2393.
+Copyright (c) 2021 Alexis Munsayac. MIT License.
+The complete license is distributed as notices/solid-floating-ui-MIT.txt.
+Changes: Solid 2 RC13 ownership/effects, generation-checked positioning,
+Base UI root/tree contracts, and retained geometry/readiness semantics.
+This attribution covers adopted geometry portions, not the entire donor API.
+
+floating-ui-react/utils/markOthers is modified from Base UI's adaptation of
+aria-hidden, https://github.com/theKashey/aria-hidden at
+9220c8f4a4fd35f63bee5510a9f41a37264382d4, src/index.ts.
+Copyright (c) 2017 Anton Korzunov. MIT License.
+The complete license is distributed as notices/aria-hidden-MIT.txt.
+Changes: conditional aria-hidden, data-base-ui-inert, realm/shadow handling,
+overlapping attribute locks and idempotent restoration.
+
+The virtual-event predicates in floating-ui-react/utils/event are modified
+from Base UI's Adobe React Aria-attributed helpers. Preserve
+Copyright 2022 Adobe. All rights reserved.
+Apache License, Version 2.0: notices/react-spectrum-Apache-2.0.txt.
+The relevant inherited React attribution and complete MIT text are reproduced
+in notices/react-spectrum-React-NOTICE.txt (Copyright (c) Facebook, Inc. and
+its affiliates). These texts were collected from Adobe react-spectrum
+b35d5c02fe900badccd0cf1a8f23bb593419f238, the donor's immutable attribution
+reference. Base UI cites Adobe main; this does not claim its exact code
+originates from that revision. Changes retain Base UI's Android, jsdom and
+fractional-pointer branches and use native event/platform types.
+
+THIRD-PARTY-NOTICES.md and notices/provenance.json identify adopted portions,
+license-text hashes, exact sources and unresolved source-mapping risks.
+They do not represent the inherited-source audit as complete. External
+runtime dependencies retain their own notices; no React runtime is adopted.

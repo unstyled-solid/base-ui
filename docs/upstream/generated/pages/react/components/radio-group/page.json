@@ -1,0 +1,2150 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/radio-group/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "4c5ffdae0294491108251dd46d63ae006f154ccc4ddf4fc9002b3b9b12142dbb",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/radio-group",
+  "route": "/solid/components/radio-group",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Radio Group",
+  "subtitle": "Provides shared state to a series of radio buttons.",
+  "metadata": {
+    "keywords": [
+      "React Radio Group",
+      "Radio Group Component",
+      "Grouped Radio Buttons",
+      "React Radio Button",
+      "Radio Button",
+      "Radio Input",
+      "Single Choice",
+      "Exclusive Choice",
+      "Mutually Exclusive",
+      "Option Selector",
+      "Option Button",
+      "Form Radio Control",
+      "Accessible Radio Group",
+      "Customizable Radio",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React radio group component that provides shared state to a series of radio buttons."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoRadioHero",
+      "imported": "DemoRadioHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/radio-group/demos/hero#DemoRadioHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesRadioGroup",
+      "imported": "TypesRadioGroup",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/radio-group/types#TypesRadioGroup"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Radio Group",
+      "properties": {
+        "id": "radio-group"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:17:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:32:1"
+    },
+    {
+      "depth": 3,
+      "text": "Labeling a radio group",
+      "properties": {
+        "id": "labeling-a-radio-group"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:34:1"
+    },
+    {
+      "depth": 3,
+      "text": "Rendering as a native button",
+      "properties": {
+        "id": "rendering-as-a-native-button"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:54:1"
+    },
+    {
+      "depth": 3,
+      "text": "Form integration",
+      "properties": {
+        "id": "form-integration"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:91:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:118:1"
+    },
+    {
+      "depth": 3,
+      "text": "RadioGroup",
+      "properties": {
+        "id": "radiogroup"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:120:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:126:1"
+    },
+    {
+      "depth": 3,
+      "text": "Indicator",
+      "properties": {
+        "id": "indicator"
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:130:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#labeling-a-radio-group",
+      "target": "#labeling-a-radio-group",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:15:141"
+    },
+    {
+      "source": "/react/handbook/forms",
+      "target": "/solid/handbook/forms",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:15:199"
+    },
+    {
+      "source": "/react/components/field",
+      "target": "/solid/components/field",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:93:5"
+    },
+    {
+      "source": "/react/components/fieldset",
+      "target": "/solid/components/fieldset",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:93:42"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React radio group component that provides shared state to a series of radio buttons."
+      },
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:4:1"
+    },
+    {
+      "name": "DemoRadioHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/radio-group/demos/hero#DemoRadioHero"
+    },
+    {
+      "name": "TypesRadioGroup.RadioGroup",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:124:1",
+      "reference": "api:docs/src/app/(docs)/react/components/radio-group/types#TypesRadioGroup"
+    },
+    {
+      "name": "TypesRadioGroup.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:128:1",
+      "reference": "api:docs/src/app/(docs)/react/components/radio-group/types#TypesRadioGroup"
+    },
+    {
+      "name": "TypesRadioGroup.Indicator",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:132:1",
+      "reference": "api:docs/src/app/(docs)/react/components/radio-group/types#TypesRadioGroup"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:11:1",
+      "detail": "Site must implement DemoRadioHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:21:1",
+      "detail": "RadioGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:21:1",
+      "detail": "Radio.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:21:1",
+      "detail": "Radio.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:21:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:38:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:38:1",
+      "detail": "RadioGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:38:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:45:1",
+      "detail": "Radio.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:45:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:58:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:58:1",
+      "detail": "RadioGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:58:1",
+      "detail": "Radio.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:58:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:58:1",
+      "detail": "Radio.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:58:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:73:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:73:1",
+      "detail": "RadioGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:73:1",
+      "detail": "Radio.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:73:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:73:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Form",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Field.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Fieldset.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "RadioGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Fieldset.Legend",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Field.Item",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Field.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Radio.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:95:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:124:1",
+      "detail": "Site must implement TypesRadioGroup.RadioGroup; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:128:1",
+      "detail": "Site must implement TypesRadioGroup.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:132:1",
+      "detail": "Site must implement TypesRadioGroup.Indicator; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/radio-group/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Radio Group",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 14,
+                "offset": 13
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "offset": 13
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "radio-group"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Provides shared state to a series of radio buttons.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 62,
+                    "offset": 76
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 15
+              },
+              "end": {
+                "line": 3,
+                "column": 73,
+                "offset": 87
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 15
+          },
+          "end": {
+            "line": 3,
+            "column": 73,
+            "offset": 87
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 96
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 114
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React radio group component that provides shared state to a series of radio buttons.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 117
+              },
+              "end": {
+                "line": 6,
+                "column": 122,
+                "offset": 236
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 88
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 239
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoRadioHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 241
+          },
+          "end": {
+            "line": 9,
+            "column": 46,
+            "offset": 286
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoRadioHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 288
+          },
+          "end": {
+            "line": 11,
+            "column": 18,
+            "offset": 305
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/radio-group/demos/hero#DemoRadioHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 310
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 326
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 307
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 326
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Form controls must have an accessible name",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 5,
+                            "offset": 332
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 47,
+                            "offset": 374
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 3,
+                        "offset": 330
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 376
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": It can be created using ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 376
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 75,
+                        "offset": 402
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<label>",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 75,
+                        "offset": 402
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 84,
+                        "offset": 411
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " elements, or the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 84,
+                        "offset": 411
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 429
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Field",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 429
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 109,
+                        "offset": 436
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 109,
+                        "offset": 436
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 114,
+                        "offset": 441
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Fieldset",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 114,
+                        "offset": 441
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 124,
+                        "offset": 451
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " components. See ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 124,
+                        "offset": 451
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 141,
+                        "offset": 468
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#labeling-a-radio-group",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Labeling a radio group",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 142,
+                            "offset": 469
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 164,
+                            "offset": 491
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 141,
+                        "offset": 468
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 190,
+                        "offset": 517
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 190,
+                        "offset": 517
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 199,
+                        "offset": 526
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/handbook/forms",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "forms guide",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 200,
+                            "offset": 527
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 211,
+                            "offset": 538
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 199,
+                        "offset": 526
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 235,
+                        "offset": 562
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 235,
+                        "offset": 562
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 236,
+                        "offset": 563
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 15,
+                    "column": 3,
+                    "offset": 330
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 236,
+                    "offset": 563
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 328
+              },
+              "end": {
+                "line": 15,
+                "column": 236,
+                "offset": 563
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 328
+          },
+          "end": {
+            "line": 15,
+            "column": 236,
+            "offset": 563
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 4,
+                "offset": 568
+              },
+              "end": {
+                "line": 17,
+                "column": 11,
+                "offset": 575
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 565
+          },
+          "end": {
+            "line": 17,
+            "column": 11,
+            "offset": 575
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 577
+              },
+              "end": {
+                "line": 19,
+                "column": 45,
+                "offset": 621
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 19,
+            "column": 1,
+            "offset": 577
+          },
+          "end": {
+            "line": 19,
+            "column": 45,
+            "offset": 621
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Radio } from 'baseui-solid2/radio';\nimport { RadioGroup } from 'baseui-solid2/radio-group';\n\n<RadioGroup>\n  <Radio.Root>\n    <Radio.Indicator />\n  </Radio.Root>\n</RadioGroup>;",
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 623
+          },
+          "end": {
+            "line": 30,
+            "column": 4,
+            "offset": 836
+          }
+        },
+        "data": {
+          "sourceValue": "import { Radio } from '@base-ui/react/radio';\nimport { RadioGroup } from '@base-ui/react/radio-group';\n\n<RadioGroup>\n  <Radio.Root>\n    <Radio.Indicator />\n  </Radio.Root>\n</RadioGroup>;",
+          "references": [
+            {
+              "value": "@base-ui/react/radio",
+              "start": 23,
+              "end": 43,
+              "kind": "import"
+            },
+            {
+              "value": "@base-ui/react/radio-group",
+              "start": 74,
+              "end": 100,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/radio-group",
+              "start": 74,
+              "end": 100,
+              "kind": "import",
+              "replacement": "baseui-solid2/radio-group"
+            },
+            {
+              "value": "@base-ui/react/radio",
+              "start": 23,
+              "end": 43,
+              "kind": "import",
+              "replacement": "baseui-solid2/radio"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 32,
+                "column": 4,
+                "offset": 841
+              },
+              "end": {
+                "line": 32,
+                "column": 12,
+                "offset": 849
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 32,
+            "column": 1,
+            "offset": 838
+          },
+          "end": {
+            "line": 32,
+            "column": 12,
+            "offset": 849
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Labeling a radio group",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 5,
+                "offset": 855
+              },
+              "end": {
+                "line": 34,
+                "column": 27,
+                "offset": 877
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 34,
+            "column": 1,
+            "offset": 851
+          },
+          "end": {
+            "line": 34,
+            "column": 27,
+            "offset": 877
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "labeling-a-radio-group"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Label the group with ",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 1,
+                "offset": 879
+              },
+              "end": {
+                "line": 36,
+                "column": 22,
+                "offset": 900
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "aria-labelledby",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 22,
+                "offset": 900
+              },
+              "end": {
+                "line": 36,
+                "column": 39,
+                "offset": 917
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and a sibling label element:",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 39,
+                "offset": 917
+              },
+              "end": {
+                "line": 36,
+                "column": 68,
+                "offset": 946
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 36,
+            "column": 1,
+            "offset": 879
+          },
+          "end": {
+            "line": 36,
+            "column": 68,
+            "offset": 946
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using aria-labelledby to label a radio group\"",
+        "value": "<div id=\"storage-type-label\">Storage type</div>\n<RadioGroup aria-labelledby=\"storage-type-label\">{/* ... */}</RadioGroup>",
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 948
+          },
+          "end": {
+            "line": 41,
+            "column": 4,
+            "offset": 1133
+          }
+        },
+        "data": {
+          "sourceValue": "<div id=\"storage-type-label\">Storage type</div>\n<RadioGroup aria-labelledby=\"storage-type-label\">{/* ... */}</RadioGroup>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 0,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "An enclosing ",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 1,
+                "offset": 1135
+              },
+              "end": {
+                "line": 43,
+                "column": 14,
+                "offset": 1148
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<label>",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 14,
+                "offset": 1148
+              },
+              "end": {
+                "line": 43,
+                "column": 23,
+                "offset": 1157
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is the simplest labeling pattern for each radio:",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 23,
+                "offset": 1157
+              },
+              "end": {
+                "line": 43,
+                "column": 72,
+                "offset": 1206
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 1135
+          },
+          "end": {
+            "line": 43,
+            "column": 72,
+            "offset": 1206
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using an enclosing label to label a radio button\"",
+        "value": "// @highlight\n<label>\n  <Radio.Root value=\"ssd\" />\n  SSD\n  {/* @highlight */}\n</label>",
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 1208
+          },
+          "end": {
+            "line": 52,
+            "column": 4,
+            "offset": 1362
+          }
+        },
+        "data": {
+          "sourceValue": "// @highlight\n<label>\n  <Radio.Root value=\"ssd\" />\n  SSD\n  {/* @highlight */}\n</label>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Rendering as a native button",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 5,
+                "offset": 1368
+              },
+              "end": {
+                "line": 54,
+                "column": 33,
+                "offset": 1396
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 54,
+            "column": 1,
+            "offset": 1364
+          },
+          "end": {
+            "line": 54,
+            "column": 33,
+            "offset": 1396
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "rendering-as-a-native-button"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "By default, ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 1,
+                "offset": 1398
+              },
+              "end": {
+                "line": 56,
+                "column": 13,
+                "offset": 1410
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Radio.Root>",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 13,
+                "offset": 1410
+              },
+              "end": {
+                "line": 56,
+                "column": 27,
+                "offset": 1424
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " renders a ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 27,
+                "offset": 1424
+              },
+              "end": {
+                "line": 56,
+                "column": 38,
+                "offset": 1435
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<span>",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 38,
+                "offset": 1435
+              },
+              "end": {
+                "line": 56,
+                "column": 46,
+                "offset": 1443
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " element to support enclosing labels. Prefer rendering each radio as a native button when using sibling labels (",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 46,
+                "offset": 1443
+              },
+              "end": {
+                "line": 56,
+                "column": 158,
+                "offset": 1555
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "htmlFor",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 158,
+                "offset": 1555
+              },
+              "end": {
+                "line": 56,
+                "column": 167,
+                "offset": 1564
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": "/",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 167,
+                "offset": 1564
+              },
+              "end": {
+                "line": 56,
+                "column": 168,
+                "offset": 1565
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "id",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 168,
+                "offset": 1565
+              },
+              "end": {
+                "line": 56,
+                "column": 172,
+                "offset": 1569
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ").",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 172,
+                "offset": 1569
+              },
+              "end": {
+                "line": 56,
+                "column": 174,
+                "offset": 1571
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 1398
+          },
+          "end": {
+            "line": 56,
+            "column": 174,
+            "offset": 1571
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Sibling label pattern with a native button\"",
+        "value": "<div id=\"storage-type\">Storage type</div>\n<RadioGroup defaultValue=\"ssd\" aria-labelledby=\"storage-type\">\n  <div>\n    <label htmlFor=\"storage-type-ssd\">SSD</label>\n    {/* @highlight-text \"nativeButton\" \"render={<button />}\" */}\n    <Radio.Root value=\"ssd\" id=\"storage-type-ssd\" nativeButton render={<button />}>\n      <Radio.Indicator />\n    </Radio.Root>\n  </div>\n</RadioGroup>",
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 1573
+          },
+          "end": {
+            "line": 69,
+            "column": 4,
+            "offset": 2013
+          }
+        },
+        "data": {
+          "sourceValue": "<div id=\"storage-type\">Storage type</div>\n<RadioGroup defaultValue=\"ssd\" aria-labelledby=\"storage-type\">\n  <div>\n    <label htmlFor=\"storage-type-ssd\">SSD</label>\n    {/* @highlight-text \"nativeButton\" \"render={<button />}\" */}\n    <Radio.Root value=\"ssd\" id=\"storage-type-ssd\" nativeButton render={<button />}>\n      <Radio.Indicator />\n    </Radio.Root>\n  </div>\n</RadioGroup>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 0,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Native buttons with wrapping labels are supported by using the ",
+            "position": {
+              "start": {
+                "line": 71,
+                "column": 1,
+                "offset": 2015
+              },
+              "end": {
+                "line": 71,
+                "column": 64,
+                "offset": 2078
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 71,
+                "column": 64,
+                "offset": 2078
+              },
+              "end": {
+                "line": 71,
+                "column": 72,
+                "offset": 2086
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " callback to avoid invalid HTML, so the hidden input is placed outside the label:",
+            "position": {
+              "start": {
+                "line": 71,
+                "column": 72,
+                "offset": 2086
+              },
+              "end": {
+                "line": 71,
+                "column": 153,
+                "offset": 2167
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 71,
+            "column": 1,
+            "offset": 2015
+          },
+          "end": {
+            "line": 71,
+            "column": 153,
+            "offset": 2167
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Render callback\"",
+        "value": "<div id=\"storage-type\">Storage type</div>\n<RadioGroup defaultValue=\"ssd\" aria-labelledby=\"storage-type\">\n  <Radio.Root\n    value=\"ssd\"\n    nativeButton\n    // @highlight-start\n    render={(buttonProps) => (\n      <label>\n        <button {...buttonProps} />\n        SSD\n      </label>\n    )}\n    {/* @highlight-end */}\n  />\n</RadioGroup>",
+        "position": {
+          "start": {
+            "line": 73,
+            "column": 1,
+            "offset": 2169
+          },
+          "end": {
+            "line": 89,
+            "column": 4,
+            "offset": 2540
+          }
+        },
+        "data": {
+          "sourceValue": "<div id=\"storage-type\">Storage type</div>\n<RadioGroup defaultValue=\"ssd\" aria-labelledby=\"storage-type\">\n  <Radio.Root\n    value=\"ssd\"\n    nativeButton\n    // @highlight-start\n    render={(buttonProps) => (\n      <label>\n        <button {...buttonProps} />\n        SSD\n      </label>\n    )}\n    {/* @highlight-end */}\n  />\n</RadioGroup>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 316,
+              "message": "'...' expected."
+            },
+            {
+              "start": 0,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Form integration",
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 5,
+                "offset": 2546
+              },
+              "end": {
+                "line": 91,
+                "column": 21,
+                "offset": 2562
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 91,
+            "column": 1,
+            "offset": 2542
+          },
+          "end": {
+            "line": 91,
+            "column": 21,
+            "offset": 2562
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "form-integration"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 1,
+                "offset": 2564
+              },
+              "end": {
+                "line": 93,
+                "column": 5,
+                "offset": 2568
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/field",
+            "children": [
+              {
+                "type": "text",
+                "value": "Field",
+                "position": {
+                  "start": {
+                    "line": 93,
+                    "column": 6,
+                    "offset": 2569
+                  },
+                  "end": {
+                    "line": 93,
+                    "column": 11,
+                    "offset": 2574
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 5,
+                "offset": 2568
+              },
+              "end": {
+                "line": 93,
+                "column": 37,
+                "offset": 2600
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 37,
+                "offset": 2600
+              },
+              "end": {
+                "line": 93,
+                "column": 42,
+                "offset": 2605
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/fieldset",
+            "children": [
+              {
+                "type": "text",
+                "value": "Fieldset",
+                "position": {
+                  "start": {
+                    "line": 93,
+                    "column": 43,
+                    "offset": 2606
+                  },
+                  "end": {
+                    "line": 93,
+                    "column": 51,
+                    "offset": 2614
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 42,
+                "offset": 2605
+              },
+              "end": {
+                "line": 93,
+                "column": 80,
+                "offset": 2643
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for group labeling and form integration:",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 80,
+                "offset": 2643
+              },
+              "end": {
+                "line": 93,
+                "column": 121,
+                "offset": 2684
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 93,
+            "column": 1,
+            "offset": 2564
+          },
+          "end": {
+            "line": 93,
+            "column": 121,
+            "offset": 2684
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using Radio Group in a form\"",
+        "value": "<Form>\n  {/* @highlight */}\n  <Field.Root name=\"storageType\">\n    <Fieldset.Root render={<RadioGroup />}>\n      <Fieldset.Legend>Storage type</Fieldset.Legend>\n      <Field.Item>\n        <Field.Label>\n          <Radio.Root value=\"ssd\" />\n          SSD\n        </Field.Label>\n      </Field.Item>\n      <Field.Item>\n        <Field.Label>\n          <Radio.Root value=\"hdd\" />\n          HDD\n        </Field.Label>\n      </Field.Item>\n    </Fieldset.Root>\n  </Field.Root>\n</Form>",
+        "position": {
+          "start": {
+            "line": 95,
+            "column": 1,
+            "offset": 2686
+          },
+          "end": {
+            "line": 116,
+            "column": 4,
+            "offset": 3207
+          }
+        },
+        "data": {
+          "sourceValue": "<Form>\n  {/* @highlight */}\n  <Field.Root name=\"storageType\">\n    <Fieldset.Root render={<RadioGroup />}>\n      <Fieldset.Legend>Storage type</Fieldset.Legend>\n      <Field.Item>\n        <Field.Label>\n          <Radio.Root value=\"ssd\" />\n          SSD\n        </Field.Label>\n      </Field.Item>\n      <Field.Item>\n        <Field.Label>\n          <Radio.Root value=\"hdd\" />\n          HDD\n        </Field.Label>\n      </Field.Item>\n    </Fieldset.Root>\n  </Field.Root>\n</Form>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 118,
+                "column": 4,
+                "offset": 3212
+              },
+              "end": {
+                "line": 118,
+                "column": 17,
+                "offset": 3225
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 118,
+            "column": 1,
+            "offset": 3209
+          },
+          "end": {
+            "line": 118,
+            "column": 17,
+            "offset": 3225
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "RadioGroup",
+            "position": {
+              "start": {
+                "line": 120,
+                "column": 5,
+                "offset": 3231
+              },
+              "end": {
+                "line": 120,
+                "column": 15,
+                "offset": 3241
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 120,
+            "column": 1,
+            "offset": 3227
+          },
+          "end": {
+            "line": 120,
+            "column": 15,
+            "offset": 3241
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "radiogroup"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesRadioGroup } from './types';",
+        "position": {
+          "start": {
+            "line": 122,
+            "column": 1,
+            "offset": 3243
+          },
+          "end": {
+            "line": 122,
+            "column": 43,
+            "offset": 3285
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesRadioGroup.RadioGroup",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 124,
+            "column": 1,
+            "offset": 3287
+          },
+          "end": {
+            "line": 124,
+            "column": 31,
+            "offset": 3317
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/radio-group/types#TypesRadioGroup"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 126,
+                "column": 5,
+                "offset": 3323
+              },
+              "end": {
+                "line": 126,
+                "column": 9,
+                "offset": 3327
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 126,
+            "column": 1,
+            "offset": 3319
+          },
+          "end": {
+            "line": 126,
+            "column": 9,
+            "offset": 3327
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesRadioGroup.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 128,
+            "column": 1,
+            "offset": 3329
+          },
+          "end": {
+            "line": 128,
+            "column": 25,
+            "offset": 3353
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/radio-group/types#TypesRadioGroup"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Indicator",
+            "position": {
+              "start": {
+                "line": 130,
+                "column": 5,
+                "offset": 3359
+              },
+              "end": {
+                "line": 130,
+                "column": 14,
+                "offset": 3368
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 130,
+            "column": 1,
+            "offset": 3355
+          },
+          "end": {
+            "line": 130,
+            "column": 14,
+            "offset": 3368
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "indicator"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesRadioGroup.Indicator",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 132,
+            "column": 1,
+            "offset": 3370
+          },
+          "end": {
+            "line": 132,
+            "column": 30,
+            "offset": 3399
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/radio-group/types#TypesRadioGroup"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Radio Group',\n    'Radio Group Component',\n    'Grouped Radio Buttons',\n    'React Radio Button',\n    'Radio Button',\n    'Radio Input',\n    'Single Choice',\n    'Exclusive Choice',\n    'Mutually Exclusive',\n    'Option Selector',\n    'Option Button',\n    'Form Radio Control',\n    'Accessible Radio Group',\n    'Customizable Radio',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 134,
+            "column": 1,
+            "offset": 3401
+          },
+          "end": {
+            "line": 153,
+            "column": 3,
+            "offset": 3841
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 154,
+        "column": 1,
+        "offset": 3842
+      }
+    }
+  }
+}

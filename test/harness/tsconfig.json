@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./**/*.ts", "./**/*.tsx", "../ssr-harness/**/*.ts", "../ssr-harness/**/*.tsx", "../contracts/types/**/*.tsx", "../../packages/solid/test/**/*.ts", "../../packages/solid/test/**/*.tsx", "../../vitest*.config.ts"],
+  "exclude": ["./.cache", "../ssr-harness/.generated"]
+}

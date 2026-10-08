@@ -1,0 +1,632 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/overview/releases/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "a6b0de7385d6d274a0b378117ae2d895bfef28a6a288338bcd362ef16592d684",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/overview/releases",
+  "route": "/upstream/react/overview/releases",
+  "disposition": "upstream-react-history",
+  "publishable": false,
+  "title": "Releases",
+  "subtitle": "Changelogs for each Base UI release.",
+  "metadata": {
+    "keywords": [
+      "Base UI releases",
+      "Base UI changelog",
+      "Release notes beta",
+      "Breaking changes Base UI",
+      "Component updates history",
+      "Headless React release log",
+      "Version history",
+      "Changelog history",
+      "Upgrade guide",
+      "Migration guide",
+      "What's new",
+      "Release updates"
+    ]
+  },
+  "imports": [
+    {
+      "from": "docs/src/components/ReleaseTimeline",
+      "local": "ReleaseTimeline",
+      "imported": "ReleaseTimeline",
+      "kind": "custom",
+      "reference": "custom:docs/src/components/ReleaseTimeline#ReleaseTimeline"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Releases",
+      "properties": {
+        "id": "releases"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Canary releases",
+      "properties": {
+        "id": "canary-releases"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:9:1"
+    },
+    {
+      "depth": 2,
+      "text": "Full release notes",
+      "properties": {
+        "id": "full-release-notes"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:33:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "https://github.com/mui/base-ui/blob/master/CHANGELOG.md",
+      "target": "https://github.com/mui/base-ui/blob/master/CHANGELOG.md",
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:35:17"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:3:1"
+    },
+    {
+      "name": "ReleaseTimeline",
+      "handler": "react-release-history",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:7:1",
+      "reference": "custom:docs/src/components/ReleaseTimeline#ReleaseTimeline"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "react-release-history",
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:1:1",
+      "detail": "Keep historical code, dates, package names and claims scoped to React.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:react-release-history",
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:7:1",
+      "detail": "Site must implement ReleaseTimeline; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:13:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:23:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/overview/releases/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Releases",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 11,
+                "offset": 10
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 11,
+            "offset": 10
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "releases"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Changelogs for each Base UI release.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 22
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 47,
+                    "offset": 58
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 12
+              },
+              "end": {
+                "line": 3,
+                "column": 58,
+                "offset": 69
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 12
+          },
+          "end": {
+            "line": 3,
+            "column": 58,
+            "offset": 69
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { ReleaseTimeline } from 'docs/src/components/ReleaseTimeline';",
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 71
+          },
+          "end": {
+            "line": 5,
+            "column": 71,
+            "offset": 141
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "ReleaseTimeline",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 7,
+            "column": 1,
+            "offset": 143
+          },
+          "end": {
+            "line": 7,
+            "column": 20,
+            "offset": 162
+          }
+        },
+        "data": {
+          "handler": "react-release-history",
+          "reference": "custom:docs/src/components/ReleaseTimeline#ReleaseTimeline"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Canary releases",
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 4,
+                "offset": 167
+              },
+              "end": {
+                "line": 9,
+                "column": 19,
+                "offset": 182
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 164
+          },
+          "end": {
+            "line": 9,
+            "column": 19,
+            "offset": 182
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "canary-releases"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A canary release is published for every master commit and pull request. Install one by using the corresponding pkg.pr.new URL:",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 1,
+                "offset": 184
+              },
+              "end": {
+                "line": 11,
+                "column": 127,
+                "offset": 310
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 184
+          },
+          "end": {
+            "line": 11,
+            "column": 127,
+            "offset": 310
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "meta": "title=\"Terminal\"",
+        "value": "# Install by master commit hash\nnpm i https://pkg.pr.new/@base-ui/react@ad745f1\n\n# Install by PR number\nnpm i https://pkg.pr.new/@base-ui/react@3713",
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 312
+          },
+          "end": {
+            "line": 19,
+            "column": 4,
+            "offset": 489
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Your ",
+            "position": {
+              "start": {
+                "line": 21,
+                "column": 1,
+                "offset": 491
+              },
+              "end": {
+                "line": 21,
+                "column": 6,
+                "offset": 496
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "package.json",
+            "position": {
+              "start": {
+                "line": 21,
+                "column": 6,
+                "offset": 496
+              },
+              "end": {
+                "line": 21,
+                "column": 20,
+                "offset": 510
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " will then reference the pkg.pr.new URL:",
+            "position": {
+              "start": {
+                "line": 21,
+                "column": 20,
+                "offset": 510
+              },
+              "end": {
+                "line": 21,
+                "column": 60,
+                "offset": 550
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 491
+          },
+          "end": {
+            "line": 21,
+            "column": 60,
+            "offset": 550
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "json",
+        "meta": "title=\"package.json\"",
+        "value": "{\n  \"dependencies\": {\n    \"@base-ui/react\": \"https://pkg.pr.new/@base-ui/react@...\"\n  }\n}",
+        "position": {
+          "start": {
+            "line": 23,
+            "column": 1,
+            "offset": 552
+          },
+          "end": {
+            "line": 29,
+            "column": 4,
+            "offset": 674
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Canary releases may contain breaking changes. Check the associated pull requests on GitHub for details.",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 1,
+                "offset": 676
+              },
+              "end": {
+                "line": 31,
+                "column": 104,
+                "offset": 779
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 676
+          },
+          "end": {
+            "line": 31,
+            "column": 104,
+            "offset": 779
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Full release notes",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 4,
+                "offset": 784
+              },
+              "end": {
+                "line": 33,
+                "column": 22,
+                "offset": 802
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 781
+          },
+          "end": {
+            "line": 33,
+            "column": 22,
+            "offset": 802
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "full-release-notes"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can see the ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 1,
+                "offset": 804
+              },
+              "end": {
+                "line": 35,
+                "column": 17,
+                "offset": 820
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://github.com/mui/base-ui/blob/master/CHANGELOG.md",
+            "children": [
+              {
+                "type": "text",
+                "value": "full changelog on GitHub",
+                "position": {
+                  "start": {
+                    "line": 35,
+                    "column": 18,
+                    "offset": 821
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 42,
+                    "offset": 845
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 17,
+                "offset": 820
+              },
+              "end": {
+                "line": 35,
+                "column": 100,
+                "offset": 903
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 100,
+                "offset": 903
+              },
+              "end": {
+                "line": 35,
+                "column": 101,
+                "offset": 904
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 804
+          },
+          "end": {
+            "line": 35,
+            "column": 101,
+            "offset": 904
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI releases',\n    'Base UI changelog',\n    'Release notes beta',\n    'Breaking changes Base UI',\n    'Component updates history',\n    'Headless React release log',\n    'Version history',\n    'Changelog history',\n    'Upgrade guide',\n    'Migration guide',\n    \"What's new\",\n    'Release updates',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 37,
+            "column": 1,
+            "offset": 906
+          },
+          "end": {
+            "line": 52,
+            "column": 3,
+            "offset": 1260
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 53,
+        "column": 1,
+        "offset": 1261
+      }
+    }
+  },
+  "notice": {
+    "type": "paragraph",
+    "children": [
+      {
+        "type": "text",
+        "value": "Upstream React Base UI release history. These are not releases or verified capabilities of the Solid port."
+      }
+    ]
+  }
+}

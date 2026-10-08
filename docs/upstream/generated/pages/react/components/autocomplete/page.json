@@ -1,0 +1,6414 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/autocomplete/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "d6eea19c1ee42b29d7e947afee2dcafd312187521944fe6bbb426d8a48776d60",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/autocomplete",
+  "route": "/solid/components/autocomplete",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Autocomplete",
+  "subtitle": "An input that suggests options as you type.",
+  "metadata": {
+    "keywords": [
+      "React Autocomplete",
+      "Autocomplete Component",
+      "Search Suggestions",
+      "Filterable Input",
+      "Async Autocomplete",
+      "Typeahead",
+      "Lookahead",
+      "Autosuggest",
+      "Incremental Search",
+      "Predictive Text",
+      "Search Input",
+      "Accessible Combobox",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React autocomplete component that renders an input with a list of filtered options."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoAutocompleteHero",
+      "imported": "DemoAutocompleteHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/hero#DemoAutocompleteHero"
+    },
+    {
+      "from": "./demos/async",
+      "local": "DemoAutocompleteAsync",
+      "imported": "DemoAutocompleteAsync",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/async#DemoAutocompleteAsync"
+    },
+    {
+      "from": "./demos/inline",
+      "local": "DemoAutocompleteInline",
+      "imported": "DemoAutocompleteInline",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/inline#DemoAutocompleteInline"
+    },
+    {
+      "from": "./demos/grouped",
+      "local": "DemoAutocompleteGrouped",
+      "imported": "DemoAutocompleteGrouped",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/grouped#DemoAutocompleteGrouped"
+    },
+    {
+      "from": "./demos/fuzzy-matching",
+      "local": "DemoAutocompleteFuzzyMatching",
+      "imported": "DemoAutocompleteFuzzyMatching",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/fuzzy-matching#DemoAutocompleteFuzzyMatching"
+    },
+    {
+      "from": "./demos/limit",
+      "local": "DemoAutocompleteLimit",
+      "imported": "DemoAutocompleteLimit",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/limit#DemoAutocompleteLimit"
+    },
+    {
+      "from": "./demos/auto-highlight",
+      "local": "DemoAutocompleteAutoHighlight",
+      "imported": "DemoAutocompleteAutoHighlight",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/auto-highlight#DemoAutocompleteAutoHighlight"
+    },
+    {
+      "from": "./demos/command-palette",
+      "local": "DemoAutocompleteCommandPalette",
+      "imported": "DemoAutocompleteCommandPalette",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/command-palette#DemoAutocompleteCommandPalette"
+    },
+    {
+      "from": "./demos/keyboard-shortcuts",
+      "local": "DemoAutocompleteKeyboardShortcuts",
+      "imported": "DemoAutocompleteKeyboardShortcuts",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/keyboard-shortcuts#DemoAutocompleteKeyboardShortcuts"
+    },
+    {
+      "from": "./demos/grid",
+      "local": "DemoAutocompleteGrid",
+      "imported": "DemoAutocompleteGrid",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/grid#DemoAutocompleteGrid"
+    },
+    {
+      "from": "./demos/virtualized",
+      "local": "DemoAutocompleteVirtualized",
+      "imported": "DemoAutocompleteVirtualized",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/virtualized#DemoAutocompleteVirtualized"
+    },
+    {
+      "from": "./types",
+      "local": "TypesAutocomplete",
+      "imported": "TypesAutocomplete",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Autocomplete",
+      "properties": {
+        "id": "autocomplete"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:20:1"
+    },
+    {
+      "depth": 2,
+      "text": "Item values",
+      "properties": {
+        "id": "item-values"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:64:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:68:1"
+    },
+    {
+      "depth": 3,
+      "text": "Async search",
+      "properties": {
+        "id": "async-search"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:70:1"
+    },
+    {
+      "depth": 3,
+      "text": "Inline autocomplete",
+      "properties": {
+        "id": "inline-autocomplete"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:78:1"
+    },
+    {
+      "depth": 3,
+      "text": "Grouped",
+      "properties": {
+        "id": "grouped"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:86:1"
+    },
+    {
+      "depth": 3,
+      "text": "Fuzzy matching",
+      "properties": {
+        "id": "fuzzy-matching"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:117:1"
+    },
+    {
+      "depth": 3,
+      "text": "Limit results",
+      "properties": {
+        "id": "limit-results"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:125:1"
+    },
+    {
+      "depth": 3,
+      "text": "Auto highlight",
+      "properties": {
+        "id": "auto-highlight"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:133:1"
+    },
+    {
+      "depth": 3,
+      "text": "Command palette",
+      "properties": {
+        "id": "command-palette"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:143:1"
+    },
+    {
+      "depth": 3,
+      "text": "Custom keyboard shortcuts",
+      "properties": {
+        "id": "custom-keyboard-shortcuts"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:151:1"
+    },
+    {
+      "depth": 3,
+      "text": "Grid layout",
+      "properties": {
+        "id": "grid-layout"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:161:1"
+    },
+    {
+      "depth": 3,
+      "text": "Virtualized",
+      "properties": {
+        "id": "virtualized"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:169:1"
+    },
+    {
+      "depth": 4,
+      "text": "Memoizing items",
+      "properties": {
+        "id": "memoizing-items"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:179:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:204:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:208:1"
+    },
+    {
+      "depth": 3,
+      "text": "Value",
+      "properties": {
+        "id": "value"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:212:1"
+    },
+    {
+      "depth": 3,
+      "text": "Input",
+      "properties": {
+        "id": "input"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:216:1"
+    },
+    {
+      "depth": 3,
+      "text": "InputGroup",
+      "properties": {
+        "id": "inputgroup"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:220:1"
+    },
+    {
+      "depth": 3,
+      "text": "Trigger",
+      "properties": {
+        "id": "trigger"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:224:1"
+    },
+    {
+      "depth": 3,
+      "text": "Icon",
+      "properties": {
+        "id": "icon"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:228:1"
+    },
+    {
+      "depth": 3,
+      "text": "Clear",
+      "properties": {
+        "id": "clear"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:232:1"
+    },
+    {
+      "depth": 3,
+      "text": "List",
+      "properties": {
+        "id": "list"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:236:1"
+    },
+    {
+      "depth": 3,
+      "text": "Portal",
+      "properties": {
+        "id": "portal"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:240:1"
+    },
+    {
+      "depth": 3,
+      "text": "Backdrop",
+      "properties": {
+        "id": "backdrop"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:244:1"
+    },
+    {
+      "depth": 3,
+      "text": "Positioner",
+      "properties": {
+        "id": "positioner"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:248:1"
+    },
+    {
+      "depth": 3,
+      "text": "Popup",
+      "properties": {
+        "id": "popup"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:252:1"
+    },
+    {
+      "depth": 3,
+      "text": "Arrow",
+      "properties": {
+        "id": "arrow"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:256:1"
+    },
+    {
+      "depth": 3,
+      "text": "Status",
+      "properties": {
+        "id": "status"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:260:1"
+    },
+    {
+      "depth": 3,
+      "text": "Empty",
+      "properties": {
+        "id": "empty"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:264:1"
+    },
+    {
+      "depth": 3,
+      "text": "Collection",
+      "properties": {
+        "id": "collection"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:268:1"
+    },
+    {
+      "depth": 3,
+      "text": "Row",
+      "properties": {
+        "id": "row"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:272:1"
+    },
+    {
+      "depth": 3,
+      "text": "Item",
+      "properties": {
+        "id": "item"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:276:1"
+    },
+    {
+      "depth": 3,
+      "text": "Group",
+      "properties": {
+        "id": "group"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:280:1"
+    },
+    {
+      "depth": 3,
+      "text": "GroupLabel",
+      "properties": {
+        "id": "grouplabel"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:284:1"
+    },
+    {
+      "depth": 3,
+      "text": "Separator",
+      "properties": {
+        "id": "separator"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:288:1"
+    },
+    {
+      "depth": 2,
+      "text": "useFilter",
+      "properties": {
+        "id": "usefilter"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:292:1"
+    },
+    {
+      "depth": 2,
+      "text": "useFilteredItems",
+      "properties": {
+        "id": "usefiltereditems"
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:299:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "/react/components/combobox",
+      "target": "/solid/components/combobox",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:15:49"
+    },
+    {
+      "source": "/react/handbook/forms",
+      "target": "/solid/handbook/forms",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:17:129"
+    },
+    {
+      "source": "/react/handbook/animation#javascript-animations",
+      "target": "/solid/handbook/animation#javascript-animations",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:18:94"
+    },
+    {
+      "source": "https://react.dev/reference/react/memo",
+      "target": "https://react.dev/reference/react/memo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:181:122"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React autocomplete component that renders an input with a list of filtered options."
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:4:1"
+    },
+    {
+      "name": "DemoAutocompleteHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/hero#DemoAutocompleteHero"
+    },
+    {
+      "name": "DemoAutocompleteAsync",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:76:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/async#DemoAutocompleteAsync"
+    },
+    {
+      "name": "DemoAutocompleteInline",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:84:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/inline#DemoAutocompleteInline"
+    },
+    {
+      "name": "DemoAutocompleteGrouped",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:115:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/grouped#DemoAutocompleteGrouped"
+    },
+    {
+      "name": "DemoAutocompleteFuzzyMatching",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:123:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/fuzzy-matching#DemoAutocompleteFuzzyMatching"
+    },
+    {
+      "name": "DemoAutocompleteLimit",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:131:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/limit#DemoAutocompleteLimit"
+    },
+    {
+      "name": "DemoAutocompleteAutoHighlight",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:141:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/auto-highlight#DemoAutocompleteAutoHighlight"
+    },
+    {
+      "name": "DemoAutocompleteCommandPalette",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:149:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/command-palette#DemoAutocompleteCommandPalette"
+    },
+    {
+      "name": "kbd",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:153:111"
+    },
+    {
+      "name": "kbd",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:153:127"
+    },
+    {
+      "name": "kbd",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:153:161"
+    },
+    {
+      "name": "kbd",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:153:177"
+    },
+    {
+      "name": "DemoAutocompleteKeyboardShortcuts",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:157:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/keyboard-shortcuts#DemoAutocompleteKeyboardShortcuts"
+    },
+    {
+      "name": "DemoAutocompleteGrid",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:167:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/grid#DemoAutocompleteGrid"
+    },
+    {
+      "name": "DemoAutocompleteVirtualized",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:175:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/virtualized#DemoAutocompleteVirtualized"
+    },
+    {
+      "name": "TypesAutocomplete.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:210:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Value",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:214:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Input",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:218:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.InputGroup",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:222:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Trigger",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:226:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Icon",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:230:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Clear",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:234:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.List",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:238:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Portal",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:242:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Backdrop",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:246:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Positioner",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:250:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Popup",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:254:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Arrow",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:258:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Status",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:262:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Empty",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:266:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Collection",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:270:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Row",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:274:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Item",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:278:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Group",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:282:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.GroupLabel",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:286:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.Separator",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:290:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.useFilter",
+      "handler": "api",
+      "attributes": {
+        "hideDescription": true
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:297:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    },
+    {
+      "name": "TypesAutocomplete.useFilteredItems",
+      "handler": "api",
+      "attributes": {
+        "hideDescription": true
+      },
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:303:1",
+      "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:11:1",
+      "detail": "Site must implement DemoAutocompleteHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.InputGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Icon",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Clear",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Value",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Backdrop",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Arrow",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Status",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Empty",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.List",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Row",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Item",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Separator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Group",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.GroupLabel",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Autocomplete.Collection",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:24:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:76:1",
+      "detail": "Site must implement DemoAutocompleteAsync; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:84:1",
+      "detail": "Site must implement DemoAutocompleteInline; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:92:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:115:1",
+      "detail": "Site must implement DemoAutocompleteGrouped; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:123:1",
+      "detail": "Site must implement DemoAutocompleteFuzzyMatching; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:131:1",
+      "detail": "Site must implement DemoAutocompleteLimit; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:141:1",
+      "detail": "Site must implement DemoAutocompleteAutoHighlight; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:149:1",
+      "detail": "Site must implement DemoAutocompleteCommandPalette; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:157:1",
+      "detail": "Site must implement DemoAutocompleteKeyboardShortcuts; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:167:1",
+      "detail": "Site must implement DemoAutocompleteGrid; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:171:71",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:175:1",
+      "detail": "Site must implement DemoAutocompleteVirtualized; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:181:123",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:183:1",
+      "detail": "Autocomplete.Item",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:183:1",
+      "detail": "Autocomplete.List",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:183:1",
+      "detail": "SuggestionItem",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:183:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:183:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:210:1",
+      "detail": "Site must implement TypesAutocomplete.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:214:1",
+      "detail": "Site must implement TypesAutocomplete.Value; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:218:1",
+      "detail": "Site must implement TypesAutocomplete.Input; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:222:1",
+      "detail": "Site must implement TypesAutocomplete.InputGroup; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:226:1",
+      "detail": "Site must implement TypesAutocomplete.Trigger; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:230:1",
+      "detail": "Site must implement TypesAutocomplete.Icon; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:234:1",
+      "detail": "Site must implement TypesAutocomplete.Clear; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:238:1",
+      "detail": "Site must implement TypesAutocomplete.List; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:242:1",
+      "detail": "Site must implement TypesAutocomplete.Portal; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:246:1",
+      "detail": "Site must implement TypesAutocomplete.Backdrop; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:250:1",
+      "detail": "Site must implement TypesAutocomplete.Positioner; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:254:1",
+      "detail": "Site must implement TypesAutocomplete.Popup; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:258:1",
+      "detail": "Site must implement TypesAutocomplete.Arrow; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:262:1",
+      "detail": "Site must implement TypesAutocomplete.Status; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:266:1",
+      "detail": "Site must implement TypesAutocomplete.Empty; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:270:1",
+      "detail": "Site must implement TypesAutocomplete.Collection; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:274:1",
+      "detail": "Site must implement TypesAutocomplete.Row; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:278:1",
+      "detail": "Site must implement TypesAutocomplete.Item; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:282:1",
+      "detail": "Site must implement TypesAutocomplete.Group; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:286:1",
+      "detail": "Site must implement TypesAutocomplete.GroupLabel; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:290:1",
+      "detail": "Site must implement TypesAutocomplete.Separator; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:292:4",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:297:1",
+      "detail": "Site must implement TypesAutocomplete.useFilter; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:299:4",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:303:1",
+      "detail": "Site must implement TypesAutocomplete.useFilteredItems; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/autocomplete/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Autocomplete",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 15,
+                "offset": 14
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 15,
+            "offset": 14
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "autocomplete"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "An input that suggests options as you type.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 26
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 54,
+                    "offset": 69
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 16
+              },
+              "end": {
+                "line": 3,
+                "column": 65,
+                "offset": 80
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 16
+          },
+          "end": {
+            "line": 3,
+            "column": 65,
+            "offset": 80
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 89
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 107
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React autocomplete component that renders an input with a list of filtered options.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 110
+              },
+              "end": {
+                "line": 6,
+                "column": 121,
+                "offset": 228
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 81
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 231
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 233
+          },
+          "end": {
+            "line": 9,
+            "column": 53,
+            "offset": 285
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 287
+          },
+          "end": {
+            "line": 11,
+            "column": 25,
+            "offset": 311
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/hero#DemoAutocompleteHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 316
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 332
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 313
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 332
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Avoid when selection state is needed",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 5,
+                            "offset": 338
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 41,
+                            "offset": 374
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 3,
+                        "offset": 336
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 43,
+                        "offset": 376
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": Use ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 43,
+                        "offset": 376
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 382
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/components/combobox",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Combobox",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 50,
+                            "offset": 383
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 58,
+                            "offset": 391
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 382
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 87,
+                        "offset": 420
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " instead of Autocomplete if the selection should be remembered and the input value cannot be custom. Unlike Combobox, Autocomplete's input can contain free-form text, as its suggestions only ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 87,
+                        "offset": 420
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 278,
+                        "offset": 611
+                      }
+                    }
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "optionally",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 279,
+                            "offset": 612
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 289,
+                            "offset": 622
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 278,
+                        "offset": 611
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 290,
+                        "offset": 623
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " autocomplete the text.",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 290,
+                        "offset": 623
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 313,
+                        "offset": 646
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 15,
+                    "column": 3,
+                    "offset": 336
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 313,
+                    "offset": 646
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 334
+              },
+              "end": {
+                "line": 15,
+                "column": 313,
+                "offset": 646
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Can be used for filterable command pickers",
+                        "position": {
+                          "start": {
+                            "line": 16,
+                            "column": 5,
+                            "offset": 651
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 47,
+                            "offset": 693
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 3,
+                        "offset": 649
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 49,
+                        "offset": 695
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": The input can be used as a filter for command items that perform an action when clicked when rendered inside the popup.",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 49,
+                        "offset": 695
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 170,
+                        "offset": 816
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 16,
+                    "column": 3,
+                    "offset": 649
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 170,
+                    "offset": 816
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 647
+              },
+              "end": {
+                "line": 16,
+                "column": 170,
+                "offset": 816
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Form controls must have an accessible name",
+                        "position": {
+                          "start": {
+                            "line": 17,
+                            "column": 5,
+                            "offset": 821
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 47,
+                            "offset": 863
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 3,
+                        "offset": 819
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 49,
+                        "offset": 865
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": It can be created using a ",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 49,
+                        "offset": 865
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 77,
+                        "offset": 893
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<label>",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 77,
+                        "offset": 893
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 86,
+                        "offset": 902
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " element or the ",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 86,
+                        "offset": 902
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 102,
+                        "offset": 918
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Field",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 102,
+                        "offset": 918
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 109,
+                        "offset": 925
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " component. See the ",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 109,
+                        "offset": 925
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 129,
+                        "offset": 945
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/handbook/forms",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "forms guide",
+                        "position": {
+                          "start": {
+                            "line": 17,
+                            "column": 130,
+                            "offset": 946
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 141,
+                            "offset": 957
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 129,
+                        "offset": 945
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 165,
+                        "offset": 981
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 165,
+                        "offset": 981
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 166,
+                        "offset": 982
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 17,
+                    "column": 3,
+                    "offset": 819
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 166,
+                    "offset": 982
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 817
+              },
+              "end": {
+                "line": 17,
+                "column": 166,
+                "offset": 982
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Closing animations",
+                        "position": {
+                          "start": {
+                            "line": 18,
+                            "column": 5,
+                            "offset": 987
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 23,
+                            "offset": 1005
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 3,
+                        "offset": 985
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 25,
+                        "offset": 1007
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": The popup stays rendered until its closing animation finishes. See ",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 25,
+                        "offset": 1007
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 94,
+                        "offset": 1076
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/handbook/animation#javascript-animations",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "JavaScript animations",
+                        "position": {
+                          "start": {
+                            "line": 18,
+                            "column": 95,
+                            "offset": 1077
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 116,
+                            "offset": 1098
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 94,
+                        "offset": 1076
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 166,
+                        "offset": 1148
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " for animating it with Motion and for manual control.",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 166,
+                        "offset": 1148
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 219,
+                        "offset": 1201
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 18,
+                    "column": 3,
+                    "offset": 985
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 219,
+                    "offset": 1201
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 18,
+                "column": 1,
+                "offset": 983
+              },
+              "end": {
+                "line": 18,
+                "column": 219,
+                "offset": 1201
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 334
+          },
+          "end": {
+            "line": 18,
+            "column": 219,
+            "offset": 1201
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 20,
+                "column": 4,
+                "offset": 1206
+              },
+              "end": {
+                "line": 20,
+                "column": 11,
+                "offset": 1213
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 20,
+            "column": 1,
+            "offset": 1203
+          },
+          "end": {
+            "line": 20,
+            "column": 11,
+            "offset": 1213
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the components and place them together:",
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 1,
+                "offset": 1215
+              },
+              "end": {
+                "line": 22,
+                "column": 47,
+                "offset": 1261
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 22,
+            "column": 1,
+            "offset": 1215
+          },
+          "end": {
+            "line": 22,
+            "column": 47,
+            "offset": 1261
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Autocomplete } from 'baseui-solid2/autocomplete';\n\n<Autocomplete.Root>\n  <Autocomplete.InputGroup>\n    <Autocomplete.Input />\n    <Autocomplete.Trigger />\n    <Autocomplete.Icon />\n    <Autocomplete.Clear />\n    <Autocomplete.Value />\n  </Autocomplete.InputGroup>\n\n  <Autocomplete.Portal>\n    <Autocomplete.Backdrop />\n    <Autocomplete.Positioner>\n      <Autocomplete.Popup>\n        <Autocomplete.Arrow />\n\n        <Autocomplete.Status />\n        <Autocomplete.Empty />\n\n        <Autocomplete.List>\n          <Autocomplete.Row>\n            <Autocomplete.Item />\n          </Autocomplete.Row>\n\n          <Autocomplete.Separator />\n\n          <Autocomplete.Group>\n            <Autocomplete.GroupLabel />\n          </Autocomplete.Group>\n\n          <Autocomplete.Collection />\n        </Autocomplete.List>\n      </Autocomplete.Popup>\n    </Autocomplete.Positioner>\n  </Autocomplete.Portal>\n</Autocomplete.Root>;",
+        "position": {
+          "start": {
+            "line": 24,
+            "column": 1,
+            "offset": 1263
+          },
+          "end": {
+            "line": 62,
+            "column": 4,
+            "offset": 2208
+          }
+        },
+        "data": {
+          "sourceValue": "import { Autocomplete } from '@base-ui/react/autocomplete';\n\n<Autocomplete.Root>\n  <Autocomplete.InputGroup>\n    <Autocomplete.Input />\n    <Autocomplete.Trigger />\n    <Autocomplete.Icon />\n    <Autocomplete.Clear />\n    <Autocomplete.Value />\n  </Autocomplete.InputGroup>\n\n  <Autocomplete.Portal>\n    <Autocomplete.Backdrop />\n    <Autocomplete.Positioner>\n      <Autocomplete.Popup>\n        <Autocomplete.Arrow />\n\n        <Autocomplete.Status />\n        <Autocomplete.Empty />\n\n        <Autocomplete.List>\n          <Autocomplete.Row>\n            <Autocomplete.Item />\n          </Autocomplete.Row>\n\n          <Autocomplete.Separator />\n\n          <Autocomplete.Group>\n            <Autocomplete.GroupLabel />\n          </Autocomplete.Group>\n\n          <Autocomplete.Collection />\n        </Autocomplete.List>\n      </Autocomplete.Popup>\n    </Autocomplete.Positioner>\n  </Autocomplete.Portal>\n</Autocomplete.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/autocomplete",
+              "start": 30,
+              "end": 57,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/autocomplete",
+              "start": 30,
+              "end": 57,
+              "kind": "import",
+              "replacement": "baseui-solid2/autocomplete"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Item values",
+            "position": {
+              "start": {
+                "line": 64,
+                "column": 4,
+                "offset": 2213
+              },
+              "end": {
+                "line": 64,
+                "column": 15,
+                "offset": 2224
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 64,
+            "column": 1,
+            "offset": 2210
+          },
+          "end": {
+            "line": 64,
+            "column": 15,
+            "offset": 2224
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "item-values"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Each ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 1,
+                "offset": 2226
+              },
+              "end": {
+                "line": 66,
+                "column": 6,
+                "offset": 2231
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Autocomplete.Item>",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 6,
+                "offset": 2231
+              },
+              "end": {
+                "line": 66,
+                "column": 27,
+                "offset": 2252
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " takes a ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 27,
+                "offset": 2252
+              },
+              "end": {
+                "line": 66,
+                "column": 36,
+                "offset": 2261
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "value",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 36,
+                "offset": 2261
+              },
+              "end": {
+                "line": 66,
+                "column": 43,
+                "offset": 2268
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop identifying it. Pass the item being rendered, so that props like ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 43,
+                "offset": 2268
+              },
+              "end": {
+                "line": 66,
+                "column": 114,
+                "offset": 2339
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "itemToStringValue",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 114,
+                "offset": 2339
+              },
+              "end": {
+                "line": 66,
+                "column": 133,
+                "offset": 2358
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " receive it.",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 133,
+                "offset": 2358
+              },
+              "end": {
+                "line": 66,
+                "column": 145,
+                "offset": 2370
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 66,
+            "column": 1,
+            "offset": 2226
+          },
+          "end": {
+            "line": 66,
+            "column": 145,
+            "offset": 2370
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 4,
+                "offset": 2375
+              },
+              "end": {
+                "line": 68,
+                "column": 12,
+                "offset": 2383
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 68,
+            "column": 1,
+            "offset": 2372
+          },
+          "end": {
+            "line": 68,
+            "column": 12,
+            "offset": 2383
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Async search",
+            "position": {
+              "start": {
+                "line": 70,
+                "column": 5,
+                "offset": 2389
+              },
+              "end": {
+                "line": 70,
+                "column": 17,
+                "offset": 2401
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 70,
+            "column": 1,
+            "offset": 2385
+          },
+          "end": {
+            "line": 70,
+            "column": 17,
+            "offset": 2401
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "async-search"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Load items asynchronously while typing and render custom status content.",
+            "position": {
+              "start": {
+                "line": 72,
+                "column": 1,
+                "offset": 2403
+              },
+              "end": {
+                "line": 72,
+                "column": 73,
+                "offset": 2475
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 72,
+            "column": 1,
+            "offset": 2403
+          },
+          "end": {
+            "line": 72,
+            "column": 73,
+            "offset": 2475
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteAsync } from './demos/async';",
+        "position": {
+          "start": {
+            "line": 74,
+            "column": 1,
+            "offset": 2477
+          },
+          "end": {
+            "line": 74,
+            "column": 55,
+            "offset": 2531
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteAsync",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 76,
+            "column": 1,
+            "offset": 2533
+          },
+          "end": {
+            "line": 76,
+            "column": 26,
+            "offset": 2558
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/async#DemoAutocompleteAsync"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Inline autocomplete",
+            "position": {
+              "start": {
+                "line": 78,
+                "column": 5,
+                "offset": 2564
+              },
+              "end": {
+                "line": 78,
+                "column": 24,
+                "offset": 2583
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 78,
+            "column": 1,
+            "offset": 2560
+          },
+          "end": {
+            "line": 78,
+            "column": 24,
+            "offset": 2583
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "inline-autocomplete"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Autofill the input with the highlighted item while navigating with arrow keys using the ",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 1,
+                "offset": 2585
+              },
+              "end": {
+                "line": 80,
+                "column": 89,
+                "offset": 2673
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "mode",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 89,
+                "offset": 2673
+              },
+              "end": {
+                "line": 80,
+                "column": 95,
+                "offset": 2679
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop. Accepts ",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 95,
+                "offset": 2679
+              },
+              "end": {
+                "line": 80,
+                "column": 110,
+                "offset": 2694
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "aria-autocomplete",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 110,
+                "offset": 2694
+              },
+              "end": {
+                "line": 80,
+                "column": 129,
+                "offset": 2713
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " values ",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 129,
+                "offset": 2713
+              },
+              "end": {
+                "line": 80,
+                "column": 137,
+                "offset": 2721
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "list",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 137,
+                "offset": 2721
+              },
+              "end": {
+                "line": 80,
+                "column": 143,
+                "offset": 2727
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 143,
+                "offset": 2727
+              },
+              "end": {
+                "line": 80,
+                "column": 145,
+                "offset": 2729
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "both",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 145,
+                "offset": 2729
+              },
+              "end": {
+                "line": 80,
+                "column": 151,
+                "offset": 2735
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 151,
+                "offset": 2735
+              },
+              "end": {
+                "line": 80,
+                "column": 153,
+                "offset": 2737
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "inline",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 153,
+                "offset": 2737
+              },
+              "end": {
+                "line": 80,
+                "column": 161,
+                "offset": 2745
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", or ",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 161,
+                "offset": 2745
+              },
+              "end": {
+                "line": 80,
+                "column": 166,
+                "offset": 2750
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "none",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 166,
+                "offset": 2750
+              },
+              "end": {
+                "line": 80,
+                "column": 172,
+                "offset": 2756
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 172,
+                "offset": 2756
+              },
+              "end": {
+                "line": 80,
+                "column": 173,
+                "offset": 2757
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 80,
+            "column": 1,
+            "offset": 2585
+          },
+          "end": {
+            "line": 80,
+            "column": 173,
+            "offset": 2757
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteInline } from './demos/inline';",
+        "position": {
+          "start": {
+            "line": 82,
+            "column": 1,
+            "offset": 2759
+          },
+          "end": {
+            "line": 82,
+            "column": 57,
+            "offset": 2815
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteInline",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 84,
+            "column": 1,
+            "offset": 2817
+          },
+          "end": {
+            "line": 84,
+            "column": 27,
+            "offset": 2843
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/inline#DemoAutocompleteInline"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Grouped",
+            "position": {
+              "start": {
+                "line": 86,
+                "column": 5,
+                "offset": 2849
+              },
+              "end": {
+                "line": 86,
+                "column": 12,
+                "offset": 2856
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 86,
+            "column": 1,
+            "offset": 2845
+          },
+          "end": {
+            "line": 86,
+            "column": 12,
+            "offset": 2856
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "grouped"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Organize related options with ",
+            "position": {
+              "start": {
+                "line": 88,
+                "column": 1,
+                "offset": 2858
+              },
+              "end": {
+                "line": 88,
+                "column": 31,
+                "offset": 2888
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Autocomplete.Group>",
+            "position": {
+              "start": {
+                "line": 88,
+                "column": 31,
+                "offset": 2888
+              },
+              "end": {
+                "line": 88,
+                "column": 53,
+                "offset": 2910
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 88,
+                "column": 53,
+                "offset": 2910
+              },
+              "end": {
+                "line": 88,
+                "column": 58,
+                "offset": 2915
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Autocomplete.GroupLabel>",
+            "position": {
+              "start": {
+                "line": 88,
+                "column": 58,
+                "offset": 2915
+              },
+              "end": {
+                "line": 88,
+                "column": 85,
+                "offset": 2942
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to add section headings inside the popup.",
+            "position": {
+              "start": {
+                "line": 88,
+                "column": 85,
+                "offset": 2942
+              },
+              "end": {
+                "line": 88,
+                "column": 127,
+                "offset": 2984
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 88,
+            "column": 1,
+            "offset": 2858
+          },
+          "end": {
+            "line": 88,
+            "column": 127,
+            "offset": 2984
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Groups are represented by an array of objects with an ",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 1,
+                "offset": 2986
+              },
+              "end": {
+                "line": 90,
+                "column": 55,
+                "offset": 3040
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "items",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 55,
+                "offset": 3040
+              },
+              "end": {
+                "line": 90,
+                "column": 62,
+                "offset": 3047
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " property, which itself is an array of individual items for each group. An extra property, such as ",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 62,
+                "offset": 3047
+              },
+              "end": {
+                "line": 90,
+                "column": 161,
+                "offset": 3146
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "value",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 161,
+                "offset": 3146
+              },
+              "end": {
+                "line": 90,
+                "column": 168,
+                "offset": 3153
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", can be provided for the heading text when rendering the group label.",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 168,
+                "offset": 3153
+              },
+              "end": {
+                "line": 90,
+                "column": 238,
+                "offset": 3223
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 90,
+            "column": 1,
+            "offset": 2986
+          },
+          "end": {
+            "line": 90,
+            "column": 238,
+            "offset": 3223
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Example\"",
+        "value": "interface ProduceGroupItem {\n  value: string;\n  // @highlight\n  items: string[];\n}\n\nconst groups: ProduceGroupItem[] = [\n  {\n    value: 'Fruits',\n    // @highlight\n    items: ['Apple', 'Banana', 'Orange'],\n  },\n  {\n    value: 'Vegetables',\n    // @highlight\n    items: ['Carrot', 'Lettuce', 'Spinach'],\n  },\n];",
+        "position": {
+          "start": {
+            "line": 92,
+            "column": 1,
+            "offset": 3225
+          },
+          "end": {
+            "line": 111,
+            "column": 4,
+            "offset": 3562
+          }
+        },
+        "data": {
+          "sourceValue": "interface ProduceGroupItem {\n  value: string;\n  // @highlight\n  items: string[];\n}\n\nconst groups: ProduceGroupItem[] = [\n  {\n    value: 'Fruits',\n    // @highlight\n    items: ['Apple', 'Banana', 'Orange'],\n  },\n  {\n    value: 'Vegetables',\n    // @highlight\n    items: ['Carrot', 'Lettuce', 'Spinach'],\n  },\n];",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteGrouped } from './demos/grouped';",
+        "position": {
+          "start": {
+            "line": 113,
+            "column": 1,
+            "offset": 3564
+          },
+          "end": {
+            "line": 113,
+            "column": 59,
+            "offset": 3622
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteGrouped",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 115,
+            "column": 1,
+            "offset": 3624
+          },
+          "end": {
+            "line": 115,
+            "column": 28,
+            "offset": 3651
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/grouped#DemoAutocompleteGrouped"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Fuzzy matching",
+            "position": {
+              "start": {
+                "line": 117,
+                "column": 5,
+                "offset": 3657
+              },
+              "end": {
+                "line": 117,
+                "column": 19,
+                "offset": 3671
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 117,
+            "column": 1,
+            "offset": 3653
+          },
+          "end": {
+            "line": 117,
+            "column": 19,
+            "offset": 3671
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "fuzzy-matching"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use fuzzy matching to find relevant results even when the query doesn't exactly match the item text.",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 1,
+                "offset": 3673
+              },
+              "end": {
+                "line": 119,
+                "column": 101,
+                "offset": 3773
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 119,
+            "column": 1,
+            "offset": 3673
+          },
+          "end": {
+            "line": 119,
+            "column": 101,
+            "offset": 3773
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteFuzzyMatching } from './demos/fuzzy-matching';",
+        "position": {
+          "start": {
+            "line": 121,
+            "column": 1,
+            "offset": 3775
+          },
+          "end": {
+            "line": 121,
+            "column": 72,
+            "offset": 3846
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteFuzzyMatching",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 123,
+            "column": 1,
+            "offset": 3848
+          },
+          "end": {
+            "line": 123,
+            "column": 34,
+            "offset": 3881
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/fuzzy-matching#DemoAutocompleteFuzzyMatching"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Limit results",
+            "position": {
+              "start": {
+                "line": 125,
+                "column": 5,
+                "offset": 3887
+              },
+              "end": {
+                "line": 125,
+                "column": 18,
+                "offset": 3900
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 125,
+            "column": 1,
+            "offset": 3883
+          },
+          "end": {
+            "line": 125,
+            "column": 18,
+            "offset": 3900
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "limit-results"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Limit the number of visible items using the ",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 1,
+                "offset": 3902
+              },
+              "end": {
+                "line": 127,
+                "column": 45,
+                "offset": 3946
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "limit",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 45,
+                "offset": 3946
+              },
+              "end": {
+                "line": 127,
+                "column": 52,
+                "offset": 3953
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop and guide users to refine their query using ",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 52,
+                "offset": 3953
+              },
+              "end": {
+                "line": 127,
+                "column": 102,
+                "offset": 4003
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Autocomplete.Status>",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 102,
+                "offset": 4003
+              },
+              "end": {
+                "line": 127,
+                "column": 125,
+                "offset": 4026
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 125,
+                "offset": 4026
+              },
+              "end": {
+                "line": 127,
+                "column": 126,
+                "offset": 4027
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 127,
+            "column": 1,
+            "offset": 3902
+          },
+          "end": {
+            "line": 127,
+            "column": 126,
+            "offset": 4027
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteLimit } from './demos/limit';",
+        "position": {
+          "start": {
+            "line": 129,
+            "column": 1,
+            "offset": 4029
+          },
+          "end": {
+            "line": 129,
+            "column": 55,
+            "offset": 4083
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteLimit",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 131,
+            "column": 1,
+            "offset": 4085
+          },
+          "end": {
+            "line": 131,
+            "column": 26,
+            "offset": 4110
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/limit#DemoAutocompleteLimit"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Auto highlight",
+            "position": {
+              "start": {
+                "line": 133,
+                "column": 5,
+                "offset": 4116
+              },
+              "end": {
+                "line": 133,
+                "column": 19,
+                "offset": 4130
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 133,
+            "column": 1,
+            "offset": 4112
+          },
+          "end": {
+            "line": 133,
+            "column": 19,
+            "offset": 4130
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "auto-highlight"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The first matching item can be automatically highlighted as the user types by specifying the ",
+            "position": {
+              "start": {
+                "line": 135,
+                "column": 1,
+                "offset": 4132
+              },
+              "end": {
+                "line": 135,
+                "column": 94,
+                "offset": 4225
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "autoHighlight",
+            "position": {
+              "start": {
+                "line": 135,
+                "column": 94,
+                "offset": 4225
+              },
+              "end": {
+                "line": 135,
+                "column": 109,
+                "offset": 4240
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop on ",
+            "position": {
+              "start": {
+                "line": 135,
+                "column": 109,
+                "offset": 4240
+              },
+              "end": {
+                "line": 135,
+                "column": 118,
+                "offset": 4249
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Autocomplete.Root>",
+            "position": {
+              "start": {
+                "line": 135,
+                "column": 118,
+                "offset": 4249
+              },
+              "end": {
+                "line": 135,
+                "column": 139,
+                "offset": 4270
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". Set the prop's value to ",
+            "position": {
+              "start": {
+                "line": 135,
+                "column": 139,
+                "offset": 4270
+              },
+              "end": {
+                "line": 135,
+                "column": 165,
+                "offset": 4296
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "\"always\"",
+            "position": {
+              "start": {
+                "line": 135,
+                "column": 165,
+                "offset": 4296
+              },
+              "end": {
+                "line": 135,
+                "column": 175,
+                "offset": 4306
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " if the highlight should always be present, such as when the list is rendered inline within a dialog.",
+            "position": {
+              "start": {
+                "line": 135,
+                "column": 175,
+                "offset": 4306
+              },
+              "end": {
+                "line": 135,
+                "column": 276,
+                "offset": 4407
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 135,
+            "column": 1,
+            "offset": 4132
+          },
+          "end": {
+            "line": 135,
+            "column": 276,
+            "offset": 4407
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The prop can be combined with the ",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 1,
+                "offset": 4409
+              },
+              "end": {
+                "line": 137,
+                "column": 35,
+                "offset": 4443
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "keepHighlight",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 35,
+                "offset": 4443
+              },
+              "end": {
+                "line": 137,
+                "column": 50,
+                "offset": 4458
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 50,
+                "offset": 4458
+              },
+              "end": {
+                "line": 137,
+                "column": 55,
+                "offset": 4463
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "highlightItemOnHover",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 55,
+                "offset": 4463
+              },
+              "end": {
+                "line": 137,
+                "column": 77,
+                "offset": 4485
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " props to configure how the highlight behaves during mouse interactions.",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 77,
+                "offset": 4485
+              },
+              "end": {
+                "line": 137,
+                "column": 149,
+                "offset": 4557
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 137,
+            "column": 1,
+            "offset": 4409
+          },
+          "end": {
+            "line": 137,
+            "column": 149,
+            "offset": 4557
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteAutoHighlight } from './demos/auto-highlight';",
+        "position": {
+          "start": {
+            "line": 139,
+            "column": 1,
+            "offset": 4559
+          },
+          "end": {
+            "line": 139,
+            "column": 72,
+            "offset": 4630
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteAutoHighlight",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 141,
+            "column": 1,
+            "offset": 4632
+          },
+          "end": {
+            "line": 141,
+            "column": 34,
+            "offset": 4665
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/auto-highlight#DemoAutocompleteAutoHighlight"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Command palette",
+            "position": {
+              "start": {
+                "line": 143,
+                "column": 5,
+                "offset": 4671
+              },
+              "end": {
+                "line": 143,
+                "column": 20,
+                "offset": 4686
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 143,
+            "column": 1,
+            "offset": 4667
+          },
+          "end": {
+            "line": 143,
+            "column": 20,
+            "offset": 4686
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "command-palette"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the autocomplete input to filter a list of command items that perform an action when clicked.",
+            "position": {
+              "start": {
+                "line": 145,
+                "column": 1,
+                "offset": 4688
+              },
+              "end": {
+                "line": 145,
+                "column": 98,
+                "offset": 4785
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 145,
+            "column": 1,
+            "offset": 4688
+          },
+          "end": {
+            "line": 145,
+            "column": 98,
+            "offset": 4785
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteCommandPalette } from './demos/command-palette';",
+        "position": {
+          "start": {
+            "line": 147,
+            "column": 1,
+            "offset": 4787
+          },
+          "end": {
+            "line": 147,
+            "column": 74,
+            "offset": 4860
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteCommandPalette",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 149,
+            "column": 1,
+            "offset": 4862
+          },
+          "end": {
+            "line": 149,
+            "column": 35,
+            "offset": 4896
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/command-palette#DemoAutocompleteCommandPalette"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Custom keyboard shortcuts",
+            "position": {
+              "start": {
+                "line": 151,
+                "column": 5,
+                "offset": 4902
+              },
+              "end": {
+                "line": 151,
+                "column": 30,
+                "offset": 4927
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 151,
+            "column": 1,
+            "offset": 4898
+          },
+          "end": {
+            "line": 151,
+            "column": 30,
+            "offset": 4927
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "custom-keyboard-shortcuts"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 1,
+                "offset": 4929
+              },
+              "end": {
+                "line": 153,
+                "column": 5,
+                "offset": 4933
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "actionsRef.highlightItem()",
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 5,
+                "offset": 4933
+              },
+              "end": {
+                "line": 153,
+                "column": 33,
+                "offset": 4961
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to navigate the open list with custom keyboard shortcuts. This example binds ",
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 33,
+                "offset": 4961
+              },
+              "end": {
+                "line": 153,
+                "column": 111,
+                "offset": 5039
+              }
+            }
+          },
+          {
+            "type": "mdxJsxTextElement",
+            "name": "kbd",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Ctrl",
+                "position": {
+                  "start": {
+                    "line": 153,
+                    "column": 116,
+                    "offset": 5044
+                  },
+                  "end": {
+                    "line": 153,
+                    "column": 120,
+                    "offset": 5048
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 111,
+                "offset": 5039
+              },
+              "end": {
+                "line": 153,
+                "column": 126,
+                "offset": 5054
+              }
+            },
+            "data": {
+              "handler": "html"
+            }
+          },
+          {
+            "type": "text",
+            "value": "+",
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 126,
+                "offset": 5054
+              },
+              "end": {
+                "line": 153,
+                "column": 127,
+                "offset": 5055
+              }
+            }
+          },
+          {
+            "type": "mdxJsxTextElement",
+            "name": "kbd",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "N",
+                "position": {
+                  "start": {
+                    "line": 153,
+                    "column": 132,
+                    "offset": 5060
+                  },
+                  "end": {
+                    "line": 153,
+                    "column": 133,
+                    "offset": 5061
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 127,
+                "offset": 5055
+              },
+              "end": {
+                "line": 153,
+                "column": 139,
+                "offset": 5067
+              }
+            },
+            "data": {
+              "handler": "html"
+            }
+          },
+          {
+            "type": "text",
+            "value": " to the next item and ",
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 139,
+                "offset": 5067
+              },
+              "end": {
+                "line": 153,
+                "column": 161,
+                "offset": 5089
+              }
+            }
+          },
+          {
+            "type": "mdxJsxTextElement",
+            "name": "kbd",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Ctrl",
+                "position": {
+                  "start": {
+                    "line": 153,
+                    "column": 166,
+                    "offset": 5094
+                  },
+                  "end": {
+                    "line": 153,
+                    "column": 170,
+                    "offset": 5098
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 161,
+                "offset": 5089
+              },
+              "end": {
+                "line": 153,
+                "column": 176,
+                "offset": 5104
+              }
+            },
+            "data": {
+              "handler": "html"
+            }
+          },
+          {
+            "type": "text",
+            "value": "+",
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 176,
+                "offset": 5104
+              },
+              "end": {
+                "line": 153,
+                "column": 177,
+                "offset": 5105
+              }
+            }
+          },
+          {
+            "type": "mdxJsxTextElement",
+            "name": "kbd",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "P",
+                "position": {
+                  "start": {
+                    "line": 153,
+                    "column": 182,
+                    "offset": 5110
+                  },
+                  "end": {
+                    "line": 153,
+                    "column": 183,
+                    "offset": 5111
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 177,
+                "offset": 5105
+              },
+              "end": {
+                "line": 153,
+                "column": 189,
+                "offset": 5117
+              }
+            },
+            "data": {
+              "handler": "html"
+            }
+          },
+          {
+            "type": "text",
+            "value": " to the previous item.",
+            "position": {
+              "start": {
+                "line": 153,
+                "column": 189,
+                "offset": 5117
+              },
+              "end": {
+                "line": 153,
+                "column": 211,
+                "offset": 5139
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 153,
+            "column": 1,
+            "offset": 4929
+          },
+          "end": {
+            "line": 153,
+            "column": 211,
+            "offset": 5139
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteKeyboardShortcuts } from './demos/keyboard-shortcuts';",
+        "position": {
+          "start": {
+            "line": 155,
+            "column": 1,
+            "offset": 5141
+          },
+          "end": {
+            "line": 155,
+            "column": 80,
+            "offset": 5220
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteKeyboardShortcuts",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 157,
+            "column": 1,
+            "offset": 5222
+          },
+          "end": {
+            "line": 157,
+            "column": 38,
+            "offset": 5259
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/keyboard-shortcuts#DemoAutocompleteKeyboardShortcuts"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Navigation wraps between the first and last items unless ",
+            "position": {
+              "start": {
+                "line": 159,
+                "column": 1,
+                "offset": 5261
+              },
+              "end": {
+                "line": 159,
+                "column": 58,
+                "offset": 5318
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "loopFocus",
+            "position": {
+              "start": {
+                "line": 159,
+                "column": 58,
+                "offset": 5318
+              },
+              "end": {
+                "line": 159,
+                "column": 69,
+                "offset": 5329
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is disabled. Unlike arrow-key navigation, these shortcuts do not return the highlight to the input.",
+            "position": {
+              "start": {
+                "line": 159,
+                "column": 69,
+                "offset": 5329
+              },
+              "end": {
+                "line": 159,
+                "column": 169,
+                "offset": 5429
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 159,
+            "column": 1,
+            "offset": 5261
+          },
+          "end": {
+            "line": 159,
+            "column": 169,
+            "offset": 5429
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Grid layout",
+            "position": {
+              "start": {
+                "line": 161,
+                "column": 5,
+                "offset": 5435
+              },
+              "end": {
+                "line": 161,
+                "column": 16,
+                "offset": 5446
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 161,
+            "column": 1,
+            "offset": 5431
+          },
+          "end": {
+            "line": 161,
+            "column": 16,
+            "offset": 5446
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "grid-layout"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Display items in a grid layout, wrapping each row in ",
+            "position": {
+              "start": {
+                "line": 163,
+                "column": 1,
+                "offset": 5448
+              },
+              "end": {
+                "line": 163,
+                "column": 54,
+                "offset": 5501
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Autocomplete.Row>",
+            "position": {
+              "start": {
+                "line": 163,
+                "column": 54,
+                "offset": 5501
+              },
+              "end": {
+                "line": 163,
+                "column": 74,
+                "offset": 5521
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " components.",
+            "position": {
+              "start": {
+                "line": 163,
+                "column": 74,
+                "offset": 5521
+              },
+              "end": {
+                "line": 163,
+                "column": 86,
+                "offset": 5533
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 163,
+            "column": 1,
+            "offset": 5448
+          },
+          "end": {
+            "line": 163,
+            "column": 86,
+            "offset": 5533
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteGrid } from './demos/grid';",
+        "position": {
+          "start": {
+            "line": 165,
+            "column": 1,
+            "offset": 5535
+          },
+          "end": {
+            "line": 165,
+            "column": 53,
+            "offset": 5587
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteGrid",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 167,
+            "column": 1,
+            "offset": 5589
+          },
+          "end": {
+            "line": 167,
+            "column": 25,
+            "offset": 5613
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/grid#DemoAutocompleteGrid"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Virtualized",
+            "position": {
+              "start": {
+                "line": 169,
+                "column": 5,
+                "offset": 5619
+              },
+              "end": {
+                "line": 169,
+                "column": 16,
+                "offset": 5630
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 169,
+            "column": 1,
+            "offset": 5615
+          },
+          "end": {
+            "line": 169,
+            "column": 16,
+            "offset": 5630
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "virtualized"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Efficiently handle large datasets using a virtualization library like ",
+            "position": {
+              "start": {
+                "line": 171,
+                "column": 1,
+                "offset": 5632
+              },
+              "end": {
+                "line": 171,
+                "column": 71,
+                "offset": 5702
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "@tanstack/react-virtual",
+            "position": {
+              "start": {
+                "line": 171,
+                "column": 71,
+                "offset": 5702
+              },
+              "end": {
+                "line": 171,
+                "column": 96,
+                "offset": 5727
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 171,
+                "column": 96,
+                "offset": 5727
+              },
+              "end": {
+                "line": 171,
+                "column": 97,
+                "offset": 5728
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 171,
+            "column": 1,
+            "offset": 5632
+          },
+          "end": {
+            "line": 171,
+            "column": 97,
+            "offset": 5728
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAutocompleteVirtualized } from './demos/virtualized';",
+        "position": {
+          "start": {
+            "line": 173,
+            "column": 1,
+            "offset": 5730
+          },
+          "end": {
+            "line": 173,
+            "column": 67,
+            "offset": 5796
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAutocompleteVirtualized",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 175,
+            "column": 1,
+            "offset": 5798
+          },
+          "end": {
+            "line": 175,
+            "column": 32,
+            "offset": 5829
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/autocomplete/demos/virtualized#DemoAutocompleteVirtualized"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When using ",
+            "position": {
+              "start": {
+                "line": 177,
+                "column": 1,
+                "offset": 5831
+              },
+              "end": {
+                "line": 177,
+                "column": 12,
+                "offset": 5842
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "highlightItem()",
+            "position": {
+              "start": {
+                "line": 177,
+                "column": 12,
+                "offset": 5842
+              },
+              "end": {
+                "line": 177,
+                "column": 29,
+                "offset": 5859
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", scroll your virtualizer to the index reported by ",
+            "position": {
+              "start": {
+                "line": 177,
+                "column": 29,
+                "offset": 5859
+              },
+              "end": {
+                "line": 177,
+                "column": 80,
+                "offset": 5910
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onItemHighlighted",
+            "position": {
+              "start": {
+                "line": 177,
+                "column": 80,
+                "offset": 5910
+              },
+              "end": {
+                "line": 177,
+                "column": 99,
+                "offset": 5929
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for the ",
+            "position": {
+              "start": {
+                "line": 177,
+                "column": 99,
+                "offset": 5929
+              },
+              "end": {
+                "line": 177,
+                "column": 108,
+                "offset": 5938
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "'imperative-action'",
+            "position": {
+              "start": {
+                "line": 177,
+                "column": 108,
+                "offset": 5938
+              },
+              "end": {
+                "line": 177,
+                "column": 129,
+                "offset": 5959
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " reason. The highlighted item may not be rendered yet.",
+            "position": {
+              "start": {
+                "line": 177,
+                "column": 129,
+                "offset": 5959
+              },
+              "end": {
+                "line": 177,
+                "column": 183,
+                "offset": 6013
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 177,
+            "column": 1,
+            "offset": 5831
+          },
+          "end": {
+            "line": 177,
+            "column": 183,
+            "offset": 6013
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "Memoizing items",
+            "position": {
+              "start": {
+                "line": 179,
+                "column": 6,
+                "offset": 6020
+              },
+              "end": {
+                "line": 179,
+                "column": 21,
+                "offset": 6035
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 179,
+            "column": 1,
+            "offset": 6015
+          },
+          "end": {
+            "line": 179,
+            "column": 21,
+            "offset": 6035
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "memoizing-items"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Memoizing each item is a simpler alternative to virtualization for datasets up to roughly 1,000 items. Wrap each item in ",
+            "position": {
+              "start": {
+                "line": 181,
+                "column": 1,
+                "offset": 6037
+              },
+              "end": {
+                "line": 181,
+                "column": 122,
+                "offset": 6158
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://react.dev/reference/react/memo",
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "React.memo",
+                "position": {
+                  "start": {
+                    "line": 181,
+                    "column": 123,
+                    "offset": 6159
+                  },
+                  "end": {
+                    "line": 181,
+                    "column": 135,
+                    "offset": 6171
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 181,
+                "column": 122,
+                "offset": 6158
+              },
+              "end": {
+                "line": 181,
+                "column": 176,
+                "offset": 6212
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and pass the item as a prop so unchanged items skip re-rendering. While memoization speeds up typing, it does not speed up opening; with a large enough number of items, the mount cost dominates, and virtualization becomes necessary to keep the open interaction fast on low-end devices.",
+            "position": {
+              "start": {
+                "line": 181,
+                "column": 176,
+                "offset": 6212
+              },
+              "end": {
+                "line": 181,
+                "column": 462,
+                "offset": 6498
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 181,
+            "column": 1,
+            "offset": 6037
+          },
+          "end": {
+            "line": 181,
+            "column": 462,
+            "offset": 6498
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Memoizing list items\"",
+        "value": "interface Suggestion {\n  id: string;\n  label: string;\n  description: string;\n}\n\nconst SuggestionItem = React.memo(function SuggestionItem({ item }: { item: Suggestion }) {\n  return (\n    <Autocomplete.Item value={item}>\n      <span>{item.label}</span>\n      <span>{item.description}</span>\n    </Autocomplete.Item>\n  );\n});\n\n<Autocomplete.List>\n  {(item: Suggestion) => <SuggestionItem key={item.id} item={item} />}\n</Autocomplete.List>;",
+        "position": {
+          "start": {
+            "line": 183,
+            "column": 1,
+            "offset": 6500
+          },
+          "end": {
+            "line": 202,
+            "column": 4,
+            "offset": 6977
+          }
+        },
+        "data": {
+          "sourceValue": "interface Suggestion {\n  id: string;\n  label: string;\n  description: string;\n}\n\nconst SuggestionItem = React.memo(function SuggestionItem({ item }: { item: Suggestion }) {\n  return (\n    <Autocomplete.Item value={item}>\n      <span>{item.label}</span>\n      <span>{item.description}</span>\n    </Autocomplete.Item>\n  );\n});\n\n<Autocomplete.List>\n  {(item: Suggestion) => <SuggestionItem key={item.id} item={item} />}\n</Autocomplete.List>;",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 204,
+                "column": 4,
+                "offset": 6982
+              },
+              "end": {
+                "line": 204,
+                "column": 17,
+                "offset": 6995
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 204,
+            "column": 1,
+            "offset": 6979
+          },
+          "end": {
+            "line": 204,
+            "column": 17,
+            "offset": 6995
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesAutocomplete } from './types';",
+        "position": {
+          "start": {
+            "line": 206,
+            "column": 1,
+            "offset": 6997
+          },
+          "end": {
+            "line": 206,
+            "column": 45,
+            "offset": 7041
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 208,
+                "column": 5,
+                "offset": 7047
+              },
+              "end": {
+                "line": 208,
+                "column": 9,
+                "offset": 7051
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 208,
+            "column": 1,
+            "offset": 7043
+          },
+          "end": {
+            "line": 208,
+            "column": 9,
+            "offset": 7051
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 210,
+            "column": 1,
+            "offset": 7053
+          },
+          "end": {
+            "line": 210,
+            "column": 27,
+            "offset": 7079
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Value",
+            "position": {
+              "start": {
+                "line": 212,
+                "column": 5,
+                "offset": 7085
+              },
+              "end": {
+                "line": 212,
+                "column": 10,
+                "offset": 7090
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 212,
+            "column": 1,
+            "offset": 7081
+          },
+          "end": {
+            "line": 212,
+            "column": 10,
+            "offset": 7090
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "value"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Value",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 214,
+            "column": 1,
+            "offset": 7092
+          },
+          "end": {
+            "line": 214,
+            "column": 28,
+            "offset": 7119
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Input",
+            "position": {
+              "start": {
+                "line": 216,
+                "column": 5,
+                "offset": 7125
+              },
+              "end": {
+                "line": 216,
+                "column": 10,
+                "offset": 7130
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 216,
+            "column": 1,
+            "offset": 7121
+          },
+          "end": {
+            "line": 216,
+            "column": 10,
+            "offset": 7130
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "input"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Input",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 218,
+            "column": 1,
+            "offset": 7132
+          },
+          "end": {
+            "line": 218,
+            "column": 28,
+            "offset": 7159
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "InputGroup",
+            "position": {
+              "start": {
+                "line": 220,
+                "column": 5,
+                "offset": 7165
+              },
+              "end": {
+                "line": 220,
+                "column": 15,
+                "offset": 7175
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 220,
+            "column": 1,
+            "offset": 7161
+          },
+          "end": {
+            "line": 220,
+            "column": 15,
+            "offset": 7175
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "inputgroup"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.InputGroup",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 222,
+            "column": 1,
+            "offset": 7177
+          },
+          "end": {
+            "line": 222,
+            "column": 33,
+            "offset": 7209
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Trigger",
+            "position": {
+              "start": {
+                "line": 224,
+                "column": 5,
+                "offset": 7215
+              },
+              "end": {
+                "line": 224,
+                "column": 12,
+                "offset": 7222
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 224,
+            "column": 1,
+            "offset": 7211
+          },
+          "end": {
+            "line": 224,
+            "column": 12,
+            "offset": 7222
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "trigger"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Trigger",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 226,
+            "column": 1,
+            "offset": 7224
+          },
+          "end": {
+            "line": 226,
+            "column": 30,
+            "offset": 7253
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Icon",
+            "position": {
+              "start": {
+                "line": 228,
+                "column": 5,
+                "offset": 7259
+              },
+              "end": {
+                "line": 228,
+                "column": 9,
+                "offset": 7263
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 228,
+            "column": 1,
+            "offset": 7255
+          },
+          "end": {
+            "line": 228,
+            "column": 9,
+            "offset": 7263
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "icon"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Icon",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 230,
+            "column": 1,
+            "offset": 7265
+          },
+          "end": {
+            "line": 230,
+            "column": 27,
+            "offset": 7291
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Clear",
+            "position": {
+              "start": {
+                "line": 232,
+                "column": 5,
+                "offset": 7297
+              },
+              "end": {
+                "line": 232,
+                "column": 10,
+                "offset": 7302
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 232,
+            "column": 1,
+            "offset": 7293
+          },
+          "end": {
+            "line": 232,
+            "column": 10,
+            "offset": 7302
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "clear"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Clear",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 234,
+            "column": 1,
+            "offset": 7304
+          },
+          "end": {
+            "line": 234,
+            "column": 28,
+            "offset": 7331
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "List",
+            "position": {
+              "start": {
+                "line": 236,
+                "column": 5,
+                "offset": 7337
+              },
+              "end": {
+                "line": 236,
+                "column": 9,
+                "offset": 7341
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 236,
+            "column": 1,
+            "offset": 7333
+          },
+          "end": {
+            "line": 236,
+            "column": 9,
+            "offset": 7341
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "list"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.List",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 238,
+            "column": 1,
+            "offset": 7343
+          },
+          "end": {
+            "line": 238,
+            "column": 27,
+            "offset": 7369
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Portal",
+            "position": {
+              "start": {
+                "line": 240,
+                "column": 5,
+                "offset": 7375
+              },
+              "end": {
+                "line": 240,
+                "column": 11,
+                "offset": 7381
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 240,
+            "column": 1,
+            "offset": 7371
+          },
+          "end": {
+            "line": 240,
+            "column": 11,
+            "offset": 7381
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "portal"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Portal",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 242,
+            "column": 1,
+            "offset": 7383
+          },
+          "end": {
+            "line": 242,
+            "column": 29,
+            "offset": 7411
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Backdrop",
+            "position": {
+              "start": {
+                "line": 244,
+                "column": 5,
+                "offset": 7417
+              },
+              "end": {
+                "line": 244,
+                "column": 13,
+                "offset": 7425
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 244,
+            "column": 1,
+            "offset": 7413
+          },
+          "end": {
+            "line": 244,
+            "column": 13,
+            "offset": 7425
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "backdrop"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Backdrop",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 246,
+            "column": 1,
+            "offset": 7427
+          },
+          "end": {
+            "line": 246,
+            "column": 31,
+            "offset": 7457
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Positioner",
+            "position": {
+              "start": {
+                "line": 248,
+                "column": 5,
+                "offset": 7463
+              },
+              "end": {
+                "line": 248,
+                "column": 15,
+                "offset": 7473
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 248,
+            "column": 1,
+            "offset": 7459
+          },
+          "end": {
+            "line": 248,
+            "column": 15,
+            "offset": 7473
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "positioner"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Positioner",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 250,
+            "column": 1,
+            "offset": 7475
+          },
+          "end": {
+            "line": 250,
+            "column": 33,
+            "offset": 7507
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Popup",
+            "position": {
+              "start": {
+                "line": 252,
+                "column": 5,
+                "offset": 7513
+              },
+              "end": {
+                "line": 252,
+                "column": 10,
+                "offset": 7518
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 252,
+            "column": 1,
+            "offset": 7509
+          },
+          "end": {
+            "line": 252,
+            "column": 10,
+            "offset": 7518
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "popup"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Popup",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 254,
+            "column": 1,
+            "offset": 7520
+          },
+          "end": {
+            "line": 254,
+            "column": 28,
+            "offset": 7547
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Arrow",
+            "position": {
+              "start": {
+                "line": 256,
+                "column": 5,
+                "offset": 7553
+              },
+              "end": {
+                "line": 256,
+                "column": 10,
+                "offset": 7558
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 256,
+            "column": 1,
+            "offset": 7549
+          },
+          "end": {
+            "line": 256,
+            "column": 10,
+            "offset": 7558
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "arrow"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Arrow",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 258,
+            "column": 1,
+            "offset": 7560
+          },
+          "end": {
+            "line": 258,
+            "column": 28,
+            "offset": 7587
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Status",
+            "position": {
+              "start": {
+                "line": 260,
+                "column": 5,
+                "offset": 7593
+              },
+              "end": {
+                "line": 260,
+                "column": 11,
+                "offset": 7599
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 260,
+            "column": 1,
+            "offset": 7589
+          },
+          "end": {
+            "line": 260,
+            "column": 11,
+            "offset": 7599
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "status"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Status",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 262,
+            "column": 1,
+            "offset": 7601
+          },
+          "end": {
+            "line": 262,
+            "column": 29,
+            "offset": 7629
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Empty",
+            "position": {
+              "start": {
+                "line": 264,
+                "column": 5,
+                "offset": 7635
+              },
+              "end": {
+                "line": 264,
+                "column": 10,
+                "offset": 7640
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 264,
+            "column": 1,
+            "offset": 7631
+          },
+          "end": {
+            "line": 264,
+            "column": 10,
+            "offset": 7640
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "empty"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Empty",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 266,
+            "column": 1,
+            "offset": 7642
+          },
+          "end": {
+            "line": 266,
+            "column": 28,
+            "offset": 7669
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Collection",
+            "position": {
+              "start": {
+                "line": 268,
+                "column": 5,
+                "offset": 7675
+              },
+              "end": {
+                "line": 268,
+                "column": 15,
+                "offset": 7685
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 268,
+            "column": 1,
+            "offset": 7671
+          },
+          "end": {
+            "line": 268,
+            "column": 15,
+            "offset": 7685
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "collection"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Collection",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 270,
+            "column": 1,
+            "offset": 7687
+          },
+          "end": {
+            "line": 270,
+            "column": 33,
+            "offset": 7719
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Row",
+            "position": {
+              "start": {
+                "line": 272,
+                "column": 5,
+                "offset": 7725
+              },
+              "end": {
+                "line": 272,
+                "column": 8,
+                "offset": 7728
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 272,
+            "column": 1,
+            "offset": 7721
+          },
+          "end": {
+            "line": 272,
+            "column": 8,
+            "offset": 7728
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "row"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Row",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 274,
+            "column": 1,
+            "offset": 7730
+          },
+          "end": {
+            "line": 274,
+            "column": 26,
+            "offset": 7755
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Item",
+            "position": {
+              "start": {
+                "line": 276,
+                "column": 5,
+                "offset": 7761
+              },
+              "end": {
+                "line": 276,
+                "column": 9,
+                "offset": 7765
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 276,
+            "column": 1,
+            "offset": 7757
+          },
+          "end": {
+            "line": 276,
+            "column": 9,
+            "offset": 7765
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "item"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Item",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 278,
+            "column": 1,
+            "offset": 7767
+          },
+          "end": {
+            "line": 278,
+            "column": 27,
+            "offset": 7793
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Group",
+            "position": {
+              "start": {
+                "line": 280,
+                "column": 5,
+                "offset": 7799
+              },
+              "end": {
+                "line": 280,
+                "column": 10,
+                "offset": 7804
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 280,
+            "column": 1,
+            "offset": 7795
+          },
+          "end": {
+            "line": 280,
+            "column": 10,
+            "offset": 7804
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "group"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Group",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 282,
+            "column": 1,
+            "offset": 7806
+          },
+          "end": {
+            "line": 282,
+            "column": 28,
+            "offset": 7833
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "GroupLabel",
+            "position": {
+              "start": {
+                "line": 284,
+                "column": 5,
+                "offset": 7839
+              },
+              "end": {
+                "line": 284,
+                "column": 15,
+                "offset": 7849
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 284,
+            "column": 1,
+            "offset": 7835
+          },
+          "end": {
+            "line": 284,
+            "column": 15,
+            "offset": 7849
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "grouplabel"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.GroupLabel",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 286,
+            "column": 1,
+            "offset": 7851
+          },
+          "end": {
+            "line": 286,
+            "column": 33,
+            "offset": 7883
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Separator",
+            "position": {
+              "start": {
+                "line": 288,
+                "column": 5,
+                "offset": 7889
+              },
+              "end": {
+                "line": 288,
+                "column": 14,
+                "offset": 7898
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 288,
+            "column": 1,
+            "offset": 7885
+          },
+          "end": {
+            "line": 288,
+            "column": 14,
+            "offset": 7898
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "separator"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.Separator",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 290,
+            "column": 1,
+            "offset": 7900
+          },
+          "end": {
+            "line": 290,
+            "column": 32,
+            "offset": 7931
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "useFilter",
+            "position": {
+              "start": {
+                "line": 292,
+                "column": 4,
+                "offset": 7936
+              },
+              "end": {
+                "line": 292,
+                "column": 13,
+                "offset": 7945
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 292,
+            "column": 1,
+            "offset": 7933
+          },
+          "end": {
+            "line": 292,
+            "column": 13,
+            "offset": 7945
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usefilter"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Matches items against a query using ",
+            "position": {
+              "start": {
+                "line": 294,
+                "column": 1,
+                "offset": 7947
+              },
+              "end": {
+                "line": 294,
+                "column": 37,
+                "offset": 7983
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Intl.Collator",
+            "position": {
+              "start": {
+                "line": 294,
+                "column": 37,
+                "offset": 7983
+              },
+              "end": {
+                "line": 294,
+                "column": 52,
+                "offset": 7998
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for robust string matching.\nThis hook is used when externally filtering items.",
+            "position": {
+              "start": {
+                "line": 294,
+                "column": 52,
+                "offset": 7998
+              },
+              "end": {
+                "line": 295,
+                "column": 51,
+                "offset": 8077
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 294,
+            "column": 1,
+            "offset": 7947
+          },
+          "end": {
+            "line": 295,
+            "column": 51,
+            "offset": 8077
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.useFilter",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "hideDescription",
+            "value": null,
+            "position": {
+              "start": {
+                "line": 297,
+                "column": 30,
+                "offset": 8108
+              },
+              "end": {
+                "line": 297,
+                "column": 45,
+                "offset": 8123
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 297,
+            "column": 1,
+            "offset": 8079
+          },
+          "end": {
+            "line": 297,
+            "column": 48,
+            "offset": 8126
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "useFilteredItems",
+            "position": {
+              "start": {
+                "line": 299,
+                "column": 4,
+                "offset": 8131
+              },
+              "end": {
+                "line": 299,
+                "column": 20,
+                "offset": 8147
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 299,
+            "column": 1,
+            "offset": 8128
+          },
+          "end": {
+            "line": 299,
+            "column": 20,
+            "offset": 8147
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usefiltereditems"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Returns the internally filtered items when called inside ",
+            "position": {
+              "start": {
+                "line": 301,
+                "column": 1,
+                "offset": 8149
+              },
+              "end": {
+                "line": 301,
+                "column": 58,
+                "offset": 8206
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Autocomplete.Root>",
+            "position": {
+              "start": {
+                "line": 301,
+                "column": 58,
+                "offset": 8206
+              },
+              "end": {
+                "line": 301,
+                "column": 79,
+                "offset": 8227
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 301,
+                "column": 79,
+                "offset": 8227
+              },
+              "end": {
+                "line": 301,
+                "column": 80,
+                "offset": 8228
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 301,
+            "column": 1,
+            "offset": 8149
+          },
+          "end": {
+            "line": 301,
+            "column": 80,
+            "offset": 8228
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAutocomplete.useFilteredItems",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "hideDescription",
+            "value": null,
+            "position": {
+              "start": {
+                "line": 303,
+                "column": 37,
+                "offset": 8266
+              },
+              "end": {
+                "line": 303,
+                "column": 52,
+                "offset": 8281
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 303,
+            "column": 1,
+            "offset": 8230
+          },
+          "end": {
+            "line": 303,
+            "column": 55,
+            "offset": 8284
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/autocomplete/types#TypesAutocomplete"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Autocomplete',\n    'Autocomplete Component',\n    'Search Suggestions',\n    'Filterable Input',\n    'Async Autocomplete',\n    'Typeahead',\n    'Lookahead',\n    'Autosuggest',\n    'Incremental Search',\n    'Predictive Text',\n    'Search Input',\n    'Accessible Combobox',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 305,
+            "column": 1,
+            "offset": 8286
+          },
+          "end": {
+            "line": 322,
+            "column": 3,
+            "offset": 8662
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 323,
+        "column": 1,
+        "offset": 8663
+      }
+    }
+  }
+}

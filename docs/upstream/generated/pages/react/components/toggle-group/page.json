@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/toggle-group/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "91d3727d0ec3665466b181b27dafd4c743e715f44afbaa9627ff187538a7e789",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/toggle-group",
+  "route": "/solid/components/toggle-group",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Toggle Group",
+  "subtitle": "Provides a shared state to a series of toggle buttons.",
+  "metadata": {
+    "keywords": [
+      "React Toggle Group",
+      "Toggle Button Group",
+      "Segmented Control",
+      "Button Set",
+      "Radio Group Alternative",
+      "Exclusive Selection Toggle",
+      "Multi Select Toggle Buttons",
+      "Accessible Toggle Group",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React toggle group component that provides shared state to a series of toggle buttons."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoToggleGroupHero",
+      "imported": "DemoToggleGroupHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toggle-group/demos/hero#DemoToggleGroupHero"
+    },
+    {
+      "from": "./demos/multiple",
+      "local": "DemoToggleGroupMultiple",
+      "imported": "DemoToggleGroupMultiple",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toggle-group/demos/multiple#DemoToggleGroupMultiple"
+    },
+    {
+      "from": "./types",
+      "local": "TypesToggleGroup",
+      "imported": "TypesToggleGroup",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/toggle-group/types#TypesToggleGroup"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Toggle Group",
+      "properties": {
+        "id": "toggle-group"
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:23:1"
+    },
+    {
+      "depth": 3,
+      "text": "Multiple",
+      "properties": {
+        "id": "multiple"
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:25:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:33:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React toggle group component that provides shared state to a series of toggle buttons."
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:4:1"
+    },
+    {
+      "name": "DemoToggleGroupHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toggle-group/demos/hero#DemoToggleGroupHero"
+    },
+    {
+      "name": "DemoToggleGroupMultiple",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:31:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toggle-group/demos/multiple#DemoToggleGroupMultiple"
+    },
+    {
+      "name": "TypesToggleGroup",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:37:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toggle-group/types#TypesToggleGroup"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:11:1",
+      "detail": "Site must implement DemoToggleGroupHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:17:1",
+      "detail": "ToggleGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:17:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:31:1",
+      "detail": "Site must implement DemoToggleGroupMultiple; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:37:1",
+      "detail": "Site must implement TypesToggleGroup; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/toggle-group/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Toggle Group",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 15,
+                "offset": 14
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 15,
+            "offset": 14
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "toggle-group"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Provides a shared state to a series of toggle buttons.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 26
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 65,
+                    "offset": 80
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 16
+              },
+              "end": {
+                "line": 3,
+                "column": 76,
+                "offset": 91
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 16
+          },
+          "end": {
+            "line": 3,
+            "column": 76,
+            "offset": 91
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 100
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 118
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React toggle group component that provides shared state to a series of toggle buttons.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 121
+              },
+              "end": {
+                "line": 6,
+                "column": 124,
+                "offset": 242
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 92
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 245
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToggleGroupHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 247
+          },
+          "end": {
+            "line": 9,
+            "column": 52,
+            "offset": 298
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToggleGroupHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 300
+          },
+          "end": {
+            "line": 11,
+            "column": 24,
+            "offset": 323
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toggle-group/demos/hero#DemoToggleGroupHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 328
+              },
+              "end": {
+                "line": 13,
+                "column": 11,
+                "offset": 335
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 325
+          },
+          "end": {
+            "line": 13,
+            "column": 11,
+            "offset": 335
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and use it as a single part:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 337
+              },
+              "end": {
+                "line": 15,
+                "column": 50,
+                "offset": 386
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 337
+          },
+          "end": {
+            "line": 15,
+            "column": 50,
+            "offset": 386
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { ToggleGroup } from 'baseui-solid2/toggle-group';\n\n<ToggleGroup />;",
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 388
+          },
+          "end": {
+            "line": 21,
+            "column": 4,
+            "offset": 491
+          }
+        },
+        "data": {
+          "sourceValue": "import { ToggleGroup } from '@base-ui/react/toggle-group';\n\n<ToggleGroup />;",
+          "references": [
+            {
+              "value": "@base-ui/react/toggle-group",
+              "start": 29,
+              "end": 56,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/toggle-group",
+              "start": 29,
+              "end": 56,
+              "kind": "import",
+              "replacement": "baseui-solid2/toggle-group"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 23,
+                "column": 4,
+                "offset": 496
+              },
+              "end": {
+                "line": 23,
+                "column": 12,
+                "offset": 504
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 23,
+            "column": 1,
+            "offset": 493
+          },
+          "end": {
+            "line": 23,
+            "column": 12,
+            "offset": 504
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Multiple",
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 5,
+                "offset": 510
+              },
+              "end": {
+                "line": 25,
+                "column": 13,
+                "offset": 518
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 25,
+            "column": 1,
+            "offset": 506
+          },
+          "end": {
+            "line": 25,
+            "column": 13,
+            "offset": 518
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "multiple"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Add the ",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 1,
+                "offset": 520
+              },
+              "end": {
+                "line": 27,
+                "column": 9,
+                "offset": 528
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "multiple",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 9,
+                "offset": 528
+              },
+              "end": {
+                "line": 27,
+                "column": 19,
+                "offset": 538
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to allow pressing more than one toggle at a time.",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 19,
+                "offset": 538
+              },
+              "end": {
+                "line": 27,
+                "column": 74,
+                "offset": 593
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 27,
+            "column": 1,
+            "offset": 520
+          },
+          "end": {
+            "line": 27,
+            "column": 74,
+            "offset": 593
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToggleGroupMultiple } from './demos/multiple';",
+        "position": {
+          "start": {
+            "line": 29,
+            "column": 1,
+            "offset": 595
+          },
+          "end": {
+            "line": 29,
+            "column": 60,
+            "offset": 654
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToggleGroupMultiple",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 656
+          },
+          "end": {
+            "line": 31,
+            "column": 28,
+            "offset": 683
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toggle-group/demos/multiple#DemoToggleGroupMultiple"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 4,
+                "offset": 688
+              },
+              "end": {
+                "line": 33,
+                "column": 17,
+                "offset": 701
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 685
+          },
+          "end": {
+            "line": 33,
+            "column": 17,
+            "offset": 701
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesToggleGroup } from './types';",
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 703
+          },
+          "end": {
+            "line": 35,
+            "column": 44,
+            "offset": 746
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToggleGroup",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 37,
+            "column": 1,
+            "offset": 748
+          },
+          "end": {
+            "line": 37,
+            "column": 21,
+            "offset": 768
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toggle-group/types#TypesToggleGroup"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Toggle Group',\n    'Toggle Button Group',\n    'Segmented Control',\n    'Button Set',\n    'Radio Group Alternative',\n    'Exclusive Selection Toggle',\n    'Multi Select Toggle Buttons',\n    'Accessible Toggle Group',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 39,
+            "column": 1,
+            "offset": 770
+          },
+          "end": {
+            "line": 52,
+            "column": 3,
+            "offset": 1092
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 53,
+        "column": 1,
+        "offset": 1093
+      }
+    }
+  }
+}

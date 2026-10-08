@@ -1,0 +1,11 @@
+{
+  "extends": "../../../../tsconfig.json",
+  "include": [
+    "filter.ts", "filter.test.ts", "filter.ssr.test.ts",
+    "itemEquality.ts", "itemEquality.test.ts",
+    "resolveValueLabel.ts", "resolveValueLabel.test.ts", "resolveValueLabel.jsx.test.tsx",
+    "serializeValue.ts", "serializeValue.test.ts",
+    "../utils/formatNumber.ts", "../utils/formatNumber.test.ts",
+    "../utils/stringifyLocale.ts", "../utils/stringifyLocale.test.ts"
+  ]
+}

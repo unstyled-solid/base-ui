@@ -1,0 +1,1 @@
+var e=`/qualification/assets/tabs-animated-panels-css-modules--initial-selection--clicks--keyboard-navigation-and-panel-association-1-mMa3jA29.png`;export{e as default};

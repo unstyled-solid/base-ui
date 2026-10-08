@@ -1,0 +1,104 @@
+{
+  "sourceCommit": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "lane": "jsdom and browser",
+  "verification": "pending final parallel lane runs",
+  "cases": [
+    {
+      "upstreamFile": "packages/react/src/toolbar/separator/ToolbarSeparator.test.tsx",
+      "title": "uses a horizontal separator in a vertical toolbar",
+      "parameters": { "separatorOrientation": "horizontal", "toolbarOrientation": "vertical" },
+      "predicates": [],
+      "sequence": ["render vertical toolbar with default Separator"],
+      "assertions": ["separator aria-orientation=horizontal"],
+      "targetFile": "packages/solid/src/toolbar/separator/ToolbarSeparator.test.tsx",
+      "targetTitles": ["defaults perpendicular to vertical and stays live"],
+      "disposition": "matched",
+      "evidence": "Initial target assertion is identical; subsequent live update adds host identity and reciprocal orientation coverage."
+    },
+    {
+      "upstreamFile": "packages/react/src/toolbar/separator/ToolbarSeparator.test.tsx",
+      "title": "uses a vertical separator in a horizontal toolbar",
+      "parameters": { "separatorOrientation": "vertical", "toolbarOrientation": "horizontal" },
+      "predicates": [],
+      "sequence": ["render horizontal toolbar with default Separator"],
+      "assertions": ["separator aria-orientation=vertical"],
+      "targetFile": "packages/solid/src/toolbar/separator/ToolbarSeparator.test.tsx",
+      "targetTitles": ["defaults perpendicular to horizontal and stays live"],
+      "disposition": "matched",
+      "evidence": "Initial target assertion is identical; subsequent live update adds host identity and reciprocal orientation coverage."
+    },
+    {
+      "upstreamFile": "packages/react/src/toolbar/separator/ToolbarSeparator.test.tsx",
+      "title": "allows its orientation to be overridden",
+      "parameters": { "toolbarOrientation": "horizontal", "separatorOrientation": "horizontal" },
+      "predicates": [],
+      "sequence": ["render horizontal toolbar with horizontal Separator override"],
+      "assertions": ["separator aria-orientation=horizontal"],
+      "targetFile": "packages/solid/src/toolbar/separator/ToolbarSeparator.test.tsx",
+      "targetTitles": ["accepts an explicit orientation override"],
+      "disposition": "matched",
+      "evidence": "Target uses default horizontal Toolbar orientation and asserts the same explicit separator orientation."
+    },
+    {
+      "upstreamFile": "packages/react/src/toolbar/separator/ToolbarSeparator.test.tsx",
+      "title": "throws a descriptive error when rendered outside Toolbar.Root",
+      "parameters": [],
+      "predicates": [],
+      "sequence": ["invoke Separator outside Toolbar.Root"],
+      "assertions": ["throws Base UI: ToolbarRootContext is missing. Toolbar parts must be placed within <Toolbar.Root>."],
+      "targetFile": "packages/solid/src/toolbar/separator/ToolbarSeparator.test.tsx",
+      "targetTitles": ["requires a toolbar host with the source error"],
+      "disposition": "matched",
+      "evidence": "Target invokes native Solid component within the render owner without a Toolbar provider and checks the exact error. React render rejection and console suppression are replaced with synchronous setup throw assertion."
+    },
+    {
+      "upstreamFile": "packages/react/src/toolbar/group/ToolbarGroup.test.tsx",
+      "title": "ARIA attributes / renders a group",
+      "parameters": [],
+      "predicates": [],
+      "sequence": ["render Toolbar.Group inside Toolbar.Root"],
+      "assertions": ["test-ID group is the role=group host"],
+      "targetFile": "packages/solid/src/toolbar/group/ToolbarGroup.test.tsx",
+      "targetTitles": ["disables controls except links, and restores them reactively"],
+      "initialDisposition": "partial",
+      "disposition": "matched",
+      "evidence": "Added explicit test-ID/role identity to existing group scenario rather than duplicating it. Many-to-one mapping with disabled case."
+    },
+    {
+      "upstreamFile": "packages/react/src/toolbar/group/ToolbarGroup.test.tsx",
+      "title": "prop: disabled / disables all toolbar items except links in the group",
+      "parameters": { "controls": ["button", "textbox"], "exception": "link" },
+      "predicates": [],
+      "sequence": ["render disabled group with button, link and input", "assert disabled controls", "assert enabled link"],
+      "assertions": ["button aria-disabled=true and data-disabled present", "textbox aria-disabled=true and data-disabled present", "link aria-disabled and data-disabled absent"],
+      "targetFile": "packages/solid/src/toolbar/group/ToolbarGroup.test.tsx",
+      "targetTitles": ["disables controls except links, and restores them reactively"],
+      "initialDisposition": "partial",
+      "disposition": "matched",
+      "evidence": "Added absent source data-disabled assertions for both controls and link. Existing aria-disabled assertions and subsequent live restoration retained."
+    },
+    {
+      "upstreamFile": "packages/react/src/toolbar/link/ToolbarLink.test.tsx",
+      "title": "ARIA attributes / renders an anchor",
+      "parameters": [],
+      "predicates": [],
+      "sequence": ["render link with href inside Toolbar.Root"],
+      "assertions": ["test-ID link is the role=link host"],
+      "targetFile": "packages/solid/src/toolbar/link/ToolbarLink.test.tsx",
+      "targetTitles": ["renders an anchor with native link props"],
+      "initialDisposition": "partial",
+      "disposition": "matched",
+      "evidence": "Added exact source test-ID/role identity assertion to existing native link test. Target additionally covers disabled Toolbar and native href/target."
+    }
+  ],
+  "sharedRegistrations": [
+    { "upstreamFile": "packages/react/src/toolbar/separator/ToolbarSeparator.test.tsx", "registration": "describeConformance", "status": "not-reviewed", "note": "Source helpers read; individual expanded mappings still pending." },
+    { "upstreamFile": "packages/react/src/toolbar/group/ToolbarGroup.test.tsx", "registration": "describeConformance", "status": "not-reviewed", "note": "Source synthetic contexts become real Solid Toolbar.Root; individual expanded mappings still pending." },
+    { "upstreamFile": "packages/react/src/toolbar/link/ToolbarLink.test.tsx", "registration": "describeConformance", "status": "not-reviewed", "note": "Anchor custom host and HTMLAnchorElement reference; individual expanded mappings still pending." }
+  ],
+  "targetOnly": [
+    { "file": "packages/solid/src/toolbar/group/ToolbarGroup.test.tsx", "title": "uses the nearest group rather than inheriting an outer group disabled flag", "disposition": "target-only", "retained": true },
+    { "file": "packages/solid/src/toolbar/separator/ToolbarSeparator.test.tsx", "note": "Live update and identity assertions retained within matched orientation cases; no standalone target-only registration." },
+    { "file": "packages/solid/src/toolbar/link/ToolbarLink.test.tsx", "note": "Disabled Toolbar and native href/target assertions retained within matched anchor case." }
+  ]
+}

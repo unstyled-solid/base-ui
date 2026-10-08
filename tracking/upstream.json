@@ -1,0 +1,8 @@
+{
+  "repositoryUrl": "https://github.com/mui/base-ui.git",
+  "branch": "master",
+  "submodulePath": "upstream/base-ui",
+  "baselineSourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "fetchedCandidateSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "verifiedParitySha": null
+}

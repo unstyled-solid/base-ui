@@ -1,0 +1,1 @@
+function e(){return typeof navigator>`u`?{userAgent:``,platform:``,maxTouchPoints:0}:{userAgent:navigator.userAgent,platform:navigator.platform??``,maxTouchPoints:navigator.maxTouchPoints??0}}var t={get lowerUserAgent(){return e().userAgent.toLowerCase()},get lowerPlatform(){return e().platform.toLowerCase()},get maxTouchPoints(){return e().maxTouchPoints}};export{t};

@@ -1,0 +1,2129 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/overview/about/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "29433dbcd30a9ccdd0a9428059d9624d675bc51d071e779de933f48665d5bcb5",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/overview/about",
+  "route": "/solid/overview/about",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "About Base UI",
+  "subtitle": "An open-source React component library for building accessible user interfaces.",
+  "metadata": {
+    "keywords": [
+      "About Base UI",
+      "Base UI Team",
+      "Headless React Components",
+      "Accessible React Library",
+      "Open Source UI Components",
+      "Base UI Community",
+      "Base UI Overview",
+      "Unstyled Components",
+      "Component Library",
+      "Headless UI Library",
+      "React UI Toolkit",
+      "MUI Team",
+      "Radix Alternative"
+    ],
+    "description": "An overview of Base UI, providing information on its history, team, and goals."
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "About Base UI",
+      "properties": {
+        "id": "about-base-ui"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Features",
+      "properties": {
+        "id": "features"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:13:1"
+    },
+    {
+      "depth": 3,
+      "text": "Headless",
+      "properties": {
+        "id": "headless"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:15:1"
+    },
+    {
+      "depth": 3,
+      "text": "Accessible",
+      "properties": {
+        "id": "accessible"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:21:1"
+    },
+    {
+      "depth": 3,
+      "text": "Composable",
+      "properties": {
+        "id": "composable"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:27:1"
+    },
+    {
+      "depth": 2,
+      "text": "Team",
+      "properties": {
+        "id": "team"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:31:1"
+    },
+    {
+      "depth": 2,
+      "text": "Browser support",
+      "properties": {
+        "id": "browser-support"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:41:1"
+    },
+    {
+      "depth": 2,
+      "text": "React versions",
+      "properties": {
+        "id": "react-versions"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:48:1"
+    },
+    {
+      "depth": 2,
+      "text": "Bundler support",
+      "properties": {
+        "id": "bundler-support"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:52:1"
+    },
+    {
+      "depth": 2,
+      "text": "Community",
+      "properties": {
+        "id": "community"
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:56:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+      "target": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:25:30"
+    },
+    {
+      "source": "https://x.com/colmtuite",
+      "target": "https://x.com/colmtuite",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:33:18"
+    },
+    {
+      "source": "https://x.com/marijanajdova",
+      "target": "https://x.com/marijanajdova",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:34:22"
+    },
+    {
+      "source": "https://github.com/flaviendelangle",
+      "target": "https://github.com/flaviendelangle",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:35:24"
+    },
+    {
+      "source": "https://x.com/atomiksdev",
+      "target": "https://x.com/atomiksdev",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:36:20"
+    },
+    {
+      "source": "https://x.com/jjenzz",
+      "target": "https://x.com/jjenzz",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:37:19"
+    },
+    {
+      "source": "https://x.com/michaldudak",
+      "target": "https://x.com/michaldudak",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:38:20"
+    },
+    {
+      "source": "https://github.com/aarongarciah",
+      "target": "https://github.com/aarongarciah",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:39:20"
+    },
+    {
+      "source": "https://web.dev/baseline",
+      "target": "https://web.dev/baseline",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:43:72"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/blob/master/.browserslistrc",
+      "target": "https://github.com/mui/base-ui/blob/master/.browserslistrc",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:46:55"
+    },
+    {
+      "source": "/react/overview/community",
+      "target": "/solid/overview/community",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:58:11"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "An overview of Base UI, providing information on its history, team, and goals."
+      },
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:4:1"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "platform-accessibility-claims",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:1:1",
+      "detail": "Reconcile upstream support claims against actual Solid qualification evidence.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:3:11",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:9:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:48:4",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:50:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/overview/about/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "About Base UI",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 16,
+                "offset": 15
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 16,
+            "offset": 15
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "about-base-ui"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "An open-source React component library for building accessible user interfaces.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 27
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 90,
+                    "offset": 106
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 17
+              },
+              "end": {
+                "line": 3,
+                "column": 101,
+                "offset": 117
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 17
+          },
+          "end": {
+            "line": 3,
+            "column": 101,
+            "offset": 117
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 126
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 144
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "An overview of Base UI, providing information on its history, team, and goals.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 147
+              },
+              "end": {
+                "line": 6,
+                "column": 91,
+                "offset": 235
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 118
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 238
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "From the creators of Radix, Material UI, and Floating UI, Base UI is an unstyled React component library for building accessible user interfaces.\nOur focus is on accessibility, performance, and developer experience.\nOur goal is to provide a complete set of open-source UI components, with a delightful developer experience, in a sustainable way.",
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 1,
+                "offset": 240
+              },
+              "end": {
+                "line": 11,
+                "column": 130,
+                "offset": 585
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 240
+          },
+          "end": {
+            "line": 11,
+            "column": 130,
+            "offset": 585
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Features",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 590
+              },
+              "end": {
+                "line": 13,
+                "column": 12,
+                "offset": 598
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 587
+          },
+          "end": {
+            "line": 13,
+            "column": 12,
+            "offset": 598
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "features"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Headless",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 5,
+                "offset": 604
+              },
+              "end": {
+                "line": 15,
+                "column": 13,
+                "offset": 612
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 600
+          },
+          "end": {
+            "line": 15,
+            "column": 13,
+            "offset": 612
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "headless"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI components are unstyled, don't bundle CSS, and don't prescribe a styling solution.\nYou retain complete control over your application's CSS layer.\nBase UI is compatible with Tailwind, CSS Modules, plain CSS, CSS-in-JS, or any other styling engine you prefer.",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 614
+              },
+              "end": {
+                "line": 19,
+                "column": 112,
+                "offset": 879
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 614
+          },
+          "end": {
+            "line": 19,
+            "column": 112,
+            "offset": 879
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Accessible",
+            "position": {
+              "start": {
+                "line": 21,
+                "column": 5,
+                "offset": 885
+              },
+              "end": {
+                "line": 21,
+                "column": 15,
+                "offset": 895
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 881
+          },
+          "end": {
+            "line": 21,
+            "column": 15,
+            "offset": 895
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "accessible"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Poor accessibility can make your application difficult to navigate for all users, not just for users with disabilities.\nAccessibility is our primary focus.\nBase UI components adhere to ",
+            "position": {
+              "start": {
+                "line": 23,
+                "column": 1,
+                "offset": 897
+              },
+              "end": {
+                "line": 25,
+                "column": 30,
+                "offset": 1082
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+            "children": [
+              {
+                "type": "text",
+                "value": "WAI-ARIA design patterns",
+                "position": {
+                  "start": {
+                    "line": 25,
+                    "column": 31,
+                    "offset": 1083
+                  },
+                  "end": {
+                    "line": 25,
+                    "column": 55,
+                    "offset": 1107
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 30,
+                "offset": 1082
+              },
+              "end": {
+                "line": 25,
+                "column": 99,
+                "offset": 1151
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and are tested on a wide range of platforms, devices, browsers, screen readers, and other environments.",
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 99,
+                "offset": 1151
+              },
+              "end": {
+                "line": 25,
+                "column": 203,
+                "offset": 1255
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 23,
+            "column": 1,
+            "offset": 897
+          },
+          "end": {
+            "line": 25,
+            "column": 203,
+            "offset": 1255
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Composable",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 5,
+                "offset": 1261
+              },
+              "end": {
+                "line": 27,
+                "column": 15,
+                "offset": 1271
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 27,
+            "column": 1,
+            "offset": 1257
+          },
+          "end": {
+            "line": 27,
+            "column": 15,
+            "offset": 1271
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "composable"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Component APIs are fully open, so you have direct access to each node, you can easily add or remove parts, and you can wrap them however you prefer.",
+            "position": {
+              "start": {
+                "line": 29,
+                "column": 1,
+                "offset": 1273
+              },
+              "end": {
+                "line": 29,
+                "column": 149,
+                "offset": 1421
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 29,
+            "column": 1,
+            "offset": 1273
+          },
+          "end": {
+            "line": 29,
+            "column": 149,
+            "offset": 1421
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Team",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 4,
+                "offset": 1426
+              },
+              "end": {
+                "line": 31,
+                "column": 8,
+                "offset": 1430
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 1423
+          },
+          "end": {
+            "line": 31,
+            "column": 8,
+            "offset": 1430
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "team"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Colm Tuite",
+                        "position": {
+                          "start": {
+                            "line": 33,
+                            "column": 5,
+                            "offset": 1436
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 15,
+                            "offset": 1446
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 33,
+                        "column": 3,
+                        "offset": 1434
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 17,
+                        "offset": 1448
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": {
+                        "line": 33,
+                        "column": 17,
+                        "offset": 1448
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 18,
+                        "offset": 1449
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://x.com/colmtuite",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@colmtuite",
+                        "position": {
+                          "start": {
+                            "line": 33,
+                            "column": 19,
+                            "offset": 1450
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 29,
+                            "offset": 1460
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 33,
+                        "column": 18,
+                        "offset": 1449
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 55,
+                        "offset": 1486
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 33,
+                    "column": 3,
+                    "offset": 1434
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 55,
+                    "offset": 1486
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 1,
+                "offset": 1432
+              },
+              "end": {
+                "line": 33,
+                "column": 55,
+                "offset": 1486
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Marija Najdova",
+                        "position": {
+                          "start": {
+                            "line": 34,
+                            "column": 5,
+                            "offset": 1491
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 19,
+                            "offset": 1505
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 34,
+                        "column": 3,
+                        "offset": 1489
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 21,
+                        "offset": 1507
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": {
+                        "line": 34,
+                        "column": 21,
+                        "offset": 1507
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 22,
+                        "offset": 1508
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://x.com/marijanajdova",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@marijanajdova",
+                        "position": {
+                          "start": {
+                            "line": 34,
+                            "column": 23,
+                            "offset": 1509
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 37,
+                            "offset": 1523
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 34,
+                        "column": 22,
+                        "offset": 1508
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 67,
+                        "offset": 1553
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 34,
+                    "column": 3,
+                    "offset": 1489
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 67,
+                    "offset": 1553
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 1,
+                "offset": 1487
+              },
+              "end": {
+                "line": 34,
+                "column": 67,
+                "offset": 1553
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Flavien Delangle",
+                        "position": {
+                          "start": {
+                            "line": 35,
+                            "column": 5,
+                            "offset": 1558
+                          },
+                          "end": {
+                            "line": 35,
+                            "column": 21,
+                            "offset": 1574
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 3,
+                        "offset": 1556
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 23,
+                        "offset": 1576
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 23,
+                        "offset": 1576
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 24,
+                        "offset": 1577
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/flaviendelangle",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@flaviendelangle",
+                        "position": {
+                          "start": {
+                            "line": 35,
+                            "column": 25,
+                            "offset": 1578
+                          },
+                          "end": {
+                            "line": 35,
+                            "column": 41,
+                            "offset": 1594
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 24,
+                        "offset": 1577
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 78,
+                        "offset": 1631
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 35,
+                    "column": 3,
+                    "offset": 1556
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 78,
+                    "offset": 1631
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 1,
+                "offset": 1554
+              },
+              "end": {
+                "line": 35,
+                "column": 78,
+                "offset": 1631
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "James Nelson",
+                        "position": {
+                          "start": {
+                            "line": 36,
+                            "column": 5,
+                            "offset": 1636
+                          },
+                          "end": {
+                            "line": 36,
+                            "column": 17,
+                            "offset": 1648
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 36,
+                        "column": 3,
+                        "offset": 1634
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 19,
+                        "offset": 1650
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": {
+                        "line": 36,
+                        "column": 19,
+                        "offset": 1650
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 20,
+                        "offset": 1651
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://x.com/atomiksdev",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@atomiksdev",
+                        "position": {
+                          "start": {
+                            "line": 36,
+                            "column": 21,
+                            "offset": 1652
+                          },
+                          "end": {
+                            "line": 36,
+                            "column": 32,
+                            "offset": 1663
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 36,
+                        "column": 20,
+                        "offset": 1651
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 59,
+                        "offset": 1690
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 36,
+                    "column": 3,
+                    "offset": 1634
+                  },
+                  "end": {
+                    "line": 36,
+                    "column": 59,
+                    "offset": 1690
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 1,
+                "offset": 1632
+              },
+              "end": {
+                "line": 36,
+                "column": 59,
+                "offset": 1690
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Jenna Smith",
+                        "position": {
+                          "start": {
+                            "line": 37,
+                            "column": 5,
+                            "offset": 1695
+                          },
+                          "end": {
+                            "line": 37,
+                            "column": 16,
+                            "offset": 1706
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 37,
+                        "column": 3,
+                        "offset": 1693
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 18,
+                        "offset": 1708
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": {
+                        "line": 37,
+                        "column": 18,
+                        "offset": 1708
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 19,
+                        "offset": 1709
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://x.com/jjenzz",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@jjenzz",
+                        "position": {
+                          "start": {
+                            "line": 37,
+                            "column": 20,
+                            "offset": 1710
+                          },
+                          "end": {
+                            "line": 37,
+                            "column": 27,
+                            "offset": 1717
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 37,
+                        "column": 19,
+                        "offset": 1709
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 50,
+                        "offset": 1740
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 37,
+                    "column": 3,
+                    "offset": 1693
+                  },
+                  "end": {
+                    "line": 37,
+                    "column": 50,
+                    "offset": 1740
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 37,
+                "column": 1,
+                "offset": 1691
+              },
+              "end": {
+                "line": 37,
+                "column": 50,
+                "offset": 1740
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Michał Dudak",
+                        "position": {
+                          "start": {
+                            "line": 38,
+                            "column": 5,
+                            "offset": 1745
+                          },
+                          "end": {
+                            "line": 38,
+                            "column": 17,
+                            "offset": 1757
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 38,
+                        "column": 3,
+                        "offset": 1743
+                      },
+                      "end": {
+                        "line": 38,
+                        "column": 19,
+                        "offset": 1759
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": {
+                        "line": 38,
+                        "column": 19,
+                        "offset": 1759
+                      },
+                      "end": {
+                        "line": 38,
+                        "column": 20,
+                        "offset": 1760
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://x.com/michaldudak",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@michaldudak",
+                        "position": {
+                          "start": {
+                            "line": 38,
+                            "column": 21,
+                            "offset": 1761
+                          },
+                          "end": {
+                            "line": 38,
+                            "column": 33,
+                            "offset": 1773
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 38,
+                        "column": 20,
+                        "offset": 1760
+                      },
+                      "end": {
+                        "line": 38,
+                        "column": 61,
+                        "offset": 1801
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 38,
+                    "column": 3,
+                    "offset": 1743
+                  },
+                  "end": {
+                    "line": 38,
+                    "column": 61,
+                    "offset": 1801
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 1,
+                "offset": 1741
+              },
+              "end": {
+                "line": 38,
+                "column": 61,
+                "offset": 1801
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Aarón García",
+                        "position": {
+                          "start": {
+                            "line": 39,
+                            "column": 5,
+                            "offset": 1806
+                          },
+                          "end": {
+                            "line": 39,
+                            "column": 17,
+                            "offset": 1818
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 39,
+                        "column": 3,
+                        "offset": 1804
+                      },
+                      "end": {
+                        "line": 39,
+                        "column": 19,
+                        "offset": 1820
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " ",
+                    "position": {
+                      "start": {
+                        "line": 39,
+                        "column": 19,
+                        "offset": 1820
+                      },
+                      "end": {
+                        "line": 39,
+                        "column": 20,
+                        "offset": 1821
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/aarongarciah",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@aarongarciah",
+                        "position": {
+                          "start": {
+                            "line": 39,
+                            "column": 21,
+                            "offset": 1822
+                          },
+                          "end": {
+                            "line": 39,
+                            "column": 34,
+                            "offset": 1835
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 39,
+                        "column": 20,
+                        "offset": 1821
+                      },
+                      "end": {
+                        "line": 39,
+                        "column": 68,
+                        "offset": 1869
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 39,
+                    "column": 3,
+                    "offset": 1804
+                  },
+                  "end": {
+                    "line": 39,
+                    "column": 68,
+                    "offset": 1869
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 39,
+                "column": 1,
+                "offset": 1802
+              },
+              "end": {
+                "line": 39,
+                "column": 68,
+                "offset": 1869
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 1432
+          },
+          "end": {
+            "line": 39,
+            "column": 68,
+            "offset": 1869
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Browser support",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 4,
+                "offset": 1874
+              },
+              "end": {
+                "line": 41,
+                "column": 19,
+                "offset": 1889
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 1871
+          },
+          "end": {
+            "line": 41,
+            "column": 19,
+            "offset": 1889
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "browser-support"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI supports all modern browsers that implement features marked as ",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 1,
+                "offset": 1891
+              },
+              "end": {
+                "line": 43,
+                "column": 72,
+                "offset": 1962
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://web.dev/baseline",
+            "children": [
+              {
+                "type": "text",
+                "value": "Baseline Widely Available",
+                "position": {
+                  "start": {
+                    "line": 43,
+                    "column": 73,
+                    "offset": 1963
+                  },
+                  "end": {
+                    "line": 43,
+                    "column": 98,
+                    "offset": 1988
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 72,
+                "offset": 1962
+              },
+              "end": {
+                "line": 43,
+                "column": 125,
+                "offset": 2015
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " at the time of the last major version release.\nThis means the features we use have been supported across major browsers for at least 30 months, ensuring broad compatibility and stability.",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 125,
+                "offset": 2015
+              },
+              "end": {
+                "line": 44,
+                "column": 141,
+                "offset": 2203
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 1891
+          },
+          "end": {
+            "line": 44,
+            "column": 141,
+            "offset": 2203
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For the full list of supported browsers, refer to our ",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 1,
+                "offset": 2205
+              },
+              "end": {
+                "line": 46,
+                "column": 55,
+                "offset": 2259
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://github.com/mui/base-ui/blob/master/.browserslistrc",
+            "children": [
+              {
+                "type": "text",
+                "value": ".browserslistrc",
+                "position": {
+                  "start": {
+                    "line": 46,
+                    "column": 56,
+                    "offset": 2260
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 71,
+                    "offset": 2275
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 55,
+                "offset": 2259
+              },
+              "end": {
+                "line": 46,
+                "column": 132,
+                "offset": 2336
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 132,
+                "offset": 2336
+              },
+              "end": {
+                "line": 46,
+                "column": 133,
+                "offset": 2337
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 46,
+            "column": 1,
+            "offset": 2205
+          },
+          "end": {
+            "line": 46,
+            "column": 133,
+            "offset": 2337
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "React versions",
+            "position": {
+              "start": {
+                "line": 48,
+                "column": 4,
+                "offset": 2342
+              },
+              "end": {
+                "line": 48,
+                "column": 18,
+                "offset": 2356
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 48,
+            "column": 1,
+            "offset": 2339
+          },
+          "end": {
+            "line": 48,
+            "column": 18,
+            "offset": 2356
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "react-versions"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI supports React 17 and newer versions.",
+            "position": {
+              "start": {
+                "line": 50,
+                "column": 1,
+                "offset": 2358
+              },
+              "end": {
+                "line": 50,
+                "column": 46,
+                "offset": 2403
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 50,
+            "column": 1,
+            "offset": 2358
+          },
+          "end": {
+            "line": 50,
+            "column": 46,
+            "offset": 2403
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Bundler support",
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 4,
+                "offset": 2408
+              },
+              "end": {
+                "line": 52,
+                "column": 19,
+                "offset": 2423
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 52,
+            "column": 1,
+            "offset": 2405
+          },
+          "end": {
+            "line": 52,
+            "column": 19,
+            "offset": 2423
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "bundler-support"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI works with maintained versions of all popular bundlers, including Vite, webpack, Turbopack and Parcel.",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 2425
+              },
+              "end": {
+                "line": 54,
+                "column": 111,
+                "offset": 2535
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 54,
+            "column": 1,
+            "offset": 2425
+          },
+          "end": {
+            "line": 54,
+            "column": 111,
+            "offset": 2535
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Community",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 4,
+                "offset": 2540
+              },
+              "end": {
+                "line": 56,
+                "column": 13,
+                "offset": 2549
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 2537
+          },
+          "end": {
+            "line": 56,
+            "column": 13,
+            "offset": 2549
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "community"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Visit the ",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 1,
+                "offset": 2551
+              },
+              "end": {
+                "line": 58,
+                "column": 11,
+                "offset": 2561
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/overview/community",
+            "children": [
+              {
+                "type": "text",
+                "value": "Community",
+                "position": {
+                  "start": {
+                    "line": 58,
+                    "column": 12,
+                    "offset": 2562
+                  },
+                  "end": {
+                    "line": 58,
+                    "column": 21,
+                    "offset": 2571
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 11,
+                "offset": 2561
+              },
+              "end": {
+                "line": 58,
+                "column": 49,
+                "offset": 2599
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " page to learn more about ecosystem projects, support channels, and how to stay up to date and contribute.",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 49,
+                "offset": 2599
+              },
+              "end": {
+                "line": 58,
+                "column": 155,
+                "offset": 2705
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 2551
+          },
+          "end": {
+            "line": 58,
+            "column": 155,
+            "offset": 2705
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'About Base UI',\n    'Base UI Team',\n    'Headless React Components',\n    'Accessible React Library',\n    'Open Source UI Components',\n    'Base UI Community',\n    'Base UI Overview',\n    'Unstyled Components',\n    'Component Library',\n    'Headless UI Library',\n    'React UI Toolkit',\n    'MUI Team',\n    'Radix Alternative',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 60,
+            "column": 1,
+            "offset": 2707
+          },
+          "end": {
+            "line": 76,
+            "column": 3,
+            "offset": 3086
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 77,
+        "column": 1,
+        "offset": 3087
+      }
+    }
+  }
+}

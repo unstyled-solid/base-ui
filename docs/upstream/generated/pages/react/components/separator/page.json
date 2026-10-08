@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/separator/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "c547c0d2c2c0bb369cdca851f0125586e73acd8b26725a0dbd415329172ed853",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/separator",
+  "route": "/solid/components/separator",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Separator",
+  "subtitle": "A separator element accessible to screen readers.",
+  "metadata": {
+    "keywords": [
+      "React Separator",
+      "Divider Component",
+      "Divider",
+      "Horizontal Rule",
+      "Horizontal Divider",
+      "Vertical Divider",
+      "Visual Separator",
+      "Section Divider",
+      "HR",
+      "Accessible Separator",
+      "Screen Reader Separator",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React separator component that is accessible to screen readers."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoSeparatorHero",
+      "imported": "DemoSeparatorHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/separator/demos/hero#DemoSeparatorHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesSeparator",
+      "imported": "TypesSeparator",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/separator/types#TypesSeparator"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Separator",
+      "properties": {
+        "id": "separator"
+      },
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:14:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:24:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React separator component that is accessible to screen readers."
+      },
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:5:1"
+    },
+    {
+      "name": "DemoSeparatorHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:12:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/separator/demos/hero#DemoSeparatorHero"
+    },
+    {
+      "name": "TypesSeparator",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:28:1",
+      "reference": "api:docs/src/app/(docs)/react/components/separator/types#TypesSeparator"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:5:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:12:1",
+      "detail": "Site must implement DemoSeparatorHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:18:1",
+      "detail": "Separator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:18:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:28:1",
+      "detail": "Site must implement TypesSeparator; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/separator/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Separator",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 12,
+                "offset": 11
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12,
+            "offset": 11
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "separator"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A separator element accessible to screen readers.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 23
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 60,
+                    "offset": 72
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 13
+              },
+              "end": {
+                "line": 3,
+                "column": 71,
+                "offset": 83
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 71,
+            "offset": 83
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 93
+              },
+              "end": {
+                "line": 6,
+                "column": 21,
+                "offset": 111
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React separator component that is accessible to screen readers.",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 3,
+                "offset": 114
+              },
+              "end": {
+                "line": 7,
+                "column": 101,
+                "offset": 212
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 85
+          },
+          "end": {
+            "line": 8,
+            "column": 3,
+            "offset": 215
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoSeparatorHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 217
+          },
+          "end": {
+            "line": 10,
+            "column": 50,
+            "offset": 266
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoSeparatorHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 268
+          },
+          "end": {
+            "line": 12,
+            "column": 22,
+            "offset": 289
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/separator/demos/hero#DemoSeparatorHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 4,
+                "offset": 294
+              },
+              "end": {
+                "line": 14,
+                "column": 11,
+                "offset": 301
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 291
+          },
+          "end": {
+            "line": 14,
+            "column": 11,
+            "offset": 301
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and use it as a single part:",
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 303
+              },
+              "end": {
+                "line": 16,
+                "column": 50,
+                "offset": 352
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 303
+          },
+          "end": {
+            "line": 16,
+            "column": 50,
+            "offset": 352
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Separator } from 'baseui-solid2/separator';\n\n<Separator />;",
+        "position": {
+          "start": {
+            "line": 18,
+            "column": 1,
+            "offset": 354
+          },
+          "end": {
+            "line": 22,
+            "column": 4,
+            "offset": 450
+          }
+        },
+        "data": {
+          "sourceValue": "import { Separator } from '@base-ui/react/separator';\n\n<Separator />;",
+          "references": [
+            {
+              "value": "@base-ui/react/separator",
+              "start": 27,
+              "end": 51,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/separator",
+              "start": 27,
+              "end": 51,
+              "kind": "import",
+              "replacement": "baseui-solid2/separator"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 24,
+                "column": 4,
+                "offset": 455
+              },
+              "end": {
+                "line": 24,
+                "column": 17,
+                "offset": 468
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 24,
+            "column": 1,
+            "offset": 452
+          },
+          "end": {
+            "line": 24,
+            "column": 17,
+            "offset": 468
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesSeparator } from './types';",
+        "position": {
+          "start": {
+            "line": 26,
+            "column": 1,
+            "offset": 470
+          },
+          "end": {
+            "line": 26,
+            "column": 42,
+            "offset": 511
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSeparator",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 28,
+            "column": 1,
+            "offset": 513
+          },
+          "end": {
+            "line": 28,
+            "column": 19,
+            "offset": 531
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/separator/types#TypesSeparator"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Separator',\n    'Divider Component',\n    'Divider',\n    'Horizontal Rule',\n    'Horizontal Divider',\n    'Vertical Divider',\n    'Visual Separator',\n    'Section Divider',\n    'HR',\n    'Accessible Separator',\n    'Screen Reader Separator',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 533
+          },
+          "end": {
+            "line": 46,
+            "column": 3,
+            "offset": 880
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 47,
+        "column": 1,
+        "offset": 881
+      }
+    }
+  }
+}

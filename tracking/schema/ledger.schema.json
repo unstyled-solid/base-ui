@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baseui-solid2.local/tracking/ledger-v1",
+  "title": "Worker-owned source and case ledger v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "baseline", "owner", "sources", "cases"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "baseline": { "$ref": "#/$defs/sha" },
+    "owner": { "$ref": "#/$defs/ticket" },
+    "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+    "cases": { "type": "array", "items": { "$ref": "#/$defs/case" } }
+  },
+  "$defs": {
+    "sha": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "ticket": { "type": "string", "pattern": "^bsolid-[a-z0-9-]+$" },
+    "text": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "path": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)(?!.*:)(?!.*[\\x00-\\x1f*?])[^/](?:.*[^/])?$" },
+    "paths": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "blob", "targets", "disposition", "reason"],
+      "properties": {
+        "path": { "$ref": "#/$defs/path" },
+        "blob": { "$ref": "#/$defs/sha" },
+        "targets": { "$ref": "#/$defs/paths" },
+        "disposition": { "enum": ["translated", "pure-adapted", "framework-only", "excluded-with-reason"] },
+        "reason": { "$ref": "#/$defs/text" }
+      }
+    },
+    "case": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "sourcePath", "sourceBlob", "kind", "status", "targets", "reason", "evidence", "blockers"],
+      "properties": {
+        "id": { "$ref": "#/$defs/text" },
+        "sourcePath": { "$ref": "#/$defs/path" },
+        "sourceBlob": { "$ref": "#/$defs/sha" },
+        "kind": { "enum": ["static-declaration", "runtime-case", "type-scenario", "unresolved-dynamic"] },
+        "status": { "enum": ["pending", "pending-browser", "blocked", "passing", "adapted", "upstream-skipped"] },
+        "targets": { "$ref": "#/$defs/paths" },
+        "reason": { "$ref": "#/$defs/text" },
+        "evidence": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+        "blockers": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/ticket" } }
+      }
+    }
+  }
+}

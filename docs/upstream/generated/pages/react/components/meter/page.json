@@ -1,0 +1,966 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/meter/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "008e232fae832b426cb180368e0dcda7fad2d0e81f43342ddaa2d7aae01276cd",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/meter",
+  "route": "/solid/components/meter",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Meter",
+  "subtitle": "A graphical display of a numeric value within a range.",
+  "metadata": {
+    "keywords": [
+      "React Meter",
+      "Meter Component",
+      "Progress Meter",
+      "Gauge",
+      "Level Indicator",
+      "Measurement Display",
+      "Capacity Indicator",
+      "Value Indicator",
+      "Rating Meter",
+      "Fuel Gauge",
+      "Accessible Meter",
+      "Headless React Components",
+      "Graphical Value Display",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React meter component that provides a graphical display of a numeric value."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoMeterHero",
+      "imported": "DemoMeterHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/meter/demos/hero#DemoMeterHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesMeter",
+      "imported": "TypesMeter",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Meter",
+      "properties": {
+        "id": "meter"
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:29:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:33:1"
+    },
+    {
+      "depth": 3,
+      "text": "Track",
+      "properties": {
+        "id": "track"
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:37:1"
+    },
+    {
+      "depth": 3,
+      "text": "Indicator",
+      "properties": {
+        "id": "indicator"
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:41:1"
+    },
+    {
+      "depth": 3,
+      "text": "Value",
+      "properties": {
+        "id": "value"
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:45:1"
+    },
+    {
+      "depth": 3,
+      "text": "Label",
+      "properties": {
+        "id": "label"
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:49:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React meter component that provides a graphical display of a numeric value."
+      },
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:4:1"
+    },
+    {
+      "name": "DemoMeterHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/meter/demos/hero#DemoMeterHero"
+    },
+    {
+      "name": "TypesMeter.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:35:1",
+      "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+    },
+    {
+      "name": "TypesMeter.Track",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:39:1",
+      "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+    },
+    {
+      "name": "TypesMeter.Indicator",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:43:1",
+      "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+    },
+    {
+      "name": "TypesMeter.Value",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:47:1",
+      "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+    },
+    {
+      "name": "TypesMeter.Label",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:51:1",
+      "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:11:1",
+      "detail": "Site must implement DemoMeterHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:17:1",
+      "detail": "Meter.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:17:1",
+      "detail": "Meter.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:17:1",
+      "detail": "Meter.Track",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:17:1",
+      "detail": "Meter.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:17:1",
+      "detail": "Meter.Value",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:17:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:35:1",
+      "detail": "Site must implement TypesMeter.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:39:1",
+      "detail": "Site must implement TypesMeter.Track; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:43:1",
+      "detail": "Site must implement TypesMeter.Indicator; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:47:1",
+      "detail": "Site must implement TypesMeter.Value; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:51:1",
+      "detail": "Site must implement TypesMeter.Label; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/meter/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Meter",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 8,
+                "offset": 7
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 8,
+            "offset": 7
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "meter"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A graphical display of a numeric value within a range.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 19
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 65,
+                    "offset": 73
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 76,
+                "offset": 84
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 9
+          },
+          "end": {
+            "line": 3,
+            "column": 76,
+            "offset": 84
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 93
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 111
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React meter component that provides a graphical display of a numeric value.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 114
+              },
+              "end": {
+                "line": 6,
+                "column": 113,
+                "offset": 224
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 85
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 227
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoMeterHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 229
+          },
+          "end": {
+            "line": 9,
+            "column": 46,
+            "offset": 274
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoMeterHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 276
+          },
+          "end": {
+            "line": 11,
+            "column": 18,
+            "offset": 293
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/meter/demos/hero#DemoMeterHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 298
+              },
+              "end": {
+                "line": 13,
+                "column": 11,
+                "offset": 305
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 295
+          },
+          "end": {
+            "line": 13,
+            "column": 11,
+            "offset": 305
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 307
+              },
+              "end": {
+                "line": 15,
+                "column": 45,
+                "offset": 351
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 307
+          },
+          "end": {
+            "line": 15,
+            "column": 45,
+            "offset": 351
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Meter } from 'baseui-solid2/meter';\n\n<Meter.Root>\n  <Meter.Label />\n  <Meter.Track>\n    <Meter.Indicator />\n  </Meter.Track>\n  <Meter.Value />\n</Meter.Root>;",
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 353
+          },
+          "end": {
+            "line": 27,
+            "column": 4,
+            "offset": 547
+          }
+        },
+        "data": {
+          "sourceValue": "import { Meter } from '@base-ui/react/meter';\n\n<Meter.Root>\n  <Meter.Label />\n  <Meter.Track>\n    <Meter.Indicator />\n  </Meter.Track>\n  <Meter.Value />\n</Meter.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/meter",
+              "start": 23,
+              "end": 43,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/meter",
+              "start": 23,
+              "end": 43,
+              "kind": "import",
+              "replacement": "baseui-solid2/meter"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 29,
+                "column": 4,
+                "offset": 552
+              },
+              "end": {
+                "line": 29,
+                "column": 17,
+                "offset": 565
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 29,
+            "column": 1,
+            "offset": 549
+          },
+          "end": {
+            "line": 29,
+            "column": 17,
+            "offset": 565
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesMeter } from './types';",
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 567
+          },
+          "end": {
+            "line": 31,
+            "column": 38,
+            "offset": 604
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 5,
+                "offset": 610
+              },
+              "end": {
+                "line": 33,
+                "column": 9,
+                "offset": 614
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 606
+          },
+          "end": {
+            "line": 33,
+            "column": 9,
+            "offset": 614
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesMeter.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 616
+          },
+          "end": {
+            "line": 35,
+            "column": 20,
+            "offset": 635
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Track",
+            "position": {
+              "start": {
+                "line": 37,
+                "column": 5,
+                "offset": 641
+              },
+              "end": {
+                "line": 37,
+                "column": 10,
+                "offset": 646
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 37,
+            "column": 1,
+            "offset": 637
+          },
+          "end": {
+            "line": 37,
+            "column": 10,
+            "offset": 646
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "track"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesMeter.Track",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 39,
+            "column": 1,
+            "offset": 648
+          },
+          "end": {
+            "line": 39,
+            "column": 21,
+            "offset": 668
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Indicator",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 5,
+                "offset": 674
+              },
+              "end": {
+                "line": 41,
+                "column": 14,
+                "offset": 683
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 670
+          },
+          "end": {
+            "line": 41,
+            "column": 14,
+            "offset": 683
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "indicator"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesMeter.Indicator",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 685
+          },
+          "end": {
+            "line": 43,
+            "column": 25,
+            "offset": 709
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Value",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 5,
+                "offset": 715
+              },
+              "end": {
+                "line": 45,
+                "column": 10,
+                "offset": 720
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 711
+          },
+          "end": {
+            "line": 45,
+            "column": 10,
+            "offset": 720
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "value"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesMeter.Value",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 47,
+            "column": 1,
+            "offset": 722
+          },
+          "end": {
+            "line": 47,
+            "column": 21,
+            "offset": 742
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Label",
+            "position": {
+              "start": {
+                "line": 49,
+                "column": 5,
+                "offset": 748
+              },
+              "end": {
+                "line": 49,
+                "column": 10,
+                "offset": 753
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 49,
+            "column": 1,
+            "offset": 744
+          },
+          "end": {
+            "line": 49,
+            "column": 10,
+            "offset": 753
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "label"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesMeter.Label",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 51,
+            "column": 1,
+            "offset": 755
+          },
+          "end": {
+            "line": 51,
+            "column": 21,
+            "offset": 775
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/meter/types#TypesMeter"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Meter',\n    'Meter Component',\n    'Progress Meter',\n    'Gauge',\n    'Level Indicator',\n    'Measurement Display',\n    'Capacity Indicator',\n    'Value Indicator',\n    'Rating Meter',\n    'Fuel Gauge',\n    'Accessible Meter',\n    'Headless React Components',\n    'Graphical Value Display',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 53,
+            "column": 1,
+            "offset": 777
+          },
+          "end": {
+            "line": 70,
+            "column": 3,
+            "offset": 1141
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 71,
+        "column": 1,
+        "offset": 1142
+      }
+    }
+  }
+}

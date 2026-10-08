@@ -1,0 +1,2674 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "1b5c3c0df3e3612ecce374d1f9f136a679fcdd8ee00c7202ddd8e28542c89f07",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/checkbox-group",
+  "route": "/solid/components/checkbox-group",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Checkbox Group",
+  "subtitle": "Provides shared state to a series of checkboxes.",
+  "metadata": {
+    "keywords": [
+      "React Checkbox Group",
+      "Checkbox Group Component",
+      "Grouped Checkboxes",
+      "Multiple Selection",
+      "Checkbox List",
+      "Multi-Select Checkboxes",
+      "Parent Child Checkbox",
+      "Accessible Checkbox Group",
+      "Form Fieldset Control",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React checkbox group component that provides a shared state for a series of checkboxes."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoCheckboxGroupHero",
+      "imported": "DemoCheckboxGroupHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/hero#DemoCheckboxGroupHero"
+    },
+    {
+      "from": "./demos/parent",
+      "local": "DemoCheckboxGroupParent",
+      "imported": "DemoCheckboxGroupParent",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/parent#DemoCheckboxGroupParent"
+    },
+    {
+      "from": "./demos/nested",
+      "local": "DemoCheckboxGroupNested",
+      "imported": "DemoCheckboxGroupNested",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/nested#DemoCheckboxGroupNested"
+    },
+    {
+      "from": "./types",
+      "local": "TypesCheckboxGroup",
+      "imported": "TypesCheckboxGroup",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/checkbox-group/types#TypesCheckboxGroup"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Checkbox Group",
+      "properties": {
+        "id": "checkbox-group"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:17:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:30:1"
+    },
+    {
+      "depth": 3,
+      "text": "Labeling a checkbox group",
+      "properties": {
+        "id": "labeling-a-checkbox-group"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:32:1"
+    },
+    {
+      "depth": 3,
+      "text": "Rendering as a native button",
+      "properties": {
+        "id": "rendering-as-a-native-button"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:52:1"
+    },
+    {
+      "depth": 3,
+      "text": "Form integration",
+      "properties": {
+        "id": "form-integration"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:89:1"
+    },
+    {
+      "depth": 3,
+      "text": "Parent checkbox",
+      "properties": {
+        "id": "parent-checkbox"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:122:1"
+    },
+    {
+      "depth": 3,
+      "text": "Nested parent checkbox",
+      "properties": {
+        "id": "nested-parent-checkbox"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:136:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:142:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#labeling-a-checkbox-group",
+      "target": "#labeling-a-checkbox-group",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:15:141"
+    },
+    {
+      "source": "/react/handbook/forms",
+      "target": "/solid/handbook/forms",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:15:205"
+    },
+    {
+      "source": "/react/components/checkbox",
+      "target": "/solid/components/checkbox",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:19:42"
+    },
+    {
+      "source": "/react/components/field",
+      "target": "/solid/components/field",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:91:5"
+    },
+    {
+      "source": "/react/components/fieldset",
+      "target": "/solid/components/fieldset",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:91:42"
+    },
+    {
+      "source": "/react/components/checkbox#CheckboxRoot-indeterminate",
+      "target": "/solid/components/checkbox#CheckboxRoot-indeterminate",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:130:42"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React checkbox group component that provides a shared state for a series of checkboxes."
+      },
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:4:1"
+    },
+    {
+      "name": "DemoCheckboxGroupHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/hero#DemoCheckboxGroupHero"
+    },
+    {
+      "name": "DemoCheckboxGroupParent",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:134:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/parent#DemoCheckboxGroupParent"
+    },
+    {
+      "name": "DemoCheckboxGroupNested",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:140:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/nested#DemoCheckboxGroupNested"
+    },
+    {
+      "name": "TypesCheckboxGroup",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:146:1",
+      "reference": "api:docs/src/app/(docs)/react/components/checkbox-group/types#TypesCheckboxGroup"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:11:1",
+      "detail": "Site must implement DemoCheckboxGroupHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:21:1",
+      "detail": "CheckboxGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:21:1",
+      "detail": "Checkbox.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:21:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:36:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:36:1",
+      "detail": "CheckboxGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:36:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:43:1",
+      "detail": "Checkbox.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:43:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:56:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:56:1",
+      "detail": "CheckboxGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:56:1",
+      "detail": "Checkbox.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:56:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:56:1",
+      "detail": "Checkbox.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:56:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:71:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:71:1",
+      "detail": "CheckboxGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:71:1",
+      "detail": "Checkbox.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:71:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:71:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Form",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Field.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Fieldset.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "CheckboxGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Fieldset.Legend",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Field.Item",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Field.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Checkbox.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:93:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:134:1",
+      "detail": "Site must implement DemoCheckboxGroupParent; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:140:1",
+      "detail": "Site must implement DemoCheckboxGroupNested; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:146:1",
+      "detail": "Site must implement TypesCheckboxGroup; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Checkbox Group",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 17,
+                "offset": 16
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 17,
+            "offset": 16
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "checkbox-group"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Provides shared state to a series of checkboxes.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 28
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 59,
+                    "offset": 76
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 18
+              },
+              "end": {
+                "line": 3,
+                "column": 70,
+                "offset": 87
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 18
+          },
+          "end": {
+            "line": 3,
+            "column": 70,
+            "offset": 87
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 96
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 114
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React checkbox group component that provides a shared state for a series of checkboxes.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 117
+              },
+              "end": {
+                "line": 6,
+                "column": 125,
+                "offset": 239
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 88
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 242
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoCheckboxGroupHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 244
+          },
+          "end": {
+            "line": 9,
+            "column": 54,
+            "offset": 297
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoCheckboxGroupHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 299
+          },
+          "end": {
+            "line": 11,
+            "column": 26,
+            "offset": 324
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/hero#DemoCheckboxGroupHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 329
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 345
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 326
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 345
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Form controls must have an accessible name",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 5,
+                            "offset": 351
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 47,
+                            "offset": 393
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 3,
+                        "offset": 349
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 395
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": It can be created using ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 395
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 75,
+                        "offset": 421
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<label>",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 75,
+                        "offset": 421
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 84,
+                        "offset": 430
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " elements, or the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 84,
+                        "offset": 430
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 448
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Field",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 448
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 109,
+                        "offset": 455
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 109,
+                        "offset": 455
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 114,
+                        "offset": 460
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Fieldset",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 114,
+                        "offset": 460
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 124,
+                        "offset": 470
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " components. See ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 124,
+                        "offset": 470
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 141,
+                        "offset": 487
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#labeling-a-checkbox-group",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Labeling a checkbox group",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 142,
+                            "offset": 488
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 167,
+                            "offset": 513
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 141,
+                        "offset": 487
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 196,
+                        "offset": 542
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 196,
+                        "offset": 542
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 205,
+                        "offset": 551
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/handbook/forms",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "forms guide",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 206,
+                            "offset": 552
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 217,
+                            "offset": 563
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 205,
+                        "offset": 551
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 241,
+                        "offset": 587
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 241,
+                        "offset": 587
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 242,
+                        "offset": 588
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 15,
+                    "column": 3,
+                    "offset": 349
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 242,
+                    "offset": 588
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 347
+              },
+              "end": {
+                "line": 15,
+                "column": 242,
+                "offset": 588
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 347
+          },
+          "end": {
+            "line": 15,
+            "column": 242,
+            "offset": 588
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 4,
+                "offset": 593
+              },
+              "end": {
+                "line": 17,
+                "column": 11,
+                "offset": 600
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 590
+          },
+          "end": {
+            "line": 17,
+            "column": 11,
+            "offset": 600
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Checkbox Group is composed together with ",
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 602
+              },
+              "end": {
+                "line": 19,
+                "column": 42,
+                "offset": 643
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/checkbox",
+            "children": [
+              {
+                "type": "text",
+                "value": "Checkbox",
+                "position": {
+                  "start": {
+                    "line": 19,
+                    "column": 43,
+                    "offset": 644
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 51,
+                    "offset": 652
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 42,
+                "offset": 643
+              },
+              "end": {
+                "line": 19,
+                "column": 80,
+                "offset": 681
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". Import the components and place them together:",
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 80,
+                "offset": 681
+              },
+              "end": {
+                "line": 19,
+                "column": 128,
+                "offset": 729
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 19,
+            "column": 1,
+            "offset": 602
+          },
+          "end": {
+            "line": 19,
+            "column": 128,
+            "offset": 729
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Checkbox } from 'baseui-solid2/checkbox';\nimport { CheckboxGroup } from 'baseui-solid2/checkbox-group';\n\n<CheckboxGroup>\n  <Checkbox.Root />\n</CheckboxGroup>;",
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 731
+          },
+          "end": {
+            "line": 28,
+            "column": 4,
+            "offset": 927
+          }
+        },
+        "data": {
+          "sourceValue": "import { Checkbox } from '@base-ui/react/checkbox';\nimport { CheckboxGroup } from '@base-ui/react/checkbox-group';\n\n<CheckboxGroup>\n  <Checkbox.Root />\n</CheckboxGroup>;",
+          "references": [
+            {
+              "value": "@base-ui/react/checkbox",
+              "start": 26,
+              "end": 49,
+              "kind": "import"
+            },
+            {
+              "value": "@base-ui/react/checkbox-group",
+              "start": 83,
+              "end": 112,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/checkbox-group",
+              "start": 83,
+              "end": 112,
+              "kind": "import",
+              "replacement": "baseui-solid2/checkbox-group"
+            },
+            {
+              "value": "@base-ui/react/checkbox",
+              "start": 26,
+              "end": 49,
+              "kind": "import",
+              "replacement": "baseui-solid2/checkbox"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 30,
+                "column": 4,
+                "offset": 932
+              },
+              "end": {
+                "line": 30,
+                "column": 12,
+                "offset": 940
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 929
+          },
+          "end": {
+            "line": 30,
+            "column": 12,
+            "offset": 940
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Labeling a checkbox group",
+            "position": {
+              "start": {
+                "line": 32,
+                "column": 5,
+                "offset": 946
+              },
+              "end": {
+                "line": 32,
+                "column": 30,
+                "offset": 971
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 32,
+            "column": 1,
+            "offset": 942
+          },
+          "end": {
+            "line": 32,
+            "column": 30,
+            "offset": 971
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "labeling-a-checkbox-group"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Label the group with ",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 1,
+                "offset": 973
+              },
+              "end": {
+                "line": 34,
+                "column": 22,
+                "offset": 994
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "aria-labelledby",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 22,
+                "offset": 994
+              },
+              "end": {
+                "line": 34,
+                "column": 39,
+                "offset": 1011
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and a sibling label element:",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 39,
+                "offset": 1011
+              },
+              "end": {
+                "line": 34,
+                "column": 68,
+                "offset": 1040
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 34,
+            "column": 1,
+            "offset": 973
+          },
+          "end": {
+            "line": 34,
+            "column": 68,
+            "offset": 1040
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using aria-labelledby to label a checkbox group\"",
+        "value": "<div id=\"protocols-label\">Allowed network protocols</div>\n<CheckboxGroup aria-labelledby=\"protocols-label\">{/* ... */}</CheckboxGroup>",
+        "position": {
+          "start": {
+            "line": 36,
+            "column": 1,
+            "offset": 1042
+          },
+          "end": {
+            "line": 39,
+            "column": 4,
+            "offset": 1243
+          }
+        },
+        "data": {
+          "sourceValue": "<div id=\"protocols-label\">Allowed network protocols</div>\n<CheckboxGroup aria-labelledby=\"protocols-label\">{/* ... */}</CheckboxGroup>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 0,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "An enclosing ",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 1,
+                "offset": 1245
+              },
+              "end": {
+                "line": 41,
+                "column": 14,
+                "offset": 1258
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<label>",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 14,
+                "offset": 1258
+              },
+              "end": {
+                "line": 41,
+                "column": 23,
+                "offset": 1267
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is the simplest labeling pattern for each checkbox:",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 23,
+                "offset": 1267
+              },
+              "end": {
+                "line": 41,
+                "column": 75,
+                "offset": 1319
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 1245
+          },
+          "end": {
+            "line": 41,
+            "column": 75,
+            "offset": 1319
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using an enclosing label to label a checkbox\"",
+        "value": "// @highlight\n<label>\n  <Checkbox.Root value=\"http\" />\n  HTTP\n  {/* @highlight */}\n</label>",
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 1321
+          },
+          "end": {
+            "line": 50,
+            "column": 4,
+            "offset": 1476
+          }
+        },
+        "data": {
+          "sourceValue": "// @highlight\n<label>\n  <Checkbox.Root value=\"http\" />\n  HTTP\n  {/* @highlight */}\n</label>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Rendering as a native button",
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 5,
+                "offset": 1482
+              },
+              "end": {
+                "line": 52,
+                "column": 33,
+                "offset": 1510
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 52,
+            "column": 1,
+            "offset": 1478
+          },
+          "end": {
+            "line": 52,
+            "column": 33,
+            "offset": 1510
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "rendering-as-a-native-button"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "By default, ",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 1512
+              },
+              "end": {
+                "line": 54,
+                "column": 13,
+                "offset": 1524
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Checkbox.Root>",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 13,
+                "offset": 1524
+              },
+              "end": {
+                "line": 54,
+                "column": 30,
+                "offset": 1541
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " renders a ",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 30,
+                "offset": 1541
+              },
+              "end": {
+                "line": 54,
+                "column": 41,
+                "offset": 1552
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<span>",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 41,
+                "offset": 1552
+              },
+              "end": {
+                "line": 54,
+                "column": 49,
+                "offset": 1560
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " element to support enclosing labels. Prefer rendering each checkbox as a native button when using sibling labels (",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 49,
+                "offset": 1560
+              },
+              "end": {
+                "line": 54,
+                "column": 164,
+                "offset": 1675
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "htmlFor",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 164,
+                "offset": 1675
+              },
+              "end": {
+                "line": 54,
+                "column": 173,
+                "offset": 1684
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": "/",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 173,
+                "offset": 1684
+              },
+              "end": {
+                "line": 54,
+                "column": 174,
+                "offset": 1685
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "id",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 174,
+                "offset": 1685
+              },
+              "end": {
+                "line": 54,
+                "column": 178,
+                "offset": 1689
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ").",
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 178,
+                "offset": 1689
+              },
+              "end": {
+                "line": 54,
+                "column": 180,
+                "offset": 1691
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 54,
+            "column": 1,
+            "offset": 1512
+          },
+          "end": {
+            "line": 54,
+            "column": 180,
+            "offset": 1691
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Sibling label pattern with a native button\"",
+        "value": "<div id=\"protocols-label\">Allowed network protocols</div>\n<CheckboxGroup aria-labelledby=\"protocols-label\">\n  <div>\n    <label htmlFor=\"protocol-http\">HTTP</label>\n    {/* @highlight-text \"nativeButton\" \"render={<button />}\" */}\n    <Checkbox.Root id=\"protocol-http\" value=\"http\" nativeButton render={<button />}>\n      <Checkbox.Indicator />\n    </Checkbox.Root>\n  </div>\n</CheckboxGroup>",
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 1693
+          },
+          "end": {
+            "line": 67,
+            "column": 4,
+            "offset": 2144
+          }
+        },
+        "data": {
+          "sourceValue": "<div id=\"protocols-label\">Allowed network protocols</div>\n<CheckboxGroup aria-labelledby=\"protocols-label\">\n  <div>\n    <label htmlFor=\"protocol-http\">HTTP</label>\n    {/* @highlight-text \"nativeButton\" \"render={<button />}\" */}\n    <Checkbox.Root id=\"protocol-http\" value=\"http\" nativeButton render={<button />}>\n      <Checkbox.Indicator />\n    </Checkbox.Root>\n  </div>\n</CheckboxGroup>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 0,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Native buttons with wrapping labels are supported by using the ",
+            "position": {
+              "start": {
+                "line": 69,
+                "column": 1,
+                "offset": 2146
+              },
+              "end": {
+                "line": 69,
+                "column": 64,
+                "offset": 2209
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 69,
+                "column": 64,
+                "offset": 2209
+              },
+              "end": {
+                "line": 69,
+                "column": 72,
+                "offset": 2217
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " callback to avoid invalid HTML, so the hidden input is placed outside the label:",
+            "position": {
+              "start": {
+                "line": 69,
+                "column": 72,
+                "offset": 2217
+              },
+              "end": {
+                "line": 69,
+                "column": 153,
+                "offset": 2298
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 69,
+            "column": 1,
+            "offset": 2146
+          },
+          "end": {
+            "line": 69,
+            "column": 153,
+            "offset": 2298
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Render callback\"",
+        "value": "<div id=\"protocols-label\">Allowed network protocols</div>\n<CheckboxGroup aria-labelledby=\"protocols-label\">\n  <Checkbox.Root\n    value=\"http\"\n    nativeButton\n    // @highlight-start\n    render={(buttonProps) => (\n      <label>\n        <button {...buttonProps} />\n        HTTP\n      </label>\n    )}\n    {/* @highlight-end */}\n  />\n</CheckboxGroup>",
+        "position": {
+          "start": {
+            "line": 71,
+            "column": 1,
+            "offset": 2300
+          },
+          "end": {
+            "line": 87,
+            "column": 4,
+            "offset": 2682
+          }
+        },
+        "data": {
+          "sourceValue": "<div id=\"protocols-label\">Allowed network protocols</div>\n<CheckboxGroup aria-labelledby=\"protocols-label\">\n  <Checkbox.Root\n    value=\"http\"\n    nativeButton\n    // @highlight-start\n    render={(buttonProps) => (\n      <label>\n        <button {...buttonProps} />\n        HTTP\n      </label>\n    )}\n    {/* @highlight-end */}\n  />\n</CheckboxGroup>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 324,
+              "message": "'...' expected."
+            },
+            {
+              "start": 0,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Form integration",
+            "position": {
+              "start": {
+                "line": 89,
+                "column": 5,
+                "offset": 2688
+              },
+              "end": {
+                "line": 89,
+                "column": 21,
+                "offset": 2704
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 89,
+            "column": 1,
+            "offset": 2684
+          },
+          "end": {
+            "line": 89,
+            "column": 21,
+            "offset": 2704
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "form-integration"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 1,
+                "offset": 2706
+              },
+              "end": {
+                "line": 91,
+                "column": 5,
+                "offset": 2710
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/field",
+            "children": [
+              {
+                "type": "text",
+                "value": "Field",
+                "position": {
+                  "start": {
+                    "line": 91,
+                    "column": 6,
+                    "offset": 2711
+                  },
+                  "end": {
+                    "line": 91,
+                    "column": 11,
+                    "offset": 2716
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 5,
+                "offset": 2710
+              },
+              "end": {
+                "line": 91,
+                "column": 37,
+                "offset": 2742
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 37,
+                "offset": 2742
+              },
+              "end": {
+                "line": 91,
+                "column": 42,
+                "offset": 2747
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/fieldset",
+            "children": [
+              {
+                "type": "text",
+                "value": "Fieldset",
+                "position": {
+                  "start": {
+                    "line": 91,
+                    "column": 43,
+                    "offset": 2748
+                  },
+                  "end": {
+                    "line": 91,
+                    "column": 51,
+                    "offset": 2756
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 42,
+                "offset": 2747
+              },
+              "end": {
+                "line": 91,
+                "column": 80,
+                "offset": 2785
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for group labeling and form integration:",
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 80,
+                "offset": 2785
+              },
+              "end": {
+                "line": 91,
+                "column": 121,
+                "offset": 2826
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 91,
+            "column": 1,
+            "offset": 2706
+          },
+          "end": {
+            "line": 91,
+            "column": 121,
+            "offset": 2826
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using Checkbox Group in a form\"",
+        "value": "<Form>\n  {/* @highlight */}\n  <Field.Root name=\"allowedNetworkProtocols\">\n    <Fieldset.Root render={<CheckboxGroup />}>\n      <Fieldset.Legend>Allowed network protocols</Fieldset.Legend>\n      <Field.Item>\n        <Field.Label>\n          <Checkbox.Root value=\"http\" />\n          HTTP\n        </Field.Label>\n      </Field.Item>\n      <Field.Item>\n        <Field.Label>\n          <Checkbox.Root value=\"https\" />\n          HTTPS\n        </Field.Label>\n      </Field.Item>\n      <Field.Item>\n        <Field.Label>\n          <Checkbox.Root value=\"ssh\" />\n          SSH\n        </Field.Label>\n      </Field.Item>\n    </Fieldset.Root>\n  </Field.Root>\n</Form>",
+        "position": {
+          "start": {
+            "line": 93,
+            "column": 1,
+            "offset": 2828
+          },
+          "end": {
+            "line": 120,
+            "column": 4,
+            "offset": 3530
+          }
+        },
+        "data": {
+          "sourceValue": "<Form>\n  {/* @highlight */}\n  <Field.Root name=\"allowedNetworkProtocols\">\n    <Fieldset.Root render={<CheckboxGroup />}>\n      <Fieldset.Legend>Allowed network protocols</Fieldset.Legend>\n      <Field.Item>\n        <Field.Label>\n          <Checkbox.Root value=\"http\" />\n          HTTP\n        </Field.Label>\n      </Field.Item>\n      <Field.Item>\n        <Field.Label>\n          <Checkbox.Root value=\"https\" />\n          HTTPS\n        </Field.Label>\n      </Field.Item>\n      <Field.Item>\n        <Field.Label>\n          <Checkbox.Root value=\"ssh\" />\n          SSH\n        </Field.Label>\n      </Field.Item>\n    </Fieldset.Root>\n  </Field.Root>\n</Form>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Parent checkbox",
+            "position": {
+              "start": {
+                "line": 122,
+                "column": 5,
+                "offset": 3536
+              },
+              "end": {
+                "line": 122,
+                "column": 20,
+                "offset": 3551
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 122,
+            "column": 1,
+            "offset": 3532
+          },
+          "end": {
+            "line": 122,
+            "column": 20,
+            "offset": 3551
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "parent-checkbox"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A checkbox that controls other checkboxes within a ",
+            "position": {
+              "start": {
+                "line": 124,
+                "column": 1,
+                "offset": 3553
+              },
+              "end": {
+                "line": 124,
+                "column": 52,
+                "offset": 3604
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<CheckboxGroup>",
+            "position": {
+              "start": {
+                "line": 124,
+                "column": 52,
+                "offset": 3604
+              },
+              "end": {
+                "line": 124,
+                "column": 69,
+                "offset": 3621
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " can be created:",
+            "position": {
+              "start": {
+                "line": 124,
+                "column": 69,
+                "offset": 3621
+              },
+              "end": {
+                "line": 124,
+                "column": 85,
+                "offset": 3637
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 124,
+            "column": 1,
+            "offset": 3553
+          },
+          "end": {
+            "line": 124,
+            "column": 85,
+            "offset": 3637
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Make ",
+                    "position": {
+                      "start": {
+                        "line": 126,
+                        "column": 4,
+                        "offset": 3642
+                      },
+                      "end": {
+                        "line": 126,
+                        "column": 9,
+                        "offset": 3647
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<CheckboxGroup>",
+                    "position": {
+                      "start": {
+                        "line": 126,
+                        "column": 9,
+                        "offset": 3647
+                      },
+                      "end": {
+                        "line": 126,
+                        "column": 26,
+                        "offset": 3664
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " a controlled component",
+                    "position": {
+                      "start": {
+                        "line": 126,
+                        "column": 26,
+                        "offset": 3664
+                      },
+                      "end": {
+                        "line": 126,
+                        "column": 49,
+                        "offset": 3687
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 126,
+                    "column": 4,
+                    "offset": 3642
+                  },
+                  "end": {
+                    "line": 126,
+                    "column": 49,
+                    "offset": 3687
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 126,
+                "column": 1,
+                "offset": 3639
+              },
+              "end": {
+                "line": 126,
+                "column": 49,
+                "offset": 3687
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Pass an array of all the child checkbox values to the ",
+                    "position": {
+                      "start": {
+                        "line": 127,
+                        "column": 4,
+                        "offset": 3691
+                      },
+                      "end": {
+                        "line": 127,
+                        "column": 58,
+                        "offset": 3745
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "allValues",
+                    "position": {
+                      "start": {
+                        "line": 127,
+                        "column": 58,
+                        "offset": 3745
+                      },
+                      "end": {
+                        "line": 127,
+                        "column": 69,
+                        "offset": 3756
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop on the ",
+                    "position": {
+                      "start": {
+                        "line": 127,
+                        "column": 69,
+                        "offset": 3756
+                      },
+                      "end": {
+                        "line": 127,
+                        "column": 82,
+                        "offset": 3769
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<CheckboxGroup>",
+                    "position": {
+                      "start": {
+                        "line": 127,
+                        "column": 82,
+                        "offset": 3769
+                      },
+                      "end": {
+                        "line": 127,
+                        "column": 99,
+                        "offset": 3786
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " component",
+                    "position": {
+                      "start": {
+                        "line": 127,
+                        "column": 99,
+                        "offset": 3786
+                      },
+                      "end": {
+                        "line": 127,
+                        "column": 109,
+                        "offset": 3796
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 127,
+                    "column": 4,
+                    "offset": 3691
+                  },
+                  "end": {
+                    "line": 127,
+                    "column": 109,
+                    "offset": 3796
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 1,
+                "offset": 3688
+              },
+              "end": {
+                "line": 127,
+                "column": 109,
+                "offset": 3796
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Add the ",
+                    "position": {
+                      "start": {
+                        "line": 128,
+                        "column": 4,
+                        "offset": 3800
+                      },
+                      "end": {
+                        "line": 128,
+                        "column": 12,
+                        "offset": 3808
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "parent",
+                    "position": {
+                      "start": {
+                        "line": 128,
+                        "column": 12,
+                        "offset": 3808
+                      },
+                      "end": {
+                        "line": 128,
+                        "column": 20,
+                        "offset": 3816
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " boolean prop to the parent ",
+                    "position": {
+                      "start": {
+                        "line": 128,
+                        "column": 20,
+                        "offset": 3816
+                      },
+                      "end": {
+                        "line": 128,
+                        "column": 48,
+                        "offset": 3844
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Checkbox.Root>",
+                    "position": {
+                      "start": {
+                        "line": 128,
+                        "column": 48,
+                        "offset": 3844
+                      },
+                      "end": {
+                        "line": 128,
+                        "column": 65,
+                        "offset": 3861
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 128,
+                    "column": 4,
+                    "offset": 3800
+                  },
+                  "end": {
+                    "line": 128,
+                    "column": 65,
+                    "offset": 3861
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 1,
+                "offset": 3797
+              },
+              "end": {
+                "line": 128,
+                "column": 65,
+                "offset": 3861
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 126,
+            "column": 1,
+            "offset": 3639
+          },
+          "end": {
+            "line": 128,
+            "column": 65,
+            "offset": 3861
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The group controls the parent checkbox's ",
+            "position": {
+              "start": {
+                "line": 130,
+                "column": 1,
+                "offset": 3863
+              },
+              "end": {
+                "line": 130,
+                "column": 42,
+                "offset": 3904
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/checkbox#CheckboxRoot-indeterminate",
+            "children": [
+              {
+                "type": "text",
+                "value": "indeterminate",
+                "position": {
+                  "start": {
+                    "line": 130,
+                    "column": 43,
+                    "offset": 3905
+                  },
+                  "end": {
+                    "line": 130,
+                    "column": 56,
+                    "offset": 3918
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 130,
+                "column": 42,
+                "offset": 3904
+              },
+              "end": {
+                "line": 130,
+                "column": 112,
+                "offset": 3974
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " state when some, but not all, child checkboxes are checked.",
+            "position": {
+              "start": {
+                "line": 130,
+                "column": 112,
+                "offset": 3974
+              },
+              "end": {
+                "line": 130,
+                "column": 172,
+                "offset": 4034
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 130,
+            "column": 1,
+            "offset": 3863
+          },
+          "end": {
+            "line": 130,
+            "column": 172,
+            "offset": 4034
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoCheckboxGroupParent } from './demos/parent';",
+        "position": {
+          "start": {
+            "line": 132,
+            "column": 1,
+            "offset": 4036
+          },
+          "end": {
+            "line": 132,
+            "column": 58,
+            "offset": 4093
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoCheckboxGroupParent",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 134,
+            "column": 1,
+            "offset": 4095
+          },
+          "end": {
+            "line": 134,
+            "column": 28,
+            "offset": 4122
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/parent#DemoCheckboxGroupParent"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Nested parent checkbox",
+            "position": {
+              "start": {
+                "line": 136,
+                "column": 5,
+                "offset": 4128
+              },
+              "end": {
+                "line": 136,
+                "column": 27,
+                "offset": 4150
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 136,
+            "column": 1,
+            "offset": 4124
+          },
+          "end": {
+            "line": 136,
+            "column": 27,
+            "offset": 4150
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "nested-parent-checkbox"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoCheckboxGroupNested } from './demos/nested';",
+        "position": {
+          "start": {
+            "line": 138,
+            "column": 1,
+            "offset": 4152
+          },
+          "end": {
+            "line": 138,
+            "column": 58,
+            "offset": 4209
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoCheckboxGroupNested",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 140,
+            "column": 1,
+            "offset": 4211
+          },
+          "end": {
+            "line": 140,
+            "column": 28,
+            "offset": 4238
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/checkbox-group/demos/nested#DemoCheckboxGroupNested"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 142,
+                "column": 4,
+                "offset": 4243
+              },
+              "end": {
+                "line": 142,
+                "column": 17,
+                "offset": 4256
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 142,
+            "column": 1,
+            "offset": 4240
+          },
+          "end": {
+            "line": 142,
+            "column": 17,
+            "offset": 4256
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesCheckboxGroup } from './types';",
+        "position": {
+          "start": {
+            "line": 144,
+            "column": 1,
+            "offset": 4258
+          },
+          "end": {
+            "line": 144,
+            "column": 46,
+            "offset": 4303
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesCheckboxGroup",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 146,
+            "column": 1,
+            "offset": 4305
+          },
+          "end": {
+            "line": 146,
+            "column": 23,
+            "offset": 4327
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/checkbox-group/types#TypesCheckboxGroup"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Checkbox Group',\n    'Checkbox Group Component',\n    'Grouped Checkboxes',\n    'Multiple Selection',\n    'Checkbox List',\n    'Multi-Select Checkboxes',\n    'Parent Child Checkbox',\n    'Accessible Checkbox Group',\n    'Form Fieldset Control',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 148,
+            "column": 1,
+            "offset": 4329
+          },
+          "end": {
+            "line": 162,
+            "column": 3,
+            "offset": 4679
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 163,
+        "column": 1,
+        "offset": 4680
+      }
+    }
+  }
+}

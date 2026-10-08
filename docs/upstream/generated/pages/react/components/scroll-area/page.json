@@ -1,0 +1,1886 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/scroll-area/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "00503f2f4e3c04412ac289323b7c42f192e46257402db2a56b5c83673bd1820c",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/scroll-area",
+  "route": "/solid/components/scroll-area",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Scroll Area",
+  "subtitle": "A native scroll container with custom scrollbars.",
+  "metadata": {
+    "keywords": [
+      "React Scroll Area",
+      "Custom Scrollbars",
+      "Custom Scroll",
+      "Scrollbar",
+      "Styled Scrollbar",
+      "Virtual Scroll",
+      "Scroll Area Component",
+      "Overflow Container",
+      "Scrollable Region",
+      "Scrollable Content",
+      "Overflow Scroll",
+      "Gradient Scroll Fade",
+      "Scrollable Container",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React scroll area that provides a native scroll container with custom scrollbars."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoScrollAreaHero",
+      "imported": "DemoScrollAreaHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/hero#DemoScrollAreaHero"
+    },
+    {
+      "from": "./demos/both",
+      "local": "DemoScrollAreaBoth",
+      "imported": "DemoScrollAreaBoth",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/both#DemoScrollAreaBoth"
+    },
+    {
+      "from": "./demos/scroll-fade",
+      "local": "DemoScrollAreaScrollFade",
+      "imported": "DemoScrollAreaScrollFade",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/scroll-fade#DemoScrollAreaScrollFade"
+    },
+    {
+      "from": "./types",
+      "local": "TypesScrollArea",
+      "imported": "TypesScrollArea",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Scroll Area",
+      "properties": {
+        "id": "scroll-area"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:14:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:32:1"
+    },
+    {
+      "depth": 3,
+      "text": "Both scrollbars",
+      "properties": {
+        "id": "both-scrollbars"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:34:1"
+    },
+    {
+      "depth": 3,
+      "text": "Gradient scroll fade",
+      "properties": {
+        "id": "gradient-scroll-fade"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:42:1"
+    },
+    {
+      "depth": 3,
+      "text": "Combining with Tabs",
+      "properties": {
+        "id": "combining-with-tabs"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:79:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:96:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:100:1"
+    },
+    {
+      "depth": 3,
+      "text": "Viewport",
+      "properties": {
+        "id": "viewport"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:104:1"
+    },
+    {
+      "depth": 3,
+      "text": "Content",
+      "properties": {
+        "id": "content"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:108:1"
+    },
+    {
+      "depth": 3,
+      "text": "Scrollbar",
+      "properties": {
+        "id": "scrollbar"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:112:1"
+    },
+    {
+      "depth": 3,
+      "text": "Thumb",
+      "properties": {
+        "id": "thumb"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:116:1"
+    },
+    {
+      "depth": 3,
+      "text": "Corner",
+      "properties": {
+        "id": "corner"
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:120:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React scroll area that provides a native scroll container with custom scrollbars."
+      },
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:5:1"
+    },
+    {
+      "name": "DemoScrollAreaHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:12:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/hero#DemoScrollAreaHero"
+    },
+    {
+      "name": "DemoScrollAreaBoth",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:40:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/both#DemoScrollAreaBoth"
+    },
+    {
+      "name": "DemoScrollAreaScrollFade",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:77:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/scroll-fade#DemoScrollAreaScrollFade"
+    },
+    {
+      "name": "TypesScrollArea.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:102:1",
+      "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+    },
+    {
+      "name": "TypesScrollArea.Viewport",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:106:1",
+      "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+    },
+    {
+      "name": "TypesScrollArea.Content",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:110:1",
+      "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+    },
+    {
+      "name": "TypesScrollArea.Scrollbar",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:114:1",
+      "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+    },
+    {
+      "name": "TypesScrollArea.Thumb",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:118:1",
+      "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+    },
+    {
+      "name": "TypesScrollArea.Corner",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:122:1",
+      "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:5:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:12:1",
+      "detail": "Site must implement DemoScrollAreaHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:18:1",
+      "detail": "ScrollArea.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:18:1",
+      "detail": "ScrollArea.Viewport",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:18:1",
+      "detail": "ScrollArea.Content",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:18:1",
+      "detail": "ScrollArea.Scrollbar",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:18:1",
+      "detail": "ScrollArea.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:18:1",
+      "detail": "ScrollArea.Corner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:18:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:40:1",
+      "detail": "Site must implement DemoScrollAreaBoth; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:77:1",
+      "detail": "Site must implement DemoScrollAreaScrollFade; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "Tabs.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "ScrollArea.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "Tabs.List",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "ScrollArea.Viewport",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "Tabs.Tab",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "Tabs.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "Tabs.Panel",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:83:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:102:1",
+      "detail": "Site must implement TypesScrollArea.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:106:1",
+      "detail": "Site must implement TypesScrollArea.Viewport; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:110:1",
+      "detail": "Site must implement TypesScrollArea.Content; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:114:1",
+      "detail": "Site must implement TypesScrollArea.Scrollbar; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:118:1",
+      "detail": "Site must implement TypesScrollArea.Thumb; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:122:1",
+      "detail": "Site must implement TypesScrollArea.Corner; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/scroll-area/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Scroll Area",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 14,
+                "offset": 13
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "offset": 13
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "scroll-area"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A native scroll container with custom scrollbars.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 60,
+                    "offset": 74
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 15
+              },
+              "end": {
+                "line": 3,
+                "column": 71,
+                "offset": 85
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 15
+          },
+          "end": {
+            "line": 3,
+            "column": 71,
+            "offset": 85
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 95
+              },
+              "end": {
+                "line": 6,
+                "column": 21,
+                "offset": 113
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React scroll area that provides a native scroll container with custom scrollbars.",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 3,
+                "offset": 116
+              },
+              "end": {
+                "line": 7,
+                "column": 119,
+                "offset": 232
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 87
+          },
+          "end": {
+            "line": 8,
+            "column": 3,
+            "offset": 235
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoScrollAreaHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 237
+          },
+          "end": {
+            "line": 10,
+            "column": 51,
+            "offset": 287
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoScrollAreaHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 289
+          },
+          "end": {
+            "line": 12,
+            "column": 23,
+            "offset": 311
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/hero#DemoScrollAreaHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 4,
+                "offset": 316
+              },
+              "end": {
+                "line": 14,
+                "column": 11,
+                "offset": 323
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 313
+          },
+          "end": {
+            "line": 14,
+            "column": 11,
+            "offset": 323
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 325
+              },
+              "end": {
+                "line": 16,
+                "column": 45,
+                "offset": 369
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 325
+          },
+          "end": {
+            "line": 16,
+            "column": 45,
+            "offset": 369
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { ScrollArea } from 'baseui-solid2/scroll-area';\n\n<ScrollArea.Root>\n  <ScrollArea.Viewport>\n    <ScrollArea.Content />\n  </ScrollArea.Viewport>\n  <ScrollArea.Scrollbar>\n    <ScrollArea.Thumb />\n  </ScrollArea.Scrollbar>\n  <ScrollArea.Corner />\n</ScrollArea.Root>;",
+        "position": {
+          "start": {
+            "line": 18,
+            "column": 1,
+            "offset": 371
+          },
+          "end": {
+            "line": 30,
+            "column": 4,
+            "offset": 669
+          }
+        },
+        "data": {
+          "sourceValue": "import { ScrollArea } from '@base-ui/react/scroll-area';\n\n<ScrollArea.Root>\n  <ScrollArea.Viewport>\n    <ScrollArea.Content />\n  </ScrollArea.Viewport>\n  <ScrollArea.Scrollbar>\n    <ScrollArea.Thumb />\n  </ScrollArea.Scrollbar>\n  <ScrollArea.Corner />\n</ScrollArea.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/scroll-area",
+              "start": 28,
+              "end": 54,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/scroll-area",
+              "start": 28,
+              "end": 54,
+              "kind": "import",
+              "replacement": "baseui-solid2/scroll-area"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 32,
+                "column": 4,
+                "offset": 674
+              },
+              "end": {
+                "line": 32,
+                "column": 12,
+                "offset": 682
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 32,
+            "column": 1,
+            "offset": 671
+          },
+          "end": {
+            "line": 32,
+            "column": 12,
+            "offset": 682
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Both scrollbars",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 5,
+                "offset": 688
+              },
+              "end": {
+                "line": 34,
+                "column": 20,
+                "offset": 703
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 34,
+            "column": 1,
+            "offset": 684
+          },
+          "end": {
+            "line": 34,
+            "column": 20,
+            "offset": 703
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "both-scrollbars"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 1,
+                "offset": 705
+              },
+              "end": {
+                "line": 36,
+                "column": 5,
+                "offset": 709
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<ScrollArea.Corner>",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 5,
+                "offset": 709
+              },
+              "end": {
+                "line": 36,
+                "column": 26,
+                "offset": 730
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to prevent the scrollbars from intersecting.",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 26,
+                "offset": 730
+              },
+              "end": {
+                "line": 36,
+                "column": 71,
+                "offset": 775
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 36,
+            "column": 1,
+            "offset": 705
+          },
+          "end": {
+            "line": 36,
+            "column": 71,
+            "offset": 775
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoScrollAreaBoth } from './demos/both';",
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 777
+          },
+          "end": {
+            "line": 38,
+            "column": 51,
+            "offset": 827
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoScrollAreaBoth",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 40,
+            "column": 1,
+            "offset": 829
+          },
+          "end": {
+            "line": 40,
+            "column": 23,
+            "offset": 851
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/both#DemoScrollAreaBoth"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Gradient scroll fade",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 5,
+                "offset": 857
+              },
+              "end": {
+                "line": 42,
+                "column": 25,
+                "offset": 877
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 42,
+            "column": 1,
+            "offset": 853
+          },
+          "end": {
+            "line": 42,
+            "column": 25,
+            "offset": 877
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "gradient-scroll-fade"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoScrollAreaScrollFade } from './demos/scroll-fade';",
+        "position": {
+          "start": {
+            "line": 44,
+            "column": 1,
+            "offset": 879
+          },
+          "end": {
+            "line": 44,
+            "column": 64,
+            "offset": 942
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the viewport overflow CSS variables to drive a CSS mask, which gradually increases the fade as the user scrolls away from the edges.",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 1,
+                "offset": 944
+              },
+              "end": {
+                "line": 46,
+                "column": 137,
+                "offset": 1080
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 46,
+            "column": 1,
+            "offset": 944
+          },
+          "end": {
+            "line": 46,
+            "column": 137,
+            "offset": 1080
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"scroll-area.module.css\"",
+        "value": ".Viewport {\n  mask-image: linear-gradient(\n    to bottom,\n    transparent 0,\n    black min(40px, var(--scroll-area-overflow-y-start)),\n    black calc(100% - min(40px, var(--scroll-area-overflow-y-end, 40px))),\n    transparent 100%\n  );\n  mask-repeat: no-repeat;\n}",
+        "position": {
+          "start": {
+            "line": 48,
+            "column": 1,
+            "offset": 1082
+          },
+          "end": {
+            "line": 59,
+            "column": 4,
+            "offset": 1387
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For SSR, a fallback can be used as part of the end-side ",
+            "position": {
+              "start": {
+                "line": 61,
+                "column": 1,
+                "offset": 1389
+              },
+              "end": {
+                "line": 61,
+                "column": 57,
+                "offset": 1445
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "var()",
+            "position": {
+              "start": {
+                "line": 61,
+                "column": 57,
+                "offset": 1445
+              },
+              "end": {
+                "line": 61,
+                "column": 64,
+                "offset": 1452
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " call so the mask is visible before the overflow CSS variables hydrate.",
+            "position": {
+              "start": {
+                "line": 61,
+                "column": 64,
+                "offset": 1452
+              },
+              "end": {
+                "line": 61,
+                "column": 135,
+                "offset": 1523
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 61,
+            "column": 1,
+            "offset": 1389
+          },
+          "end": {
+            "line": 61,
+            "column": 135,
+            "offset": 1523
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"SSR fallback\"",
+        "value": "/* @highlight-text \", 40px\" */\nvar(--scroll-area-overflow-y-end, 40px);",
+        "position": {
+          "start": {
+            "line": 63,
+            "column": 1,
+            "offset": 1525
+          },
+          "end": {
+            "line": 66,
+            "column": 4,
+            "offset": 1628
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When the fade is applied to ",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 1,
+                "offset": 1630
+              },
+              "end": {
+                "line": 68,
+                "column": 29,
+                "offset": 1658
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<ScrollArea.Viewport>",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 29,
+                "offset": 1658
+              },
+              "end": {
+                "line": 68,
+                "column": 52,
+                "offset": 1681
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " itself, the variables can be used directly. However, inheritance to children is disabled, so they must explicitly opt-in using the ",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 52,
+                "offset": 1681
+              },
+              "end": {
+                "line": 68,
+                "column": 184,
+                "offset": 1813
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "inherit",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 184,
+                "offset": 1813
+              },
+              "end": {
+                "line": 68,
+                "column": 193,
+                "offset": 1822
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " keyword.",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 193,
+                "offset": 1822
+              },
+              "end": {
+                "line": 68,
+                "column": 202,
+                "offset": 1831
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 68,
+            "column": 1,
+            "offset": 1630
+          },
+          "end": {
+            "line": 68,
+            "column": 202,
+            "offset": 1831
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"Child element opt-in\"",
+        "value": ".Child {\n  --scroll-area-overflow-y-start: inherit;\n  --scroll-area-overflow-y-end: inherit;\n}",
+        "position": {
+          "start": {
+            "line": 70,
+            "column": 1,
+            "offset": 1833
+          },
+          "end": {
+            "line": 75,
+            "column": 4,
+            "offset": 1967
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoScrollAreaScrollFade",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 77,
+            "column": 1,
+            "offset": 1969
+          },
+          "end": {
+            "line": 77,
+            "column": 29,
+            "offset": 1997
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/scroll-area/demos/scroll-fade#DemoScrollAreaScrollFade"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Combining with Tabs",
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 5,
+                "offset": 2003
+              },
+              "end": {
+                "line": 79,
+                "column": 24,
+                "offset": 2022
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 79,
+            "column": 1,
+            "offset": 1999
+          },
+          "end": {
+            "line": 79,
+            "column": 24,
+            "offset": 2022
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "combining-with-tabs"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 1,
+                "offset": 2024
+              },
+              "end": {
+                "line": 81,
+                "column": 5,
+                "offset": 2028
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Tabs.List>",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 5,
+                "offset": 2028
+              },
+              "end": {
+                "line": 81,
+                "column": 18,
+                "offset": 2041
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": "'s ",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 18,
+                "offset": 2041
+              },
+              "end": {
+                "line": 81,
+                "column": 21,
+                "offset": 2044
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 21,
+                "offset": 2044
+              },
+              "end": {
+                "line": 81,
+                "column": 29,
+                "offset": 2052
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to render ",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 29,
+                "offset": 2052
+              },
+              "end": {
+                "line": 81,
+                "column": 45,
+                "offset": 2068
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<ScrollArea.Viewport>",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 45,
+                "offset": 2068
+              },
+              "end": {
+                "line": 81,
+                "column": 68,
+                "offset": 2091
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " directly when the tab list itself needs the viewport overflow values for a mask fade. This keeps the mask logic on the same element that receives the scroll state.",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 68,
+                "offset": 2091
+              },
+              "end": {
+                "line": 81,
+                "column": 232,
+                "offset": 2255
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 81,
+            "column": 1,
+            "offset": 2024
+          },
+          "end": {
+            "line": 81,
+            "column": 232,
+            "offset": 2255
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Tabs with ScrollArea\"",
+        "value": "<Tabs.Root defaultValue=\"overview\">\n  <ScrollArea.Root>\n    {/* @highlight */}\n    <Tabs.List render={<ScrollArea.Viewport />}>\n      <Tabs.Tab value=\"overview\">Overview</Tabs.Tab>\n      <Tabs.Indicator />\n    </Tabs.List>\n  </ScrollArea.Root>\n  <Tabs.Panel value=\"overview\">...</Tabs.Panel>\n</Tabs.Root>",
+        "position": {
+          "start": {
+            "line": 83,
+            "column": 1,
+            "offset": 2257
+          },
+          "end": {
+            "line": 94,
+            "column": 4,
+            "offset": 2601
+          }
+        },
+        "data": {
+          "sourceValue": "<Tabs.Root defaultValue=\"overview\">\n  <ScrollArea.Root>\n    {/* @highlight */}\n    <Tabs.List render={<ScrollArea.Viewport />}>\n      <Tabs.Tab value=\"overview\">Overview</Tabs.Tab>\n      <Tabs.Indicator />\n    </Tabs.List>\n  </ScrollArea.Root>\n  <Tabs.Panel value=\"overview\">...</Tabs.Panel>\n</Tabs.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 96,
+                "column": 4,
+                "offset": 2606
+              },
+              "end": {
+                "line": 96,
+                "column": 17,
+                "offset": 2619
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 96,
+            "column": 1,
+            "offset": 2603
+          },
+          "end": {
+            "line": 96,
+            "column": 17,
+            "offset": 2619
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesScrollArea } from './types';",
+        "position": {
+          "start": {
+            "line": 98,
+            "column": 1,
+            "offset": 2621
+          },
+          "end": {
+            "line": 98,
+            "column": 43,
+            "offset": 2663
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 5,
+                "offset": 2669
+              },
+              "end": {
+                "line": 100,
+                "column": 9,
+                "offset": 2673
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 100,
+            "column": 1,
+            "offset": 2665
+          },
+          "end": {
+            "line": 100,
+            "column": 9,
+            "offset": 2673
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesScrollArea.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 102,
+            "column": 1,
+            "offset": 2675
+          },
+          "end": {
+            "line": 102,
+            "column": 25,
+            "offset": 2699
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Viewport",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 5,
+                "offset": 2705
+              },
+              "end": {
+                "line": 104,
+                "column": 13,
+                "offset": 2713
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 104,
+            "column": 1,
+            "offset": 2701
+          },
+          "end": {
+            "line": 104,
+            "column": 13,
+            "offset": 2713
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "viewport"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesScrollArea.Viewport",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 106,
+            "column": 1,
+            "offset": 2715
+          },
+          "end": {
+            "line": 106,
+            "column": 29,
+            "offset": 2743
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Content",
+            "position": {
+              "start": {
+                "line": 108,
+                "column": 5,
+                "offset": 2749
+              },
+              "end": {
+                "line": 108,
+                "column": 12,
+                "offset": 2756
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 108,
+            "column": 1,
+            "offset": 2745
+          },
+          "end": {
+            "line": 108,
+            "column": 12,
+            "offset": 2756
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "content"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesScrollArea.Content",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 110,
+            "column": 1,
+            "offset": 2758
+          },
+          "end": {
+            "line": 110,
+            "column": 28,
+            "offset": 2785
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Scrollbar",
+            "position": {
+              "start": {
+                "line": 112,
+                "column": 5,
+                "offset": 2791
+              },
+              "end": {
+                "line": 112,
+                "column": 14,
+                "offset": 2800
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 112,
+            "column": 1,
+            "offset": 2787
+          },
+          "end": {
+            "line": 112,
+            "column": 14,
+            "offset": 2800
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "scrollbar"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesScrollArea.Scrollbar",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 114,
+            "column": 1,
+            "offset": 2802
+          },
+          "end": {
+            "line": 114,
+            "column": 30,
+            "offset": 2831
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Thumb",
+            "position": {
+              "start": {
+                "line": 116,
+                "column": 5,
+                "offset": 2837
+              },
+              "end": {
+                "line": 116,
+                "column": 10,
+                "offset": 2842
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 116,
+            "column": 1,
+            "offset": 2833
+          },
+          "end": {
+            "line": 116,
+            "column": 10,
+            "offset": 2842
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "thumb"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesScrollArea.Thumb",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 118,
+            "column": 1,
+            "offset": 2844
+          },
+          "end": {
+            "line": 118,
+            "column": 26,
+            "offset": 2869
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Corner",
+            "position": {
+              "start": {
+                "line": 120,
+                "column": 5,
+                "offset": 2875
+              },
+              "end": {
+                "line": 120,
+                "column": 11,
+                "offset": 2881
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 120,
+            "column": 1,
+            "offset": 2871
+          },
+          "end": {
+            "line": 120,
+            "column": 11,
+            "offset": 2881
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "corner"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesScrollArea.Corner",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 122,
+            "column": 1,
+            "offset": 2883
+          },
+          "end": {
+            "line": 122,
+            "column": 27,
+            "offset": 2909
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/scroll-area/types#TypesScrollArea"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Scroll Area',\n    'Custom Scrollbars',\n    'Custom Scroll',\n    'Scrollbar',\n    'Styled Scrollbar',\n    'Virtual Scroll',\n    'Scroll Area Component',\n    'Overflow Container',\n    'Scrollable Region',\n    'Scrollable Content',\n    'Overflow Scroll',\n    'Gradient Scroll Fade',\n    'Scrollable Container',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 124,
+            "column": 1,
+            "offset": 2911
+          },
+          "end": {
+            "line": 142,
+            "column": 3,
+            "offset": 3325
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 143,
+        "column": 1,
+        "offset": 3326
+      }
+    }
+  }
+}

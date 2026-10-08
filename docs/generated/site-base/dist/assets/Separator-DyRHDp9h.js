@@ -1,0 +1,1 @@
+import{P as e}from"../islands.js";import{t}from"./createRenderElement-B2Dv3vg6.js";function n(n){let r=()=>n.orientation===void 0?`horizontal`:n.orientation,i={get orientation(){return r()}},a=e(n,`class`,`render`,`orientation`,`style`);return t(`div`,n,{state:i,props:[{role:`separator`,get"aria-orientation"(){return r()}},a]})}export{n as t};

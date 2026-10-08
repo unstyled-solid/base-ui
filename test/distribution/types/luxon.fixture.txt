@@ -1,0 +1,9 @@
+import { TemporalAdapterLuxon } from 'baseui-solid2/internals/temporal-adapter-luxon';
+import type { TemporalSupportedObjectLookup, TemporalAdapter } from 'baseui-solid2/internals/temporal';
+import { DateTime } from 'luxon';
+const adapter: TemporalAdapter<DateTime> = new TemporalAdapterLuxon({ locale: 'en-US' });
+const date: DateTime = adapter.date('2026-10-05', 'UTC');
+const nil: null = adapter.date(null, 'UTC');
+const registered: TemporalSupportedObjectLookup['luxon'] = date;
+const iso: string | null = registered.toISO();
+void [nil, iso];

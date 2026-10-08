@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "sourceSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+  "baseUiSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "checks": [
+    {
+      "command": "rtk proxy node tracking/donors/solid-floating-ui/verify.mjs",
+      "result": "pass",
+      "evidence": "Clean independent donor and Base UI; exact HEAD/staged gitlink/remote/branch; byte-identical MIT copy/blob; 43/43 runtime source files and 8/8 donor specs classified; 37 target paths match 8 existing owner allowlists; oracle paths and four followup IDs exist.",
+      "sourceMapSha256": "c62d5e6126fb69898ad0de8c72a38bfab300df26096cbd872949fdf3fc95eddb"
+    },
+    {
+      "command": "rtk proxy node --conditions=browser --conditions=development tracking/donors/solid-floating-ui/compatibility.mjs",
+      "result": "pass",
+      "evidence": "Expected 7 negative diagnostics: batch TS2724; on/onMount/JSX TS2305; solid-js/web TS2307; one-argument render effect TS2554; Context.Provider TS2339. Native RC13 split effect/onSettled/web CSS types accepted. Two staged increments read 0 before test-only flush and 2 afterward; cleanup disposed.",
+      "developmentCorrections": "Probe first expected TS2305 instead of TS2724 for batch; then moved fixture writes out of owned setup after RC13 correctly rejected them. No diagnostic suppression or ownedWrite override. Final probe passes."
+    },
+    {
+      "command": "rtk proxy node scripts/upstream/cli.mjs status --source solid-floating-ui",
+      "result": "pass",
+      "evidence": "Shared engine accepts six-field record; HEAD matches donor pin, dirty=false, pendingTransaction=false, lock=null, parity=unverified. Read-only status does not qualify update policy."
+    },
+    {
+      "command": "rtk proxy bd dep cycles",
+      "result": "pass",
+      "evidence": "No dependency cycles after linking four concrete followups to implementation prerequisites and integration/browser/accessibility/hydration/packed-distribution/upstream/release gates."
+    },
+    {
+      "command": "rtk git submodule status; rtk git diff --check (separate invocations)",
+      "result": "pass",
+      "evidence": "Both gitlinks match their pinned checked-out SHAs; diff whitespace check clean. Shared-tree status inspected; only donor allowlist files were authored by this lane, in addition to Beads coordination records."
+    }
+  ],
+  "notExecuted": [
+    "Donor package install/build or Solid1 E2E suite",
+    "Production geometry/interaction adaptation and its tests",
+    "Real remote reconciliation update or baseline promotion",
+    "Browser/hydration/accessibility and packed inherited-license qualification"
+  ],
+  "openGaps": [
+    "Generation-safe owned positioning and Base UI arrow behavior: bsolid-donor-positioning-proof",
+    "Typed context attachment, canceled requests, ref/portal ownership and interaction differences: bsolid-donor-interaction-proof",
+    "Inherited Apache/React NOTICE and aria-hidden MIT propagation into packed artifacts: bsolid-donor-notices",
+    "Shared CLI initial-update checkout movement conflicts with donor baseline stability; mapping/oracle metadata and explicit promotion still require qualification: bsolid-donor-update-proof"
+  ]
+}

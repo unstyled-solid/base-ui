@@ -1,0 +1,1 @@
+import{I as e}from"../islands.js";function t(t,n){t.setInteractionProps({get reference(){return n.activeTriggerProps},get trigger(){return n.inactiveTriggerProps},get floating(){return n.popupProps}}),e(()=>t.setInteractionProps({}))}export{t};

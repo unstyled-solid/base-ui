@@ -1,0 +1,10 @@
+{
+  "extends": "../../../../tsconfig.json",
+  "compilerOptions": { "types": ["node", "@testing-library/jest-dom/vitest"] },
+  "include": [
+    "createTimeout.*.tsx", "createInterval.ts", "createIdleCallback.ts", "createAnimationFrame.ts",
+    "createStableCallback.ts", "createMergedRefs*.ts", "createMergedRefs*.tsx", "resolveRef.ts",
+    "createId*.ts", "createId*.tsx", "hydration.ts", "createIsHydrating.ts",
+    "../internals/createBaseUiId.ts", "../internals/RequestQueue*.ts", "../internals/TimeoutManager*.ts"
+  ]
+}

@@ -1,0 +1,5 @@
+import type { DemoEntry } from '../shared/types';
+import Demo1 from './hero/tailwind';
+export default [
+{ id: 'handbook-forms/hero', upstream: "docs/src/app/(docs)/react/handbook/forms/demos/hero/index.ts", variants: [{ id: 'tailwind', label: 'Tailwind', component: Demo1, files: ["docs/demos/handbook-forms/hero/tailwind/index.tsx","docs/demos/handbook-forms/components/button.tsx","docs/demos/handbook-forms/components/checkbox-group.tsx","docs/demos/handbook-forms/components/form.tsx","docs/demos/handbook-forms/components/radio-group.tsx","docs/demos/handbook-forms/components/toast.tsx","docs/demos/handbook-forms/components/autocomplete.tsx","docs/demos/handbook-forms/components/checkbox.tsx","docs/demos/handbook-forms/components/combobox.tsx","docs/demos/handbook-forms/components/field.tsx","docs/demos/handbook-forms/components/fieldset.tsx","docs/demos/handbook-forms/components/number-field.tsx","docs/demos/handbook-forms/components/radio.tsx","docs/demos/handbook-forms/components/select.tsx","docs/demos/handbook-forms/components/slider.tsx","docs/demos/handbook-forms/components/switch.tsx"] }] }
+] satisfies DemoEntry[];

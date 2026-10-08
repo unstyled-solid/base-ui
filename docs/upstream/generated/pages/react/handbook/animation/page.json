@@ -1,0 +1,3328 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/handbook/animation/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "7895b6d7a6aaf0551fa3c21a07fc6893fb1d894a0d2d0e07f1dc0bb405e1ff13",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/handbook/animation",
+  "route": "/solid/handbook/animation",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Animation",
+  "subtitle": "A guide to animating Base UI components.",
+  "metadata": {
+    "keywords": [
+      "Base UI Animation",
+      "React Component Animations",
+      "CSS Transition Guide",
+      "Motion Framer Integration",
+      "Animation Data Attributes",
+      "Handbook Animation",
+      "Spring Animations",
+      "Enter Exit Animations",
+      "Transition Hooks",
+      "Animated Components",
+      "Keyframe Animations"
+    ],
+    "description": "A guide to animating Base UI components."
+  },
+  "imports": [
+    {
+      "from": "./demos/animated-popover-motion-keep-mounted-false",
+      "local": "DemoAnimatedPopoverMotionKeepMountedFalse",
+      "imported": "DemoAnimatedPopoverMotionKeepMountedFalse",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-popover-motion-keep-mounted-false#DemoAnimatedPopoverMotionKeepMountedFalse"
+    },
+    {
+      "from": "./demos/animated-popover-motion-keep-mounted-true",
+      "local": "DemoAnimatedPopoverMotionKeepMountedTrue",
+      "imported": "DemoAnimatedPopoverMotionKeepMountedTrue",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-popover-motion-keep-mounted-true#DemoAnimatedPopoverMotionKeepMountedTrue"
+    },
+    {
+      "from": "./demos/animated-select-motion",
+      "local": "DemoAnimatedSelectMotion",
+      "imported": "DemoAnimatedSelectMotion",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-select-motion#DemoAnimatedSelectMotion"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Animation",
+      "properties": {
+        "id": "animation"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "CSS transitions",
+      "properties": {
+        "id": "css-transitions"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:8:1"
+    },
+    {
+      "depth": 2,
+      "text": "CSS animations",
+      "properties": {
+        "id": "css-animations"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:38:1"
+    },
+    {
+      "depth": 2,
+      "text": "JavaScript animations",
+      "properties": {
+        "id": "javascript-animations"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:77:1"
+    },
+    {
+      "depth": 3,
+      "text": "Animating components unmounted from DOM when closed with Motion",
+      "properties": {
+        "id": "animating-components-unmounted-from-dom-when-closed-with-motion"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:92:1"
+    },
+    {
+      "depth": 3,
+      "text": "Animating components kept in DOM when closed with Motion",
+      "properties": {
+        "id": "animating-components-kept-in-dom-when-closed-with-motion"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:137:1"
+    },
+    {
+      "depth": 3,
+      "text": "Animating Select component with Motion",
+      "properties": {
+        "id": "animating-select-component-with-motion"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:178:1"
+    },
+    {
+      "depth": 3,
+      "text": "Manual unmounting",
+      "properties": {
+        "id": "manual-unmounting"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:186:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "https://motion.dev",
+      "target": "https://motion.dev",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:79:40"
+    },
+    {
+      "source": "#manual-unmounting",
+      "target": "#manual-unmounting",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:88:91"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A guide to animating Base UI components."
+      },
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:4:1"
+    },
+    {
+      "name": "DemoAnimatedPopoverMotionKeepMountedFalse",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:102:1",
+      "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-popover-motion-keep-mounted-false#DemoAnimatedPopoverMotionKeepMountedFalse"
+    },
+    {
+      "name": "DemoAnimatedPopoverMotionKeepMountedTrue",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:146:1",
+      "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-popover-motion-keep-mounted-true#DemoAnimatedPopoverMotionKeepMountedTrue"
+    },
+    {
+      "name": "DemoAnimatedSelectMotion",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:184:1",
+      "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-select-motion#DemoAnimatedSelectMotion"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:102:1",
+      "detail": "Site must implement DemoAnimatedPopoverMotionKeepMountedFalse; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "React.useState",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Popover.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Popover.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "AnimatePresence",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Popover.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Popover.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Popover.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:104:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:146:1",
+      "detail": "Site must implement DemoAnimatedPopoverMotionKeepMountedTrue; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:148:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:148:1",
+      "detail": "Popover.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:148:1",
+      "detail": "Popover.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:148:1",
+      "detail": "Popover.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:148:1",
+      "detail": "Popover.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:148:1",
+      "detail": "Popover.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:148:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:148:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:184:1",
+      "detail": "Site must implement DemoAnimatedSelectMotion; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "React.useState",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "React.useRef",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "Popover.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "Popover.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "AnimatePresence",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "Popover.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "Popover.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "Popover.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:193:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/handbook/animation/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Animation",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 12,
+                "offset": 11
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12,
+            "offset": 11
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "animation"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A guide to animating Base UI components.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 23
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 51,
+                    "offset": 63
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 13
+              },
+              "end": {
+                "line": 3,
+                "column": 62,
+                "offset": 74
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 62,
+            "offset": 74
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 7,
+                "offset": 81
+              },
+              "end": {
+                "line": 4,
+                "column": 25,
+                "offset": 99
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A guide to animating Base UI components.",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 26,
+                "offset": 100
+              },
+              "end": {
+                "line": 4,
+                "column": 76,
+                "offset": 150
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 75
+          },
+          "end": {
+            "line": 4,
+            "column": 79,
+            "offset": 153
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI components can be animated using CSS transitions, CSS animations, or JavaScript animation libraries. Each component provides a number of data attributes to target its states, as well as a few attributes specifically for animation.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 1,
+                "offset": 155
+              },
+              "end": {
+                "line": 6,
+                "column": 239,
+                "offset": 393
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 155
+          },
+          "end": {
+            "line": 6,
+            "column": 239,
+            "offset": 393
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "CSS transitions",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 4,
+                "offset": 398
+              },
+              "end": {
+                "line": 8,
+                "column": 19,
+                "offset": 413
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 8,
+            "column": 1,
+            "offset": 395
+          },
+          "end": {
+            "line": 8,
+            "column": 19,
+            "offset": 413
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "css-transitions"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the following Base UI attributes for creating transitions when a component becomes visible or hidden:",
+            "position": {
+              "start": {
+                "line": 10,
+                "column": 1,
+                "offset": 415
+              },
+              "end": {
+                "line": 10,
+                "column": 106,
+                "offset": 520
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 415
+          },
+          "end": {
+            "line": 10,
+            "column": 106,
+            "offset": 520
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "[data-starting-style]",
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 3,
+                        "offset": 524
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 26,
+                        "offset": 547
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " corresponds to the initial style to transition from.",
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 26,
+                        "offset": 547
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 79,
+                        "offset": 600
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 12,
+                    "column": 3,
+                    "offset": 524
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 79,
+                    "offset": 600
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 1,
+                "offset": 522
+              },
+              "end": {
+                "line": 12,
+                "column": 79,
+                "offset": 600
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "[data-ending-style]",
+                    "position": {
+                      "start": {
+                        "line": 13,
+                        "column": 3,
+                        "offset": 603
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 24,
+                        "offset": 624
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " corresponds to the final style to transition to.",
+                    "position": {
+                      "start": {
+                        "line": 13,
+                        "column": 24,
+                        "offset": 624
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 73,
+                        "offset": 673
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 13,
+                    "column": 3,
+                    "offset": 603
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 73,
+                    "offset": 673
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 1,
+                "offset": 601
+              },
+              "end": {
+                "line": 13,
+                "column": 73,
+                "offset": 673
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 522
+          },
+          "end": {
+            "line": 13,
+            "column": 73,
+            "offset": 673
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Transitions are recommended over CSS animations, because a transition can be smoothly cancelled midway.\nFor example, if the user closes a popup before it finishes opening, with CSS transitions it will smoothly animate to its closed state without any abrupt changes.",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 675
+              },
+              "end": {
+                "line": 16,
+                "column": 162,
+                "offset": 940
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 675
+          },
+          "end": {
+            "line": 16,
+            "column": 162,
+            "offset": 940
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"popover.css\"",
+        "value": ".Popup {\n  box-sizing: border-box;\n  padding: 1rem 1.5rem;\n  background-color: canvas;\n  transform-origin: var(--transform-origin);\n  transition:\n    transform 150ms,\n    opacity 150ms;\n\n  /* @highlight-start */\n  &[data-starting-style],\n  &[data-ending-style] {\n    opacity: 0;\n    transform: scale(0.9);\n  }\n  /* @highlight-end */\n}",
+        "position": {
+          "start": {
+            "line": 18,
+            "column": 1,
+            "offset": 942
+          },
+          "end": {
+            "line": 36,
+            "column": 4,
+            "offset": 1307
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "CSS animations",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 4,
+                "offset": 1312
+              },
+              "end": {
+                "line": 38,
+                "column": 18,
+                "offset": 1326
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 1309
+          },
+          "end": {
+            "line": 38,
+            "column": 18,
+            "offset": 1326
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "css-animations"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the following Base UI attributes for creating CSS animations when a component becomes visible or hidden:",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 1,
+                "offset": 1328
+              },
+              "end": {
+                "line": 40,
+                "column": 109,
+                "offset": 1436
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 40,
+            "column": 1,
+            "offset": 1328
+          },
+          "end": {
+            "line": 40,
+            "column": 109,
+            "offset": 1436
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "[data-open]",
+                    "position": {
+                      "start": {
+                        "line": 42,
+                        "column": 3,
+                        "offset": 1440
+                      },
+                      "end": {
+                        "line": 42,
+                        "column": 16,
+                        "offset": 1453
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " corresponds to the style applied when a component becomes visible.",
+                    "position": {
+                      "start": {
+                        "line": 42,
+                        "column": 16,
+                        "offset": 1453
+                      },
+                      "end": {
+                        "line": 42,
+                        "column": 83,
+                        "offset": 1520
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 42,
+                    "column": 3,
+                    "offset": 1440
+                  },
+                  "end": {
+                    "line": 42,
+                    "column": 83,
+                    "offset": 1520
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 1,
+                "offset": 1438
+              },
+              "end": {
+                "line": 42,
+                "column": 83,
+                "offset": 1520
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "[data-closed]",
+                    "position": {
+                      "start": {
+                        "line": 43,
+                        "column": 3,
+                        "offset": 1523
+                      },
+                      "end": {
+                        "line": 43,
+                        "column": 18,
+                        "offset": 1538
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " corresponds to the style applied before a component becomes hidden.",
+                    "position": {
+                      "start": {
+                        "line": 43,
+                        "column": 18,
+                        "offset": 1538
+                      },
+                      "end": {
+                        "line": 43,
+                        "column": 86,
+                        "offset": 1606
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 43,
+                    "column": 3,
+                    "offset": 1523
+                  },
+                  "end": {
+                    "line": 43,
+                    "column": 86,
+                    "offset": 1606
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 1,
+                "offset": 1521
+              },
+              "end": {
+                "line": 43,
+                "column": 86,
+                "offset": 1606
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 42,
+            "column": 1,
+            "offset": 1438
+          },
+          "end": {
+            "line": 43,
+            "column": 86,
+            "offset": 1606
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"popover.css\"",
+        "value": "@keyframes scaleIn {\n  from {\n    opacity: 0;\n    transform: scale(0.9);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n}\n\n@keyframes scaleOut {\n  from {\n    opacity: 1;\n    transform: scale(1);\n  }\n  to {\n    opacity: 0;\n    transform: scale(0.9);\n  }\n}\n\n.Popup[data-open] {\n  animation: scaleIn 250ms ease-out;\n}\n\n.Popup[data-closed] {\n  animation: scaleOut 250ms ease-in;\n}",
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 1608
+          },
+          "end": {
+            "line": 75,
+            "column": 4,
+            "offset": 2024
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "JavaScript animations",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 4,
+                "offset": 2029
+              },
+              "end": {
+                "line": 77,
+                "column": 25,
+                "offset": 2050
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 77,
+            "column": 1,
+            "offset": 2026
+          },
+          "end": {
+            "line": 77,
+            "column": 25,
+            "offset": 2050
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "javascript-animations"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "JavaScript animation libraries such as ",
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 1,
+                "offset": 2052
+              },
+              "end": {
+                "line": 79,
+                "column": 40,
+                "offset": 2091
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://motion.dev",
+            "children": [
+              {
+                "type": "text",
+                "value": "Motion",
+                "position": {
+                  "start": {
+                    "line": 79,
+                    "column": 41,
+                    "offset": 2092
+                  },
+                  "end": {
+                    "line": 79,
+                    "column": 47,
+                    "offset": 2098
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 40,
+                "offset": 2091
+              },
+              "end": {
+                "line": 79,
+                "column": 68,
+                "offset": 2119
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " need the popup to stay rendered while its exit animation plays, and Base UI to know when that animation is over.",
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 68,
+                "offset": 2119
+              },
+              "end": {
+                "line": 79,
+                "column": 181,
+                "offset": 2232
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 79,
+            "column": 1,
+            "offset": 2052
+          },
+          "end": {
+            "line": 79,
+            "column": 181,
+            "offset": 2232
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When a popup closes, ",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 1,
+                "offset": 2234
+              },
+              "end": {
+                "line": 81,
+                "column": 22,
+                "offset": 2255
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "open",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 22,
+                "offset": 2255
+              },
+              "end": {
+                "line": 81,
+                "column": 28,
+                "offset": 2261
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " becomes ",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 28,
+                "offset": 2261
+              },
+              "end": {
+                "line": 81,
+                "column": 37,
+                "offset": 2270
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "false",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 37,
+                "offset": 2270
+              },
+              "end": {
+                "line": 81,
+                "column": 44,
+                "offset": 2277
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " right away, but the popup stays rendered in a closing phase until its closing animation finishes.\nBase UI detects animations on the popup element. CSS animations are always detected, and so are Motion animations that include ",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 44,
+                "offset": 2277
+              },
+              "end": {
+                "line": 82,
+                "column": 128,
+                "offset": 2503
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "opacity",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 128,
+                "offset": 2503
+              },
+              "end": {
+                "line": 82,
+                "column": 137,
+                "offset": 2512
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".\nOnce the animation ends, the popup is removed from the DOM, or hidden if the ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 137,
+                "offset": 2512
+              },
+              "end": {
+                "line": 83,
+                "column": 78,
+                "offset": 2591
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Portal>",
+            "position": {
+              "start": {
+                "line": 83,
+                "column": 78,
+                "offset": 2591
+              },
+              "end": {
+                "line": 83,
+                "column": 88,
+                "offset": 2601
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " has ",
+            "position": {
+              "start": {
+                "line": 83,
+                "column": 88,
+                "offset": 2601
+              },
+              "end": {
+                "line": 83,
+                "column": 93,
+                "offset": 2606
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "keepMounted",
+            "position": {
+              "start": {
+                "line": 83,
+                "column": 93,
+                "offset": 2606
+              },
+              "end": {
+                "line": 83,
+                "column": 106,
+                "offset": 2619
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and ",
+            "position": {
+              "start": {
+                "line": 83,
+                "column": 106,
+                "offset": 2619
+              },
+              "end": {
+                "line": 83,
+                "column": 112,
+                "offset": 2625
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChangeComplete(false)",
+            "position": {
+              "start": {
+                "line": 83,
+                "column": 112,
+                "offset": 2625
+              },
+              "end": {
+                "line": 83,
+                "column": 141,
+                "offset": 2654
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " fires.",
+            "position": {
+              "start": {
+                "line": 83,
+                "column": 141,
+                "offset": 2654
+              },
+              "end": {
+                "line": 83,
+                "column": 148,
+                "offset": 2661
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 81,
+            "column": 1,
+            "offset": 2234
+          },
+          "end": {
+            "line": 83,
+            "column": 148,
+            "offset": 2661
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This leaves two choices:",
+            "position": {
+              "start": {
+                "line": 85,
+                "column": 1,
+                "offset": 2663
+              },
+              "end": {
+                "line": 85,
+                "column": 25,
+                "offset": 2687
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 85,
+            "column": 1,
+            "offset": 2663
+          },
+          "end": {
+            "line": 85,
+            "column": 25,
+            "offset": 2687
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Where does the popup go when closed?",
+                        "position": {
+                          "start": {
+                            "line": 87,
+                            "column": 5,
+                            "offset": 2693
+                          },
+                          "end": {
+                            "line": 87,
+                            "column": 41,
+                            "offset": 2729
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 87,
+                        "column": 3,
+                        "offset": 2691
+                      },
+                      "end": {
+                        "line": 87,
+                        "column": 43,
+                        "offset": 2731
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " Removed from the DOM with ",
+                    "position": {
+                      "start": {
+                        "line": 87,
+                        "column": 43,
+                        "offset": 2731
+                      },
+                      "end": {
+                        "line": 87,
+                        "column": 70,
+                        "offset": 2758
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<AnimatePresence>",
+                    "position": {
+                      "start": {
+                        "line": 87,
+                        "column": 70,
+                        "offset": 2758
+                      },
+                      "end": {
+                        "line": 87,
+                        "column": 89,
+                        "offset": 2777
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", or kept in the DOM with ",
+                    "position": {
+                      "start": {
+                        "line": 87,
+                        "column": 89,
+                        "offset": 2777
+                      },
+                      "end": {
+                        "line": 87,
+                        "column": 115,
+                        "offset": 2803
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "keepMounted",
+                    "position": {
+                      "start": {
+                        "line": 87,
+                        "column": 115,
+                        "offset": 2803
+                      },
+                      "end": {
+                        "line": 87,
+                        "column": 128,
+                        "offset": 2816
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 87,
+                        "column": 128,
+                        "offset": 2816
+                      },
+                      "end": {
+                        "line": 87,
+                        "column": 129,
+                        "offset": 2817
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 87,
+                    "column": 3,
+                    "offset": 2691
+                  },
+                  "end": {
+                    "line": 87,
+                    "column": 129,
+                    "offset": 2817
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 87,
+                "column": 1,
+                "offset": 2689
+              },
+              "end": {
+                "line": 87,
+                "column": 129,
+                "offset": 2817
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Who ends the closing phase?",
+                        "position": {
+                          "start": {
+                            "line": 88,
+                            "column": 5,
+                            "offset": 2822
+                          },
+                          "end": {
+                            "line": 88,
+                            "column": 32,
+                            "offset": 2849
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 3,
+                        "offset": 2820
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 34,
+                        "offset": 2851
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " Base UI, when it can detect the animation, or you, with ",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 34,
+                        "offset": 2851
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 91,
+                        "offset": 2908
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#manual-unmounting",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "manual unmounting",
+                        "position": {
+                          "start": {
+                            "line": 88,
+                            "column": 92,
+                            "offset": 2909
+                          },
+                          "end": {
+                            "line": 88,
+                            "column": 109,
+                            "offset": 2926
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 91,
+                        "offset": 2908
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 130,
+                        "offset": 2947
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 130,
+                        "offset": 2947
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 131,
+                        "offset": 2948
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 88,
+                    "column": 3,
+                    "offset": 2820
+                  },
+                  "end": {
+                    "line": 88,
+                    "column": 131,
+                    "offset": 2948
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 88,
+                "column": 1,
+                "offset": 2818
+              },
+              "end": {
+                "line": 88,
+                "column": 131,
+                "offset": 2948
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 87,
+            "column": 1,
+            "offset": 2689
+          },
+          "end": {
+            "line": 88,
+            "column": 131,
+            "offset": 2948
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The examples below animate ",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 1,
+                "offset": 2950
+              },
+              "end": {
+                "line": 90,
+                "column": 28,
+                "offset": 2977
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "opacity",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 28,
+                "offset": 2977
+              },
+              "end": {
+                "line": 90,
+                "column": 37,
+                "offset": 2986
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", so Base UI ends the closing phase on its own.",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 37,
+                "offset": 2986
+              },
+              "end": {
+                "line": 90,
+                "column": 84,
+                "offset": 3033
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 90,
+            "column": 1,
+            "offset": 2950
+          },
+          "end": {
+            "line": 90,
+            "column": 84,
+            "offset": 3033
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Animating components unmounted from DOM when closed with Motion",
+            "position": {
+              "start": {
+                "line": 92,
+                "column": 5,
+                "offset": 3039
+              },
+              "end": {
+                "line": 92,
+                "column": 68,
+                "offset": 3102
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 92,
+            "column": 1,
+            "offset": 3035
+          },
+          "end": {
+            "line": 92,
+            "column": 68,
+            "offset": 3102
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "animating-components-unmounted-from-dom-when-closed-with-motion"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Most popup components like Popover, Dialog, Tooltip, and Menu are removed from the DOM when they are closed by default. To animate them with Motion:",
+            "position": {
+              "start": {
+                "line": 94,
+                "column": 1,
+                "offset": 3104
+              },
+              "end": {
+                "line": 94,
+                "column": 149,
+                "offset": 3252
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 94,
+            "column": 1,
+            "offset": 3104
+          },
+          "end": {
+            "line": 94,
+            "column": 149,
+            "offset": 3252
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Make the component controlled with the ",
+                    "position": {
+                      "start": {
+                        "line": 96,
+                        "column": 3,
+                        "offset": 3256
+                      },
+                      "end": {
+                        "line": 96,
+                        "column": 42,
+                        "offset": 3295
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "open",
+                    "position": {
+                      "start": {
+                        "line": 96,
+                        "column": 42,
+                        "offset": 3295
+                      },
+                      "end": {
+                        "line": 96,
+                        "column": 48,
+                        "offset": 3301
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop so ",
+                    "position": {
+                      "start": {
+                        "line": 96,
+                        "column": 48,
+                        "offset": 3301
+                      },
+                      "end": {
+                        "line": 96,
+                        "column": 57,
+                        "offset": 3310
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<AnimatePresence>",
+                    "position": {
+                      "start": {
+                        "line": 96,
+                        "column": 57,
+                        "offset": 3310
+                      },
+                      "end": {
+                        "line": 96,
+                        "column": 76,
+                        "offset": 3329
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " can see the state as a child",
+                    "position": {
+                      "start": {
+                        "line": 96,
+                        "column": 76,
+                        "offset": 3329
+                      },
+                      "end": {
+                        "line": 96,
+                        "column": 105,
+                        "offset": 3358
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 96,
+                    "column": 3,
+                    "offset": 3256
+                  },
+                  "end": {
+                    "line": 96,
+                    "column": 105,
+                    "offset": 3358
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 96,
+                "column": 1,
+                "offset": 3254
+              },
+              "end": {
+                "line": 96,
+                "column": 105,
+                "offset": 3358
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Specify ",
+                    "position": {
+                      "start": {
+                        "line": 97,
+                        "column": 3,
+                        "offset": 3361
+                      },
+                      "end": {
+                        "line": 97,
+                        "column": 11,
+                        "offset": 3369
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "keepMounted",
+                    "position": {
+                      "start": {
+                        "line": 97,
+                        "column": 11,
+                        "offset": 3369
+                      },
+                      "end": {
+                        "line": 97,
+                        "column": 24,
+                        "offset": 3382
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " on the ",
+                    "position": {
+                      "start": {
+                        "line": 97,
+                        "column": 24,
+                        "offset": 3382
+                      },
+                      "end": {
+                        "line": 97,
+                        "column": 32,
+                        "offset": 3390
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Portal>",
+                    "position": {
+                      "start": {
+                        "line": 97,
+                        "column": 32,
+                        "offset": 3390
+                      },
+                      "end": {
+                        "line": 97,
+                        "column": 42,
+                        "offset": 3400
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " part so Base UI doesn't remove it before the exit animation has played",
+                    "position": {
+                      "start": {
+                        "line": 97,
+                        "column": 42,
+                        "offset": 3400
+                      },
+                      "end": {
+                        "line": 97,
+                        "column": 113,
+                        "offset": 3471
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 97,
+                    "column": 3,
+                    "offset": 3361
+                  },
+                  "end": {
+                    "line": 97,
+                    "column": 113,
+                    "offset": 3471
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 97,
+                "column": 1,
+                "offset": 3359
+              },
+              "end": {
+                "line": 97,
+                "column": 113,
+                "offset": 3471
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Use the ",
+                    "position": {
+                      "start": {
+                        "line": 98,
+                        "column": 3,
+                        "offset": 3474
+                      },
+                      "end": {
+                        "line": 98,
+                        "column": 11,
+                        "offset": 3482
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "render",
+                    "position": {
+                      "start": {
+                        "line": 98,
+                        "column": 11,
+                        "offset": 3482
+                      },
+                      "end": {
+                        "line": 98,
+                        "column": 19,
+                        "offset": 3490
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop to compose the ",
+                    "position": {
+                      "start": {
+                        "line": 98,
+                        "column": 19,
+                        "offset": 3490
+                      },
+                      "end": {
+                        "line": 98,
+                        "column": 40,
+                        "offset": 3511
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Popup>",
+                    "position": {
+                      "start": {
+                        "line": 98,
+                        "column": 40,
+                        "offset": 3511
+                      },
+                      "end": {
+                        "line": 98,
+                        "column": 49,
+                        "offset": 3520
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " with ",
+                    "position": {
+                      "start": {
+                        "line": 98,
+                        "column": 49,
+                        "offset": 3520
+                      },
+                      "end": {
+                        "line": 98,
+                        "column": 55,
+                        "offset": 3526
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "motion.div",
+                    "position": {
+                      "start": {
+                        "line": 98,
+                        "column": 55,
+                        "offset": 3526
+                      },
+                      "end": {
+                        "line": 98,
+                        "column": 67,
+                        "offset": 3538
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 98,
+                    "column": 3,
+                    "offset": 3474
+                  },
+                  "end": {
+                    "line": 98,
+                    "column": 67,
+                    "offset": 3538
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 98,
+                "column": 1,
+                "offset": 3472
+              },
+              "end": {
+                "line": 98,
+                "column": 67,
+                "offset": 3538
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 96,
+            "column": 1,
+            "offset": 3254
+          },
+          "end": {
+            "line": 98,
+            "column": 67,
+            "offset": 3538
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAnimatedPopoverMotionKeepMountedFalse } from './demos/animated-popover-motion-keep-mounted-false';",
+        "position": {
+          "start": {
+            "line": 100,
+            "column": 1,
+            "offset": 3540
+          },
+          "end": {
+            "line": 100,
+            "column": 112,
+            "offset": 3651
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAnimatedPopoverMotionKeepMountedFalse",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 102,
+            "column": 1,
+            "offset": 3653
+          },
+          "end": {
+            "line": 102,
+            "column": 46,
+            "offset": 3698
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-popover-motion-keep-mounted-false#DemoAnimatedPopoverMotionKeepMountedFalse"
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"animated-popover.tsx\"",
+        "value": "function App() {\n  const [open, setOpen] = React.useState(false);\n\n  return (\n    <Popover.Root open={open} onOpenChange={setOpen}>\n      <Popover.Trigger>Trigger</Popover.Trigger>\n      <AnimatePresence>\n        {open && (\n          <Popover.Portal keepMounted> {/* @highlight-text \"keepMounted\" */}\n            <Popover.Positioner>\n              <Popover.Popup\n                {/* @highlight-start */}\n                render={\n                  <motion.div\n                    initial={{ opacity: 0, scale: 0.8 }}\n                    animate={{ opacity: 1, scale: 1 }}\n                    exit={{ opacity: 0, scale: 0.8 }}\n                  />\n                }\n                {/* @highlight-end */}\n              >\n                Popup\n              </Popover.Popup>\n            </Popover.Positioner>\n          </Popover.Portal>\n        )}\n      </AnimatePresence>\n    </Popover.Root>\n  );\n}",
+        "position": {
+          "start": {
+            "line": 104,
+            "column": 1,
+            "offset": 3700
+          },
+          "end": {
+            "line": 135,
+            "column": 4,
+            "offset": 4636
+          }
+        },
+        "data": {
+          "sourceValue": "function App() {\n  const [open, setOpen] = React.useState(false);\n\n  return (\n    <Popover.Root open={open} onOpenChange={setOpen}>\n      <Popover.Trigger>Trigger</Popover.Trigger>\n      <AnimatePresence>\n        {open && (\n          <Popover.Portal keepMounted> {/* @highlight-text \"keepMounted\" */}\n            <Popover.Positioner>\n              <Popover.Popup\n                {/* @highlight-start */}\n                render={\n                  <motion.div\n                    initial={{ opacity: 0, scale: 0.8 }}\n                    animate={{ opacity: 1, scale: 1 }}\n                    exit={{ opacity: 0, scale: 0.8 }}\n                  />\n                }\n                {/* @highlight-end */}\n              >\n                Popup\n              </Popover.Popup>\n            </Popover.Positioner>\n          </Popover.Portal>\n        )}\n      </AnimatePresence>\n    </Popover.Root>\n  );\n}",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 402,
+              "message": "'...' expected."
+            },
+            {
+              "start": 701,
+              "message": "'...' expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Animating components kept in DOM when closed with Motion",
+            "position": {
+              "start": {
+                "line": 137,
+                "column": 5,
+                "offset": 4642
+              },
+              "end": {
+                "line": 137,
+                "column": 61,
+                "offset": 4698
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 137,
+            "column": 1,
+            "offset": 4638
+          },
+          "end": {
+            "line": 137,
+            "column": 61,
+            "offset": 4698
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "animating-components-kept-in-dom-when-closed-with-motion"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Components that specify ",
+            "position": {
+              "start": {
+                "line": 139,
+                "column": 1,
+                "offset": 4700
+              },
+              "end": {
+                "line": 139,
+                "column": 25,
+                "offset": 4724
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "keepMounted",
+            "position": {
+              "start": {
+                "line": 139,
+                "column": 25,
+                "offset": 4724
+              },
+              "end": {
+                "line": 139,
+                "column": 38,
+                "offset": 4737
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " remain rendered in the DOM when they are closed. These elements need a different approach to be animated with Motion:",
+            "position": {
+              "start": {
+                "line": 139,
+                "column": 38,
+                "offset": 4737
+              },
+              "end": {
+                "line": 139,
+                "column": 156,
+                "offset": 4855
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 139,
+            "column": 1,
+            "offset": 4700
+          },
+          "end": {
+            "line": 139,
+            "column": 156,
+            "offset": 4855
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Use the ",
+                    "position": {
+                      "start": {
+                        "line": 141,
+                        "column": 3,
+                        "offset": 4859
+                      },
+                      "end": {
+                        "line": 141,
+                        "column": 11,
+                        "offset": 4867
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "render",
+                    "position": {
+                      "start": {
+                        "line": 141,
+                        "column": 11,
+                        "offset": 4867
+                      },
+                      "end": {
+                        "line": 141,
+                        "column": 19,
+                        "offset": 4875
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop to compose the ",
+                    "position": {
+                      "start": {
+                        "line": 141,
+                        "column": 19,
+                        "offset": 4875
+                      },
+                      "end": {
+                        "line": 141,
+                        "column": 40,
+                        "offset": 4896
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Popup>",
+                    "position": {
+                      "start": {
+                        "line": 141,
+                        "column": 40,
+                        "offset": 4896
+                      },
+                      "end": {
+                        "line": 141,
+                        "column": 49,
+                        "offset": 4905
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " with ",
+                    "position": {
+                      "start": {
+                        "line": 141,
+                        "column": 49,
+                        "offset": 4905
+                      },
+                      "end": {
+                        "line": 141,
+                        "column": 55,
+                        "offset": 4911
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "motion.div",
+                    "position": {
+                      "start": {
+                        "line": 141,
+                        "column": 55,
+                        "offset": 4911
+                      },
+                      "end": {
+                        "line": 141,
+                        "column": 67,
+                        "offset": 4923
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 141,
+                    "column": 3,
+                    "offset": 4859
+                  },
+                  "end": {
+                    "line": 141,
+                    "column": 67,
+                    "offset": 4923
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 141,
+                "column": 1,
+                "offset": 4857
+              },
+              "end": {
+                "line": 141,
+                "column": 67,
+                "offset": 4923
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Animate the properties based on the ",
+                    "position": {
+                      "start": {
+                        "line": 142,
+                        "column": 3,
+                        "offset": 4926
+                      },
+                      "end": {
+                        "line": 142,
+                        "column": 39,
+                        "offset": 4962
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "open",
+                    "position": {
+                      "start": {
+                        "line": 142,
+                        "column": 39,
+                        "offset": 4962
+                      },
+                      "end": {
+                        "line": 142,
+                        "column": 45,
+                        "offset": 4968
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " state, avoiding ",
+                    "position": {
+                      "start": {
+                        "line": 142,
+                        "column": 45,
+                        "offset": 4968
+                      },
+                      "end": {
+                        "line": 142,
+                        "column": 62,
+                        "offset": 4985
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<AnimatePresence>",
+                    "position": {
+                      "start": {
+                        "line": 142,
+                        "column": 62,
+                        "offset": 4985
+                      },
+                      "end": {
+                        "line": 142,
+                        "column": 81,
+                        "offset": 5004
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 142,
+                    "column": 3,
+                    "offset": 4926
+                  },
+                  "end": {
+                    "line": 142,
+                    "column": 81,
+                    "offset": 5004
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 142,
+                "column": 1,
+                "offset": 4924
+              },
+              "end": {
+                "line": 142,
+                "column": 81,
+                "offset": 5004
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 141,
+            "column": 1,
+            "offset": 4857
+          },
+          "end": {
+            "line": 142,
+            "column": 81,
+            "offset": 5004
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAnimatedPopoverMotionKeepMountedTrue } from './demos/animated-popover-motion-keep-mounted-true';",
+        "position": {
+          "start": {
+            "line": 144,
+            "column": 1,
+            "offset": 5006
+          },
+          "end": {
+            "line": 144,
+            "column": 110,
+            "offset": 5115
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAnimatedPopoverMotionKeepMountedTrue",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 146,
+            "column": 1,
+            "offset": 5117
+          },
+          "end": {
+            "line": 146,
+            "column": 45,
+            "offset": 5161
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-popover-motion-keep-mounted-true#DemoAnimatedPopoverMotionKeepMountedTrue"
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"animated-popover.tsx\"",
+        "value": "function App() {\n  return (\n    <Popover.Root>\n      <Popover.Trigger>Trigger</Popover.Trigger>\n      <Popover.Portal keepMounted> {/* @highlight-text \"keepMounted\" */}\n        <Popover.Positioner>\n          <Popover.Popup\n            // @highlight-start\n            render={(props, state) => (\n              <motion.div\n                {...(props as HTMLMotionProps<'div'>)}\n                initial={false}\n                animate={{\n                  opacity: state.open ? 1 : 0,\n                  scale: state.open ? 1 : 0.8,\n                }}\n              />\n            )}\n            {/* @highlight-end */}\n          >\n            Popup\n          </Popover.Popup>\n        </Popover.Positioner>\n      </Popover.Portal>\n    </Popover.Root>\n  );\n}",
+        "position": {
+          "start": {
+            "line": 148,
+            "column": 1,
+            "offset": 5163
+          },
+          "end": {
+            "line": 176,
+            "column": 4,
+            "offset": 5955
+          }
+        },
+        "data": {
+          "sourceValue": "function App() {\n  return (\n    <Popover.Root>\n      <Popover.Trigger>Trigger</Popover.Trigger>\n      <Popover.Portal keepMounted> {/* @highlight-text \"keepMounted\" */}\n        <Popover.Positioner>\n          <Popover.Popup\n            // @highlight-start\n            render={(props, state) => (\n              <motion.div\n                {...(props as HTMLMotionProps<'div'>)}\n                initial={false}\n                animate={{\n                  opacity: state.open ? 1 : 0,\n                  scale: state.open ? 1 : 0.8,\n                }}\n              />\n            )}\n            {/* @highlight-end */}\n          >\n            Popup\n          </Popover.Popup>\n        </Popover.Positioner>\n      </Popover.Portal>\n    </Popover.Root>\n  );\n}",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 613,
+              "message": "'...' expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Animating Select component with Motion",
+            "position": {
+              "start": {
+                "line": 178,
+                "column": 5,
+                "offset": 5961
+              },
+              "end": {
+                "line": 178,
+                "column": 43,
+                "offset": 5999
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 178,
+            "column": 1,
+            "offset": 5957
+          },
+          "end": {
+            "line": 178,
+            "column": 43,
+            "offset": 5999
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "animating-select-component-with-motion"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The Select component is removed from the DOM until its first interaction and stays in the DOM after that. To animate it with Motion, a mix of the two previous approaches is needed.",
+            "position": {
+              "start": {
+                "line": 180,
+                "column": 1,
+                "offset": 6001
+              },
+              "end": {
+                "line": 180,
+                "column": 181,
+                "offset": 6181
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 180,
+            "column": 1,
+            "offset": 6001
+          },
+          "end": {
+            "line": 180,
+            "column": 181,
+            "offset": 6181
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAnimatedSelectMotion } from './demos/animated-select-motion';",
+        "position": {
+          "start": {
+            "line": 182,
+            "column": 1,
+            "offset": 6183
+          },
+          "end": {
+            "line": 182,
+            "column": 75,
+            "offset": 6257
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAnimatedSelectMotion",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 184,
+            "column": 1,
+            "offset": 6259
+          },
+          "end": {
+            "line": 184,
+            "column": 29,
+            "offset": 6287
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/handbook/animation/demos/animated-select-motion#DemoAnimatedSelectMotion"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Manual unmounting",
+            "position": {
+              "start": {
+                "line": 186,
+                "column": 5,
+                "offset": 6293
+              },
+              "end": {
+                "line": 186,
+                "column": 22,
+                "offset": 6310
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 186,
+            "column": 1,
+            "offset": 6289
+          },
+          "end": {
+            "line": 186,
+            "column": 22,
+            "offset": 6310
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "manual-unmounting"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use this when Base UI can't detect your closing animation, for example when it doesn't animate ",
+            "position": {
+              "start": {
+                "line": 188,
+                "column": 1,
+                "offset": 6312
+              },
+              "end": {
+                "line": 188,
+                "column": 96,
+                "offset": 6407
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "opacity",
+            "position": {
+              "start": {
+                "line": 188,
+                "column": 96,
+                "offset": 6407
+              },
+              "end": {
+                "line": 188,
+                "column": 105,
+                "offset": 6416
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", or when the popup should stay in its closing phase until something other than an animation completes.",
+            "position": {
+              "start": {
+                "line": 188,
+                "column": 105,
+                "offset": 6416
+              },
+              "end": {
+                "line": 188,
+                "column": 208,
+                "offset": 6519
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 188,
+            "column": 1,
+            "offset": 6312
+          },
+          "end": {
+            "line": 188,
+            "column": 208,
+            "offset": 6519
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Call ",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 1,
+                "offset": 6521
+              },
+              "end": {
+                "line": 190,
+                "column": 6,
+                "offset": 6526
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "eventDetails.preventUnmountOnClose()",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 6,
+                "offset": 6526
+              },
+              "end": {
+                "line": 190,
+                "column": 44,
+                "offset": 6564
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " in ",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 44,
+                "offset": 6564
+              },
+              "end": {
+                "line": 190,
+                "column": 48,
+                "offset": 6568
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 48,
+                "offset": 6568
+              },
+              "end": {
+                "line": 190,
+                "column": 62,
+                "offset": 6582
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " when the component closes, then call ",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 62,
+                "offset": 6582
+              },
+              "end": {
+                "line": 190,
+                "column": 100,
+                "offset": 6620
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "unmount()",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 100,
+                "offset": 6620
+              },
+              "end": {
+                "line": 190,
+                "column": 111,
+                "offset": 6631
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " on the ",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 111,
+                "offset": 6631
+              },
+              "end": {
+                "line": 190,
+                "column": 119,
+                "offset": 6639
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "actionsRef",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 119,
+                "offset": 6639
+              },
+              "end": {
+                "line": 190,
+                "column": 131,
+                "offset": 6651
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " passed to the ",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 131,
+                "offset": 6651
+              },
+              "end": {
+                "line": 190,
+                "column": 146,
+                "offset": 6666
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Root>",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 146,
+                "offset": 6666
+              },
+              "end": {
+                "line": 190,
+                "column": 154,
+                "offset": 6674
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " once the animation finishes.\nThis ends the closing phase, and ",
+            "position": {
+              "start": {
+                "line": 190,
+                "column": 154,
+                "offset": 6674
+              },
+              "end": {
+                "line": 191,
+                "column": 34,
+                "offset": 6737
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChangeComplete(false)",
+            "position": {
+              "start": {
+                "line": 191,
+                "column": 34,
+                "offset": 6737
+              },
+              "end": {
+                "line": 191,
+                "column": 63,
+                "offset": 6766
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " fires. Whether the popup leaves the DOM is still decided by ",
+            "position": {
+              "start": {
+                "line": 191,
+                "column": 63,
+                "offset": 6766
+              },
+              "end": {
+                "line": 191,
+                "column": 124,
+                "offset": 6827
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "keepMounted",
+            "position": {
+              "start": {
+                "line": 191,
+                "column": 124,
+                "offset": 6827
+              },
+              "end": {
+                "line": 191,
+                "column": 137,
+                "offset": 6840
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 191,
+                "column": 137,
+                "offset": 6840
+              },
+              "end": {
+                "line": 191,
+                "column": 138,
+                "offset": 6841
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 190,
+            "column": 1,
+            "offset": 6521
+          },
+          "end": {
+            "line": 191,
+            "column": 138,
+            "offset": 6841
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"manual-unmount.tsx\"",
+        "value": "function App() {\n  const [open, setOpen] = React.useState(false);\n  const actionsRef = React.useRef(null); // @highlight-text \"actionsRef\"\n\n  return (\n    <Popover.Root\n      open={open}\n      onOpenChange={(nextOpen, eventDetails) => {\n        if (!nextOpen) {\n          eventDetails.preventUnmountOnClose(); // @highlight-text \"preventUnmountOnClose\"\n        }\n        setOpen(nextOpen);\n      }}\n      actionsRef={actionsRef} // @highlight-text \"actionsRef\"\n    >\n      <Popover.Trigger>Trigger</Popover.Trigger>\n      <AnimatePresence>\n        {open && (\n          <Popover.Portal keepMounted>\n            <Popover.Positioner>\n              <Popover.Popup\n                render={\n                  <motion.div\n                    initial={{ scale: 0 }}\n                    animate={{ scale: 1 }}\n                    exit={{ scale: 0 }}\n                    onAnimationComplete={() => {\n                      if (!open) {\n                        actionsRef.current.unmount(); // @highlight-text \"actionsRef\"\n                      }\n                    }}\n                  />\n                }\n              >\n                Popup\n              </Popover.Popup>\n            </Popover.Positioner>\n          </Popover.Portal>\n        )}\n      </AnimatePresence>\n    </Popover.Root>\n  );\n}",
+        "position": {
+          "start": {
+            "line": 193,
+            "column": 1,
+            "offset": 6843
+          },
+          "end": {
+            "line": 237,
+            "column": 4,
+            "offset": 8171
+          }
+        },
+        "data": {
+          "sourceValue": "function App() {\n  const [open, setOpen] = React.useState(false);\n  const actionsRef = React.useRef(null); // @highlight-text \"actionsRef\"\n\n  return (\n    <Popover.Root\n      open={open}\n      onOpenChange={(nextOpen, eventDetails) => {\n        if (!nextOpen) {\n          eventDetails.preventUnmountOnClose(); // @highlight-text \"preventUnmountOnClose\"\n        }\n        setOpen(nextOpen);\n      }}\n      actionsRef={actionsRef} // @highlight-text \"actionsRef\"\n    >\n      <Popover.Trigger>Trigger</Popover.Trigger>\n      <AnimatePresence>\n        {open && (\n          <Popover.Portal keepMounted>\n            <Popover.Positioner>\n              <Popover.Popup\n                render={\n                  <motion.div\n                    initial={{ scale: 0 }}\n                    animate={{ scale: 1 }}\n                    exit={{ scale: 0 }}\n                    onAnimationComplete={() => {\n                      if (!open) {\n                        actionsRef.current.unmount(); // @highlight-text \"actionsRef\"\n                      }\n                    }}\n                  />\n                }\n              >\n                Popup\n              </Popover.Popup>\n            </Popover.Positioner>\n          </Popover.Portal>\n        )}\n      </AnimatePresence>\n    </Popover.Root>\n  );\n}",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI Animation',\n    'React Component Animations',\n    'CSS Transition Guide',\n    'Motion Framer Integration',\n    'Animation Data Attributes',\n    'Handbook Animation',\n    'Spring Animations',\n    'Enter Exit Animations',\n    'Transition Hooks',\n    'Animated Components',\n    'Keyframe Animations',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 239,
+            "column": 1,
+            "offset": 8173
+          },
+          "end": {
+            "line": 253,
+            "column": 3,
+            "offset": 8531
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 254,
+        "column": 1,
+        "offset": 8532
+      }
+    }
+  }
+}

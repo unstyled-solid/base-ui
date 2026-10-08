@@ -1,0 +1,708 @@
+$ node scripts/test/run.mjs jsdom merge-props getStateAttributesProps createRenderElement useButton number-field tabs accordion collapsible radio tooltip popover menu select slider otp-field avatar combobox createPopup.test --no-watch
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=forks maxWorkers=2 TZ=UTC
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxReview.test.tsx (51 tests | 2 skipped) 1140ms
+stderr | packages/solid/src/number-field/NumberField.review.test.tsx > NumberField source-first review: numeric/text and native DOM > retains the initial uncontrolled number and delegates live default-change diagnostics to the shared model
+Base UI: A component is changing the default value state of an uncontrolled NumberField after being initialized. To suppress this warning opt to use a controlled NumberField.
+
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.review.test.tsx (58 tests) 757ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/createRenderElement.test.tsx (25 tests | 1 skipped) 344ms
+ ✓ |solid2-browser-development| packages/solid/src/radio-group/RadioGroup.field.test.tsx (28 tests | 2 skipped) 788ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.review.test.tsx (364 tests | 20 skipped) 6019ms
+stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > projects Root and Image from the same source commit without a status relay
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.07ms, held)
+    ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 1, 0.02ms)
+    ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← memo "createRenderElement.projection" changed (#3)
+      ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
+    ← signal "createRenderElement.node" write (#1) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "createRenderElement.node" write (#1) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#1) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#4)
+      ← signal "createRenderElement.node" write (#1) null → [HTMLSpanElement]
+[why-run] effect "onSettled" ran (run 1, 0.01ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] memo "createTransitionStatus.snapshot" ran (run 1, 0.01ms, unchanged)
+    ← signal "createImageLoadingStatus.state" write (#5) "idle" → "loading" — effect "effect"
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "createImageLoadingStatus.state" write (#5) "idle" → "loading" — effect "effect"
+[why-run] memo "computed" ran (run 1, 0.01ms, unchanged)
+    ← signal "imageSource" write (#6) null → [function] — effect "effect"
+    deps changed: +"createImageLoadingStatus.state" (2 total)
+[why-run] memo "computed" ran (run 1, 0.01ms, held)
+    ← signal "imageSource" write (#6) null → [function] — effect "effect"
+    deps changed: +"createImageLoadingStatus.state" (2 total)
+[why-run] memo "createMergedRefsN.inputs" ran (run 1, 0.01ms, unchanged)
+    ← signal "imageSource" write (#6) null → [function] — effect "effect"
+    deps changed: +"createImageLoadingStatus.state" (2 total)
+[why-run] memo "computed" ran (run 1, 0.00ms, unchanged)
+    ← signal "imageSource" write (#6) null → [function] — effect "effect"
+    deps changed: +"createImageLoadingStatus.state" (2 total)
+[why-run] effect "effect" ran (run 1, 0.05ms)
+    ← memo "computed" changed (#7)
+      ← signal "imageSource" write (#6) null → [function] — effect "effect"
+[why-run] effect "effect" ran (run 1, 0.06ms)
+    ← signal "imageSource" write (#6) null → [function] — effect "effect"
+    deps changed: +"createImageLoadingStatus.state" (5 total)
+
+stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > projects Root and Image from the same source commit without a status relay
+[why-run] memo "createTransitionStatus.snapshot" ran (run 2, 0.03ms, held)
+    ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] effect "effect" ran (run 2, 0.01ms)
+    ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 2, 0.01ms, held)
+    ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 2, 0.01ms, held)
+    ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "createMergedRefsN.inputs" ran (run 2, 0.01ms, unchanged)
+    ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 2, 0.00ms, held)
+    ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "createTransitionStatus.frameState" ran (run 1, 0.01ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#9)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.02ms, unchanged)
+    ← memo "createTransitionStatus.snapshot" changed (#9)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.01ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#9)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.01ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#9)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "createMergedRefsN.inputs" ran (run 1, 0.01ms, unchanged)
+    ← memo "createTransitionStatus.snapshot" changed (#9)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.01ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#9)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.00ms, held)
+    ← memo "computed" changed (#12)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createTransitionStatus.frameState" changed (#13)
+      ← memo "createTransitionStatus.snapshot" changed (#9)
+        ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.00ms, held)
+    ← memo "computed" changed (#16)
+      ← memo "createTransitionStatus.snapshot" changed (#9)
+        ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.03ms, held)
+    ← memo "computed" changed (#17)
+      ← memo "computed" changed (#12)
+        ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.96ms, held)
+    ← memo "computed" changed (#18)
+      ← memo "computed" changed (#16)
+        ← memo "createTransitionStatus.snapshot" changed (#9)
+          ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
+    ← signal "createRenderElement.node" write (#20) null → [HTMLImageElement] — effect "img.spread"
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#20) null → [HTMLImageElement] — effect "img.spread"
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#20) null → [HTMLImageElement] — effect "img.spread"
+[why-run] memo "renderedRequest" ran (run 1, 0.01ms, held)
+    ← signal "image" write (#21) null → [HTMLImageElement] — effect "img.spread"
+[why-run] effect "effect" ran (run 3, 0.00ms)
+    ← signal "image" write (#21) null → [HTMLImageElement] — effect "img.spread"
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#23)
+      ← signal "createRenderElement.node" write (#20) null → [HTMLImageElement] — effect "img.spread"
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "renderedRequest" changed (#24)
+      ← signal "image" write (#21) null → [HTMLImageElement] — effect "img.spread"
+[why-run] memo "children" ran (run 1, 0.01ms, held)
+    ← memo "computed" changed (#22)
+      ← memo "computed" changed (#18)
+        ← memo "computed" changed (#16)
+          ← memo "createTransitionStatus.snapshot" changed (#9)
+            ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+    ← memo "computed" changed (#19)
+      ← memo "computed" changed (#17)
+        ← memo "computed" changed (#12)
+          ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+    deps changed: -"computed" (3 total)
+[why-run] memo "computed" ran (run 1, 0.00ms, unchanged)
+    ← memo "children" changed (#25)
+      ← memo "computed" changed (#22)
+        ← memo "computed" changed (#18)
+          ← memo "computed" changed (#16)
+            ← memo "createTransitionStatus.snapshot" changed (#9)
+              ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+      ← memo "computed" changed (#19)
+        ← memo "computed" changed (#17)
+          ← memo "computed" changed (#12)
+            ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] effect "effect" ran (run 2, 0.03ms)
+    ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← memo "children" changed (#25)
+      ← memo "computed" changed (#22)
+        ← memo "computed" changed (#18)
+          ← memo "computed" changed (#16)
+            ← memo "createTransitionStatus.snapshot" changed (#9)
+              ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+      ← memo "computed" changed (#19)
+        ← memo "computed" changed (#17)
+          ← memo "computed" changed (#12)
+            ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "createRenderElement.projection" ran (run 2, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#26) [HTMLSpanElement] → null
+[why-run] effect "effect" ran (run 2, 0.01ms)
+    ← signal "createRenderElement.node" write (#26) [HTMLSpanElement] → null
+[why-run] effect "effect" ran (run 2, 0.00ms)
+    ← signal "createRenderElement.node" write (#26) [HTMLSpanElement] → null
+[why-run] effect "effect" ran (run 2, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#27)
+      ← signal "createRenderElement.node" write (#26) [HTMLSpanElement] → null
+[why-run] effect "onSettled" ran (run 1, 0.01ms, unchanged) — no tracked cause (pull or retry)
+[why-run] memo "createTransitionStatus.snapshot" ran (run 3, 0.01ms, held)
+    ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] effect "effect" ran (run 4, 0.00ms)
+    ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 3, 0.01ms, held)
+    ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 3, 0.01ms, held)
+    ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "createMergedRefsN.inputs" ran (run 3, 0.01ms, unchanged)
+    ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 3, 0.00ms, held)
+    ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "createTransitionStatus.frameState" ran (run 2, 0.00ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.01ms, unchanged)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.01ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.01ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "createMergedRefsN.inputs" ran (run 2, 0.01ms, unchanged)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.00ms, unchanged)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.01ms, held)
+    ← memo "computed" changed (#32)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] effect "effect" ran (run 2, 0.00ms)
+    ← memo "createTransitionStatus.frameState" changed (#33)
+      ← memo "createTransitionStatus.snapshot" changed (#29)
+        ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.05ms, held)
+    ← memo "computed" changed (#36)
+      ← memo "computed" changed (#32)
+        ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "createRenderElement.projection" ran (run 3, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#37) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 3, 0.00ms)
+    ← signal "createRenderElement.node" write (#37) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 3, 0.00ms)
+    ← signal "createRenderElement.node" write (#37) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 3, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#39)
+      ← signal "createRenderElement.node" write (#37) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] effect "img.spread" ran (run 1, 0.05ms)
+    ← memo "computed" changed (#35)
+      ← memo "createTransitionStatus.snapshot" changed (#29)
+        ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+    ← memo "computed" changed (#34)
+      ← memo "createTransitionStatus.snapshot" changed (#29)
+        ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "children" ran (run 2, 0.01ms, held)
+    ← memo "computed" changed (#38)
+      ← memo "computed" changed (#36)
+        ← memo "computed" changed (#32)
+          ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+    deps changed: +"computed" (4 total)
+[why-run] memo "computed" ran (run 2, 0.00ms, unchanged)
+    ← memo "children" changed (#40)
+      ← memo "computed" changed (#38)
+        ← memo "computed" changed (#36)
+          ← memo "computed" changed (#32)
+            ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] effect "effect" ran (run 3, 0.02ms)
+    ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] effect "effect" ran (run 2, 0.00ms)
+    ← memo "children" changed (#40)
+      ← memo "computed" changed (#38)
+        ← memo "computed" changed (#36)
+          ← memo "computed" changed (#32)
+            ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+
+ ✓ |solid2-browser-development| packages/solid/src/avatar/image/AvatarImage.test.tsx (49 tests) 222ms
+ ✓ |solid2-browser-development| packages/solid/src/accordion/Accordion.test.tsx (50 tests) 1198ms
+ ✓ |solid2-browser-development| packages/solid/src/radio-group/RadioGroup.test.tsx (48 tests | 2 skipped) 1048ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.review.test.tsx (26 tests) 1036ms
+stderr | packages/solid/src/slider/Slider.test.tsx > Slider warns when max is not greater than min
+Base UI: Slider `max` must be greater than `min`.
+
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.parts.test.tsx (39 tests) 615ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.test.tsx (155 tests | 5 skipped) 3254ms
+stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns and omits hidden native constraints for invalid length 0
+Base UI: <OTPField.Root> `length` must be a positive integer. Received `length={0}`.
+
+stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns and omits hidden native constraints for invalid length -1
+Base UI: <OTPField.Root> `length` must be a positive integer. Received `length={-1}`.
+
+stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns and omits hidden native constraints for invalid length 3.7
+Base UI: <OTPField.Root> `length` must be a positive integer. Received `length={3.7}`.
+
+stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns and omits hidden native constraints for invalid length NaN
+Base UI: <OTPField.Root> `length` must be a positive integer. Received `length={NaN}`.
+
+stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns and omits hidden native constraints for invalid length Infinity
+Base UI: <OTPField.Root> `length` must be a positive integer. Received `length={Infinity}`.
+
+stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns for mismatched slot count 1
+Base UI: <OTPField.Root> `length` must match the number of rendered <OTPField.Input /> parts. Received `length={3}` but rendered 1 input.
+
+stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns for mismatched slot count 2
+Base UI: <OTPField.Root> `length` must match the number of rendered <OTPField.Input /> parts. Received `length={3}` but rendered 2 inputs.
+
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx (48 tests) 1053ms
+ ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.test.tsx (107 tests | 24 skipped) 4317ms
+ ✓ |solid2-browser-development| packages/solid/src/merge-props/Events.test.tsx (42 tests) 207ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/trigger/ContextMenuTrigger.test.tsx (40 tests) 732ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/root/PopoverRoot.test.tsx (63 tests | 2 skipped) 1931ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.test.tsx (141 tests | 2 skipped) 1626ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/Popover.review.test.tsx (21 tests) 1008ms
+stderr | packages/solid/src/otp-field/input/OTPFieldInput.test.tsx > OTPField.Input > ignores unavailable clipboard data and warns on denied reads
+Base UI: <OTPField.Input> could not read clipboard text during paste handling.
+
+stderr | packages/solid/src/otp-field/input/OTPFieldInput.test.tsx > OTPField.Input > warns for an unlabeled first-slot aria-label
+Base UI: <OTPField.Input> ignores `aria-label` on the first input. Use a `<label>` or `<Field.Label>` to label the OTP field.
+
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/input/OTPFieldInput.test.tsx (39 tests) 1420ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/ContextMenu.host.test.tsx (23 tests) 76ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.field.test.tsx (26 tests | 5 skipped) 755ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.nested.test.tsx (25 tests) 537ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectRoot.test.tsx (25 tests) 1104ms
+stderr | packages/solid/src/tabs/root/TabsRoot.test.tsx > Tabs.Root > warns on a live default change but keeps the initial disabled-default policy
+Base UI: A component is changing the default value state of an uncontrolled Tabs after being initialized. To suppress this warning opt to use a controlled Tabs.
+
+ ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsRoot.test.tsx (27 tests) 578ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/control/SliderControl.review.test.tsx (16 tests) 251ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.test.tsx (32 tests) 421ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxDerivedItems.test.tsx (15 tests) 84ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.test.tsx (14 tests | 2 skipped) 1187ms
+stderr | packages/solid/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx > Tooltip handle ownership > [source:packages/react/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx#ignores imperative handle calls before attach and after detach]
+Base UI: TooltipHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+Base UI: TooltipHandle.close() was called while no root using this handle is mounted. The call was ignored.
+
+stderr | packages/solid/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx > Tooltip handle ownership > [source:packages/react/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx#ignores imperative handle calls before attach and after detach]
+Base UI: TooltipHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+Base UI: TooltipHandle.close() was called while no root using this handle is mounted. The call was ignored.
+
+stderr | packages/solid/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx > Tooltip handle ownership > [source:packages/react/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx#warns for persistent overlap and restores the previous living root on cleanup]
+Base UI: A handle is attached to more than one mounted root at the same time. The most recently mounted root takes over. A handle should be used by a single root that stays mounted for its lifetime.
+
+ ✓ |solid2-browser-development| packages/solid/src/tabs/list/TabsList.test.tsx (66 tests | 12 skipped) 1108ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx (16 tests) 280ms
+ ✓ |solid2-browser-development| packages/solid/src/select/value/SelectValue.test.tsx (43 tests) 358ms
+ ✓ |solid2-browser-development| packages/solid/src/radio/root/RadioRoot.test.tsx (31 tests) 554ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsIndicator.test.tsx (16 tests | 15 skipped) 90ms
+stderr | packages/solid/src/collapsible/panel/CollapsiblePanel.test.tsx > Collapsible.Panel > warns when hiddenUntilFound overrides explicit keepMounted=false
+Base UI: The `keepMounted={false}` prop on `Collapsible.Panel` is ignored when `hiddenUntilFound` is enabled, since the panel must remain mounted while closed.
+
+ ✓ |solid2-browser-development| packages/solid/src/collapsible/panel/CollapsiblePanel.test.tsx (21 tests) 319ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.test.tsx (18 tests) 1313ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectReview.test.tsx (13 tests) 463ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxRoot.test.tsx (12 tests | 2 skipped) 463ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/root/NavigationMenuRoot.transactions.test.tsx (15 tests) 217ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.gecko.test.tsx (8 tests | 1 skipped) 169ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/popups/createPopup.test.tsx (10 tests) 131ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/panel/TabsPanel.test.tsx (11 tests | 2 skipped) 273ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectField.test.tsx (9 tests) 553ms
+stderr | packages/solid/src/accordion/panel/AccordionPanel.test.tsx > Accordion.Panel disclosure composition > warns for conflicting root defaults and keeps searchable contents mounted
+Base UI: The `keepMounted={false}` prop on `Accordion.Root` is ignored when `hiddenUntilFound` is enabled, since panels must remain mounted while closed.
+
+stderr | packages/solid/src/accordion/panel/AccordionPanel.test.tsx > Accordion.Panel disclosure composition > warns for panel keepMounted=false with root hiddenUntilFound=false
+Base UI: The `keepMounted={false}` prop on an `Accordion.Panel` is ignored when `hiddenUntilFound` is enabled on the panel or root, since the panel must remain mounted while closed.
+
+stderr | packages/solid/src/accordion/panel/AccordionPanel.test.tsx > Accordion.Panel disclosure composition > warns for panel keepMounted=false with root hiddenUntilFound=true
+Base UI: The `keepMounted={false}` prop on an `Accordion.Panel` is ignored when `hiddenUntilFound` is enabled on the panel or root, since the panel must remain mounted while closed.
+
+ ✓ |solid2-browser-development| packages/solid/src/accordion/panel/AccordionPanel.test.tsx (13 tests) 263ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.parts.test.tsx (67 tests) 409ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.gestures.test.tsx (12 tests | 1 skipped) 198ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.review.test.tsx (9 tests) 226ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/utils/NumberField.validate.test.ts (66 tests) 24ms
+ ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.host.test.tsx (11 tests) 373ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.review.test.tsx (11 tests) 82ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.gestures.test.tsx (7 tests | 3 skipped) 70ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/trigger/PopoverTrigger.test.tsx (14 tests) 525ms
+ ✓ |solid2-browser-development| packages/solid/src/select/Select.parts.test.tsx (170 tests) 1253ms
+stderr | packages/solid/src/popover/root/PopoverRoot.detached-triggers.test.tsx > Popover detached handles > warns and ignores calls before attachment and after disposal
+Base UI: PopoverHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+
+stderr | packages/solid/src/popover/root/PopoverRoot.detached-triggers.test.tsx > Popover detached handles > warns and ignores calls before attachment and after disposal
+Base UI: PopoverHandle.close() was called while no root using this handle is mounted. The call was ignored.
+
+ ✓ |solid2-browser-development| packages/solid/src/popover/root/PopoverRoot.detached-triggers.test.tsx (12 tests) 449ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldField.test.tsx (13 tests) 433ms
+ ✓ |solid2-browser-development| packages/solid/src/collapsible/root/CollapsibleRoot.test.tsx (16 tests) 211ms
+ ✓ |solid2-browser-development| packages/solid/src/radio/indicator/RadioIndicator.test.tsx (16 tests | 4 skipped) 341ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/ComboboxConformance.test.tsx (207 tests) 892ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/store/PopoverPolicy.test.tsx (12 tests) 84ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectKeyboard.test.tsx (11 tests) 986ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts (15 tests) 12ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/popup/PopoverPopup.test.tsx (16 tests) 844ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.lifetime.review.test.tsx (14 tests) 181ms
+ ✓ |solid2-browser-development| packages/solid/src/collapsible/trigger/CollapsibleTrigger.test.tsx (29 tests) 300ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/store/MenuStore.test.tsx (3 tests) 140ms
+ ✓ |solid2-browser-development| packages/solid/src/avatar/fallback/AvatarFallback.test.tsx (23 tests) 142ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.form.test.tsx (5 tests) 208ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/utils/NumberField.parse.test.ts (78 tests) 40ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.parts.test.tsx (58 tests) 200ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/provider/TooltipProvider.test.tsx (13 tests) 468ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/root/ContextMenuRoot.test.tsx (7 tests) 334ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsPrehydration.test.ts (10 tests) 102ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/test/TabsConformance.test.tsx (55 tests) 262ms
+ ✓ |solid2-browser-development| packages/solid/src/select/Select.source-inventory.test.ts (2 tests) 113ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/utils/SliderMath.test.ts (31 tests) 5ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/PopoverSourceInventory.test.ts (2 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/filter-dropdown/root/FilterDropdownMenu.integration.test.tsx (5 tests) 581ms
+ ✓ |solid2-browser-development| packages/solid/src/select/item/SelectPointer.test.tsx (8 tests) 361ms
+stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Collection row ownership > resolves grouped row output under its owner without provider-wide hidden subscriptions
+[why-run] effect "effect" ran (run 1, 0.05ms)
+    ← signal "createComboboxModel.hiddenInput" write (#2) null → [HTMLInputElement]
+[why-run] effect "effect" ran (run 1, 0.02ms)
+    ← signal "createPopup.positioner" write (#47) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "createPopup.positioner" write (#47) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "createComboboxModel.hiddenInput" write (#2) null → [HTMLInputElement]
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "createPopup.positioner" write (#47) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.18ms, held)
+    ← signal "createRenderElement.node" write (#1) null → [HTMLInputElement]
+    deps changed: +"computed" +"createAutocompleteInput.inputValue" (3 total)
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "createRenderElement.node" write (#1) null → [HTMLInputElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#1) null → [HTMLInputElement]
+[why-run] effect "effect" ran (run 1, 0.06ms)
+    ← signal "revision" write (#42) 9 → 10
+    deps changed: +"computed" +"computed" -"computed" -"computed" (3 total)
+[why-run] effect "effect" ran (run 1, 0.02ms)
+    ← memo "createRenderElement.projection" changed (#48)
+      ← signal "createRenderElement.node" write (#1) null → [HTMLInputElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
+    ← signal "createRenderElement.node" write (#45) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#45) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#45) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#49)
+      ← signal "createRenderElement.node" write (#45) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
+    ← signal "createRenderElement.node" write (#44) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#44) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#44) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#50)
+      ← signal "createRenderElement.node" write (#44) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#3) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#3) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#3) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#7) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#7) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#11) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#11) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#15) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#15) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#19) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#19) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#23) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#23) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#27) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#27) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#31) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#31) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#35) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#35) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#39) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#39) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#43) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#43) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#51)
+      ← signal "createRenderElement.node" write (#3) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#4) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#4) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#4) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#8) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#8) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#8) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#12) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#12) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#12) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#16) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#16) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#16) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#20) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#20) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#20) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
+    ← signal "createRenderElement.node" write (#24) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#24) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#24) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#28) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#28) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#28) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#32) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#32) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#32) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#36) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#36) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#36) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+    ← signal "createRenderElement.node" write (#40) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#40) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createRenderElement.node" write (#40) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#52)
+      ← signal "createRenderElement.node" write (#4) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#53)
+      ← signal "createRenderElement.node" write (#8) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#54)
+      ← signal "createRenderElement.node" write (#12) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#55)
+      ← signal "createRenderElement.node" write (#16) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#56)
+      ← signal "createRenderElement.node" write (#20) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#57)
+      ← signal "createRenderElement.node" write (#24) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#58)
+      ← signal "createRenderElement.node" write (#28) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#59)
+      ← signal "createRenderElement.node" write (#32) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#60)
+      ← signal "createRenderElement.node" write (#36) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← memo "createRenderElement.projection" changed (#61)
+      ← signal "createRenderElement.node" write (#40) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "createButton.element" write (#5) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#9) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#13) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#17) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#21) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#25) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#29) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#33) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#37) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "createButton.element" write (#41) null → [HTMLDivElement]
+[why-run] effect "onSettled" ran (run 1, 0.01ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "effect" ran (run 2, 0.05ms)
+    ← signal "revision" write (#72) 19 → 20 — effect "effect"
+    deps changed: +"computed" +"computed" -"computed" -"computed" (3 total)
+[why-run] effect "effect" ran (run 1, 0.06ms)
+    ← signal "labelId" write (#62) — effect "effect"
+
+stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Collection row ownership > resolves grouped row output under its owner without provider-wide hidden subscriptions
+[why-run] memo "computed" ran (run 1, 0.03ms, held)
+    ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.01ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.01ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "computed" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+
+stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Collection row ownership > resolves grouped row output under its owner without provider-wide hidden subscriptions
+[why-run] effect "effect" ran (run 3, 0.04ms)
+    ← signal "revision" write (#75) 20 → 21
+    deps changed: +"computed" +"computed" -"computed" -"computed" (3 total)
+
+ ✓ |solid2-browser-development| packages/solid/src/combobox/collection/ComboboxCollection.test.tsx (4 tests) 169ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/group/MenuGroup.test.tsx (37 tests) 168ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/root/SliderModel.test.tsx (8 tests) 16ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.children.review.test.tsx (6 tests) 284ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.sizing.review.test.tsx (3 tests) 185ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/OTPField.conformance.test.tsx (22 tests) 219ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.voiceOver.review.test.tsx (4 tests) 529ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.field.test.tsx (4 tests) 129ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/PopoverParts.test.tsx (90 tests) 1127ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsIndicator.dom.test.tsx (1 test) 109ms
+stderr | packages/solid/src/combobox/items/createItems.test.ts > Combobox.createItems lazy collection (upstream createItems.test.tsx) > diagnoses duplicate-derived values and always resolves the first label
+Base UI: Two items passed to createItems() derived the value 1, so selection and label resolution cannot tell them apart: the first item wins the label and every item carrying the value renders as selected. Return a unique value from `getValue`.
+
+ ✓ |solid2-browser-development| packages/solid/src/combobox/items/createItems.test.ts (11 tests) 5ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.conformance.test.tsx (108 tests) 606ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/tab/TabsTab.test.tsx (9 tests) 234ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/viewport/PopoverViewport.test.tsx (14 tests) 432ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/getStateAttributesProps.test.tsx (12 tests) 91ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/utils/OTPField.test.ts (19 tests) 6ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.conformance.test.tsx (63 tests) 246ms
+ ✓ |solid2-browser-development| packages/solid/src/select/scroll-arrow/SelectScrollArrow.test.tsx (6 tests) 168ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/root/createMountedPanels.test.tsx (1 test) 13ms
+ ✓ |solid2-browser-development| packages/solid/src/avatar/image/AvatarLoading.test.tsx (6 tests) 18ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/filter-root/useMenuFilterKeyDown.test.ts (30 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.platform.review.test.tsx (3 tests) 267ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.source-inventory.test.ts (2 tests) 11ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.docs-hover.test.tsx (2 tests) 267ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsDiagnostics.test.tsx (2 tests) 294ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/input/ComboboxAttributes.test.tsx (3 tests) 152ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxFilterVirtualizer.test.tsx (1 test) 17ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectAutofill.test.ts (6 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldAcceptedValue.test.ts (6 tests) 3ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsGeometry.test.ts (4 tests) 76ms
+ ✓ |solid2-browser-development| packages/solid/src/select/scroll-arrow/SelectScrollTarget.test.ts (7 tests) 4ms
+ ↓ |solid2-browser-development| packages/solid/src/menubar/Menubar.scroll-lock.test.tsx (3 tests | 3 skipped)
+ ✓ |solid2-browser-development| packages/solid/src/menubar/MenubarContext.test.tsx (3 tests) 76ms
+ ✓ |solid2-browser-development| packages/solid/src/accordion/Accordion.conformance.test.tsx (47 tests) 232ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/thumb/SliderPrehydration.test.ts (3 tests) 15ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.reactivity.test.tsx (1 test) 196ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/root/NavigationMenuRootContext.test.ts (5 tests) 3ms
+ ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.filter.test.tsx (2 tests) 233ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsActivationDirection.test.ts (2 tests) 3ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/input/OTPFieldInput.android.test.tsx (1 test) 152ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/status/ComboboxStatus.iOS.test.tsx (1 test) 88ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/utils/TooltipInstant.test.ts (3 tests) 3ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/root/ContextMenuRoot.non-mac.test.tsx (1 test) 159ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/utils/NavigationMenuSizing.test.ts (2 tests) 3ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/input/ComboboxInput.gecko.test.tsx (1 test) 98ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/input/ComboboxInput.android.test.tsx (1 test) 98ms
+ ✓ |solid2-browser-development| packages/solid/src/avatar/root/AvatarRoot.test.tsx (10 tests) 103ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/utils/NumberField.viewport.test.ts (2 tests) 3ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.ios.test.tsx (3 tests) 104ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/ContextMenu.aliases.test.ts (1 test) 5ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/item/NavigationMenuItem.test.tsx (9 tests) 90ms
+
+ Test Files  127 passed | 1 skipped (128)
+      Tests  3412 passed | 110 skipped (3522)
+   Start at  18:53:24
+   Duration  61.71s (transform 7.79s, setup 10.27s, import 15.61s, tests 58.63s, environment 27.73s)
+
+[HARNESS_FINAL] passed; files=128 failedFiles=0; passed=3412 failed=0 skipped=110 pending=0 unhandled=0 unfinishedModules=0

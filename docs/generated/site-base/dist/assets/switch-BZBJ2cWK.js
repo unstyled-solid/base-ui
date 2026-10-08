@@ -1,0 +1,34 @@
+var e=`// Adapted from mui/base-ui 19511bb171f3b360b006c94cf6d07e53cb446505; MIT.
+import { createSignal, createUniqueId, onCleanup, onSettled, omit, For } from 'solid-js';
+import type { Component } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
+import type { JSX, ComponentProps } from '@solidjs/web';
+import clsx from 'clsx';
+import { Switch } from 'baseui-solid2/switch';
+
+export function Root(allProps: Switch.Root.Props) {
+const props = omit(allProps, 'class');
+  return (
+    <Switch.Root
+      class={clsx(
+        'flex h-5 w-9 shrink-0 border border-neutral-950 bg-white p-0.5 transition-colors duration-150 ease-[ease] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950 dark:focus-visible:outline-white data-checked:bg-neutral-950 dark:border-white dark:bg-neutral-950 dark:data-checked:bg-white',
+        allProps.class,
+      )}
+      {...props}
+    />
+  );
+}
+
+export function Thumb(allProps: Switch.Thumb.Props) {
+const props = omit(allProps, 'class');
+  return (
+    <Switch.Thumb
+      class={clsx(
+        'size-3.5 bg-neutral-950 transition-[translate,background-color] duration-150 ease-[ease] data-checked:translate-x-4 data-checked:bg-white dark:bg-white dark:data-checked:bg-neutral-950',
+        allProps.class,
+      )}
+      {...props}
+    />
+  );
+}
+`;export{e as default};

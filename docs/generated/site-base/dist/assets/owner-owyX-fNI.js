@@ -1,0 +1,1 @@
+function e(e){return(e?.nodeType===9?e:e?.ownerDocument)||document}export{e as t};

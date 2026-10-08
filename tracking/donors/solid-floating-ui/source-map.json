@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "sourceSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+  "baseUiSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "sourceRoot": "packages/solid-floating-ui/src/",
+  "targetRoot": "packages/solid/src/",
+  "status": "planned-owner-handoff; no target implementation written by donor lane",
+  "groups": [
+    {
+      "id": "geometry",
+      "sources": ["hooks/usePosition.ts", "hooks/useFloating.ts", "utils/dpr.ts"],
+      "owner": "bsolid-positioning",
+      "targets": ["floating-ui-react/hooks/createFloating.ts"],
+      "decision": "adapt-owned",
+      "apis": ["createBaseUIFloating", "update", "x/y/placement/strategy/middlewareData/isPositioned/floatingStyles getters", "refs.setReference/setFloating/setPositionReference", "elements.reference/floating/domReference"],
+      "seam": "Fold donor usePosition into the single existing createFloating leaf (private helper allowed). Use injected floating-core root and external tree; never instantiate donor root. Replace batch/render effects with RC13 split effects, captured config, returned observer cleanup and generation-checked promises. Reuse DPR rounding privately. Base UI createAnchorPositioning owns middleware policy.",
+      "oracle": ["packages/react/src/floating-ui-react/hooks/useFloating.ts", "packages/react/src/floating-ui-react/hooks/useFloating.test.tsx", "packages/react/src/internals/useAnchorPositioning.ts", "packages/react/src/internals/useAnchorPositioning.test.tsx"],
+      "donorTests": ["packages/solid-floating-ui/e2e/specs/positioning.spec.ts"],
+      "gate": "bsolid-donor-positioning-proof"
+    },
+    {
+      "id": "arrow",
+      "sources": ["arrow.ts"],
+      "owner": "bsolid-positioning",
+      "targets": ["floating-ui-react/middleware/arrow.ts"],
+      "decision": "adapt-accessor-only",
+      "apis": ["arrow", "ArrowOptions"],
+      "seam": "Reuse accessor/null resolution only; keep Base UI baseArrow floating-element offset-parent algorithm. Never replace it with donor arrowCore. No React dependency-array options; compute tracked middleware inputs explicitly.",
+      "oracle": ["packages/react/src/floating-ui-react/middleware/arrow.ts"],
+      "donorTests": ["packages/solid-floating-ui/e2e/specs/arrow.spec.ts"],
+      "gate": "bsolid-donor-positioning-proof"
+    },
+    {
+      "id": "root-tree",
+      "sources": ["hooks/useFloatingRootContext.ts", "components/FloatingTree.tsx", "utils/createEventEmitter.ts", "utils/nodes.ts"],
+      "owner": "bsolid-floating-core",
+      "targets": ["floating-ui-react/components/createFloatingRoot.ts", "floating-ui-react/components/createFloatingTree.ts", "floating-ui-react/components/FloatingTree.tsx", "floating-ui-react/hooks/createFloatingRootContext.ts", "floating-ui-react/utils/createEventEmitter.ts", "floating-ui-react/utils/nodes.ts"],
+      "decision": "selective-reference",
+      "apis": ["createFloatingRoot", "createFloatingTree", "createFloatingRootContext", "FloatingTree", "typed emitter"],
+      "seam": "Getter-backed inputs and per-root emitter are useful. Existing internals/contracts/floating.ts remains authoritative. Donor emits before callback and has signal-only node publication; preserve cancellation-first setOpen/dispatchOpenChange, immediate nodes, externalTree and click-over-hover priority. Use direct providers and lifecycle-owned ID proof.",
+      "oracle": ["packages/react/src/floating-ui-react/components/FloatingRootStore.ts", "packages/react/src/floating-ui-react/components/FloatingTreeStore.ts", "packages/react/src/floating-ui-react/hooks/useFloatingRootContext.ts", "packages/react/src/floating-ui-react/utils/nodes.test.ts"],
+      "donorTests": [],
+      "gate": "bsolid-donor-interaction-proof"
+    },
+    {
+      "id": "dismiss-hover",
+      "sources": ["hooks/useClick.ts", "hooks/useDismiss.ts", "hooks/useFocus.ts", "hooks/useHover.ts", "components/FloatingDelayGroup.tsx", "safePolygon.ts"],
+      "owner": "bsolid-dismiss",
+      "targets": ["floating-ui-react/hooks/createClick.ts", "floating-ui-react/hooks/createDismiss.ts", "floating-ui-react/hooks/createFocus.ts", "floating-ui-react/hooks/createHoverReferenceInteraction.ts", "floating-ui-react/hooks/createHoverFloatingInteraction.ts", "floating-ui-react/hooks/createHoverInteractionSharedState.ts", "floating-ui-react/hooks/hoverShared.ts", "floating-ui-react/components/FloatingDelayGroup.tsx", "floating-ui-react/safePolygon.ts"],
+      "decision": "selective-reference",
+      "apis": ["native prop getters", "safePolygon", "FloatingDelayGroup"],
+      "seam": "Use native-event/lazy option patterns only after per-case comparison. Donor monolithic hover splits across the existing Base UI leaves. Base UI intentional/sloppy press, lazy referencePress, cancellation/allowPropagation and LogicalLayer replace donor press enums/insideTree boolean. Split effects own all timers/listeners.",
+      "oracle": ["packages/react/src/floating-ui-react/hooks/useDismiss.ts", "packages/react/src/floating-ui-react/hooks/useDismiss.test.tsx", "packages/react/src/floating-ui-react/hooks/useHoverReferenceInteraction.ts", "packages/react/src/floating-ui-react/hooks/useHoverFloatingInteraction.ts", "packages/react/src/floating-ui-react/safePolygon.test.ts"],
+      "donorTests": ["packages/solid-floating-ui/e2e/specs/click.spec.ts", "packages/solid-floating-ui/e2e/specs/hover.spec.ts"],
+      "gate": "bsolid-donor-interaction-proof"
+    },
+    {
+      "id": "focus",
+      "sources": ["components/FloatingFocusManager.tsx"],
+      "owner": "bsolid-focus",
+      "targets": ["floating-ui-react/components/FloatingFocusManager.tsx"],
+      "decision": "selective-reference",
+      "apis": ["FloatingFocusManager"],
+      "seam": "Accessor focus resolvers are useful; replace onMount with setup-owned onSettled and split effects. Consume dom tabbable/markOthers and portal bridge, not donor tabbable dependency. Preserve Base UI trigger lookup, owned document history, delayed-focus generations and overlapping restoration.",
+      "oracle": ["packages/react/src/floating-ui-react/components/FloatingFocusManager.tsx", "packages/react/src/floating-ui-react/components/FloatingFocusManager.test.tsx"],
+      "donorTests": ["packages/solid-floating-ui/e2e/specs/focus-manager.spec.ts"],
+      "gate": "bsolid-donor-interaction-proof"
+    },
+    {
+      "id": "composite",
+      "sources": ["components/Composite.tsx", "components/FloatingList.tsx", "hooks/useListNavigation.ts", "hooks/useTypeahead.ts", "utils/composite.ts"],
+      "owner": "bsolid-composite",
+      "targets": ["internals/composite/list/CompositeList.tsx", "internals/composite/item/createCompositeItem.ts", "internals/createItemRegistry.ts", "floating-ui-react/hooks/createListNavigation.ts", "floating-ui-react/hooks/createTypeahead.ts", "floating-ui-react/utils/composite.ts"],
+      "decision": "selective-reference",
+      "apis": ["CompositeList", "createItemRegistry", "createListNavigation", "createTypeahead"],
+      "seam": "Accessor items/labels and render callbacks are useful. Do not adopt default no-op context Map, mutable signal Sets, ref-owned onCleanup, index=-1 substitution or missing DOM-move invalidation. Preserve live Map and immutable snapshots, index null semantics, disabled metadata, Base UI grids and single-owned button behavior.",
+      "oracle": ["packages/react/src/internals/useItemRegistry.ts", "packages/react/src/internals/useItemRegistry.test.tsx", "packages/react/src/internals/composite/list/CompositeList.tsx", "packages/react/src/floating-ui-react/hooks/useListNavigation.test.tsx", "packages/react/src/floating-ui-react/hooks/useTypeahead.test.tsx"],
+      "donorTests": ["packages/solid-floating-ui/e2e/specs/composite.spec.ts", "packages/solid-floating-ui/e2e/specs/list-navigation.spec.ts"],
+      "gate": "bsolid-donor-interaction-proof"
+    },
+    {
+      "id": "portal",
+      "sources": ["components/FloatingPortal.tsx", "components/FocusGuard.tsx"],
+      "owner": "bsolid-portal",
+      "targets": ["floating-ui-react/components/FloatingPortal.tsx", "floating-ui-react/components/PortalContext.ts", "floating-ui-react/hooks/createFloatingPortalNode.ts", "utils/FocusGuard.tsx"],
+      "decision": "selective-reference",
+      "apis": ["FloatingPortal", "createFloatingPortalNode", "FocusGuard"],
+      "seam": "Useful accessor container and guard bridge; use @solidjs/web, direct Context, ownerDocument and real Element wrapper. Donor created/global document logic does not establish replacement/iframe correctness. Keep Base UI null-versus-unresolved-accessor semantics and LogicalLayer.",
+      "oracle": ["packages/react/src/floating-ui-react/components/FloatingPortal.tsx", "packages/react/src/floating-ui-react/components/FloatingPortal.test.tsx"],
+      "donorTests": [],
+      "gate": "bsolid-donor-interaction-proof"
+    },
+    {
+      "id": "dom-helpers",
+      "sources": ["utils/constants.ts", "utils/element.ts", "utils/log.ts", "utils/markOthers.ts", "utils/platform.ts", "utils/schedule.ts", "utils/tabbable.ts"],
+      "owner": "bsolid-dom",
+      "targets": ["floating-ui-react/utils/constants.ts", "floating-ui-react/utils/element.ts", "floating-ui-react/utils/markOthers.ts", "floating-ui-react/utils/enqueueFocus.ts", "floating-ui-react/utils/tabbable.ts", "utils/platform/index.ts", "utils/error.ts"],
+      "decision": "prefer-base-ui",
+      "apis": ["tabbable", "markOthers", "enqueueFocus", "realm-safe element helpers"],
+      "seam": "Existing Base UI pure implementations already tracked; do not duplicate helpers or add donor tabbable runtime. Preserve data-base-ui strings, trigger lookup, visibility leaf and licenses. Lifecycle owns timeout resources; donor schedule module is not a new timer owner.",
+      "oracle": ["packages/react/src/floating-ui-react/utils/tabbable.ts", "packages/react/src/floating-ui-react/utils/markOthers.ts", "packages/react/src/floating-ui-react/utils/element.ts", "packages/utils/src/mergeCleanups.ts"],
+      "donorTests": [],
+      "gate": "bsolid-donor-notices"
+    },
+    {
+      "id": "event-helpers",
+      "sources": ["utils/event.ts", "hooks/useInteractions.ts"],
+      "owner": "bsolid-events",
+      "targets": ["floating-ui-react/utils/event.ts", "merge-props/mergeProps.ts"],
+      "decision": "prefer-base-ui",
+      "apis": ["native event helpers", "mergeProps"],
+      "seam": "Donor handler fanout ignores Base UI prevention/order and its virtual-event predicates differ. No useInteractions clone/public export. Existing events owner preserves right-to-left merge and separate prevention flags; preserve inherited Adobe attribution.",
+      "oracle": ["packages/react/src/floating-ui-react/utils/event.ts", "packages/react/src/floating-ui-react/utils/event.test.ts", "packages/react/src/merge-props/mergeProps.ts"],
+      "donorTests": [],
+      "gate": "bsolid-donor-notices"
+    },
+    {
+      "id": "not-adopted",
+      "sources": ["components/FloatingArrow.tsx", "components/FloatingOverlay.tsx", "components/NextFloatingDelayGroup.tsx", "hooks/useClientPoint.ts", "hooks/useMergeRefs.ts", "hooks/useRole.ts", "hooks/useTransition.ts", "inner.ts", "utils/reactivity.ts", "index.ts", "types.ts", "utils.ts"],
+      "owner": "bsolid-donor-floating",
+      "targets": [],
+      "decision": "no-copy",
+      "apis": [],
+      "seam": "No donor public API expansion or barrel/type import. Family arrows/backdrops, gestures client point, lifecycle refs and presence transitions already have owners. Reactivity helper is Solid1-specific; every foundation uses RC13 split effects. Types/facades remain integration-owned. useMergeRefs is only 13 lines and callback-only; any needed loop is a licensed one-time lifecycle adaptation, not a dependency, and must support existing NativeRef contract. Reassess changed files explicitly during donor updates.",
+      "oracle": [],
+      "donorTests": ["packages/solid-floating-ui/e2e/specs/transition.spec.ts"],
+      "gate": "bsolid-donor-update-proof"
+    }
+  ],
+  "nonRuntimePolicy": {
+    "packages/solid-floating-ui/e2e/": "Supplementary source evidence only, Solid1 fixtures require RC13 translation. Every spec is listed above; Base UI test inventory remains authoritative.",
+    "LICENSE": "Always triage license changes; distribution notice gate.",
+    "packages/solid-floating-ui/package.json": "Always triage exports, peers, dependencies and version changes; distribution and affected foundations review.",
+    "package.json,pnpm-lock.yaml,pnpm-workspace.yaml,packages/solid-floating-ui/tsconfig.json,packages/solid-floating-ui/tsdown.config.ts": "Toolchain/dependency changes require explicit compatibility review; never copy manifests or install donor workspace.",
+    "docs/,examples/,plugins/,.claude-plugin/,.changeset/,.github/": "Documentation/tooling reference only, never executed or auto-copied. Classify each changed path in episode report.",
+    "unknown": "Fail closed to explicit triage, including newly added/renamed/deleted source or tests. This map does not authorize blanket ignore."
+  }
+}

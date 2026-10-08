@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/production-error/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "fc6875354da8133ed72ab9c1de8d80fb001bbec9f0f76d04aa76aab3c74b0120",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/production-error",
+  "route": "/production-error",
+  "disposition": "upstream-reference-only",
+  "publishable": false,
+  "title": "Production error #",
+  "subtitle": "Explanation for minified production error message.",
+  "metadata": {
+    "description": "In the production build, error messages are minified to keep your application lightweight."
+  },
+  "imports": [
+    {
+      "from": "./ErrorCode",
+      "local": "ErrorCode",
+      "imported": "default",
+      "kind": "custom",
+      "reference": "custom:docs/src/app/(docs)/production-error/ErrorCode#ErrorCode"
+    },
+    {
+      "from": "./ErrorDisplay",
+      "local": "ErrorDisplay",
+      "imported": "default",
+      "kind": "custom",
+      "reference": "custom:docs/src/app/(docs)/production-error/ErrorDisplay#ErrorDisplay"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Production error #",
+      "properties": {
+        "id": "production-error"
+      },
+      "location": "docs/src/app/(docs)/production-error/page.mdx:4:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "ErrorCode",
+      "handler": "react-production-error",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/production-error/page.mdx:4:21",
+      "reference": "custom:docs/src/app/(docs)/production-error/ErrorCode#ErrorCode"
+    },
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {
+        "skipLinks": true
+      },
+      "location": "docs/src/app/(docs)/production-error/page.mdx:6:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "In the production build, error messages are minified to keep your application lightweight."
+      },
+      "location": "docs/src/app/(docs)/production-error/page.mdx:7:1"
+    },
+    {
+      "name": "ErrorDisplay",
+      "handler": "react-production-error",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/production-error/page.mdx:16:1",
+      "reference": "custom:docs/src/app/(docs)/production-error/ErrorDisplay#ErrorDisplay"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "handler:react-production-error",
+      "location": "docs/src/app/(docs)/production-error/page.mdx:4:21",
+      "detail": "Site must implement ErrorCode; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/production-error/page.mdx:12:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:react-production-error",
+      "location": "docs/src/app/(docs)/production-error/page.mdx:16:1",
+      "detail": "Site must implement ErrorDisplay; source retained, never executed.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "sourceModule",
+        "value": "import ErrorCode from './ErrorCode';\nimport ErrorDisplay from './ErrorDisplay';",
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 43,
+            "offset": 79
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Production error #",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 3,
+                "offset": 83
+              },
+              "end": {
+                "line": 4,
+                "column": 21,
+                "offset": 101
+              }
+            }
+          },
+          {
+            "type": "mdxJsxTextElement",
+            "name": "ErrorCode",
+            "attributes": [],
+            "children": [],
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 21,
+                "offset": 101
+              },
+              "end": {
+                "line": 4,
+                "column": 34,
+                "offset": 114
+              }
+            },
+            "data": {
+              "handler": "react-production-error",
+              "reference": "custom:docs/src/app/(docs)/production-error/ErrorCode#ErrorCode"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 81
+          },
+          "end": {
+            "line": 4,
+            "column": 34,
+            "offset": 114
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "production-error"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [
+              {
+                "type": "mdxJsxAttribute",
+                "name": "skipLinks",
+                "value": null,
+                "position": {
+                  "start": {
+                    "line": 6,
+                    "column": 11,
+                    "offset": 126
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 20,
+                    "offset": 135
+                  }
+                }
+              }
+            ],
+            "children": [
+              {
+                "type": "text",
+                "value": "Explanation for minified production error message.",
+                "position": {
+                  "start": {
+                    "line": 6,
+                    "column": 21,
+                    "offset": 136
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 71,
+                    "offset": 186
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 1,
+                "offset": 116
+              },
+              "end": {
+                "line": 6,
+                "column": 82,
+                "offset": 197
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 116
+          },
+          "end": {
+            "line": 6,
+            "column": 82,
+            "offset": 197
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 3,
+                "offset": 206
+              },
+              "end": {
+                "line": 8,
+                "column": 21,
+                "offset": 224
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "In the production build, error messages are minified to keep your application lightweight.",
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 3,
+                "offset": 227
+              },
+              "end": {
+                "line": 9,
+                "column": 103,
+                "offset": 327
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 7,
+            "column": 1,
+            "offset": 198
+          },
+          "end": {
+            "line": 10,
+            "column": 3,
+            "offset": 330
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A minified Base UI error occurred in the production build of React.",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 1,
+                "offset": 332
+              },
+              "end": {
+                "line": 12,
+                "column": 68,
+                "offset": 399
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 332
+          },
+          "end": {
+            "line": 12,
+            "column": 68,
+            "offset": 399
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The full error message:",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 1,
+                "offset": 401
+              },
+              "end": {
+                "line": 14,
+                "column": 24,
+                "offset": 424
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 401
+          },
+          "end": {
+            "line": 14,
+            "column": 24,
+            "offset": 424
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "ErrorDisplay",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 426
+          },
+          "end": {
+            "line": 16,
+            "column": 17,
+            "offset": 442
+          }
+        },
+        "data": {
+          "handler": "react-production-error",
+          "reference": "custom:docs/src/app/(docs)/production-error/ErrorDisplay#ErrorDisplay"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 17,
+        "column": 1,
+        "offset": 443
+      }
+    }
+  }
+}

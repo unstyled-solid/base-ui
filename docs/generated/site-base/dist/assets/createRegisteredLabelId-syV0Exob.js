@@ -1,0 +1,1 @@
+import{D as e}from"../islands.js";import{t}from"./createBaseUiId-CE8UPp3g.js";function n(n,r){let i=t(n);return e(i,e=>(r(e),()=>{r(t=>t===e?void 0:t)}),{transparent:!0}),i}export{n as t};

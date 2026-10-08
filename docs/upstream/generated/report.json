@@ -1,0 +1,609 @@
+{
+  "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "transformationVersion": "bsolid-docs-content/1",
+  "publicPages": 84,
+  "capturedInputs": 739,
+  "excludedReactTypeTables": 42,
+  "semanticFlags": 2188,
+  "handlers": [
+    "api",
+    "demo",
+    "html",
+    "metadata",
+    "private-install-instructions",
+    "react-production-error",
+    "react-release-history",
+    "subtitle"
+  ],
+  "pages": [
+    {
+      "source": "docs/src/app/(docs)/production-error/page.mdx",
+      "route": "/production-error",
+      "destination": "docs/upstream/generated/pages/production-error/page.json",
+      "disposition": "upstream-reference-only",
+      "semanticFlagCount": 3
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/accordion/page.mdx",
+      "route": "/solid/components/accordion",
+      "destination": "docs/upstream/generated/pages/react/components/accordion/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 16
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/alert-dialog/page.mdx",
+      "route": "/solid/components/alert-dialog",
+      "destination": "docs/upstream/generated/pages/react/components/alert-dialog/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 47
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/autocomplete/page.mdx",
+      "route": "/solid/components/autocomplete",
+      "destination": "docs/upstream/generated/pages/react/components/autocomplete/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 68
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/avatar/page.mdx",
+      "route": "/solid/components/avatar",
+      "destination": "docs/upstream/generated/pages/react/components/avatar/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 17
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/button/page.mdx",
+      "route": "/solid/components/button",
+      "destination": "docs/upstream/generated/pages/react/components/button/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 10
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/checkbox-group/page.mdx",
+      "route": "/solid/components/checkbox-group",
+      "destination": "docs/upstream/generated/pages/react/components/checkbox-group/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 35
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/checkbox/page.mdx",
+      "route": "/solid/components/checkbox",
+      "destination": "docs/upstream/generated/pages/react/components/checkbox/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 23
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/collapsible/page.mdx",
+      "route": "/solid/components/collapsible",
+      "destination": "docs/upstream/generated/pages/react/components/collapsible/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 14
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/combobox/page.mdx",
+      "route": "/solid/components/combobox",
+      "destination": "docs/upstream/generated/pages/react/components/combobox/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 107
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/context-menu/page.mdx",
+      "route": "/solid/components/context-menu",
+      "destination": "docs/upstream/generated/pages/react/components/context-menu/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 44
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/dialog/page.mdx",
+      "route": "/solid/components/dialog",
+      "destination": "docs/upstream/generated/pages/react/components/dialog/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 70
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/drawer/page.mdx",
+      "route": "/solid/components/drawer",
+      "destination": "docs/upstream/generated/pages/react/components/drawer/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 87
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/field/page.mdx",
+      "route": "/solid/components/field",
+      "destination": "docs/upstream/generated/pages/react/components/field/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 18
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/fieldset/page.mdx",
+      "route": "/solid/components/fieldset",
+      "destination": "docs/upstream/generated/pages/react/components/fieldset/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 8
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/form/page.mdx",
+      "route": "/solid/components/form",
+      "destination": "docs/upstream/generated/pages/react/components/form/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 15
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/input/page.mdx",
+      "route": "/solid/components/input",
+      "destination": "docs/upstream/generated/pages/react/components/input/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 6
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/menu/page.mdx",
+      "route": "/solid/components/menu",
+      "destination": "docs/upstream/generated/pages/react/components/menu/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 159
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/menubar/page.mdx",
+      "route": "/solid/components/menubar",
+      "destination": "docs/upstream/generated/pages/react/components/menubar/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 25
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/meter/page.mdx",
+      "route": "/solid/components/meter",
+      "destination": "docs/upstream/generated/pages/react/components/meter/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 14
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/navigation-menu/page.mdx",
+      "route": "/solid/components/navigation-menu",
+      "destination": "docs/upstream/generated/pages/react/components/navigation-menu/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 36
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/number-field/page.mdx",
+      "route": "/solid/components/number-field",
+      "destination": "docs/upstream/generated/pages/react/components/number-field/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 18
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/otp-field/page.mdx",
+      "route": "/solid/components/otp-field",
+      "destination": "docs/upstream/generated/pages/react/components/otp-field/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 25
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/page.mdx",
+      "route": "/solid/components",
+      "destination": "docs/upstream/generated/pages/react/components/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 300
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/popover/page.mdx",
+      "route": "/solid/components/popover",
+      "destination": "docs/upstream/generated/pages/react/components/popover/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 56
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/preview-card/page.mdx",
+      "route": "/solid/components/preview-card",
+      "destination": "docs/upstream/generated/pages/react/components/preview-card/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 43
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/progress/page.mdx",
+      "route": "/solid/components/progress",
+      "destination": "docs/upstream/generated/pages/react/components/progress/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 14
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/radio-group/page.mdx",
+      "route": "/solid/components/radio-group",
+      "destination": "docs/upstream/generated/pages/react/components/radio-group/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 36
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/scroll-area/page.mdx",
+      "route": "/solid/components/scroll-area",
+      "destination": "docs/upstream/generated/pages/react/components/scroll-area/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 27
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/select/page.mdx",
+      "route": "/solid/components/select",
+      "destination": "docs/upstream/generated/pages/react/components/select/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 72
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/separator/page.mdx",
+      "route": "/solid/components/separator",
+      "destination": "docs/upstream/generated/pages/react/components/separator/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 6
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/slider/page.mdx",
+      "route": "/solid/components/slider",
+      "destination": "docs/upstream/generated/pages/react/components/slider/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 62
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/switch/page.mdx",
+      "route": "/solid/components/switch",
+      "destination": "docs/upstream/generated/pages/react/components/switch/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 23
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/tabs/page.mdx",
+      "route": "/solid/components/tabs",
+      "destination": "docs/upstream/generated/pages/react/components/tabs/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 21
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/toast/page.mdx",
+      "route": "/solid/components/toast",
+      "destination": "docs/upstream/generated/pages/react/components/toast/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 65
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/toggle-group/page.mdx",
+      "route": "/solid/components/toggle-group",
+      "destination": "docs/upstream/generated/pages/react/components/toggle-group/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 7
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/toggle/page.mdx",
+      "route": "/solid/components/toggle",
+      "destination": "docs/upstream/generated/pages/react/components/toggle/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 6
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/toolbar/page.mdx",
+      "route": "/solid/components/toolbar",
+      "destination": "docs/upstream/generated/pages/react/components/toolbar/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 42
+    },
+    {
+      "source": "docs/src/app/(docs)/react/components/tooltip/page.mdx",
+      "route": "/solid/components/tooltip",
+      "destination": "docs/upstream/generated/pages/react/components/tooltip/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 47
+    },
+    {
+      "source": "docs/src/app/(docs)/react/handbook/animation/page.mdx",
+      "route": "/solid/handbook/animation",
+      "destination": "docs/upstream/generated/pages/react/handbook/animation/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 34
+    },
+    {
+      "source": "docs/src/app/(docs)/react/handbook/composition/page.mdx",
+      "route": "/solid/handbook/composition",
+      "destination": "docs/upstream/generated/pages/react/handbook/composition/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 34
+    },
+    {
+      "source": "docs/src/app/(docs)/react/handbook/customization/page.mdx",
+      "route": "/solid/handbook/customization",
+      "destination": "docs/upstream/generated/pages/react/handbook/customization/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 21
+    },
+    {
+      "source": "docs/src/app/(docs)/react/handbook/forms/page.mdx",
+      "route": "/solid/handbook/forms",
+      "destination": "docs/upstream/generated/pages/react/handbook/forms/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 143
+    },
+    {
+      "source": "docs/src/app/(docs)/react/handbook/page.mdx",
+      "route": "/solid/handbook",
+      "destination": "docs/upstream/generated/pages/react/handbook/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 9
+    },
+    {
+      "source": "docs/src/app/(docs)/react/handbook/styling/page.mdx",
+      "route": "/solid/handbook/styling",
+      "destination": "docs/upstream/generated/pages/react/handbook/styling/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 41
+    },
+    {
+      "source": "docs/src/app/(docs)/react/handbook/typescript/page.mdx",
+      "route": "/solid/handbook/typescript",
+      "destination": "docs/upstream/generated/pages/react/handbook/typescript/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 8
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/about/page.mdx",
+      "route": "/solid/overview/about",
+      "destination": "docs/upstream/generated/pages/react/overview/about/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 6
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/accessibility/page.mdx",
+      "route": "/solid/overview/accessibility",
+      "destination": "docs/upstream/generated/pages/react/overview/accessibility/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 2
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/community/page.mdx",
+      "route": "/solid/overview/community",
+      "destination": "docs/upstream/generated/pages/react/overview/community/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 3
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/page.mdx",
+      "route": "/solid/overview",
+      "destination": "docs/upstream/generated/pages/react/overview/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 7
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/quick-start/page.mdx",
+      "route": "/solid/overview/quick-start",
+      "destination": "docs/upstream/generated/pages/react/overview/quick-start/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 9
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/page.mdx",
+      "route": "/upstream/react/overview/releases",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 5
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-alpha-4/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-4",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-alpha-4/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 1
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-alpha-5/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-5",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-alpha-5/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 3
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-alpha-6/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-6",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-alpha-6/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 1
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-alpha-7/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-7",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-alpha-7/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 3
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-alpha-8/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-8",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-alpha-8/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 3
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-beta-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 8
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-1/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-1",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-beta-1/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 6
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-2/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-2",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-beta-2/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 8
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-3/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-3",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-beta-3/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 2
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-4/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-4",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-beta-4/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 3
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-5/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-5",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-beta-5/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 6
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-6",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-beta-6/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 2
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-7/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-7",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-beta-7/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 2
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-rc-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-rc-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 1
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-1/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-rc-1",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-rc-1/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 1
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-2/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0-rc-2",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0-rc-2/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 1
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-0-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-0-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 2
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-1-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-1-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-1-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 2
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-2-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-2-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-2-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 7
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-3-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-3-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-3-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 4
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-4-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-4-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-4-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 1
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-4-1/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-4-1",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-4-1/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 1
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-5-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-5-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-5-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 2
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-6-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-6-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-6-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 2
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-7-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-7-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-7-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 3
+    },
+    {
+      "source": "docs/src/app/(docs)/react/overview/releases/v1-8-0/page.mdx",
+      "route": "/upstream/react/overview/releases/v1-8-0",
+      "destination": "docs/upstream/generated/pages/react/overview/releases/v1-8-0/page.json",
+      "disposition": "upstream-react-history",
+      "semanticFlagCount": 1
+    },
+    {
+      "source": "docs/src/app/(docs)/react/page.mdx",
+      "route": "/solid",
+      "destination": "docs/upstream/generated/pages/react/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 3
+    },
+    {
+      "source": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx",
+      "route": "/solid/utils/csp-provider",
+      "destination": "docs/upstream/generated/pages/react/utils/csp-provider/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 9
+    },
+    {
+      "source": "docs/src/app/(docs)/react/utils/direction-provider/page.mdx",
+      "route": "/solid/utils/direction-provider",
+      "destination": "docs/upstream/generated/pages/react/utils/direction-provider/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 8
+    },
+    {
+      "source": "docs/src/app/(docs)/react/utils/merge-props/page.mdx",
+      "route": "/solid/utils/merge-props",
+      "destination": "docs/upstream/generated/pages/react/utils/merge-props/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 16
+    },
+    {
+      "source": "docs/src/app/(docs)/react/utils/page.mdx",
+      "route": "/solid/utils",
+      "destination": "docs/upstream/generated/pages/react/utils/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 11
+    },
+    {
+      "source": "docs/src/app/(docs)/react/utils/use-render/page.mdx",
+      "route": "/solid/utils/use-render",
+      "destination": "docs/upstream/generated/pages/react/utils/use-render/page.json",
+      "disposition": "semantic-review-required",
+      "semanticFlagCount": 51
+    }
+  ],
+  "qualification": "Inventory and deterministic transformation only; no rendering, API, component or browser parity claim."
+}

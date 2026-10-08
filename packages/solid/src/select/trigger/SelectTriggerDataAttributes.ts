@@ -1,0 +1,13 @@
+export const popupOpen = 'data-popup-open';
+export const pressed = 'data-pressed';
+export const disabled = 'data-disabled';
+export const readonly = 'data-readonly';
+export const popupSide = 'data-popup-side';
+export const required = 'data-required';
+export const valid = 'data-valid';
+export const invalid = 'data-invalid';
+export const touched = 'data-touched';
+export const dirty = 'data-dirty';
+export const filled = 'data-filled';
+export const focused = 'data-focused';
+export const placeholder = 'data-placeholder';

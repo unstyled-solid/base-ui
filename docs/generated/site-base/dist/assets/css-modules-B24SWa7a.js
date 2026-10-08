@@ -1,0 +1,65 @@
+var e=`import { createSignal } from 'solid-js';
+import { Field } from 'baseui-solid2/field';
+import { Form } from 'baseui-solid2/form';
+import { Button } from 'baseui-solid2/button';
+import styles from './index.module.css';
+
+export default function ExampleForm() {
+  const [errors, setErrors] = createSignal<Form.Props['errors']>({});
+  const [loading, setLoading] = createSignal(false);
+
+  return (
+    <Form
+      class={styles.Form}
+      errors={errors()}
+      onSubmit={async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.currentTarget);
+        const value = formData.get('url') as string;
+
+        setLoading(true);
+        const response = await submitForm(value);
+        const serverErrors: Form.Props['errors'] = response.error ? { url: response.error } : {};
+
+        setErrors(serverErrors);
+        setLoading(false);
+      }}
+    >
+      <Field.Root name="url" class={styles.Field}>
+        <Field.Label class={styles.Label}>Homepage</Field.Label>
+        <Field.Control
+          type="url"
+          required
+          defaultValue="https://example.com"
+          placeholder="https://example.com"
+          pattern="https?://.*"
+          class={styles.Input}
+        />
+        <Field.Error class={styles.Error} />
+      </Field.Root>
+      <Button type="submit" disabled={loading()} focusableWhenDisabled class={styles.Button}>
+        Submit
+      </Button>
+    </Form>
+  );
+}
+
+async function submitForm(value: string) {
+  // Mimic a server response
+  await new Promise((resolve) => {
+    setTimeout(resolve, 1000);
+  });
+
+  try {
+    const url = new URL(value);
+
+    if (url.hostname.endsWith('example.com')) {
+      return { error: 'The example domain is not allowed' };
+    }
+  } catch {
+    return { error: 'This is not a valid URL' };
+  }
+
+  return { success: true };
+}
+`;export{e as default};

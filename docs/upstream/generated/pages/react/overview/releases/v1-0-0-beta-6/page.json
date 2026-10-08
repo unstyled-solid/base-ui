@@ -1,0 +1,618 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "c281c9d7e0f6f26d834f4bfb0c6b6c75ab1adb4fd6bc84fc2ecaa58ae0393922",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/overview/releases/v1-0-0-beta-6",
+  "route": "/upstream/react/overview/releases/v1-0-0-beta-6",
+  "disposition": "upstream-react-history",
+  "publishable": false,
+  "title": "v1.0.0-beta.6",
+  "subtitle": "Nov 17, 2025",
+  "metadata": {
+    "description": "v1.0.0-beta.6 release notes. Nov 17, 2025."
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "v1.0.0-beta.6",
+      "properties": {
+        "id": "v1-0-0-beta-6"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx:1:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "https://github.com/mui/base-ui/pull/3241",
+      "target": "https://github.com/mui/base-ui/pull/3241",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx:8:101"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3246",
+      "target": "https://github.com/mui/base-ui/pull/3246",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx:9:78"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3247",
+      "target": "https://github.com/mui/base-ui/pull/3247",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx:10:48"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "v1.0.0-beta.6 release notes. Nov 17, 2025."
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx:4:1"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "react-release-history",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx:1:1",
+      "detail": "Keep historical code, dates, package names and claims scoped to React.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-beta-6/page.mdx:8:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "v1.0.0-beta.6",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 16,
+                "offset": 15
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 16,
+            "offset": 15
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "v1-0-0-beta-6"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Nov 17, 2025",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 27
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 23,
+                    "offset": 39
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 17
+              },
+              "end": {
+                "line": 3,
+                "column": 34,
+                "offset": 50
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 17
+          },
+          "end": {
+            "line": 3,
+            "column": 34,
+            "offset": 50
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 7,
+                "offset": 57
+              },
+              "end": {
+                "line": 4,
+                "column": 25,
+                "offset": 75
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "v1.0.0-beta.6 release notes. Nov 17, 2025.",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 26,
+                "offset": 76
+              },
+              "end": {
+                "line": 4,
+                "column": 78,
+                "offset": 128
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 51
+          },
+          "end": {
+            "line": 4,
+            "column": 81,
+            "offset": 131
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a hotfix release with the following changes:",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 1,
+                "offset": 133
+              },
+              "end": {
+                "line": 6,
+                "column": 53,
+                "offset": 185
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 133
+          },
+          "end": {
+            "line": 6,
+            "column": 53,
+            "offset": 185
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix for rendering of Alert Dialog, Dialog, Menu, Popover, and Tooltip in React Server Components (",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 3,
+                        "offset": 189
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 101,
+                        "offset": 287
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3241",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3241",
+                        "position": {
+                          "start": {
+                            "line": 8,
+                            "column": 102,
+                            "offset": 288
+                          },
+                          "end": {
+                            "line": 8,
+                            "column": 107,
+                            "offset": 293
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 101,
+                        "offset": 287
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 150,
+                        "offset": 336
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 150,
+                        "offset": 336
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 151,
+                        "offset": 337
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 8,
+                    "column": 3,
+                    "offset": 189
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 151,
+                    "offset": 337
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 1,
+                "offset": 187
+              },
+              "end": {
+                "line": 8,
+                "column": 151,
+                "offset": 337
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix of the types of the refs in the Checkbox, Switch and Radio components (",
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 3,
+                        "offset": 340
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 78,
+                        "offset": 415
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3246",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3246",
+                        "position": {
+                          "start": {
+                            "line": 9,
+                            "column": 79,
+                            "offset": 416
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 84,
+                            "offset": 421
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 78,
+                        "offset": 415
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 127,
+                        "offset": 464
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 127,
+                        "offset": 464
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 128,
+                        "offset": 465
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 9,
+                    "column": 3,
+                    "offset": 340
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 128,
+                    "offset": 465
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 1,
+                "offset": 338
+              },
+              "end": {
+                "line": 9,
+                "column": 128,
+                "offset": 465
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix of the value type error with mergeProps (",
+                    "position": {
+                      "start": {
+                        "line": 10,
+                        "column": 3,
+                        "offset": 468
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 48,
+                        "offset": 513
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3247",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3247",
+                        "position": {
+                          "start": {
+                            "line": 10,
+                            "column": 49,
+                            "offset": 514
+                          },
+                          "end": {
+                            "line": 10,
+                            "column": 54,
+                            "offset": 519
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 10,
+                        "column": 48,
+                        "offset": 513
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 97,
+                        "offset": 562
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 10,
+                        "column": 97,
+                        "offset": 562
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 98,
+                        "offset": 563
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 10,
+                    "column": 3,
+                    "offset": 468
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 98,
+                    "offset": 563
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 10,
+                "column": 1,
+                "offset": 466
+              },
+              "end": {
+                "line": 10,
+                "column": 98,
+                "offset": 563
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 8,
+            "column": 1,
+            "offset": 187
+          },
+          "end": {
+            "line": 10,
+            "column": 98,
+            "offset": 563
+          }
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 11,
+        "column": 1,
+        "offset": 564
+      }
+    }
+  },
+  "notice": {
+    "type": "paragraph",
+    "children": [
+      {
+        "type": "text",
+        "value": "Upstream React Base UI release history. These are not releases or verified capabilities of the Solid port."
+      }
+    ]
+  }
+}

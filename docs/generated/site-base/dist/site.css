@@ -1,0 +1,76 @@
+@layer all, base, theme, components, utilities;
+@layer components {
+  .SiteBrand { display: inline-flex; align-items: center; gap: 10px; font-size: 18px; letter-spacing: -.5px; }
+  .SiteFramework { font-size: 12px; font-weight: 400; padding: 3px 7px; border: 1px solid var(--color-border); border-radius: 5px; margin-left: 5px; letter-spacing: 0; }
+  .SiteHeaderActions { display: flex; align-items: center; gap: 24px; font-size: 13px; }
+  #shell-island > button { min-width: 180px; text-align: left; padding: 6px 10px; border: 1px solid var(--color-border); border-radius: 6px; color: var(--gray-t1); font-size: 13px; }
+  .SitePageContent { padding-bottom: 3rem; }
+  .CodeBlockRoot figcaption { padding: 10px 16px; font-size: 12px; border-bottom: 1px solid var(--color-border); }
+  .CodeBlockPre, .CodeBlockPre code, .SiteDemo pre, .SiteTableScroll code, .MdCode { font-family: var(--font-mono, ui-monospace, monospace); font-size: 13px; line-height: 1.7; }
+  .SiteOutline { position: sticky; top: 6rem; padding-left: 3rem; font-size: 13px; color: var(--gray-t1); max-height: calc(100vh - 8rem); overflow: auto; }
+  .SiteOutline p { margin-bottom: 12px; color: var(--color-foreground); }
+  .SiteOutline ul { list-style: none; padding: 0; }
+  .SiteOutline li { margin: 8px 0; line-height: 1.4; }
+  .SiteOutline a { color: inherit; text-decoration: none; }
+  .SiteOutline a:hover { color: var(--color-foreground); }
+  .SiteRelatedType { margin-top: 12px; font-size: 13px; }
+  .SiteRelatedType summary { cursor: pointer; padding-block: 8px; }
+  .SiteFrameworkNote { font-size: 14px; border-left: 2px solid var(--color-border); padding: 8px 16px; margin-block: 24px; color: var(--gray-t1); }
+  @media (width < 80rem) { .SiteOutline { display: none; } }
+  @media (width < 64rem) { .SiteBrand { font-size: 16px; } .SiteHeaderActions > a { display: none; } #shell-island > button { min-width: 0; } .SiteHeader { height: auto !important; } .ContentLayoutRoot { padding-top: 1rem; } .SiteDemo section > div:first-child { flex-wrap: wrap; gap: 8px; } .SiteDemo section > div:first-child button { white-space: nowrap; } .SiteDemo section > div:first-child label { margin-left: 0; } }
+  .RootLayoutContainer { padding-top: 2.5rem; }
+  .ContentLayoutMain { max-width: 48rem; }
+  .SiteHeader { height: 4rem; box-sizing: border-box; }
+  .SiteDemo { margin: 2rem 0 3rem; border: 1px solid var(--color-border, #e5e5e5); border-radius: 12px; overflow: hidden; }
+  .SiteDemo > details { padding: 12px 20px; border-top: 1px solid var(--color-border, #e5e5e5); font-size: 12px; }
+  .SiteDemo [aria-label="Demo preview"] { display: flex; align-items: center; justify-content: center; min-height: 280px; padding: 48px 24px; background: var(--color-content, white); }
+  .SiteDemo [aria-label="Demo preview"][hidden] { display: none; }
+  .SiteDemo section > div:first-child { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--gray-s2, #fafafa); border-bottom: 1px solid var(--color-border, #e5e5e5); font-size: 12px; }
+  .SiteDemo section > div:first-child button { border: 0; border-radius: 6px; padding: 6px 10px; background: transparent; color: inherit; cursor: pointer; }
+  .SiteDemo section > div:first-child button[aria-pressed="true"] { background: var(--color-content, white); box-shadow: 0 1px 3px #0002; }
+  .SiteDemo section > div:first-child label { margin-left: auto; }
+  .SiteDemo pre { max-height: 480px; overflow: auto; padding: 20px; font-size: 13px; }
+  .SiteDemo [role="status"]:empty { display: none; }
+  .SiteTableScroll { font-size: 13px; }
+  .SiteTableScroll td { max-width: 24rem; overflow-wrap: anywhere; }
+  .SiteVersion { font-size: 11px; }
+}
+@layer base {
+  body { margin: 0; font-family: var(--font-sans, system-ui, sans-serif); }
+  :where(.SideNavRoot, .QuickNavRoot, .SiteHeader) ul { list-style: none; margin: 0; padding: 0; }
+  :where(.SideNavRoot, .QuickNavRoot, .SiteHeader) a { color: inherit; text-decoration: none; }
+}
+@layer components {
+  .SiteHeader { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 1rem; padding: 1rem 3rem; background: var(--color-content); border-bottom: 1px solid var(--color-border); }
+  .SiteHeader > a { font-weight: 700; margin-right: auto; }
+  .SiteSkip { position: fixed; top: -5rem; z-index: 20; background: var(--color-content); padding: 1rem; }
+  .SiteSkip:focus { top: 0; }
+  .SiteVersion { font-size: .75rem; color: var(--gray-t1); overflow-wrap: anywhere; margin-bottom: 1rem; }
+  .SiteReview, .SiteMissing { border: 1px solid var(--color-border); border-radius: .5rem; padding: 1rem; margin-block: 1rem; font-size: .875rem; }
+  .SiteMissing code { overflow-wrap: anywhere; }
+  .SiteTableScroll, .CodeBlockPre { overflow-x: auto; max-width: 100%; }
+  .SiteTableScroll table { border-collapse: collapse; width: 100%; }
+  .SiteTableScroll :is(th, td) { text-align: left; padding: .5rem; border-bottom: 1px solid var(--color-border); }
+  .CodeBlockPre { background: var(--gray-s2); padding: 1rem; border-radius: .5rem; }
+  .HeadingLink { color: inherit; text-decoration: none; }
+  .HeadingLink:hover { text-decoration: underline; }
+  .SideNavViewport, .QuickNavViewport { overflow-y: auto; }
+  .SiteMobileNav { display: none; }
+  .SiteFooter { margin-top: 3rem; font-size: .75rem; color: var(--gray-t1); }
+  .SiteSearch { border: 1px solid var(--color-border); border-radius: .75rem; background: var(--color-content); color: var(--color-foreground); width: min(38rem, 90vw); max-height: 80dvh; padding: 1.5rem; }
+  .SiteSearch::backdrop { background: #0008; }
+  .SiteSearch input { width: 100%; box-sizing: border-box; padding: .75rem; margin-block: .75rem; }
+  .SiteSearch li { padding: .5rem; }
+  .SiteSearch a { color: inherit; }
+  .SiteSearchStatus { font-size: .875rem; }
+  .SiteToken-keyword { color: var(--color-violet); }
+  .SiteToken-string { color: var(--color-green); }
+  .SiteToken-number { color: var(--color-navy); }
+  .SiteToken-comment { color: var(--color-gray); }
+  :focus-visible { outline: 2px solid var(--gray-t2); outline-offset: 3px; }
+  @media (width < 64rem) {
+    .SiteHeader { padding-inline: 1.5rem; flex-wrap: wrap; }
+    .SiteMobileNav { display: block; width: 100%; }
+    .SiteMobileNav nav { max-height: 60dvh; overflow: auto; padding-block: 1rem; }
+  }
+}

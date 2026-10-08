@@ -1,0 +1,2185 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/handbook/customization/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "a694e02f3498f9ae7987c42559f7b9eb8bdb42642e71c29500ebef0e2ac1a70a",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/handbook/customization",
+  "route": "/solid/handbook/customization",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Customization",
+  "subtitle": "A guide to customizing the behavior of Base UI components.",
+  "metadata": {
+    "keywords": [
+      "Base UI Customization",
+      "React eventDetails",
+      "Control Base UI State",
+      "Cancel Base UI Events",
+      "Allow Propagation Tooltip",
+      "Customization Handbook",
+      "Event Handlers",
+      "Controlled Components",
+      "Uncontrolled Components",
+      "Component Behavior",
+      "Event Callbacks",
+      "State Management",
+      "Component Props",
+      "Override Behavior"
+    ],
+    "description": "A guide to customizing the behavior of Base UI components."
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Customization",
+      "properties": {
+        "id": "customization"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Base UI events",
+      "properties": {
+        "id": "base-ui-events"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:6:1"
+    },
+    {
+      "depth": 3,
+      "text": "Canceling a Base UI event",
+      "properties": {
+        "id": "canceling-a-base-ui-event"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:39:1"
+    },
+    {
+      "depth": 3,
+      "text": "Allowing propagation of the DOM event",
+      "properties": {
+        "id": "allowing-propagation-of-the-dom-event"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:59:1"
+    },
+    {
+      "depth": 2,
+      "text": "Preventing Base UI from handling a React event",
+      "properties": {
+        "id": "preventing-base-ui-from-handling-a-react-event"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:77:1"
+    },
+    {
+      "depth": 2,
+      "text": "Controlling components with state",
+      "properties": {
+        "id": "controlling-components-with-state"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:92:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "/react/components/dialog",
+      "target": "/solid/components/dialog",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:106:28"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A guide to customizing the behavior of Base UI components."
+      },
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:4:1"
+    },
+    {
+      "name": "kbd",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:61:34"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:11:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:11:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:20:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:43:1",
+      "detail": "Tooltip.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:43:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:64:1",
+      "detail": "Tooltip.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:64:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:77:4",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:79:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:81:1",
+      "detail": "NumberField.Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:81:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:89:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:98:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:98:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:98:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:108:1",
+      "detail": "React.useState",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:108:1",
+      "detail": "React.useEffect",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:108:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:108:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:108:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/handbook/customization/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Customization",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 16,
+                "offset": 15
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 16,
+            "offset": 15
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "customization"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A guide to customizing the behavior of Base UI components.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 27
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 69,
+                    "offset": 85
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 17
+              },
+              "end": {
+                "line": 3,
+                "column": 80,
+                "offset": 96
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 17
+          },
+          "end": {
+            "line": 3,
+            "column": 80,
+            "offset": 96
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 7,
+                "offset": 103
+              },
+              "end": {
+                "line": 4,
+                "column": 25,
+                "offset": 121
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A guide to customizing the behavior of Base UI components.",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 26,
+                "offset": 122
+              },
+              "end": {
+                "line": 4,
+                "column": 94,
+                "offset": 190
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 97
+          },
+          "end": {
+            "line": 4,
+            "column": 97,
+            "offset": 193
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI events",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 4,
+                "offset": 198
+              },
+              "end": {
+                "line": 6,
+                "column": 18,
+                "offset": 212
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 195
+          },
+          "end": {
+            "line": 6,
+            "column": 18,
+            "offset": 212
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "base-ui-events"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Change events such as ",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 1,
+                "offset": 214
+              },
+              "end": {
+                "line": 8,
+                "column": 23,
+                "offset": 236
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 23,
+                "offset": 236
+              },
+              "end": {
+                "line": 8,
+                "column": 37,
+                "offset": 250
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 37,
+                "offset": 250
+              },
+              "end": {
+                "line": 8,
+                "column": 39,
+                "offset": 252
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onValueChange",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 39,
+                "offset": 252
+              },
+              "end": {
+                "line": 8,
+                "column": 54,
+                "offset": 267
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and ",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 54,
+                "offset": 267
+              },
+              "end": {
+                "line": 8,
+                "column": 60,
+                "offset": 273
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onPressedChange",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 60,
+                "offset": 273
+              },
+              "end": {
+                "line": 8,
+                "column": 77,
+                "offset": 290
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " are custom to Base UI.\nThey can be emitted by various different DOM events, effects, or even during rendering.",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 77,
+                "offset": 290
+              },
+              "end": {
+                "line": 9,
+                "column": 88,
+                "offset": 401
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 8,
+            "column": 1,
+            "offset": 214
+          },
+          "end": {
+            "line": 9,
+            "column": 88,
+            "offset": 401
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "js",
+        "meta": "title=\"Base UI event signatures\"",
+        "value": "onOpenChange: (open, eventDetails) => void\nonValueChange: (value, eventDetails) => void\nonPressedChange: (pressed, eventDetails) => void",
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 403
+          },
+          "end": {
+            "line": 15,
+            "column": 4,
+            "offset": 582
+          }
+        },
+        "data": {
+          "sourceValue": "onOpenChange: (open, eventDetails) => void\nonValueChange: (value, eventDetails) => void\nonPressedChange: (pressed, eventDetails) => void",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 56,
+              "message": "';' expected."
+            },
+            {
+              "start": 103,
+              "message": "';' expected."
+            },
+            {
+              "start": 136,
+              "message": "Expression expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 584
+              },
+              "end": {
+                "line": 17,
+                "column": 5,
+                "offset": 588
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "eventDetails",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 5,
+                "offset": 588
+              },
+              "end": {
+                "line": 17,
+                "column": 19,
+                "offset": 602
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " property is passed as a second argument to Base UI event handlers.\nThis enables the event to be customized, and also allows you to conditionally run side effects based on the reason or DOM event that caused the change.",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 19,
+                "offset": 602
+              },
+              "end": {
+                "line": 18,
+                "column": 152,
+                "offset": 821
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 584
+          },
+          "end": {
+            "line": 18,
+            "column": 152,
+            "offset": 821
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"eventDetails object\"",
+        "value": "interface BaseUIChangeEventDetails {\n  reason: string;\n  event: Event;\n  cancel: () => void;\n  allowPropagation: () => void;\n  isCanceled: boolean;\n  isPropagationAllowed: boolean;\n}",
+        "position": {
+          "start": {
+            "line": 20,
+            "column": 1,
+            "offset": 823
+          },
+          "end": {
+            "line": 29,
+            "column": 4,
+            "offset": 1044
+          }
+        },
+        "data": {
+          "sourceValue": "interface BaseUIChangeEventDetails {\n  reason: string;\n  event: Event;\n  cancel: () => void;\n  allowPropagation: () => void;\n  isCanceled: boolean;\n  isPropagationAllowed: boolean;\n}",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "reason",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 3,
+                        "offset": 1048
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 11,
+                        "offset": 1056
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " is used to determine why the change event occurred, which can be useful to conditionally run certain side effects.\nMost IDEs show the possible string values after typing ",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 11,
+                        "offset": 1056
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 58,
+                        "offset": 1229
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "reason === '",
+                    "position": {
+                      "start": {
+                        "line": 32,
+                        "column": 58,
+                        "offset": 1229
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 72,
+                        "offset": 1243
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 32,
+                        "column": 72,
+                        "offset": 1243
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 73,
+                        "offset": 1244
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 31,
+                    "column": 3,
+                    "offset": 1048
+                  },
+                  "end": {
+                    "line": 32,
+                    "column": 73,
+                    "offset": 1244
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 1,
+                "offset": 1046
+              },
+              "end": {
+                "line": 32,
+                "column": 73,
+                "offset": 1244
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "event",
+                    "position": {
+                      "start": {
+                        "line": 33,
+                        "column": 3,
+                        "offset": 1247
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 10,
+                        "offset": 1254
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " is the native DOM event that caused the change.",
+                    "position": {
+                      "start": {
+                        "line": 33,
+                        "column": 10,
+                        "offset": 1254
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 58,
+                        "offset": 1302
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 33,
+                    "column": 3,
+                    "offset": 1247
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 58,
+                    "offset": 1302
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 1,
+                "offset": 1245
+              },
+              "end": {
+                "line": 33,
+                "column": 58,
+                "offset": 1302
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "cancel",
+                    "position": {
+                      "start": {
+                        "line": 34,
+                        "column": 3,
+                        "offset": 1305
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 11,
+                        "offset": 1313
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " stops the component from changing its internal state.",
+                    "position": {
+                      "start": {
+                        "line": 34,
+                        "column": 11,
+                        "offset": 1313
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 65,
+                        "offset": 1367
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 34,
+                    "column": 3,
+                    "offset": 1305
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 65,
+                    "offset": 1367
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 1,
+                "offset": 1303
+              },
+              "end": {
+                "line": 34,
+                "column": 65,
+                "offset": 1367
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "allowPropagation",
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 3,
+                        "offset": 1370
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 21,
+                        "offset": 1388
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " allows the DOM event to propagate in cases where Base UI stops the propagation.",
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 21,
+                        "offset": 1388
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 101,
+                        "offset": 1468
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 35,
+                    "column": 3,
+                    "offset": 1370
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 101,
+                    "offset": 1468
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 1,
+                "offset": 1368
+              },
+              "end": {
+                "line": 35,
+                "column": 101,
+                "offset": 1468
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "isCanceled",
+                    "position": {
+                      "start": {
+                        "line": 36,
+                        "column": 3,
+                        "offset": 1471
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 15,
+                        "offset": 1483
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " indicates whether the change event has been canceled.",
+                    "position": {
+                      "start": {
+                        "line": 36,
+                        "column": 15,
+                        "offset": 1483
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 69,
+                        "offset": 1537
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 36,
+                    "column": 3,
+                    "offset": 1471
+                  },
+                  "end": {
+                    "line": 36,
+                    "column": 69,
+                    "offset": 1537
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 1,
+                "offset": 1469
+              },
+              "end": {
+                "line": 36,
+                "column": 69,
+                "offset": 1537
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "isPropagationAllowed",
+                    "position": {
+                      "start": {
+                        "line": 37,
+                        "column": 3,
+                        "offset": 1540
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 25,
+                        "offset": 1562
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " indicates whether the DOM event is allowed to propagate.",
+                    "position": {
+                      "start": {
+                        "line": 37,
+                        "column": 25,
+                        "offset": 1562
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 82,
+                        "offset": 1619
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 37,
+                    "column": 3,
+                    "offset": 1540
+                  },
+                  "end": {
+                    "line": 37,
+                    "column": 82,
+                    "offset": 1619
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 37,
+                "column": 1,
+                "offset": 1538
+              },
+              "end": {
+                "line": 37,
+                "column": 82,
+                "offset": 1619
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 1046
+          },
+          "end": {
+            "line": 37,
+            "column": 82,
+            "offset": 1619
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Canceling a Base UI event",
+            "position": {
+              "start": {
+                "line": 39,
+                "column": 5,
+                "offset": 1625
+              },
+              "end": {
+                "line": 39,
+                "column": 30,
+                "offset": 1650
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 39,
+            "column": 1,
+            "offset": 1621
+          },
+          "end": {
+            "line": 39,
+            "column": 30,
+            "offset": 1650
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "canceling-a-base-ui-event"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "An event can be canceled with the ",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 1,
+                "offset": 1652
+              },
+              "end": {
+                "line": 41,
+                "column": 35,
+                "offset": 1686
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "cancel()",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 35,
+                "offset": 1686
+              },
+              "end": {
+                "line": 41,
+                "column": 45,
+                "offset": 1696
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " method on ",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 45,
+                "offset": 1696
+              },
+              "end": {
+                "line": 41,
+                "column": 56,
+                "offset": 1707
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "eventDetails",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 56,
+                "offset": 1707
+              },
+              "end": {
+                "line": 41,
+                "column": 70,
+                "offset": 1721
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 70,
+                "offset": 1721
+              },
+              "end": {
+                "line": 41,
+                "column": 71,
+                "offset": 1722
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 1652
+          },
+          "end": {
+            "line": 41,
+            "column": 71,
+            "offset": 1722
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Prevent a tooltip from closing when pressing the trigger\"",
+        "value": "<Tooltip.Root\n  onOpenChange={(open, eventDetails) => {\n    if (eventDetails.reason === 'trigger-press') {\n      // Stop the open change (false) from happening.\n      eventDetails.cancel(); // @highlight-text \"cancel\"\n    }\n  }}\n>\n  ...\n</Tooltip.Root>",
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 1724
+          },
+          "end": {
+            "line": 54,
+            "column": 4,
+            "offset": 2052
+          }
+        },
+        "data": {
+          "sourceValue": "<Tooltip.Root\n  onOpenChange={(open, eventDetails) => {\n    if (eventDetails.reason === 'trigger-press') {\n      // Stop the open change (false) from happening.\n      eventDetails.cancel(); // @highlight-text \"cancel\"\n    }\n  }}\n>\n  ...\n</Tooltip.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This lets you leave the component uncontrolled as its internal state is prevented from updating.\nThis is an alternative to controlling the component with external state and guarding the state updates conditionally.",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 1,
+                "offset": 2054
+              },
+              "end": {
+                "line": 57,
+                "column": 118,
+                "offset": 2268
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 2054
+          },
+          "end": {
+            "line": 57,
+            "column": 118,
+            "offset": 2268
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Allowing propagation of the DOM event",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 5,
+                "offset": 2274
+              },
+              "end": {
+                "line": 59,
+                "column": 42,
+                "offset": 2311
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 59,
+            "column": 1,
+            "offset": 2270
+          },
+          "end": {
+            "line": 59,
+            "column": 42,
+            "offset": 2311
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "allowing-propagation-of-the-dom-event"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In most components, pressing the ",
+            "position": {
+              "start": {
+                "line": 61,
+                "column": 1,
+                "offset": 2313
+              },
+              "end": {
+                "line": 61,
+                "column": 34,
+                "offset": 2346
+              }
+            }
+          },
+          {
+            "type": "mdxJsxTextElement",
+            "name": "kbd",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Esc",
+                "position": {
+                  "start": {
+                    "line": 61,
+                    "column": 39,
+                    "offset": 2351
+                  },
+                  "end": {
+                    "line": 61,
+                    "column": 42,
+                    "offset": 2354
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 61,
+                "column": 34,
+                "offset": 2346
+              },
+              "end": {
+                "line": 61,
+                "column": 48,
+                "offset": 2360
+              }
+            },
+            "data": {
+              "handler": "html"
+            }
+          },
+          {
+            "type": "text",
+            "value": " key stops the propagation of the event so parent popups don't close simultaneously.\nThis can also be customized with the ",
+            "position": {
+              "start": {
+                "line": 61,
+                "column": 48,
+                "offset": 2360
+              },
+              "end": {
+                "line": 62,
+                "column": 38,
+                "offset": 2482
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "allowPropagation()",
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 38,
+                "offset": 2482
+              },
+              "end": {
+                "line": 62,
+                "column": 58,
+                "offset": 2502
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " method:",
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 58,
+                "offset": 2502
+              },
+              "end": {
+                "line": 62,
+                "column": 66,
+                "offset": 2510
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 61,
+            "column": 1,
+            "offset": 2313
+          },
+          "end": {
+            "line": 62,
+            "column": 66,
+            "offset": 2510
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Allowing propagation of the event\"",
+        "value": "<Tooltip.Root\n  onOpenChange={(open, eventDetails) => {\n    if (eventDetails.reason === 'escape-key') {\n      // Allow the DOM event to propagate.\n      eventDetails.allowPropagation(); // @highlight-text \"allowPropagation\"\n    }\n  }}\n>\n  ...\n</Tooltip.Root>",
+        "position": {
+          "start": {
+            "line": 64,
+            "column": 1,
+            "offset": 2512
+          },
+          "end": {
+            "line": 75,
+            "column": 4,
+            "offset": 2823
+          }
+        },
+        "data": {
+          "sourceValue": "<Tooltip.Root\n  onOpenChange={(open, eventDetails) => {\n    if (eventDetails.reason === 'escape-key') {\n      // Allow the DOM event to propagate.\n      eventDetails.allowPropagation(); // @highlight-text \"allowPropagation\"\n    }\n  }}\n>\n  ...\n</Tooltip.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Preventing Base UI from handling a React event",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 4,
+                "offset": 2828
+              },
+              "end": {
+                "line": 77,
+                "column": 50,
+                "offset": 2874
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 77,
+            "column": 1,
+            "offset": 2825
+          },
+          "end": {
+            "line": 77,
+            "column": 50,
+            "offset": 2874
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "preventing-base-ui-from-handling-a-react-event"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To prevent Base UI from handling a React event like ",
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 1,
+                "offset": 2876
+              },
+              "end": {
+                "line": 79,
+                "column": 53,
+                "offset": 2928
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onClick",
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 53,
+                "offset": 2928
+              },
+              "end": {
+                "line": 79,
+                "column": 62,
+                "offset": 2937
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", you can use the ",
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 62,
+                "offset": 2937
+              },
+              "end": {
+                "line": 79,
+                "column": 80,
+                "offset": 2955
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "preventBaseUIHandler()",
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 80,
+                "offset": 2955
+              },
+              "end": {
+                "line": 79,
+                "column": 104,
+                "offset": 2979
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " method on the event object:",
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 104,
+                "offset": 2979
+              },
+              "end": {
+                "line": 79,
+                "column": 132,
+                "offset": 3007
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 79,
+            "column": 1,
+            "offset": 2876
+          },
+          "end": {
+            "line": 79,
+            "column": 132,
+            "offset": 3007
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Prevent Base UI's default behavior\"",
+        "value": "<NumberField.Input\n  onPaste={(event) => {\n    event.preventBaseUIHandler();\n  }}\n/>",
+        "position": {
+          "start": {
+            "line": 81,
+            "column": 1,
+            "offset": 3009
+          },
+          "end": {
+            "line": 87,
+            "column": 4,
+            "offset": 3147
+          }
+        },
+        "data": {
+          "sourceValue": "<NumberField.Input\n  onPaste={(event) => {\n    event.preventBaseUIHandler();\n  }}\n/>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This should be used as an escape hatch in cases where there isn't a prop yet to customize the behavior.\nIn various cases, native events are used instead of React events, so this method has no effect.",
+            "position": {
+              "start": {
+                "line": 89,
+                "column": 1,
+                "offset": 3149
+              },
+              "end": {
+                "line": 90,
+                "column": 96,
+                "offset": 3348
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 89,
+            "column": 1,
+            "offset": 3149
+          },
+          "end": {
+            "line": 90,
+            "column": 96,
+            "offset": 3348
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Controlling components with state",
+            "position": {
+              "start": {
+                "line": 92,
+                "column": 4,
+                "offset": 3353
+              },
+              "end": {
+                "line": 92,
+                "column": 37,
+                "offset": 3386
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 92,
+            "column": 1,
+            "offset": 3350
+          },
+          "end": {
+            "line": 92,
+            "column": 37,
+            "offset": 3386
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "controlling-components-with-state"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Change event handlers enable a component to be controlled with your own external state.",
+            "position": {
+              "start": {
+                "line": 94,
+                "column": 1,
+                "offset": 3388
+              },
+              "end": {
+                "line": 94,
+                "column": 88,
+                "offset": 3475
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 94,
+            "column": 1,
+            "offset": 3388
+          },
+          "end": {
+            "line": 94,
+            "column": 88,
+            "offset": 3475
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Components are uncontrolled by default, meaning that they manage their own state internally.",
+            "position": {
+              "start": {
+                "line": 96,
+                "column": 1,
+                "offset": 3477
+              },
+              "end": {
+                "line": 96,
+                "column": 93,
+                "offset": 3569
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 96,
+            "column": 1,
+            "offset": 3477
+          },
+          "end": {
+            "line": 96,
+            "column": 93,
+            "offset": 3569
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Uncontrolled dialog\"",
+        "value": "<Dialog.Root>\n  <Dialog.Trigger /> {/* Opens the dialog when clicked. */}\n</Dialog.Root>",
+        "position": {
+          "start": {
+            "line": 98,
+            "column": 1,
+            "offset": 3571
+          },
+          "end": {
+            "line": 102,
+            "column": 4,
+            "offset": 3698
+          }
+        },
+        "data": {
+          "sourceValue": "<Dialog.Root>\n  <Dialog.Trigger /> {/* Opens the dialog when clicked. */}\n</Dialog.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A component can be made controlled by passing external state to a prop, such as ",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 1,
+                "offset": 3700
+              },
+              "end": {
+                "line": 104,
+                "column": 81,
+                "offset": 3780
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "open",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 81,
+                "offset": 3780
+              },
+              "end": {
+                "line": 104,
+                "column": 87,
+                "offset": 3786
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 87,
+                "offset": 3786
+              },
+              "end": {
+                "line": 104,
+                "column": 91,
+                "offset": 3790
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "value",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 91,
+                "offset": 3790
+              },
+              "end": {
+                "line": 104,
+                "column": 98,
+                "offset": 3797
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and the state's setter to its corresponding change handler, such as ",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 98,
+                "offset": 3797
+              },
+              "end": {
+                "line": 104,
+                "column": 168,
+                "offset": 3867
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 168,
+                "offset": 3867
+              },
+              "end": {
+                "line": 104,
+                "column": 182,
+                "offset": 3881
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 182,
+                "offset": 3881
+              },
+              "end": {
+                "line": 104,
+                "column": 186,
+                "offset": 3885
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onValueChange",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 186,
+                "offset": 3885
+              },
+              "end": {
+                "line": 104,
+                "column": 201,
+                "offset": 3900
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 201,
+                "offset": 3900
+              },
+              "end": {
+                "line": 104,
+                "column": 202,
+                "offset": 3901
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 104,
+            "column": 1,
+            "offset": 3700
+          },
+          "end": {
+            "line": 104,
+            "column": 202,
+            "offset": 3901
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For instance, you can open ",
+            "position": {
+              "start": {
+                "line": 106,
+                "column": 1,
+                "offset": 3903
+              },
+              "end": {
+                "line": 106,
+                "column": 28,
+                "offset": 3930
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/dialog",
+            "children": [
+              {
+                "type": "text",
+                "value": "Dialog",
+                "position": {
+                  "start": {
+                    "line": 106,
+                    "column": 29,
+                    "offset": 3931
+                  },
+                  "end": {
+                    "line": 106,
+                    "column": 35,
+                    "offset": 3937
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 106,
+                "column": 28,
+                "offset": 3930
+              },
+              "end": {
+                "line": 106,
+                "column": 62,
+                "offset": 3964
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " after a timeout, without a trigger:",
+            "position": {
+              "start": {
+                "line": 106,
+                "column": 62,
+                "offset": 3964
+              },
+              "end": {
+                "line": 106,
+                "column": 98,
+                "offset": 4000
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 106,
+            "column": 1,
+            "offset": 3903
+          },
+          "end": {
+            "line": 106,
+            "column": 98,
+            "offset": 4000
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Controlled dialog\"",
+        "value": "const [open, setOpen] = React.useState(false);\n\nReact.useEffect(() => {\n  const timeout = setTimeout(() => {\n    setOpen(true);\n  }, 1000);\n  return () => clearTimeout(timeout);\n}, []);\n\nreturn (\n  <Dialog.Root open={open} onOpenChange={setOpen}>\n    No trigger is needed in this case.\n  </Dialog.Root>\n);",
+        "position": {
+          "start": {
+            "line": 108,
+            "column": 1,
+            "offset": 4002
+          },
+          "end": {
+            "line": 123,
+            "column": 4,
+            "offset": 4344
+          }
+        },
+        "data": {
+          "sourceValue": "const [open, setOpen] = React.useState(false);\n\nReact.useEffect(() => {\n  const timeout = setTimeout(() => {\n    setOpen(true);\n  }, 1000);\n  return () => clearTimeout(timeout);\n}, []);\n\nreturn (\n  <Dialog.Root open={open} onOpenChange={setOpen}>\n    No trigger is needed in this case.\n  </Dialog.Root>\n);",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This also allows you to read the state of the component outside of the root component.",
+            "position": {
+              "start": {
+                "line": 125,
+                "column": 1,
+                "offset": 4346
+              },
+              "end": {
+                "line": 125,
+                "column": 87,
+                "offset": 4432
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 125,
+            "column": 1,
+            "offset": 4346
+          },
+          "end": {
+            "line": 125,
+            "column": 87,
+            "offset": 4432
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI Customization',\n    'React eventDetails',\n    'Control Base UI State',\n    'Cancel Base UI Events',\n    'Allow Propagation Tooltip',\n    'Customization Handbook',\n    'Event Handlers',\n    'Controlled Components',\n    'Uncontrolled Components',\n    'Component Behavior',\n    'Event Callbacks',\n    'State Management',\n    'Component Props',\n    'Override Behavior',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 127,
+            "column": 1,
+            "offset": 4434
+          },
+          "end": {
+            "line": 144,
+            "column": 3,
+            "offset": 4860
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 145,
+        "column": 1,
+        "offset": 4861
+      }
+    }
+  }
+}

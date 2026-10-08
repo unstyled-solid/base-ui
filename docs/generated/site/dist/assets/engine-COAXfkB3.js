@@ -1,0 +1,1 @@
+import{t as e}from"./shared-DV7M6pAD.js";var t={get webkit(){return typeof CSS<`u`&&!!CSS.supports?.(`-webkit-backdrop-filter:none`)},get gecko(){return!t.webkit&&e.lowerUserAgent.includes(`firefox`)},get blink(){return!t.webkit&&e.lowerUserAgent.includes(`chrom`)}};export{t};

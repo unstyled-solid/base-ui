@@ -1,0 +1,228 @@
+{
+  "sourceCommit": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "inventoryComplete": false,
+  "productionEditedByThisTask": true,
+  "currentRepair": {
+    "continuation20261007": {
+      "editedFiles": ["packages/solid/src/dialog/root/DialogRoot.test.tsx", "packages/solid/src/use-render/useRender.test.tsx", "packages/solid/src/avatar/Avatar.browser.test.tsx", "packages/solid/src/avatar/image/AvatarImage.test.tsx", "packages/solid/src/avatar/fallback/AvatarFallback.test.tsx", "packages/solid/src/fieldset/root/FieldsetRoot.browser.test.tsx", "packages/solid/src/fieldset/legend/FieldsetLegend.hydration.fixture.tsx", "packages/solid/src/alert-dialog/AlertDialog.browser.test.tsx", "packages/solid/src/alert-dialog/AlertDialog.lifecycle.test.tsx", "packages/solid/src/floating-ui-react/components/FloatingFocusManager.tsx", "packages/solid/src/floating-ui-react/components/FloatingFocusManager.test.tsx", "packages/solid/src/floating-ui-react/components/FloatingPortal.browser.test.tsx", "packages/solid/src/autocomplete/root/AutocompleteHighlight.test.tsx", "packages/solid/src/autocomplete/root/AutocompleteRoot.test.tsx", "packages/solid/src/menu/Menu.children.review.test.tsx", "packages/solid/src/popover/Popover.review.test.tsx", "packages/solid/src/popover/root/PopoverRoot.detached-triggers.test.tsx", "packages/solid/src/popover/positioner/PopoverPositioner.browser.test.tsx", "packages/solid/src/utils/FocusGuard.browser.test.tsx", "packages/solid/src/field/FieldIntegration.test.tsx", "packages/solid/src/field/root/FieldValidation.test.tsx", "packages/solid/src/internals/field-core/createField.ts"],
+      "productionExperiments": "Collapsible experiments fully reverted, temporary logging removed. Retained production changes: owned FloatingFocusManager child-removal fallback (root cause investigation debt accepted by user) and source-grounded Field registration fallback ownership fix. Existing pre-session dirty edits preserved.",
+      "resolved": ["All six DialogRoot Chromium assertions: native transitionend dispatch checkpoint awaited; no-animation source double callback documented as proven StrictMode lifecycle adaptation", "All14 public useRender runtime source bodies directly covered, source/target bodies read and mapped in use-render.json#/currentRepair"],
+      "checks": [
+        { "command": "rtk pnpm typescript", "result": "passed" },
+        { "command": "rtk pnpm test:types --no-watch", "result": "passed" },
+        { "command": "rtk pnpm exec tsc --noEmit -p docs/tsconfig.demos.json", "result": "passed" },
+        { "command": "rtk pnpm test:jsdom --no-watch", "passed": 6410, "failed": 0, "skipped": 272, "files": 315, "passedFiles": 312, "excludedFiles": 3, "unhandled": 0, "log": "/Users/avi/.local/share/opencode/tool-output/tool_117880c380016ELzNq66yU2eXA" },
+        { "command": "rtk pnpm test:chromium packages/solid/src/dialog/root/DialogRoot.test.tsx Collapsible Accordion --no-watch", "passed": 362, "failed": 0, "skipped": 0, "files": 9, "unhandled": 0, "note": "Before reverted Collapsible experiments; final retained production is identical to this tested implementation. DialogRoot146/146." },
+        { "command": "rtk pnpm test:chromium use-render --no-watch", "passed": 14, "failed": 0, "skipped": 0, "files": 1, "unhandled": 0 }
+      ],
+      "acceptedNonblocking": "Collapsible external-layout EFFECT_RELAY_TEAR accepted by user provided behavior remains correct. Warning retained; integrated diagnostic gate must not be called green.",
+      "inventoryComplete": false,
+      "browserQualification": "Complete appropriate350-file Chromium and350-file WebKit selections passed with final transitive-dependency checkpoint revalidation. Native pointer-lock verified separately; no added test skips. Exact commands and capability exclusions below.",
+      "finalQualification": {
+        "types": "Project, demo and test typechecks passed after final implementation edits.",
+        "jsdom": { "command": "rtk pnpm test:jsdom --no-watch", "files": 315, "passedFiles": 312, "excludedFiles": 3, "passed": 6428, "failed": 0, "skipped": 272, "unhandled": 0, "log": "/Users/avi/.local/share/opencode/tool-output/tool_117b777fb0016iEL2941WN1J69" },
+        "ssr": { "command": "rtk pnpm test:ssr --no-watch", "files": 47, "passed": 132, "failed": 0, "skipped": 0, "unhandled": 0 },
+        "chromium": {
+          "command": "rtk proxy env HARNESS_BATCH_DIRECTORY=/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-parity-chromium-final-20261007 pnpm test:chromium packages/solid/src test/harness test/contracts test/integration/RootCrossFamily.test.tsx -t \"^(?!.*trusted Chromium pointer-lock acquisition).*$\" --no-watch",
+          "files": 350, "passed": 7268, "failed": 0, "skippedOrExcluded": 6, "unhandled": 0, "incomplete": 0,
+          "finalCheckpointPass": { "executed": 40, "resumedWithMatchingTransitiveFingerprint": 310 },
+          "evidence": "/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-parity-chromium-final-20261007/summary.json",
+          "note": "One native-document pointer-lock acquisition test is deliberately selected in its proper separate lane; remaining5 are existing source/environment exclusions. Initial unfiltered350-file run was7242 passed/1 native-lane failure/5 exclusions, not a current component failure."
+        },
+        "webkit": {
+          "command": "rtk proxy env HARNESS_BROWSERS=webkit HARNESS_BATCH_DIRECTORY=/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-parity-webkit-final-20261007 pnpm test:browsers packages/solid/src test/harness test/contracts test/integration/RootCrossFamily.test.tsx -t \"^(?!.*(?:Chromium CDP|touch outside modal=|captured pointer release outside|pointer-lock|trusted Chromium scrub|real Chromium|source Control text node touch origin)).*$\" --no-watch",
+          "files": 350, "passed": 7218, "failed": 0, "skippedOrExcluded": 56, "unhandled": 0, "incomplete": 0,
+          "finalCheckpointPass": { "executed": 38, "resumedWithMatchingTransitiveFingerprint": 312 },
+          "evidence": "/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-parity-webkit-final-20261007/summary.json",
+          "note": "Capability selection excludes Chromium-only CDP gestures, pointer-lock and the desktop WebKit unavailable Touch constructor bodies, retaining their Chromium/native evidence. The initial unfiltered full run exposed35 failures; actual fixture/focus failures repaired, unavailable capabilities classified explicitly.56 includes existing source/environment predicates and command-selection exclusions; no test skip added."
+        },
+        "nativeDocument": { "command": "rtk pnpm test:chromium:native NumberField.browser --no-watch", "passed": 4, "failed": 0, "skipped": 0, "unhandled": 0, "note": "Run alone after other real pointer browser work finished. Earlier concurrent native replay produced a movement-delta mismatch; retained as testing-debt runner investigation, no Number Field edits/assertion changes." },
+        "protectedFiltering": { "command": "rtk pnpm test:jsdom ComboboxDerivedItems filter.test ComboboxFilter --no-watch", "passed": 51, "failed": 0, "skipped": 0, "unhandled": 0 },
+        "realLists": { "command": "rtk proxy node /var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-filter-pipeline-probe.mjs", "result": "10/10 Chromium/WebKit behavior records clean with no diagnostics/page errors; simple and four10000-item demos, both styles. No profile flag; comparison counters disabled, protected unit tests retain work-count evidence." },
+        "interactionGate": { "command": "rtk pnpm test:interactions", "passedStages": 6, "stages": 7, "behaviorPassed": 48, "scenarios": 48, "diagnosticClean": 46, "acceptedDiagnostics": 2, "errors": 0, "evidence": "docs/generated/browser/runtime-gate/summary.json", "note": "Technically red solely for accepted Collapsible external-layout relay diagnostic in both styles. Final post-Field-fix run types/catalog/docs/jsdom3412/SSR42/Chromium149 passed. No warning suppression/budget changes." },
+        "nodeOnly": "RootExports8 tests pass in complete jsdom Node-backed lane; correctly excluded by explicit browser file scope, not altered or skipped in the test.",
+        "debt": "testing-debt.md",
+        "inventoryComplete": false,
+        "finishBoundary": "User requested wrap-up. Runtime repairs and declared qualification complete; remaining exhaustive source-body comparisons remain explicit debt rather than a full migration claim."
+      }
+    },
+    "scope": "User-authorized direct production/fixture repair batch; source inventory remains incomplete. This section supersedes older failure statuses below, which are retained as historical evidence.",
+    "productionFiles": [
+      "packages/solid/src/menu/trigger/MenuTrigger.tsx",
+      "packages/solid/src/menu/filter-root/MenuFilterImpl.tsx",
+      "packages/solid/src/filter-dropdown/item/useFilterDropdownItem.ts",
+      "packages/solid/src/floating-ui-react/components/FloatingFocusManager.tsx",
+      "packages/solid/src/progress/root/ProgressRootContext.tsx",
+      "packages/solid/src/slider/root/SliderRootContext.ts",
+      "packages/solid/src/scroll-area/root/ScrollAreaRootContext.ts",
+      "packages/solid/src/scroll-area/scrollbar/ScrollAreaScrollbarContext.ts",
+      "packages/solid/src/scroll-area/viewport/ScrollAreaViewportContext.ts"
+    ],
+    "testFiles": [
+      "packages/solid/src/menu/Menu.review.test.tsx",
+      "packages/solid/src/navigation-menu/NavigationMenu.review.test.tsx",
+      "packages/solid/src/scroll-area/ScrollArea.test.tsx",
+      "packages/solid/src/dialog/root/DialogRoot.test.tsx",
+      "packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx",
+      "test/harness/AvatarEndpoint.browser.test.tsx"
+    ],
+    "checks": [
+      { "command": "rtk pnpm typescript", "result": "passed after capturing the narrowed floating host before its queued callback" },
+      { "command": "rtk pnpm exec tsc --noEmit -p docs/tsconfig.demos.json", "result": "passed" },
+      { "command": "rtk pnpm test:types --no-watch", "result": "passed" },
+      { "command": "rtk pnpm test:jsdom --no-watch", "result": "passed", "files": 314, "passedFiles": 311, "excludedFiles": 3, "passed": 6396, "failed": 0, "skipped": 272, "unhandled": 0, "log": "/Users/avi/.local/share/opencode/tool-output/tool_11758f55f001W5j4k9pRYcmO1v", "note": "Followed only by a type-narrowing capture of the same host, then green integrated gate types/jsdom. Exclusions and source skips are not browser passes." },
+      { "command": "rtk pnpm test:jsdom ComboboxDerivedItems filter.test ComboboxFilter --no-watch", "result": "passed", "files": 5, "passed": 51, "failed": 0, "skipped": 0, "unhandled": 0 },
+      { "command": "rtk pnpm test:chromium packages/solid/src/menu/Menu.review.test.tsx packages/solid/src/scroll-area/ScrollArea.test.tsx packages/solid/src/progress/label/ProgressLabel.test.tsx packages/solid/src/slider/control/SliderControl.review.test.tsx packages/solid/src/navigation-menu/NavigationMenu.review.test.tsx packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx --no-watch", "result": "passed", "files": 6, "passed": 515, "failed": 0, "skipped": 1, "unhandled": 0 },
+      { "command": "rtk pnpm test:chromium packages/solid/src/dialog/Dialog.browser.test.tsx --no-watch", "result": "46 passed, 0 failed, 0 unhandled (executed as part of the two-file Dialog run)" },
+      { "command": "rtk pnpm test:chromium AvatarEndpoint --no-watch", "result": "passed", "passed": 2, "failed": 0, "unhandled": 0 },
+      { "command": "rtk pnpm test:chromium:native NumberField.browser --no-watch", "result": "passed", "passed": 4, "failed": 0, "unhandled": 0, "note": "No Number Field production/test edits in this repair batch. New proper-lane execution supersedes historical 2/2 red outcome; iframe pointer-lock capability remains distinct." },
+      { "command": "rtk pnpm test:chromium packages/solid/src/dialog/root/DialogRoot.test.tsx -t \"keyed generated|externally-opened|completed exit\" --no-watch", "result": "failed", "passed": 6, "failed": 6, "filteredOut": 134, "unhandled": 0, "note": "Three corrected keyed label cases and three CSS-animation opening cases pass. Three transitionend counts remain 0 instead of 1, and three no-animation externally-opened completion counts remain 1 instead of 2. Filtered-out registrations are selection exclusions, not unconditional source skips." },
+      { "command": "rtk pnpm test:interactions", "result": "6/7 stages passed; interaction stage failed only on Collapsible EFFECT_RELAY_TEAR in CSS Modules and Tailwind", "evidence": "docs/generated/browser/runtime-gate/summary.json", "jsdom": { "passed": 3407, "skipped": 110, "files": 128 }, "ssr": { "passed": 42, "files": 14 }, "chromium": { "passed": 149, "files": 10 }, "interactionScenarios": { "behaviorPassed": 48, "diagnosticClean": 46, "failed": 2 }, "note": "No diagnostic suppression or budget changes; behavior success does not close diagnostics." },
+      { "command": "rtk proxy node /var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-filter-pipeline-probe.mjs", "result": "10/10 inspected behavior records passed with empty diagnostics/errors: simple Combobox plus four real 10,000-item virtualized demos in Chromium and WebKit", "profileCountersEnabled": false, "filterRerunSelfMs": { "chromium": { "autocompleteCss": 4.5, "autocompleteTailwind": 4.3, "comboboxCss": 3.1, "comboboxTailwind": 3.2 }, "webkit": { "autocompleteCss": 5, "autocompleteTailwind": 4, "comboboxCss": 3, "comboboxTailwind": 5 } }, "note": "Single fresh-browser sweep, not the historical two-pass 20/20 report. Comparison-count and converter correctness evidence comes from protected unit checks. No filter.ts or createDerivedItems.ts edits." }
+    ],
+    "resolved": ["Menu setup-time handle read, filtered-list ref read, filtered-item context-option read diagnostics", "Menu RAF-dependent item queries and omitted source Trigger fixtures", "Scroll Area native pointerenter/leave adaptation and nested error-boundary crash fixture", "Progress/Slider/Scroll Area exact required-context messages", "Dialog display:contents inert-template sibling-marking crash", "Dialog overlap timer attribution: jsdom SelectionImpl selectionchange timeout, not component-owned timer", "Avatar bootstrap restoration before native hydration completion", "Navigation Menu source uses fireEvent.click rather than additional hover interactions"],
+    "remaining": ["Outstanding manual comparisons remain except concrete continuation currentRepair mappings; green counts are not parity proof", "Collapsible measured-layout diagnostic accepted by user; no suppression", "FloatingFocusManager fallback root cause and native-browser fixture capability debt are recorded in testing-debt.md"],
+    "handoff": "test/source-parity-manual/CONTINUE.md"
+  },
+  "latestBatch": {
+    "inventoryComplete": false,
+    "typecheck": { "command": "rtk pnpm test:types --no-watch", "result": "passed after native minlength spelling, explicit renderProps id union and augmented native-event cast corrections; passed again after bounded fixture corrections" },
+    "jsdom": {
+      "command": "rtk pnpm test:jsdom --no-watch",
+      "result": "failed",
+      "files": 314,
+      "failedFiles": 7,
+      "passed": 6307,
+      "failed": 86,
+      "skipped": 270,
+      "unhandled": 0,
+      "log": "/Users/avi/.local/share/opencode/tool-output/tool_1173f1f35001uX9HIWmDjRZHZl",
+      "note": "Before the bounded Form exit-removal and Toggle setup-spy fixture corrections, and before final ToggleGroup sequences and Progress.Label source-error addition. These counts are not the final whole-suite result."
+    },
+    "boundedCorrectionCheck": {
+      "command": "rtk pnpm test:jsdom packages/solid/src/toggle/Toggle.test.tsx packages/solid/src/toggle-group/ToggleGroup.test.tsx packages/solid/src/progress/label/ProgressLabel.test.tsx packages/solid/src/form/Form.field.test.tsx --no-watch",
+      "result": "failed: exact Progress.Label upstream error text differs from native Solid error; corrected Toggle and Form fixtures pass",
+      "files": 4,
+      "passed": 126,
+      "failed": 1,
+      "skipped": 15,
+      "unhandled": 0
+    },
+    "chromium": { "result": "not executed for this batch; deferred to user", "command": "rtk proxy pnpm test:chromium --no-watch > /tmp/baseui-solid2-chromium-parity.log 2>&1" },
+    "newRetainedFailures": [
+      { "targetFile": "packages/solid/src/scroll-area/ScrollArea.test.tsx", "sourceFiles": ["packages/react/src/scroll-area/viewport/ScrollAreaViewport.test.tsx", "packages/react/src/scroll-area/thumb/ScrollAreaThumb.test.tsx", "packages/react/src/scroll-area/content/ScrollAreaContent.test.tsx"], "assertions": "Three exact source context-error strings receive generic native Solid context error; Thumb and Content also emit REACTIVITY_HALTED. Source pointerover native-path assertion lacks data-hovering.", "reproduction": "rtk pnpm test:jsdom ScrollArea.test.tsx --no-watch", "classification": "retained source replays; pointer-path fixture-versus-production attribution incomplete" },
+      { "targetFile": "packages/solid/src/progress/label/ProgressLabel.test.tsx", "sourceFile": "packages/react/src/progress/label/ProgressLabel.test.tsx", "targetTitle": "rejects the actual Label outside its required provider", "assertion": "Expected Base UI: ProgressRootContext is missing. Progress parts must be placed within <Progress.Root>.; received native generic Solid context error", "reproduction": "rtk pnpm test:jsdom ProgressLabel.test.tsx --no-watch", "classification": "exact source error retained; no native-message parity substitution" }
+    ],
+    "accounting": "All existing Solid-only and pre-existing dirty coverage retained. Browser/environment exclusions, unconditional upstream skips, type/spec, hydration, platform and temporal classes remain separate in family ledgers. Jsdom skipped registrations are not browser passes. Substantial partial/missing and unreviewed source scope remains explicitly recorded in family ledgers."
+  },
+  "typecheck": {
+    "command": "rtk pnpm test:types --no-watch",
+    "result": "passed after correcting Accordion renderProps empty-array inference and Tooltip native CSS property spelling"
+  },
+  "parallelRuns": [
+    {
+      "command": "rtk pnpm test:jsdom --no-watch",
+      "result": "failed",
+      "files": 314,
+      "passed": 6062,
+      "failed": 81,
+      "skipped": 267,
+      "unhandled": 0,
+      "log": "/Users/avi/.local/share/opencode/tool-output/tool_11623c467001N4f8l7PknbQE9k",
+      "note": "AutocompleteRoot's invented popup-mount assertion was subsequently corrected against the actual upstream body and verified with all 32 file tests passing; the other failures remain red. Do not describe this whole run as passed."
+    },
+    {
+      "command": "rtk pnpm test:chromium --no-watch",
+      "result": "900000ms tool watchdog interrupted the 350-file serial harness after file 257 completed",
+      "log": "/Users/avi/.local/share/opencode/tool-output/tool_11624dd1c001jN7I5rhKYwcbVp",
+      "note": "Existing runner deliberately uses fresh per-file processes. Its isolation/configuration was not changed. Remaining files executed with existing filtered runner commands below."
+    }
+  ],
+  "followupRuns": [
+    {
+      "command": "rtk pnpm test:jsdom AutocompleteRoot.test.tsx --no-watch",
+      "passed": 32,
+      "failed": 0,
+      "result": "passed"
+    },
+    {
+      "command": "rtk pnpm test:chromium packages/solid/src/slider packages/solid/src/switch packages/solid/src/tabs packages/solid/src/toast packages/solid/src/toggle packages/solid/src/toolbar packages/solid/src/tooltip packages/solid/src/unstable-use-media-query packages/solid/src/use-render packages/solid/src/utils test/integration test/harness --no-watch",
+      "files": 95,
+      "passed": 1683,
+      "failed": 1,
+      "skipped": 3,
+      "unhandled": 2,
+      "failedBatches": 3,
+      "result": "failed: Slider error contract, existing AvatarEndpoint hydration replay, and existing Node-only RootExports included by browser runner",
+      "log": "/Users/avi/.local/share/opencode/tool-output/tool_116355ba6001vehvdJwRgmWMQQ"
+    },
+    {
+      "command": "rtk pnpm test:chromium AutocompleteRoot.test.tsx test/contracts --no-watch",
+      "files": 2,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0,
+      "result": "passed; includes remaining PackageResolution file and corrected AutocompleteRoot"
+    }
+  ],
+  "componentFailures": [
+    {
+      "upstreamFile": "packages/react/src/slider/control/SliderControl.test.tsx",
+      "sourceScenario": "descriptive missing Slider.Root context error",
+      "targetFile": "packages/solid/src/slider/control/SliderControl.review.test.tsx",
+      "targetTitle": "Slider Control outside Root throws the descriptive source error",
+      "lanes": ["jsdom", "chromium"],
+      "failingAssertion": "Expected Base UI: SliderRootContext is missing. Slider parts must be placed within <Slider.Root>.; received native generic Solid context error.",
+      "reproduction": ["rtk pnpm test:jsdom SliderControl.review --no-watch", "rtk pnpm test:chromium SliderControl.review --no-watch"],
+      "productionChange": "none; exact assertion retained"
+    },
+    {
+      "upstreamFiles": ["packages/react/src/menu/trigger/MenuTrigger.test.tsx", "packages/react/src/menu/filter-root/MenuFilterParts.test.tsx", "packages/react/test/popupConformanceTests.tsx"],
+      "targetFile": "packages/solid/src/menu/Menu.review.test.tsx",
+      "sourceScenarios": "expanded conformance and popup-helper cases mapped in menu.json",
+      "lanes": ["jsdom", "chromium"],
+      "failingAssertion": "HARNESS_DIAGNOSTICS reports STRICT_READ_UNTRACKED in Menu.Trigger and filtered List/Item variants. Several pointer-open cases stay closed; filtered menu visibility assertions see opacity:0 positioner.",
+      "reproduction": ["rtk pnpm test:jsdom Menu.review --no-watch", "rtk pnpm test:chromium Menu.review --no-watch"],
+      "productionChange": "none; diagnostics and behavior assertions retained",
+      "classification": "observed runtime failures; precise production-versus-fixture attribution of every Menu failure remains incomplete"
+    },
+    {
+      "upstreamFile": "packages/react/src/dialog/popup/DialogPopup.test.tsx",
+      "sourceScenario": "display: contents ancestor initial focus",
+      "targetFile": "packages/solid/src/dialog/Dialog.browser.test.tsx",
+      "targetTitle": "display: contents ancestor preserves initial focus after trigger opening",
+      "lane": "chromium",
+      "failingAssertion": "Null contains access in floating-ui-react/utils/markOthers.ts halts the reactive system during focus setup; two unhandled errors.",
+      "reproduction": "rtk pnpm test:chromium Dialog.browser --no-watch",
+      "productionChange": "none"
+    },
+    {
+      "upstreamFile": "packages/react/src/dialog/root/DialogRoot.test.tsx",
+      "targetFile": "packages/solid/src/dialog/root/DialogRoot.test.tsx",
+      "parameters": { "triggerGraph": ["contained triggers", "detached triggers", "multiple detached triggers"] },
+      "lane": "chromium",
+      "failures": [
+        { "targetTitle": "completed exit transition preserves accessible popup until its transitionend", "failingAssertion": "transitionend callback count expected 1; actual 0" },
+        { "targetTitle": "externally-opened completion animation=false", "failingAssertion": "completion callback count expected 2; actual 1" }
+      ],
+      "reproduction": "rtk pnpm test:chromium DialogRoot.test.tsx --no-watch",
+      "productionChange": "none; source callback-count assertions retained",
+      "classification": "observed source replays; no component-debugging repair attempted"
+    },
+    {
+      "upstreamFile": "packages/react/src/dialog/root/DialogRoot.detached-triggers.test.tsx",
+      "targetFile": "packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx",
+      "targetTitle": "a trigger from the outgoing root resolves in the same committed overlap and survives handoff",
+      "lane": "jsdom",
+      "failingAssertion": "HARNESS_TIMER_LEAK: 1 pending timers at teardown",
+      "reproduction": "rtk pnpm test:jsdom DialogRoot.detached-triggers --no-watch",
+      "classification": "lifetime failure; component versus fixture attribution unresolved, no timer drain added"
+    }
+  ],
+  "laneOrHarnessIssues": [
+    { "targetFile": "packages/solid/src/number-field/NumberField.browser.test.tsx", "scenario": "trusted Chromium pointer-lock acquisition, movement and final release", "failure": "WrongDocumentError in iframe browser lane", "properLaneCommand": "rtk pnpm test:chromium:native NumberField.browser --no-watch", "nativeDocumentResult": { "passed": 2, "failed": 2, "scrubExpectedValue": 10, "scrubActualValue": 651 }, "note": "Native-document run was performed by the previous parent after the original verification entry; both native failures remain unresolved. Do not fabricate acquisition capability or relax the source value assertion." },
+    { "targetFile": "test/harness/AvatarEndpoint.browser.test.tsx", "failure": "two unhandled ReferenceError: _$HY is not defined despite body assertions passing", "reproduction": "rtk pnpm test:chromium AvatarEndpoint --no-watch", "note": "Preexisting harness file untouched." },
+    { "targetFile": "test/integration/RootExports.test.ts", "failure": "browser import fails: node:child_process.execFileSync externalized", "reproduction": "rtk pnpm test:chromium RootExports --no-watch", "note": "Node-only suite selected by existing browser include; runner/config preserved." }
+  ],
+  "inventoryLimitations": "Several family ledgers are exhaustive, others still incomplete. No repository-wide disposition totals are asserted; passing lane tests never substitutes for actual manual source-case review."
+}

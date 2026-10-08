@@ -1,0 +1,313 @@
+[
+  {
+    "id": "bsolid-distribution",
+    "title": "Ship a verified Solid 2 package with subpath imports, tree shaking and npm releases",
+    "type": "epic",
+    "priority": 1,
+    "deps": [],
+    "description": "WHY: A source port is not a distributable library until independent consumers can resolve its runtime, declarations and optional adapters. Canonical source is /Users/avi/avir-oss/ref/base-ui at 19511bb171f3b360b006c94cf6d07e53cb446505; sourcePaths in every ticket are relative to that checkout. This is a fresh React-to-Solid 2 RC13 port; the old Solid port is not evidence. READ FIRST: package.json, packages/react/package.json, babel.config.mjs, packages/react/tsconfig.build.json, scripts/README.md and .github/workflows/publish.yml. Upstream uses code-infra build with Babel, declaration emission, rewritten exports and copied notices; releases use Lerna/code-infra and MUI-specific workflow infrastructure, not Changesets. IMPLEMENT: choose compiled, module-preserving ESM DOM and SSR builds with separate declarations, explicit environment conditions and the entire upstream subpath key inventory. Do not advertise CommonJS or a preserved-JSX solid condition. Reuse the upstream manifest enumeration, file-copy/license conventions, package validation tools and documentation staging semantics; replace React compilation and organization-bound publishing. Verify solid-js and @solidjs/web 2.0.0-rc.13, @solidjs/compiler and @solidjs/babel-plugin 2.0.0-rc.13, and @solidjs/vite-plugin 3.0.0-next.47. Keep baseui-solid2 private until the user selects a publish name. ORDER: contract first; build and declarations independently; shaking and release tooling next; packed-consumer and publication gates follow bsolid-components-complete. Documentation infrastructure proceeds independently. WRITE BOUNDARY: this epic owns no files. bsolid-dist-contract exclusively integrates root/library manifests, workspace configuration and lockfile after bootstrap; docs-site owns its local docs manifest. Child workers submit shared dependency/script requests to these owners. NON-GOALS: component behavior, old-port compatibility, a second public utilities package, or assumed npm access. VALIDATE: require actual tarball consumers, browser and server execution, declaration checks, optional-peer matrices, bundle evidence and retained MIT notices. Completion means all children meet their acceptance criteria; unavailable publishing credentials remain an explicit unresolved publication gate, never a fabricated successful release.",
+    "acceptance": [
+      "The package has verified DOM, SSR and declaration targets for every upstream export key, including internals, types and unstable-use-media-query.",
+      "Published runtime and declaration dependency graphs contain no React dependencies or source-workspace aliases.",
+      "Tree-shaking and mount-time style/event behavior are demonstrated against optimized consumer builds.",
+      "The placeholder remains private until a user-selected npm identity is integrated by its designated owner.",
+      "Final packed-consumer and publication tasks depend on component completion and record real command/artifact evidence."
+    ],
+    "labels": ["solid2", "distribution", "epic", "release"],
+    "owns": [],
+    "sourcePaths": ["package.json", "packages/react/package.json", "babel.config.mjs", "packages/react/tsconfig.build.json", "scripts/README.md", ".github/workflows/publish.yml", "LICENSE"]
+  },
+  {
+    "id": "bsolid-documentation",
+    "title": "Generate source-tracked documentation with Solid 2 demos and automatic API references",
+    "type": "epic",
+    "priority": 1,
+    "deps": [],
+    "description": "WHY: Users need a generated, navigable website and runnable examples, while upstream already supplies substantial writing, styling, assets and metadata. Canonical source is /Users/avi/avir-oss/ref/base-ui at 19511bb171f3b360b006c94cf6d07e53cb446505, never the old Solid port. READ FIRST: docs/package.json, docs/next.config.mjs, docs/src/utils/createDemo.ts, docs/src/utils/createTypes.tsx, docs/src/app/sitemap/index.ts and CONTRIBUTING.md. Upstream is Next 16/React 19 with server-only factories, webpack/Turbopack precomputation, generated types.md, MDX metadata extraction and React preview/editor infrastructure. IMPLEMENT: use standalone Vite 8 with the verified RC13 plugin, build-time MDX AST to static HTML, and lazy Solid 2 islands for demos and interactive documentation controls. Ordinary links and generated per-route HTML provide navigation without assuming a Solid 1 router or SolidStart. Choose this over a retained React/Next shell because that shell imports React Base UI throughout and its demo/code factories assume React elements; a mixed shell would retain a second runtime and a permanent bridge. Reuse upstream MDX prose, anatomy, headings, CSS, assets, ordering and renderer-independent Node transformations through a tracked source manifest. Translate only framework-specific constructs, never silently strip unsupported MDX. Generate API tables from Solid declarations, not copied React tables. ORDER: content inventory, site/API infrastructure, demos and semantic handbooks, CI, then completeness after bsolid-components-complete. WRITE BOUNDARY: children own dedicated docs pipeline, site, generated output and audit paths; component workers retain docs/components/<family>/**. All shared manifest and lock changes pass through bsolid-dist-contract. NON-GOALS: cloning the entire Next application, porting upstream careers/private experiments/analytics, live arbitrary-code compilation, or claiming upstream accessibility test coverage. VALIDATE: static output must contain prose and API tables without JavaScript; interactive demos must use the Solid package, expose matching source tabs, dispose cleanly and pass keyboard checks. Final generation reconciles every upstream public page and component with an explicit disposition and retains MIT attribution.",
+    "acceptance": [
+      "The chosen framework and static-MDX/Solid-island boundary are implemented without React in the website browser graph.",
+      "Every reused or adapted content/tooling asset has a pinned source record and preserved applicable notices.",
+      "API references are generated automatically from Solid declarations and reflect Solid-native rendering/event contracts.",
+      "Interactive previews, source tabs, navigation, accessibility guidance and RC13/version information are delivered.",
+      "Infrastructure can complete before components; the final completeness audit explicitly depends on bsolid-components-complete."
+    ],
+    "labels": ["solid2", "documentation", "epic", "upstream-reuse"],
+    "owns": [],
+    "sourcePaths": ["docs/package.json", "docs/next.config.mjs", "docs/src/utils/createDemo.ts", "docs/src/utils/createTypes.tsx", "docs/src/app/sitemap/index.ts", "docs/src/mdx-components.tsx", "CONTRIBUTING.md", "LICENSE"]
+  },
+  {
+    "id": "bsolid-dist-contract",
+    "title": "Own package identity, dependency integration and the complete conditional-export contract",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-distribution",
+    "deps": ["bsolid-bootstrap"],
+    "description": "WHY: Parallel workers need one authoritative package surface and one shared-file owner. READ FIRST: upstream packages/react/package.json, packages/react/src/types/index.ts, packages/react/src/unstable-use-media-query/index.ts and both temporal adapter implementations at the canonical SHA. Also read bootstrap's actual target manifests before changing them. IMPLEMENT: snapshot every upstream exports key into distribution/exports.json, preserving root, component, utility, types, unstable-use-media-query and every internals entry without wildcard widening. Record target paths and runtime versus type-only intent; root barrel implementation remains with main integration. Specify ESM-only type=module output: each runtime entry resolves types first, browser to dom, node/worker/deno to server, and default to server. Browser precedes server conditions when both are supplied; test the matrix rather than assuming resolver behavior. Do not add require or solid conditions. Keep the workspace package named baseui-solid2 with private=true and no invented scope. Record a publication-name decision field and generate install examples from it. Pin development/CI to solid-js and @solidjs/web 2.0.0-rc.13, compiler/babel-plugin 2.0.0-rc.13 and vite-plugin 3.0.0-next.47; require matching renderer/reactivity peers and jsxImportSource=@solidjs/web. Inventory all external imports, including date-fns, @date-fns/tz, luxon and exposed @types/luxon requirements. The upstream Luxon adapter is exported but Luxon is only a dev dependency: explicitly correct that with isolated optional peer/type contracts. Exclude React, react-dom, @types/react, @floating-ui/react-dom and use-sync-external-store. WRITE BOUNDARY: own distribution contract files, root/package manifests, workspace configuration and lockfile after bootstrap handoff. Retain this integration responsibility when later children request tools/scripts; no parallel worker edits these files. Preserve upstream MIT copyright in LICENSE and NOTICE. NON-GOALS: implementing missing exports, modifying family barrels, installing legacy Solid tooling or guessing npm ownership. VALIDATE: compare export-key sets mechanically, validate proposed output paths, install the agreed pinned toolchain and produce a dependency audit with all shared-file requests accounted for.",
+    "acceptance": [
+      "distribution/exports.json contains an exact key-set comparison against the pinned upstream export map and an owner for every missing implementation.",
+      "A documented types/browser/node/worker/deno/default ESM resolution matrix excludes require and preserved-JSX solid entries.",
+      "baseui-solid2 remains private and the unresolved public name is represented explicitly rather than as @base-ui/solid.",
+      "RC13 runtime/compiler pins, the next.47 plugin and @solidjs/web JSX typing are verified against actual package metadata.",
+      "Optional date-fns, timezone, Luxon and Luxon declaration dependencies are explicitly classified with no React peer/runtime leak.",
+      "One integration owner controls shared manifests/lockfiles, and the original MIT copyright and permission text are retained."
+    ],
+    "labels": ["solid2", "packaging", "integration-owner", "exports"],
+    "owns": ["distribution/exports.json", "distribution/package-contract.json", "distribution/dependencies.json", "distribution/README.md", "package.json", "pnpm-workspace.yaml", "pnpm-lock.yaml", ".npmrc", "packages/solid/package.json", "LICENSE", "NOTICE"],
+    "sourcePaths": ["packages/react/package.json", "packages/react/src/types/index.ts", "packages/react/src/unstable-use-media-query/index.ts", "packages/react/src/internals/temporal-adapter-date-fns/TemporalAdapterDateFns.ts", "packages/react/src/internals/temporal-adapter-luxon/TemporalAdapterLuxon.ts", "pnpm-workspace.yaml", "LICENSE"]
+  },
+  {
+    "id": "bsolid-dist-build",
+    "title": "Build module-preserving RC13 DOM and server artifacts with a staged package manifest",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-distribution",
+    "deps": ["bsolid-dist-contract", "bsolid-harness"],
+    "description": "WHY: Upstream's build contract is useful, but its React Babel configuration cannot produce Solid artifacts. READ FIRST: package.json, babel.config.mjs, packages/react/package.json, packages/react/.npmignore, packages/react/scripts/stagePublishedDocs.mjs and scripts/inlineScripts.mts. Research verified @mui/internal-code-infra@0.1.1-canary.4 src/cli/cmdBuild.mjs: it defaults to flat esm/cjs output, invokes Babel, emits declarations, rewrites exports/imports and copies README/LICENSE/CHANGELOG. Its Babel 8/React pipeline conflicts with blindly adopting RC13's Babel 7 fallback. IMPLEMENT: preserve the useful clean-build, manifest generation, copy/license and exclusion conventions in a narrow build driver using @solidjs/compiler 2.0.0-rc.13, moduleName=@solidjs/web, generate=dom and generate=ssr, with hydratable output verified by the harness. Keep import boundaries and relative extensions intact; externalize runtime peers and optional adapters. Produce packages/solid/build/dom and server alongside independently generated types. Clean only owned output directories; never remove build/types while declaration generation runs. Build-only compiler packages never become consumer peers. Use @solidjs/babel-plugin only as an explicitly tested fallback, not as an additional JSX pass. Respect #prehydration browser stubs versus server payloads and resolve #formatErrorMessage to the new implementation; do not emit React directives or unresolved workspace-only aliases. Generate the staged manifest from the contract, retaining private status until the identity decision. Preserve source maps and meaningful sourcesContent without publishing tests or absolute checkout paths. WRITE BOUNDARY: scripts/distribution/build/**, build configuration, generated build output and build-specific reports only. Request manifest, dependency and root-script changes through bsolid-dist-contract; never modify component source to disguise compilation failures. NON-GOALS: CommonJS, preserved JSX, bundling Solid itself, React minification plugins or full upstream code-infra forking. VALIDATE: establish pnpm build:package, compile small harness fixtures before all components exist, verify DOM/server helper imports and determinism, then run SSR/hydration and production browser probes. Final whole-library export validation belongs to bsolid-dist-pack.",
+    "acceptance": [
+      "pnpm build:package emits reproducible module-preserving DOM/server ESM and a contract-derived staged manifest.",
+      "Compiler output imports @solidjs/web, contains no raw JSX or React helpers, and keeps Solid/compiler dependencies external or build-only as appropriate.",
+      "SSR evaluation avoids DOM globals and a hydratable browser fixture attaches without mismatch.",
+      "Prehydration and error-format aliases resolve to the correct artifacts in both condition sets.",
+      "Build cleanup, exclusions, source maps, README/license copying and optional Markdown staging are verified.",
+      "Build infrastructure passes on isolated fixtures without waiting for bsolid-components-complete."
+    ],
+    "labels": ["solid2", "build", "esm", "ssr"],
+    "owns": ["scripts/distribution/build/**", "packages/solid/build.config.mjs", "packages/solid/build/dom/**", "packages/solid/build/server/**", "packages/solid/build/package.json", "packages/solid/build/README.md", "packages/solid/build/LICENSE", "packages/solid/build/NOTICE", "packages/solid/build/CHANGELOG.md", "packages/solid/build/docs/**", "tracking/distribution/build.json"],
+    "sourcePaths": ["package.json", "babel.config.mjs", "packages/react/package.json", "packages/react/.npmignore", "packages/react/scripts/stagePublishedDocs.mjs", "scripts/inlineScripts.mts", "packages/react/src/internals/prehydrationScript.stub.ts"]
+  },
+  {
+    "id": "bsolid-dist-types",
+    "title": "Emit portable Solid declarations and check every public type entrypoint",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-distribution",
+    "deps": ["bsolid-dist-contract", "bsolid-harness"],
+    "description": "WHY: A working browser demo can hide React declaration imports, source aliases and missing namespace exports that break installed consumers and automatic API generation. READ FIRST: upstream packages/react/tsconfig.build.json, packages/react/api-extractor.json, packages/react/tsconfig.api-extractor.json, packages/react/src/types/index.ts and CONTRIBUTING.md's namespace guidance. Upstream emits declarations separately from Babel; its API Extractor configuration validates types but disables docModel and rollups, so it is not the website's API generator. IMPLEMENT: create declaration-only emission into packages/solid/build/types with jsx=preserve and jsxImportSource=@solidjs/web, retaining JSDoc, generic inference, ref/native event types and namespaced Props/State aliases. Consume the main port's actual public types rather than reproducing React HTMLAttributes or SyntheticEvent. Preserve internal declarations needed transitively by public entries without widening the runtime export map. Ensure each declared subpath has an accurate types target, including the type-only ./types and ./internals/types cases; any empty runtime module must match the contract rather than accidentally disappearing. Translate upstream API Extractor validation and use publint/AreTheTypesWrong where applicable to the ESM-only contract. Verify Bundler and NodeNext consumers with skipLibCheck=false and no ambient React types. Inspect Luxon declaration references explicitly: @types/luxon is optional only if ordinary consumers do not traverse it; importing the adapter must receive documented matching dependencies. WRITE BOUNDARY: declaration configs, scripts/distribution/types/**, test/distribution/types/**, generated types output and the declaration report. Shared compiler settings, manifests and lockfile remain the contract owner's responsibility; component signatures are read-only and defects go to their owners. NON-GOALS: hand-authoring parallel .d.ts APIs, loosening all checks with any, or using React-generated types.md as documentation truth. VALIDATE: establish pnpm types:package and pnpm test:package-types; run representative generic, namespace, render-callback and native-event fixtures immediately, then enumerate every completed export at the final packed-consumer gate.",
+    "acceptance": [
+      "Declaration generation retains JSDoc and resolves JSX through @solidjs/web without React namespace/import references.",
+      "Generic component props, native event details, live render callbacks and namespaced aliases pass positive and negative consumer cases.",
+      "Bundler and NodeNext resolution pass with skipLibCheck=false and no source-path aliases or React ambient types.",
+      "Types-only exports and optional adapter declarations have explicit, tested resolution behavior.",
+      "pnpm types:package and pnpm test:package-types produce evidence consumable by docs API generation and final pack validation."
+    ],
+    "labels": ["solid2", "types", "declarations", "consumer-contract"],
+    "owns": ["packages/solid/tsconfig.build.json", "packages/solid/tsconfig.api-extractor.json", "packages/solid/api-extractor.json", "packages/solid/build/types/**", "scripts/distribution/types/**", "test/distribution/types/**", "tracking/distribution/types.json"],
+    "sourcePaths": ["packages/react/tsconfig.build.json", "packages/react/api-extractor.json", "packages/react/tsconfig.api-extractor.json", "packages/react/src/types/index.ts", "packages/react/src/accordion/index.ts", "CONTRIBUTING.md"]
+  },
+  {
+    "id": "bsolid-dist-shaking",
+    "title": "Prove subpath isolation and tree shaking without removing mount-time behavior",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-distribution",
+    "deps": ["bsolid-dist-build", "bsolid-dist-types", "bsolid-harness"],
+    "description": "WHY: Copying upstream sideEffects=false is unsafe until Solid compiler output and ported lifecycle behavior are inspected. READ FIRST: test/bundle-size/bundle-size-checker.config.mjs, packages/react/package.json, packages/react/src/utils/styles.tsx, packages/react/src/csp-provider/CSPProvider.tsx and the CSP documentation. Upstream's bundle checker enumerates package export keys automatically; reuse that inventory strategy and reporting conventions, but do not inherit its unconditional CI upload/comment settings. IMPLEMENT: establish optimized consumer fixtures for an unused import, a root named import, its matching component subpath, a compound component, and each optional temporal adapter in isolation. Record module graphs plus raw/gzip size, and assert unrelated components, date libraries, React and a bundled duplicate Solid runtime are absent where not requested. Demonstrate meaningful elimination with graph assertions rather than inventing a universal byte budget. Audit authored top-level code and generated event delegation/template registration. sideEffects=false is permitted only after proving removal of unused modules cannot erase required initialization; otherwise submit a narrowly justified sideEffects allowlist to the contract owner. Mount a style-using component from minified output and prove scrollbar styles, CSP nonce handling, delegated events and prehydration behavior survive. Check import alone does not inject styles or require a document, and repeated mount/unmount does not leak shared styles/listeners. Early fixtures may use harness-owned representative modules; record real-family replays for the final gate rather than treating placeholders as final proof. WRITE BOUNDARY: test/distribution/tree-shaking/**, scripts/distribution/bundle/** and bundle reports. No component changes, shared harness configuration, package.json or lockfile edits; submit required metadata changes to bsolid-dist-contract. NON-GOALS: arbitrary bundle-size marketing claims, rewriting the style lifecycle, making optional adapters eager dependencies, or benchmarking unrelated docs assets. VALIDATE: establish pnpm test:tree-shaking, retain bundler/metafile evidence and production-browser assertions, and make the final bsolid-dist-pack execution rerun all real-component fixtures after bsolid-components-complete.",
+    "acceptance": [
+      "Root named imports and matching subpaths exclude unrelated component and optional-adapter modules in optimized graph evidence.",
+      "Empty/unused imports produce no library initialization or unintended style injection.",
+      "A documented compiler/runtime side-effect audit justifies false or an explicit narrow allowlist applied by the integration owner.",
+      "Optimized mounted fixtures retain scrollbar/CSP styles, event handling and relevant prehydration behavior with clean disposal.",
+      "Bundle reports contain reproducible commands, tool versions, graphs and measured sizes, with pending real-family replays explicitly listed."
+    ],
+    "labels": ["solid2", "tree-shaking", "bundle-size", "side-effects"],
+    "owns": ["test/distribution/tree-shaking/**", "scripts/distribution/bundle/**", "tracking/distribution/tree-shaking.json", "tracking/distribution/bundles/**"],
+    "sourcePaths": ["test/bundle-size/bundle-size-checker.config.mjs", "packages/react/package.json", "packages/react/src/utils/styles.tsx", "packages/react/src/csp-provider/CSPProvider.tsx", "docs/src/app/(docs)/react/utils/csp-provider/page.mdx", "packages/react/src/tabs/indicator/prehydrationScript.min.ts", "packages/react/src/slider/thumb/prehydrationScript.min.ts"]
+  },
+  {
+    "id": "bsolid-dist-release",
+    "title": "Prepare Changesets versioning, release notes and an honest dry-run workflow",
+    "type": "task",
+    "priority": 2,
+    "parent": "bsolid-distribution",
+    "deps": ["bsolid-dist-build", "bsolid-dist-types", "bsolid-docs-ci"],
+    "description": "WHY: Release automation must fit a new independently named package instead of inheriting MUI's npm identity, branch deployment or trusted-publisher assumptions. READ FIRST: root package.json release scripts, scripts/README.md, scripts/changelog.config.mjs, .github/workflows/publish.yml, .github/workflows/ci.yml and docs/src/data/releases.ts. Upstream uses Lerna versioning, code-infra changelogs and a MUI publish-prepare action; preserve its explicit version/build/validate/publish phases and release-page metadata, not organization-bound automation. IMPLEMENT: adopt Changesets for this new package's changelog and prerelease versioning, recording that this is a deliberate replacement rather than existing upstream configuration. Keep the root workspace private, and configure version-only treatment for the private placeholder until the chosen publish name is integrated. Use an independent library prerelease series; Solid's 2.0.0-rc.13 is a dependency pin, not the library version. Provide scripts for release:version, release:build and release:dry-run through the contract owner's integration channel. Release builds generate fresh declarations/docs Markdown, build once, pack once and retain checksums/metadata for the later consumer and publish gates. Generate release-note input consumed by the documentation site without copying React release claims. Add a manually triggered workflow with dry-run as the safe default, exact commit selection, frozen lockfile, recorded Node/pnpm versions and a prerelease dist-tag. A real publish branch must depend on final component, documentation and packed-consumer evidence; it cannot assume npm-publish environments or external credentials exist. WRITE BOUNDARY: .changeset/**, scripts/distribution/release/**, .github/workflows/release.yml and release runbooks/reports. All package version/name/script/lock updates are applied by bsolid-dist-contract, including changeset-generated manifest edits. NON-GOALS: publishing during this setup task, upstream force-push docs deployment, copying MUI actions, or silently using latest for prereleases. VALIDATE: rehearse versioning in a disposable fixture, run the full dry-run without credentials, verify stale artifacts fail, and document exact remaining name/authentication decisions for bsolid-dist-publish.",
+    "acceptance": [
+      "Changesets version/changelog behavior is tested for the private placeholder and subsequent user-selected package identity.",
+      "The library prerelease version is independent from its exact RC13 dependency pins and uses an explicit non-latest tag.",
+      "A credential-free dry-run builds, packs and records the exact artifact checksum and release-note metadata.",
+      "The workflow preserves version/build/validate/publish phases without MUI-specific actions, environments or deployment pushes.",
+      "Real publishing requires final gate evidence and configured authentication; the runbook identifies unresolved name and credential decisions."
+    ],
+    "labels": ["solid2", "release", "changesets", "ci"],
+    "owns": [".changeset/**", "scripts/distribution/release/**", ".github/workflows/release.yml", "distribution/RELEASING.md", "tracking/distribution/release-tooling.json"],
+    "sourcePaths": ["package.json", "scripts/README.md", "scripts/changelog.config.mjs", ".github/workflows/publish.yml", ".github/workflows/ci.yml", "docs/src/data/releases.ts", "packages/react/scripts/stagePublishedDocs.mjs"]
+  },
+  {
+    "id": "bsolid-dist-pack",
+    "title": "Gate complete distribution on isolated npm-tarball consumers",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-distribution",
+    "deps": ["bsolid-components-complete", "bsolid-dist-shaking", "bsolid-dist-release", "bsolid-docs-complete"],
+    "description": "WHY: Workspace success does not prove an npm tarball contains usable exports, optional peers, licenses or declarations. This is deliberately a final gate after component and documentation completeness; earlier packaging tasks remain executable independently. READ FIRST: upstream packages/react/package.json test:package and publishConfig, packages/react/.npmignore, packages/react/api-extractor.json, packages/react/scripts/stagePublishedDocs.mjs and test/bundle-size/bundle-size-checker.config.mjs. IMPLEMENT: use npm pack --json on the staged package directory, inspect the tarball file list and install the resulting archive in isolated consumer directories outside the monorepo dependency search path. Do not publish or bypass private=true: local pack testing works while the public name is unresolved. Run publint and AreTheTypesWrong against the archive and enumerate every exports key, including internals, types and unstable-use-media-query. Distinguish type-only assertions from executable imports. Test Vite client mount, production minification, Node SSR and browser hydration with the pinned RC13 renderer/compiler; test Bundler and NodeNext declarations with skipLibCheck=false. Consumers must not use workspace links, tsconfig aliases or source imports. Exercise ordinary root/subpath imports with all temporal peers absent, then date-fns plus timezone, then Luxon plus any required declaration package; missing adapter peers must affect only the requested adapter. Rerun tree-shaking against real finished components and verify styles/events remain. Validate manifest fields, relative import targets, source maps, README, MIT notices, versioned Markdown and absence of tests, caches or React dependency/type leaks. WRITE BOUNDARY: isolated-consumer templates/runners and tracking/distribution/packed-consumers.json only; generated artifacts are temporary, and fixes return to component/build/type/manifest owners. NON-GOALS: weakening exports to reach unpublished internals, installing React to make types pass, or declaring green with an incomplete map. VALIDATE: establish pnpm test:packed-consumers, retain archive SHA256, actual condition-resolution results and command logs, and block the publish gate on any unresolved source-to-export discrepancy.",
+    "acceptance": [
+      "An npm pack archive installs and runs outside workspace resolution with a recorded checksum and file inventory.",
+      "Every upstream export key passes its runtime or type-only contract under all advertised conditions.",
+      "Vite production mount, Node SSR, browser hydration and strict Bundler/NodeNext type consumers pass using the archive.",
+      "Optional-adapter absence and independent date-fns/timezone/Luxon installations behave as documented without root import coupling.",
+      "Finished-component bundle, style and event tests pass; React imports/peers and unpublishable aliases are absent.",
+      "License/notices, package metadata and current generated Markdown are present, with no tests, caches or stale component omissions."
+    ],
+    "labels": ["solid2", "npm-pack", "consumer-test", "final-gate"],
+    "owns": ["test/distribution/consumers/**", "scripts/distribution/consumers/**", "tracking/distribution/packed-consumers.json"],
+    "sourcePaths": ["packages/react/package.json", "packages/react/.npmignore", "packages/react/api-extractor.json", "packages/react/scripts/stagePublishedDocs.mjs", "test/bundle-size/bundle-size-checker.config.mjs", "LICENSE"]
+  },
+  {
+    "id": "bsolid-dist-publish",
+    "title": "Resolve npm identity and publish the exact verified prerelease artifact",
+    "type": "task",
+    "priority": 2,
+    "parent": "bsolid-distribution",
+    "deps": ["bsolid-dist-pack", "bsolid-dist-release", "bsolid-docs-complete"],
+    "description": "WHY: The requested npm release is complete only when an authorized release under the user's chosen name is available and independently installable. READ FIRST: upstream scripts/README.md, .github/workflows/publish.yml and packages/react/package.json, followed by the new release runbook and packed-consumer report. Upstream's id-token permission and MUI publish environment are evidence of its setup, not proof this repository has trusted publishing. IMPLEMENT: obtain the user's actual npm package/scope, repository URL, version/tag and authorization configuration; do not infer ownership of @base-ui/solid or publish the baseui-solid2 placeholder automatically. Have bsolid-dist-contract integrate the identity, appropriate public access and publishability into the source/staged manifest while leaving the root workspace private. Regenerate installation text, release notes and version banners through their owners, then rerun all final docs/pack checks because renaming changes import resolution and tarball identity. Build and validate the final archive once, preserve its checksum, and publish that same artifact rather than a newly rebuilt directory. Use configured npm trusted publishing/OIDC with provenance only when the repository/package/environment relationship is actually configured; otherwise use the configured supported authentication path and describe provenance status accurately. Missing identity or credentials leaves this task blocked with an explicit decision record, while dry-run evidence remains useful. After publication verify npm name/version/dist-tag, integrity, peer metadata and tarball contents, then install the registry artifact in a clean consumer and run browser/type smoke checks. Update release evidence with the registry URL and matching documentation version. WRITE BOUNDARY: publication runbook additions and tracking/distribution/publication.json; delegate manifest, lockfile, workflow and docs changes to their existing owners. NON-GOALS: creating an organization, claiming inherited publishing rights, silently advancing latest, or reporting a dry-run as published. VALIDATE: compare the tested archive to registry integrity, check npm view results, retain actual registry-consumer commands, and document a failed attempt without falsely completing the gate.",
+    "acceptance": [
+      "The user-selected npm identity and authorized authentication mechanism are recorded; no invented scope or placeholder publication occurs.",
+      "Renaming/version changes trigger regenerated docs and a fresh successful final packed-consumer run before publication.",
+      "The exact checksum-identified tested artifact is published under the intended prerelease dist-tag.",
+      "Provenance is claimed only when configured publishing infrastructure actually produces it.",
+      "npm registry metadata, integrity and a clean registry-installed consumer pass, and the actual package URL is recorded.",
+      "Absent identity or credentials is an explicit blocked state rather than a successful publication claim."
+    ],
+    "labels": ["solid2", "npm", "publication", "final-gate"],
+    "owns": ["distribution/PUBLICATION.md", "tracking/distribution/publication.json"],
+    "sourcePaths": ["scripts/README.md", ".github/workflows/publish.yml", "packages/react/package.json", "docs/src/data/releases.ts"]
+  },
+  {
+    "id": "bsolid-docs-content",
+    "title": "Inventory and import reusable upstream docs content with reproducible transformations",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-documentation",
+    "deps": ["bsolid-bootstrap"],
+    "description": "WHY: Reuse must be traceable at file and semantic level, not a blind copy of a framework-bound website. READ FIRST: docs/README.md, docs/next.config.mjs, docs/src/mdx-components.tsx, docs/src/app/sitemap/index.ts, docs/src/app/(docs)/react/components/button/page.mdx, docs/src/css/index.css and LICENSE. IMPLEMENT: create docs/upstream-manifest.json pinned to 19511bb171f3b360b006c94cf6d07e53cb446505 with source path/hash, destination, disposition, transformation version, owner and license record for every public MDX page, referenced demo dependency, stylesheet and copied asset. Include overview, handbooks, components, utilities and an explicit treatment of React release history; private experiments, careers, analytics and deployment credentials are excluded by named rules. Capture original inputs under docs/upstream/** so generation never needs an untracked local checkout or network request. Use parser-based transformations for package imports, /react route links, title/Subtitle/Meta/metadata, demo/type imports and public component references. Preserve behavioral prose, anatomy, accessibility guidance, heading IDs and CSS unless a reviewed Solid adaptation is required. React render elements, hooks and event/type language become flagged semantic work, not search-and-replace claims of correctness. Do not import upstream types.md as authoritative Solid API output. Inventory unsupported custom MDX nodes so the site task implements bounded handlers and fails rather than discarding content. Reuse pure remark/rehype and Markdown helpers with recorded versions; vendored tooling must include its own upstream package source/license record. WRITE BOUNDARY: docs/upstream/**, the source manifest, docs/content/transforms/** and synchronization scripts/report only. Component-owned docs/components/<family>/** remain read-only inputs; central navigation and package/lock integration belong to other owners. NON-GOALS: copying the entire Next project, assuming community integrations support Solid, modifying canonical upstream, or consulting the old port. VALIDATE: establish pnpm docs:sync --check, verify hashes and deterministic regeneration, report every public page's disposition, and demonstrate targeted regeneration after a fixture input change without overwriting authored component docs.",
+    "acceptance": [
+      "All public upstream pages and selected styles/assets have exact source hashes, destinations, transformation versions and dispositions.",
+      "Original imported inputs are available locally for offline generation and preserve applicable MIT notices.",
+      "Metadata, routes, import references and custom MDX nodes are parsed structurally with explicit unsupported-node failures.",
+      "React-specific semantics and release/community claims are flagged for adaptation instead of being silently relabeled.",
+      "pnpm docs:sync --check is deterministic and never writes component-owned documentation or the canonical checkout."
+    ],
+    "labels": ["solid2", "docs", "content", "upstream-reuse"],
+    "owns": ["docs/upstream/**", "docs/upstream-manifest.json", "docs/content/transforms/**", "docs/scripts/sync/**", "tracking/docs/content.json"],
+    "sourcePaths": ["docs/README.md", "docs/next.config.mjs", "docs/src/mdx-components.tsx", "docs/src/app/sitemap/index.ts", "docs/src/app/(docs)/react/components/button/page.mdx", "docs/src/app/(docs)/react/overview/page.mdx", "docs/src/app/(docs)/react/handbook/page.mdx", "docs/src/app/(docs)/react/components/page.mdx", "docs/src/app/(docs)/react/utils/page.mdx", "docs/src/css/index.css", "LICENSE"]
+  },
+  {
+    "id": "bsolid-docs-site",
+    "title": "Generate a standalone Vite static docs site with Solid 2 interaction islands",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-documentation",
+    "deps": ["bsolid-docs-content", "bsolid-dist-contract", "bsolid-harness"],
+    "description": "WHY: Generated docs should retain upstream information architecture and styling without porting its extensive React/Next runtime. READ FIRST: docs/package.json, docs/next.config.mjs, docs/src/app/(docs)/layout.tsx, docs/src/app/sitemap/index.ts, docs/src/mdx-components.tsx, docs/postcss.config.js and docs/src/css/index.css. IMPLEMENT: choose plain Vite 8 with @solidjs/vite-plugin 3.0.0-next.47 and exact RC13 dependencies. Build-time unified/remark-mdx/rehype transforms emit per-route static HTML containing prose, headings, tables and metadata; Vite bundles only Solid islands for navigation controls, search and demos. This deliberately avoids MDX's default React JSX runtime: convert known MDX elements to HTML or typed island descriptors, resolve approved imports through manifests, and reject unresolved expressions/components with source locations. Do not execute arbitrary upstream Next exports. Reuse validated renderer-independent upstream metadata, relative-link, code-highlighting and heading transforms; track bounded adaptations through the content manifest. Generate normal anchor navigation and a local search index from the same route graph, plus canonical links, sitemap and a useful 404. Serve deep links correctly from a static host and configurable base path without a Solid 1 router. Reuse CSS layers, typography, code/reference-table styles, selected fonts/assets and PostCSS/Tailwind conventions with rewritten source globs; avoid globally resetting CSS Modules previews. Display a generated banner identifying the library version, upstream SHA and Solid 2.0.0-rc.13 dependency pin. WRITE BOUNDARY: docs/package.json, Vite/PostCSS/TS configs, docs/site/**, docs/scripts/site/**, docs/generated/site/** and site fixtures; root manifest/workspace/lock edits go through bsolid-dist-contract. NON-GOALS: Next/React shell retention, SolidStart, upstream analytics/careers, arbitrary MDX eval or a custom general-purpose router. VALIDATE: establish pnpm docs:dev and pnpm docs:build, prove one metadata-rich page, API placeholder and RC13 island end-to-end, then assert static/no-JavaScript readability, deep-link/base-path behavior, browser dependency purity and keyboard-accessible shell controls.",
+    "acceptance": [
+      "Vite emits real HTML for every enabled route, with readable prose and metadata before JavaScript loads.",
+      "Only verified Solid 2 tooling powers browser interactions; React, Next, Solid 1 router and default React MDX runtime are absent from browser bundles.",
+      "Known MDX constructs have typed transformations and unsupported expressions fail with source locations.",
+      "Navigation, search, deep links, anchors, sitemap, 404 and a non-root deployment base work from static output.",
+      "Reused CSS/assets retain attribution and respect CSS Modules versus Tailwind preview boundaries.",
+      "The visible version banner is generated from the library identity, canonical SHA and exact RC13 pin."
+    ],
+    "labels": ["solid2", "docs", "vite", "static-generation"],
+    "owns": ["docs/package.json", "docs/vite.config.ts", "docs/postcss.config.mjs", "docs/tsconfig.json", "docs/site/**", "docs/scripts/site/**", "docs/generated/site/**", "docs/tests/site/**", "tracking/docs/site.json"],
+    "sourcePaths": ["docs/package.json", "docs/next.config.mjs", "docs/src/app/(docs)/layout.tsx", "docs/src/app/sitemap/index.ts", "docs/src/mdx-components.tsx", "docs/postcss.config.js", "docs/src/css/index.css", "docs/src/mdx/remarkHeadingTags.mjs", "docs/src/components/QuickNav/rehypeSlug.mjs", "docs/src/components/QuickNav/rehypeConcatHeadings.mjs"]
+  },
+  {
+    "id": "bsolid-docs-api",
+    "title": "Generate API tables and Markdown automatically from Solid declarations",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-documentation",
+    "deps": ["bsolid-dist-types", "bsolid-docs-content"],
+    "description": "WHY: Reusing React types.md would document the wrong JSX, ref and event contracts even if the surrounding prose were accurate. READ FIRST: docs/next.config.mjs typesGenerationOptions, docs/src/utils/createTypes.tsx, docs/src/utils/typeOrder.mjs, button/types.ts, accordion/types.ts, packages/react/api-extractor.json and CONTRIBUTING.md's generated-file/namespace sections. Research traced @mui/internal-docs-infra@0.13.1-canary.5 loadPrecomputedTypes to loadServerTypes, syncTypes and loadServerTypesMeta; the webpack wrapper injects precomputed tables and removes component imports, while extraction/formatting is separable Node logic. IMPLEMENT: drive a TypeScript Program over the emitted Solid declaration entrypoints with retained JSDoc, resolving aliases, namespaces, generic signatures, component props and exported state/event/helper types. Normalize Solid callable components into the upstream table/anchor schema rather than depending on a React component classifier. Reuse the upstream ordering, data-attribute/CSS-variable conventions, Markdown serialization and renderer-independent formatting where verified; isolate any adapted extraction seam and record its source/version. Prefer the exposed Node pipeline where the Solid fixture proves compatibility; do not copy webpack loaders or React ReferenceTable components into browser code. Generate docs/generated/api JSON and Markdown plus source links and deterministic anchors. Props/defaults come from declarations/JSDoc; associate data attributes/CSS variables with the port's exported metadata, never infer defaults from a React reference table. Include additional types and aliases so cross-links resolve, distinguish inherited DOM attributes, and expose unknown/default-unavailable states honestly. WRITE BOUNDARY: docs/scripts/api/**, docs/generated/api/** and API fixtures/reports; do not edit family declarations, source JSDoc or component-owned docs. Submit missing metadata to its owner. NON-GOALS: a hand-maintained API database, using Microsoft's disabled docModel as if it generated upstream tables, or silently classifying Solid components as generic functions. VALIDATE: establish pnpm docs:api and pnpm docs:api:check; cover a single-part, compound, generic, re-exported and types-only fixture, then mutate one fixture declaration and prove output/anchors update deterministically without executing its runtime.",
+    "acceptance": [
+      "API generation reads Solid declarations/JSDoc and does not load component runtime code or use copied React types.md as truth.",
+      "Single-part, compound, generic and aliased components produce correct props/state/event tables with defaults and source links.",
+      "Exported data attributes, CSS variables, helpers and additional types are associated and cross-linked with stable anchors.",
+      "The reused upstream formatting/ordering/serialization pieces and the Solid-specific extraction seam are explicitly tracked.",
+      "A declaration mutation changes generated output, repeated generation is clean, and missing required metadata fails the check.",
+      "pnpm docs:api:check runs independently of whole-component completion using realistic declaration fixtures."
+    ],
+    "labels": ["solid2", "docs", "api-generation", "typescript"],
+    "owns": ["docs/scripts/api/**", "docs/generated/api/**", "docs/tests/api/**", "tracking/docs/api.json"],
+    "sourcePaths": ["docs/next.config.mjs", "docs/src/utils/createTypes.tsx", "docs/src/utils/typeOrder.mjs", "docs/src/app/(docs)/react/components/button/types.ts", "docs/src/app/(docs)/react/components/accordion/types.ts", "docs/src/components/ReferenceTable/ReferenceTable.tsx", "packages/react/api-extractor.json", "CONTRIBUTING.md"]
+  },
+  {
+    "id": "bsolid-docs-demos",
+    "title": "Connect real Solid previews to source imports, code tabs and reusable demo metadata",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-documentation",
+    "deps": ["bsolid-docs-site", "bsolid-dist-build", "bsolid-harness"],
+    "description": "WHY: Static screenshots or separately maintained snippets cannot prove that documented Solid code actually runs. READ FIRST: docs/src/utils/createDemo.ts, docs/src/components/Demo/Demo.tsx, button/demos/hero/index.ts and its CSS Modules/Tailwind variants, docs/scripts/generateLlmTxt/demoProcessor.mjs and docs/src/utils/demoExportOptions.ts. The upstream factories are server-only and the preview uses React hooks/flushSync; reuse their variant metadata and source dependency model, not their runtime. Research verified the exported loadServerCodeSource function delegates filesystem/import resolution to an isomorphic source loader. IMPLEMENT: build a typed demo registry connecting adapted MDX demo references to lazy Solid modules, exact source files, CSS/assets, variants and dependency metadata. Consume component workers' docs/components/<family>/** read-only; use independent harness fixtures to finish infrastructure before real families exist. Reuse the Node source-loader/highlighter seam where compatible, retaining source URLs and import-graph tracking; do not pull the private library implementation into displayed demo code when resolving package imports. Render preview islands with @solidjs/web, handling teardown on variant changes, reloads and errors. Provide accessible Preview/Code controls, file/variant tabs, highlighted code, copy actions, source links and a preview failure state. Source tabs must display the same Solid TSX/CSS used for the preview, with the actual selected package identity and RC13 setup. Preserve upstream CSS Modules/Tailwind choices, asset dependencies and CSS isolation. An optional downloadable example uses pinned dependencies; do not expose broken React sandbox exports. WRITE BOUNDARY: docs/demos/**, docs/scripts/demos/**, docs/generated/demos/** and dedicated demo fixtures/tests only; family example code, site-shell files and root manifests remain with their owners. NON-GOALS: browser-side arbitrary code compilation, React-to-Solid runtime bridges, manually duplicated source strings or rewriting every demo in this infrastructure ticket. VALIDATE: establish pnpm docs:test:demos, prove an interactive stateful fixture plus portal/CSP fixture, verify tabs/copy/source equality and cleanup, and record real-family replay requirements consumed by bsolid-docs-complete.",
+    "acceptance": [
+      "Every registry entry links an adapted MDX reference, executable Solid module, displayed source and its CSS/assets/dependencies.",
+      "Preview variants and source/file tabs use the same authored files and expose keyboard-operable controls and working copy actions.",
+      "Source loading/highlighting reuses a verified upstream Node seam without bundling React preview infrastructure or exposing library internals as demo files.",
+      "Stateful and portal/CSP fixtures mount with @solidjs/web and dispose without leftover listeners, owners or duplicate previews.",
+      "CSS Modules and Tailwind variants preserve upstream styling boundaries and source attribution.",
+      "Infrastructure runs before family completion, with missing real demos explicitly listed for the final gate."
+    ],
+    "labels": ["solid2", "docs", "demos", "source-tabs"],
+    "owns": ["docs/demos/**", "docs/scripts/demos/**", "docs/generated/demos/**", "docs/tests/demos/**", "tracking/docs/demos.json"],
+    "sourcePaths": ["docs/src/utils/createDemo.ts", "docs/src/components/Demo/Demo.tsx", "docs/src/app/(docs)/react/components/button/demos/hero/index.ts", "docs/src/app/(docs)/react/components/button/demos/hero/css-modules/index.tsx", "docs/src/app/(docs)/react/components/button/demos/hero/css-modules/index.module.css", "docs/src/app/(docs)/react/components/button/demos/hero/tailwind/index.tsx", "docs/scripts/generateLlmTxt/demoProcessor.mjs", "docs/src/utils/demoExportOptions.ts"]
+  },
+  {
+    "id": "bsolid-docs-handbooks",
+    "title": "Adapt quick start, handbooks and accessibility guidance to verified Solid 2 semantics",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-documentation",
+    "deps": ["bsolid-docs-demos", "bsolid-docs-api"],
+    "description": "WHY: A package-name substitution leaves upstream composition, ref, hooks and event examples semantically wrong for Solid 2. READ FIRST: upstream overview/quick-start/page.mdx, overview/accessibility/page.mdx and handbook composition, styling, customization, animation, forms and typescript pages, plus utils/use-render/page.mdx and utils/csp-provider/page.mdx. Use the web/source implementation as the canonical reference for behavioral guidance, but derive framework instructions from the RC13 port and harness. IMPLEMENT: keep source prose/layout order wherever valid and apply reviewed semantic overlays under docs/content/handbooks and overview. Teach class rather than className, live render(props,state) callbacks instead of cloning JSX elements, getter-backed state and accessor/memo derivation, native events with independent details.cancel() and preventBaseUIHandler(), latest callback reads and staged writes without immediate setter/reread assumptions. Explain createEffect(compute,effect) returned cleanup and setup-owned ref disposal only where relevant to user examples. Show the verified @solidjs/web renderer/JSX source and pinned @solidjs/vite-plugin setup. Generate install and import text from the private/public identity contract; while unresolved, show local tarball/workspace instructions rather than an npm install command claiming publication. Preserve portal stacking, focus indicators, labeling, keyboard, RTL, reduced-motion and CSP responsibilities, with actual browser examples. Reword upstream broad platform/screen-reader claims to match evidence from this port. Mark React ecosystem integrations and historical releases as upstream context, not Solid support. WRITE BOUNDARY: semantic overlays, handbook-specific snippets and adaptation report only; do not overwrite component-owned pages or runtime primitives. Route metadata remains derived by the site pipeline, and identity changes come through the contract owner. NON-GOALS: a generic Solid tutorial, rewording unchanged guidance for novelty, or declaring accessibility compliance from automated tests alone. VALIDATE: compile every complete snippet through the pinned toolchain, test key render/ref/event examples in the browser, check all links against generated routes, and produce a source-section adaptation ledger with unresolved component-dependent examples handed to bsolid-docs-complete.",
+    "acceptance": [
+      "Quick start and all six handbook topics have source-linked semantic adaptations with no React-only instructions presented as Solid APIs.",
+      "Complete snippets typecheck/compile against RC13 and key composition, native-event and ref-cleanup examples run interactively.",
+      "Installation text uses the actual identity/publication state and shows the verified @solidjs/web/compiler/plugin configuration.",
+      "Accessibility guidance covers keyboard/focus/labels/RTL/motion/CSP responsibilities with claims limited to recorded evidence.",
+      "React integrations and historical releases are explicitly scoped, and pending component examples are tracked for final replay."
+    ],
+    "labels": ["solid2", "docs", "handbooks", "accessibility"],
+    "owns": ["docs/content/handbooks/**", "docs/content/overview/**", "docs/content/utils/**", "docs/tests/handbooks/**", "tracking/docs/semantic-adaptations.json"],
+    "sourcePaths": ["docs/src/app/(docs)/react/overview/quick-start/page.mdx", "docs/src/app/(docs)/react/overview/accessibility/page.mdx", "docs/src/app/(docs)/react/handbook/composition/page.mdx", "docs/src/app/(docs)/react/handbook/styling/page.mdx", "docs/src/app/(docs)/react/handbook/customization/page.mdx", "docs/src/app/(docs)/react/handbook/animation/page.mdx", "docs/src/app/(docs)/react/handbook/forms/page.mdx", "docs/src/app/(docs)/react/handbook/typescript/page.mdx", "docs/src/app/(docs)/react/utils/use-render/page.mdx", "docs/src/app/(docs)/react/utils/csp-provider/page.mdx"]
+  },
+  {
+    "id": "bsolid-docs-ci",
+    "title": "Automate reproducible docs generation, links, demo checks and static deployment artifacts",
+    "type": "task",
+    "priority": 2,
+    "parent": "bsolid-documentation",
+    "deps": ["bsolid-docs-handbooks", "bsolid-docs-api", "bsolid-docs-demos"],
+    "description": "WHY: Generated pages, API data and source tabs can drift independently unless CI checks the entire content pipeline. READ FIRST: docs/package.json, docs/scripts/reportBrokenLinks.mts, docs/scripts/generateLlmTxt/index.mjs, mdxToMarkdown.mjs, .github/workflows/ci.yml and scripts/README.md. Upstream uses a static Next export plus a Node broken-links crawler and Markdown generation; reuse these checks and renderer-independent transforms with the new route/content adapters. IMPLEMENT: define an offline-capable generation sequence: sync check, declaration/API generation, demo source/variant generation, semantic snippet compilation, static website build, Markdown/llms generation, link/anchor crawl and browser smoke tests. Adapt the upstream Markdown helpers to the Solid route graph and generated API/demo data; remove React package-rename preambles and stale release metadata. Emit versioned per-page Markdown and llms.txt into docs/generated/markdown for both website links and distribution staging. Fail on stale generated files, unknown MDX nodes, broken internal links/type anchors, missing referenced sources and accidentally shipped React code. Test desktop/mobile keyboard navigation, focus visibility, accessible code tabs, a popup demo and a form example; reuse the harness/browser tooling rather than introducing a second runner. Do not copy upstream HTML-validation suppressions for React SSR issues without demonstrating the same issue. Add a dedicated docs workflow with frozen-lockfile install, deterministic tool versions and a static-site artifact. Deployment uses an explicitly configured hosting target/base URL; artifact creation works without credentials and never force-pushes upstream docs-v1. WRITE BOUNDARY: docs/scripts/ci/**, docs/scripts/markdown/**, docs/generated/markdown/**, docs/tests/ci/**, docs workflow and operations runbook. Script/dependency/lock requests go to their existing manifest owners. NON-GOALS: real hosting credentials, upstream analytics, full screen-reader certification or waiting for every component before pipeline verification. VALIDATE: establish pnpm docs:check and pnpm docs:generate-markdown, run from a clean checkout twice, inject a broken link/stale API fixture to prove failure, and preserve build/browser artifacts for bsolid-docs-complete.",
+    "acceptance": [
+      "A clean CI run verifies sync, declarations/API, sources, snippets, static build, Markdown, links and browser smoke tests with frozen dependencies.",
+      "Generated Markdown and llms.txt contain Solid imports/current metadata and are reusable by package documentation staging.",
+      "Deliberate stale API, broken anchor and missing demo-source fixtures each fail the appropriate check.",
+      "Keyboard, focus, mobile navigation and code-tab checks run without inheriting unjustified React HTML-validation suppressions.",
+      "The workflow produces a deployable static artifact without credentials; deployment target/base URL remain explicitly configured.",
+      "Repeated generation is deterministic and infrastructure CI passes before the final all-components audit."
+    ],
+    "labels": ["solid2", "docs", "ci", "markdown"],
+    "owns": ["docs/scripts/ci/**", "docs/scripts/markdown/**", "docs/generated/markdown/**", "docs/tests/ci/**", ".github/workflows/docs.yml", "docs/OPERATIONS.md", "tracking/docs/ci.json"],
+    "sourcePaths": ["docs/package.json", "docs/scripts/reportBrokenLinks.mts", "docs/scripts/generateLlmTxt/index.mjs", "docs/scripts/generateLlmTxt/mdxToMarkdown.mjs", "docs/scripts/generateLlmTxt/demoProcessor.mjs", "docs/scripts/generateLlmTxt/propsReferenceTableProcessor.mjs", "docs/scripts/generateLlmTxt/mdxNodeHelpers.mjs", ".github/workflows/ci.yml", "scripts/README.md"]
+  },
+  {
+    "id": "bsolid-docs-complete",
+    "title": "Gate documentation completeness against all finished components and upstream public pages",
+    "type": "task",
+    "priority": 1,
+    "parent": "bsolid-documentation",
+    "deps": ["bsolid-components-complete", "bsolid-docs-ci", "bsolid-dist-build", "bsolid-dist-types"],
+    "description": "WHY: Early docs infrastructure must not be confused with a complete website for the finished library. This final audit waits for bsolid-components-complete while leaving earlier docs/build tasks independently schedulable. READ FIRST: upstream packages/react/package.json, docs/src/app/(docs)/react/components/page.mdx, utils/page.mdx, docs/src/app/sitemap/index.ts and CONTRIBUTING.md's generated files/demo/type instructions. IMPLEMENT: reconcile the pinned upstream public page inventory, completed target exports, component-owned docs, generated API schema and executable demo registry. Every public component/utility receives its source-derived page, anatomy, installation/subpath example, usage guidance, relevant accessibility notes, all exported parts and generated props/state/events/data-attribute/CSS-variable references. Every source demo receives a translated runnable counterpart or a specifically justified framework-only exclusion; missing implementation examples cannot be hidden as generic exclusions. Internal export contracts remain discoverable in the distribution reference without inventing public product pages. Replay all real-family tests deferred by API, demo, handbook and tree-shaking infrastructure: lazy preview mounts, variant/source equality, portal/focus behavior, forms, SSR-specific guidance and cleanup. Check current Solid semantics across snippets and remove fixture placeholders from published routes. Verify version banner, RC13 pins, package identity state, source links, MIT notices and changelog context match the build. Run generation against the complete declaration graph, then produce the static artifact, per-page Markdown and a completeness report consumed by bsolid-dist-pack. WRITE BOUNDARY: docs/scripts/audit/**, docs/tests/completeness/** and tracking/docs/completeness.json only. Request corrections from content, API, site or family owners; never patch another worker's source just to turn the report green. NON-GOALS: implementation fixes, rebuilding documentation around the old Solid port, making React ecosystem promises or treating a successful site build as coverage proof. VALIDATE: run pnpm docs:check plus pnpm docs:audit-complete, crawl every enabled route/anchor and execute the full registered preview smoke inventory; completion requires zero unresolved component/API/demo omissions and a retained artifact/checksum for the release pipeline.",
+    "acceptance": [
+      "The audit joins every upstream public page and target public export to a completed page or explicit legitimate disposition.",
+      "Every component/utility documents all exported parts and its generated props, state, events, data attributes and CSS variables.",
+      "All upstream demos have runnable translations or reviewed framework-only exclusions, with no hidden missing-implementation placeholders.",
+      "Deferred real-family demo, snippet, source-tab, accessibility and cleanup checks pass across the registered inventory.",
+      "All routes/anchors, version/identity text, RC13 pins, source links and MIT notices match the complete build.",
+      "pnpm docs:check and pnpm docs:audit-complete produce a complete static artifact, current Markdown and a zero-omission report for packed-consumer validation."
+    ],
+    "labels": ["solid2", "docs", "completeness", "final-gate"],
+    "owns": ["docs/scripts/audit/**", "docs/tests/completeness/**", "tracking/docs/completeness.json"],
+    "sourcePaths": ["packages/react/package.json", "docs/src/app/(docs)/react/components/page.mdx", "docs/src/app/(docs)/react/utils/page.mdx", "docs/src/app/sitemap/index.ts", "docs/src/data/releases.ts", "CONTRIBUTING.md", "LICENSE"]
+  }
+]

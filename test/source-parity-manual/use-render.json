@@ -1,0 +1,201 @@
+{
+  "family": "use-render",
+  "sourceCommit": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "sourceSuite": "packages/react/src/use-render/useRender.test.tsx",
+  "targetSuites": ["packages/solid/src/use-render/useRender.test.tsx"],
+  "currentRepair": {
+    "supersedes": "The historical cases/completeness below recorded missing public coverage and an obsolete new-test ownership blocker. All fourteen runtime source bodies now have direct public useRender tests; internal renderer coverage is not used as a substitute.",
+    "sourceBodiesRead": "packages/react/src/use-render/useRender.test.tsx:1-314, pinned source commit",
+    "target": "packages/solid/src/use-render/useRender.test.tsx",
+    "bodyMapping": [
+      { "sourceLine": 10, "targetTitle": "render props does not overwrite class in a render function when unspecified", "disposition": "matched", "evidence": "Explicit undefined class; custom span callback retains exact trailing-space class 'my-span '." },
+      { "sourceLine": 38, "targetTitle": "refs are handled as expected", "disposition": "matched", "evidence": "Two simultaneous parameter callback refs; exact collection length and both host identities." },
+      { "sourceLine": 75, "targetTitle": "renders div by default if no defaultTagName and no render params are provided", "disposition": "matched", "evidence": "Public empty parameters produce DIV." },
+      { "sourceLine": 84, "targetTitle": "renders the element with the default tag with no render prop", "disposition": "matched", "evidence": "Live defaultTagName getter; DIV then SPAN after setProps." },
+      { "sourceLine": 100, "targetTitle": "defaultTagName is overwritten by the render prop", "disposition": "matched", "evidence": "Native span callback overrides div then a; both exact tag assertions retained." },
+      { "sourceLine": 122, "targetTitle": "converts state to data attributes automatically", "disposition": "matched", "evidence": "Button; active=true empty attribute and index=42 serialization." },
+      { "sourceLine": 141, "targetTitle": "handles undefined values in state", "disposition": "matched", "evidence": "Div; defined=value, notDefined undefined omitted." },
+      { "sourceLine": 160, "targetTitle": "merges state-based data attributes with existing props", "disposition": "matched", "evidence": "Button; login data-form, btn-primary class, submit-btn ID and existing=prop all coexist." },
+      { "sourceLine": 187, "targetTitle": "props override state-based data attributes", "disposition": "matched", "evidence": "Explicit data-active=false masks state active=true." },
+      { "sourceLine": 207, "targetTitle": "handles empty state", "disposition": "matched", "evidence": "Span class=test-class; enumerated data attribute names exactly empty." },
+      { "sourceLine": 228, "targetTitle": "handles undefined state", "disposition": "matched", "evidence": "Explicit undefined state; class and data-from-props retained." },
+      { "sourceLine": 248, "targetTitle": "converts boolean values in state to data attributes", "disposition": "matched", "evidence": "Button; active true present empty, disabled false omitted." },
+      { "sourceLine": 267, "targetTitle": "converts number values in state to data attributes", "disposition": "matched", "evidence": "Div; count=0 omitted, index=42 and percentage=99.9 serialized exactly." },
+      { "sourceLine": 288, "targetTitle": "supports custom stateAttributesMapping for kebab-case conversion", "disposition": "matched", "evidence": "All three source custom mappings and exact outputs: is-active empty, item-count=5, user-name=John." }
+    ],
+    "adaptations": "Native callback JSX replaces React render elements; class replaces className; two native callback refs replace two object refs; live getter replaces React rerender snapshots. Source parameters/actions/assertions otherwise retained.",
+    "checks": [
+      { "command": "rtk pnpm typescript", "result": "passed" },
+      { "command": "rtk pnpm test:types --no-watch", "result": "passed" },
+      { "command": "rtk pnpm test:jsdom --no-watch", "result": "14 public tests passed within complete 6410-pass suite; zero failures/unhandled" },
+      { "command": "rtk pnpm test:chromium use-render --no-watch", "result": "14 passed; zero failures/skips/unhandled" }
+    ],
+    "runtimeTestParityComplete": true,
+    "typeSpec": "Separate upstream React-element typing/composition obligations below remain independently classified; runtime completion does not qualify them."
+  },
+  "readOnlyRelatedTargetSuite": "packages/solid/src/internals/createRenderElement.test.tsx",
+  "review": "All 14 upstream runtime bodies manually compared against the full existing internal renderer suite. No existing tests exist under packages/solid/src/use-render. User ownership permits editing existing family tests only; neither creating a new family test nor editing the internal suite was authorized. This ledger completes the audit but does not claim complete TEST parity.",
+  "lane": "jsdom; source has no environment predicates",
+  "sourcePredicates": [],
+  "helperInvocations": [],
+  "adaptation": "createRender/useRender aliases createRenderElement with params.defaultTagName or div; React render elements require native render callbacks, className becomes class, React object refs become native callback refs. Reading the wrapper implementation alone is not runtime coverage of its public behavior.",
+  "cases": [
+    {
+      "sourceLine": 10,
+      "title": "render props does not overwrite className in a render function when unspecified",
+      "parameters": { "render": "(props,state) => <span {...props} className={`my-span ${props.className ?? ''}`} {...state} />", "props": { "className": "undefined" } },
+      "actions": ["mount TestComponent using public useRender", "inspect first element"],
+      "assertions": ["class attribute exactly 'my-span ' including trailing space"],
+      "targetTitles": [],
+      "disposition": "missing",
+      "evidence": "Internal callback tests do not assert unspecified-class fallback or the exact class attribute including trailing space. Conformance callback-class tests exercise supplied classes, a different condition."
+    },
+    {
+      "sourceLine": 38,
+      "title": "refs are handled as expected",
+      "parameters": { "ref": ["ref1", "ref2"], "render": "span forwarding props and state", "props": "otherProps" },
+      "actions": ["mount public useRender with two parameter refs", "collect refs", "inspect each against first element"],
+      "assertions": ["refs length=2", "both refs current exactly first element"],
+      "targetTitles": ["reads ref getters only for their own inputs while attributes and measured styles stay live"],
+      "disposition": "partial",
+      "evidence": "Related internal test composes one parameter ref and a prop ref, asserts prop ref host and later parameter-ref host. It does not test two simultaneous parameter refs through the public wrapper or the source two-ref collection. Shared conformance tests check component/render-host refs, not this public parameter array."
+    },
+    {
+      "sourceLine": 75,
+      "title": "param: defaultTagName / renders div by default if no defaultTagName and no render params are provided",
+      "parameters": {},
+      "actions": ["mount useRender({})"],
+      "assertions": ["first element tagName=DIV"],
+      "targetTitles": [],
+      "disposition": "missing",
+      "evidence": "Internal tests pass explicit tags. Public default fallback is not exercised by the inspected suite."
+    },
+    {
+      "sourceLine": 84,
+      "title": "param: defaultTagName / renders the element with the default tag with no render prop",
+      "parameters": { "initialDefaultTagName": "div", "nextDefaultTagName": "span", "render": "omitted" },
+      "actions": ["mount div", "assert DIV", "setProps defaultTagName span", "assert SPAN"],
+      "assertions": ["DIV then SPAN"],
+      "targetTitles": [],
+      "disposition": "missing",
+      "evidence": "No internal test changes the tag accessor or public defaultTagName; live state/attribute host-identity tests do not establish tag replacement."
+    },
+    {
+      "sourceLine": 100,
+      "title": "param: defaultTagName / is overwritten by the render prop",
+      "parameters": { "render": "<span /> (native adaptation: callback returning span)", "initialDefaultTagName": "div", "nextDefaultTagName": "a" },
+      "actions": ["mount custom span with default div", "assert SPAN", "set defaultTagName a", "assert SPAN"],
+      "assertions": ["SPAN before and after default tag change"],
+      "targetTitles": ["provides live callback props and state without rerunning the callback"],
+      "disposition": "partial",
+      "evidence": "Related internal test renders custom input despite supplied div tag, then changes state and checks retained input. It never changes default tag or tests public parameter precedence. React element form is adapted, not excluded."
+    },
+    {
+      "sourceLine": 122,
+      "title": "state to data attributes / converts state to data attributes automatically",
+      "parameters": { "render": "button type=button", "state": { "active": true, "index": 42 } },
+      "actions": ["mount public renderer", "inspect button"],
+      "assertions": ["data-active=''", "data-index='42'"],
+      "targetTitles": ["retains input identity, selection and focus across live state and props"],
+      "disposition": "partial",
+      "evidence": "Internal test verifies data-active after state change but no index=42 assertion; no complete two-key source body equivalent."
+    },
+    {
+      "sourceLine": 141,
+      "title": "state to data attributes / handles undefined values in state",
+      "parameters": { "render": "div", "state": { "defined": "value", "notDefined": "undefined" } },
+      "actions": ["mount", "inspect div"],
+      "assertions": ["data-defined='value'", "data-notdefined absent"],
+      "targetTitles": [],
+      "disposition": "missing",
+      "evidence": "Undefined ordinary prop masking and null mapping exclusion are distinct from undefined state value omission. No exact state fixture in internal suite."
+    },
+    {
+      "sourceLine": 160,
+      "title": "state to data attributes / merges state-based data attributes with existing props",
+      "parameters": { "render": "button type=button", "state": { "form": "login" }, "props": { "className": "btn-primary", "id": "submit-btn", "data-existing": "prop" } },
+      "actions": ["mount", "inspect button"],
+      "assertions": ["data-form='login'", "class='btn-primary'", "id='submit-btn'", "data-existing='prop'"],
+      "targetTitles": ["retains input identity, selection and focus across live state and props"],
+      "disposition": "partial",
+      "evidence": "Related internal test combines boolean state attribute, state class callback and live title; it lacks the string state, id and existing data-attribute coexistence assertions."
+    },
+    {
+      "sourceLine": 187,
+      "title": "state to data attributes / props override state-based data attributes",
+      "parameters": { "render": "button type=button", "state": { "active": true }, "props": { "data-active": "false" } },
+      "actions": ["mount", "inspect button"],
+      "assertions": ["data-active='false' rather than empty state-derived value"],
+      "targetTitles": [],
+      "disposition": "missing",
+      "evidence": "Ordinary id precedence tests do not check state-derived attribute precedence."
+    },
+    {
+      "sourceLine": 207,
+      "title": "state to data attributes / handles empty state",
+      "parameters": { "render": "span", "state": {}, "props": { "className": "test-class" } },
+      "actions": ["mount", "inspect class", "enumerate attributes and filter startsWith data-"],
+      "assertions": ["class='test-class'", "filtered data attribute names exactly []"],
+      "targetTitles": [],
+      "disposition": "missing",
+      "evidence": "No internal test enumerates all host attributes to prove empty state emits no data attributes."
+    },
+    {
+      "sourceLine": 228,
+      "title": "state to data attributes / handles undefined state",
+      "parameters": { "render": "div", "state": "undefined", "props": { "className": "test-class", "data-from-props": "value" } },
+      "actions": ["mount", "inspect div"],
+      "assertions": ["class='test-class'", "data-from-props='value'"],
+      "targetTitles": [],
+      "disposition": "missing",
+      "evidence": "Internal mounts without state prove general rendering, but no complete class and data-prop forwarding fixture under explicit undefined state."
+    },
+    {
+      "sourceLine": 248,
+      "title": "state to data attributes / converts boolean values in state to data attributes",
+      "parameters": { "render": "button type=button", "state": { "active": true, "disabled": false } },
+      "actions": ["mount", "inspect button"],
+      "assertions": ["data-active=''", "data-disabled absent"],
+      "targetTitles": ["publishes Field state keys through real description and validation composition without replacing the host or refs"],
+      "disposition": "partial",
+      "evidence": "Related internal test checks data-dirty/data-filled true/false transitions from real Field state, including absence when false. It tests a different state producer and never asserts source active/disabled state through the public wrapper. Boolean omission has related internal coverage, public case remains unmapped."
+    },
+    {
+      "sourceLine": 267,
+      "title": "state to data attributes / converts number values in state to data attributes",
+      "parameters": { "render": "div", "state": { "count": 0, "index": 42, "percentage": 99.9 } },
+      "actions": ["mount", "inspect div"],
+      "assertions": ["data-count absent", "data-index='42'", "data-percentage='99.9'"],
+      "targetTitles": [],
+      "disposition": "missing",
+      "evidence": "No numeric truthiness and fractional serialization matrix in existing internal renderer tests."
+    },
+    {
+      "sourceLine": 288,
+      "title": "state to data attributes / supports custom stateAttributesMapping for kebab-case conversion",
+      "parameters": { "render": "button type=button", "state": { "isActive": true, "itemCount": 5, "userName": "John" }, "stateAttributesMapping": { "isActive": "value ? {'data-is-active':''} : null", "itemCount": "{'data-item-count':value.toString()}", "userName": "{'data-user-name':value}" } },
+      "actions": ["mount with three custom mappings", "inspect button"],
+      "assertions": ["data-is-active=''", "data-item-count='5'", "data-user-name='John'"],
+      "targetTitles": ["preserves preceding defaults, mapped attributes and live ref dependencies in a functional input", "preserves preceding defaults, mapped attributes and live ref dependencies in a propGetter"],
+      "disposition": "partial",
+      "evidence": "Internal parameterized tests map open to aria-expanded and derive refs; neither checks kebab-case keys or number/string custom mapping outputs. Exact public matrix is missing."
+    }
+  ],
+  "excludedClasses": {
+    "typeOnly": [{ "sourceFile": "packages/react/src/use-render/useRender.spec.tsx", "evidence": "Read entire 59-line type fixture; no describe/it runtime bodies. Seven expectType checks plus App composition compile fixture.", "expandedChecks": [
+      { "sourceLine": 11, "parameters": { "render": "callback div", "enabled": "omitted" }, "assertion": "ReactElement" },
+      { "sourceLine": 18, "parameters": { "render": "callback div", "enabled": true }, "assertion": "ReactElement" },
+      { "sourceLine": 25, "parameters": { "render": "callback div", "enabled": false }, "assertion": "null" },
+      { "sourceLine": 32, "parameters": { "render": "callback div", "enabled": "Math.random() > 0.5" }, "assertion": "ReactElement | null" },
+      { "sourceLine": 38, "parameters": { "render": "callback button type=button, text Click" }, "assertion": "ReactElement" },
+      { "sourceLine": 44, "parameters": { "render": "JSX div" }, "assertion": "ReactElement" },
+      { "sourceLine": 54, "parameters": { "render": "JSX button type=button aria-label=Submit", "props": { "className": "btn-primary", "onClick": "console.log clicked" } }, "assertion": "ReactElement" },
+      { "sourceLine": 56, "parameters": { "defaultTagName": "div", "composition": "Button render={useRender result}" }, "assertion": "compile-only App fixture; no runtime assertion" }
+    ], "disposition": "excluded from runtime TEST parity; React element/null typing and element-composition API require independent Solid type qualification" }],
+    "upstreamSkipped": [], "upstreamTodo": [], "frameworkOnly": []
+  },
+  "targetOnly": [
+    { "suite": "packages/solid/src/internals/createRenderElement.test.tsx", "scope": "outside owned family; read-only related coverage, not public parity credit", "classes": ["live host identity/focus/selection", "native ref replacement/detachment", "state projection subscription granularity", "Field state integration", "controlled/native input restoration", "lazy children/provider ownership", "cross-document and fragment host retention", "browser-only native focus callback"] }
+  ],
+  "completeness": { "sourceRuntimeBodiesExpanded": 14, "allBodiesManuallyCompared": true, "matched": 0, "partial": 6, "missing": 8, "testParityComplete": false, "blocker": "No existing use-render family tests in allowed write scope. Needs parent authorization for a new public useRender test suite to cover all 14 bodies; related internal tests must remain intact.", "validation": "No family suite exists to execute. Parent gates and browser execution not run." }
+}

@@ -1,0 +1,1 @@
+var e=`/assets/tabs-hero-tailwind--initial-selection--clicks--keyboard-navigation-and-panel-association-1-BGYmzOtF.png`;export{e as default};

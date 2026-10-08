@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "status": "evidence-prepared-unresolved-source-mapping",
+  "ticket": "bsolid-donor-notices",
+  "baseUiSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "donorSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+  "sourceMapSha256": "c62d5e6126fb69898ad0de8c72a38bfab300df26096cbd872949fdf3fc95eddb",
+  "approvedOwnership": ["docs/scripts/qualification/**", "docs/tests/qualification/**", "scripts/distribution/notices/**", "test/distribution/notices/**", "NOTICE", "docs/third-party-notices.md", "tracking/distribution/donor-notices.json"],
+  "texts": [
+    { "file": "LICENSE", "destination": "LICENSE", "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a", "repository": "https://github.com/mui/base-ui", "revision": "19511bb171f3b360b006c94cf6d07e53cb446505", "source": "LICENSE", "scope": "whole file", "license": "MIT" },
+    { "file": "scripts/distribution/notices/licenses/solid-floating-ui-MIT.txt", "destination": "notices/solid-floating-ui-MIT.txt", "sha256": "9a4deecde3405cb33f532cf01b9f90957b63d8b946385e1d1d212db2e6ecb2bd", "repository": "https://github.com/lxsmnsyc/solid-floating-ui", "revision": "0492e49b746deed543dbc167a9a58ed1210c2393", "source": "LICENSE", "scope": "whole file", "license": "MIT" },
+    { "file": "scripts/distribution/notices/licenses/aria-hidden-MIT.txt", "destination": "notices/aria-hidden-MIT.txt", "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9", "repository": "https://github.com/theKashey/aria-hidden", "revision": "9220c8f4a4fd35f63bee5510a9f41a37264382d4", "source": "LICENSE", "scope": "whole file", "license": "MIT" },
+    { "file": "scripts/distribution/notices/licenses/react-spectrum-Apache-2.0.txt", "destination": "notices/react-spectrum-Apache-2.0.txt", "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84", "repository": "https://github.com/adobe/react-spectrum", "revision": "b35d5c02fe900badccd0cf1a8f23bb593419f238", "source": "LICENSE", "scope": "whole file", "license": "Apache-2.0" },
+    { "file": "scripts/distribution/notices/licenses/react-spectrum-React-NOTICE.txt", "destination": "notices/react-spectrum-React-NOTICE.txt", "sha256": "85bc9edafd1dcaa1760871a79226bf12738b0a31fb4f984b325f5d0c0304e49f", "repository": "https://github.com/adobe/react-spectrum", "revision": "b35d5c02fe900badccd0cf1a8f23bb593419f238", "source": "NOTICE.txt", "upstreamFileSha256": "ac436bba43d4366ec426e9f264ac430ea8f6556d8fd2cf867b08ac6656449cdb", "scope": "React subsection from preceding separator through SOFTWARE line terminator, excluding next separator padding blank line; literal cc7c1aece46a6b69b41958d731e0fd27c94bfc6c source URL retained", "license": "MIT", "appliesTo": "isVirtualClick inherited React portion" }
+  ],
+  "adoptions": [
+    {
+      "target": "packages/solid/src/floating-ui-react/hooks/createFloating.ts",
+      "targetSha256": "c15e54f27922d0958dc41f64beed713d451b1e22fb7ea0e80d9440d5d74d27c2",
+      "owner": "bsolid-positioning", "requiresProminentChangeNotice": false,
+      "changes": "RC13 split-effect ownership, checked promise generations, retained Base UI readiness, injected root/tree, native getter refs",
+      "targetScope": "17-104 geometry, virtual-reference and DPR portions; source-informed, not identical",
+      "portions": [
+        { "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/usePosition.ts", "revision": "0492e49b746deed543dbc167a9a58ed1210c2393", "startLine": 23, "endLine": 214, "sha256": "acbfad001348a032def47d756f4d0951cb8acb4e49a302eab6c1d0cdc0825d3d", "scope": "lifecycle/getter/config/observer patterns, selectively informed" },
+        { "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useFloating.ts", "revision": "0492e49b746deed543dbc167a9a58ed1210c2393", "startLine": 78, "endLine": 88, "sha256": "76e530298c3613d8f70f4cbd4877cc72f604e989ce9faf97135f0b840bc6eb5c", "scope": "virtual element wrapping" },
+        { "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/dpr.ts", "revision": "0492e49b746deed543dbc167a9a58ed1210c2393", "startLine": 1, "endLine": 13, "sha256": "f65624c6acd433d1dd7410d6d0e15116d9de62c87ef482fc169cddddd1015397", "scope": "DPR rounding; target uses ownerDocument, no copied global fallback" }
+      ]
+    },
+    {
+      "target": "packages/solid/src/floating-ui-react/utils/markOthers.ts", "targetSha256": "1878bd369904cee7face73d6500120270ecb23514ba6ac4055c8238bfb3a8299", "owner": "bsolid-dom", "requiresProminentChangeNotice": false,
+      "targetScope": "12-74 tree traversal, selective ARIA and restoration adapted via Base UI; exact aria-hidden commit retained in lines 1-2",
+      "changes": "Conditional aria-hidden, Base UI inert marker, shadow/realm handling, overlap locks, idempotent cleanup",
+      "portions": [{ "source": "upstream/base-ui/packages/react/src/floating-ui-react/utils/markOthers.ts", "revision": "19511bb171f3b360b006c94cf6d07e53cb446505", "startLine": 1, "endLine": 2, "sha256": "a18e57e6cefd146969fdcf42d808510b8cf45e03d3f0e98bb47dcbf7138824d1", "scope": "immutable inherited aria-hidden attribution; finer original adopted-line map pending owner evidence" }]
+    },
+    {
+      "target": "packages/solid/src/floating-ui-react/utils/event.ts", "targetSha256": "64f474985ecc6d9e5f86634b1e6043e4a20c5d573dd947fb3bd64c392e255933", "owner": "bsolid-events", "requiresProminentChangeNotice": true,
+      "targetScope": "4-15 virtual click/pointer predicates only; stopEvent and other helpers are not attributed to Adobe",
+      "changes": "Base UI Android/jsdom/fractional-pointer predicates retained; native event types and local platform import",
+      "portions": [{ "source": "upstream/base-ui/packages/react/src/floating-ui-react/utils/event.ts", "revision": "19511bb171f3b360b006c94cf6d07e53cb446505", "startLine": 12, "endLine": 48, "sha256": "3e962fbe323967ccb11f0bd56213f395f58efbcd9b1223e9ad16df06d37f764a", "scope": "exact intermediate source; Adobe main URL is not an immutable origin pin" }]
+    }
+  ],
+  "groupReviews": [
+    { "id": "geometry", "status": "adopted", "evidence": [{ "file": "packages/solid/src/floating-ui-react/hooks/createFloating.ts", "sha256": "c15e54f27922d0958dc41f64beed713d451b1e22fb7ea0e80d9440d5d74d27c2" }] },
+    { "id": "arrow", "status": "inspected-no-adoption", "reason": "Current arrow only exports baseArrow; element is Element|null, no donor accessor resolution or donor arrowCore wrapper", "evidence": [{ "file": "packages/solid/src/floating-ui-react/middleware/arrow.ts", "sha256": "3b1185753cd46fd48832cc5e5ac94085584f42589cd9df83ec7ef325abba066f" }] },
+    { "id": "root-tree", "status": "unresolved", "owner": "bsolid-floating-core" },
+    { "id": "dismiss-hover", "status": "unresolved", "owner": "bsolid-dismiss" },
+    { "id": "focus", "status": "unresolved", "owner": "bsolid-focus" },
+    { "id": "composite", "status": "unresolved", "owner": "bsolid-composite" },
+    { "id": "portal", "status": "unresolved", "owner": "bsolid-portal" },
+    { "id": "dom-helpers", "status": "unresolved", "owner": "bsolid-dom" },
+    { "id": "event-helpers", "status": "unresolved", "owner": "bsolid-events" },
+    { "id": "not-adopted", "status": "unresolved", "owner": "bsolid-donor-floating", "reason": "Planned no-copy inventory is not actual target non-adoption evidence" }
+  ],
+  "unresolved": [
+    { "id": "adobe-moving-origin", "owner": "bsolid-events", "reason": "Base UI links Adobe main, whereas the donor pins b35d5c02. License texts collected at donor attribution pin are real, but no identical-origin assertion is justified. Pin actual adopted Adobe/React source ranges or record source-owner reconciliation." },
+    { "id": "aria-hidden-line-map", "owner": "bsolid-dom", "reason": "Exact aria-hidden source URL and original license are retained. Finer adopted source ranges versus target overlap-lock rewrite still require source-owner confirmation." },
+    { "id": "floating-ui-arrow-inheritance", "owner": "bsolid-positioning", "reason": "Target arrow header says Base UI Floating UI MIT fork; exact copied Floating UI source/license provenance remains unmapped. External DOM dependency licenses alone do not clear an inlined fork." }
+  ],
+  "preparationChecks": {
+    "nodeTests": { "command": "rtk proxy node --test docs/tests/qualification/*.test.mjs test/distribution/notices/*.test.mjs", "passed": 21, "failed": 0, "scope": "Node auditors/staging and synthetic archive/evidence fixtures, not release build/browser/pack execution" },
+    "licenseTexts": { "command": "rtk proxy node scripts/distribution/notices/provenance.mjs --verify-remote", "result": "all four copied texts byte-identical within recorded whole-file/subsection scopes" },
+    "docsAudit": { "command": "rtk proxy node docs/scripts/qualification/audit.mjs --summary", "complete": false, "pages": 84, "apiModules": 79, "demoVariants": 262, "markdown": 163, "findingsAtPreparation": 2533 },
+    "noticeReconciliation": { "command": "rtk proxy node scripts/distribution/notices/audit.mjs --reconcile", "complete": false, "findingsAtPreparation": 13 }
+  },
+  "qualification": { "tarball": null, "tarballSha256": null, "packedAuditExecuted": false, "finalOwner": "coordinator", "noticeStageRequiredAfterBuild": true, "stagedManifestFilesSeam": ["notices", "THIRD-PARTY-NOTICES.md"] }
+}

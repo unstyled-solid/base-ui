@@ -1,0 +1,1 @@
+function e(e,t){return{get disabled(){return t()},get touched(){return e()?.touched??!1},get dirty(){return e()?.dirty??!1},get valid(){return e()?.valid??null},get filled(){return e()?.filled??!1},get focused(){return e()?.focused??!1}}}export{e as t};

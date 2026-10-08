@@ -1,0 +1,1 @@
+import{f as e,t}from"./floating-ui.utils.dom-CG096y3L.js";import{y as n}from"./floating-ui.utils-Ca2a-QsZ.js";function r(r){let i=t(r),a=parseFloat(i.width)||0,o=parseFloat(i.height)||0,s=e(r),c=s?r.offsetWidth:a,l=s?r.offsetHeight:o;return(n(a)!==c||n(o)!==l)&&(a=c,o=l),{width:a,height:o}}export{r as t};

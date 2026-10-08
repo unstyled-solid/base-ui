@@ -1,0 +1,1706 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/overview/quick-start/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "276a1929afde6b00f4e4d4486818a020c3559789736f60952ec04a0b00f6a3fa",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/overview/quick-start",
+  "route": "/solid/overview/quick-start",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Quick start",
+  "subtitle": "A quick guide to getting started with Base UI.",
+  "metadata": {
+    "keywords": [
+      "Base UI Quick Start",
+      "Install Base UI",
+      "Base UI shadcn",
+      "Base UI shadcn/ui",
+      "React Portal Setup",
+      "iOS Safari Backdrop Fix",
+      "Popover Assembly Example",
+      "llms.txt Link",
+      "Getting Started Guide",
+      "npm Install",
+      "Setup Guide",
+      "Installation Guide",
+      "Getting Started Tutorial",
+      "First Steps",
+      "Beginner Guide"
+    ],
+    "description": "A quick guide to getting started with Base UI."
+  },
+  "imports": [
+    {
+      "from": "docs/src/components/InstallationBlock",
+      "local": "InstallationBlock",
+      "imported": "InstallationBlock",
+      "kind": "custom",
+      "reference": "custom:docs/src/components/InstallationBlock#InstallationBlock"
+    },
+    {
+      "from": "../../components/popover/demos/hero",
+      "local": "DemoPopoverHero",
+      "imported": "DemoPopoverHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/hero#DemoPopoverHero"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Quick start",
+      "properties": {
+        "id": "quick-start"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Install the library",
+      "properties": {
+        "id": "install-the-library"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:8:1"
+    },
+    {
+      "depth": 2,
+      "text": "Set up",
+      "properties": {
+        "id": "set-up"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:16:1"
+    },
+    {
+      "depth": 3,
+      "text": "Portals",
+      "properties": {
+        "id": "portals"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:18:1"
+    },
+    {
+      "depth": 3,
+      "text": "iOS 26+ Safari",
+      "properties": {
+        "id": "ios-26-safari"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:41:1"
+    },
+    {
+      "depth": 2,
+      "text": "Assemble a component",
+      "properties": {
+        "id": "assemble-a-component"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:51:1"
+    },
+    {
+      "depth": 2,
+      "text": "Pre-styled components",
+      "properties": {
+        "id": "pre-styled-components"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:60:1"
+    },
+    {
+      "depth": 2,
+      "text": "Working with LLMs",
+      "properties": {
+        "id": "working-with-llms"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:66:1"
+    },
+    {
+      "depth": 2,
+      "text": "Next steps",
+      "properties": {
+        "id": "next-steps"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:72:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "/react/components/popover",
+      "target": "/solid/components/popover",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:53:37"
+    },
+    {
+      "source": "https://ui.shadcn.com/",
+      "target": "https://ui.shadcn.com/",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:62:1"
+    },
+    {
+      "source": "/react/overview/community",
+      "target": "/solid/overview/community",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:64:20"
+    },
+    {
+      "source": "/llms.txt",
+      "target": "/llms.txt",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:70:27"
+    },
+    {
+      "source": "/react/handbook/styling",
+      "target": "/solid/handbook/styling",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:75:17"
+    },
+    {
+      "source": "/react/components/accordion",
+      "target": "/solid/components/accordion",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:75:149"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A quick guide to getting started with Base UI."
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:4:1"
+    },
+    {
+      "name": "InstallationBlock",
+      "handler": "private-install-instructions",
+      "attributes": {
+        "className": "bui-mt-5 bui-mb-6",
+        "package": "@base-ui/react"
+      },
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:12:1",
+      "reference": "custom:docs/src/components/InstallationBlock#InstallationBlock"
+    },
+    {
+      "name": "DemoPopoverHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:58:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/hero#DemoPopoverHero"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:12:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:private-install-instructions",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:12:1",
+      "detail": "Site must implement InstallationBlock; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "class-spelling",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:12:1",
+      "detail": "Map className to class in the bounded renderer.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "publication-identity",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:12:1",
+      "detail": "Render workspace/tarball instructions; no published npm identity is asserted.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-className",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:23:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:23:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:23:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:58:1",
+      "detail": "Site must implement DemoPopoverHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/overview/quick-start/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Quick start",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 14,
+                "offset": 13
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "offset": 13
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "quick-start"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A quick guide to getting started with Base UI.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 57,
+                    "offset": 71
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 15
+              },
+              "end": {
+                "line": 3,
+                "column": 68,
+                "offset": 82
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 15
+          },
+          "end": {
+            "line": 3,
+            "column": 68,
+            "offset": 82
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 7,
+                "offset": 89
+              },
+              "end": {
+                "line": 4,
+                "column": 25,
+                "offset": 107
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A quick guide to getting started with Base UI.",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 26,
+                "offset": 108
+              },
+              "end": {
+                "line": 4,
+                "column": 82,
+                "offset": 164
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 83
+          },
+          "end": {
+            "line": 4,
+            "column": 85,
+            "offset": 167
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { InstallationBlock } from 'docs/src/components/InstallationBlock';",
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 169
+          },
+          "end": {
+            "line": 6,
+            "column": 75,
+            "offset": 243
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install the library",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 4,
+                "offset": 248
+              },
+              "end": {
+                "line": 8,
+                "column": 23,
+                "offset": 267
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 8,
+            "column": 1,
+            "offset": 245
+          },
+          "end": {
+            "line": 8,
+            "column": 23,
+            "offset": 267
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "install-the-library"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Install Base UI using a package manager.",
+            "position": {
+              "start": {
+                "line": 10,
+                "column": 1,
+                "offset": 269
+              },
+              "end": {
+                "line": 10,
+                "column": 41,
+                "offset": 309
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 269
+          },
+          "end": {
+            "line": 10,
+            "column": 41,
+            "offset": 309
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "InstallationBlock",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "className",
+            "value": "bui-mt-5 bui-mb-6",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 20,
+                "offset": 330
+              },
+              "end": {
+                "line": 12,
+                "column": 49,
+                "offset": 359
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "package",
+            "value": "@base-ui/react",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 50,
+                "offset": 360
+              },
+              "end": {
+                "line": 12,
+                "column": 74,
+                "offset": 384
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 311
+          },
+          "end": {
+            "line": 12,
+            "column": 77,
+            "offset": 387
+          }
+        },
+        "data": {
+          "handler": "private-install-instructions",
+          "reference": "custom:docs/src/components/InstallationBlock#InstallationBlock"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "All components are included in a single package. Base UI is tree-shakable, so your app bundle will contain only the components that you actually use.",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 1,
+                "offset": 389
+              },
+              "end": {
+                "line": 14,
+                "column": 150,
+                "offset": 538
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 389
+          },
+          "end": {
+            "line": 14,
+            "column": 150,
+            "offset": 538
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Set up",
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 4,
+                "offset": 543
+              },
+              "end": {
+                "line": 16,
+                "column": 10,
+                "offset": 549
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 540
+          },
+          "end": {
+            "line": 16,
+            "column": 10,
+            "offset": 549
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "set-up"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Portals",
+            "position": {
+              "start": {
+                "line": 18,
+                "column": 5,
+                "offset": 555
+              },
+              "end": {
+                "line": 18,
+                "column": 12,
+                "offset": 562
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 18,
+            "column": 1,
+            "offset": 551
+          },
+          "end": {
+            "line": 18,
+            "column": 12,
+            "offset": 562
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "portals"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Base UI uses portals for components that render popups, such as Dialog and Popover.\nTo make portaled components always appear on top of the entire page, add the following style to your application layout root:",
+            "position": {
+              "start": {
+                "line": 20,
+                "column": 1,
+                "offset": 564
+              },
+              "end": {
+                "line": 21,
+                "column": 126,
+                "offset": 773
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 20,
+            "column": 1,
+            "offset": 564
+          },
+          "end": {
+            "line": 21,
+            "column": 126,
+            "offset": 773
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"layout.tsx\"",
+        "value": "<body>\n  <div className=\"root\">\n    {/* prettier-ignore */}\n    {children}\n  </div>\n</body>",
+        "position": {
+          "start": {
+            "line": 23,
+            "column": 1,
+            "offset": 775
+          },
+          "end": {
+            "line": 30,
+            "column": 4,
+            "offset": 896
+          }
+        },
+        "data": {
+          "sourceValue": "<body>\n  <div className=\"root\">\n    {/* prettier-ignore */}\n    {children}\n  </div>\n</body>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"styles.css\"",
+        "value": ".root {\n  isolation: isolate;\n}",
+        "position": {
+          "start": {
+            "line": 32,
+            "column": 1,
+            "offset": 898
+          },
+          "end": {
+            "line": 36,
+            "column": 4,
+            "offset": 959
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This style creates a separate stacking context for your application's ",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 1,
+                "offset": 961
+              },
+              "end": {
+                "line": 38,
+                "column": 71,
+                "offset": 1031
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": ".root",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 71,
+                "offset": 1031
+              },
+              "end": {
+                "line": 38,
+                "column": 78,
+                "offset": 1038
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " element.\nThis way, popups always appear above the page contents, and any ",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 78,
+                "offset": 1038
+              },
+              "end": {
+                "line": 39,
+                "column": 65,
+                "offset": 1112
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "z-index",
+            "position": {
+              "start": {
+                "line": 39,
+                "column": 65,
+                "offset": 1112
+              },
+              "end": {
+                "line": 39,
+                "column": 74,
+                "offset": 1121
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " property in your styles won't interfere with them.",
+            "position": {
+              "start": {
+                "line": 39,
+                "column": 74,
+                "offset": 1121
+              },
+              "end": {
+                "line": 39,
+                "column": 125,
+                "offset": 1172
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 961
+          },
+          "end": {
+            "line": 39,
+            "column": 125,
+            "offset": 1172
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "iOS 26+ Safari",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 5,
+                "offset": 1178
+              },
+              "end": {
+                "line": 41,
+                "column": 19,
+                "offset": 1192
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 1174
+          },
+          "end": {
+            "line": 41,
+            "column": 19,
+            "offset": 1192
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "ios-26-safari"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Starting with iOS 26, Safari allows content beneath the UI chrome to be visible. Backdrops such as those used by dialogs must use ",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 1,
+                "offset": 1194
+              },
+              "end": {
+                "line": 43,
+                "column": 131,
+                "offset": 1324
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "position: absolute",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 131,
+                "offset": 1324
+              },
+              "end": {
+                "line": 43,
+                "column": 151,
+                "offset": 1344
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " instead of ",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 151,
+                "offset": 1344
+              },
+              "end": {
+                "line": 43,
+                "column": 163,
+                "offset": 1356
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "position: fixed",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 163,
+                "offset": 1356
+              },
+              "end": {
+                "line": 43,
+                "column": 180,
+                "offset": 1373
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to cover the entire visual viewport. For this to work after the page is scrolled, the following style must be added to your global styles:",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 180,
+                "offset": 1373
+              },
+              "end": {
+                "line": 43,
+                "column": 319,
+                "offset": 1512
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 1194
+          },
+          "end": {
+            "line": 43,
+            "column": 319,
+            "offset": 1512
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"styles.css\"",
+        "value": "body {\n  position: relative;\n}",
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 1514
+          },
+          "end": {
+            "line": 49,
+            "column": 4,
+            "offset": 1574
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Assemble a component",
+            "position": {
+              "start": {
+                "line": 51,
+                "column": 4,
+                "offset": 1579
+              },
+              "end": {
+                "line": 51,
+                "column": 24,
+                "offset": 1599
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 51,
+            "column": 1,
+            "offset": 1576
+          },
+          "end": {
+            "line": 51,
+            "column": 24,
+            "offset": 1599
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "assemble-a-component"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This demo shows you how to import a ",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 1,
+                "offset": 1601
+              },
+              "end": {
+                "line": 53,
+                "column": 37,
+                "offset": 1637
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/popover",
+            "children": [
+              {
+                "type": "text",
+                "value": "Popover",
+                "position": {
+                  "start": {
+                    "line": 53,
+                    "column": 38,
+                    "offset": 1638
+                  },
+                  "end": {
+                    "line": 53,
+                    "column": 45,
+                    "offset": 1645
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 37,
+                "offset": 1637
+              },
+              "end": {
+                "line": 53,
+                "column": 73,
+                "offset": 1673
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " component, assemble its parts, and apply styles.\nThere are examples for both Tailwind and CSS Modules below, but since Base UI is unstyled, you can use CSS-in-JS, plain CSS, or any other styling solution you prefer.",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 73,
+                "offset": 1673
+              },
+              "end": {
+                "line": 54,
+                "column": 167,
+                "offset": 1889
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 53,
+            "column": 1,
+            "offset": 1601
+          },
+          "end": {
+            "line": 54,
+            "column": 167,
+            "offset": 1889
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoPopoverHero } from '../../components/popover/demos/hero';",
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 1891
+          },
+          "end": {
+            "line": 56,
+            "column": 71,
+            "offset": 1961
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoPopoverHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 1963
+          },
+          "end": {
+            "line": 58,
+            "column": 20,
+            "offset": 1982
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/hero#DemoPopoverHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Pre-styled components",
+            "position": {
+              "start": {
+                "line": 60,
+                "column": 4,
+                "offset": 1987
+              },
+              "end": {
+                "line": 60,
+                "column": 25,
+                "offset": 2008
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 60,
+            "column": 1,
+            "offset": 1984
+          },
+          "end": {
+            "line": 60,
+            "column": 25,
+            "offset": 2008
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "pre-styled-components"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://ui.shadcn.com/",
+            "children": [
+              {
+                "type": "text",
+                "value": "shadcn/ui",
+                "position": {
+                  "start": {
+                    "line": 62,
+                    "column": 2,
+                    "offset": 2011
+                  },
+                  "end": {
+                    "line": 62,
+                    "column": 11,
+                    "offset": 2020
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 1,
+                "offset": 2010
+              },
+              "end": {
+                "line": 62,
+                "column": 36,
+                "offset": 2045
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is a great place to start if you need pre-styled components with higher-level abstractions. It uses Base UI as its unstyled foundation.",
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 36,
+                "offset": 2045
+              },
+              "end": {
+                "line": 62,
+                "column": 172,
+                "offset": 2181
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 62,
+            "column": 1,
+            "offset": 2010
+          },
+          "end": {
+            "line": 62,
+            "column": 172,
+            "offset": 2181
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Take a look at the ",
+            "position": {
+              "start": {
+                "line": 64,
+                "column": 1,
+                "offset": 2183
+              },
+              "end": {
+                "line": 64,
+                "column": 20,
+                "offset": 2202
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/overview/community",
+            "children": [
+              {
+                "type": "text",
+                "value": "Community",
+                "position": {
+                  "start": {
+                    "line": 64,
+                    "column": 21,
+                    "offset": 2203
+                  },
+                  "end": {
+                    "line": 64,
+                    "column": 30,
+                    "offset": 2212
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 64,
+                "column": 20,
+                "offset": 2202
+              },
+              "end": {
+                "line": 64,
+                "column": 58,
+                "offset": 2240
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " page to see more styled libraries powered by Base UI.",
+            "position": {
+              "start": {
+                "line": 64,
+                "column": 58,
+                "offset": 2240
+              },
+              "end": {
+                "line": 64,
+                "column": 112,
+                "offset": 2294
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 64,
+            "column": 1,
+            "offset": 2183
+          },
+          "end": {
+            "line": 64,
+            "column": 112,
+            "offset": 2294
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Working with LLMs",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 4,
+                "offset": 2299
+              },
+              "end": {
+                "line": 66,
+                "column": 21,
+                "offset": 2316
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 66,
+            "column": 1,
+            "offset": 2296
+          },
+          "end": {
+            "line": 66,
+            "column": 21,
+            "offset": 2316
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "working-with-llms"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For those of you working with LLMs, each docs page has a \"View as Markdown\" link at the top, which can be shared with AI chat assistants to help them understand Base UI concepts and component APIs.",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 1,
+                "offset": 2318
+              },
+              "end": {
+                "line": 68,
+                "column": 198,
+                "offset": 2515
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 68,
+            "column": 1,
+            "offset": 2318
+          },
+          "end": {
+            "line": 68,
+            "column": 198,
+            "offset": 2515
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Additionally, there is an ",
+            "position": {
+              "start": {
+                "line": 70,
+                "column": 1,
+                "offset": 2517
+              },
+              "end": {
+                "line": 70,
+                "column": 27,
+                "offset": 2543
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/llms.txt",
+            "children": [
+              {
+                "type": "text",
+                "value": "\"llms.txt\"",
+                "position": {
+                  "start": {
+                    "line": 70,
+                    "column": 28,
+                    "offset": 2544
+                  },
+                  "end": {
+                    "line": 70,
+                    "column": 38,
+                    "offset": 2554
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 70,
+                "column": 27,
+                "offset": 2543
+              },
+              "end": {
+                "line": 70,
+                "column": 50,
+                "offset": 2566
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " link in the \"Handbook\" section of the navigation sidebar, which you can feed to AI chat assistants to help them navigate the docs.",
+            "position": {
+              "start": {
+                "line": 70,
+                "column": 50,
+                "offset": 2566
+              },
+              "end": {
+                "line": 70,
+                "column": 181,
+                "offset": 2697
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 70,
+            "column": 1,
+            "offset": 2517
+          },
+          "end": {
+            "line": 70,
+            "column": 181,
+            "offset": 2697
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Next steps",
+            "position": {
+              "start": {
+                "line": 72,
+                "column": 4,
+                "offset": 2702
+              },
+              "end": {
+                "line": 72,
+                "column": 14,
+                "offset": 2712
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 72,
+            "column": 1,
+            "offset": 2699
+          },
+          "end": {
+            "line": 72,
+            "column": 14,
+            "offset": 2712
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "next-steps"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This walkthrough outlines the basics of putting together a Base UI component.\nContinue to the ",
+            "position": {
+              "start": {
+                "line": 74,
+                "column": 1,
+                "offset": 2714
+              },
+              "end": {
+                "line": 75,
+                "column": 17,
+                "offset": 2808
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/handbook/styling",
+            "children": [
+              {
+                "type": "text",
+                "value": "Handbook",
+                "position": {
+                  "start": {
+                    "line": 75,
+                    "column": 18,
+                    "offset": 2809
+                  },
+                  "end": {
+                    "line": 75,
+                    "column": 26,
+                    "offset": 2817
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 17,
+                "offset": 2808
+              },
+              "end": {
+                "line": 75,
+                "column": 52,
+                "offset": 2843
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " section for broader guidance on topics like styling, animation, and composition, or explore the ",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 52,
+                "offset": 2843
+              },
+              "end": {
+                "line": 75,
+                "column": 149,
+                "offset": 2940
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/accordion",
+            "children": [
+              {
+                "type": "text",
+                "value": "components",
+                "position": {
+                  "start": {
+                    "line": 75,
+                    "column": 150,
+                    "offset": 2941
+                  },
+                  "end": {
+                    "line": 75,
+                    "column": 160,
+                    "offset": 2951
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 149,
+                "offset": 2940
+              },
+              "end": {
+                "line": 75,
+                "column": 190,
+                "offset": 2981
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 190,
+                "offset": 2981
+              },
+              "end": {
+                "line": 75,
+                "column": 191,
+                "offset": 2982
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 74,
+            "column": 1,
+            "offset": 2714
+          },
+          "end": {
+            "line": 75,
+            "column": 191,
+            "offset": 2982
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI Quick Start',\n    'Install Base UI',\n    'Base UI shadcn',\n    'Base UI shadcn/ui',\n    'React Portal Setup',\n    'iOS Safari Backdrop Fix',\n    'Popover Assembly Example',\n    'llms.txt Link',\n    'Getting Started Guide',\n    'npm Install',\n    'Setup Guide',\n    'Installation Guide',\n    'Getting Started Tutorial',\n    'First Steps',\n    'Beginner Guide',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 77,
+            "column": 1,
+            "offset": 2984
+          },
+          "end": {
+            "line": 95,
+            "column": 3,
+            "offset": 3404
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 96,
+        "column": 1,
+        "offset": 3405
+      }
+    }
+  }
+}

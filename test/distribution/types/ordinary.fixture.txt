@@ -1,0 +1,40 @@
+import { Button, Combobox, Select, Accordion } from 'baseui-solid2';
+import type { ButtonProps } from 'baseui-solid2/button';
+import type { BaseUIChangeEventDetails, HTMLProps, ComponentRenderFn } from 'baseui-solid2/types';
+import type { TemporalAdapter } from 'baseui-solid2/internals/temporal';
+
+type Equal<A, B> = (<T>() => T extends A ? 1 : 2) extends (<T>() => T extends B ? 1 : 2) ? true : false;
+type Assert<T extends true> = T;
+type NotAny<T> = 0 extends (1 & T) ? false : true;
+type Item = { id: number; label: string };
+type Aliases = Assert<Equal<Button.Props, ButtonProps>>;
+type GenericValue = Assert<Equal<Parameters<NonNullable<Select.Root.Props<Item, true>['onValueChange']>>[0], Item[]>>;
+type ComboboxValue = Assert<Equal<Parameters<NonNullable<Combobox.Root.Props<Item, false>['onValueChange']>>[0], Item | null>>;
+type TypedButton = Assert<NotAny<Button.Props>>;
+type TypedNamespace = Assert<NotAny<Accordion.Root.State>>;
+type TypedEvent = Assert<NotAny<BaseUIChangeEventDetails<'escape-key'>['event']>>;
+type GenericAdapter = TemporalAdapter<Date>;
+
+const button: Button.Props = {
+  ref: element => { const native: HTMLElement = element; native.focus(); },
+  onClick: event => { event.preventBaseUIHandler(); event.currentTarget.disabled = true; },
+  render: (props, state) => { const disabled: boolean = state.disabled; return <button {...props} disabled={disabled} />; },
+};
+const render: ComponentRenderFn<HTMLProps<HTMLDivElement>, { open: boolean }> = (props, state) => <div {...props} hidden={!state.open} />;
+const combo: Combobox.Root.Props<Item, true> = {
+  multiple: true, value: [{ id: 1, label: 'one' }],
+  onValueChange: values => { const id: number = values[0].id; void id; },
+};
+const select: Select.Root.Props<Item> = {
+  value: { id: 1, label: 'one' },
+  onValueChange: value => { const id: number | undefined = value?.id; void id; },
+};
+function discriminate(details: BaseUIChangeEventDetails<'escape-key' | 'trigger-focus' | 'outside-press'>) {
+  if (details.reason === 'escape-key') { const event: KeyboardEvent = details.event; event.key; }
+  if (details.reason === 'trigger-focus') { const event: FocusEvent = details.event; event.relatedTarget; }
+  details.cancel(); details.allowPropagation();
+}
+const inferred = <Combobox.Root value={{ id: 1, label: 'one' }} onValueChange={value => { const id: number | undefined = value?.id; void id; }} />;
+const multiple = <Select.Root multiple value={[{ id: 1, label: 'one' }]} onValueChange={values => { const id: number = values[0].id; void id; }} />;
+void [button, render, combo, select, discriminate, inferred, multiple];
+export type { Aliases, GenericValue, ComboboxValue, TypedButton, TypedNamespace, TypedEvent, GenericAdapter };

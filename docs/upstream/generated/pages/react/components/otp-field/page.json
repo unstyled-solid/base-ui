@@ -1,0 +1,2916 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/otp-field/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "3b4042b750aafa7354f97b4e1bc29e81b33821fcce9bdcf1dcc93a0431c091f4",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/otp-field",
+  "route": "/solid/components/otp-field",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "OTP Field",
+  "subtitle": "A one-time password input composed of individual character slots.",
+  "metadata": {
+    "keywords": [
+      "React OTP Field",
+      "One-Time Password Input",
+      "Verification Code Input",
+      "OTP Input Component",
+      "Pin Input",
+      "Passcode Input",
+      "Two-Factor Authentication Input",
+      "2FA Input",
+      "Multi-Slot Input",
+      "Accessible OTP Field",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React OTP field component for one-time password and verification code entry."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoOTPFieldHero",
+      "imported": "DemoOTPFieldHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/hero#DemoOTPFieldHero"
+    },
+    {
+      "from": "./demos/alphanumeric",
+      "local": "DemoOTPFieldAlphanumeric",
+      "imported": "DemoOTPFieldAlphanumeric",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/alphanumeric#DemoOTPFieldAlphanumeric"
+    },
+    {
+      "from": "./demos/grouped",
+      "local": "DemoOTPFieldGrouped",
+      "imported": "DemoOTPFieldGrouped",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/grouped#DemoOTPFieldGrouped"
+    },
+    {
+      "from": "./demos/focused-placeholder",
+      "local": "DemoOTPFieldFocusedPlaceholder",
+      "imported": "DemoOTPFieldFocusedPlaceholder",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/focused-placeholder#DemoOTPFieldFocusedPlaceholder"
+    },
+    {
+      "from": "./demos/custom-sanitize",
+      "local": "DemoOTPFieldCustomNormalize",
+      "imported": "DemoOTPFieldCustomNormalize",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/custom-sanitize#DemoOTPFieldCustomNormalize"
+    },
+    {
+      "from": "./demos/password",
+      "local": "DemoOTPFieldPassword",
+      "imported": "DemoOTPFieldPassword",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/password#DemoOTPFieldPassword"
+    },
+    {
+      "from": "./types",
+      "local": "TypesOTPField",
+      "imported": "TypesOTPField",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/otp-field/types#TypesOTPField"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "OTP Field",
+      "properties": {
+        "id": "otp-field"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:14:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:18:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:31:1"
+    },
+    {
+      "depth": 3,
+      "text": "Labeling an OTP field",
+      "properties": {
+        "id": "labeling-an-otp-field"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:33:1"
+    },
+    {
+      "depth": 3,
+      "text": "Form integration",
+      "properties": {
+        "id": "form-integration"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:56:1"
+    },
+    {
+      "depth": 3,
+      "text": "Alphanumeric verification codes",
+      "properties": {
+        "id": "alphanumeric-verification-codes"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:80:1"
+    },
+    {
+      "depth": 3,
+      "text": "Grouped layouts",
+      "properties": {
+        "id": "grouped-layouts"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:89:1"
+    },
+    {
+      "depth": 3,
+      "text": "Placeholder hints",
+      "properties": {
+        "id": "placeholder-hints"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:98:1"
+    },
+    {
+      "depth": 3,
+      "text": "Custom normalization",
+      "properties": {
+        "id": "custom-normalization"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:107:1"
+    },
+    {
+      "depth": 3,
+      "text": "Masked entry",
+      "properties": {
+        "id": "masked-entry"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:120:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:128:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:132:1"
+    },
+    {
+      "depth": 3,
+      "text": "Input",
+      "properties": {
+        "id": "input"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:136:1"
+    },
+    {
+      "depth": 3,
+      "text": "Separator",
+      "properties": {
+        "id": "separator"
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:140:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#labeling-an-otp-field",
+      "target": "#labeling-an-otp-field",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:16:125"
+    },
+    {
+      "source": "/react/handbook/forms",
+      "target": "/solid/handbook/forms",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:16:181"
+    },
+    {
+      "source": "/react/components/field",
+      "target": "/solid/components/field",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:58:5"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React OTP field component for one-time password and verification code entry."
+      },
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:5:1"
+    },
+    {
+      "name": "DemoOTPFieldHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:12:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/hero#DemoOTPFieldHero"
+    },
+    {
+      "name": "DemoOTPFieldAlphanumeric",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:87:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/alphanumeric#DemoOTPFieldAlphanumeric"
+    },
+    {
+      "name": "DemoOTPFieldGrouped",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:96:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/grouped#DemoOTPFieldGrouped"
+    },
+    {
+      "name": "DemoOTPFieldFocusedPlaceholder",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:105:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/focused-placeholder#DemoOTPFieldFocusedPlaceholder"
+    },
+    {
+      "name": "DemoOTPFieldCustomNormalize",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:118:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/custom-sanitize#DemoOTPFieldCustomNormalize"
+    },
+    {
+      "name": "DemoOTPFieldPassword",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:126:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/password#DemoOTPFieldPassword"
+    },
+    {
+      "name": "TypesOTPField.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:134:1",
+      "reference": "api:docs/src/app/(docs)/react/components/otp-field/types#TypesOTPField"
+    },
+    {
+      "name": "TypesOTPField.Input",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:138:1",
+      "reference": "api:docs/src/app/(docs)/react/components/otp-field/types#TypesOTPField"
+    },
+    {
+      "name": "TypesOTPField.Separator",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:142:1",
+      "reference": "api:docs/src/app/(docs)/react/components/otp-field/types#TypesOTPField"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:5:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:12:1",
+      "detail": "Site must implement DemoOTPFieldHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:22:1",
+      "detail": "OTPField.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:22:1",
+      "detail": "OTPField.Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:22:1",
+      "detail": "OTPField.Separator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:22:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:41:1",
+      "detail": "OTPField.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:41:1",
+      "detail": "OTPField.Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:41:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:60:1",
+      "detail": "Form",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:60:1",
+      "detail": "Field.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:60:1",
+      "detail": "Field.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:60:1",
+      "detail": "Field.Description",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:60:1",
+      "detail": "OTPField.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:60:1",
+      "detail": "OTPField.Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:60:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:87:1",
+      "detail": "Site must implement DemoOTPFieldAlphanumeric; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:96:1",
+      "detail": "Site must implement DemoOTPFieldGrouped; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:105:1",
+      "detail": "Site must implement DemoOTPFieldFocusedPlaceholder; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:118:1",
+      "detail": "Site must implement DemoOTPFieldCustomNormalize; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:126:1",
+      "detail": "Site must implement DemoOTPFieldPassword; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:134:1",
+      "detail": "Site must implement TypesOTPField.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:138:1",
+      "detail": "Site must implement TypesOTPField.Input; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:142:1",
+      "detail": "Site must implement TypesOTPField.Separator; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/otp-field/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "OTP Field",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 12,
+                "offset": 11
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12,
+            "offset": 11
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "otp-field"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A one-time password input composed of individual character slots.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 23
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 76,
+                    "offset": 88
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 13
+              },
+              "end": {
+                "line": 3,
+                "column": 87,
+                "offset": 99
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 87,
+            "offset": 99
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 109
+              },
+              "end": {
+                "line": 6,
+                "column": 21,
+                "offset": 127
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React OTP field component for one-time password and verification code entry.",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 3,
+                "offset": 130
+              },
+              "end": {
+                "line": 7,
+                "column": 114,
+                "offset": 241
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 101
+          },
+          "end": {
+            "line": 8,
+            "column": 3,
+            "offset": 244
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoOTPFieldHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 246
+          },
+          "end": {
+            "line": 10,
+            "column": 49,
+            "offset": 294
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoOTPFieldHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 296
+          },
+          "end": {
+            "line": 12,
+            "column": 21,
+            "offset": 316
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/hero#DemoOTPFieldHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 4,
+                "offset": 321
+              },
+              "end": {
+                "line": 14,
+                "column": 20,
+                "offset": 337
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 318
+          },
+          "end": {
+            "line": 14,
+            "column": 20,
+            "offset": 337
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Form controls must have an accessible name",
+                        "position": {
+                          "start": {
+                            "line": 16,
+                            "column": 5,
+                            "offset": 343
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 47,
+                            "offset": 385
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 3,
+                        "offset": 341
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 49,
+                        "offset": 387
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": It can be created using a ",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 49,
+                        "offset": 387
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 77,
+                        "offset": 415
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<label>",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 77,
+                        "offset": 415
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 86,
+                        "offset": 424
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " element or the ",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 86,
+                        "offset": 424
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 102,
+                        "offset": 440
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Field",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 102,
+                        "offset": 440
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 109,
+                        "offset": 447
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " component. See ",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 109,
+                        "offset": 447
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 125,
+                        "offset": 463
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#labeling-an-otp-field",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Labeling an OTP field",
+                        "position": {
+                          "start": {
+                            "line": 16,
+                            "column": 126,
+                            "offset": 464
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 147,
+                            "offset": 485
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 125,
+                        "offset": 463
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 172,
+                        "offset": 510
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and the ",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 172,
+                        "offset": 510
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 181,
+                        "offset": 519
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/handbook/forms",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "forms guide",
+                        "position": {
+                          "start": {
+                            "line": 16,
+                            "column": 182,
+                            "offset": 520
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 193,
+                            "offset": 531
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 181,
+                        "offset": 519
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 217,
+                        "offset": 555
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 217,
+                        "offset": 555
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 218,
+                        "offset": 556
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 16,
+                    "column": 3,
+                    "offset": 341
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 218,
+                    "offset": 556
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 339
+              },
+              "end": {
+                "line": 16,
+                "column": 218,
+                "offset": 556
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 339
+          },
+          "end": {
+            "line": 16,
+            "column": 218,
+            "offset": 556
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 18,
+                "column": 4,
+                "offset": 561
+              },
+              "end": {
+                "line": 18,
+                "column": 11,
+                "offset": 568
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 18,
+            "column": 1,
+            "offset": 558
+          },
+          "end": {
+            "line": 18,
+            "column": 11,
+            "offset": 568
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 20,
+                "column": 1,
+                "offset": 570
+              },
+              "end": {
+                "line": 20,
+                "column": 45,
+                "offset": 614
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 20,
+            "column": 1,
+            "offset": 570
+          },
+          "end": {
+            "line": 20,
+            "column": 45,
+            "offset": 614
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { OTPField } from 'baseui-solid2/otp-field';\n\n<OTPField.Root>\n  <OTPField.Input />\n  <OTPField.Separator />\n</OTPField.Root>;",
+        "position": {
+          "start": {
+            "line": 22,
+            "column": 1,
+            "offset": 616
+          },
+          "end": {
+            "line": 29,
+            "column": 4,
+            "offset": 776
+          }
+        },
+        "data": {
+          "sourceValue": "import { OTPField } from '@base-ui/react/otp-field';\n\n<OTPField.Root>\n  <OTPField.Input />\n  <OTPField.Separator />\n</OTPField.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/otp-field",
+              "start": 26,
+              "end": 50,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/otp-field",
+              "start": 26,
+              "end": 50,
+              "kind": "import",
+              "replacement": "baseui-solid2/otp-field"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 4,
+                "offset": 781
+              },
+              "end": {
+                "line": 31,
+                "column": 12,
+                "offset": 789
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 778
+          },
+          "end": {
+            "line": 31,
+            "column": 12,
+            "offset": 789
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Labeling an OTP field",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 5,
+                "offset": 795
+              },
+              "end": {
+                "line": 33,
+                "column": 26,
+                "offset": 816
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 791
+          },
+          "end": {
+            "line": 33,
+            "column": 26,
+            "offset": 816
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "labeling-an-otp-field"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Pass an ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 1,
+                "offset": 818
+              },
+              "end": {
+                "line": 35,
+                "column": 9,
+                "offset": 826
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "id",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 9,
+                "offset": 826
+              },
+              "end": {
+                "line": 35,
+                "column": 13,
+                "offset": 830
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 13,
+                "offset": 830
+              },
+              "end": {
+                "line": 35,
+                "column": 17,
+                "offset": 834
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<OTPField.Root>",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 17,
+                "offset": 834
+              },
+              "end": {
+                "line": 35,
+                "column": 34,
+                "offset": 851
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and use a native ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 34,
+                "offset": 851
+              },
+              "end": {
+                "line": 35,
+                "column": 52,
+                "offset": 869
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<label>",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 52,
+                "offset": 869
+              },
+              "end": {
+                "line": 35,
+                "column": 61,
+                "offset": 878
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " with a matching ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 61,
+                "offset": 878
+              },
+              "end": {
+                "line": 35,
+                "column": 78,
+                "offset": 895
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "htmlFor",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 78,
+                "offset": 895
+              },
+              "end": {
+                "line": 35,
+                "column": 87,
+                "offset": 904
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". Let the\nfirst input use the field label, and add ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 87,
+                "offset": 904
+              },
+              "end": {
+                "line": 36,
+                "column": 42,
+                "offset": 955
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "aria-label",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 42,
+                "offset": 955
+              },
+              "end": {
+                "line": 36,
+                "column": 54,
+                "offset": 967
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to the remaining inputs so assistive\ntechnology can announce which slot is focused.",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 54,
+                "offset": 967
+              },
+              "end": {
+                "line": 37,
+                "column": 47,
+                "offset": 1051
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 818
+          },
+          "end": {
+            "line": 37,
+            "column": 47,
+            "offset": 1051
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Optionally, add ",
+            "position": {
+              "start": {
+                "line": 39,
+                "column": 1,
+                "offset": 1053
+              },
+              "end": {
+                "line": 39,
+                "column": 17,
+                "offset": 1069
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "aria-describedby",
+            "position": {
+              "start": {
+                "line": 39,
+                "column": 17,
+                "offset": 1069
+              },
+              "end": {
+                "line": 39,
+                "column": 35,
+                "offset": 1087
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " when supporting text should be announced with the field.",
+            "position": {
+              "start": {
+                "line": 39,
+                "column": 35,
+                "offset": 1087
+              },
+              "end": {
+                "line": 39,
+                "column": 92,
+                "offset": 1144
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 39,
+            "column": 1,
+            "offset": 1053
+          },
+          "end": {
+            "line": 39,
+            "column": 92,
+            "offset": 1144
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"OTP Field with a native label and description\"",
+        "value": "<div>\n  <label htmlFor=\"verification-code\">Verification code</label>\n  <OTPField.Root id=\"verification-code\" length={6} aria-describedby=\"verification-code-description\">\n    <OTPField.Input />\n    <OTPField.Input aria-label=\"Character 2 of 6\" />\n    <OTPField.Input aria-label=\"Character 3 of 6\" />\n    <OTPField.Input aria-label=\"Character 4 of 6\" />\n    <OTPField.Input aria-label=\"Character 5 of 6\" />\n    <OTPField.Input aria-label=\"Character 6 of 6\" />\n  </OTPField.Root>\n  <p id=\"verification-code-description\">Enter the 6-character code we sent to your device.</p>\n</div>",
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 1146
+          },
+          "end": {
+            "line": 54,
+            "column": 4,
+            "offset": 1789
+          }
+        },
+        "data": {
+          "sourceValue": "<div>\n  <label htmlFor=\"verification-code\">Verification code</label>\n  <OTPField.Root id=\"verification-code\" length={6} aria-describedby=\"verification-code-description\">\n    <OTPField.Input />\n    <OTPField.Input aria-label=\"Character 2 of 6\" />\n    <OTPField.Input aria-label=\"Character 3 of 6\" />\n    <OTPField.Input aria-label=\"Character 4 of 6\" />\n    <OTPField.Input aria-label=\"Character 5 of 6\" />\n    <OTPField.Input aria-label=\"Character 6 of 6\" />\n  </OTPField.Root>\n  <p id=\"verification-code-description\">Enter the 6-character code we sent to your device.</p>\n</div>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Form integration",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 5,
+                "offset": 1795
+              },
+              "end": {
+                "line": 56,
+                "column": 21,
+                "offset": 1811
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 1791
+          },
+          "end": {
+            "line": 56,
+            "column": 21,
+            "offset": 1811
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "form-integration"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 1,
+                "offset": 1813
+              },
+              "end": {
+                "line": 58,
+                "column": 5,
+                "offset": 1817
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/field",
+            "children": [
+              {
+                "type": "text",
+                "value": "Field",
+                "position": {
+                  "start": {
+                    "line": 58,
+                    "column": 6,
+                    "offset": 1818
+                  },
+                  "end": {
+                    "line": 58,
+                    "column": 11,
+                    "offset": 1823
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 5,
+                "offset": 1817
+              },
+              "end": {
+                "line": 58,
+                "column": 37,
+                "offset": 1849
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to handle label associations and form integration:",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 37,
+                "offset": 1849
+              },
+              "end": {
+                "line": 58,
+                "column": 88,
+                "offset": 1900
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 1813
+          },
+          "end": {
+            "line": 58,
+            "column": 88,
+            "offset": 1900
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using OTP Field in a form\" {2}",
+        "value": "<Form>\n  <Field.Root name=\"verificationCode\">\n    <Field.Label>Verification code</Field.Label>\n    <Field.Description>Enter the 6-character code we sent to your device.</Field.Description>\n    <OTPField.Root length={6}>\n      <OTPField.Input />\n      <OTPField.Input aria-label=\"Character 2 of 6\" />\n      <OTPField.Input aria-label=\"Character 3 of 6\" />\n      <OTPField.Input aria-label=\"Character 4 of 6\" />\n      <OTPField.Input aria-label=\"Character 5 of 6\" />\n      <OTPField.Input aria-label=\"Character 6 of 6\" />\n    </OTPField.Root>\n  </Field.Root>\n</Form>",
+        "position": {
+          "start": {
+            "line": 60,
+            "column": 1,
+            "offset": 1902
+          },
+          "end": {
+            "line": 75,
+            "column": 4,
+            "offset": 2515
+          }
+        },
+        "data": {
+          "sourceValue": "<Form>\n  <Field.Root name=\"verificationCode\">\n    <Field.Label>Verification code</Field.Label>\n    <Field.Description>Enter the 6-character code we sent to your device.</Field.Description>\n    <OTPField.Root length={6}>\n      <OTPField.Input />\n      <OTPField.Input aria-label=\"Character 2 of 6\" />\n      <OTPField.Input aria-label=\"Character 3 of 6\" />\n      <OTPField.Input aria-label=\"Character 4 of 6\" />\n      <OTPField.Input aria-label=\"Character 5 of 6\" />\n      <OTPField.Input aria-label=\"Character 6 of 6\" />\n    </OTPField.Root>\n  </Field.Root>\n</Form>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Pass ",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 1,
+                "offset": 2517
+              },
+              "end": {
+                "line": 77,
+                "column": 6,
+                "offset": 2522
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "autoSubmit",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 6,
+                "offset": 2522
+              },
+              "end": {
+                "line": 77,
+                "column": 18,
+                "offset": 2534
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to submit the owning form automatically when all slots are filled, or use\n",
+            "position": {
+              "start": {
+                "line": 77,
+                "column": 18,
+                "offset": 2534
+              },
+              "end": {
+                "line": 78,
+                "column": 1,
+                "offset": 2609
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onValueComplete",
+            "position": {
+              "start": {
+                "line": 78,
+                "column": 1,
+                "offset": 2609
+              },
+              "end": {
+                "line": 78,
+                "column": 18,
+                "offset": 2626
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to react to completion without submitting.",
+            "position": {
+              "start": {
+                "line": 78,
+                "column": 18,
+                "offset": 2626
+              },
+              "end": {
+                "line": 78,
+                "column": 61,
+                "offset": 2669
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 77,
+            "column": 1,
+            "offset": 2517
+          },
+          "end": {
+            "line": 78,
+            "column": 61,
+            "offset": 2669
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Alphanumeric verification codes",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 5,
+                "offset": 2675
+              },
+              "end": {
+                "line": 80,
+                "column": 36,
+                "offset": 2706
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 80,
+            "column": 1,
+            "offset": 2671
+          },
+          "end": {
+            "line": 80,
+            "column": 36,
+            "offset": 2706
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "alphanumeric-verification-codes"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 1,
+                "offset": 2708
+              },
+              "end": {
+                "line": 82,
+                "column": 5,
+                "offset": 2712
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "validationType=\"alphanumeric\"",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 5,
+                "offset": 2712
+              },
+              "end": {
+                "line": 82,
+                "column": 36,
+                "offset": 2743
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for recovery, backup, or invite codes that mix letters and\nnumbers.",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 36,
+                "offset": 2743
+              },
+              "end": {
+                "line": 83,
+                "column": 9,
+                "offset": 2811
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 82,
+            "column": 1,
+            "offset": 2708
+          },
+          "end": {
+            "line": 83,
+            "column": 9,
+            "offset": 2811
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoOTPFieldAlphanumeric } from './demos/alphanumeric';",
+        "position": {
+          "start": {
+            "line": 85,
+            "column": 1,
+            "offset": 2813
+          },
+          "end": {
+            "line": 85,
+            "column": 65,
+            "offset": 2877
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoOTPFieldAlphanumeric",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 87,
+            "column": 1,
+            "offset": 2879
+          },
+          "end": {
+            "line": 87,
+            "column": 29,
+            "offset": 2907
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/alphanumeric#DemoOTPFieldAlphanumeric"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Grouped layouts",
+            "position": {
+              "start": {
+                "line": 89,
+                "column": 5,
+                "offset": 2913
+              },
+              "end": {
+                "line": 89,
+                "column": 20,
+                "offset": 2928
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 89,
+            "column": 1,
+            "offset": 2909
+          },
+          "end": {
+            "line": 89,
+            "column": 20,
+            "offset": 2928
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "grouped-layouts"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Wrap subsets of inputs in your own layout elements and use ",
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 1,
+                "offset": 2930
+              },
+              "end": {
+                "line": 91,
+                "column": 60,
+                "offset": 2989
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<OTPField.Separator>",
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 60,
+                "offset": 2989
+              },
+              "end": {
+                "line": 91,
+                "column": 82,
+                "offset": 3011
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " when you\nwant the code presented in smaller visual chunks such as ",
+            "position": {
+              "start": {
+                "line": 91,
+                "column": 82,
+                "offset": 3011
+              },
+              "end": {
+                "line": 92,
+                "column": 58,
+                "offset": 3078
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "123-456",
+            "position": {
+              "start": {
+                "line": 92,
+                "column": 58,
+                "offset": 3078
+              },
+              "end": {
+                "line": 92,
+                "column": 67,
+                "offset": 3087
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 92,
+                "column": 67,
+                "offset": 3087
+              },
+              "end": {
+                "line": 92,
+                "column": 68,
+                "offset": 3088
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 91,
+            "column": 1,
+            "offset": 2930
+          },
+          "end": {
+            "line": 92,
+            "column": 68,
+            "offset": 3088
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoOTPFieldGrouped } from './demos/grouped';",
+        "position": {
+          "start": {
+            "line": 94,
+            "column": 1,
+            "offset": 3090
+          },
+          "end": {
+            "line": 94,
+            "column": 55,
+            "offset": 3144
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoOTPFieldGrouped",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 96,
+            "column": 1,
+            "offset": 3146
+          },
+          "end": {
+            "line": 96,
+            "column": 24,
+            "offset": 3169
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/grouped#DemoOTPFieldGrouped"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Placeholder hints",
+            "position": {
+              "start": {
+                "line": 98,
+                "column": 5,
+                "offset": 3175
+              },
+              "end": {
+                "line": 98,
+                "column": 22,
+                "offset": 3192
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 98,
+            "column": 1,
+            "offset": 3171
+          },
+          "end": {
+            "line": 98,
+            "column": 22,
+            "offset": 3192
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "placeholder-hints"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "<OTPField.Input>",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 1,
+                "offset": 3194
+              },
+              "end": {
+                "line": 100,
+                "column": 19,
+                "offset": 3212
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is a real input, so native ",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 19,
+                "offset": 3212
+              },
+              "end": {
+                "line": 100,
+                "column": 47,
+                "offset": 3240
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "placeholder",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 47,
+                "offset": 3240
+              },
+              "end": {
+                "line": 100,
+                "column": 60,
+                "offset": 3253
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " props and CSS work as usual. This\nexample keeps placeholder hints visible until the active slot receives focus.",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 60,
+                "offset": 3253
+              },
+              "end": {
+                "line": 101,
+                "column": 78,
+                "offset": 3365
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 100,
+            "column": 1,
+            "offset": 3194
+          },
+          "end": {
+            "line": 101,
+            "column": 78,
+            "offset": 3365
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoOTPFieldFocusedPlaceholder } from './demos/focused-placeholder';",
+        "position": {
+          "start": {
+            "line": 103,
+            "column": 1,
+            "offset": 3367
+          },
+          "end": {
+            "line": 103,
+            "column": 78,
+            "offset": 3444
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoOTPFieldFocusedPlaceholder",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 105,
+            "column": 1,
+            "offset": 3446
+          },
+          "end": {
+            "line": 105,
+            "column": 35,
+            "offset": 3480
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/focused-placeholder#DemoOTPFieldFocusedPlaceholder"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Custom normalization",
+            "position": {
+              "start": {
+                "line": 107,
+                "column": 5,
+                "offset": 3486
+              },
+              "end": {
+                "line": 107,
+                "column": 25,
+                "offset": 3506
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 107,
+            "column": 1,
+            "offset": 3482
+          },
+          "end": {
+            "line": 107,
+            "column": 25,
+            "offset": 3506
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "custom-normalization"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 109,
+                "column": 1,
+                "offset": 3508
+              },
+              "end": {
+                "line": 109,
+                "column": 5,
+                "offset": 3512
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "normalizeValue",
+            "position": {
+              "start": {
+                "line": 109,
+                "column": 5,
+                "offset": 3512
+              },
+              "end": {
+                "line": 109,
+                "column": 21,
+                "offset": 3528
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to normalize accepted values before state updates, such as converting\nalphanumeric codes to uppercase. It runs after ",
+            "position": {
+              "start": {
+                "line": 109,
+                "column": 21,
+                "offset": 3528
+              },
+              "end": {
+                "line": 110,
+                "column": 48,
+                "offset": 3646
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "validationType",
+            "position": {
+              "start": {
+                "line": 110,
+                "column": 48,
+                "offset": 3646
+              },
+              "end": {
+                "line": 110,
+                "column": 64,
+                "offset": 3662
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " filtering, and the result is filtered\nagainst ",
+            "position": {
+              "start": {
+                "line": 110,
+                "column": 64,
+                "offset": 3662
+              },
+              "end": {
+                "line": 111,
+                "column": 9,
+                "offset": 3709
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "validationType",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 9,
+                "offset": 3709
+              },
+              "end": {
+                "line": 111,
+                "column": 25,
+                "offset": 3725
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " again. Use ",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 25,
+                "offset": 3725
+              },
+              "end": {
+                "line": 111,
+                "column": 37,
+                "offset": 3737
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "validationType=\"none\"",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 37,
+                "offset": 3737
+              },
+              "end": {
+                "line": 111,
+                "column": 60,
+                "offset": 3760
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " when the normalizer should provide the\nfull validation rule.",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 60,
+                "offset": 3760
+              },
+              "end": {
+                "line": 112,
+                "column": 22,
+                "offset": 3821
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 109,
+            "column": 1,
+            "offset": 3508
+          },
+          "end": {
+            "line": 112,
+            "column": 22,
+            "offset": 3821
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Pair custom rules with ",
+            "position": {
+              "start": {
+                "line": 114,
+                "column": 1,
+                "offset": 3823
+              },
+              "end": {
+                "line": 114,
+                "column": 24,
+                "offset": 3846
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "inputMode",
+            "position": {
+              "start": {
+                "line": 114,
+                "column": 24,
+                "offset": 3846
+              },
+              "end": {
+                "line": 114,
+                "column": 35,
+                "offset": 3857
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for keyboard hints and ",
+            "position": {
+              "start": {
+                "line": 114,
+                "column": 35,
+                "offset": 3857
+              },
+              "end": {
+                "line": 114,
+                "column": 59,
+                "offset": 3881
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onValueInvalid",
+            "position": {
+              "start": {
+                "line": 114,
+                "column": 59,
+                "offset": 3881
+              },
+              "end": {
+                "line": 114,
+                "column": 75,
+                "offset": 3897
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for rejected characters.",
+            "position": {
+              "start": {
+                "line": 114,
+                "column": 75,
+                "offset": 3897
+              },
+              "end": {
+                "line": 114,
+                "column": 100,
+                "offset": 3922
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 114,
+            "column": 1,
+            "offset": 3823
+          },
+          "end": {
+            "line": 114,
+            "column": 100,
+            "offset": 3922
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoOTPFieldCustomNormalize } from './demos/custom-sanitize';",
+        "position": {
+          "start": {
+            "line": 116,
+            "column": 1,
+            "offset": 3924
+          },
+          "end": {
+            "line": 116,
+            "column": 71,
+            "offset": 3994
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoOTPFieldCustomNormalize",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 118,
+            "column": 1,
+            "offset": 3996
+          },
+          "end": {
+            "line": 118,
+            "column": 32,
+            "offset": 4027
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/custom-sanitize#DemoOTPFieldCustomNormalize"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Masked entry",
+            "position": {
+              "start": {
+                "line": 120,
+                "column": 5,
+                "offset": 4033
+              },
+              "end": {
+                "line": 120,
+                "column": 17,
+                "offset": 4045
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 120,
+            "column": 1,
+            "offset": 4029
+          },
+          "end": {
+            "line": 120,
+            "column": 17,
+            "offset": 4045
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "masked-entry"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 122,
+                "column": 1,
+                "offset": 4047
+              },
+              "end": {
+                "line": 122,
+                "column": 5,
+                "offset": 4051
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "mask",
+            "position": {
+              "start": {
+                "line": 122,
+                "column": 5,
+                "offset": 4051
+              },
+              "end": {
+                "line": 122,
+                "column": 11,
+                "offset": 4057
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " when the code should be obscured while it is being typed.",
+            "position": {
+              "start": {
+                "line": 122,
+                "column": 11,
+                "offset": 4057
+              },
+              "end": {
+                "line": 122,
+                "column": 69,
+                "offset": 4115
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 122,
+            "column": 1,
+            "offset": 4047
+          },
+          "end": {
+            "line": 122,
+            "column": 69,
+            "offset": 4115
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoOTPFieldPassword } from './demos/password';",
+        "position": {
+          "start": {
+            "line": 124,
+            "column": 1,
+            "offset": 4117
+          },
+          "end": {
+            "line": 124,
+            "column": 57,
+            "offset": 4173
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoOTPFieldPassword",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 126,
+            "column": 1,
+            "offset": 4175
+          },
+          "end": {
+            "line": 126,
+            "column": 25,
+            "offset": 4199
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/otp-field/demos/password#DemoOTPFieldPassword"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 4,
+                "offset": 4204
+              },
+              "end": {
+                "line": 128,
+                "column": 17,
+                "offset": 4217
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 128,
+            "column": 1,
+            "offset": 4201
+          },
+          "end": {
+            "line": 128,
+            "column": 17,
+            "offset": 4217
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesOTPField } from './types';",
+        "position": {
+          "start": {
+            "line": 130,
+            "column": 1,
+            "offset": 4219
+          },
+          "end": {
+            "line": 130,
+            "column": 41,
+            "offset": 4259
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 132,
+                "column": 5,
+                "offset": 4265
+              },
+              "end": {
+                "line": 132,
+                "column": 9,
+                "offset": 4269
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 132,
+            "column": 1,
+            "offset": 4261
+          },
+          "end": {
+            "line": 132,
+            "column": 9,
+            "offset": 4269
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesOTPField.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 134,
+            "column": 1,
+            "offset": 4271
+          },
+          "end": {
+            "line": 134,
+            "column": 23,
+            "offset": 4293
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/otp-field/types#TypesOTPField"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Input",
+            "position": {
+              "start": {
+                "line": 136,
+                "column": 5,
+                "offset": 4299
+              },
+              "end": {
+                "line": 136,
+                "column": 10,
+                "offset": 4304
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 136,
+            "column": 1,
+            "offset": 4295
+          },
+          "end": {
+            "line": 136,
+            "column": 10,
+            "offset": 4304
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "input"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesOTPField.Input",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 138,
+            "column": 1,
+            "offset": 4306
+          },
+          "end": {
+            "line": 138,
+            "column": 24,
+            "offset": 4329
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/otp-field/types#TypesOTPField"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Separator",
+            "position": {
+              "start": {
+                "line": 140,
+                "column": 5,
+                "offset": 4335
+              },
+              "end": {
+                "line": 140,
+                "column": 14,
+                "offset": 4344
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 140,
+            "column": 1,
+            "offset": 4331
+          },
+          "end": {
+            "line": 140,
+            "column": 14,
+            "offset": 4344
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "separator"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesOTPField.Separator",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 142,
+            "column": 1,
+            "offset": 4346
+          },
+          "end": {
+            "line": 142,
+            "column": 28,
+            "offset": 4373
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/otp-field/types#TypesOTPField"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React OTP Field',\n    'One-Time Password Input',\n    'Verification Code Input',\n    'OTP Input Component',\n    'Pin Input',\n    'Passcode Input',\n    'Two-Factor Authentication Input',\n    '2FA Input',\n    'Multi-Slot Input',\n    'Accessible OTP Field',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 144,
+            "column": 1,
+            "offset": 4375
+          },
+          "end": {
+            "line": 159,
+            "column": 3,
+            "offset": 4729
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 160,
+        "column": 1,
+        "offset": 4730
+      }
+    }
+  }
+}

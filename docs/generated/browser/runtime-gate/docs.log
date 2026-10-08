@@ -1,0 +1,4 @@
+$ node docs/scripts/demos/generate.mjs --check --complete && tsc --noEmit -p docs/tsconfig.demos.json && node docs/scripts/site/semantic-check.mjs && node docs/scripts/site/check.mjs
+Demo catalog: 137 entries; 0 unresolved upstream references
+[]
+PASS: 84 static routes, metadata, anchors, local links and deployment base

@@ -1,0 +1,116 @@
+[
+  {
+    "name": "types",
+    "passed": true,
+    "code": 0,
+    "command": "rtk pnpm typescript",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/types.log",
+    "summary": []
+  },
+  {
+    "name": "catalog",
+    "passed": true,
+    "code": 0,
+    "command": "rtk pnpm docs:generate:demos",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/catalog.log",
+    "summary": [
+      "Demo catalog: 137 entries; 0 unresolved upstream references"
+    ]
+  },
+  {
+    "name": "docs",
+    "passed": true,
+    "code": 0,
+    "command": "rtk pnpm docs:check",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/docs.log",
+    "summary": [
+      "Demo catalog: 137 entries; 0 unresolved upstream references",
+      "PASS: 84 static routes, metadata, anchors, local links and deployment base"
+    ]
+  },
+  {
+    "name": "jsdom",
+    "passed": true,
+    "code": 0,
+    "command": "rtk pnpm test:jsdom merge-props getStateAttributesProps createRenderElement useButton number-field tabs accordion collapsible radio tooltip popover menu select slider otp-field avatar combobox createPopup.test --no-watch",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/jsdom.log",
+    "summary": [
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  127 passed | 1 skipped (128)",
+      "      Tests  3412 passed | 110 skipped (3522)",
+      "[HARNESS_FINAL] passed; files=128 failedFiles=0; passed=3412 failed=0 skipped=110 pending=0 unhandled=0 unfinishedModules=0"
+    ]
+  },
+  {
+    "name": "ssr",
+    "passed": true,
+    "code": 0,
+    "command": "rtk pnpm test:ssr createRenderElement NumberField Tabs Tooltip Avatar Accordion Collapsible Select Slider OTPField Combobox --no-watch",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/ssr.log",
+    "summary": [
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  14 passed (14)",
+      "      Tests  42 passed (42)",
+      "[HARNESS_FINAL] passed; files=14 failedFiles=0; passed=42 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0"
+    ]
+  },
+  {
+    "name": "chromium",
+    "passed": true,
+    "code": 0,
+    "command": "rtk pnpm test:chromium createRenderElement Events.test getStateAttributesProps NumberField.reactivity RadioIndicator.test RadioGroup.field SelectField.test TabsActivation.browser createPopup.test --no-watch",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/chromium.log",
+    "summary": [
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  4 passed (4)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=4 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  25 passed (25)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=25 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  12 passed (12)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=12 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  42 passed (42)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=42 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  1 passed (1)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=1 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  28 passed (28)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=28 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  16 passed (16)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=16 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  9 passed (9)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=9 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  2 passed (2)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=2 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "PASS: isolated production SSR compilation and HTML artifact",
+      " Test Files  1 passed (1)",
+      "      Tests  10 passed (10)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=10 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0"
+    ]
+  },
+  {
+    "name": "interactions",
+    "passed": false,
+    "code": 1,
+    "command": "rtk pnpm docs:test:interactions",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/interactions.log",
+    "summary": [
+      "Evidence: /Users/avi/avir-oss/baseui-solid2/docs/generated/browser/click-diagnostics.json"
+    ]
+  }
+]

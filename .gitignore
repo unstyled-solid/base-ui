@@ -1,5 +1,16 @@
+.cocoindex_code/
+node_modules/
+.cache/
+coverage/
+playwright-report/
+test-results/
+.vitest-attachments/
+test/harness/__screenshots__/
+packages/*/build/
+docs/dist/
+*.tsbuildinfo
 
-# Beads / Dolt files (added by bd init)
+# Beads / Dolt local storage (preserved from bd init)
 .dolt/
 *.db
 .beads-credential-key

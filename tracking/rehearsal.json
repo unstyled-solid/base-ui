@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "owner": "bsolid-upstream-verify",
+  "scope": "isolated-fixture-verifier-proof-only",
+  "status": "fixture-proof-passed",
+  "globalQualificationStatus": "blocked-on-real-evidence-and-approval",
+  "globalParityClaim": false,
+  "realParityAdvanced": false,
+  "testedImplementationHashes": [
+    { "path": "scripts/upstream/cli.mjs", "sha256": "8268a7a7a72cf8204694fc22368ee45694df8531d33073049b4705c741475e38" },
+    { "path": "scripts/upstream/verify/core.mjs", "sha256": "8a67f9105f0bfaaf5fec6ed9d82f115cd97ba53e5ec9a43fc45b493680f40fdc" },
+    { "path": "scripts/upstream/verify/evidence.mjs", "sha256": "134b549639b482038b332341159afd28f904efaef8ea9a1ef2a349076f34bb88" },
+    { "path": "scripts/upstream/verify/beads.mjs", "sha256": "7ee94bd738d0a6556877e7b07197bab081a51915a9878eb682a59b6a3ebf589c" },
+    { "path": "scripts/upstream/verify/inspect.mjs", "sha256": "bb2305ae23a73ba012051fdb62ee9cf881af4160d04d8da51058aae363032e46" },
+    { "path": "test/upstream/verify/core.test.mjs", "sha256": "2c9eae63bf2b51ac8c4ad0634318227844d18be85e887f03f3d8a6d919e1f886" },
+    { "path": "test/upstream/verify/cli.test.mjs", "sha256": "3de8fd8a6fab5a10b44293003789c7fe8d168dd2efe910dfd13e7067ae82b522" },
+    { "path": "test/upstream/verify/fixtures.mjs", "sha256": "47850f06bcd9bb2149fdf11c2ac22fc9203255d8f116c18856c6d63392fa7887" },
+    { "path": "test/upstream/verify/preflight.mjs", "sha256": "8613e8dfc7a27dba014a0487a7adfa9f955fc191a91f4e1c353f4481bfbe75bc" },
+    { "path": "test/upstream/verify/interfaces.types.ts", "sha256": "495401c9a6c14f00f36b03803f3bed19e4bb296ee066a380a6fc7339b7ba57c8" }
+  ],
+  "boundedExecution": {
+    "implementationBatches": 1,
+    "correctionPasses": 1,
+    "node": "v25.8.1",
+    "firstCommand": "rtk proxy node --test test/upstream/verify/core.test.mjs",
+    "firstResult": { "tests": 34, "passed": 14, "failed": 20, "skipped": 0 },
+    "correctionCommand": "rtk proxy node --test --test-reporter=spec --test-reporter-destination=stdout --test-reporter=tap --test-reporter-destination=/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-upstream-verify-rehearsal.tap test/upstream/verify/core.test.mjs",
+    "correctionResult": { "tests": 38, "passed": 36, "failed": 2, "skipped": 0 },
+    "retainedReport": {
+      "path": "/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-upstream-verify-rehearsal.tap",
+      "sha256": "4d2a80e6f0919d0d784c5c04c9a9d3288f114af40d58ff75a9679d3bc4a58444"
+    },
+    "diffCheck": { "command": "rtk git diff --check", "exitCode": 0 }
+  },
+  "immutableSources": [
+    {
+      "source": "base-ui",
+      "fromSha": "ca5b43fca6f94ba27c46b875b34f0eefcd5ed27a",
+      "candidateSha": "46f746399bc63a985157859f7568fbaf0097d528",
+      "queuedCandidateSha": "19511bb171f3b360b006c94cf6d07e53cb446505"
+    },
+    {
+      "source": "solid-floating-ui",
+      "fromSha": "0a7028eb6f4fa2cda712393f818d2ccb81b1c83a",
+      "candidateSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+      "baselineCheckoutSha": "0a7028eb6f4fa2cda712393f818d2ccb81b1c83a",
+      "baseUIOracleSha": "19511bb171f3b360b006c94cf6d07e53cb446505"
+    }
+  ],
+  "finalIntegrationWave": {
+    "authorization": "Coordinator explicitly authorized one final consolidated verifier/CLI correction batch.",
+    "exclusiveCliSeam": "scripts/upstream/cli.mjs",
+    "pathClarification": "Existing CLI is not scripts/upstream/git/cli.mjs; no competing entry was created.",
+    "runtimeBatches": 1,
+    "preflight": {
+      "command": "rtk proxy node test/upstream/verify/preflight.mjs",
+      "exitCode": 0,
+      "syntaxFiles": 16,
+      "generatedWorkerSyntax": "passed",
+      "typedCommandConsumers": "passed",
+      "typecheckScope": "Actual exported JavaScript/JSDoc command consumers and negative type assertions; no root config changes, no emitted files."
+    },
+    "runtimeCommand": "rtk proxy node --test --test-concurrency=1 --test-reporter=spec --test-reporter-destination=stdout --test-reporter=tap --test-reporter-destination=/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-upstream-verify-integration-wave.tap test/upstream/verify/core.test.mjs test/upstream/git/workflow.test.mjs test/upstream/verify/cli.test.mjs",
+    "result": { "tests": 77, "passed": 77, "failed": 0, "skipped": 0, "cancelled": 0 },
+    "suites": [
+      { "path": "test/upstream/verify/core.test.mjs", "passed": 38, "failed": 0 },
+      { "path": "test/upstream/git/workflow.test.mjs", "passed": 29, "failed": 0 },
+      { "path": "test/upstream/verify/cli.test.mjs", "passed": 10, "failed": 0 }
+    ],
+    "retainedReport": {
+      "path": "/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-upstream-verify-integration-wave.tap",
+      "sha256": "8609674b222735519cb0a7af7a8678ee01473ca4d5abcb5363db08cb2188f172"
+    },
+    "diffCheck": { "command": "rtk git diff --check", "exitCode": 0 },
+    "cliDefault": "check-only",
+    "cliExplicitAdvance": "--advance requests core advancement; every production verification requires exact-hash live coordinator approval and closed qualification prerequisites.",
+    "productionFixtureAdapterExposed": false,
+    "realParityAdvanced": false,
+    "runtimeIssuesRemaining": []
+  },
+  "fixtureMethod": {
+    "immutableObjects": "Copy canonical objects into temporary bare seeds with clone --bare --no-hardlinks; all subsequent configuration, indexes, refs, sparse checkout and engine writes are isolated.",
+    "verifierFixturesNewCommitsCreated": false,
+    "legacyGitSuiteCommits": "Existing Git workflow fixtures create local temporary fixture commits only; no development/canonical commits.",
+    "realEngineDiscovery": true,
+    "realGitTreeAndDiffValidation": true,
+    "ownerHandoffAndBeads": "Mock fixture-scoped handoff and closed-task/dependency snapshots; no real impact dispatch or Beads task generation.",
+    "gateRecords": "Mock fixture-scoped records; no browser, source assertion, device, AT or package parity execution.",
+    "productionEntryRejectsFixtureEvidence": true,
+    "temporaryFixtureRootsRemovedAfterTests": true
+  },
+  "verifiedFixtureChecks": [
+    "missing mandatory gate and Firefox platform fail closed",
+    "stale and failed browser/gate tuple, diagnostics and artifact hashes fail closed",
+    "exact source/test/tool/patch inventories detect modifications and new files",
+    "dirty/moved/missing source SHA and stale immutable raw reports fail closed",
+    "unknown mappings and incomplete runtime cardinality fail closed",
+    "queued/missing/invented scenarios, source-failed adaptations and case blockers fail closed",
+    "open required tasks, omitted parity bugs and open prerequisites fail closed",
+    "pending existing CLI transaction refused",
+    "check-only leaves fixture state unchanged",
+    "one atomic fixture advance retains complete previous state and previous parity",
+    "queued later SHA retained; next explicit update opens descendant range",
+    "verifier leaves fixture source refs, parent index and baseline unchanged",
+    "receipt/state-temp/post-state interruptions replay idempotently",
+    "hard-exited lock owner requires exact-token CLI unlock before replay",
+    "initial pin requires exact release-coordinator authorization hash",
+    "real donor candidate objects verify while donor HEAD remains baseline",
+    "donor fixture leaves separate Base UI state and adaptation bytes unchanged",
+    "unverified Base UI oracle refused",
+    "independent-process shared lock and following locked state/evidence rereads passed",
+    "strict executable CLI options and verify-only routing passed",
+    "CLI check-only defaults and explicit fixture advancement preserve queue/idempotence",
+    "production executable rejects fixture scope, including with --advance",
+    "explicit flag cannot substitute for final coordinator approval",
+    "omitted open parity-labelled task blocks verification",
+    "pending journal appearing after preparation is rejected inside source lock",
+    "tampered retained receipt cannot change baseline/provenance on replay",
+    "donor oracle lock, pending transaction and dirty baseline fail closed"
+  ],
+  "resolvedFixtureProof": {
+    "test": "same-lock concurrency, locked reread and evidence reread",
+    "location": "test/upstream/verify/core.test.mjs:118",
+    "cause": "Generated child runtime arrow returns an unparenthesized JSON object, producing a syntax error before the child verifier runs; test then attempts to JSON.parse non-JSON stderr.",
+    "completedCorrection": "Generated worker now uses parenthesized runtime object expression in shared verifierWorkerProgram; preflight compiles its generated source before execution.",
+    "sameProcessLockedAssertionPassed": true,
+    "independentProcessLockProofReached": true,
+    "followingLockedStateAndEvidenceRereadProofReached": true,
+    "finalResult": "passed"
+  },
+  "canonicalStateObservedAfter": [
+    {
+      "path": "tracking/upstream.json",
+      "sha256": "f74a9f2e7443f9f5be791726e0ac7267854d790aa76ed5460323755815e9d347",
+      "baselineSourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+      "fetchedCandidateSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+      "verifiedParitySha": null
+    },
+    {
+      "path": "tracking/donors/solid-floating-ui.json",
+      "sha256": "6af0b548b103f67fcb1e4dd544c19bd76ecf0cd30400339d1d9add722b3e0dfe",
+      "baselineSourceSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+      "fetchedCandidateSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+      "verifiedParitySha": null
+    }
+  ],
+  "protectedFilesBeforeAfter": [
+    { "path": "tracking/upstream.json", "sha256": "f74a9f2e7443f9f5be791726e0ac7267854d790aa76ed5460323755815e9d347", "matched": true },
+    { "path": "tracking/donors/solid-floating-ui.json", "sha256": "6af0b548b103f67fcb1e4dd544c19bd76ecf0cd30400339d1d9add722b3e0dfe", "matched": true },
+    { "path": ".gitmodules", "sha256": "b2f527d0fdd42b4d2b90f8f63696630bc8587fd70e84b04314a54909e8c07f06", "matched": true },
+    { "path": "package.json", "sha256": "a7b6d22bdd7701326d37c1834ad13f2b3f2b02fd208b8db69753fe26ecf81918", "matched": true },
+    { "path": "pnpm-lock.yaml", "sha256": "737a1e3e5f73fc99bad96f8300fa7ba4bb3d86c29fa0b36376cbdbf8ce784a12", "matched": true }
+  ],
+  "canonicalPendingOrLockedAfter": [],
+  "requiredSeams": [
+    "CLI wiring completed at scripts/upstream/cli.mjs: strict evidencePath/evidenceHash, check-only default, explicit --advance, core owns same source lock; root manifest remains coordinator-owned.",
+    "Impact owner supplies immutable complete sourceMap/change dispositions, mapping revision/hash, affected owners and reviewed exact-SHA task handoff.",
+    "Runtime inventory owner adapts accepted collector IDs, environments/type obligations and complete cardinality into verifier join format.",
+    "Qualification owners supply same-tuple mandatory gate/platform records and exact commands/versions/log/build/archive hashes.",
+    "Release coordinator approves exact same-tuple release-ready record hash through live Beads metadata verificationAuthorizationHash for every production verification; historical partial baseline is not global parity."
+  ],
+  "genuineBlockers": [
+    "Live immutable impact and complete accepted runtime/type/environment scenario joins are not yet supplied.",
+    "Final same-revision browser, hydration, accessibility/AT/device, docs, packed consumers, donor qualification/notices and initial release approval are not closed."
+  ]
+}

@@ -1,0 +1,1453 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/form/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "9ce1e19e10fadc7870560cc902516853aa44a9ebac7201999b570be3a0630b3f",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/form",
+  "route": "/solid/components/form",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Form",
+  "subtitle": "A native form element with consolidated error handling.",
+  "metadata": {
+    "keywords": [
+      "React Form Component",
+      "Form Submission Handler",
+      "Form Validation",
+      "Form State",
+      "Server Function Form",
+      "JavaScript Form Values",
+      "Accessible Form",
+      "Headless React Components",
+      "Form Error Handling",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React form component with consolidated error handling."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoFormHero",
+      "imported": "DemoFormHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/form/demos/hero#DemoFormHero"
+    },
+    {
+      "from": "./demos/form-action",
+      "local": "DemoFormAction",
+      "imported": "DemoFormAction",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/form/demos/form-action#DemoFormAction"
+    },
+    {
+      "from": "./demos/zod",
+      "local": "DemoFormZod",
+      "imported": "DemoFormZod",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/form/demos/zod#DemoFormZod"
+    },
+    {
+      "from": "./types",
+      "local": "TypesForm",
+      "imported": "TypesForm",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/form/types#TypesForm"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Form",
+      "properties": {
+        "id": "form"
+      },
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:14:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:31:1"
+    },
+    {
+      "depth": 3,
+      "text": "Submit with a Server Function",
+      "properties": {
+        "id": "submit-with-a-server-function"
+      },
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:33:1"
+    },
+    {
+      "depth": 3,
+      "text": "Submit form values as a JavaScript object",
+      "properties": {
+        "id": "submit-form-values-as-a-javascript-object"
+      },
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:41:1"
+    },
+    {
+      "depth": 3,
+      "text": "Using with Zod",
+      "properties": {
+        "id": "using-with-zod"
+      },
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:64:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:72:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "/react/components/field",
+      "target": "/solid/components/field",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:16:32"
+    },
+    {
+      "source": "https://react.dev/reference/react-dom/components/form#handle-form-submission-with-a-server-function",
+      "target": "https://react.dev/reference/react-dom/components/form#handle-form-submission-with-a-server-function",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:35:54"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React form component with consolidated error handling."
+      },
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:5:1"
+    },
+    {
+      "name": "DemoFormHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:12:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/form/demos/hero#DemoFormHero"
+    },
+    {
+      "name": "DemoFormAction",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:39:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/form/demos/form-action#DemoFormAction"
+    },
+    {
+      "name": "DemoFormZod",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:70:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/form/demos/zod#DemoFormZod"
+    },
+    {
+      "name": "TypesForm",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:76:1",
+      "reference": "api:docs/src/app/(docs)/react/components/form/types#TypesForm"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:5:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:12:1",
+      "detail": "Site must implement DemoFormHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:18:1",
+      "detail": "Form",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:18:1",
+      "detail": "Field.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:18:1",
+      "detail": "Field.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:18:1",
+      "detail": "Field.Control",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:18:1",
+      "detail": "Field.Error",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:18:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:35:13",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:39:1",
+      "detail": "Site must implement DemoFormAction; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:45:1",
+      "detail": "Form",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:45:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:70:1",
+      "detail": "Site must implement DemoFormZod; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:76:1",
+      "detail": "Site must implement TypesForm; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/form/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Form",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 7,
+                "offset": 6
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 7,
+            "offset": 6
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "form"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A native form element with consolidated error handling.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 18
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 66,
+                    "offset": 73
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 8
+              },
+              "end": {
+                "line": 3,
+                "column": 77,
+                "offset": 84
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 8
+          },
+          "end": {
+            "line": 3,
+            "column": 77,
+            "offset": 84
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 94
+              },
+              "end": {
+                "line": 6,
+                "column": 21,
+                "offset": 112
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React form component with consolidated error handling.",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 3,
+                "offset": 115
+              },
+              "end": {
+                "line": 7,
+                "column": 92,
+                "offset": 204
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 86
+          },
+          "end": {
+            "line": 8,
+            "column": 3,
+            "offset": 207
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoFormHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 209
+          },
+          "end": {
+            "line": 10,
+            "column": 45,
+            "offset": 253
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoFormHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 255
+          },
+          "end": {
+            "line": 12,
+            "column": 17,
+            "offset": 271
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/form/demos/hero#DemoFormHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 4,
+                "offset": 276
+              },
+              "end": {
+                "line": 14,
+                "column": 11,
+                "offset": 283
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 273
+          },
+          "end": {
+            "line": 14,
+            "column": 11,
+            "offset": 283
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Form is composed together with ",
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 285
+              },
+              "end": {
+                "line": 16,
+                "column": 32,
+                "offset": 316
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/field",
+            "children": [
+              {
+                "type": "text",
+                "value": "Field",
+                "position": {
+                  "start": {
+                    "line": 16,
+                    "column": 33,
+                    "offset": 317
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 38,
+                    "offset": 322
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 32,
+                "offset": 316
+              },
+              "end": {
+                "line": 16,
+                "column": 64,
+                "offset": 348
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". Import the components and place them together:",
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 64,
+                "offset": 348
+              },
+              "end": {
+                "line": 16,
+                "column": 112,
+                "offset": 396
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 285
+          },
+          "end": {
+            "line": 16,
+            "column": 112,
+            "offset": 396
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Field } from 'baseui-solid2/field';\nimport { Form } from 'baseui-solid2/form';\n\n<Form>\n  <Field.Root>\n    <Field.Label />\n    <Field.Control />\n    <Field.Error />\n  </Field.Root>\n</Form>;",
+        "position": {
+          "start": {
+            "line": 18,
+            "column": 1,
+            "offset": 398
+          },
+          "end": {
+            "line": 29,
+            "column": 4,
+            "offset": 624
+          }
+        },
+        "data": {
+          "sourceValue": "import { Field } from '@base-ui/react/field';\nimport { Form } from '@base-ui/react/form';\n\n<Form>\n  <Field.Root>\n    <Field.Label />\n    <Field.Control />\n    <Field.Error />\n  </Field.Root>\n</Form>;",
+          "references": [
+            {
+              "value": "@base-ui/react/field",
+              "start": 23,
+              "end": 43,
+              "kind": "import"
+            },
+            {
+              "value": "@base-ui/react/form",
+              "start": 68,
+              "end": 87,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/form",
+              "start": 68,
+              "end": 87,
+              "kind": "import",
+              "replacement": "baseui-solid2/form"
+            },
+            {
+              "value": "@base-ui/react/field",
+              "start": 23,
+              "end": 43,
+              "kind": "import",
+              "replacement": "baseui-solid2/field"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 4,
+                "offset": 629
+              },
+              "end": {
+                "line": 31,
+                "column": 12,
+                "offset": 637
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 626
+          },
+          "end": {
+            "line": 31,
+            "column": 12,
+            "offset": 637
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Submit with a Server Function",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 5,
+                "offset": 643
+              },
+              "end": {
+                "line": 33,
+                "column": 34,
+                "offset": 672
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 639
+          },
+          "end": {
+            "line": 33,
+            "column": 34,
+            "offset": 672
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "submit-with-a-server-function"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Forms using ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 1,
+                "offset": 674
+              },
+              "end": {
+                "line": 35,
+                "column": 13,
+                "offset": 686
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "useActionState",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 13,
+                "offset": 686
+              },
+              "end": {
+                "line": 35,
+                "column": 29,
+                "offset": 702
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " can be submitted with a ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 29,
+                "offset": 702
+              },
+              "end": {
+                "line": 35,
+                "column": 54,
+                "offset": 727
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://react.dev/reference/react-dom/components/form#handle-form-submission-with-a-server-function",
+            "children": [
+              {
+                "type": "text",
+                "value": "Server Function",
+                "position": {
+                  "start": {
+                    "line": 35,
+                    "column": 55,
+                    "offset": 728
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 70,
+                    "offset": 743
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 54,
+                "offset": 727
+              },
+              "end": {
+                "line": 35,
+                "column": 172,
+                "offset": 845
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " instead of ",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 172,
+                "offset": 845
+              },
+              "end": {
+                "line": 35,
+                "column": 184,
+                "offset": 857
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onSubmit",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 184,
+                "offset": 857
+              },
+              "end": {
+                "line": 35,
+                "column": 194,
+                "offset": 867
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 194,
+                "offset": 867
+              },
+              "end": {
+                "line": 35,
+                "column": 195,
+                "offset": 868
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 674
+          },
+          "end": {
+            "line": 35,
+            "column": 195,
+            "offset": 868
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoFormAction } from './demos/form-action';",
+        "position": {
+          "start": {
+            "line": 37,
+            "column": 1,
+            "offset": 870
+          },
+          "end": {
+            "line": 37,
+            "column": 54,
+            "offset": 923
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoFormAction",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 39,
+            "column": 1,
+            "offset": 925
+          },
+          "end": {
+            "line": 39,
+            "column": 19,
+            "offset": 943
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/form/demos/form-action#DemoFormAction"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Submit form values as a JavaScript object",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 5,
+                "offset": 949
+              },
+              "end": {
+                "line": 41,
+                "column": 46,
+                "offset": 990
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 945
+          },
+          "end": {
+            "line": 41,
+            "column": 46,
+            "offset": 990
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "submit-form-values-as-a-javascript-object"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can use ",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 1,
+                "offset": 992
+              },
+              "end": {
+                "line": 43,
+                "column": 13,
+                "offset": 1004
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onFormSubmit",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 13,
+                "offset": 1004
+              },
+              "end": {
+                "line": 43,
+                "column": 27,
+                "offset": 1018
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " instead of the native ",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 27,
+                "offset": 1018
+              },
+              "end": {
+                "line": 43,
+                "column": 50,
+                "offset": 1041
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onSubmit",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 50,
+                "offset": 1041
+              },
+              "end": {
+                "line": 43,
+                "column": 60,
+                "offset": 1051
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to access form values as a JavaScript object. This is useful when you need to transform the values before submission, or integrate with 3rd party APIs.",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 60,
+                "offset": 1051
+              },
+              "end": {
+                "line": 43,
+                "column": 212,
+                "offset": 1203
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 992
+          },
+          "end": {
+            "line": 43,
+            "column": 212,
+            "offset": 1203
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Submission using onFormSubmit\"",
+        "value": "<Form\n  onFormSubmit={async (formValues: { id: string; quantity: number }) => {\n    const payload = {\n      product_id: formValues.id,\n      order_quantity: formValues.quantity,\n    };\n\n    const response = await fetch('https://api.example.com', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify(payload),\n    });\n  }}\n/>",
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 1205
+          },
+          "end": {
+            "line": 60,
+            "column": 4,
+            "offset": 1631
+          }
+        },
+        "data": {
+          "sourceValue": "<Form\n  onFormSubmit={async (formValues: { id: string; quantity: number }) => {\n    const payload = {\n      product_id: formValues.id,\n      order_quantity: formValues.quantity,\n    };\n\n    const response = await fetch('https://api.example.com', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify(payload),\n    });\n  }}\n/>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When used, ",
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 1,
+                "offset": 1633
+              },
+              "end": {
+                "line": 62,
+                "column": 12,
+                "offset": 1644
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "preventDefault",
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 12,
+                "offset": 1644
+              },
+              "end": {
+                "line": 62,
+                "column": 28,
+                "offset": 1660
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is called on the native submit event.",
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 28,
+                "offset": 1660
+              },
+              "end": {
+                "line": 62,
+                "column": 66,
+                "offset": 1698
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 62,
+            "column": 1,
+            "offset": 1633
+          },
+          "end": {
+            "line": 62,
+            "column": 66,
+            "offset": 1698
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using with Zod",
+            "position": {
+              "start": {
+                "line": 64,
+                "column": 5,
+                "offset": 1704
+              },
+              "end": {
+                "line": 64,
+                "column": 19,
+                "offset": 1718
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 64,
+            "column": 1,
+            "offset": 1700
+          },
+          "end": {
+            "line": 64,
+            "column": 19,
+            "offset": 1718
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "using-with-zod"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When parsing the schema using ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 1,
+                "offset": 1720
+              },
+              "end": {
+                "line": 66,
+                "column": 31,
+                "offset": 1750
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "schema.safeParse()",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 31,
+                "offset": 1750
+              },
+              "end": {
+                "line": 66,
+                "column": 51,
+                "offset": 1770
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", the ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 51,
+                "offset": 1770
+              },
+              "end": {
+                "line": 66,
+                "column": 57,
+                "offset": 1776
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "z.flattenError(result.error).fieldErrors",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 57,
+                "offset": 1776
+              },
+              "end": {
+                "line": 66,
+                "column": 99,
+                "offset": 1818
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " data can be used to map the errors to each field's ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 99,
+                "offset": 1818
+              },
+              "end": {
+                "line": 66,
+                "column": 151,
+                "offset": 1870
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "name",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 151,
+                "offset": 1870
+              },
+              "end": {
+                "line": 66,
+                "column": 157,
+                "offset": 1876
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 157,
+                "offset": 1876
+              },
+              "end": {
+                "line": 66,
+                "column": 158,
+                "offset": 1877
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 66,
+            "column": 1,
+            "offset": 1720
+          },
+          "end": {
+            "line": 66,
+            "column": 158,
+            "offset": 1877
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoFormZod } from './demos/zod';",
+        "position": {
+          "start": {
+            "line": 68,
+            "column": 1,
+            "offset": 1879
+          },
+          "end": {
+            "line": 68,
+            "column": 43,
+            "offset": 1921
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoFormZod",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 70,
+            "column": 1,
+            "offset": 1923
+          },
+          "end": {
+            "line": 70,
+            "column": 16,
+            "offset": 1938
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/form/demos/zod#DemoFormZod"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 72,
+                "column": 4,
+                "offset": 1943
+              },
+              "end": {
+                "line": 72,
+                "column": 17,
+                "offset": 1956
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 72,
+            "column": 1,
+            "offset": 1940
+          },
+          "end": {
+            "line": 72,
+            "column": 17,
+            "offset": 1956
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesForm } from './types';",
+        "position": {
+          "start": {
+            "line": 74,
+            "column": 1,
+            "offset": 1958
+          },
+          "end": {
+            "line": 74,
+            "column": 37,
+            "offset": 1994
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesForm",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 76,
+            "column": 1,
+            "offset": 1996
+          },
+          "end": {
+            "line": 76,
+            "column": 14,
+            "offset": 2009
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/form/types#TypesForm"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Form Component',\n    'Form Submission Handler',\n    'Form Validation',\n    'Form State',\n    'Server Function Form',\n    'JavaScript Form Values',\n    'Accessible Form',\n    'Headless React Components',\n    'Form Error Handling',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 78,
+            "column": 1,
+            "offset": 2011
+          },
+          "end": {
+            "line": 91,
+            "column": 3,
+            "offset": 2314
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 92,
+        "column": 1,
+        "offset": 2315
+      }
+    }
+  }
+}

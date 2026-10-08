@@ -1,0 +1,5571 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/dialog/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "723e0168f0d1e436acdb0503d6b8b378c6d507f0250452829ed53bc733c39e7b",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/dialog",
+  "route": "/solid/components/dialog",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Dialog",
+  "subtitle": "A popup that opens on top of the entire page.",
+  "metadata": {
+    "keywords": [
+      "React Dialog",
+      "Modal Dialog Component",
+      "Modal Popup",
+      "Modal Window",
+      "Popup Window",
+      "Modal Overlay",
+      "Overlay",
+      "Lightbox",
+      "Popover Dialog",
+      "Controlled Dialog State",
+      "Nested Dialog React",
+      "Focus Trap Dialog",
+      "Accessible Dialog",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React dialog component that opens on top of the entire page."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoDialogHero",
+      "imported": "DemoDialogHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/hero#DemoDialogHero"
+    },
+    {
+      "from": "./demos/open-from-menu",
+      "local": "DemoDialogOpenFromMenu",
+      "imported": "DemoDialogOpenFromMenu",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/open-from-menu#DemoDialogOpenFromMenu"
+    },
+    {
+      "from": "./demos/nested",
+      "local": "DemoDialogNested",
+      "imported": "DemoDialogNested",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/nested#DemoDialogNested"
+    },
+    {
+      "from": "./demos/close-confirmation",
+      "local": "DemoDialogCloseConfirmation",
+      "imported": "DemoDialogCloseConfirmation",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/close-confirmation#DemoDialogCloseConfirmation"
+    },
+    {
+      "from": "./demos/focus-management",
+      "local": "DemoDialogFocusManagement",
+      "imported": "DemoDialogFocusManagement",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/focus-management#DemoDialogFocusManagement"
+    },
+    {
+      "from": "./demos/outside-scroll",
+      "local": "DemoDialogOutsideScroll",
+      "imported": "DemoDialogOutsideScroll",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/outside-scroll#DemoDialogOutsideScroll"
+    },
+    {
+      "from": "./demos/inside-scroll",
+      "local": "DemoDialogInsideScroll",
+      "imported": "DemoDialogInsideScroll",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/inside-scroll#DemoDialogInsideScroll"
+    },
+    {
+      "from": "./demos/uncontained",
+      "local": "DemoDialogUncontained",
+      "imported": "DemoDialogUncontained",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/uncontained#DemoDialogUncontained"
+    },
+    {
+      "from": "./demos/detached-triggers-simple",
+      "local": "DemoDialogDetachedTriggersSimple",
+      "imported": "DemoDialogDetachedTriggersSimple",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/detached-triggers-simple#DemoDialogDetachedTriggersSimple"
+    },
+    {
+      "from": "./demos/detached-triggers-controlled",
+      "local": "DemoDialogDetachedTriggersControlled",
+      "imported": "DemoDialogDetachedTriggersControlled",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/detached-triggers-controlled#DemoDialogDetachedTriggersControlled"
+    },
+    {
+      "from": "./types",
+      "local": "TypesDialog",
+      "imported": "TypesDialog",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Dialog",
+      "properties": {
+        "id": "dialog"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:17:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:39:1"
+    },
+    {
+      "depth": 3,
+      "text": "State",
+      "properties": {
+        "id": "state"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:41:1"
+    },
+    {
+      "depth": 3,
+      "text": "Open from a menu",
+      "properties": {
+        "id": "open-from-a-menu"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:98:1"
+    },
+    {
+      "depth": 3,
+      "text": "Nested dialogs",
+      "properties": {
+        "id": "nested-dialogs"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:106:1"
+    },
+    {
+      "depth": 3,
+      "text": "Close confirmation",
+      "properties": {
+        "id": "close-confirmation"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:116:1"
+    },
+    {
+      "depth": 3,
+      "text": "Custom focus management",
+      "properties": {
+        "id": "custom-focus-management"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:126:1"
+    },
+    {
+      "depth": 3,
+      "text": "Outside scroll dialog",
+      "properties": {
+        "id": "outside-scroll-dialog"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:136:1"
+    },
+    {
+      "depth": 3,
+      "text": "Inside scroll dialog",
+      "properties": {
+        "id": "inside-scroll-dialog"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:144:1"
+    },
+    {
+      "depth": 3,
+      "text": "Placing elements outside the popup",
+      "properties": {
+        "id": "placing-elements-outside-the-popup"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:152:1"
+    },
+    {
+      "depth": 3,
+      "text": "Detached triggers",
+      "properties": {
+        "id": "detached-triggers"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:162:1"
+    },
+    {
+      "depth": 3,
+      "text": "Multiple triggers",
+      "properties": {
+        "id": "multiple-triggers"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:191:1"
+    },
+    {
+      "depth": 3,
+      "text": "Controlled mode with multiple triggers",
+      "properties": {
+        "id": "controlled-mode-with-multiple-triggers"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:251:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:264:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:268:1"
+    },
+    {
+      "depth": 3,
+      "text": "Trigger",
+      "properties": {
+        "id": "trigger"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:272:1"
+    },
+    {
+      "depth": 3,
+      "text": "Portal",
+      "properties": {
+        "id": "portal"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:276:1"
+    },
+    {
+      "depth": 3,
+      "text": "Backdrop",
+      "properties": {
+        "id": "backdrop"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:280:1"
+    },
+    {
+      "depth": 3,
+      "text": "Viewport",
+      "properties": {
+        "id": "viewport"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:284:1"
+    },
+    {
+      "depth": 3,
+      "text": "Popup",
+      "properties": {
+        "id": "popup"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:288:1"
+    },
+    {
+      "depth": 3,
+      "text": "Title",
+      "properties": {
+        "id": "title"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:292:1"
+    },
+    {
+      "depth": 3,
+      "text": "Description",
+      "properties": {
+        "id": "description"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:296:1"
+    },
+    {
+      "depth": 3,
+      "text": "Close",
+      "properties": {
+        "id": "close"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:300:1"
+    },
+    {
+      "depth": 2,
+      "text": "createHandle",
+      "properties": {
+        "id": "createhandle"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:304:1"
+    },
+    {
+      "depth": 3,
+      "text": "Handle",
+      "properties": {
+        "data-exclude-toc": "",
+        "id": "handle"
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:310:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "/react/components/drawer",
+      "target": "/solid/components/drawer",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:15:44"
+    },
+    {
+      "source": "/react/components/scroll-area",
+      "target": "/solid/components/scroll-area",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:138:196"
+    },
+    {
+      "source": "/react/components/scroll-area",
+      "target": "/solid/components/scroll-area",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:146:243"
+    },
+    {
+      "source": "#",
+      "target": "#",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:308:1"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React dialog component that opens on top of the entire page."
+      },
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:4:1"
+    },
+    {
+      "name": "DemoDialogHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/hero#DemoDialogHero"
+    },
+    {
+      "name": "DemoDialogOpenFromMenu",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:104:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/open-from-menu#DemoDialogOpenFromMenu"
+    },
+    {
+      "name": "DemoDialogNested",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:114:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/nested#DemoDialogNested"
+    },
+    {
+      "name": "DemoDialogCloseConfirmation",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:124:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/close-confirmation#DemoDialogCloseConfirmation"
+    },
+    {
+      "name": "DemoDialogFocusManagement",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:134:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/focus-management#DemoDialogFocusManagement"
+    },
+    {
+      "name": "DemoDialogOutsideScroll",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:142:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/outside-scroll#DemoDialogOutsideScroll"
+    },
+    {
+      "name": "DemoDialogInsideScroll",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:150:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/inside-scroll#DemoDialogInsideScroll"
+    },
+    {
+      "name": "DemoDialogUncontained",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:160:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/uncontained#DemoDialogUncontained"
+    },
+    {
+      "name": "DemoDialogDetachedTriggersSimple",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:189:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/detached-triggers-simple#DemoDialogDetachedTriggersSimple"
+    },
+    {
+      "name": "DemoDialogDetachedTriggersControlled",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:262:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/detached-triggers-controlled#DemoDialogDetachedTriggersControlled"
+    },
+    {
+      "name": "TypesDialog.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:270:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Trigger",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:274:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Portal",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:278:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Backdrop",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:282:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Viewport",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:286:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Popup",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:290:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Title",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:294:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Description",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:298:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Close",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:302:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.createHandle",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:306:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    },
+    {
+      "name": "TypesDialog.Handle",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:312:1",
+      "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:11:1",
+      "detail": "Site must implement DemoDialogHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Backdrop",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Viewport",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Title",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Description",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Dialog.Close",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:21:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:45:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:45:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:45:1",
+      "detail": "Dialog.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:45:1",
+      "detail": "Dialog.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:45:1",
+      "detail": "Dialog.Title",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:45:1",
+      "detail": "Dialog.Close",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:45:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-hook",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:60:1",
+      "detail": "React.useState",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:60:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:60:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:60:1",
+      "detail": "Dialog.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:60:1",
+      "detail": "Dialog.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:60:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:60:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:82:136",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:84:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:84:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:84:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:104:1",
+      "detail": "Site must implement DemoDialogOpenFromMenu; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:114:1",
+      "detail": "Site must implement DemoDialogNested; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:124:1",
+      "detail": "Site must implement DemoDialogCloseConfirmation; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:134:1",
+      "detail": "Site must implement DemoDialogFocusManagement; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:142:1",
+      "detail": "Site must implement DemoDialogOutsideScroll; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:150:1",
+      "detail": "Site must implement DemoDialogInsideScroll; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:160:1",
+      "detail": "Site must implement DemoDialogUncontained; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:173:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:173:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:173:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:173:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:189:1",
+      "detail": "Site must implement DemoDialogDetachedTriggersSimple; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:196:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:196:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:196:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:204:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:204:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:204:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:204:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:219:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:219:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:219:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:219:1",
+      "detail": "Dialog.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:219:1",
+      "detail": "Dialog.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:219:1",
+      "detail": "Dialog.Title",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:219:1",
+      "detail": "Dialog.Description",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:219:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:262:1",
+      "detail": "Site must implement DemoDialogDetachedTriggersControlled; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:270:1",
+      "detail": "Site must implement TypesDialog.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:274:1",
+      "detail": "Site must implement TypesDialog.Trigger; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:278:1",
+      "detail": "Site must implement TypesDialog.Portal; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:282:1",
+      "detail": "Site must implement TypesDialog.Backdrop; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:286:1",
+      "detail": "Site must implement TypesDialog.Viewport; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:290:1",
+      "detail": "Site must implement TypesDialog.Popup; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:294:1",
+      "detail": "Site must implement TypesDialog.Title; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:298:1",
+      "detail": "Site must implement TypesDialog.Description; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:302:1",
+      "detail": "Site must implement TypesDialog.Close; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:306:1",
+      "detail": "Site must implement TypesDialog.createHandle; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:312:1",
+      "detail": "Site must implement TypesDialog.Handle; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/dialog/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Dialog",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 9,
+                "offset": 8
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 9,
+            "offset": 8
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "dialog"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A popup that opens on top of the entire page.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 20
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 56,
+                    "offset": 65
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 10
+              },
+              "end": {
+                "line": 3,
+                "column": 67,
+                "offset": 76
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 10
+          },
+          "end": {
+            "line": 3,
+            "column": 67,
+            "offset": 76
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 85
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 103
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React dialog component that opens on top of the entire page.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 106
+              },
+              "end": {
+                "line": 6,
+                "column": 98,
+                "offset": 201
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 77
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 204
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 206
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "offset": 252
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 254
+          },
+          "end": {
+            "line": 11,
+            "column": 19,
+            "offset": 272
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/hero#DemoDialogHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 277
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 293
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 274
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 293
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Dialog doesn't support gestures:",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 5,
+                            "offset": 299
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 37,
+                            "offset": 331
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 3,
+                        "offset": 297
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 39,
+                        "offset": 333
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " Use ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 39,
+                        "offset": 333
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 44,
+                        "offset": 338
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/components/drawer",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Drawer",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 45,
+                            "offset": 339
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 51,
+                            "offset": 345
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 44,
+                        "offset": 338
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 78,
+                        "offset": 372
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " when you need gesture support or snap points. A panel that slides in from the edge of the screen and doesn't need gesture support is a positioned Dialog.",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 78,
+                        "offset": 372
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 232,
+                        "offset": 526
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 15,
+                    "column": 3,
+                    "offset": 297
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 232,
+                    "offset": 526
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 295
+              },
+              "end": {
+                "line": 15,
+                "column": 232,
+                "offset": 526
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 295
+          },
+          "end": {
+            "line": 15,
+            "column": 232,
+            "offset": 526
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 4,
+                "offset": 531
+              },
+              "end": {
+                "line": 17,
+                "column": 11,
+                "offset": 538
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 528
+          },
+          "end": {
+            "line": 17,
+            "column": 11,
+            "offset": 538
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 540
+              },
+              "end": {
+                "line": 19,
+                "column": 45,
+                "offset": 584
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 19,
+            "column": 1,
+            "offset": 540
+          },
+          "end": {
+            "line": 19,
+            "column": 45,
+            "offset": 584
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Dialog } from 'baseui-solid2/dialog';\n\n<Dialog.Root>\n  <Dialog.Trigger />\n  <Dialog.Portal>\n    <Dialog.Backdrop />\n    <Dialog.Viewport>\n      <Dialog.Popup>\n        <Dialog.Title />\n        <Dialog.Description />\n        <Dialog.Close />\n      </Dialog.Popup>\n    </Dialog.Viewport>\n  </Dialog.Portal>\n</Dialog.Root>;",
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 586
+          },
+          "end": {
+            "line": 37,
+            "column": 4,
+            "offset": 942
+          }
+        },
+        "data": {
+          "sourceValue": "import { Dialog } from '@base-ui/react/dialog';\n\n<Dialog.Root>\n  <Dialog.Trigger />\n  <Dialog.Portal>\n    <Dialog.Backdrop />\n    <Dialog.Viewport>\n      <Dialog.Popup>\n        <Dialog.Title />\n        <Dialog.Description />\n        <Dialog.Close />\n      </Dialog.Popup>\n    </Dialog.Viewport>\n  </Dialog.Portal>\n</Dialog.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/dialog",
+              "start": 24,
+              "end": 45,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/dialog",
+              "start": 24,
+              "end": 45,
+              "kind": "import",
+              "replacement": "baseui-solid2/dialog"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 39,
+                "column": 4,
+                "offset": 947
+              },
+              "end": {
+                "line": 39,
+                "column": 12,
+                "offset": 955
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 39,
+            "column": 1,
+            "offset": 944
+          },
+          "end": {
+            "line": 39,
+            "column": 12,
+            "offset": 955
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "State",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 5,
+                "offset": 961
+              },
+              "end": {
+                "line": 41,
+                "column": 10,
+                "offset": 966
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 957
+          },
+          "end": {
+            "line": 41,
+            "column": 10,
+            "offset": 966
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "state"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "By default, Dialog is an uncontrolled component that manages its own state.",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 1,
+                "offset": 968
+              },
+              "end": {
+                "line": 43,
+                "column": 76,
+                "offset": 1043
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 968
+          },
+          "end": {
+            "line": 43,
+            "column": 76,
+            "offset": 1043
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Uncontrolled dialog\"",
+        "value": "<Dialog.Root>\n  <Dialog.Trigger>Open</Dialog.Trigger>\n  <Dialog.Portal>\n    <Dialog.Popup>\n      <Dialog.Title>Example dialog</Dialog.Title>\n      <Dialog.Close>Close</Dialog.Close>\n    </Dialog.Popup>\n  </Dialog.Portal>\n</Dialog.Root>",
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 1045
+          },
+          "end": {
+            "line": 55,
+            "column": 4,
+            "offset": 1319
+          }
+        },
+        "data": {
+          "sourceValue": "<Dialog.Root>\n  <Dialog.Trigger>Open</Dialog.Trigger>\n  <Dialog.Portal>\n    <Dialog.Popup>\n      <Dialog.Title>Example dialog</Dialog.Title>\n      <Dialog.Close>Close</Dialog.Close>\n    </Dialog.Popup>\n  </Dialog.Portal>\n</Dialog.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 57,
+                "column": 1,
+                "offset": 1321
+              },
+              "end": {
+                "line": 57,
+                "column": 5,
+                "offset": 1325
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "open",
+            "position": {
+              "start": {
+                "line": 57,
+                "column": 5,
+                "offset": 1325
+              },
+              "end": {
+                "line": 57,
+                "column": 11,
+                "offset": 1331
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 57,
+                "column": 11,
+                "offset": 1331
+              },
+              "end": {
+                "line": 57,
+                "column": 16,
+                "offset": 1336
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 57,
+                "column": 16,
+                "offset": 1336
+              },
+              "end": {
+                "line": 57,
+                "column": 30,
+                "offset": 1350
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " props if you need to access or control the state of the dialog.\nFor example, you can control the dialog state in order to open it imperatively from another place in your app.",
+            "position": {
+              "start": {
+                "line": 57,
+                "column": 30,
+                "offset": 1350
+              },
+              "end": {
+                "line": 58,
+                "column": 111,
+                "offset": 1525
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 57,
+            "column": 1,
+            "offset": 1321
+          },
+          "end": {
+            "line": 58,
+            "column": 111,
+            "offset": 1525
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Controlled dialog\"",
+        "value": "const [open, setOpen] = React.useState(false);\nreturn (\n  <Dialog.Root open={open} onOpenChange={setOpen}>\n    <Dialog.Trigger>Open</Dialog.Trigger>\n    <Dialog.Portal>\n      <Dialog.Popup>\n        <form\n          // Close the dialog once the form data is submitted\n          onSubmit={async () => {\n            await submitData();\n            setOpen(false);\n          }}\n        >\n          ...\n        </form>\n      </Dialog.Popup>\n    </Dialog.Portal>\n  </Dialog.Root>\n);",
+        "position": {
+          "start": {
+            "line": 60,
+            "column": 1,
+            "offset": 1527
+          },
+          "end": {
+            "line": 80,
+            "column": 4,
+            "offset": 2039
+          }
+        },
+        "data": {
+          "sourceValue": "const [open, setOpen] = React.useState(false);\nreturn (\n  <Dialog.Root open={open} onOpenChange={setOpen}>\n    <Dialog.Trigger>Open</Dialog.Trigger>\n    <Dialog.Portal>\n      <Dialog.Popup>\n        <form\n          // Close the dialog once the form data is submitted\n          onSubmit={async () => {\n            await submitData();\n            setOpen(false);\n          }}\n        >\n          ...\n        </form>\n      </Dialog.Popup>\n    </Dialog.Portal>\n  </Dialog.Root>\n);",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "It's also common to use ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 1,
+                "offset": 2041
+              },
+              "end": {
+                "line": 82,
+                "column": 25,
+                "offset": 2065
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 25,
+                "offset": 2065
+              },
+              "end": {
+                "line": 82,
+                "column": 39,
+                "offset": 2079
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " if your app needs to do something when the dialog is closed or opened. This is recommended over ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 39,
+                "offset": 2079
+              },
+              "end": {
+                "line": 82,
+                "column": 136,
+                "offset": 2176
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "React.useEffect",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 136,
+                "offset": 2176
+              },
+              "end": {
+                "line": 82,
+                "column": 153,
+                "offset": 2193
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " when reacting to state changes.",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 153,
+                "offset": 2193
+              },
+              "end": {
+                "line": 82,
+                "column": 185,
+                "offset": 2225
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 82,
+            "column": 1,
+            "offset": 2041
+          },
+          "end": {
+            "line": 82,
+            "column": 185,
+            "offset": 2225
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Running code when dialog state changes\"",
+        "value": "<Dialog.Root\n  open={open}\n  onOpenChange={(open) => {\n    // Do stuff when the dialog is closed\n    if (!open) {\n      doStuff();\n    }\n    // Set the new state\n    setOpen(open);\n  }}\n>",
+        "position": {
+          "start": {
+            "line": 84,
+            "column": 1,
+            "offset": 2227
+          },
+          "end": {
+            "line": 96,
+            "column": 4,
+            "offset": 2472
+          }
+        },
+        "data": {
+          "sourceValue": "<Dialog.Root\n  open={open}\n  onOpenChange={(open) => {\n    // Do stuff when the dialog is closed\n    if (!open) {\n      doStuff();\n    }\n    // Set the new state\n    setOpen(open);\n  }}\n>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 1,
+              "message": "JSX element 'Dialog.Root' has no corresponding closing tag."
+            },
+            {
+              "start": 187,
+              "message": "'</' expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Open from a menu",
+            "position": {
+              "start": {
+                "line": 98,
+                "column": 5,
+                "offset": 2478
+              },
+              "end": {
+                "line": 98,
+                "column": 21,
+                "offset": 2494
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 98,
+            "column": 1,
+            "offset": 2474
+          },
+          "end": {
+            "line": 98,
+            "column": 21,
+            "offset": 2494
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "open-from-a-menu"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In order to open a dialog using a menu, control the dialog state and open it imperatively using the ",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 1,
+                "offset": 2496
+              },
+              "end": {
+                "line": 100,
+                "column": 101,
+                "offset": 2596
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onClick",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 101,
+                "offset": 2596
+              },
+              "end": {
+                "line": 100,
+                "column": 110,
+                "offset": 2605
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " handler on the menu item.",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 110,
+                "offset": 2605
+              },
+              "end": {
+                "line": 100,
+                "column": 136,
+                "offset": 2631
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 100,
+            "column": 1,
+            "offset": 2496
+          },
+          "end": {
+            "line": 100,
+            "column": 136,
+            "offset": 2631
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogOpenFromMenu } from './demos/open-from-menu';",
+        "position": {
+          "start": {
+            "line": 102,
+            "column": 1,
+            "offset": 2633
+          },
+          "end": {
+            "line": 102,
+            "column": 65,
+            "offset": 2697
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogOpenFromMenu",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 104,
+            "column": 1,
+            "offset": 2699
+          },
+          "end": {
+            "line": 104,
+            "column": 27,
+            "offset": 2725
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/open-from-menu#DemoDialogOpenFromMenu"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Nested dialogs",
+            "position": {
+              "start": {
+                "line": 106,
+                "column": 5,
+                "offset": 2731
+              },
+              "end": {
+                "line": 106,
+                "column": 19,
+                "offset": 2745
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 106,
+            "column": 1,
+            "offset": 2727
+          },
+          "end": {
+            "line": 106,
+            "column": 19,
+            "offset": 2745
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "nested-dialogs"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can nest dialogs within one another normally.",
+            "position": {
+              "start": {
+                "line": 108,
+                "column": 1,
+                "offset": 2747
+              },
+              "end": {
+                "line": 108,
+                "column": 50,
+                "offset": 2796
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 108,
+            "column": 1,
+            "offset": 2747
+          },
+          "end": {
+            "line": 108,
+            "column": 50,
+            "offset": 2796
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the ",
+            "position": {
+              "start": {
+                "line": 110,
+                "column": 1,
+                "offset": 2798
+              },
+              "end": {
+                "line": 110,
+                "column": 9,
+                "offset": 2806
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "[data-nested-dialog-open]",
+            "position": {
+              "start": {
+                "line": 110,
+                "column": 9,
+                "offset": 2806
+              },
+              "end": {
+                "line": 110,
+                "column": 36,
+                "offset": 2833
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " selector and the ",
+            "position": {
+              "start": {
+                "line": 110,
+                "column": 36,
+                "offset": 2833
+              },
+              "end": {
+                "line": 110,
+                "column": 54,
+                "offset": 2851
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "var(--nested-dialogs)",
+            "position": {
+              "start": {
+                "line": 110,
+                "column": 54,
+                "offset": 2851
+              },
+              "end": {
+                "line": 110,
+                "column": 77,
+                "offset": 2874
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " CSS variable to customize the styling of the parent dialog. Backdrops of the child dialogs won't be rendered so that you can present the parent dialog in a clean way behind the one on top of it.",
+            "position": {
+              "start": {
+                "line": 110,
+                "column": 77,
+                "offset": 2874
+              },
+              "end": {
+                "line": 110,
+                "column": 272,
+                "offset": 3069
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 110,
+            "column": 1,
+            "offset": 2798
+          },
+          "end": {
+            "line": 110,
+            "column": 272,
+            "offset": 3069
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogNested } from './demos/nested';",
+        "position": {
+          "start": {
+            "line": 112,
+            "column": 1,
+            "offset": 3071
+          },
+          "end": {
+            "line": 112,
+            "column": 51,
+            "offset": 3121
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogNested",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 114,
+            "column": 1,
+            "offset": 3123
+          },
+          "end": {
+            "line": 114,
+            "column": 21,
+            "offset": 3143
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/nested#DemoDialogNested"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Close confirmation",
+            "position": {
+              "start": {
+                "line": 116,
+                "column": 5,
+                "offset": 3149
+              },
+              "end": {
+                "line": 116,
+                "column": 23,
+                "offset": 3167
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 116,
+            "column": 1,
+            "offset": 3145
+          },
+          "end": {
+            "line": 116,
+            "column": 23,
+            "offset": 3167
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "close-confirmation"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This example shows a nested confirmation dialog that opens if the text entered in the parent dialog is going to be discarded.",
+            "position": {
+              "start": {
+                "line": 118,
+                "column": 1,
+                "offset": 3169
+              },
+              "end": {
+                "line": 118,
+                "column": 126,
+                "offset": 3294
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 118,
+            "column": 1,
+            "offset": 3169
+          },
+          "end": {
+            "line": 118,
+            "column": 126,
+            "offset": 3294
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To implement this, both dialogs should be controlled. The confirmation dialog may be opened when ",
+            "position": {
+              "start": {
+                "line": 120,
+                "column": 1,
+                "offset": 3296
+              },
+              "end": {
+                "line": 120,
+                "column": 98,
+                "offset": 3393
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 120,
+                "column": 98,
+                "offset": 3393
+              },
+              "end": {
+                "line": 120,
+                "column": 112,
+                "offset": 3407
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " callback of the parent dialog receives a request to close. This way, the confirmation is automatically shown when the user clicks the backdrop, presses the Esc key, or clicks a close button.",
+            "position": {
+              "start": {
+                "line": 120,
+                "column": 112,
+                "offset": 3407
+              },
+              "end": {
+                "line": 120,
+                "column": 303,
+                "offset": 3598
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 120,
+            "column": 1,
+            "offset": 3296
+          },
+          "end": {
+            "line": 120,
+            "column": 303,
+            "offset": 3598
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogCloseConfirmation } from './demos/close-confirmation';",
+        "position": {
+          "start": {
+            "line": 122,
+            "column": 1,
+            "offset": 3600
+          },
+          "end": {
+            "line": 122,
+            "column": 74,
+            "offset": 3673
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogCloseConfirmation",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 124,
+            "column": 1,
+            "offset": 3675
+          },
+          "end": {
+            "line": 124,
+            "column": 32,
+            "offset": 3706
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/close-confirmation#DemoDialogCloseConfirmation"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Custom focus management",
+            "position": {
+              "start": {
+                "line": 126,
+                "column": 5,
+                "offset": 3712
+              },
+              "end": {
+                "line": 126,
+                "column": 28,
+                "offset": 3735
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 126,
+            "column": 1,
+            "offset": 3708
+          },
+          "end": {
+            "line": 126,
+            "column": 28,
+            "offset": 3735
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "custom-focus-management"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can control where the focus goes when the dialog opens and closes using the ",
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 1,
+                "offset": 3737
+              },
+              "end": {
+                "line": 128,
+                "column": 81,
+                "offset": 3817
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "initialFocus",
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 81,
+                "offset": 3817
+              },
+              "end": {
+                "line": 128,
+                "column": 95,
+                "offset": 3831
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 95,
+                "offset": 3831
+              },
+              "end": {
+                "line": 128,
+                "column": 100,
+                "offset": 3836
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "finalFocus",
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 100,
+                "offset": 3836
+              },
+              "end": {
+                "line": 128,
+                "column": 112,
+                "offset": 3848
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " props on the ",
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 112,
+                "offset": 3848
+              },
+              "end": {
+                "line": 128,
+                "column": 126,
+                "offset": 3862
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Popup>",
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 126,
+                "offset": 3862
+              },
+              "end": {
+                "line": 128,
+                "column": 142,
+                "offset": 3878
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " component.",
+            "position": {
+              "start": {
+                "line": 128,
+                "column": 142,
+                "offset": 3878
+              },
+              "end": {
+                "line": 128,
+                "column": 153,
+                "offset": 3889
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 128,
+            "column": 1,
+            "offset": 3737
+          },
+          "end": {
+            "line": 128,
+            "column": 153,
+            "offset": 3889
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can also set these props to ",
+            "position": {
+              "start": {
+                "line": 130,
+                "column": 1,
+                "offset": 3891
+              },
+              "end": {
+                "line": 130,
+                "column": 33,
+                "offset": 3923
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "false",
+            "position": {
+              "start": {
+                "line": 130,
+                "column": 33,
+                "offset": 3923
+              },
+              "end": {
+                "line": 130,
+                "column": 40,
+                "offset": 3930
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to prevent focus from moving when the dialog opens or closes, or to a function that returns the element to focus based on the interaction type.",
+            "position": {
+              "start": {
+                "line": 130,
+                "column": 40,
+                "offset": 3930
+              },
+              "end": {
+                "line": 130,
+                "column": 184,
+                "offset": 4074
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 130,
+            "column": 1,
+            "offset": 3891
+          },
+          "end": {
+            "line": 130,
+            "column": 184,
+            "offset": 4074
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogFocusManagement } from './demos/focus-management';",
+        "position": {
+          "start": {
+            "line": 132,
+            "column": 1,
+            "offset": 4076
+          },
+          "end": {
+            "line": 132,
+            "column": 70,
+            "offset": 4145
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogFocusManagement",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 134,
+            "column": 1,
+            "offset": 4147
+          },
+          "end": {
+            "line": 134,
+            "column": 30,
+            "offset": 4176
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/focus-management#DemoDialogFocusManagement"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Outside scroll dialog",
+            "position": {
+              "start": {
+                "line": 136,
+                "column": 5,
+                "offset": 4182
+              },
+              "end": {
+                "line": 136,
+                "column": 26,
+                "offset": 4203
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 136,
+            "column": 1,
+            "offset": 4178
+          },
+          "end": {
+            "line": 136,
+            "column": 26,
+            "offset": 4203
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "outside-scroll-dialog"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The dialog can be made scrollable by using ",
+            "position": {
+              "start": {
+                "line": 138,
+                "column": 1,
+                "offset": 4205
+              },
+              "end": {
+                "line": 138,
+                "column": 44,
+                "offset": 4248
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Viewport>",
+            "position": {
+              "start": {
+                "line": 138,
+                "column": 44,
+                "offset": 4248
+              },
+              "end": {
+                "line": 138,
+                "column": 63,
+                "offset": 4267
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " as an outer scrollable container for ",
+            "position": {
+              "start": {
+                "line": 138,
+                "column": 63,
+                "offset": 4267
+              },
+              "end": {
+                "line": 138,
+                "column": 101,
+                "offset": 4305
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Popup>",
+            "position": {
+              "start": {
+                "line": 138,
+                "column": 101,
+                "offset": 4305
+              },
+              "end": {
+                "line": 138,
+                "column": 117,
+                "offset": 4321
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " while the popup can extend past the bottom edge. The scrollable area uses the ",
+            "position": {
+              "start": {
+                "line": 138,
+                "column": 117,
+                "offset": 4321
+              },
+              "end": {
+                "line": 138,
+                "column": 196,
+                "offset": 4400
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/scroll-area",
+            "children": [
+              {
+                "type": "text",
+                "value": "Scroll Area component",
+                "position": {
+                  "start": {
+                    "line": 138,
+                    "column": 197,
+                    "offset": 4401
+                  },
+                  "end": {
+                    "line": 138,
+                    "column": 218,
+                    "offset": 4422
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 138,
+                "column": 196,
+                "offset": 4400
+              },
+              "end": {
+                "line": 138,
+                "column": 250,
+                "offset": 4454
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to provide custom scrollbars.",
+            "position": {
+              "start": {
+                "line": 138,
+                "column": 250,
+                "offset": 4454
+              },
+              "end": {
+                "line": 138,
+                "column": 280,
+                "offset": 4484
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 138,
+            "column": 1,
+            "offset": 4205
+          },
+          "end": {
+            "line": 138,
+            "column": 280,
+            "offset": 4484
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogOutsideScroll } from './demos/outside-scroll';",
+        "position": {
+          "start": {
+            "line": 140,
+            "column": 1,
+            "offset": 4486
+          },
+          "end": {
+            "line": 140,
+            "column": 66,
+            "offset": 4551
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogOutsideScroll",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 142,
+            "column": 1,
+            "offset": 4553
+          },
+          "end": {
+            "line": 142,
+            "column": 28,
+            "offset": 4580
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/outside-scroll#DemoDialogOutsideScroll"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Inside scroll dialog",
+            "position": {
+              "start": {
+                "line": 144,
+                "column": 5,
+                "offset": 4586
+              },
+              "end": {
+                "line": 144,
+                "column": 25,
+                "offset": 4606
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 144,
+            "column": 1,
+            "offset": 4582
+          },
+          "end": {
+            "line": 144,
+            "column": 25,
+            "offset": 4606
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "inside-scroll-dialog"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The dialog can be made scrollable by making an inner container scrollable while the popup stays fully on screen. ",
+            "position": {
+              "start": {
+                "line": 146,
+                "column": 1,
+                "offset": 4608
+              },
+              "end": {
+                "line": 146,
+                "column": 114,
+                "offset": 4721
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Viewport>",
+            "position": {
+              "start": {
+                "line": 146,
+                "column": 114,
+                "offset": 4721
+              },
+              "end": {
+                "line": 146,
+                "column": 133,
+                "offset": 4740
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is used as a positioning container for ",
+            "position": {
+              "start": {
+                "line": 146,
+                "column": 133,
+                "offset": 4740
+              },
+              "end": {
+                "line": 146,
+                "column": 173,
+                "offset": 4780
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Popup>",
+            "position": {
+              "start": {
+                "line": 146,
+                "column": 173,
+                "offset": 4780
+              },
+              "end": {
+                "line": 146,
+                "column": 189,
+                "offset": 4796
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", while an inner scrollable area is created using the ",
+            "position": {
+              "start": {
+                "line": 146,
+                "column": 189,
+                "offset": 4796
+              },
+              "end": {
+                "line": 146,
+                "column": 243,
+                "offset": 4850
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/scroll-area",
+            "children": [
+              {
+                "type": "text",
+                "value": "Scroll Area component",
+                "position": {
+                  "start": {
+                    "line": 146,
+                    "column": 244,
+                    "offset": 4851
+                  },
+                  "end": {
+                    "line": 146,
+                    "column": 265,
+                    "offset": 4872
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 146,
+                "column": 243,
+                "offset": 4850
+              },
+              "end": {
+                "line": 146,
+                "column": 297,
+                "offset": 4904
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 146,
+                "column": 297,
+                "offset": 4904
+              },
+              "end": {
+                "line": 146,
+                "column": 298,
+                "offset": 4905
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 146,
+            "column": 1,
+            "offset": 4608
+          },
+          "end": {
+            "line": 146,
+            "column": 298,
+            "offset": 4905
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogInsideScroll } from './demos/inside-scroll';",
+        "position": {
+          "start": {
+            "line": 148,
+            "column": 1,
+            "offset": 4907
+          },
+          "end": {
+            "line": 148,
+            "column": 64,
+            "offset": 4970
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogInsideScroll",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 150,
+            "column": 1,
+            "offset": 4972
+          },
+          "end": {
+            "line": 150,
+            "column": 27,
+            "offset": 4998
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/inside-scroll#DemoDialogInsideScroll"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Placing elements outside the popup",
+            "position": {
+              "start": {
+                "line": 152,
+                "column": 5,
+                "offset": 5004
+              },
+              "end": {
+                "line": 152,
+                "column": 39,
+                "offset": 5038
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 152,
+            "column": 1,
+            "offset": 5000
+          },
+          "end": {
+            "line": 152,
+            "column": 39,
+            "offset": 5038
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "placing-elements-outside-the-popup"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When adding elements that should appear \"outside\" the colored popup area, continue to place them inside ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 1,
+                "offset": 5040
+              },
+              "end": {
+                "line": 154,
+                "column": 105,
+                "offset": 5144
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Popup>",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 105,
+                "offset": 5144
+              },
+              "end": {
+                "line": 154,
+                "column": 121,
+                "offset": 5160
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", but create a child element that has the popup styles. This ensures they are kept in the tab order and announced correctly by screen readers.",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 121,
+                "offset": 5160
+              },
+              "end": {
+                "line": 154,
+                "column": 263,
+                "offset": 5302
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 154,
+            "column": 1,
+            "offset": 5040
+          },
+          "end": {
+            "line": 154,
+            "column": 263,
+            "offset": 5302
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Popup>",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 1,
+                "offset": 5304
+              },
+              "end": {
+                "line": 156,
+                "column": 17,
+                "offset": 5320
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " has ",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 17,
+                "offset": 5320
+              },
+              "end": {
+                "line": 156,
+                "column": 22,
+                "offset": 5325
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "pointer-events: none",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 22,
+                "offset": 5325
+              },
+              "end": {
+                "line": 156,
+                "column": 44,
+                "offset": 5347
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", while inner content (the colored popup and close button) has ",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 44,
+                "offset": 5347
+              },
+              "end": {
+                "line": 156,
+                "column": 107,
+                "offset": 5410
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "pointer-events: auto",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 107,
+                "offset": 5410
+              },
+              "end": {
+                "line": 156,
+                "column": 129,
+                "offset": 5432
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " so clicks on the backdrop continue to be registered.",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 129,
+                "offset": 5432
+              },
+              "end": {
+                "line": 156,
+                "column": 182,
+                "offset": 5485
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 156,
+            "column": 1,
+            "offset": 5304
+          },
+          "end": {
+            "line": 156,
+            "column": 182,
+            "offset": 5485
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogUncontained } from './demos/uncontained';",
+        "position": {
+          "start": {
+            "line": 158,
+            "column": 1,
+            "offset": 5487
+          },
+          "end": {
+            "line": 158,
+            "column": 61,
+            "offset": 5547
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogUncontained",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 160,
+            "column": 1,
+            "offset": 5549
+          },
+          "end": {
+            "line": 160,
+            "column": 26,
+            "offset": 5574
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/uncontained#DemoDialogUncontained"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Detached triggers",
+            "position": {
+              "start": {
+                "line": 162,
+                "column": 5,
+                "offset": 5580
+              },
+              "end": {
+                "line": 162,
+                "column": 22,
+                "offset": 5597
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 162,
+            "column": 1,
+            "offset": 5576
+          },
+          "end": {
+            "line": 162,
+            "column": 22,
+            "offset": 5597
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "detached-triggers"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A dialog can be controlled by a trigger located either inside or outside the ",
+            "position": {
+              "start": {
+                "line": 164,
+                "column": 1,
+                "offset": 5599
+              },
+              "end": {
+                "line": 164,
+                "column": 78,
+                "offset": 5676
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Root>",
+            "position": {
+              "start": {
+                "line": 164,
+                "column": 78,
+                "offset": 5676
+              },
+              "end": {
+                "line": 164,
+                "column": 93,
+                "offset": 5691
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " component.\nFor simple, one-off interactions, place the ",
+            "position": {
+              "start": {
+                "line": 164,
+                "column": 93,
+                "offset": 5691
+              },
+              "end": {
+                "line": 165,
+                "column": 45,
+                "offset": 5747
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Trigger>",
+            "position": {
+              "start": {
+                "line": 165,
+                "column": 45,
+                "offset": 5747
+              },
+              "end": {
+                "line": 165,
+                "column": 63,
+                "offset": 5765
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " inside ",
+            "position": {
+              "start": {
+                "line": 165,
+                "column": 63,
+                "offset": 5765
+              },
+              "end": {
+                "line": 165,
+                "column": 71,
+                "offset": 5773
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Root>",
+            "position": {
+              "start": {
+                "line": 165,
+                "column": 71,
+                "offset": 5773
+              },
+              "end": {
+                "line": 165,
+                "column": 86,
+                "offset": 5788
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", as shown in the example at the top of this page.",
+            "position": {
+              "start": {
+                "line": 165,
+                "column": 86,
+                "offset": 5788
+              },
+              "end": {
+                "line": 165,
+                "column": 136,
+                "offset": 5838
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 164,
+            "column": 1,
+            "offset": 5599
+          },
+          "end": {
+            "line": 165,
+            "column": 136,
+            "offset": 5838
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "However, if defining the dialog's content next to its trigger is not practical, you can use a detached trigger.\nThis involves placing the ",
+            "position": {
+              "start": {
+                "line": 167,
+                "column": 1,
+                "offset": 5840
+              },
+              "end": {
+                "line": 168,
+                "column": 27,
+                "offset": 5978
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Trigger>",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 27,
+                "offset": 5978
+              },
+              "end": {
+                "line": 168,
+                "column": 45,
+                "offset": 5996
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " outside of ",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 45,
+                "offset": 5996
+              },
+              "end": {
+                "line": 168,
+                "column": 57,
+                "offset": 6008
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Root>",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 57,
+                "offset": 6008
+              },
+              "end": {
+                "line": 168,
+                "column": 72,
+                "offset": 6023
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and linking them with a ",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 72,
+                "offset": 6023
+              },
+              "end": {
+                "line": 168,
+                "column": 97,
+                "offset": 6048
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "handle",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 97,
+                "offset": 6048
+              },
+              "end": {
+                "line": 168,
+                "column": 105,
+                "offset": 6056
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " created by the ",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 105,
+                "offset": 6056
+              },
+              "end": {
+                "line": 168,
+                "column": 121,
+                "offset": 6072
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Dialog.createHandle()",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 121,
+                "offset": 6072
+              },
+              "end": {
+                "line": 168,
+                "column": 144,
+                "offset": 6095
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " function.",
+            "position": {
+              "start": {
+                "line": 168,
+                "column": 144,
+                "offset": 6095
+              },
+              "end": {
+                "line": 168,
+                "column": 154,
+                "offset": 6105
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 167,
+            "column": 1,
+            "offset": 5840
+          },
+          "end": {
+            "line": 168,
+            "column": 154,
+            "offset": 6105
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The imperative methods on the handle, such as ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 1,
+                "offset": 6107
+              },
+              "end": {
+                "line": 170,
+                "column": 47,
+                "offset": 6153
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "open()",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 47,
+                "offset": 6153
+              },
+              "end": {
+                "line": 170,
+                "column": 55,
+                "offset": 6161
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 55,
+                "offset": 6161
+              },
+              "end": {
+                "line": 170,
+                "column": 60,
+                "offset": 6166
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "openWithPayload()",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 60,
+                "offset": 6166
+              },
+              "end": {
+                "line": 170,
+                "column": 79,
+                "offset": 6185
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", require a ",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 79,
+                "offset": 6185
+              },
+              "end": {
+                "line": 170,
+                "column": 91,
+                "offset": 6197
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Root>",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 91,
+                "offset": 6197
+              },
+              "end": {
+                "line": 170,
+                "column": 106,
+                "offset": 6212
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " using the same handle to be mounted.\nCalls made while no root is attached to the handle — before one mounts, or after it unmounts — are ignored. Each time a root mounts, it starts from fresh state: a call made while no root was attached is not replayed, and no open state carries over from a previous mount.",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 106,
+                "offset": 6212
+              },
+              "end": {
+                "line": 171,
+                "column": 271,
+                "offset": 6520
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 170,
+            "column": 1,
+            "offset": 6107
+          },
+          "end": {
+            "line": 171,
+            "column": 271,
+            "offset": 6520
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Detached triggers\"",
+        "value": "const demoDialog = Dialog.createHandle();\n\n// @highlight\n// @highlight-text \"handle={demoDialog}\"\n<Dialog.Trigger handle={demoDialog}>Open</Dialog.Trigger> {/* @highlight-text \"handle={demoDialog}\" */}\n\n// @highlight\n// @highlight-text \"handle={demoDialog}\"\n<Dialog.Root handle={demoDialog}>\n  ...\n</Dialog.Root>",
+        "position": {
+          "start": {
+            "line": 173,
+            "column": 1,
+            "offset": 6522
+          },
+          "end": {
+            "line": 185,
+            "column": 4,
+            "offset": 6871
+          }
+        },
+        "data": {
+          "sourceValue": "const demoDialog = Dialog.createHandle();\n\n// @highlight\n// @highlight-text \"handle={demoDialog}\"\n<Dialog.Trigger handle={demoDialog}>Open</Dialog.Trigger> {/* @highlight-text \"handle={demoDialog}\" */}\n\n// @highlight\n// @highlight-text \"handle={demoDialog}\"\n<Dialog.Root handle={demoDialog}>\n  ...\n</Dialog.Root>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 156,
+              "message": "';' expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogDetachedTriggersSimple } from './demos/detached-triggers-simple';",
+        "position": {
+          "start": {
+            "line": 187,
+            "column": 1,
+            "offset": 6873
+          },
+          "end": {
+            "line": 187,
+            "column": 85,
+            "offset": 6957
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogDetachedTriggersSimple",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 189,
+            "column": 1,
+            "offset": 6959
+          },
+          "end": {
+            "line": 189,
+            "column": 37,
+            "offset": 6995
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/detached-triggers-simple#DemoDialogDetachedTriggersSimple"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Multiple triggers",
+            "position": {
+              "start": {
+                "line": 191,
+                "column": 5,
+                "offset": 7001
+              },
+              "end": {
+                "line": 191,
+                "column": 22,
+                "offset": 7018
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 191,
+            "column": 1,
+            "offset": 6997
+          },
+          "end": {
+            "line": 191,
+            "column": 22,
+            "offset": 7018
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "multiple-triggers"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A single dialog can be opened by multiple trigger elements.\nYou can achieve this by using the same ",
+            "position": {
+              "start": {
+                "line": 193,
+                "column": 1,
+                "offset": 7020
+              },
+              "end": {
+                "line": 194,
+                "column": 40,
+                "offset": 7119
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "handle",
+            "position": {
+              "start": {
+                "line": 194,
+                "column": 40,
+                "offset": 7119
+              },
+              "end": {
+                "line": 194,
+                "column": 48,
+                "offset": 7127
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for several detached triggers, or by placing multiple ",
+            "position": {
+              "start": {
+                "line": 194,
+                "column": 48,
+                "offset": 7127
+              },
+              "end": {
+                "line": 194,
+                "column": 103,
+                "offset": 7182
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Trigger>",
+            "position": {
+              "start": {
+                "line": 194,
+                "column": 103,
+                "offset": 7182
+              },
+              "end": {
+                "line": 194,
+                "column": 121,
+                "offset": 7200
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " components inside a single ",
+            "position": {
+              "start": {
+                "line": 194,
+                "column": 121,
+                "offset": 7200
+              },
+              "end": {
+                "line": 194,
+                "column": 149,
+                "offset": 7228
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Root>",
+            "position": {
+              "start": {
+                "line": 194,
+                "column": 149,
+                "offset": 7228
+              },
+              "end": {
+                "line": 194,
+                "column": 164,
+                "offset": 7243
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 194,
+                "column": 164,
+                "offset": 7243
+              },
+              "end": {
+                "line": 194,
+                "column": 165,
+                "offset": 7244
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 193,
+            "column": 1,
+            "offset": 7020
+          },
+          "end": {
+            "line": 194,
+            "column": 165,
+            "offset": 7244
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Multiple triggers within the Root part\"",
+        "value": "<Dialog.Root>\n  <Dialog.Trigger>Trigger 1</Dialog.Trigger>\n  <Dialog.Trigger>Trigger 2</Dialog.Trigger>\n  ...\n</Dialog.Root>",
+        "position": {
+          "start": {
+            "line": 196,
+            "column": 1,
+            "offset": 7246
+          },
+          "end": {
+            "line": 202,
+            "column": 4,
+            "offset": 7428
+          }
+        },
+        "data": {
+          "sourceValue": "<Dialog.Root>\n  <Dialog.Trigger>Trigger 1</Dialog.Trigger>\n  <Dialog.Trigger>Trigger 2</Dialog.Trigger>\n  ...\n</Dialog.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Multiple detached triggers\"",
+        "value": "const demoDialog = Dialog.createHandle();\n\n<Dialog.Trigger handle={demoDialog}>Trigger 1</Dialog.Trigger>\n<Dialog.Trigger handle={demoDialog}>Trigger 2</Dialog.Trigger>\n<Dialog.Root handle={demoDialog}>\n  ...\n</Dialog.Root>",
+        "position": {
+          "start": {
+            "line": 204,
+            "column": 1,
+            "offset": 7430
+          },
+          "end": {
+            "line": 212,
+            "column": 4,
+            "offset": 7699
+          }
+        },
+        "data": {
+          "sourceValue": "const demoDialog = Dialog.createHandle();\n\n<Dialog.Trigger handle={demoDialog}>Trigger 1</Dialog.Trigger>\n<Dialog.Trigger handle={demoDialog}>Trigger 2</Dialog.Trigger>\n<Dialog.Root handle={demoDialog}>\n  ...\n</Dialog.Root>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 43,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The dialog can render different content depending on which trigger opened it.\nThis is achieved by passing a ",
+            "position": {
+              "start": {
+                "line": 214,
+                "column": 1,
+                "offset": 7701
+              },
+              "end": {
+                "line": 215,
+                "column": 31,
+                "offset": 7809
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "payload",
+            "position": {
+              "start": {
+                "line": 215,
+                "column": 31,
+                "offset": 7809
+              },
+              "end": {
+                "line": 215,
+                "column": 40,
+                "offset": 7818
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to the ",
+            "position": {
+              "start": {
+                "line": 215,
+                "column": 40,
+                "offset": 7818
+              },
+              "end": {
+                "line": 215,
+                "column": 48,
+                "offset": 7826
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Trigger>",
+            "position": {
+              "start": {
+                "line": 215,
+                "column": 48,
+                "offset": 7826
+              },
+              "end": {
+                "line": 215,
+                "column": 66,
+                "offset": 7844
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and using the function-as-a-child pattern in ",
+            "position": {
+              "start": {
+                "line": 215,
+                "column": 66,
+                "offset": 7844
+              },
+              "end": {
+                "line": 215,
+                "column": 112,
+                "offset": 7890
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Root>",
+            "position": {
+              "start": {
+                "line": 215,
+                "column": 112,
+                "offset": 7890
+              },
+              "end": {
+                "line": 215,
+                "column": 127,
+                "offset": 7905
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 215,
+                "column": 127,
+                "offset": 7905
+              },
+              "end": {
+                "line": 215,
+                "column": 128,
+                "offset": 7906
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 214,
+            "column": 1,
+            "offset": 7701
+          },
+          "end": {
+            "line": 215,
+            "column": 128,
+            "offset": 7906
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The payload can be strongly typed by providing a type argument to the ",
+            "position": {
+              "start": {
+                "line": 217,
+                "column": 1,
+                "offset": 7908
+              },
+              "end": {
+                "line": 217,
+                "column": 71,
+                "offset": 7978
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "createHandle()",
+            "position": {
+              "start": {
+                "line": 217,
+                "column": 71,
+                "offset": 7978
+              },
+              "end": {
+                "line": 217,
+                "column": 87,
+                "offset": 7994
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " function:",
+            "position": {
+              "start": {
+                "line": 217,
+                "column": 87,
+                "offset": 7994
+              },
+              "end": {
+                "line": 217,
+                "column": 97,
+                "offset": 8004
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 217,
+            "column": 1,
+            "offset": 7908
+          },
+          "end": {
+            "line": 217,
+            "column": 97,
+            "offset": 8004
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Detached triggers with payload\"",
+        "value": "// @highlight\nconst demoDialog = Dialog.createHandle<{ text: string }>();\n\n// @highlight\n// @highlight-text \"payload\"\n<Dialog.Trigger handle={demoDialog} payload={{ text: 'Trigger 1' }}>\n  Trigger 1\n</Dialog.Trigger>\n\n// @highlight\n// @highlight-text \"payload\"\n<Dialog.Trigger handle={demoDialog} payload={{ text: 'Trigger 2' }}>\n  Trigger 2\n</Dialog.Trigger>\n\n<Dialog.Root handle={demoDialog}>\n  {({ payload }) => ( // @highlight-text \"payload\"\n    <Dialog.Portal>\n      <Dialog.Popup>\n        <Dialog.Title>Dialog</Dialog.Title>\n        {payload !== undefined && ( // @highlight-text \"payload\"\n          <Dialog.Description>\n            This has been opened by {payload.text} {/* @highlight-text \"payload\" */}\n          </Dialog.Description>\n        )}\n      </Dialog.Popup>\n    </Dialog.Portal>\n  )}\n</Dialog.Root>",
+        "position": {
+          "start": {
+            "line": 219,
+            "column": 1,
+            "offset": 8006
+          },
+          "end": {
+            "line": 249,
+            "column": 4,
+            "offset": 8873
+          }
+        },
+        "data": {
+          "sourceValue": "// @highlight\nconst demoDialog = Dialog.createHandle<{ text: string }>();\n\n// @highlight\n// @highlight-text \"payload\"\n<Dialog.Trigger handle={demoDialog} payload={{ text: 'Trigger 1' }}>\n  Trigger 1\n</Dialog.Trigger>\n\n// @highlight\n// @highlight-text \"payload\"\n<Dialog.Trigger handle={demoDialog} payload={{ text: 'Trigger 2' }}>\n  Trigger 2\n</Dialog.Trigger>\n\n<Dialog.Root handle={demoDialog}>\n  {({ payload }) => ( // @highlight-text \"payload\"\n    <Dialog.Portal>\n      <Dialog.Popup>\n        <Dialog.Title>Dialog</Dialog.Title>\n        {payload !== undefined && ( // @highlight-text \"payload\"\n          <Dialog.Description>\n            This has been opened by {payload.text} {/* @highlight-text \"payload\" */}\n          </Dialog.Description>\n        )}\n      </Dialog.Popup>\n    </Dialog.Portal>\n  )}\n</Dialog.Root>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 118,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Controlled mode with multiple triggers",
+            "position": {
+              "start": {
+                "line": 251,
+                "column": 5,
+                "offset": 8879
+              },
+              "end": {
+                "line": 251,
+                "column": 43,
+                "offset": 8917
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 251,
+            "column": 1,
+            "offset": 8875
+          },
+          "end": {
+            "line": 251,
+            "column": 43,
+            "offset": 8917
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "controlled-mode-with-multiple-triggers"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can control the dialog's open state externally using the ",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 1,
+                "offset": 8919
+              },
+              "end": {
+                "line": 253,
+                "column": 62,
+                "offset": 8980
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "open",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 62,
+                "offset": 8980
+              },
+              "end": {
+                "line": 253,
+                "column": 68,
+                "offset": 8986
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 68,
+                "offset": 8986
+              },
+              "end": {
+                "line": 253,
+                "column": 73,
+                "offset": 8991
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 73,
+                "offset": 8991
+              },
+              "end": {
+                "line": 253,
+                "column": 87,
+                "offset": 9005
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " props on ",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 87,
+                "offset": 9005
+              },
+              "end": {
+                "line": 253,
+                "column": 97,
+                "offset": 9015
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Root>",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 97,
+                "offset": 9015
+              },
+              "end": {
+                "line": 253,
+                "column": 112,
+                "offset": 9030
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".\nThis allows you to manage the dialog's visibility based on your application's state.\nWhen using multiple triggers, you have to manage which trigger is active with the ",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 112,
+                "offset": 9030
+              },
+              "end": {
+                "line": 255,
+                "column": 83,
+                "offset": 9199
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "triggerId",
+            "position": {
+              "start": {
+                "line": 255,
+                "column": 83,
+                "offset": 9199
+              },
+              "end": {
+                "line": 255,
+                "column": 94,
+                "offset": 9210
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop on ",
+            "position": {
+              "start": {
+                "line": 255,
+                "column": 94,
+                "offset": 9210
+              },
+              "end": {
+                "line": 255,
+                "column": 103,
+                "offset": 9219
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Root>",
+            "position": {
+              "start": {
+                "line": 255,
+                "column": 103,
+                "offset": 9219
+              },
+              "end": {
+                "line": 255,
+                "column": 118,
+                "offset": 9234
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and the ",
+            "position": {
+              "start": {
+                "line": 255,
+                "column": 118,
+                "offset": 9234
+              },
+              "end": {
+                "line": 255,
+                "column": 127,
+                "offset": 9243
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "id",
+            "position": {
+              "start": {
+                "line": 255,
+                "column": 127,
+                "offset": 9243
+              },
+              "end": {
+                "line": 255,
+                "column": 131,
+                "offset": 9247
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop on each ",
+            "position": {
+              "start": {
+                "line": 255,
+                "column": 131,
+                "offset": 9247
+              },
+              "end": {
+                "line": 255,
+                "column": 145,
+                "offset": 9261
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog.Trigger>",
+            "position": {
+              "start": {
+                "line": 255,
+                "column": 145,
+                "offset": 9261
+              },
+              "end": {
+                "line": 255,
+                "column": 163,
+                "offset": 9279
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 255,
+                "column": 163,
+                "offset": 9279
+              },
+              "end": {
+                "line": 255,
+                "column": 164,
+                "offset": 9280
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 253,
+            "column": 1,
+            "offset": 8919
+          },
+          "end": {
+            "line": 255,
+            "column": 164,
+            "offset": 9280
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Note that there is no separate ",
+            "position": {
+              "start": {
+                "line": 257,
+                "column": 1,
+                "offset": 9282
+              },
+              "end": {
+                "line": 257,
+                "column": 32,
+                "offset": 9313
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onTriggerIdChange",
+            "position": {
+              "start": {
+                "line": 257,
+                "column": 32,
+                "offset": 9313
+              },
+              "end": {
+                "line": 257,
+                "column": 51,
+                "offset": 9332
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop.\nInstead, the ",
+            "position": {
+              "start": {
+                "line": 257,
+                "column": 51,
+                "offset": 9332
+              },
+              "end": {
+                "line": 258,
+                "column": 14,
+                "offset": 9352
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 258,
+                "column": 14,
+                "offset": 9352
+              },
+              "end": {
+                "line": 258,
+                "column": 28,
+                "offset": 9366
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " callback receives an additional argument, ",
+            "position": {
+              "start": {
+                "line": 258,
+                "column": 28,
+                "offset": 9366
+              },
+              "end": {
+                "line": 258,
+                "column": 71,
+                "offset": 9409
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "eventDetails",
+            "position": {
+              "start": {
+                "line": 258,
+                "column": 71,
+                "offset": 9409
+              },
+              "end": {
+                "line": 258,
+                "column": 85,
+                "offset": 9423
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which contains the trigger element that initiated the state change.",
+            "position": {
+              "start": {
+                "line": 258,
+                "column": 85,
+                "offset": 9423
+              },
+              "end": {
+                "line": 258,
+                "column": 154,
+                "offset": 9492
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 257,
+            "column": 1,
+            "offset": 9282
+          },
+          "end": {
+            "line": 258,
+            "column": 154,
+            "offset": 9492
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoDialogDetachedTriggersControlled } from './demos/detached-triggers-controlled';",
+        "position": {
+          "start": {
+            "line": 260,
+            "column": 1,
+            "offset": 9494
+          },
+          "end": {
+            "line": 260,
+            "column": 93,
+            "offset": 9586
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoDialogDetachedTriggersControlled",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 262,
+            "column": 1,
+            "offset": 9588
+          },
+          "end": {
+            "line": 262,
+            "column": 41,
+            "offset": 9628
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/dialog/demos/detached-triggers-controlled#DemoDialogDetachedTriggersControlled"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 264,
+                "column": 4,
+                "offset": 9633
+              },
+              "end": {
+                "line": 264,
+                "column": 17,
+                "offset": 9646
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 264,
+            "column": 1,
+            "offset": 9630
+          },
+          "end": {
+            "line": 264,
+            "column": 17,
+            "offset": 9646
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesDialog } from './types';",
+        "position": {
+          "start": {
+            "line": 266,
+            "column": 1,
+            "offset": 9648
+          },
+          "end": {
+            "line": 266,
+            "column": 39,
+            "offset": 9686
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 268,
+                "column": 5,
+                "offset": 9692
+              },
+              "end": {
+                "line": 268,
+                "column": 9,
+                "offset": 9696
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 268,
+            "column": 1,
+            "offset": 9688
+          },
+          "end": {
+            "line": 268,
+            "column": 9,
+            "offset": 9696
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 270,
+            "column": 1,
+            "offset": 9698
+          },
+          "end": {
+            "line": 270,
+            "column": 21,
+            "offset": 9718
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Trigger",
+            "position": {
+              "start": {
+                "line": 272,
+                "column": 5,
+                "offset": 9724
+              },
+              "end": {
+                "line": 272,
+                "column": 12,
+                "offset": 9731
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 272,
+            "column": 1,
+            "offset": 9720
+          },
+          "end": {
+            "line": 272,
+            "column": 12,
+            "offset": 9731
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "trigger"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Trigger",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 274,
+            "column": 1,
+            "offset": 9733
+          },
+          "end": {
+            "line": 274,
+            "column": 24,
+            "offset": 9756
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Portal",
+            "position": {
+              "start": {
+                "line": 276,
+                "column": 5,
+                "offset": 9762
+              },
+              "end": {
+                "line": 276,
+                "column": 11,
+                "offset": 9768
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 276,
+            "column": 1,
+            "offset": 9758
+          },
+          "end": {
+            "line": 276,
+            "column": 11,
+            "offset": 9768
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "portal"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Portal",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 278,
+            "column": 1,
+            "offset": 9770
+          },
+          "end": {
+            "line": 278,
+            "column": 23,
+            "offset": 9792
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Backdrop",
+            "position": {
+              "start": {
+                "line": 280,
+                "column": 5,
+                "offset": 9798
+              },
+              "end": {
+                "line": 280,
+                "column": 13,
+                "offset": 9806
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 280,
+            "column": 1,
+            "offset": 9794
+          },
+          "end": {
+            "line": 280,
+            "column": 13,
+            "offset": 9806
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "backdrop"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Backdrop",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 282,
+            "column": 1,
+            "offset": 9808
+          },
+          "end": {
+            "line": 282,
+            "column": 25,
+            "offset": 9832
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Viewport",
+            "position": {
+              "start": {
+                "line": 284,
+                "column": 5,
+                "offset": 9838
+              },
+              "end": {
+                "line": 284,
+                "column": 13,
+                "offset": 9846
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 284,
+            "column": 1,
+            "offset": 9834
+          },
+          "end": {
+            "line": 284,
+            "column": 13,
+            "offset": 9846
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "viewport"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Viewport",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 286,
+            "column": 1,
+            "offset": 9848
+          },
+          "end": {
+            "line": 286,
+            "column": 25,
+            "offset": 9872
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Popup",
+            "position": {
+              "start": {
+                "line": 288,
+                "column": 5,
+                "offset": 9878
+              },
+              "end": {
+                "line": 288,
+                "column": 10,
+                "offset": 9883
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 288,
+            "column": 1,
+            "offset": 9874
+          },
+          "end": {
+            "line": 288,
+            "column": 10,
+            "offset": 9883
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "popup"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Popup",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 290,
+            "column": 1,
+            "offset": 9885
+          },
+          "end": {
+            "line": 290,
+            "column": 22,
+            "offset": 9906
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Title",
+            "position": {
+              "start": {
+                "line": 292,
+                "column": 5,
+                "offset": 9912
+              },
+              "end": {
+                "line": 292,
+                "column": 10,
+                "offset": 9917
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 292,
+            "column": 1,
+            "offset": 9908
+          },
+          "end": {
+            "line": 292,
+            "column": 10,
+            "offset": 9917
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "title"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Title",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 294,
+            "column": 1,
+            "offset": 9919
+          },
+          "end": {
+            "line": 294,
+            "column": 22,
+            "offset": 9940
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Description",
+            "position": {
+              "start": {
+                "line": 296,
+                "column": 5,
+                "offset": 9946
+              },
+              "end": {
+                "line": 296,
+                "column": 16,
+                "offset": 9957
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 296,
+            "column": 1,
+            "offset": 9942
+          },
+          "end": {
+            "line": 296,
+            "column": 16,
+            "offset": 9957
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "description"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Description",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 298,
+            "column": 1,
+            "offset": 9959
+          },
+          "end": {
+            "line": 298,
+            "column": 28,
+            "offset": 9986
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Close",
+            "position": {
+              "start": {
+                "line": 300,
+                "column": 5,
+                "offset": 9992
+              },
+              "end": {
+                "line": 300,
+                "column": 10,
+                "offset": 9997
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 300,
+            "column": 1,
+            "offset": 9988
+          },
+          "end": {
+            "line": 300,
+            "column": 10,
+            "offset": 9997
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "close"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Close",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 302,
+            "column": 1,
+            "offset": 9999
+          },
+          "end": {
+            "line": 302,
+            "column": 22,
+            "offset": 10020
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "createHandle",
+            "position": {
+              "start": {
+                "line": 304,
+                "column": 4,
+                "offset": 10025
+              },
+              "end": {
+                "line": 304,
+                "column": 16,
+                "offset": 10037
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 304,
+            "column": 1,
+            "offset": 10022
+          },
+          "end": {
+            "line": 304,
+            "column": 16,
+            "offset": 10037
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "createhandle"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.createHandle",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 306,
+            "column": 1,
+            "offset": 10039
+          },
+          "end": {
+            "line": 306,
+            "column": 29,
+            "offset": 10067
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "definition",
+        "identifier": "//",
+        "label": "//",
+        "title": "@exclude-table-of-contents",
+        "url": "#",
+        "position": {
+          "start": {
+            "line": 308,
+            "column": 1,
+            "offset": 10069
+          },
+          "end": {
+            "line": 308,
+            "column": 37,
+            "offset": 10105
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Handle",
+            "position": {
+              "start": {
+                "line": 310,
+                "column": 5,
+                "offset": 10111
+              },
+              "end": {
+                "line": 310,
+                "column": 11,
+                "offset": 10117
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 310,
+            "column": 1,
+            "offset": 10107
+          },
+          "end": {
+            "line": 310,
+            "column": 11,
+            "offset": 10117
+          }
+        },
+        "data": {
+          "hProperties": {
+            "data-exclude-toc": "",
+            "id": "handle"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesDialog.Handle",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 312,
+            "column": 1,
+            "offset": 10119
+          },
+          "end": {
+            "line": 312,
+            "column": 23,
+            "offset": 10141
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/dialog/types#TypesDialog"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Dialog',\n    'Modal Dialog Component',\n    'Modal Popup',\n    'Modal Window',\n    'Popup Window',\n    'Modal Overlay',\n    'Overlay',\n    'Lightbox',\n    'Popover Dialog',\n    'Controlled Dialog State',\n    'Nested Dialog React',\n    'Focus Trap Dialog',\n    'Accessible Dialog',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 314,
+            "column": 1,
+            "offset": 10143
+          },
+          "end": {
+            "line": 332,
+            "column": 3,
+            "offset": 10529
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 333,
+        "column": 1,
+        "offset": 10530
+      }
+    }
+  }
+}

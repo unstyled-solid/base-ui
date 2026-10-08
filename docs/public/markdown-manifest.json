@@ -1,0 +1,1154 @@
+{
+  "schemaVersion": 1,
+  "stagingVersion": "bsolid-markdown-stage/1",
+  "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "package": {
+    "name": "baseui-solid2",
+    "version": "0.0.0",
+    "private": true
+  },
+  "inventorySha256": "61df58ecd1b2b522f356bd59e426e54f01228f61245789ec5fa99918c23a163e",
+  "files": [
+    {
+      "source": "docs/generated/api/api-2e.md",
+      "destination": "api/api-2e.md",
+      "sha256": "fb246ec63082d9ca46fc50f0e60d080a173db103cebf282a82f3987274f66a79",
+      "bytes": 2975892,
+      "entrypoint": "."
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6163636f7264696f6e.md",
+      "destination": "api/api-2e2f6163636f7264696f6e.md",
+      "sha256": "b6aeaefd3d054297fb705edb11fc494c063a3ae2e15eb6c86c21691be1cc5183",
+      "bytes": 70331,
+      "entrypoint": "./accordion"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f616c6572742d6469616c6f67.md",
+      "destination": "api/api-2e2f616c6572742d6469616c6f67.md",
+      "sha256": "1863a31d3e7e6c0c9215ee19dbccae8ad0602ed6d695024f65b3084dd01ad838",
+      "bytes": 89015,
+      "entrypoint": "./alert-dialog"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6175746f636f6d706c657465.md",
+      "destination": "api/api-2e2f6175746f636f6d706c657465.md",
+      "sha256": "4903a443e93ca6649dc109dd92427f7276d9ab39c1f1afee864a1ae56df490ac",
+      "bytes": 214222,
+      "entrypoint": "./autocomplete"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f617661746172.md",
+      "destination": "api/api-2e2f617661746172.md",
+      "sha256": "713b8ff99cbf19fb32c75f0bc049e5b664dd2a28a843497da4051a9974d17d45",
+      "bytes": 29716,
+      "entrypoint": "./avatar"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f627574746f6e.md",
+      "destination": "api/api-2e2f627574746f6e.md",
+      "sha256": "cc71da0ed9b128d6beb57cdd0ff615cbf760a8112aebf2749e9ad90b555bd067",
+      "bytes": 8116,
+      "entrypoint": "./button"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f636865636b626f78.md",
+      "destination": "api/api-2e2f636865636b626f78.md",
+      "sha256": "1d7ba333d714aeb129625d11a4b41191f491adcf1408c768be3f67eeaaddab22",
+      "bytes": 37642,
+      "entrypoint": "./checkbox"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f636865636b626f782d67726f7570.md",
+      "destination": "api/api-2e2f636865636b626f782d67726f7570.md",
+      "sha256": "442a0617bc488eaa4ae7e2cb1c73300438fd8daa49e0724fa3884c6966e5deb0",
+      "bytes": 11304,
+      "entrypoint": "./checkbox-group"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f636f6c6c61707369626c65.md",
+      "destination": "api/api-2e2f636f6c6c61707369626c65.md",
+      "sha256": "565cd84d4d92733bbdeb9cad1d24a2507e6632901b95bd877dcbb883176d624d",
+      "bytes": 39929,
+      "entrypoint": "./collapsible"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f636f6d626f626f78.md",
+      "destination": "api/api-2e2f636f6d626f626f78.md",
+      "sha256": "9faec151fcfda4ef9f43a592bd3a8a0efc32ad5805fc4c592158eb8275026479",
+      "bytes": 272731,
+      "entrypoint": "./combobox"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f636f6e746578742d6d656e75.md",
+      "destination": "api/api-2e2f636f6e746578742d6d656e75.md",
+      "sha256": "b696933c410fb4b0f57014cc7dc849a05a255f6ac4c122a1ed72f0469ee10610",
+      "bytes": 173623,
+      "entrypoint": "./context-menu"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6373702d70726f7669646572.md",
+      "destination": "api/api-2e2f6373702d70726f7669646572.md",
+      "sha256": "a0f27bfa18a83e3e2b449701e2f603e183d22232ee9b2cd7b7a7d9593a2573b8",
+      "bytes": 2509,
+      "entrypoint": "./csp-provider"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6469616c6f67.md",
+      "destination": "api/api-2e2f6469616c6f67.md",
+      "sha256": "dc376a14a4e845677b97d08321d1e7690d1ae3df674d96a1ab9f01d1bdf9da1b",
+      "bytes": 93246,
+      "entrypoint": "./dialog"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f646972656374696f6e2d70726f7669646572.md",
+      "destination": "api/api-2e2f646972656374696f6e2d70726f7669646572.md",
+      "sha256": "ecb668aa18156ed5c973c91866a4eab74c35b2fc3e346092eef30d3ad71362a5",
+      "bytes": 2443,
+      "entrypoint": "./direction-provider"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f647261776572.md",
+      "destination": "api/api-2e2f647261776572.md",
+      "sha256": "ac18c6f8d6e04411528beaee130041d0a1fbf32aece998f14fa3812fd5147e41",
+      "bytes": 141059,
+      "entrypoint": "./drawer"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6669656c64.md",
+      "destination": "api/api-2e2f6669656c64.md",
+      "sha256": "a236ef08c03c2de0ee951e662b73316901a25c868972f043a54558991904c5f9",
+      "bytes": 91638,
+      "entrypoint": "./field"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6669656c64736574.md",
+      "destination": "api/api-2e2f6669656c64736574.md",
+      "sha256": "714e711b3fcd0100e6400bf1ac76c7cbe9798a7fe43a875f4c9273fd95688ebf",
+      "bytes": 12633,
+      "entrypoint": "./fieldset"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f666f726d.md",
+      "destination": "api/api-2e2f666f726d.md",
+      "sha256": "c72888cb41c3202e64322f75faaa6a59dce04a84b148f2fdc2de126be246c5d4",
+      "bytes": 11860,
+      "entrypoint": "./form"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e707574.md",
+      "destination": "api/api-2e2f696e707574.md",
+      "sha256": "83d780377ff5811adecf3cf73470b16581d35e4fc7cc1367dd8b9b69c0592765",
+      "bytes": 19890,
+      "entrypoint": "./input"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f526571756573745175657565.md",
+      "destination": "api/api-2e2f696e7465726e616c732f526571756573745175657565.md",
+      "sha256": "e4756d4b0887b34e4a5aac3d16504d69aec2a756b459c09b300842e9530a8b5b",
+      "bytes": 3103,
+      "entrypoint": "./internals/RequestQueue"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f54696d656f75744d616e61676572.md",
+      "destination": "api/api-2e2f696e7465726e616c732f54696d656f75744d616e61676572.md",
+      "sha256": "774a1a36d354247fc25afbe66ee9ec865422600d6ffcfff04be0d595bea3c074",
+      "bytes": 1660,
+      "entrypoint": "./internals/TimeoutManager"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f636f6d706f73697465.md",
+      "destination": "api/api-2e2f696e7465726e616c732f636f6d706f73697465.md",
+      "sha256": "9e4693c40abbbe1d1e339b8a9c5ffee3ed376ec540fccd6a29b6428b6a2021b1",
+      "bytes": 70855,
+      "entrypoint": "./internals/composite"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f636f6e7374616e7473.md",
+      "destination": "api/api-2e2f696e7465726e616c732f636f6e7374616e7473.md",
+      "sha256": "1bbf7e48b1fd2db5e60a1a2110e53e21e77a1d21f6e13e079dcf5e3c36a58a22",
+      "bytes": 2698,
+      "entrypoint": "./internals/constants"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f6372656174654261736555494576656e7444657461696c73.md",
+      "destination": "api/api-2e2f696e7465726e616c732f6372656174654261736555494576656e7444657461696c73.md",
+      "sha256": "8e6d94c20aa9248a706737bc30716271a3ab1833f917daae3f917b1a794bade2",
+      "bytes": 3358,
+      "entrypoint": "./internals/createBaseUIEventDetails"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f6373702d636f6e74657874.md",
+      "destination": "api/api-2e2f696e7465726e616c732f6373702d636f6e74657874.md",
+      "sha256": "2570d68774d31bbbe584cd66ad0339dc7d6d34e581c86cb0d9742f6260c72019",
+      "bytes": 1309,
+      "entrypoint": "./internals/csp-context"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f646972656374696f6e2d636f6e74657874.md",
+      "destination": "api/api-2e2f696e7465726e616c732f646972656374696f6e2d636f6e74657874.md",
+      "sha256": "28e27ff402b87778acabe4c9c75e4ffe367f1f077fd491d5758384181a1f210c",
+      "bytes": 1165,
+      "entrypoint": "./internals/direction-context"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f6669656c642d636f6e7374616e7473.md",
+      "destination": "api/api-2e2f696e7465726e616c732f6669656c642d636f6e7374616e7473.md",
+      "sha256": "289182b8587ad83db2f15764d1d1b1f2c0da0e786c337691a9c76dec79a397d9",
+      "bytes": 1420,
+      "entrypoint": "./internals/field-constants"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f6669656c642d72656769737465722d636f6e74726f6c.md",
+      "destination": "api/api-2e2f696e7465726e616c732f6669656c642d72656769737465722d636f6e74726f6c.md",
+      "sha256": "4ed202a8f0d622361784e6efb8328dd53fcf0c5ffe295cd422627518531e22c2",
+      "bytes": 13064,
+      "entrypoint": "./internals/field-register-control"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f6669656c642d726f6f742d636f6e74657874.md",
+      "destination": "api/api-2e2f696e7465726e616c732f6669656c642d726f6f742d636f6e74657874.md",
+      "sha256": "9ea6f0ff53c9b2772e06c727b5284099ad79505e304aa67d6fce84ab29797f2c",
+      "bytes": 7426,
+      "entrypoint": "./internals/field-root-context"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f66696c746572.md",
+      "destination": "api/api-2e2f696e7465726e616c732f66696c746572.md",
+      "sha256": "5820e05b2f92d835ae372f5825231f47556d7f8e84682a9a0724ec3688680196",
+      "bytes": 2739,
+      "entrypoint": "./internals/filter"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f666f726d2d636f6e74657874.md",
+      "destination": "api/api-2e2f696e7465726e616c732f666f726d2d636f6e74657874.md",
+      "sha256": "11ad499d487f8c4591b595d1277cb488490bfd3349af1f7aa0e29eea10dbcffd",
+      "bytes": 2544,
+      "entrypoint": "./internals/form-context"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f67657444697361626c65644d6f756e745472616e736974696f6e5374796c6573.md",
+      "destination": "api/api-2e2f696e7465726e616c732f67657444697361626c65644d6f756e745472616e736974696f6e5374796c6573.md",
+      "sha256": "a491cd1f3d52eb9263e710e1ba59f2af8ccfe4a8b216036131a4a212a9babd9c",
+      "bytes": 905,
+      "entrypoint": "./internals/getDisabledMountTransitionStyles"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f67657453746174654174747269627574657350726f7073.md",
+      "destination": "api/api-2e2f696e7465726e616c732f67657453746174654174747269627574657350726f7073.md",
+      "sha256": "083cc3982c23047c2341b31b85f1c41fbfb706ea1bfcc1bf431e6f5e3736b2ec",
+      "bytes": 1168,
+      "entrypoint": "./internals/getStateAttributesProps"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f6974656d457175616c697479.md",
+      "destination": "api/api-2e2f696e7465726e616c732f6974656d457175616c697479.md",
+      "sha256": "8fc28ae6f620cef3ada6d5adfb545c5a719aaeb0fac7f5e136246f120c128107",
+      "bytes": 8737,
+      "entrypoint": "./internals/itemEquality"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f6c6162656c61626c652d70726f7669646572.md",
+      "destination": "api/api-2e2f696e7465726e616c732f6c6162656c61626c652d70726f7669646572.md",
+      "sha256": "822b94ce10253676200139814a0ba369504abea6e715970391d0d8380f157647",
+      "bytes": 11741,
+      "entrypoint": "./internals/labelable-provider"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f6e6f6f70.md",
+      "destination": "api/api-2e2f696e7465726e616c732f6e6f6f70.md",
+      "sha256": "94be92e053fbafcd131dcdfe97dbe2e2cad0501eb3ac1d04b1ee2330222d7993",
+      "bytes": 202,
+      "entrypoint": "./internals/noop"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f726561736f6e73.md",
+      "destination": "api/api-2e2f696e7465726e616c732f726561736f6e73.md",
+      "sha256": "f7597863ace3f7c474417459449a8ebf163db227cff74705a2e4ae4dfd50375e",
+      "bytes": 12572,
+      "entrypoint": "./internals/reasons"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f7265736f6c766556616c75654c6162656c.md",
+      "destination": "api/api-2e2f696e7465726e616c732f7265736f6c766556616c75654c6162656c.md",
+      "sha256": "8f657c7c549742b82ccddcf6cdc96c4fd55312cf9f404f6d2da4342fd5aedade",
+      "bytes": 5353,
+      "entrypoint": "./internals/resolveValueLabel"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f73657269616c697a6556616c7565.md",
+      "destination": "api/api-2e2f696e7465726e616c732f73657269616c697a6556616c7565.md",
+      "sha256": "1ed0b1151391a12c204cee16c88de0e35b9780a6574888af07ca81368594b693",
+      "bytes": 495,
+      "entrypoint": "./internals/serializeValue"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f7374617465417474726962757465734d617070696e67.md",
+      "destination": "api/api-2e2f696e7465726e616c732f7374617465417474726962757465734d617070696e67.md",
+      "sha256": "e4004acb8a48521a168146a1263910835928d792e3f6b61bee528a6a5739afd6",
+      "bytes": 1219,
+      "entrypoint": "./internals/stateAttributesMapping"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f74656d706f72616c.md",
+      "destination": "api/api-2e2f696e7465726e616c732f74656d706f72616c.md",
+      "sha256": "bea19741970b4ba49a448b53485b35ed6016c882a8a6274b923ea4cb305c781a",
+      "bytes": 19040,
+      "entrypoint": "./internals/temporal"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f74656d706f72616c2d616461707465722d646174652d666e73.md",
+      "destination": "api/api-2e2f696e7465726e616c732f74656d706f72616c2d616461707465722d646174652d666e73.md",
+      "sha256": "fb19ccdaca0ce2c6a10a93b06c7e13749d1e9dff61730e7234ed2c89935a2629",
+      "bytes": 929,
+      "entrypoint": "./internals/temporal-adapter-date-fns"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f74656d706f72616c2d616461707465722d6c75786f6e.md",
+      "destination": "api/api-2e2f696e7465726e616c732f74656d706f72616c2d616461707465722d6c75786f6e.md",
+      "sha256": "c56ca0a9f0e342d673c812f2d5920e33c01d5dec7bd5ed890be098628808d19a",
+      "bytes": 896,
+      "entrypoint": "./internals/temporal-adapter-luxon"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f7479706573.md",
+      "destination": "api/api-2e2f696e7465726e616c732f7479706573.md",
+      "sha256": "404376e9ae603fec6f5b259360deb03088a1d352a0e1001b2961d6520d7ed7ba",
+      "bytes": 59203,
+      "entrypoint": "./internals/types"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f7573652d627574746f6e.md",
+      "destination": "api/api-2e2f696e7465726e616c732f7573652d627574746f6e.md",
+      "sha256": "9102b9469dbfb011ed202f9b55437b0e4e8dfdfb160bba57b09112b51f40a60b",
+      "bytes": 3364,
+      "entrypoint": "./internals/use-button"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f757365416e63686f72506f736974696f6e696e67.md",
+      "destination": "api/api-2e2f696e7465726e616c732f757365416e63686f72506f736974696f6e696e67.md",
+      "sha256": "735e3df1a2311736bd8c6713bc3bcd689e288bdd218c8b150f52d39c773b38ee",
+      "bytes": 23995,
+      "entrypoint": "./internals/useAnchorPositioning"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f757365416e696d6174696f6e7346696e6973686564.md",
+      "destination": "api/api-2e2f696e7465726e616c732f757365416e696d6174696f6e7346696e6973686564.md",
+      "sha256": "df2948d41e6724b0f6b844de4c9016009d8fb80e2d226bbc0014088236dcaab4",
+      "bytes": 4357,
+      "entrypoint": "./internals/useAnimationsFinished"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f7573654261736555694964.md",
+      "destination": "api/api-2e2f696e7465726e616c732f7573654261736555694964.md",
+      "sha256": "9a891019af7bfa32701ab3e05f703d24bc7fd7ea408b869e591e78ecfc539158",
+      "bytes": 831,
+      "entrypoint": "./internals/useBaseUiId"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f7573654f70656e4368616e6765436f6d706c657465.md",
+      "destination": "api/api-2e2f696e7465726e616c732f7573654f70656e4368616e6765436f6d706c657465.md",
+      "sha256": "a05b52973774f67654d51a8a353436c5eef8badfcfb82b0412265b8d1051a266",
+      "bytes": 3465,
+      "entrypoint": "./internals/useOpenChangeComplete"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f7573655072657373416e64486f6c64.md",
+      "destination": "api/api-2e2f696e7465726e616c732f7573655072657373416e64486f6c64.md",
+      "sha256": "6e51e159f56b5d7dbbbd212d0e43d927ec43c6dff653e498ab0d0309cfbd3c80",
+      "bytes": 6323,
+      "entrypoint": "./internals/usePressAndHold"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f75736552656e646572456c656d656e74.md",
+      "destination": "api/api-2e2f696e7465726e616c732f75736552656e646572456c656d656e74.md",
+      "sha256": "bcecd97105187df48f63faf0bf24a67727a2a2c07af265d39f90200027885613",
+      "bytes": 4605,
+      "entrypoint": "./internals/useRenderElement"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f7573655472616e736974696f6e537461747573.md",
+      "destination": "api/api-2e2f696e7465726e616c732f7573655472616e736974696f6e537461747573.md",
+      "sha256": "6f036dadacb820a00d09f81c2bf19bcdb95e33c9b11d9de447ee929c1ba208c4",
+      "bytes": 3775,
+      "entrypoint": "./internals/useTransitionStatus"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f696e7465726e616c732f75736556616c75654368616e676564.md",
+      "destination": "api/api-2e2f696e7465726e616c732f75736556616c75654368616e676564.md",
+      "sha256": "bd6f534081df8c51c0acffb06fadefc4db0b76ae56189121bd5e4e08bef5fb36",
+      "bytes": 1126,
+      "entrypoint": "./internals/useValueChanged"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6d656e75.md",
+      "destination": "api/api-2e2f6d656e75.md",
+      "sha256": "0f2d4ce5f716f5eff6616f484807f4d6f125c738fc6e0605d690a83434f46dcd",
+      "bytes": 296335,
+      "entrypoint": "./menu"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6d656e75626172.md",
+      "destination": "api/api-2e2f6d656e75626172.md",
+      "sha256": "33799758a4d984e203f085007a4ac4b1e7df3deb72cb303c3426120cd6132313",
+      "bytes": 6817,
+      "entrypoint": "./menubar"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6d657267652d70726f7073.md",
+      "destination": "api/api-2e2f6d657267652d70726f7073.md",
+      "sha256": "9c1fb4455cd6a093d2f0f6df630668d8f86c5172386c5117a3b4624bf2a3c3bc",
+      "bytes": 4613,
+      "entrypoint": "./merge-props"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6d65746572.md",
+      "destination": "api/api-2e2f6d65746572.md",
+      "sha256": "e4d3c6f433983cdc34e64e636b3c96b59536b61f83e07c1069411efa6ca236f1",
+      "bytes": 26684,
+      "entrypoint": "./meter"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6e617669676174696f6e2d6d656e75.md",
+      "destination": "api/api-2e2f6e617669676174696f6e2d6d656e75.md",
+      "sha256": "c9154884b4e84ec8182d73552be337201d770a06f66a1a73968c54cec96dba0d",
+      "bytes": 147662,
+      "entrypoint": "./navigation-menu"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6e756d6265722d6669656c64.md",
+      "destination": "api/api-2e2f6e756d6265722d6669656c64.md",
+      "sha256": "e41d2c53a3a55612919df04e06be862916deb03e31c31a88301ccfc4b4f5e85c",
+      "bytes": 139537,
+      "entrypoint": "./number-field"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f6f74702d6669656c64.md",
+      "destination": "api/api-2e2f6f74702d6669656c64.md",
+      "sha256": "e1b5716d79ff4f0857eef91a3f09c602fb1ed92709431fd975cbe17483e1087b",
+      "bytes": 65301,
+      "entrypoint": "./otp-field"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f706f706f766572.md",
+      "destination": "api/api-2e2f706f706f766572.md",
+      "sha256": "e84f6120457f59d03ca90edc6151219e8df6dbfbb48c79348127c48d1c8a7c58",
+      "bytes": 122225,
+      "entrypoint": "./popover"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f707265766965772d63617264.md",
+      "destination": "api/api-2e2f707265766965772d63617264.md",
+      "sha256": "35029b4299c35cab328312b12274d5f99c1ae85927281541bde49656bf220437",
+      "bytes": 107525,
+      "entrypoint": "./preview-card"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f70726f6772657373.md",
+      "destination": "api/api-2e2f70726f6772657373.md",
+      "sha256": "7f8c328a205e9de08147e754ecc68d69e6405a27b39ce1061170acccc92e37d2",
+      "bytes": 37869,
+      "entrypoint": "./progress"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f726164696f.md",
+      "destination": "api/api-2e2f726164696f.md",
+      "sha256": "9a81b4ea1a7a7862a07782b29a04a02f08272b710b9d03697342d018e334feb2",
+      "bytes": 26036,
+      "entrypoint": "./radio"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f726164696f2d67726f7570.md",
+      "destination": "api/api-2e2f726164696f2d67726f7570.md",
+      "sha256": "7deb5d1d03019142425d2237fc1cf15343c2c93eb42e6655c7a767a483519023",
+      "bytes": 13773,
+      "entrypoint": "./radio-group"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f7363726f6c6c2d61726561.md",
+      "destination": "api/api-2e2f7363726f6c6c2d61726561.md",
+      "sha256": "a1b2514eb218570a02fcea6574fd2f500c8f8a86a08717c7d450900565bbaea6",
+      "bytes": 67591,
+      "entrypoint": "./scroll-area"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f73656c656374.md",
+      "destination": "api/api-2e2f73656c656374.md",
+      "sha256": "e0c12783cd277a72dfbff2a38f0e3196272a67e5aad2f29399b24a6e6f7cfaa7",
+      "bytes": 173200,
+      "entrypoint": "./select"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f736570617261746f72.md",
+      "destination": "api/api-2e2f736570617261746f72.md",
+      "sha256": "82adeae9172a0df764c38a3cecbaed9c03597f7b7f83c46d50cbd4dc953dd1b9",
+      "bytes": 4909,
+      "entrypoint": "./separator"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f736c69646572.md",
+      "destination": "api/api-2e2f736c69646572.md",
+      "sha256": "0fd8d8a4e1df2215ed8249092c921747c8240b349843a48312deeac14c194839",
+      "bytes": 104423,
+      "entrypoint": "./slider"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f737769746368.md",
+      "destination": "api/api-2e2f737769746368.md",
+      "sha256": "575e6504622c3a9a432f5222be463a3b73a44d2ac469c32c9fcbe8dd024b2eed",
+      "bytes": 31041,
+      "entrypoint": "./switch"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f74616273.md",
+      "destination": "api/api-2e2f74616273.md",
+      "sha256": "e6693c13fdf90e7ba2acc3769f1a8a846f190502e98ddb3557c297d7eff05b2b",
+      "bytes": 60004,
+      "entrypoint": "./tabs"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f746f617374.md",
+      "destination": "api/api-2e2f746f617374.md",
+      "sha256": "223971d50e294063c5f41e30f9cb296cebaffc5fdb21cd3c09dea3b29547fd2e",
+      "bytes": 116657,
+      "entrypoint": "./toast"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f746f67676c65.md",
+      "destination": "api/api-2e2f746f67676c65.md",
+      "sha256": "ff7b52fbe5e6cf59402e06f0529f239384279f3c0cfa138f782c7cce326c3163",
+      "bytes": 14351,
+      "entrypoint": "./toggle"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f746f67676c652d67726f7570.md",
+      "destination": "api/api-2e2f746f67676c652d67726f7570.md",
+      "sha256": "83cd39973f12d879295e629d9918c0b6b91fc08f010f31b266b2d1e6d9579184",
+      "bytes": 13488,
+      "entrypoint": "./toggle-group"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f746f6f6c626172.md",
+      "destination": "api/api-2e2f746f6f6c626172.md",
+      "sha256": "65e6dcd876bbd10eb4a796540783c37e4a0b082ac49ae81278afd40897668845",
+      "bytes": 77787,
+      "entrypoint": "./toolbar"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f746f6f6c746970.md",
+      "destination": "api/api-2e2f746f6f6c746970.md",
+      "sha256": "a64987da1c3f1b4fe96921e26ed7eb7890ae3f1ca1742d55c7dcaabc64d0e1f8",
+      "bytes": 94491,
+      "entrypoint": "./tooltip"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f7479706573.md",
+      "destination": "api/api-2e2f7479706573.md",
+      "sha256": "b327c8f8064eee5aa55fd675d8537d40296106414583e837c03a007dc1a276f3",
+      "bytes": 1661,
+      "entrypoint": "./types"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f756e737461626c652d7573652d6d656469612d7175657279.md",
+      "destination": "api/api-2e2f756e737461626c652d7573652d6d656469612d7175657279.md",
+      "sha256": "f9a53b4b089f181ab86ff1feec21dbb16cd74b84f136aad25b9feaebe1962b6f",
+      "bytes": 3836,
+      "entrypoint": "./unstable-use-media-query"
+    },
+    {
+      "source": "docs/generated/api/api-2e2f7573652d72656e646572.md",
+      "destination": "api/api-2e2f7573652d72656e646572.md",
+      "sha256": "0b08b417c7c9e422ea0cc895a7ce0ee56b738198d8b9be23b464f712059bfc5a",
+      "bytes": 12625,
+      "entrypoint": "./use-render"
+    },
+    {
+      "source": "docs/generated/site/production-error.md",
+      "destination": "production-error.md",
+      "sha256": "465f4442100bc85bf0e837bf164c35b5e9d18103b93821ac537cba9d8118c3f9",
+      "bytes": 175,
+      "route": "/production-error"
+    },
+    {
+      "source": "docs/generated/site/solid.md",
+      "destination": "solid.md",
+      "sha256": "6d83c5232594f473b0adfed37c977843b0ba7c2db969f9d60dc8a6a7ad8c71b6",
+      "bytes": 1293,
+      "route": "/solid"
+    },
+    {
+      "source": "docs/generated/site/solid/components.md",
+      "destination": "solid/components.md",
+      "sha256": "493495bd5224fd63ec6c9534b951dd427f63b536c3416ce1c744f9d2abbf72ec",
+      "bytes": 87060,
+      "route": "/solid/components"
+    },
+    {
+      "source": "docs/generated/site/solid/components/accordion.md",
+      "destination": "solid/components/accordion.md",
+      "sha256": "0d96690f9a7040a13da8166186738b6d3805751c515a3677da975c1d7886fa19",
+      "bytes": 4958,
+      "route": "/solid/components/accordion"
+    },
+    {
+      "source": "docs/generated/site/solid/components/alert-dialog.md",
+      "destination": "solid/components/alert-dialog.md",
+      "sha256": "577b289a59ff599c6daf3b3cd1201428832c6232fd6d08f26b016377df83fc43",
+      "bytes": 11112,
+      "route": "/solid/components/alert-dialog"
+    },
+    {
+      "source": "docs/generated/site/solid/components/autocomplete.md",
+      "destination": "solid/components/autocomplete.md",
+      "sha256": "9be3853f54682613b9cf15456aaa18b5edcb13ae65996e9f5edd570439944b62",
+      "bytes": 20290,
+      "route": "/solid/components/autocomplete"
+    },
+    {
+      "source": "docs/generated/site/solid/components/avatar.md",
+      "destination": "solid/components/avatar.md",
+      "sha256": "ad648c176885dfb5adeaa74bea60010b959345ca5c4f2f464891d1bc8a0d2599",
+      "bytes": 4600,
+      "route": "/solid/components/avatar"
+    },
+    {
+      "source": "docs/generated/site/solid/components/button.md",
+      "destination": "solid/components/button.md",
+      "sha256": "7778b0b8480fc15ef376c045c45ba7f21e2a06f9a034eaeece3c67f9776f31a4",
+      "bytes": 2870,
+      "route": "/solid/components/button"
+    },
+    {
+      "source": "docs/generated/site/solid/components/checkbox-group.md",
+      "destination": "solid/components/checkbox-group.md",
+      "sha256": "48ea396a171016d56e64958305bf0fa98a9209d5e9261cf45994fb46d1207379",
+      "bytes": 4586,
+      "route": "/solid/components/checkbox-group"
+    },
+    {
+      "source": "docs/generated/site/solid/components/checkbox.md",
+      "destination": "solid/components/checkbox.md",
+      "sha256": "fdb7547c649022142e4e9c1df2ee845e2b06320becef799696a4e9978f92449c",
+      "bytes": 3498,
+      "route": "/solid/components/checkbox"
+    },
+    {
+      "source": "docs/generated/site/solid/components/collapsible.md",
+      "destination": "solid/components/collapsible.md",
+      "sha256": "35cdd700af0280b53d5f9d301bd2aeffd7655fec7eca9f6da660c86229206b2f",
+      "bytes": 3061,
+      "route": "/solid/components/collapsible"
+    },
+    {
+      "source": "docs/generated/site/solid/components/combobox.md",
+      "destination": "solid/components/combobox.md",
+      "sha256": "1cf7bee607bd01202144c952637ffad3dadcdd82b8578d1af95d7d5aaae36cf1",
+      "bytes": 28975,
+      "route": "/solid/components/combobox"
+    },
+    {
+      "source": "docs/generated/site/solid/components/context-menu.md",
+      "destination": "solid/components/context-menu.md",
+      "sha256": "262b17a1a8a90c5e9827acb6d5f8c3c79cb08d1a7f8ca421d97dbb7a6a11ba57",
+      "bytes": 14344,
+      "route": "/solid/components/context-menu"
+    },
+    {
+      "source": "docs/generated/site/solid/components/dialog.md",
+      "destination": "solid/components/dialog.md",
+      "sha256": "2a25cbad50838c78633ea1c0d56ed736bec9096f9aac71a960be0fdd08e5e2e2",
+      "bytes": 14362,
+      "route": "/solid/components/dialog"
+    },
+    {
+      "source": "docs/generated/site/solid/components/drawer.md",
+      "destination": "solid/components/drawer.md",
+      "sha256": "b41137817bd30f417f09b891ad7d4278e95e5c8d5691ae34ccc743445b191638",
+      "bytes": 20988,
+      "route": "/solid/components/drawer"
+    },
+    {
+      "source": "docs/generated/site/solid/components/field.md",
+      "destination": "solid/components/field.md",
+      "sha256": "b9f39083dea6651d7a44b0f8684836b233a1bc3113f9a5a7ecbd1853b567d686",
+      "bytes": 4260,
+      "route": "/solid/components/field"
+    },
+    {
+      "source": "docs/generated/site/solid/components/fieldset.md",
+      "destination": "solid/components/fieldset.md",
+      "sha256": "ccb30f0aa77ab19fe1bc8ffa6e73309d3e846568b12c799f82cf65e64da7d63d",
+      "bytes": 1546,
+      "route": "/solid/components/fieldset"
+    },
+    {
+      "source": "docs/generated/site/solid/components/form.md",
+      "destination": "solid/components/form.md",
+      "sha256": "85fff55c202fe0365eff2e0f9ec5db27267214f6d9b9a259fae1759025314a4d",
+      "bytes": 2602,
+      "route": "/solid/components/form"
+    },
+    {
+      "source": "docs/generated/site/solid/components/input.md",
+      "destination": "solid/components/input.md",
+      "sha256": "41be546cd0003200ac7fb77220d59ae7952a3d89f3d183083546eb6cc92364a5",
+      "bytes": 1495,
+      "route": "/solid/components/input"
+    },
+    {
+      "source": "docs/generated/site/solid/components/menu.md",
+      "destination": "solid/components/menu.md",
+      "sha256": "ce635ea7704c9724905fe6ca8eead86995e87c44da0a62db67928277bd9a89cc",
+      "bytes": 30329,
+      "route": "/solid/components/menu"
+    },
+    {
+      "source": "docs/generated/site/solid/components/menubar.md",
+      "destination": "solid/components/menubar.md",
+      "sha256": "2d38bcca567ee58d1762de9f7dfada59fd4234044deabb9db23c09f150fbad2b",
+      "bytes": 1897,
+      "route": "/solid/components/menubar"
+    },
+    {
+      "source": "docs/generated/site/solid/components/meter.md",
+      "destination": "solid/components/meter.md",
+      "sha256": "4d2366803f8b44de01f96d9cabbd892291be8d07c89b2afad92832b93b57c836",
+      "bytes": 3273,
+      "route": "/solid/components/meter"
+    },
+    {
+      "source": "docs/generated/site/solid/components/navigation-menu.md",
+      "destination": "solid/components/navigation-menu.md",
+      "sha256": "f9e4d7746fe56c0500aed52734c2656a0981c8591794c6687c3077ed201ec12f",
+      "bytes": 10995,
+      "route": "/solid/components/navigation-menu"
+    },
+    {
+      "source": "docs/generated/site/solid/components/number-field.md",
+      "destination": "solid/components/number-field.md",
+      "sha256": "ab96e4e9a04ac71e539fe51f3fc3d0b85bc4ba1155ada440e2963a5fafb418f0",
+      "bytes": 5282,
+      "route": "/solid/components/number-field"
+    },
+    {
+      "source": "docs/generated/site/solid/components/otp-field.md",
+      "destination": "solid/components/otp-field.md",
+      "sha256": "5eda2ffaa905635682958ade363f32aeec2b57c7f6ea63b3239b9e86cfec0576",
+      "bytes": 6616,
+      "route": "/solid/components/otp-field"
+    },
+    {
+      "source": "docs/generated/site/solid/components/popover.md",
+      "destination": "solid/components/popover.md",
+      "sha256": "43803004a6e2967a5bbf8c8bfdc8b3a70a0f5758b1ea9b13d473d8d8476b6873",
+      "bytes": 13643,
+      "route": "/solid/components/popover"
+    },
+    {
+      "source": "docs/generated/site/solid/components/preview-card.md",
+      "destination": "solid/components/preview-card.md",
+      "sha256": "50416bad725da0572f91a32c645537354064501d65aaafd8f934c8f1ee1cd4ac",
+      "bytes": 12737,
+      "route": "/solid/components/preview-card"
+    },
+    {
+      "source": "docs/generated/site/solid/components/progress.md",
+      "destination": "solid/components/progress.md",
+      "sha256": "e9610ebd30c76461b56c99ba2500cd6637201f6ab40bfd097ea7333899c675a7",
+      "bytes": 3393,
+      "route": "/solid/components/progress"
+    },
+    {
+      "source": "docs/generated/site/solid/components/radio-group.md",
+      "destination": "solid/components/radio-group.md",
+      "sha256": "d4bea761c999a8f4bcf5202028ca4e11a7d0e194073f9995ca3e0f5bb2c93f4e",
+      "bytes": 5015,
+      "route": "/solid/components/radio-group"
+    },
+    {
+      "source": "docs/generated/site/solid/components/scroll-area.md",
+      "destination": "solid/components/scroll-area.md",
+      "sha256": "15cd719ed2afb21b7b883e463f3c11658d661bf8bd5572c85eeb2fab4ffd9bb9",
+      "bytes": 5438,
+      "route": "/solid/components/scroll-area"
+    },
+    {
+      "source": "docs/generated/site/solid/components/select.md",
+      "destination": "solid/components/select.md",
+      "sha256": "b04e459ce7a3e8285750e96489ea01da294527f61b499edab9b56afaaa52c087",
+      "bytes": 19195,
+      "route": "/solid/components/select"
+    },
+    {
+      "source": "docs/generated/site/solid/components/separator.md",
+      "destination": "solid/components/separator.md",
+      "sha256": "3241cb7574404525bb44d25dec27d2827f1f52fc5c686ab0b326aa5ed4b82cc7",
+      "bytes": 863,
+      "route": "/solid/components/separator"
+    },
+    {
+      "source": "docs/generated/site/solid/components/slider.md",
+      "destination": "solid/components/slider.md",
+      "sha256": "b687cd68ed1e54bda413c61ce85d520e48f7dfa7ea86f8c882c8abb0b5cf6de5",
+      "bytes": 9634,
+      "route": "/solid/components/slider"
+    },
+    {
+      "source": "docs/generated/site/solid/components/switch.md",
+      "destination": "solid/components/switch.md",
+      "sha256": "d0e67b471ed9c0819cbd8d070d230cf5234f3727bb8b5b3fd7edc4b1ea91e6b2",
+      "bytes": 3286,
+      "route": "/solid/components/switch"
+    },
+    {
+      "source": "docs/generated/site/solid/components/tabs.md",
+      "destination": "solid/components/tabs.md",
+      "sha256": "a0db32ed2259acd2666fe0c3f246e52b025054e8423e4caf31f5ee2bfb14bb49",
+      "bytes": 4281,
+      "route": "/solid/components/tabs"
+    },
+    {
+      "source": "docs/generated/site/solid/components/toast.md",
+      "destination": "solid/components/toast.md",
+      "sha256": "f29f7496ae03ca4ce532a655997d2094696a6e7febfb599146e328153bbf9b5f",
+      "bytes": 17913,
+      "route": "/solid/components/toast"
+    },
+    {
+      "source": "docs/generated/site/solid/components/toggle-group.md",
+      "destination": "solid/components/toggle-group.md",
+      "sha256": "cccd0444e44141ccbf3839deb9b232d7a2a0dace9833e4dcc6022c5b5011515d",
+      "bytes": 1321,
+      "route": "/solid/components/toggle-group"
+    },
+    {
+      "source": "docs/generated/site/solid/components/toggle.md",
+      "destination": "solid/components/toggle.md",
+      "sha256": "62a7a2863172c6bc2648b270b45d2dcdc26912115129301f12717b0857aee482",
+      "bytes": 1325,
+      "route": "/solid/components/toggle"
+    },
+    {
+      "source": "docs/generated/site/solid/components/toolbar.md",
+      "destination": "solid/components/toolbar.md",
+      "sha256": "c9a60c39ff4f110b2f4878ee57f8269879e1496f0fdc440957acce6ebda3c3eb",
+      "bytes": 6098,
+      "route": "/solid/components/toolbar"
+    },
+    {
+      "source": "docs/generated/site/solid/components/tooltip.md",
+      "destination": "solid/components/tooltip.md",
+      "sha256": "2a93be7ff90a51694e082c4940aa9b03ed1de8cb8250838c0ea10b51a9042c4b",
+      "bytes": 13938,
+      "route": "/solid/components/tooltip"
+    },
+    {
+      "source": "docs/generated/site/solid/handbook.md",
+      "destination": "solid/handbook.md",
+      "sha256": "5152446abfa35e0145ebaa08efeec5758364f99b8f937a1317e2adfae2304f82",
+      "bytes": 4284,
+      "route": "/solid/handbook"
+    },
+    {
+      "source": "docs/generated/site/solid/handbook/animation.md",
+      "destination": "solid/handbook/animation.md",
+      "sha256": "e6f9358a2c23a4e00e8177f0224073aa6fbf8b823f32e44121f34552a8628986",
+      "bytes": 7670,
+      "route": "/solid/handbook/animation"
+    },
+    {
+      "source": "docs/generated/site/solid/handbook/composition.md",
+      "destination": "solid/handbook/composition.md",
+      "sha256": "0bc5af0c7ccc6b383bb1961b5e8ae836feebbb1e483c4054cbaa2ff6b86694ac",
+      "bytes": 2650,
+      "route": "/solid/handbook/composition"
+    },
+    {
+      "source": "docs/generated/site/solid/handbook/customization.md",
+      "destination": "solid/handbook/customization.md",
+      "sha256": "23604c39bd2e1445e968984dff4580f3d1708823dcf03e21e65043ca1979436b",
+      "bytes": 4075,
+      "route": "/solid/handbook/customization"
+    },
+    {
+      "source": "docs/generated/site/solid/handbook/forms.md",
+      "destination": "solid/handbook/forms.md",
+      "sha256": "43586575d0e3460b5614585503948fe43de95f44813f82bc863d9eaeba53c3c0",
+      "bytes": 21148,
+      "route": "/solid/handbook/forms"
+    },
+    {
+      "source": "docs/generated/site/solid/handbook/styling.md",
+      "destination": "solid/handbook/styling.md",
+      "sha256": "d429091ad56c1b3947d7948b975ab3ffa290b1c4f1da6f95efb115c9079f5be1",
+      "bytes": 5390,
+      "route": "/solid/handbook/styling"
+    },
+    {
+      "source": "docs/generated/site/solid/handbook/typescript.md",
+      "destination": "solid/handbook/typescript.md",
+      "sha256": "69fe82b87e7854279858c35b20630547405384ac56abe43832292b7fdf372355",
+      "bytes": 2899,
+      "route": "/solid/handbook/typescript"
+    },
+    {
+      "source": "docs/generated/site/solid/overview.md",
+      "destination": "solid/overview.md",
+      "sha256": "fa4c4ab100288bdc5f99693ba32a72a0a307bd1c4973ad8fa204c06248d3e069",
+      "bytes": 3082,
+      "route": "/solid/overview"
+    },
+    {
+      "source": "docs/generated/site/solid/overview/about.md",
+      "destination": "solid/overview/about.md",
+      "sha256": "ac43bbc28d3211368206a10216e7ab436ed572a7aeb35cbc262a31c5575f226f",
+      "bytes": 2627,
+      "route": "/solid/overview/about"
+    },
+    {
+      "source": "docs/generated/site/solid/overview/accessibility.md",
+      "destination": "solid/overview/accessibility.md",
+      "sha256": "9522b2a36e4db1aee7d1b7c8c5e1b3a22000149ceeb3b485cd82058cceaadae4",
+      "bytes": 2601,
+      "route": "/solid/overview/accessibility"
+    },
+    {
+      "source": "docs/generated/site/solid/overview/community.md",
+      "destination": "solid/overview/community.md",
+      "sha256": "8b40f3ce7fb220364ee3be637f41ca73a907dd905227c8b46bdac6d8cb091176",
+      "bytes": 2366,
+      "route": "/solid/overview/community"
+    },
+    {
+      "source": "docs/generated/site/solid/overview/quick-start.md",
+      "destination": "solid/overview/quick-start.md",
+      "sha256": "57eedfe5e36f3d809443c2e2696ef578b488c585023839f1e7b3dbb558fbb419",
+      "bytes": 3218,
+      "route": "/solid/overview/quick-start"
+    },
+    {
+      "source": "docs/generated/site/solid/utils.md",
+      "destination": "solid/utils.md",
+      "sha256": "df7c18ecd2fb845152178349ac265223b7fe47c66b7a2b2864e21c356de27b33",
+      "bytes": 2751,
+      "route": "/solid/utils"
+    },
+    {
+      "source": "docs/generated/site/solid/utils/csp-provider.md",
+      "destination": "solid/utils/csp-provider.md",
+      "sha256": "6eaf41799f433a814dbbe8c4bf19710689649501290ba8d88df9d37767cf71f3",
+      "bytes": 3955,
+      "route": "/solid/utils/csp-provider"
+    },
+    {
+      "source": "docs/generated/site/solid/utils/direction-provider.md",
+      "destination": "solid/utils/direction-provider.md",
+      "sha256": "29ace5f220437dec165df59d570bee199eb761c0d2a1820b4c409488198d0584",
+      "bytes": 1112,
+      "route": "/solid/utils/direction-provider"
+    },
+    {
+      "source": "docs/generated/site/solid/utils/merge-props.md",
+      "destination": "solid/utils/merge-props.md",
+      "sha256": "dd0a97b212a22c23f01e03e274f1c61245277e0c9029b6fcee507e03fc05f75d",
+      "bytes": 2968,
+      "route": "/solid/utils/merge-props"
+    },
+    {
+      "source": "docs/generated/site/solid/utils/use-render.md",
+      "destination": "solid/utils/use-render.md",
+      "sha256": "6e342ec1ddf757539bf2f1924263f731532f580038c31fc363fd96c84563d6ed",
+      "bytes": 5716,
+      "route": "/solid/utils/use-render"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases.md",
+      "destination": "upstream/react/overview/releases.md",
+      "sha256": "99d8d35c2451e07cde78584e3bd450d21b233bd49530d40d25e0bc5e7fe0893c",
+      "bytes": 759,
+      "route": "/upstream/react/overview/releases"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-alpha-4.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-alpha-4.md",
+      "sha256": "7df35a8678e4ce40bbc046a338c6a285dcdb728c56d58672c3472110c0f2c5e2",
+      "bytes": 77,
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-4"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-alpha-5.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-alpha-5.md",
+      "sha256": "7d6b5669511343a99e2c9d7373423db67e0b39d02be234e608c3adbf961cbfa4",
+      "bytes": 6072,
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-5"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-alpha-6.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-alpha-6.md",
+      "sha256": "8a36e7472d1c17b94beada81399bf6003a261d4b0123b723f6f291456db9976e",
+      "bytes": 3880,
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-6"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-alpha-7.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-alpha-7.md",
+      "sha256": "5581c1db6166917ee4c1a9db332c0d3ad2f5ce64f1441f65a08a7edae9f0da03",
+      "bytes": 5373,
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-7"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-alpha-8.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-alpha-8.md",
+      "sha256": "546e382a4988f9db9fcb6a5319bd2ca9cffed61229b842d7cb3f281b31aae0f7",
+      "bytes": 6090,
+      "route": "/upstream/react/overview/releases/v1-0-0-alpha-8"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-beta-0.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-beta-0.md",
+      "sha256": "770a42742452d7684906c6ce8f19c6498de14039aefd1709be439e762991771a",
+      "bytes": 10803,
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-beta-1.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-beta-1.md",
+      "sha256": "3739cb4f3171ec00e5e7bcbe5611ae6109682f023162c31f213f562e7699fb38",
+      "bytes": 7261,
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-1"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-beta-2.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-beta-2.md",
+      "sha256": "9ee0b6e017acdfaff8cdd8ae34965147270ca12dc0d26f1f569c198d792beba3",
+      "bytes": 6155,
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-2"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-beta-3.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-beta-3.md",
+      "sha256": "2235780500921dc619209465e1dcfb78401875d3bbf8dfeb83915833a97842d7",
+      "bytes": 7615,
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-3"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-beta-4.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-beta-4.md",
+      "sha256": "a59f457f5a4eb1a5f135488b553709fc396c928d73dc6ceb2c38cbde710597b5",
+      "bytes": 8403,
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-4"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-beta-5.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-beta-5.md",
+      "sha256": "250c7d1ea8cfdd55db3f9430147a6b71d7041e1cde36a7604651e1c777664005",
+      "bytes": 13820,
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-5"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-beta-6.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-beta-6.md",
+      "sha256": "8feca7ab08d685b47084d3874e361ca2f0412e465a015c17b4031e7f81df99c2",
+      "bytes": 465,
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-6"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-beta-7.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-beta-7.md",
+      "sha256": "4741132440ecc4f1b34f88f209a021170ae949cb217d77c6eb2104c842063e6b",
+      "bytes": 3241,
+      "route": "/upstream/react/overview/releases/v1-0-0-beta-7"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-rc-0.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-rc-0.md",
+      "sha256": "b743f1393162ff322117c22fee98264a56f912b0a715ac4748e616f1a3d4a5ac",
+      "bytes": 2786,
+      "route": "/upstream/react/overview/releases/v1-0-0-rc-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-rc-1.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-rc-1.md",
+      "sha256": "34d43ffaf47a291c32b395b3ffadfb42ab71ff974c065dc5c070744ea3292a76",
+      "bytes": 128,
+      "route": "/upstream/react/overview/releases/v1-0-0-rc-1"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0-rc-2.md",
+      "destination": "upstream/react/overview/releases/v1-0-0-rc-2.md",
+      "sha256": "412ea36dfb2c5fc5b781e19aca68742406dadabc2470d56b5ca8098603c8d72c",
+      "bytes": 128,
+      "route": "/upstream/react/overview/releases/v1-0-0-rc-2"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-0-0.md",
+      "destination": "upstream/react/overview/releases/v1-0-0.md",
+      "sha256": "cad1afd4bfe261e17037d8499f80471b6e8a3447ac67a937df9a793b322b3420",
+      "bytes": 2362,
+      "route": "/upstream/react/overview/releases/v1-0-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-1-0.md",
+      "destination": "upstream/react/overview/releases/v1-1-0.md",
+      "sha256": "704317252f0b750efa63070d26062d876f0a6c7d06ed9307dfd56828366f7524",
+      "bytes": 6884,
+      "route": "/upstream/react/overview/releases/v1-1-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-2-0.md",
+      "destination": "upstream/react/overview/releases/v1-2-0.md",
+      "sha256": "d402409c83043d6e99b0b21ddf96a78e02209cd938c40546d998ec55d2c55c3f",
+      "bytes": 9115,
+      "route": "/upstream/react/overview/releases/v1-2-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-3-0.md",
+      "destination": "upstream/react/overview/releases/v1-3-0.md",
+      "sha256": "26cc2ca95b35dcf2fb1a07184bf0e024fb2664fc8ea51f79f8a9e54394e7334e",
+      "bytes": 6940,
+      "route": "/upstream/react/overview/releases/v1-3-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-4-0.md",
+      "destination": "upstream/react/overview/releases/v1-4-0.md",
+      "sha256": "31ab967a43fc4b55ff26cfd5f82e21366a541fc0c17d7e0187c691d112ad593f",
+      "bytes": 6319,
+      "route": "/upstream/react/overview/releases/v1-4-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-4-1.md",
+      "destination": "upstream/react/overview/releases/v1-4-1.md",
+      "sha256": "720a54fc91f4703eed51d5a62486d321fce49387f07f2f9a0147290dd7120fdf",
+      "bytes": 598,
+      "route": "/upstream/react/overview/releases/v1-4-1"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-5-0.md",
+      "destination": "upstream/react/overview/releases/v1-5-0.md",
+      "sha256": "fac9e8426e16965bd30bff06bf6fca4219a6ec6922e97fa3e2a33a06a704e770",
+      "bytes": 5472,
+      "route": "/upstream/react/overview/releases/v1-5-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-6-0.md",
+      "destination": "upstream/react/overview/releases/v1-6-0.md",
+      "sha256": "a12d031e144eab2f3bdc30a8eebd734f5eedc292951850b90b80f524f7f1c71e",
+      "bytes": 9005,
+      "route": "/upstream/react/overview/releases/v1-6-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-7-0.md",
+      "destination": "upstream/react/overview/releases/v1-7-0.md",
+      "sha256": "c65cd91ed0ca3a54272a4dfa9e8d510b15cc4223149e19fa36a993039d6c7a97",
+      "bytes": 12771,
+      "route": "/upstream/react/overview/releases/v1-7-0"
+    },
+    {
+      "source": "docs/generated/site/upstream/react/overview/releases/v1-8-0.md",
+      "destination": "upstream/react/overview/releases/v1-8-0.md",
+      "sha256": "72918c9965e316532b7561594e6930df1bbd0680abae942e1deeda58f73ba4f8",
+      "bytes": 7529,
+      "route": "/upstream/react/overview/releases/v1-8-0"
+    }
+  ]
+}

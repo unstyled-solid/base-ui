@@ -1,0 +1,1347 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/handbook/composition/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "46c186e0c99e25e2ebf4c33d2213dd8fe3095df62cdf077f2252646e1365b02f",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/handbook/composition",
+  "route": "/solid/handbook/composition",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Composition",
+  "subtitle": "A guide to composing Base UI components with your own React components.",
+  "metadata": {
+    "keywords": [
+      "Base UI Composition",
+      "React Render Prop",
+      "Compose Headless Components",
+      "Custom Trigger Render",
+      "Nested Render Props",
+      "Composition Handbook",
+      "Component Composition",
+      "Render Props Pattern",
+      "Compound Components",
+      "Polymorphic Components",
+      "As Prop",
+      "Custom Elements",
+      "Wrapper Components"
+    ],
+    "description": "A guide to composing Base UI components with your own React components."
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Composition",
+      "properties": {
+        "id": "composition"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Composing custom React components",
+      "properties": {
+        "id": "composing-custom-react-components"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:9:1"
+    },
+    {
+      "depth": 2,
+      "text": "Composing multiple components",
+      "properties": {
+        "id": "composing-multiple-components"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:25:1"
+    },
+    {
+      "depth": 2,
+      "text": "Changing the default rendered element",
+      "properties": {
+        "id": "changing-the-default-rendered-element"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:51:1"
+    },
+    {
+      "depth": 2,
+      "text": "Render function",
+      "properties": {
+        "id": "render-function"
+      },
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:80:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A guide to composing Base UI components with your own React components."
+      },
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:4:1"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:3:11",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:9:4",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:11:17",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:16:1",
+      "detail": "Menu.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:16:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:16:1",
+      "detail": "MyButton",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:16:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:27:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Dialog.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Tooltip.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Tooltip.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Dialog.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Menu.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "MyButton",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Tooltip.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Dialog.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:30:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:58:1",
+      "detail": "Menu.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:58:1",
+      "detail": "Menu.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:58:1",
+      "detail": "Menu.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:58:1",
+      "detail": "Menu.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:58:1",
+      "detail": "Menu.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:58:1",
+      "detail": "Menu.Item",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:58:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:58:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:82:120",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:84:1",
+      "detail": "Switch.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:84:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:84:1",
+      "detail": "CheckedIcon",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:84:1",
+      "detail": "UncheckedIcon",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:84:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/handbook/composition/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Composition",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 14,
+                "offset": 13
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "offset": 13
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "composition"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A guide to composing Base UI components with your own React components.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 82,
+                    "offset": 96
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 15
+              },
+              "end": {
+                "line": 3,
+                "column": 93,
+                "offset": 107
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 15
+          },
+          "end": {
+            "line": 3,
+            "column": 93,
+            "offset": 107
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 116
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 134
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A guide to composing Base UI components with your own React components.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 137
+              },
+              "end": {
+                "line": 6,
+                "column": 84,
+                "offset": 218
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 108
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 221
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Composing custom React components",
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 4,
+                "offset": 226
+              },
+              "end": {
+                "line": 9,
+                "column": 37,
+                "offset": 259
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 223
+          },
+          "end": {
+            "line": 9,
+            "column": 37,
+            "offset": 259
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "composing-custom-react-components"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the ",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 1,
+                "offset": 261
+              },
+              "end": {
+                "line": 11,
+                "column": 9,
+                "offset": 269
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 9,
+                "offset": 269
+              },
+              "end": {
+                "line": 11,
+                "column": 17,
+                "offset": 277
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to compose a Base UI part with your own React components.",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 17,
+                "offset": 277
+              },
+              "end": {
+                "line": 11,
+                "column": 80,
+                "offset": 340
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 261
+          },
+          "end": {
+            "line": 11,
+            "column": 80,
+            "offset": 340
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For example, most triggers render a ",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 1,
+                "offset": 342
+              },
+              "end": {
+                "line": 13,
+                "column": 37,
+                "offset": 378
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<button>",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 37,
+                "offset": 378
+              },
+              "end": {
+                "line": 13,
+                "column": 47,
+                "offset": 388
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " by default.\nThe code snippet below shows how to use a custom button instead.",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 47,
+                "offset": 388
+              },
+              "end": {
+                "line": 14,
+                "column": 65,
+                "offset": 465
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 342
+          },
+          "end": {
+            "line": 14,
+            "column": 65,
+            "offset": 465
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"index.tsx\"",
+        "value": "// prettier-ignore\n<Menu.Trigger render={<MyButton size=\"md\" />}>\n  Open menu\n</Menu.Trigger>",
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 467
+          },
+          "end": {
+            "line": 21,
+            "column": 4,
+            "offset": 589
+          }
+        },
+        "data": {
+          "sourceValue": "// prettier-ignore\n<Menu.Trigger render={<MyButton size=\"md\" />}>\n  Open menu\n</Menu.Trigger>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The custom component must forward the ",
+            "position": {
+              "start": {
+                "line": 23,
+                "column": 1,
+                "offset": 591
+              },
+              "end": {
+                "line": 23,
+                "column": 39,
+                "offset": 629
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "ref",
+            "position": {
+              "start": {
+                "line": 23,
+                "column": 39,
+                "offset": 629
+              },
+              "end": {
+                "line": 23,
+                "column": 44,
+                "offset": 634
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and spread all the received props on its underlying DOM node.",
+            "position": {
+              "start": {
+                "line": 23,
+                "column": 44,
+                "offset": 634
+              },
+              "end": {
+                "line": 23,
+                "column": 107,
+                "offset": 697
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 23,
+            "column": 1,
+            "offset": 591
+          },
+          "end": {
+            "line": 23,
+            "column": 107,
+            "offset": 697
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Composing multiple components",
+            "position": {
+              "start": {
+                "line": 25,
+                "column": 4,
+                "offset": 702
+              },
+              "end": {
+                "line": 25,
+                "column": 33,
+                "offset": 731
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 25,
+            "column": 1,
+            "offset": 699
+          },
+          "end": {
+            "line": 25,
+            "column": 33,
+            "offset": 731
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "composing-multiple-components"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In situations where you need to compose multiple Base UI components with custom React components, ",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 1,
+                "offset": 733
+              },
+              "end": {
+                "line": 27,
+                "column": 99,
+                "offset": 831
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 99,
+                "offset": 831
+              },
+              "end": {
+                "line": 27,
+                "column": 107,
+                "offset": 839
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " props can be nested as deeply as necessary.\nWorking with Tooltip is a common example.",
+            "position": {
+              "start": {
+                "line": 27,
+                "column": 107,
+                "offset": 839
+              },
+              "end": {
+                "line": 28,
+                "column": 42,
+                "offset": 925
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 27,
+            "column": 1,
+            "offset": 733
+          },
+          "end": {
+            "line": 28,
+            "column": 42,
+            "offset": 925
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"index.tsx\"",
+        "value": "<Dialog.Root>\n  <Tooltip.Root>\n    <Tooltip.Trigger\n      render={\n        <Dialog.Trigger\n          // prettier-ignore\n          render={\n            <Menu.Trigger render={<MyButton size=\"md\" />}>\n              Open menu\n            </Menu.Trigger>\n          }\n        />\n      }\n    />\n    <Tooltip.Portal>...</Tooltip.Portal>\n  </Tooltip.Root>\n  <Dialog.Portal>...</Dialog.Portal>\n</Dialog.Root>",
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 927
+          },
+          "end": {
+            "line": 49,
+            "column": 4,
+            "offset": 1354
+          }
+        },
+        "data": {
+          "sourceValue": "<Dialog.Root>\n  <Tooltip.Root>\n    <Tooltip.Trigger\n      render={\n        <Dialog.Trigger\n          // prettier-ignore\n          render={\n            <Menu.Trigger render={<MyButton size=\"md\" />}>\n              Open menu\n            </Menu.Trigger>\n          }\n        />\n      }\n    />\n    <Tooltip.Portal>...</Tooltip.Portal>\n  </Tooltip.Root>\n  <Dialog.Portal>...</Dialog.Portal>\n</Dialog.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Changing the default rendered element",
+            "position": {
+              "start": {
+                "line": 51,
+                "column": 4,
+                "offset": 1359
+              },
+              "end": {
+                "line": 51,
+                "column": 41,
+                "offset": 1396
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 51,
+            "column": 1,
+            "offset": 1356
+          },
+          "end": {
+            "line": 51,
+            "column": 41,
+            "offset": 1396
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "changing-the-default-rendered-element"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can also use the ",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 1,
+                "offset": 1398
+              },
+              "end": {
+                "line": 53,
+                "column": 22,
+                "offset": 1419
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 22,
+                "offset": 1419
+              },
+              "end": {
+                "line": 53,
+                "column": 30,
+                "offset": 1427
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to override the rendered element of the component.",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 30,
+                "offset": 1427
+              },
+              "end": {
+                "line": 53,
+                "column": 86,
+                "offset": 1483
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 53,
+            "column": 1,
+            "offset": 1398
+          },
+          "end": {
+            "line": 53,
+            "column": 86,
+            "offset": 1483
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For example, ",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 1,
+                "offset": 1485
+              },
+              "end": {
+                "line": 55,
+                "column": 14,
+                "offset": 1498
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Menu.Item>",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 14,
+                "offset": 1498
+              },
+              "end": {
+                "line": 55,
+                "column": 27,
+                "offset": 1511
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " renders a ",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 27,
+                "offset": 1511
+              },
+              "end": {
+                "line": 55,
+                "column": 38,
+                "offset": 1522
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<div>",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 38,
+                "offset": 1522
+              },
+              "end": {
+                "line": 55,
+                "column": 45,
+                "offset": 1529
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " by default.\nThe code snippet below shows how to render it as an ",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 45,
+                "offset": 1529
+              },
+              "end": {
+                "line": 56,
+                "column": 53,
+                "offset": 1594
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<a>",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 53,
+                "offset": 1594
+              },
+              "end": {
+                "line": 56,
+                "column": 58,
+                "offset": 1599
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " element so that it works like a link.",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 58,
+                "offset": 1599
+              },
+              "end": {
+                "line": 56,
+                "column": 96,
+                "offset": 1637
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 55,
+            "column": 1,
+            "offset": 1485
+          },
+          "end": {
+            "line": 56,
+            "column": 96,
+            "offset": 1637
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"index.tsx\"",
+        "value": "import { Menu } from 'baseui-solid2/menu';\n\nexport default () => (\n  <Menu.Root>\n    <Menu.Trigger>Song</Menu.Trigger>\n    <Menu.Portal>\n      <Menu.Positioner>\n        <Menu.Popup>\n          {/* prettier-ignore */}\n          <Menu.Item render={<a href=\"base-ui.com\" />}>\n            Add to Library\n          </Menu.Item>\n        </Menu.Popup>\n      </Menu.Positioner>\n    </Menu.Portal>\n  </Menu.Root>\n);",
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 1639
+          },
+          "end": {
+            "line": 76,
+            "column": 4,
+            "offset": 2074
+          }
+        },
+        "data": {
+          "sourceValue": "import { Menu } from '@base-ui/react/menu';\n\nexport default () => (\n  <Menu.Root>\n    <Menu.Trigger>Song</Menu.Trigger>\n    <Menu.Portal>\n      <Menu.Positioner>\n        <Menu.Popup>\n          {/* prettier-ignore */}\n          <Menu.Item render={<a href=\"base-ui.com\" />}>\n            Add to Library\n          </Menu.Item>\n        </Menu.Popup>\n      </Menu.Positioner>\n    </Menu.Portal>\n  </Menu.Root>\n);",
+          "references": [
+            {
+              "value": "@base-ui/react/menu",
+              "start": 22,
+              "end": 41,
+              "kind": "import"
+            },
+            {
+              "value": "base-ui.com",
+              "start": 255,
+              "end": 266,
+              "kind": "asset"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/menu",
+              "start": 22,
+              "end": 41,
+              "kind": "import",
+              "replacement": "baseui-solid2/menu"
+            }
+          ]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Each Base UI component renders the most appropriate element by default, and in most cases, rendering a different element is recommended only on a case-by-case basis.",
+            "position": {
+              "start": {
+                "line": 78,
+                "column": 1,
+                "offset": 2076
+              },
+              "end": {
+                "line": 78,
+                "column": 166,
+                "offset": 2241
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 78,
+            "column": 1,
+            "offset": 2076
+          },
+          "end": {
+            "line": 78,
+            "column": 166,
+            "offset": 2241
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Render function",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 4,
+                "offset": 2246
+              },
+              "end": {
+                "line": 80,
+                "column": 19,
+                "offset": 2261
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 80,
+            "column": 1,
+            "offset": 2243
+          },
+          "end": {
+            "line": 80,
+            "column": 19,
+            "offset": 2261
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "render-function"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you are working in an extremely performance-sensitive application, you might want to pass a function to the ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 1,
+                "offset": 2263
+              },
+              "end": {
+                "line": 82,
+                "column": 112,
+                "offset": 2374
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 112,
+                "offset": 2374
+              },
+              "end": {
+                "line": 82,
+                "column": 120,
+                "offset": 2382
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop instead of a React element.",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 120,
+                "offset": 2382
+              },
+              "end": {
+                "line": 82,
+                "column": 153,
+                "offset": 2415
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 82,
+            "column": 1,
+            "offset": 2263
+          },
+          "end": {
+            "line": 82,
+            "column": 153,
+            "offset": 2415
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"switch.tsx\"",
+        "value": "<Switch.Thumb\n  render={(props, state) =>\n    // prettier-ignore\n    <span {...props}>\n      {state.checked ? <CheckedIcon /> : <UncheckedIcon />}\n    </span>\n  }\n/>",
+        "position": {
+          "start": {
+            "line": 84,
+            "column": 1,
+            "offset": 2417
+          },
+          "end": {
+            "line": 93,
+            "column": 4,
+            "offset": 2612
+          }
+        },
+        "data": {
+          "sourceValue": "<Switch.Thumb\n  render={(props, state) =>\n    // prettier-ignore\n    <span {...props}>\n      {state.checked ? <CheckedIcon /> : <UncheckedIcon />}\n    </span>\n  }\n/>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Using a function gives you complete control over spreading props and also allows you to render different content based on the component's state.",
+            "position": {
+              "start": {
+                "line": 95,
+                "column": 1,
+                "offset": 2614
+              },
+              "end": {
+                "line": 95,
+                "column": 145,
+                "offset": 2758
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 95,
+            "column": 1,
+            "offset": 2614
+          },
+          "end": {
+            "line": 95,
+            "column": 145,
+            "offset": 2758
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI Composition',\n    'React Render Prop',\n    'Compose Headless Components',\n    'Custom Trigger Render',\n    'Nested Render Props',\n    'Composition Handbook',\n    'Component Composition',\n    'Render Props Pattern',\n    'Compound Components',\n    'Polymorphic Components',\n    'As Prop',\n    'Custom Elements',\n    'Wrapper Components',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 97,
+            "column": 1,
+            "offset": 2760
+          },
+          "end": {
+            "line": 113,
+            "column": 3,
+            "offset": 3156
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 114,
+        "column": 1,
+        "offset": 3157
+      }
+    }
+  }
+}

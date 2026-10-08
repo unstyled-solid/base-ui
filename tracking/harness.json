@@ -1,0 +1,247 @@
+{
+  "ticket": "bsolid-harness",
+  "status": "implemented-awaiting-review",
+  "source": {
+    "repository": "https://github.com/mui/base-ui",
+    "checkout": "upstream/base-ui",
+    "sha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "readOnly": true,
+    "oldSolidPortUsed": false
+  },
+  "scope": "Runner infrastructure and source test adapters. Passing contract fixtures do not establish component or browser parity.",
+  "ownedFiles": [
+    "vitest.config.ts",
+    "test/harness/**",
+    "test/ssr-harness/**",
+    "test/contracts/**",
+    "packages/solid/test/**",
+    "scripts/test/**",
+    "tracking/harness.json"
+  ],
+  "api": {
+    "documentation": "test/harness/README.md",
+    "import": "#test-utils (Vitest alias) or relative packages/solid/test",
+    "render": "createRenderer().render(() => JSX, options?) returns Promise<queries/container/unmount/user>",
+    "liveProps": "createRenderer().renderProps(factory, initial, options?) additionally returns async setProps(partial); native signal + merge view, raw identities, original getter receivers, explicit undefined preserved",
+    "lifecycle": "Every helper mount disposed after test; DEV.hooks.onOwner + isDisposed check all observed owners, including detached roots. Split effects/onSettled cleanup tested on update, removal, replacement and unmount.",
+    "diagnostics": "Real OBSERVE warn/error diagnostics plus console.warn/error fail; output retained. Exact-count expectDiagnostic scopes a named test expectation. Module-evaluation and cleanup findings are included.",
+    "conformance": "describeConformance(factory, options) uses live props, callback composition, native ref arrays, class, styles, state and event contracts; no React act/cloneElement/rerender",
+    "popup": "popupConformanceTests(config) accepts live part props and preserves controlled/uncontrolled, callback, ARIA and animation assertions",
+    "timing": "firePointer requires finite positive timestamps; flushMicrotasks/advanceTimers/advanceFrame/waitForAnimations use distinct queues and real animation promises",
+    "annotations": "sourceCase({source,case,environment,adaptation?,issue?}, body); browserCase requires an issue and retains executable assertions while skipping only jsdom"
+  },
+  "integration": {
+    "manifestOwner": "bsolid-dist-contract",
+    "requests": {
+      "test:jsdom": "node scripts/test/run.mjs jsdom",
+      "test:ssr": "node scripts/test/run.mjs ssr",
+      "test:types": "node scripts/test/run.mjs types",
+      "test:contracts": "node scripts/test/run.mjs contracts"
+    },
+    "result": "All four root routes integrated by manifest owner. Requested jest-dom 6.9.1 installed/locked after a temporary 7.0.1 integration; final installed metadata confirms 6.9.1. No further dependency request.",
+    "rootFilesEditedByHarness": false,
+    "typeProject": "test/contracts/tsconfig.json uses @testing-library/jest-dom/vitest, strict inherited options and skipLibCheck=false"
+  },
+  "sourceMappings": [
+    {
+      "source": "packages/react/test/createRenderer.ts",
+      "target": "packages/solid/test/createRenderer.ts",
+      "cases": ["owned initial render", "partial prop update", "native interactions", "unmount/automatic cleanup"],
+      "adaptation": "React act/rerender/cloneElement replaced with owned JSX factories and shallow native reactive prop hosts; no host recreation",
+      "tests": ["test/harness/Harness.test.tsx", "test/contracts/negative/reactivity.probe.tsx", "test/contracts/negative/identity.probe.tsx", "test/contracts/negative/cleanup.probe.tsx", "test/contracts/negative/owner.probe.ts"]
+    },
+    {
+      "source": "packages/react/test/describeConformance.tsx",
+      "target": "packages/solid/test/describeConformance.tsx",
+      "adaptation": "Typed factory plus initialProps/refInstanceof/state scenario replaces React element and getOptions. Required core assertions have no skip/only bypass.",
+      "tests": ["test/harness/Harness.test.tsx#Base UI component API (Solid 2)"]
+    },
+    {
+      "source": "packages/react/test/conformanceTests/propForwarding.tsx",
+      "cases": [
+        { "line": 23, "sourceCase": "custom props to default", "targetCase": "forwards custom props and live style (default host)" },
+        { "line": 38, "sourceCase": "custom props to function", "targetCase": "forwards custom props and live style (render callback)" },
+        { "line": 61, "sourceCase": "custom props to JSX element", "targetCase": "forwards custom props and live style (render callback)", "adaptation": "JSX cloning removed from public API; same custom-root attribute assertions via owned render callback" },
+        { "line": 82, "sourceCase": "component style", "targetCase": "forwards custom props and live style (default host)" },
+        { "line": 97, "sourceCase": "render function style", "targetCase": "render callback can override style" },
+        { "line": 114, "sourceCase": "render JSX style (duplicate source title)", "targetCase": "render callback can override style", "adaptation": "Same style outcome through Solid callback composition" }
+      ],
+      "target": "packages/solid/test/describeConformance.tsx",
+      "result": "pass via contract fixture; real-family replay required"
+    },
+    {
+      "source": "packages/react/test/conformanceTests/refForwarding.tsx",
+      "cases": ["attaches ref of expected instance"],
+      "target": "packages/solid/test/describeConformance.tsx#forwards native ref and disconnects its node on disposal",
+      "adaptation": "Native callback ref; ignored callback return verified independently, resource cleanup belongs to setup",
+      "result": "pass"
+    },
+    {
+      "source": "packages/react/test/conformanceTests/renderProp.tsx",
+      "cases": [
+        { "line": 41, "sourceCase": "custom root function", "targetCase": "custom component receives props and both native refs" },
+        { "line": 61, "sourceCase": "custom root JSX + attribute", "targetCase": "custom component receives props and both native refs", "adaptation": "Callback rather than cloneable JSX" },
+        { "line": 78, "sourceCase": "custom root JSX wrapper", "targetCase": "custom component receives props and both native refs", "adaptation": "Callback and wrappingAllowed policy" },
+        { "line": 93, "sourceCase": "custom component ref", "targetCase": "custom component receives props and both native refs" },
+        { "line": 115, "sourceCase": "both refs", "targetCase": "custom component receives props and both native refs", "adaptation": "Native callback array at initial attachment, no React current object" },
+        { "line": 146, "sourceCase": "merge literal classes", "targetCase": "composes string class with a render callback class" },
+        { "line": 163, "sourceCase": "merge resolved classes", "targetCase": "composes function class with a render callback class" }
+      ],
+      "target": "packages/solid/test/describeConformance.tsx",
+      "result": "pass; live updates and original-node assertions added"
+    },
+    {
+      "source": "packages/react/test/conformanceTests/className.tsx",
+      "cases": ["className string"],
+      "target": "packages/solid/test/describeConformance.tsx#applies class strings, arrays and object values on the same host",
+      "adaptation": "Solid class spelling/full JSX.ClassValue; state callbacks separately exercised",
+      "result": "pass"
+    },
+    {
+      "source": "packages/react/test/popupConformanceTests.tsx",
+      "target": "packages/solid/test/popupConformanceTests.tsx",
+      "cases": [
+        { "line": 36, "case": "controlled open", "result": "pass" },
+        { "line": 51, "case": "uncontrolled click open", "result": "pass" },
+        { "line": 72, "case": "popup role", "result": "pass" },
+        { "line": 81, "case": "aria-controls", "result": "pass" },
+        { "line": 88, "case": "aria-expanded", "result": "pass" },
+        { "line": 109, "case": "aria-haspopup", "result": "pass" },
+        { "line": 116, "case": "custom id", "result": "pass" },
+        { "line": 135, "case": "remove with no exit animation", "result": "browser-deferred", "issue": "bsolid-harness-browser-replay" },
+        { "line": 156, "case": "remove when animation finishes", "sourceStatus": "unconditionally skipped upstream", "result": "executable browser body retained", "issue": "bsolid-harness-browser-replay" }
+      ],
+      "parameters": "Adapters retain click/hover, role/haspopup, combobox and alwaysMounted boolean/only-after-open policies. Initial fixture is click/dialog/unmounted; real family permutations belong to final replay.",
+      "adaptation": "Nested live getters replace React rerender; class spelling and exact native callbacks; animation disable flag restored per animation case"
+    },
+    {
+      "source": "packages/react/test/pointer.ts",
+      "sourceTests": "packages/react/test/pointer.test.tsx",
+      "target": "packages/solid/test/pointer.ts",
+      "tests": ["test/harness/Pointer.test.tsx", "test/harness/Harness.test.tsx#captures native currentTarget and deterministic pointer timestamps"],
+      "cases": ["down/move/up timestamps [1000,1050,1100]", "pointerId/type/clientX/clientY/buttons preserved", "nonpositive timestamp rejected before dispatch"],
+      "adaptation": "Native handlers replace synthetic events; positive finite guard also rejects Infinity/NaN",
+      "result": "all source cases pass"
+    },
+    {
+      "source": "packages/react/test/useTestInteractions.ts",
+      "sourceTests": "packages/react/test/useTestInteractions.test.tsx",
+      "target": "packages/solid/test/createTestInteractions.ts",
+      "tests": ["test/harness/Interactions.test.ts", "test/harness/Harness.test.tsx#keeps interaction prop getters stable across a live update with setup running once"],
+      "cases": ["merge handlers", "undefined user callbacks", "non-event on prefix", "returned values", "floating defaults", "item active/selected filtering", "getter stability"],
+      "adaptation": "React memo/callback lifecycle replaced by setup-once getter API accepting a live accessor; current callbacks evaluated on invocation. React effect-run stability case becomes stable setup API and live replacement contract.",
+      "result": "pass"
+    },
+    {
+      "source": "packages/react/test/wait.ts",
+      "additionalSources": ["packages/react/test/advanceReactClock.ts", "packages/react/test/waitForPositioned.ts"],
+      "target": "packages/solid/test/wait.ts",
+      "tests": ["test/harness/Harness.test.tsx#distinguishes microtasks, timeouts and RAF"],
+      "adaptation": "Vitest native fake clock, named Solid synchronous observation boundary; real animation promises and visibility checks preserved",
+      "result": "microtask/timer/RAF pass; real layout/animation qualification linked"
+    },
+    {
+      "source": "packages/react/test/mergeRefs.ts",
+      "target": "packages/solid/test/index.ts#mergeRefs",
+      "adaptation": "Native callbacks/arrays only; no mutable React ref.current object or return cleanup",
+      "result": "native ref composition/disposal exercised by conformance and ownership fixtures"
+    },
+    {
+      "source": "packages/react/test/resetBrowserPointer.ts",
+      "target": "packages/solid/test/resetBrowserPointer.ts",
+      "adaptation": "Requires final runner's actual unhover driver in browser; jsdom returns immediately. No synthetic pointer reset pretending browser evidence.",
+      "result": "browser-deferred",
+      "issue": "bsolid-harness-browser-replay"
+    },
+    {
+      "source": "packages/utils/src/testUtils.ts",
+      "target": "packages/solid/test/index.ts",
+      "cases": ["isJSDOM", "IfEquals", "expectType"],
+      "tests": ["test/contracts/types/consumer.tsx"],
+      "result": "pass"
+    },
+    {
+      "source": "packages/react/test/index.ts",
+      "target": "packages/solid/test/index.ts",
+      "adaptation": "advanceReactClock -> advanceTimers; useTestInteractions -> createTestInteractions; renderer/conformance native APIs. Temporal describeGregorianAdapter is a domain semantic suite, assigned to existing bsolid-temporal rather than copied into framework infrastructure.",
+      "domainOwner": "bsolid-temporal"
+    },
+    {
+      "source": "packages/react/src/separator/Separator.test.tsx",
+      "cases": ["generated conformance", "div with separator role", "orientation[horizontal]", "orientation[vertical]"],
+      "result": "read-only reference for family command/conformance usage; no production Separator implemented by harness",
+      "adaptation": "Family author uses factory/live-prop conformance and retains both orientation cases in family-local tests"
+    }
+  ],
+  "nativeAdditionalContracts": [
+    "staged updates and pending updater accumulation",
+    "split effect cleanup on dependency changes and root disposal",
+    "live class/style/state/current callbacks with original host identity",
+    "raw DOM identity, original getter receivers and explicit undefined",
+    "ownerless refs with ignored return values, setup-owned disposal/removal/replacement",
+    "automatic cleanup across test cases",
+    "native event currentTarget, preventDefault and dispatch result",
+    "per-keystroke native onInput",
+    "real structured strict-read diagnostic expectation and unexpected-diagnostic rejection",
+    "independent production SSR artifact plus actual generated hydration bootstrap",
+    "hydration node/ID/label preservation, two-root state isolation and disposal",
+    "server escaped output, overlapping streams and deterministic per-namespace IDs"
+  ],
+  "negativeProbes": [
+    { "fixture": "test/contracts/negative/reactivity.probe.tsx", "expected": "exit 1 with HARNESS_REACTIVITY_PROBE", "result": "pass" },
+    { "fixture": "test/contracts/negative/cleanup.probe.tsx", "expected": "exit 1 with HARNESS_CLEANUP_FAILURE from real onSettled cleanup", "result": "pass" },
+    { "fixture": "test/contracts/negative/owner.probe.ts", "expected": "exit 1 with HARNESS_OWNER_LEAK from real detached root", "result": "pass" },
+    { "fixture": "test/contracts/negative/diagnostic.probe.tsx", "expected": "exit 1 with HARNESS_DIAGNOSTICS from real STRICT_READ_UNTRACKED", "result": "pass" },
+    { "fixture": "test/contracts/negative/conditions.probe.tsx", "expected": "exit 1 with HARNESS_SERVER_CONDITIONS for server assertion under browser resolution", "result": "pass" },
+    { "fixture": "test/contracts/negative/identity.probe.tsx", "expected": "exit 1 with HARNESS_IDENTITY_PROBE for keyed remount", "result": "pass" },
+    { "fixture": "test/contracts/negative/event-order.probe.tsx", "expected": "exit 1 with HARNESS_EVENT_ORDER_PROBE for internal-before-external order", "result": "pass" },
+    { "fixture": "test/contracts/negative/type-error.tsx", "expected": "tsc exit 2 with TS2322 at exact fixture", "result": "pass" },
+    { "fixture": "ThisFilterMustNeverMatch", "expected": "exit 1, No test files found", "result": "pass" }
+  ],
+  "checks": [
+    { "command": "rtk pnpm test:contracts --no-watch", "result": "pass", "client": { "files": 5, "passed": 39, "browserDeferred": 2 }, "server": { "files": 2, "passed": 4 }, "includes": ["strict type fixtures", "single RC13 runtime/core resolution", "native+Babel DOM/SSR compiler smoke", "isolated production SSR artifact", "7 runtime negative probes", "negative TS2322 fixture", "unmatched filter rejection"] },
+    { "command": "rtk proxy node scripts/test/run.mjs jsdom Hydration --no-watch", "result": "pass", "tests": 1 },
+    { "command": "rtk pnpm test:jsdom Harness --no-watch", "result": "pass", "files": 4, "passed": 37, "browserDeferred": 2 },
+    { "command": "rtk proxy node scripts/test/run.mjs types --no-watch", "result": "pass" },
+    { "command": "rtk proxy node scripts/test/run.mjs ssr --no-watch", "result": "pass", "tests": 4 },
+    { "command": "rtk proxy git diff --check", "result": "pass" },
+    { "command": "rtk proxy git -C upstream/base-ui status --short", "result": "clean" },
+    { "command": "rtk proxy git -C upstream/base-ui rev-parse HEAD", "result": "19511bb171f3b360b006c94cf6d07e53cb446505" },
+    { "command": "rtk proxy bd dep cycles", "result": "no dependency cycles" }
+  ],
+  "diagnosis": {
+    "unresolvedInfrastructureBlockers": [],
+    "corrected": [
+      "jest-dom installation coordinated through manifest owner; Vitest declaration entry chosen rather than Jest globals",
+      "native merge replaced a hand-written host proxy whose symbol probes emitted genuine strict-read diagnostics",
+      "server output uses RC13 _hk and escapes less-than in text; assertions reflect actual safe serialization",
+      "hydrate requires real generateHydrationScript bootstrap; emitted by independent server process and executed before hydration"
+    ],
+    "assertionsOrDiagnosticsDisabled": false
+  },
+  "followups": [
+    {
+      "id": "bsolid-harness-browser-replay",
+      "labels": ["deferred-validation", "browser", "harness"],
+      "blocks": ["bsolid-browser", "bsolid-hydration"],
+      "scope": "Real-family conformance/permutation replay, CSS animations, native pointer reset, production-client browser hydration, focus/selection, async/streaming boundary replay and all three browser engines",
+      "repro": "rtk pnpm test:jsdom Harness --no-watch; rtk pnpm test:jsdom Hydration --no-watch",
+      "evidence": "Two executable popup animation bodies are jsdom-skipped; hydration currently uses independently compiled production server + development jsdom client"
+    }
+  ],
+  "references": [
+    "solidjs@2 indexed: guides/testing",
+    "solidjs@2 indexed: migration/from-solid-1",
+    "solidjs@2 indexed: reference/solid-js/lifecycle-actions/on-settled",
+    "solidjs@2 indexed: guides/debugging-reactivity",
+    "solidjs@2 indexed: reference/solid-js/advanced/diagnostics-dev-hooks/observe",
+    "solidjs@2 indexed: reference/solid-js/advanced/diagnostics-dev-hooks/dev",
+    "installed solid-js/types/index.d.ts and client/core.d.ts",
+    "installed @solidjs/signals owner/store-utils/signals declarations",
+    "installed @solidjs/web client/server/index declarations",
+    "installed @solidjs/testing-library declarations and implementation",
+    "installed @solidjs/vite-plugin option declarations"
+  ],
+  "commitsPushesPublications": [],
+  "reviewState": "Leave main ticket open/in_progress for orchestrator acceptance; commands available now to unblock foundation review."
+}

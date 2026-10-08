@@ -1,0 +1,4366 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "3a4823dce55799046d58fe7f990b8f81621e9ac1e4e5281323146e06c04e0098",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/overview/releases/v1-0-0-rc-0",
+  "route": "/upstream/react/overview/releases/v1-0-0-rc-0",
+  "disposition": "upstream-react-history",
+  "publishable": false,
+  "title": "v1.0.0-rc.0",
+  "subtitle": "Dec 4, 2025",
+  "metadata": {
+    "description": "v1.0.0-rc.0 release notes. Dec 4, 2025."
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "v1.0.0-rc.0",
+      "properties": {
+        "id": "v1-0-0-rc-0"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "General changes",
+      "properties": {
+        "id": "general-changes"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:6:1"
+    },
+    {
+      "depth": 2,
+      "text": "Autocomplete",
+      "properties": {
+        "id": "autocomplete"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:10:1"
+    },
+    {
+      "depth": 2,
+      "text": "Checkbox",
+      "properties": {
+        "id": "checkbox"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:14:1"
+    },
+    {
+      "depth": 2,
+      "text": "Collapsible",
+      "properties": {
+        "id": "collapsible"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:20:1"
+    },
+    {
+      "depth": 2,
+      "text": "Combobox",
+      "properties": {
+        "id": "combobox"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:24:1"
+    },
+    {
+      "depth": 2,
+      "text": "Dialog",
+      "properties": {
+        "id": "dialog"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:28:1"
+    },
+    {
+      "depth": 2,
+      "text": "Menu",
+      "properties": {
+        "id": "menu"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:33:1"
+    },
+    {
+      "depth": 2,
+      "text": "Number Field",
+      "properties": {
+        "id": "number-field"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:38:1"
+    },
+    {
+      "depth": 2,
+      "text": "Popover",
+      "properties": {
+        "id": "popover"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:46:1"
+    },
+    {
+      "depth": 2,
+      "text": "Select",
+      "properties": {
+        "id": "select"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:52:1"
+    },
+    {
+      "depth": 2,
+      "text": "Switch",
+      "properties": {
+        "id": "switch"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:56:1"
+    },
+    {
+      "depth": 2,
+      "text": "Tabs",
+      "properties": {
+        "id": "tabs"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:62:1"
+    },
+    {
+      "depth": 2,
+      "text": "Toast",
+      "properties": {
+        "id": "toast"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:68:1"
+    },
+    {
+      "depth": 2,
+      "text": "Tooltip",
+      "properties": {
+        "id": "tooltip"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:73:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "https://github.com/mui/base-ui/pull/3408",
+      "target": "https://github.com/mui/base-ui/pull/3408",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:8:42"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3399",
+      "target": "https://github.com/mui/base-ui/pull/3399",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:12:35"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3406",
+      "target": "https://github.com/mui/base-ui/pull/3406",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:18:4"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3407",
+      "target": "https://github.com/mui/base-ui/pull/3407",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:22:27"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3377",
+      "target": "https://github.com/mui/base-ui/pull/3377",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:26:58"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3380",
+      "target": "https://github.com/mui/base-ui/pull/3380",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:30:50"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3379",
+      "target": "https://github.com/mui/base-ui/pull/3379",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:31:51"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3377",
+      "target": "https://github.com/mui/base-ui/pull/3377",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:35:36"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3409",
+      "target": "https://github.com/mui/base-ui/pull/3409",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:36:51"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3374",
+      "target": "https://github.com/mui/base-ui/pull/3374",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:40:56"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3376",
+      "target": "https://github.com/mui/base-ui/pull/3376",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:41:37"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3375",
+      "target": "https://github.com/mui/base-ui/pull/3375",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:42:33"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3361",
+      "target": "https://github.com/mui/base-ui/pull/3361",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:43:42"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3378",
+      "target": "https://github.com/mui/base-ui/pull/3378",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:44:59"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3380",
+      "target": "https://github.com/mui/base-ui/pull/3380",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:48:50"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3383",
+      "target": "https://github.com/mui/base-ui/pull/3383",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:49:32"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3364",
+      "target": "https://github.com/mui/base-ui/pull/3364",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:50:39"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3377",
+      "target": "https://github.com/mui/base-ui/pull/3377",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:54:36"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3406",
+      "target": "https://github.com/mui/base-ui/pull/3406",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:60:4"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3372",
+      "target": "https://github.com/mui/base-ui/pull/3372",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:66:4"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3359",
+      "target": "https://github.com/mui/base-ui/pull/3359",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:70:57"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3392",
+      "target": "https://github.com/mui/base-ui/pull/3392",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:71:47"
+    },
+    {
+      "source": "https://github.com/mui/base-ui/pull/3385",
+      "target": "https://github.com/mui/base-ui/pull/3385",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:75:43"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "v1.0.0-rc.0 release notes. Dec 4, 2025."
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:4:1"
+    },
+    {
+      "name": "br",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:16:72"
+    },
+    {
+      "name": "br",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:58:66"
+    },
+    {
+      "name": "br",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:64:57"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "react-release-history",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-0/page.mdx:1:1",
+      "detail": "Keep historical code, dates, package names and claims scoped to React.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "v1.0.0-rc.0",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 14,
+                "offset": 13
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "offset": 13
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "v1-0-0-rc-0"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Dec 4, 2025",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 22,
+                    "offset": 36
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 15
+              },
+              "end": {
+                "line": 3,
+                "column": 33,
+                "offset": 47
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 15
+          },
+          "end": {
+            "line": 3,
+            "column": 33,
+            "offset": 47
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 7,
+                "offset": 54
+              },
+              "end": {
+                "line": 4,
+                "column": 25,
+                "offset": 72
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "v1.0.0-rc.0 release notes. Dec 4, 2025.",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 26,
+                "offset": 73
+              },
+              "end": {
+                "line": 4,
+                "column": 75,
+                "offset": 122
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 48
+          },
+          "end": {
+            "line": 4,
+            "column": 78,
+            "offset": 125
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "General changes",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 4,
+                "offset": 130
+              },
+              "end": {
+                "line": 6,
+                "column": 19,
+                "offset": 145
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 127
+          },
+          "end": {
+            "line": 6,
+            "column": 19,
+            "offset": 145
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "general-changes"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix missing ",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 3,
+                        "offset": 149
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 15,
+                        "offset": 161
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "'use client'",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 15,
+                        "offset": 161
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 29,
+                        "offset": 175
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " directives (",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 29,
+                        "offset": 175
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 42,
+                        "offset": 188
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3408",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3408",
+                        "position": {
+                          "start": {
+                            "line": 8,
+                            "column": 43,
+                            "offset": 189
+                          },
+                          "end": {
+                            "line": 8,
+                            "column": 48,
+                            "offset": 194
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 42,
+                        "offset": 188
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 91,
+                        "offset": 237
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 91,
+                        "offset": 237
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 92,
+                        "offset": 238
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 8,
+                    "column": 3,
+                    "offset": 149
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 92,
+                    "offset": 238
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 1,
+                "offset": 147
+              },
+              "end": {
+                "line": 8,
+                "column": 92,
+                "offset": 238
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 8,
+            "column": 1,
+            "offset": 147
+          },
+          "end": {
+            "line": 8,
+            "column": 92,
+            "offset": 238
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Autocomplete",
+            "position": {
+              "start": {
+                "line": 10,
+                "column": 4,
+                "offset": 243
+              },
+              "end": {
+                "line": 10,
+                "column": 16,
+                "offset": 255
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 240
+          },
+          "end": {
+            "line": 10,
+            "column": 16,
+            "offset": 255
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "autocomplete"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix ",
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 3,
+                        "offset": 259
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 7,
+                        "offset": 263
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "keepHighlight",
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 7,
+                        "offset": 263
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 22,
+                        "offset": 278
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " focus sync (",
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 22,
+                        "offset": 278
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 35,
+                        "offset": 291
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3399",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3399",
+                        "position": {
+                          "start": {
+                            "line": 12,
+                            "column": 36,
+                            "offset": 292
+                          },
+                          "end": {
+                            "line": 12,
+                            "column": 41,
+                            "offset": 297
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 35,
+                        "offset": 291
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 84,
+                        "offset": 340
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 84,
+                        "offset": 340
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 85,
+                        "offset": 341
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 12,
+                    "column": 3,
+                    "offset": 259
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 85,
+                    "offset": 341
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 1,
+                "offset": 257
+              },
+              "end": {
+                "line": 12,
+                "column": 85,
+                "offset": 341
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 257
+          },
+          "end": {
+            "line": 12,
+            "column": 85,
+            "offset": 341
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Checkbox",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 4,
+                "offset": 346
+              },
+              "end": {
+                "line": 14,
+                "column": 12,
+                "offset": 354
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 343
+          },
+          "end": {
+            "line": 14,
+            "column": 12,
+            "offset": 354
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "checkbox"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Breaking change:",
+                        "position": {
+                          "start": {
+                            "line": 16,
+                            "column": 5,
+                            "offset": 360
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 21,
+                            "offset": 376
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 3,
+                        "offset": 358
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 23,
+                        "offset": 378
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " Match native unchecked state in form submission.",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 23,
+                        "offset": 378
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 72,
+                        "offset": 427
+                      }
+                    }
+                  },
+                  {
+                    "type": "mdxJsxTextElement",
+                    "name": "br",
+                    "attributes": [],
+                    "children": [],
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 72,
+                        "offset": 427
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 78,
+                        "offset": 433
+                      }
+                    },
+                    "data": {
+                      "handler": "html"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "\nThe Checkbox will not submit the ",
+                    "position": {
+                      "start": {
+                        "line": 16,
+                        "column": 78,
+                        "offset": 433
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 36,
+                        "offset": 469
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "\"off\"",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 36,
+                        "offset": 469
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 43,
+                        "offset": 476
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " value with a form when unchecked anymore, unless the new ",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 43,
+                        "offset": 476
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 101,
+                        "offset": 534
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "uncheckedValue",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 101,
+                        "offset": 534
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 117,
+                        "offset": 550
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop is set.\n(",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 117,
+                        "offset": 550
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 4,
+                        "offset": 567
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3406",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3406",
+                        "position": {
+                          "start": {
+                            "line": 18,
+                            "column": 5,
+                            "offset": 568
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 10,
+                            "offset": 573
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 4,
+                        "offset": 567
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 53,
+                        "offset": 616
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 53,
+                        "offset": 616
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 54,
+                        "offset": 617
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 16,
+                    "column": 3,
+                    "offset": 358
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 54,
+                    "offset": 617
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 356
+              },
+              "end": {
+                "line": 18,
+                "column": 54,
+                "offset": 617
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 356
+          },
+          "end": {
+            "line": 18,
+            "column": 54,
+            "offset": 617
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Collapsible",
+            "position": {
+              "start": {
+                "line": 20,
+                "column": 4,
+                "offset": 622
+              },
+              "end": {
+                "line": 20,
+                "column": 15,
+                "offset": 633
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 20,
+            "column": 1,
+            "offset": 619
+          },
+          "end": {
+            "line": 20,
+            "column": 15,
+            "offset": 633
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "collapsible"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Remove ",
+                    "position": {
+                      "start": {
+                        "line": 22,
+                        "column": 3,
+                        "offset": 637
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 10,
+                        "offset": 644
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "render={null}",
+                    "position": {
+                      "start": {
+                        "line": 22,
+                        "column": 10,
+                        "offset": 644
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 25,
+                        "offset": 659
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " (",
+                    "position": {
+                      "start": {
+                        "line": 22,
+                        "column": 25,
+                        "offset": 659
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 27,
+                        "offset": 661
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3407",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3407",
+                        "position": {
+                          "start": {
+                            "line": 22,
+                            "column": 28,
+                            "offset": 662
+                          },
+                          "end": {
+                            "line": 22,
+                            "column": 33,
+                            "offset": 667
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 22,
+                        "column": 27,
+                        "offset": 661
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 76,
+                        "offset": 710
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 22,
+                        "column": 76,
+                        "offset": 710
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 77,
+                        "offset": 711
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 22,
+                    "column": 3,
+                    "offset": 637
+                  },
+                  "end": {
+                    "line": 22,
+                    "column": 77,
+                    "offset": 711
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 1,
+                "offset": 635
+              },
+              "end": {
+                "line": 22,
+                "column": 77,
+                "offset": 711
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 22,
+            "column": 1,
+            "offset": 635
+          },
+          "end": {
+            "line": 22,
+            "column": 77,
+            "offset": 711
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Combobox",
+            "position": {
+              "start": {
+                "line": 24,
+                "column": 4,
+                "offset": 716
+              },
+              "end": {
+                "line": 24,
+                "column": 12,
+                "offset": 724
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 24,
+            "column": 1,
+            "offset": 713
+          },
+          "end": {
+            "line": 24,
+            "column": 12,
+            "offset": 724
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "combobox"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Breaking change:",
+                        "position": {
+                          "start": {
+                            "line": 26,
+                            "column": 5,
+                            "offset": 730
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 21,
+                            "offset": 746
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 26,
+                        "column": 3,
+                        "offset": 728
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 23,
+                        "offset": 748
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " Removed the ",
+                    "position": {
+                      "start": {
+                        "line": 26,
+                        "column": 23,
+                        "offset": 748
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 36,
+                        "offset": 761
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "keepHighlight",
+                    "position": {
+                      "start": {
+                        "line": 26,
+                        "column": 36,
+                        "offset": 761
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 51,
+                        "offset": 776
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop (",
+                    "position": {
+                      "start": {
+                        "line": 26,
+                        "column": 51,
+                        "offset": 776
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 58,
+                        "offset": 783
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3377",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3377",
+                        "position": {
+                          "start": {
+                            "line": 26,
+                            "column": 59,
+                            "offset": 784
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 64,
+                            "offset": 789
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 26,
+                        "column": 58,
+                        "offset": 783
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 107,
+                        "offset": 832
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 26,
+                        "column": 107,
+                        "offset": 832
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 108,
+                        "offset": 833
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 26,
+                    "column": 3,
+                    "offset": 728
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 108,
+                    "offset": 833
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 26,
+                "column": 1,
+                "offset": 726
+              },
+              "end": {
+                "line": 26,
+                "column": 108,
+                "offset": 833
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 26,
+            "column": 1,
+            "offset": 726
+          },
+          "end": {
+            "line": 26,
+            "column": 108,
+            "offset": 833
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Dialog",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 4,
+                "offset": 838
+              },
+              "end": {
+                "line": 28,
+                "column": 10,
+                "offset": 844
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 28,
+            "column": 1,
+            "offset": 835
+          },
+          "end": {
+            "line": 28,
+            "column": 10,
+            "offset": 844
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "dialog"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Close when pressing focusable element outside (",
+                    "position": {
+                      "start": {
+                        "line": 30,
+                        "column": 3,
+                        "offset": 848
+                      },
+                      "end": {
+                        "line": 30,
+                        "column": 50,
+                        "offset": 895
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3380",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3380",
+                        "position": {
+                          "start": {
+                            "line": 30,
+                            "column": 51,
+                            "offset": 896
+                          },
+                          "end": {
+                            "line": 30,
+                            "column": 56,
+                            "offset": 901
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 30,
+                        "column": 50,
+                        "offset": 895
+                      },
+                      "end": {
+                        "line": 30,
+                        "column": 99,
+                        "offset": 944
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 30,
+                        "column": 99,
+                        "offset": 944
+                      },
+                      "end": {
+                        "line": 30,
+                        "column": 100,
+                        "offset": 945
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 30,
+                    "column": 3,
+                    "offset": 848
+                  },
+                  "end": {
+                    "line": 30,
+                    "column": 100,
+                    "offset": 945
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 30,
+                "column": 1,
+                "offset": 846
+              },
+              "end": {
+                "line": 30,
+                "column": 100,
+                "offset": 945
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix closing after pointer lock exit in Firefox (",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 3,
+                        "offset": 948
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 51,
+                        "offset": 996
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3379",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3379",
+                        "position": {
+                          "start": {
+                            "line": 31,
+                            "column": 52,
+                            "offset": 997
+                          },
+                          "end": {
+                            "line": 31,
+                            "column": 57,
+                            "offset": 1002
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 51,
+                        "offset": 996
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 100,
+                        "offset": 1045
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 100,
+                        "offset": 1045
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 101,
+                        "offset": 1046
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 31,
+                    "column": 3,
+                    "offset": 948
+                  },
+                  "end": {
+                    "line": 31,
+                    "column": 101,
+                    "offset": 1046
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 1,
+                "offset": 946
+              },
+              "end": {
+                "line": 31,
+                "column": 101,
+                "offset": 1046
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 846
+          },
+          "end": {
+            "line": 31,
+            "column": 101,
+            "offset": 1046
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Menu",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 4,
+                "offset": 1051
+              },
+              "end": {
+                "line": 33,
+                "column": 8,
+                "offset": 1055
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 1048
+          },
+          "end": {
+            "line": 33,
+            "column": 8,
+            "offset": 1055
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "menu"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Add ",
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 3,
+                        "offset": 1059
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 7,
+                        "offset": 1063
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "highlightItemOnHover",
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 7,
+                        "offset": 1063
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 29,
+                        "offset": 1085
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop (",
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 29,
+                        "offset": 1085
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 36,
+                        "offset": 1092
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3377",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3377",
+                        "position": {
+                          "start": {
+                            "line": 35,
+                            "column": 37,
+                            "offset": 1093
+                          },
+                          "end": {
+                            "line": 35,
+                            "column": 42,
+                            "offset": 1098
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 36,
+                        "offset": 1092
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 85,
+                        "offset": 1141
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 35,
+                        "column": 85,
+                        "offset": 1141
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 86,
+                        "offset": 1142
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 35,
+                    "column": 3,
+                    "offset": 1059
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 86,
+                    "offset": 1142
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 35,
+                "column": 1,
+                "offset": 1057
+              },
+              "end": {
+                "line": 35,
+                "column": 86,
+                "offset": 1142
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Do not import client components from MenuStore (",
+                    "position": {
+                      "start": {
+                        "line": 36,
+                        "column": 3,
+                        "offset": 1145
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 51,
+                        "offset": 1193
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3409",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3409",
+                        "position": {
+                          "start": {
+                            "line": 36,
+                            "column": 52,
+                            "offset": 1194
+                          },
+                          "end": {
+                            "line": 36,
+                            "column": 57,
+                            "offset": 1199
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 36,
+                        "column": 51,
+                        "offset": 1193
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 100,
+                        "offset": 1242
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 36,
+                        "column": 100,
+                        "offset": 1242
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 101,
+                        "offset": 1243
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 36,
+                    "column": 3,
+                    "offset": 1145
+                  },
+                  "end": {
+                    "line": 36,
+                    "column": 101,
+                    "offset": 1243
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 1,
+                "offset": 1143
+              },
+              "end": {
+                "line": 36,
+                "column": 101,
+                "offset": 1243
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 1057
+          },
+          "end": {
+            "line": 36,
+            "column": 101,
+            "offset": 1243
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Number Field",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 4,
+                "offset": 1248
+              },
+              "end": {
+                "line": 38,
+                "column": 16,
+                "offset": 1260
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 1245
+          },
+          "end": {
+            "line": 38,
+            "column": 16,
+            "offset": 1260
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "number-field"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Ensure hidden input participates in form validation (",
+                    "position": {
+                      "start": {
+                        "line": 40,
+                        "column": 3,
+                        "offset": 1264
+                      },
+                      "end": {
+                        "line": 40,
+                        "column": 56,
+                        "offset": 1317
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3374",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3374",
+                        "position": {
+                          "start": {
+                            "line": 40,
+                            "column": 57,
+                            "offset": 1318
+                          },
+                          "end": {
+                            "line": 40,
+                            "column": 62,
+                            "offset": 1323
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 40,
+                        "column": 56,
+                        "offset": 1317
+                      },
+                      "end": {
+                        "line": 40,
+                        "column": 105,
+                        "offset": 1366
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 40,
+                        "column": 105,
+                        "offset": 1366
+                      },
+                      "end": {
+                        "line": 40,
+                        "column": 106,
+                        "offset": 1367
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 40,
+                    "column": 3,
+                    "offset": 1264
+                  },
+                  "end": {
+                    "line": 40,
+                    "column": 106,
+                    "offset": 1367
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 1,
+                "offset": 1262
+              },
+              "end": {
+                "line": 40,
+                "column": 106,
+                "offset": 1367
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Improve symbol replacement logic (",
+                    "position": {
+                      "start": {
+                        "line": 41,
+                        "column": 3,
+                        "offset": 1370
+                      },
+                      "end": {
+                        "line": 41,
+                        "column": 37,
+                        "offset": 1404
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3376",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3376",
+                        "position": {
+                          "start": {
+                            "line": 41,
+                            "column": 38,
+                            "offset": 1405
+                          },
+                          "end": {
+                            "line": 41,
+                            "column": 43,
+                            "offset": 1410
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 41,
+                        "column": 37,
+                        "offset": 1404
+                      },
+                      "end": {
+                        "line": 41,
+                        "column": 86,
+                        "offset": 1453
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 41,
+                        "column": 86,
+                        "offset": 1453
+                      },
+                      "end": {
+                        "line": 41,
+                        "column": 87,
+                        "offset": 1454
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 41,
+                    "column": 3,
+                    "offset": 1370
+                  },
+                  "end": {
+                    "line": 41,
+                    "column": 87,
+                    "offset": 1454
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 1,
+                "offset": 1368
+              },
+              "end": {
+                "line": 41,
+                "column": 87,
+                "offset": 1454
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix fractional step snapping (",
+                    "position": {
+                      "start": {
+                        "line": 42,
+                        "column": 3,
+                        "offset": 1457
+                      },
+                      "end": {
+                        "line": 42,
+                        "column": 33,
+                        "offset": 1487
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3375",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3375",
+                        "position": {
+                          "start": {
+                            "line": 42,
+                            "column": 34,
+                            "offset": 1488
+                          },
+                          "end": {
+                            "line": 42,
+                            "column": 39,
+                            "offset": 1493
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 42,
+                        "column": 33,
+                        "offset": 1487
+                      },
+                      "end": {
+                        "line": 42,
+                        "column": 82,
+                        "offset": 1536
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 42,
+                        "column": 82,
+                        "offset": 1536
+                      },
+                      "end": {
+                        "line": 42,
+                        "column": 83,
+                        "offset": 1537
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 42,
+                    "column": 3,
+                    "offset": 1457
+                  },
+                  "end": {
+                    "line": 42,
+                    "column": 83,
+                    "offset": 1537
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 1,
+                "offset": 1455
+              },
+              "end": {
+                "line": 42,
+                "column": 83,
+                "offset": 1537
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix parsing numbers with Swiss locale (",
+                    "position": {
+                      "start": {
+                        "line": 43,
+                        "column": 3,
+                        "offset": 1540
+                      },
+                      "end": {
+                        "line": 43,
+                        "column": 42,
+                        "offset": 1579
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3361",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3361",
+                        "position": {
+                          "start": {
+                            "line": 43,
+                            "column": 43,
+                            "offset": 1580
+                          },
+                          "end": {
+                            "line": 43,
+                            "column": 48,
+                            "offset": 1585
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 43,
+                        "column": 42,
+                        "offset": 1579
+                      },
+                      "end": {
+                        "line": 43,
+                        "column": 91,
+                        "offset": 1628
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 43,
+                        "column": 91,
+                        "offset": 1628
+                      },
+                      "end": {
+                        "line": 43,
+                        "column": 92,
+                        "offset": 1629
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 43,
+                    "column": 3,
+                    "offset": 1540
+                  },
+                  "end": {
+                    "line": 43,
+                    "column": 92,
+                    "offset": 1629
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 1,
+                "offset": 1538
+              },
+              "end": {
+                "line": 43,
+                "column": 92,
+                "offset": 1629
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix pointer lock release when soft clicking in Firefox (",
+                    "position": {
+                      "start": {
+                        "line": 44,
+                        "column": 3,
+                        "offset": 1632
+                      },
+                      "end": {
+                        "line": 44,
+                        "column": 59,
+                        "offset": 1688
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3378",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3378",
+                        "position": {
+                          "start": {
+                            "line": 44,
+                            "column": 60,
+                            "offset": 1689
+                          },
+                          "end": {
+                            "line": 44,
+                            "column": 65,
+                            "offset": 1694
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 44,
+                        "column": 59,
+                        "offset": 1688
+                      },
+                      "end": {
+                        "line": 44,
+                        "column": 108,
+                        "offset": 1737
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 44,
+                        "column": 108,
+                        "offset": 1737
+                      },
+                      "end": {
+                        "line": 44,
+                        "column": 109,
+                        "offset": 1738
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 44,
+                    "column": 3,
+                    "offset": 1632
+                  },
+                  "end": {
+                    "line": 44,
+                    "column": 109,
+                    "offset": 1738
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 44,
+                "column": 1,
+                "offset": 1630
+              },
+              "end": {
+                "line": 44,
+                "column": 109,
+                "offset": 1738
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 40,
+            "column": 1,
+            "offset": 1262
+          },
+          "end": {
+            "line": 44,
+            "column": 109,
+            "offset": 1738
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Popover",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 4,
+                "offset": 1743
+              },
+              "end": {
+                "line": 46,
+                "column": 11,
+                "offset": 1750
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 46,
+            "column": 1,
+            "offset": 1740
+          },
+          "end": {
+            "line": 46,
+            "column": 11,
+            "offset": 1750
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "popover"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Close when pressing focusable element outside (",
+                    "position": {
+                      "start": {
+                        "line": 48,
+                        "column": 3,
+                        "offset": 1754
+                      },
+                      "end": {
+                        "line": 48,
+                        "column": 50,
+                        "offset": 1801
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3380",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3380",
+                        "position": {
+                          "start": {
+                            "line": 48,
+                            "column": 51,
+                            "offset": 1802
+                          },
+                          "end": {
+                            "line": 48,
+                            "column": 56,
+                            "offset": 1807
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 48,
+                        "column": 50,
+                        "offset": 1801
+                      },
+                      "end": {
+                        "line": 48,
+                        "column": 99,
+                        "offset": 1850
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 48,
+                        "column": 99,
+                        "offset": 1850
+                      },
+                      "end": {
+                        "line": 48,
+                        "column": 100,
+                        "offset": 1851
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 48,
+                    "column": 3,
+                    "offset": 1754
+                  },
+                  "end": {
+                    "line": 48,
+                    "column": 100,
+                    "offset": 1851
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 48,
+                "column": 1,
+                "offset": 1752
+              },
+              "end": {
+                "line": 48,
+                "column": 100,
+                "offset": 1851
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix modal backdrop on touch (",
+                    "position": {
+                      "start": {
+                        "line": 49,
+                        "column": 3,
+                        "offset": 1854
+                      },
+                      "end": {
+                        "line": 49,
+                        "column": 32,
+                        "offset": 1883
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3383",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3383",
+                        "position": {
+                          "start": {
+                            "line": 49,
+                            "column": 33,
+                            "offset": 1884
+                          },
+                          "end": {
+                            "line": 49,
+                            "column": 38,
+                            "offset": 1889
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 49,
+                        "column": 32,
+                        "offset": 1883
+                      },
+                      "end": {
+                        "line": 49,
+                        "column": 81,
+                        "offset": 1932
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 49,
+                        "column": 81,
+                        "offset": 1932
+                      },
+                      "end": {
+                        "line": 49,
+                        "column": 82,
+                        "offset": 1933
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 49,
+                    "column": 3,
+                    "offset": 1854
+                  },
+                  "end": {
+                    "line": 49,
+                    "column": 82,
+                    "offset": 1933
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 49,
+                "column": 1,
+                "offset": 1852
+              },
+              "end": {
+                "line": 49,
+                "column": 82,
+                "offset": 1933
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix popover glitching when flipped (",
+                    "position": {
+                      "start": {
+                        "line": 50,
+                        "column": 3,
+                        "offset": 1936
+                      },
+                      "end": {
+                        "line": 50,
+                        "column": 39,
+                        "offset": 1972
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3364",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3364",
+                        "position": {
+                          "start": {
+                            "line": 50,
+                            "column": 40,
+                            "offset": 1973
+                          },
+                          "end": {
+                            "line": 50,
+                            "column": 45,
+                            "offset": 1978
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 50,
+                        "column": 39,
+                        "offset": 1972
+                      },
+                      "end": {
+                        "line": 50,
+                        "column": 88,
+                        "offset": 2021
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 50,
+                        "column": 88,
+                        "offset": 2021
+                      },
+                      "end": {
+                        "line": 50,
+                        "column": 89,
+                        "offset": 2022
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 50,
+                    "column": 3,
+                    "offset": 1936
+                  },
+                  "end": {
+                    "line": 50,
+                    "column": 89,
+                    "offset": 2022
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 50,
+                "column": 1,
+                "offset": 1934
+              },
+              "end": {
+                "line": 50,
+                "column": 89,
+                "offset": 2022
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 48,
+            "column": 1,
+            "offset": 1752
+          },
+          "end": {
+            "line": 50,
+            "column": 89,
+            "offset": 2022
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Select",
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 4,
+                "offset": 2027
+              },
+              "end": {
+                "line": 52,
+                "column": 10,
+                "offset": 2033
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 52,
+            "column": 1,
+            "offset": 2024
+          },
+          "end": {
+            "line": 52,
+            "column": 10,
+            "offset": 2033
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "select"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Add ",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 3,
+                        "offset": 2037
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 7,
+                        "offset": 2041
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "highlightItemOnHover",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 7,
+                        "offset": 2041
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 29,
+                        "offset": 2063
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop (",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 29,
+                        "offset": 2063
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 36,
+                        "offset": 2070
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3377",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3377",
+                        "position": {
+                          "start": {
+                            "line": 54,
+                            "column": 37,
+                            "offset": 2071
+                          },
+                          "end": {
+                            "line": 54,
+                            "column": 42,
+                            "offset": 2076
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 36,
+                        "offset": 2070
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 85,
+                        "offset": 2119
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 85,
+                        "offset": 2119
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 86,
+                        "offset": 2120
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 54,
+                    "column": 3,
+                    "offset": 2037
+                  },
+                  "end": {
+                    "line": 54,
+                    "column": 86,
+                    "offset": 2120
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 2035
+              },
+              "end": {
+                "line": 54,
+                "column": 86,
+                "offset": 2120
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 54,
+            "column": 1,
+            "offset": 2035
+          },
+          "end": {
+            "line": 54,
+            "column": 86,
+            "offset": 2120
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Switch",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 4,
+                "offset": 2125
+              },
+              "end": {
+                "line": 56,
+                "column": 10,
+                "offset": 2131
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 2122
+          },
+          "end": {
+            "line": 56,
+            "column": 10,
+            "offset": 2131
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "switch"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Breaking change:",
+                        "position": {
+                          "start": {
+                            "line": 58,
+                            "column": 5,
+                            "offset": 2137
+                          },
+                          "end": {
+                            "line": 58,
+                            "column": 21,
+                            "offset": 2153
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 58,
+                        "column": 3,
+                        "offset": 2135
+                      },
+                      "end": {
+                        "line": 58,
+                        "column": 23,
+                        "offset": 2155
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " Match native off state in form submission.",
+                    "position": {
+                      "start": {
+                        "line": 58,
+                        "column": 23,
+                        "offset": 2155
+                      },
+                      "end": {
+                        "line": 58,
+                        "column": 66,
+                        "offset": 2198
+                      }
+                    }
+                  },
+                  {
+                    "type": "mdxJsxTextElement",
+                    "name": "br",
+                    "attributes": [],
+                    "children": [],
+                    "position": {
+                      "start": {
+                        "line": 58,
+                        "column": 66,
+                        "offset": 2198
+                      },
+                      "end": {
+                        "line": 58,
+                        "column": 72,
+                        "offset": 2204
+                      }
+                    },
+                    "data": {
+                      "handler": "html"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "\nThe Switch will not submit the ",
+                    "position": {
+                      "start": {
+                        "line": 58,
+                        "column": 72,
+                        "offset": 2204
+                      },
+                      "end": {
+                        "line": 59,
+                        "column": 34,
+                        "offset": 2238
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "\"off\"",
+                    "position": {
+                      "start": {
+                        "line": 59,
+                        "column": 34,
+                        "offset": 2238
+                      },
+                      "end": {
+                        "line": 59,
+                        "column": 41,
+                        "offset": 2245
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " value with a form when unchecked anymore, unless the new ",
+                    "position": {
+                      "start": {
+                        "line": 59,
+                        "column": 41,
+                        "offset": 2245
+                      },
+                      "end": {
+                        "line": 59,
+                        "column": 99,
+                        "offset": 2303
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "uncheckedValue",
+                    "position": {
+                      "start": {
+                        "line": 59,
+                        "column": 99,
+                        "offset": 2303
+                      },
+                      "end": {
+                        "line": 59,
+                        "column": 115,
+                        "offset": 2319
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop is set.\n(",
+                    "position": {
+                      "start": {
+                        "line": 59,
+                        "column": 115,
+                        "offset": 2319
+                      },
+                      "end": {
+                        "line": 60,
+                        "column": 4,
+                        "offset": 2336
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3406",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3406",
+                        "position": {
+                          "start": {
+                            "line": 60,
+                            "column": 5,
+                            "offset": 2337
+                          },
+                          "end": {
+                            "line": 60,
+                            "column": 10,
+                            "offset": 2342
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 60,
+                        "column": 4,
+                        "offset": 2336
+                      },
+                      "end": {
+                        "line": 60,
+                        "column": 53,
+                        "offset": 2385
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 60,
+                        "column": 53,
+                        "offset": 2385
+                      },
+                      "end": {
+                        "line": 60,
+                        "column": 54,
+                        "offset": 2386
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 58,
+                    "column": 3,
+                    "offset": 2135
+                  },
+                  "end": {
+                    "line": 60,
+                    "column": 54,
+                    "offset": 2386
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 1,
+                "offset": 2133
+              },
+              "end": {
+                "line": 60,
+                "column": 54,
+                "offset": 2386
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 2133
+          },
+          "end": {
+            "line": 60,
+            "column": 54,
+            "offset": 2386
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Tabs",
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 4,
+                "offset": 2391
+              },
+              "end": {
+                "line": 62,
+                "column": 8,
+                "offset": 2395
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 62,
+            "column": 1,
+            "offset": 2388
+          },
+          "end": {
+            "line": 62,
+            "column": 8,
+            "offset": 2395
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "tabs"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Breaking change:",
+                        "position": {
+                          "start": {
+                            "line": 64,
+                            "column": 5,
+                            "offset": 2401
+                          },
+                          "end": {
+                            "line": 64,
+                            "column": 21,
+                            "offset": 2417
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 64,
+                        "column": 3,
+                        "offset": 2399
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 23,
+                        "offset": 2419
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " Fix Panel ",
+                    "position": {
+                      "start": {
+                        "line": 64,
+                        "column": 23,
+                        "offset": 2419
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 34,
+                        "offset": 2430
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "keepMounted",
+                    "position": {
+                      "start": {
+                        "line": 64,
+                        "column": 34,
+                        "offset": 2430
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 47,
+                        "offset": 2443
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " behavior.",
+                    "position": {
+                      "start": {
+                        "line": 64,
+                        "column": 47,
+                        "offset": 2443
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 57,
+                        "offset": 2453
+                      }
+                    }
+                  },
+                  {
+                    "type": "mdxJsxTextElement",
+                    "name": "br",
+                    "attributes": [],
+                    "children": [],
+                    "position": {
+                      "start": {
+                        "line": 64,
+                        "column": 57,
+                        "offset": 2453
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 63,
+                        "offset": 2459
+                      }
+                    },
+                    "data": {
+                      "handler": "html"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "\nThe ",
+                    "position": {
+                      "start": {
+                        "line": 64,
+                        "column": 63,
+                        "offset": 2459
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 7,
+                        "offset": 2466
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "value",
+                    "position": {
+                      "start": {
+                        "line": 65,
+                        "column": 7,
+                        "offset": 2466
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 14,
+                        "offset": 2473
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " prop is now required on ",
+                    "position": {
+                      "start": {
+                        "line": 65,
+                        "column": 14,
+                        "offset": 2473
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 39,
+                        "offset": 2498
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Tabs.Tab>",
+                    "position": {
+                      "start": {
+                        "line": 65,
+                        "column": 39,
+                        "offset": 2498
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 51,
+                        "offset": 2510
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and ",
+                    "position": {
+                      "start": {
+                        "line": 65,
+                        "column": 51,
+                        "offset": 2510
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 56,
+                        "offset": 2515
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<Tabs.Panel>",
+                    "position": {
+                      "start": {
+                        "line": 65,
+                        "column": 56,
+                        "offset": 2515
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 70,
+                        "offset": 2529
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".\n(",
+                    "position": {
+                      "start": {
+                        "line": 65,
+                        "column": 70,
+                        "offset": 2529
+                      },
+                      "end": {
+                        "line": 66,
+                        "column": 4,
+                        "offset": 2534
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3372",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3372",
+                        "position": {
+                          "start": {
+                            "line": 66,
+                            "column": 5,
+                            "offset": 2535
+                          },
+                          "end": {
+                            "line": 66,
+                            "column": 10,
+                            "offset": 2540
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 66,
+                        "column": 4,
+                        "offset": 2534
+                      },
+                      "end": {
+                        "line": 66,
+                        "column": 53,
+                        "offset": 2583
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 66,
+                        "column": 53,
+                        "offset": 2583
+                      },
+                      "end": {
+                        "line": 66,
+                        "column": 54,
+                        "offset": 2584
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 64,
+                    "column": 3,
+                    "offset": 2399
+                  },
+                  "end": {
+                    "line": 66,
+                    "column": 54,
+                    "offset": 2584
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 64,
+                "column": 1,
+                "offset": 2397
+              },
+              "end": {
+                "line": 66,
+                "column": 54,
+                "offset": 2584
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 64,
+            "column": 1,
+            "offset": 2397
+          },
+          "end": {
+            "line": 66,
+            "column": 54,
+            "offset": 2584
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Toast",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 4,
+                "offset": 2589
+              },
+              "end": {
+                "line": 68,
+                "column": 9,
+                "offset": 2594
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 68,
+            "column": 1,
+            "offset": 2586
+          },
+          "end": {
+            "line": 68,
+            "column": 9,
+            "offset": 2594
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "toast"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Recalculate content height when layout size is fixed (",
+                    "position": {
+                      "start": {
+                        "line": 70,
+                        "column": 3,
+                        "offset": 2598
+                      },
+                      "end": {
+                        "line": 70,
+                        "column": 57,
+                        "offset": 2652
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3359",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3359",
+                        "position": {
+                          "start": {
+                            "line": 70,
+                            "column": 58,
+                            "offset": 2653
+                          },
+                          "end": {
+                            "line": 70,
+                            "column": 63,
+                            "offset": 2658
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 70,
+                        "column": 57,
+                        "offset": 2652
+                      },
+                      "end": {
+                        "line": 70,
+                        "column": 106,
+                        "offset": 2701
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 70,
+                        "column": 106,
+                        "offset": 2701
+                      },
+                      "end": {
+                        "line": 70,
+                        "column": 107,
+                        "offset": 2702
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 70,
+                    "column": 3,
+                    "offset": 2598
+                  },
+                  "end": {
+                    "line": 70,
+                    "column": 107,
+                    "offset": 2702
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 70,
+                "column": 1,
+                "offset": 2596
+              },
+              "end": {
+                "line": 70,
+                "column": 107,
+                "offset": 2702
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix multiple swipe directions on same axis (",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 3,
+                        "offset": 2705
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 47,
+                        "offset": 2749
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3392",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3392",
+                        "position": {
+                          "start": {
+                            "line": 71,
+                            "column": 48,
+                            "offset": 2750
+                          },
+                          "end": {
+                            "line": 71,
+                            "column": 53,
+                            "offset": 2755
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 47,
+                        "offset": 2749
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 96,
+                        "offset": 2798
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 71,
+                        "column": 96,
+                        "offset": 2798
+                      },
+                      "end": {
+                        "line": 71,
+                        "column": 97,
+                        "offset": 2799
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 71,
+                    "column": 3,
+                    "offset": 2705
+                  },
+                  "end": {
+                    "line": 71,
+                    "column": 97,
+                    "offset": 2799
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 71,
+                "column": 1,
+                "offset": 2703
+              },
+              "end": {
+                "line": 71,
+                "column": 97,
+                "offset": 2799
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 70,
+            "column": 1,
+            "offset": 2596
+          },
+          "end": {
+            "line": 71,
+            "column": 97,
+            "offset": 2799
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Tooltip",
+            "position": {
+              "start": {
+                "line": 73,
+                "column": 4,
+                "offset": 2804
+              },
+              "end": {
+                "line": 73,
+                "column": 11,
+                "offset": 2811
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 73,
+            "column": 1,
+            "offset": 2801
+          },
+          "end": {
+            "line": 73,
+            "column": 11,
+            "offset": 2811
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "tooltip"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Improve contained triggers performance (",
+                    "position": {
+                      "start": {
+                        "line": 75,
+                        "column": 3,
+                        "offset": 2815
+                      },
+                      "end": {
+                        "line": 75,
+                        "column": 43,
+                        "offset": 2855
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://github.com/mui/base-ui/pull/3385",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3385",
+                        "position": {
+                          "start": {
+                            "line": 75,
+                            "column": 44,
+                            "offset": 2856
+                          },
+                          "end": {
+                            "line": 75,
+                            "column": 49,
+                            "offset": 2861
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 75,
+                        "column": 43,
+                        "offset": 2855
+                      },
+                      "end": {
+                        "line": 75,
+                        "column": 92,
+                        "offset": 2904
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 75,
+                        "column": 92,
+                        "offset": 2904
+                      },
+                      "end": {
+                        "line": 75,
+                        "column": 93,
+                        "offset": 2905
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 75,
+                    "column": 3,
+                    "offset": 2815
+                  },
+                  "end": {
+                    "line": 75,
+                    "column": 93,
+                    "offset": 2905
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 1,
+                "offset": 2813
+              },
+              "end": {
+                "line": 75,
+                "column": 93,
+                "offset": 2905
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 75,
+            "column": 1,
+            "offset": 2813
+          },
+          "end": {
+            "line": 75,
+            "column": 93,
+            "offset": 2905
+          }
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 76,
+        "column": 1,
+        "offset": 2906
+      }
+    }
+  },
+  "notice": {
+    "type": "paragraph",
+    "children": [
+      {
+        "type": "text",
+        "value": "Upstream React Base UI release history. These are not releases or verified capabilities of the Solid port."
+      }
+    ]
+  }
+}

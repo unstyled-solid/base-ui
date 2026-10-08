@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "jsxImportSource": "@solidjs/web",
+    "strict": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "skipLibCheck": false,
+    "types": ["node", "@vitest/browser-playwright"],
+    "allowImportingTsExtensions": true,
+    "customConditions": ["browser", "development"],
+    "paths": {
+      "#test-utils": ["./packages/solid/test/index.ts"],
+      "@testing-library/jest-dom/vitest": ["./test/harness/matchers.ts"]
+    }
+  },
+  "include": ["packages/solid/**/*.ts", "packages/solid/**/*.tsx", "test/**/*.ts", "test/**/*.tsx", "vitest*.config.ts"],
+  "exclude": ["node_modules", "packages/solid/build", "test/contracts/negative", "test/qualification/react-oracle", "test/**/.generated", "test/**/.cache"]
+}

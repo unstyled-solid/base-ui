@@ -1,0 +1,10 @@
+export const open = 'data-open';
+export const closed = 'data-closed';
+export const startingStyle = 'data-starting-style';
+export const endingStyle = 'data-ending-style';
+export const expanded = 'data-expanded';
+export const nestedDrawerOpen = 'data-nested-drawer-open';
+export const nestedDrawerSwiping = 'data-nested-drawer-swiping';
+export const swipeDismiss = 'data-swipe-dismiss';
+export const swipeDirection = 'data-swipe-direction';
+export const swiping = 'data-swiping';

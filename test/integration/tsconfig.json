@@ -1,0 +1,4 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./*.ts", "./*.tsx", "../../packages/solid/test/types.d.ts", "../harness/browser-commands.ts"]
+}

@@ -1,0 +1,143 @@
+@layer all, base, theme, components, utilities;
+
+@layer base {
+  body { margin: 0; font-family: var(--font-sans); }
+  :where(.SideNavRoot, .SiteOutline, .SiteHeader) ul { list-style: none; margin: 0; padding: 0; }
+  :where(.SideNavRoot, .SiteOutline, .SiteHeader) a { color: inherit; text-decoration: none; }
+}
+
+@layer components {
+  /* Header, navigation, typography and page geometry are emitted from source.css. */
+  .Subtitle .MdP { margin: 0; font: inherit; color: inherit; }
+  .SideNavViewport, .QuickNavViewport { overflow-y: auto; scrollbar-width: thin; }
+  .SideNavViewport { scrollbar-color: var(--gray-p2) transparent; }
+  .QuickNavList > li { width: 100%; }
+  .HeadingLink { color: inherit; text-decoration: none; }
+  .HeadingLink:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .ContentLayoutMain { outline: none; scroll-margin-top: var(--header-height); }
+  /* tabindex enables skip navigation, but pointer focus must never frame the page. */
+  .ContentLayoutMain[data-skip-focus]:focus { outline: 2px solid var(--gray-t2); outline-offset: 4px; }
+  .SiteFrameworkNote, .SiteMissing { border-left: 2px solid var(--color-border); padding: 8px 16px; margin: 24px 0; font-size: 14px; }
+  .SiteFooter { margin-top: 48px; font-size: 12px; color: var(--gray-t1); }
+  .SiteFooter p { margin-top: 8px; }
+  .SiteFooter a { text-underline-offset: 2px; }
+  .SiteTableScroll { overflow-x: auto; font-size: 14px; }
+  .SiteTableScroll table { width: 100%; border-collapse: collapse; }
+  .SiteTableScroll :is(th, td) { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--color-border); }
+
+  /* Bounded adapters for the demo runtime's file tabs and source disclosure. */
+  .SiteDemo { margin-bottom: var(--space-24); }
+  /* data-demo resets docs tokens on this element; the shell background belongs
+     to DemoPlayground, outside that isolation boundary, in both color schemes. */
+  .DemoPlaygroundInner { background: transparent; }
+  .DemoToolbar { overflow: visible; }
+  .DemoToolbarViewport { overflow-x: auto; scrollbar-width: none; }
+  .DemoFileTabs { display: flex; flex: 0 0 auto; width: max-content; align-self: end; }
+  .DemoTab { flex-shrink: 0; cursor: pointer; background: transparent; color: inherit; }
+  .DemoToolbarActions { flex: 0 0 auto; }
+  .DemoVariantSelect { appearance: none; border: 0; border-radius: var(--radius-4); background-color: transparent; color: inherit; font: inherit; padding: 4px 20px 4px 8px; cursor: pointer; max-width: 150px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='12' viewBox='0 0 8 12'%3E%3Cpath fill='%23777' d='m4 1 3 3H1zm0 10-3-3h6z'/%3E%3C/svg%3E"); background-position: right 6px center; background-repeat: no-repeat; }
+  .DemoVariantSelect option { background: var(--color-popup); color: var(--color-foreground); }
+  .DemoActionsMenu { position: relative; }
+  .DemoActionsMenu > summary { display: flex; align-items: center; justify-content: center; width: 24px; height: 28px; list-style: none; cursor: pointer; border-radius: var(--radius-4); font-size: 20px; line-height: 1; }
+  .DemoActionsMenu > summary::-webkit-details-marker { display: none; }
+  .DemoActionsContent { position: absolute; z-index: 4; right: 0; top: 32px; background: var(--color-popup); border: 1px solid var(--color-border); border-radius: var(--radius-8); padding: 4px; min-width: 160px; box-shadow: var(--shadow-3); }
+  .DemoActionsContent :is(button, a) { display: block; padding: 8px; width: 100%; text-align: left; text-decoration: none; color: inherit; font: inherit; cursor: pointer; border-radius: var(--radius-4); }
+  .DemoActionsContent :is(button, a):hover, .DemoActionsMenu > summary:hover, .DemoVariantSelect:hover { background-color: var(--gray-c1); }
+  .DemoCodePanel { display: flex; flex-direction: column; position: relative; isolation: isolate; background: var(--gray-s1); border-radius: 0 0 calc(var(--demo-radius) - 1px) calc(var(--demo-radius) - 1px); }
+  .DemoCode { margin: 0; padding: 8px 12px; font-family: var(--font-mono); font-size: 13px; line-height: 20px; overflow-x: auto; tab-size: 2; border-radius: inherit; overscroll-behavior-x: contain; }
+  .DemoCode code { font: inherit; }
+  .DemoCodePanel[data-expanded=false] .DemoCode { max-height: calc(5.7 * 20px + 8px); overflow: hidden; }
+  .DemoCodePanel[data-expanded=false]::before { content: ''; position: absolute; z-index: 1; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--gray-s1), transparent 5%)); }
+  .DemoCopyButton, .CodeCopy { position: absolute; z-index: 3; top: 4px; right: 4px; display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; padding: 0; color: var(--gray-t2); background: transparent; border: 0; border-radius: var(--radius-4); cursor: pointer; }
+  .DemoCopyButton { top: 8px; right: 8px; width: 24px; height: 24px; }
+  .DemoCopyButton:hover, .CodeCopy:hover { background: var(--gray-c1); }
+  .DemoStatus { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .DemoPlayground [role=alert] { max-width: 100%; color: inherit; font-size: 14px; padding: 20px; }
+
+  /* Static prose blocks retain the upstream panel and viewport measurements. */
+  .CodeBlockRoot figcaption { position: relative; height: 36px; display: flex; align-items: center; padding-inline: 12px 40px; font-size: 14px; line-height: 20px; white-space: nowrap; overflow: auto hidden; scrollbar-width: none; background: var(--gray-s2); border-bottom: 1px solid var(--color-border); border-radius: calc(var(--radius-12) - 1px) calc(var(--radius-12) - 1px) 0 0; }
+  .CodeBlockPre { margin: 0; padding: 8px 12px; background: var(--color-content); font-family: var(--font-mono); font-size: 13px; line-height: 20px; overflow-x: auto; tab-size: 2; overscroll-behavior-x: contain; outline: none; }
+  .CodeBlockPre:focus-visible { outline: 2px solid var(--gray-t2); outline-offset: -2px; }
+  .CodeBlockPre code { font: inherit; }
+  .MdCode { font-family: var(--font-mono); }
+  .SiteToken-keyword { color: var(--poppy-t1); }
+  .SiteToken-string { color: var(--color-navy); }
+  .SiteToken-number, .SiteToken-tag { color: var(--color-blue); }
+  .SiteToken-attribute { color: var(--color-violet); }
+  .SiteToken-comment { color: var(--gray-t1); }
+
+  /* ReferenceTable / Accordion measurements, applied to the native details seam. */
+  .ApiReference { margin-top: 20px; margin-bottom: 24px; }
+  .ApiTable { margin-top: 24px; border: 1px solid var(--color-border); border-radius: var(--radius-12); font-size: 14px; line-height: 20px; }
+  .ApiHeader, .ApiRow > summary { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr) minmax(0, 4.5fr) 40px; align-items: center; min-height: 40px; box-sizing: border-box; }
+  .ApiHeader { background: var(--gray-s2); font-weight: 400; border-radius: calc(var(--radius-12) - 1px) calc(var(--radius-12) - 1px) 0 0; }
+  .ApiHeader > span:not(:last-child), .ApiName, .ApiType, .ApiDefault { padding: 8px 12px; min-width: 0; }
+  .ApiRow { border-top: 1px solid var(--color-border); }
+  .ApiRow > summary { position: relative; cursor: pointer; list-style: none; background: var(--color-content); }
+  .ApiRow > summary::-webkit-details-marker { display: none; }
+  .ApiRow:last-child:not([open]) > summary { border-radius: 0 0 calc(var(--radius-12) - 1px) calc(var(--radius-12) - 1px); }
+  .ApiRow > summary:hover { background: var(--gray-s1); }
+  .ApiName, .ApiType, .ApiDefault { font-family: var(--font-mono); font-size: 13px; line-height: 20px; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+  .ApiName, .ApiDefault { color: var(--color-navy); }
+  .ApiName sup { color: var(--poppy-t1); }
+  .ApiType { color: var(--color-violet); }
+  .ApiChevron { justify-self: center; font-size: 14px; }
+  .ApiRow[open] .ApiChevron { transform: rotate(180deg); }
+  .ApiDetails { padding: 12px; border-top: 1px solid var(--gray-c1); background: var(--gray-s2); color: var(--gray-t1); font-size: 14px; line-height: 20px; }
+  .ApiRow:last-child .ApiDetails { border-radius: 0 0 calc(var(--radius-12) - 1px) calc(var(--radius-12) - 1px); }
+  .ApiDetails p { margin: 0 0 12px; }
+  .ApiDetails pre, .ApiTypeDeclaration pre { margin: 0; font-family: var(--font-mono); font-size: 13px; line-height: 20px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .ApiMetadata table { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; }
+  .ApiMetadata :is(th, td) { font-weight: 400; text-align: left; padding: 10px 12px; line-height: 20px; vertical-align: top; }
+  .ApiMetadata th { background: var(--gray-s2); }
+  .ApiMetadata th:first-child { border-top-left-radius: calc(var(--radius-12) - 1px); }
+  .ApiMetadata th:last-child { border-top-right-radius: calc(var(--radius-12) - 1px); }
+  .ApiMetadata td { border-top: 1px solid var(--color-border); color: var(--gray-t1); }
+  .ApiMetadata :is(th, td):first-child { width: calc(5 / 16.5 * 100%); overflow-wrap: anywhere; }
+  .ApiMetadata code { font-family: var(--font-mono); font-size: 13px; color: var(--color-navy); }
+  .ApiTypeDeclaration { margin-top: 16px; font-size: 13px; }
+  .ApiTypeDeclaration summary { cursor: pointer; }
+
+  .SiteSearch { border: 1px solid var(--color-border); border-radius: 18px; background: var(--gray-s1); color: var(--color-foreground); width: min(546px, calc(100vw - 32px)); padding: 0; margin: 70px auto auto; max-height: min(80dvh, 600px); overflow: hidden; }
+  .SiteSearch::backdrop { background: #000b; }
+  .SiteSearchInput { display: flex; align-items: center; gap: 8px; padding: 0 16px; height: 48px; border-bottom: 1px solid var(--color-border); color: var(--gray-t1); }
+  .SiteSearch input { flex: 1; min-width: 0; padding: 0; border: 0; outline: none; background: transparent; font-size: 16px; color: var(--color-foreground); }
+  .SiteSearch ul { padding: 8px; margin: 0; overflow-y: auto; max-height: 388px; list-style: none; font-size: 14px; }
+  .SiteSearchGroup { color: var(--gray-t1); padding: 6px 8px; }
+  .SiteSearch a { display: block; border-radius: 6px; padding: 5px 24px; color: inherit; text-decoration: none; }
+  .SiteSearch a[aria-selected=true] { background: var(--gray-c1); }
+  .SiteSearchStatus { border-top: 1px solid var(--color-border); font-size: 12px; padding: 8px 16px; color: var(--gray-t1); }
+  .SiteMobileNav { display: none; }
+  :where(a, button, select, summary):focus-visible { outline: 2px solid var(--gray-t2); outline-offset: -2px; }
+
+  @media (width < 64rem) {
+    #shell-island > button { display: none; }
+    .SiteMobileNav { display: block; }
+    .SiteMobileNav > summary { list-style: none; cursor: pointer; gap: 8px; }
+    .SiteMobileNav > summary::-webkit-details-marker { display: none; }
+    .SiteMobileNav nav { position: fixed; inset: var(--header-height) 0 0; background: var(--color-popup); padding: 24px 28px max(24px, env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; font-size: 14px; }
+    .SiteMobileNav .SideNavLink { min-height: 40px; display: flex; align-items: center; }
+    .SiteMobileNav .SideNavSection:not(:last-child) { margin-bottom: 24px; }
+    body:has(.SiteMobileNav[open]) { overflow: hidden; }
+  }
+  @media (width < 48rem) {
+    .ApiHeader, .ApiRow > summary { grid-template-columns: 14rem minmax(0, 1fr) 40px; }
+    .ApiHeader > :nth-child(3), .ApiDefault { display: none; }
+    .ApiMetadata :is(th, td):first-child { width: 14rem; }
+  }
+  @media (width < 40rem) {
+    .ApiHeader, .ApiRow > summary { grid-template-columns: 12rem minmax(0, 1fr) 40px; }
+    .ApiMetadata :is(th, td):first-child { width: 12rem; }
+    .DemoToolbarActions { padding-inline: 4px; }
+    .DemoVariantSelect { max-width: 120px; }
+  }
+  @media (width < 32rem) {
+    .ApiHeader, .ApiRow > summary { grid-template-columns: minmax(0, 1fr) 40px; }
+    .ApiHeader > :nth-child(2), .ApiType { display: none; }
+    .ApiMetadata :is(th, td):first-child { width: 45%; }
+    .DemoVariantSelect { max-width: 108px; }
+  }
+  @media print {
+    .SiteHeader, .SideNavRoot, .SiteOutline, .DemoToolbarActions, .DemoCopyButton, .CodeCopy { display: none; }
+  }
+}

@@ -1,0 +1,4160 @@
+@font-face {
+  font-family: 'Paper Mono';
+  font-weight: normal;
+  src: url('/qualification/fonts/paper-mono.woff2') format('woff2');
+  font-variation-settings: 'wght' 415;
+  /* Reduce the size to balance with the sans-serif fonts */
+  size-adjust: calc(100% * 13.5 / 14);
+}
+
+@font-face {
+  font-family: 'Paper Mono';
+  font-weight: bold;
+  src: url('/qualification/fonts/paper-mono.woff2') format('woff2');
+  font-variation-settings: 'wght' 650;
+  /* Reduce the size to balance with the sans-serif fonts */
+  size-adjust: calc(100% * 13.5 / 14);
+}
+
+/* Adapted from mui/base-ui 19511bb171f3b360b006c94cf6d07e53cb446505; MIT, Copyright (c) 2019 Material-UI SAS. Fonts excluded pending provenance. Tailwind source globs are owned by demos. */
+@layer base {
+/*
+  1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+  2. Remove default margins and padding
+  3. Reset all borders.
+*/
+
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  box-sizing: border-box; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 2 */
+  border: 0 solid; /* 3 */
+}
+
+/*
+  1. Use a consistent sensible line-height in all browsers.
+  2. Prevent adjustments of font size after orientation changes in iOS.
+  3. Use a more readable tab size.
+  4. Use the user's configured `sans` font-family by default.
+  5. Use the user's configured `sans` font-feature-settings by default.
+  6. Use the user's configured `sans` font-variation-settings by default.
+  7. Disable tap highlights on iOS.
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  tab-size: 4; /* 3 */
+  font-family: --theme(
+    --default-font-family,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji'
+  ); /* 4 */
+  font-feature-settings: --theme(--default-font-feature-settings, normal); /* 5 */
+  font-variation-settings: --theme(--default-font-variation-settings, normal); /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+  1. Add the correct height in Firefox.
+  2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+  3. Reset the default border style to a 1px solid border.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+  Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+  Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+  Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
+/*
+  Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+  1. Use the user's configured `mono` font-family by default.
+  2. Use the user's configured `mono` font-feature-settings by default.
+  3. Use the user's configured `mono` font-variation-settings by default.
+  4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: --theme(
+    --default-mono-font-family,
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    'Courier New',
+    monospace
+  ); /* 1 */
+  font-feature-settings: --theme(--default-mono-font-feature-settings, normal); /* 2 */
+  font-variation-settings: --theme(--default-mono-font-variation-settings, normal); /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+  Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+  Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+  1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+  2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+  3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+  Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+  Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+  Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+  Make lists unstyled by default.
+*/
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/*
+  1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+  2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+      This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+  Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  1. Inherit font styles in all browsers.
+  2. Remove border radius in all browsers.
+  3. Remove background color in all browsers.
+  4. Ensure consistent opacity for disabled states in all browsers.
+*/
+
+button,
+input,
+select,
+optgroup,
+textarea,
+::file-selector-button {
+  font: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  border-radius: 0; /* 2 */
+  background-color: transparent; /* 3 */
+  opacity: 1; /* 4 */
+}
+
+/*
+  Restore default font weight.
+*/
+
+:where(select:is([multiple], [size])) optgroup {
+  font-weight: bolder;
+}
+
+/*
+  Restore indentation.
+*/
+
+:where(select:is([multiple], [size])) optgroup option {
+  padding-inline-start: 20px;
+}
+
+/*
+  Restore space after button.
+*/
+
+::file-selector-button {
+  margin-inline-end: 4px;
+}
+
+/*
+  Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+*/
+
+::placeholder {
+  opacity: 1;
+}
+
+/*
+  Set the default placeholder color to a semi-transparent version of the current text color in browsers that do not
+  crash when using `color-mix(…)` with `currentcolor`. (https://github.com/tailwindlabs/tailwindcss/issues/17194)
+*/
+
+@supports (not (-webkit-appearance: -apple-pay-button)) /* Not Safari */ or
+  (contain-intrinsic-size: 1px) /* Safari 17+ */ {
+  ::placeholder {
+    color: color-mix(in oklab, currentcolor 50%, transparent);
+  }
+}
+
+/*
+  Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+  Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+  1. Ensure date/time inputs have the same height when empty in iOS Safari.
+  2. Ensure text alignment can be changed on date/time inputs in iOS Safari.
+*/
+
+::-webkit-date-and-time-value {
+  min-height: 1lh; /* 1 */
+  text-align: inherit; /* 2 */
+}
+
+/*
+  Prevent height from changing on date/time inputs in macOS Safari when the input is set to `display: block`.
+*/
+
+::-webkit-datetime-edit {
+  display: inline-flex;
+}
+
+/*
+  Remove excess padding from pseudo-elements in date/time inputs to ensure consistent height across browsers.
+*/
+
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+
+::-webkit-datetime-edit,
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute-field,
+::-webkit-datetime-edit-second-field,
+::-webkit-datetime-edit-millisecond-field,
+::-webkit-datetime-edit-meridiem-field {
+  padding-block: 0;
+}
+
+/*
+  Center dropdown marker shown on inputs with paired `<datalist>`s in Chrome. (https://github.com/tailwindlabs/tailwindcss/issues/18499)
+*/
+
+::-webkit-calendar-picker-indicator {
+  line-height: 1;
+}
+
+/*
+  Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+  Correct the inability to style the border radius in iOS Safari.
+*/
+
+button,
+input:where([type='button'], [type='reset'], [type='submit']),
+::file-selector-button {
+  appearance: button;
+}
+
+/*
+  Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+  Make elements with the HTML hidden attribute stay hidden by default.
+*/
+
+[hidden]:where(:not([hidden='until-found'])) {
+  display: none !important;
+}
+
+}/*
+ * Main stylesheet for the public site: docs, home page, careers, etc. Also used in e2e/regression tests.
+ *
+ * Rules when writing CSS for the public site (except demos):
+ *   - Components' CSS must be wrapped in "@layer components".
+ *   - Use component name as the prefix to avoid conflicts, e.g. ".SelectTriggerIcon".
+ *   - Prefix CSS variables with component name too, e.g. "--root-layout-padding-x".
+ *   - Use custom utility classes (./utilities) for layout and one-off styles.
+ *   - There are two reset layers:
+ *     - "@layer all" is a truly global reset (includes all demos).
+ *     - "@layer base" is Tailwind's reset (`tailwindcss/preflight`) that is reverted in non-Tailwind demos.
+ *     - We rely on both to build the docs.
+ *
+ * Demos:
+ * - Do not use our custom styles or CSS vars in demos.
+ * - Only the Tailwind demos in the (docs) use Tailwind.
+ *   - Use only what's available in Tailwind's default theme, both classes and CSS vars.
+ */
+
+/* Extend Tailwind layers to add our global reset layer `all` */
+@layer all, base, theme, components, utilities;
+/* `source(none)` disables automatic detection of sources to generate Tailwind classes. Use the safelist below instead. */
+
+/* ═══ Docs-only imports ═══ */
+/* 512px */
+/* 640px */
+/* 768px */
+/* 1024px */
+/* 1280px */
+/* stylelint-disable-next-line custom-media-pattern */
+/* 1536px */
+
+/* TODO: Remove these component imports once we make these components' styles truly isolated and they import their own styles. */
+@layer components {
+  .Code {
+    letter-spacing: normal;
+    color: var(--color-blue);
+
+    p &[data-inline],
+    li &[data-inline] {
+      font-size: 0.96875em; /* 16px becomes 15.5px */
+      letter-spacing: -0.01em;
+      word-spacing: -0.2em;
+      line-height: normal;
+    }
+
+    /* In a code block */
+    pre & {
+      white-space: normal;
+    }
+
+    & mark {
+      display: inline-block;
+    }
+
+    & a {
+      text-decoration: underline;
+      text-decoration-color: color-mix(in oklab, currentColor, transparent);
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+
+      @media (hover: hover) {
+        &:hover {
+          text-decoration-color: currentColor;
+        }
+      }
+    }
+
+    .Link & {
+      text-decoration: inherit;
+    }
+  }
+}
+@layer components {
+  .AccordionRoot {
+    --color-trigger-hover: hsl(0deg 0 99);
+    --color-open-trigger-shadow: var(--gray-c3);
+
+    @media (prefers-color-scheme: dark) {
+      --color-trigger-hover: hsl(0deg 0 9);
+      --color-open-trigger-shadow: hsl(0deg 0 5);
+    }
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--gray-t1);
+
+    border: 1px solid var(--color-border);
+    border-collapse: separate;
+    border-radius: var(--radius-12);
+  }
+
+  .AccordionHeaderRow {
+    border-radius: calc(var(--radius-12) - 1px) calc(var(--radius-12) - 1px) 0 0;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--gray-s2);
+    background-clip: padding-box;
+  }
+
+  .AccordionHeaderCell {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-400);
+    color: var(--color-foreground);
+  }
+
+  .AccordionHeaderCellInner {
+    display: flex;
+    align-items: center;
+    /* Keep in sync with the ReferenceTable.css placeholder height math. */
+    min-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .AccordionItem:not(:last-child) {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .AccordionTrigger {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    width: 100%;
+    /* Keep in sync with the ReferenceTable.css placeholder height math. */
+    min-height: 2.5rem;
+    align-items: center;
+    /* use padding to match TableCell height in CSS vars or data attributes table */
+    padding-block: 0.5rem;
+    padding-inline: 0.75rem 0.5rem;
+    border: none;
+    outline: none;
+    text-align: left;
+    background-color: var(--color-content);
+
+    /* remove default disclosure triangle  */
+    &::-webkit-details-marker {
+      display: none;
+    }
+    list-style: none;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-trigger-hover);
+        cursor: default;
+      }
+    }
+
+    &:focus-visible {
+      z-index: 1;
+
+      /*
+       * The ring is inset so the root's paint containment (`content-visibility`)
+       * doesn't clip it, which puts it underneath the cells' overscroll overlays.
+       * Draw it as a stacked pseudo-element so it paints above them.
+       */
+      &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        inset: 0;
+        z-index: 1;
+        border-radius: inherit;
+        outline: 2px solid var(--gray-t2);
+        outline-offset: -2px;
+      }
+    }
+
+    [open] & {
+      box-shadow:
+        0 2px 4px -3px var(--color-open-trigger-shadow),
+        inset 0 -1px 1px transparent;
+    }
+
+    .AccordionItem:not([open]):last-child & {
+      border-bottom-left-radius: calc(var(--radius-12) - 1px);
+      border-bottom-right-radius: calc(var(--radius-12) - 1px);
+    }
+  }
+
+  .AccordionIcon {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+
+    [open] & {
+      transform: rotate(180deg);
+    }
+  }
+
+  .AccordionPanel {
+    box-sizing: border-box;
+    height: auto;
+    overflow: hidden;
+    color: var(--color-foreground);
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .AccordionContent {
+    padding-block: 1px;
+
+    [open] & {
+      background-color: var(--gray-s2);
+      box-shadow: inset 0 1px 0 0 var(--gray-c1);
+    }
+
+    .AccordionItem:last-child & {
+      border-bottom-left-radius: calc(var(--radius-12) - 1px);
+      border-bottom-right-radius: calc(var(--radius-12) - 1px);
+    }
+  }
+
+  .AccordionScrollable {
+    overflow-x: hidden;
+
+    /* stylelint-disable-next-line selector-pseudo-class-disallowed-list */
+    &:has(.AccordionScrollableInner:focus-visible) {
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        inset: 0;
+        z-index: 1;
+        /* The cell clips its own overflow, so the ring must sit fully inside it. */
+        outline: 2px solid var(--gray-t2);
+        outline-offset: -2px;
+      }
+    }
+
+    &[data-scrollable] {
+      position: relative;
+
+      /* Overscroll overlay */
+      &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        top: 1px;
+        bottom: 1px;
+        right: -1px;
+        width: 1.25rem;
+        background-image: linear-gradient(to right, transparent, var(--scrollable-gradient-color));
+        animation: accordion-overscroll-overlay 500ms;
+      }
+
+      /* Only applied when the container is scrollable as this creates a layer. */
+      & .AccordionScrollableInner {
+        /* Prevent Chrome/Safari page navigation gestures when scrolling horizontally */
+        overscroll-behavior-x: contain;
+      }
+
+      @media (hover: hover) {
+        .AccordionTrigger:hover &::after {
+          background-image: linear-gradient(to right, transparent, var(--color-trigger-hover));
+        }
+      }
+    }
+  }
+
+  @keyframes accordion-overscroll-overlay {
+    from {
+      opacity: 0;
+    }
+  }
+
+  .AccordionScrollableInner {
+    /* Ensure consistent height of the cells */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Keep in sync with the ReferenceTable.css placeholder height math. */
+    min-height: 2.5rem;
+    padding-block: 0.5rem;
+    padding-right: 1rem;
+
+    /* Make individual cells scrollable */
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline: 0;
+    }
+  }
+
+  /* stylelint-disable-next-line selector-pseudo-class-disallowed-list */
+  .AccordionScrollable:has(pre) .AccordionScrollableInner {
+    min-height: unset;
+    padding: 0;
+    gap: 0;
+    padding-right: 0.5rem;
+  }
+}
+@layer components {
+  .TableRoot {
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    color: var(--gray-t1);
+    border: 1px solid var(--color-border);
+    border-collapse: separate;
+    border-radius: var(--radius-12);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .TableRootTable {
+    table-layout: fixed;
+    width: 100%;
+    vertical-align: top;
+
+    /* Tailwind's border-collapse: collapse causes alpha blending issues in Safari */
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .TableHead,
+  .TableBody {
+    vertical-align: inherit;
+  }
+
+  .TableColumnHeader {
+    text-align: initial;
+    font-weight: var(--font-weight-400);
+    color: var(--color-foreground);
+    background-color: var(--gray-s2);
+    background-clip: padding-box;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .TableCell {
+    text-align: initial;
+    font-weight: var(--font-weight-400);
+
+    :not(:last-child) > & {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    &[data-scrollable] {
+      position: relative;
+
+      /* Overscroll overlay */
+      &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        top: 1px;
+        bottom: 1px;
+        right: -1px; /* Browsers may miss half a pixel due to subpixel table cell widths */
+        width: 1.25rem;
+        background-image: linear-gradient(to right, transparent, var(--color-content));
+        animation: table-cell-overscroll-overlay 500ms;
+      }
+
+      /* Only applied when the container is scrollable as this creates a layer. */
+      & .TableCellInner {
+        /* Prevent Chrome/Safari page navigation gestures when scrolling horizontally */
+        overscroll-behavior-x: contain;
+      }
+    }
+  }
+
+  @keyframes table-cell-overscroll-overlay {
+    from {
+      opacity: 0;
+    }
+  }
+
+  .TableCellInner {
+    /* Ensure consistent height of the cells */
+    display: flex;
+    align-items: center;
+    /* Keep in sync with the ReferenceTable.css placeholder height math. */
+    min-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+
+    /* Make individual cells scrollable */
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+@layer components {
+  .TableCode {
+    font-size: 0.8125rem; /* 13px */
+    line-height: 1.25rem; /* 20px */
+  }
+}
+/* 512px */
+/* 640px */
+/* 768px */
+/* 1024px */
+/* 1280px */
+/* stylelint-disable-next-line custom-media-pattern */
+/* 1536px */
+@layer components {
+  .DescriptionList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: var(--space-12);
+  }
+
+  .DescriptionListItem {
+    position: relative;
+
+    @media (min-width: 32rem) {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: span 3;
+      align-items: start;
+    }
+  }
+
+  .DescriptionTerm {
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    font-weight: var(--font-weight-700);
+    color: var(--color-foreground);
+    white-space: nowrap;
+    word-break: keep-all;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-4);
+
+    @media (min-width: 32rem) {
+      font-weight: revert-layer;
+      color: revert-layer;
+      margin-bottom: 0;
+    }
+
+    &.separator {
+      &::before {
+        content: '';
+        box-shadow: inset 0 1px 0 0 var(--color-border);
+        position: absolute;
+        top: 0;
+        inset-inline: 0.75rem 1rem;
+        height: 1px;
+      }
+
+      @media (min-width: 32rem) {
+        &::before {
+          height: 0;
+        }
+      }
+    }
+  }
+
+  .DescriptionListDetails {
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+
+    color: var(--color-foreground);
+    grid-column: span 2;
+
+    & p {
+      margin: 0 !important;
+    }
+  }
+
+  .DescriptionListInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-inline: 0.75rem;
+    width: 100%;
+    gap: var(--space-12);
+
+    .CodeBlockRoot {
+      margin: 0;
+      max-width: 100%;
+    }
+
+    & > p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .separator & {
+      padding-top: var(--space-8);
+    }
+
+    @media (min-width: 32rem) {
+      min-height: 2.5rem;
+
+      &,
+      .separator & {
+        padding: 0.625rem 0.75rem;
+      }
+    }
+  }
+}
+@layer components {
+  /*
+   * Skip rendering prop accordions while offscreen. The API reference is dense paint
+   * content that makes every repaint-driven re-composite of the page ("Layerize")
+   * more expensive.
+   *
+   * The placeholder is the minimum closed height for accordions/tables. Keep the
+   * row heights from .AccordionHeaderCellInner, .AccordionTrigger,
+   * .AccordionScrollableInner, and .TableCellInner in sync with the formula below.
+   *
+   * The calc is the content-box height: 1 header row + var(--rows) body rows, plus
+   * the var(--rows) inter-row borders. The root's own top/bottom border is added by
+   * the browser because `contain-intrinsic-height` sizes the content box.
+   * Wrapped row content, including type cells and method signatures, can make the
+   * placeholder approximate until the browser records the rendered size.
+   *
+   * `--rows` is set inline by the reference components. The fallback only keeps the
+   * calc valid if it ever goes missing: without it the whole declaration would be
+   * invalid and the placeholder would collapse to zero.
+   *
+   * The `auto` keyword makes the browser track the real size once rendered
+   * (e.g. with expanded items).
+   */
+  .ReferenceAccordionRoot {
+    content-visibility: auto;
+    contain-intrinsic-height: auto calc((var(--rows, 8) + 1) * (2.5rem + 1px) - 1px);
+  }
+
+  /*
+   * Same as above for the attributes and CSS variables tables (the wide-viewport
+   * counterpart of their accordions).
+   */
+  .ReferenceTableRoot {
+    content-visibility: auto;
+    contain-intrinsic-height: auto calc((var(--rows, 8) + 1) * (2.5rem + 1px) - 1px);
+  }
+
+  .ReferenceHeaderRow {
+    display: grid;
+  }
+
+  .ReferenceHeaderTypeCell {
+    display: none;
+  }
+
+  .ReferenceHeaderDefaultCell {
+    display: none;
+  }
+
+  .ReferenceHeaderIconCell {
+    display: none;
+    width: 2.5rem;
+  }
+
+  .ReferenceTrigger {
+    min-height: min-content;
+    scroll-margin-top: 3rem;
+    padding: 0;
+  }
+
+  .ReferenceNameCell {
+    padding-left: 0.75rem;
+  }
+
+  .ReferenceRequired {
+    top: -0.3em;
+    font-size: inherit;
+    color: var(--poppy-t1);
+  }
+
+  .ReferenceTypeCell {
+    display: none;
+    align-items: baseline;
+    padding-left: 0.75rem;
+    font-size: var(--font-size-14);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .ReferenceDefaultCell {
+    display: none;
+    padding-left: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .ReferenceIconWrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ReferenceIcon {
+    transform: translateY(1px);
+  }
+
+  .ReferenceContent {
+    display: flex;
+    flex-direction: column;
+    color: var(--gray-t1);
+  }
+
+  .ReferenceDescription .CodeBlockRoot {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .ReferenceExampleReset > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .ReferenceCompactPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    text-wrap: pretty;
+  }
+
+  .ReferenceWideNameColumn {
+    width: 100%;
+  }
+
+  .ReferenceWideDescriptionColumn {
+    width: 66.6667%;
+  }
+
+  .ReferenceReturnTypeColumn {
+    width: 40%;
+  }
+
+  .ReferenceReturnDescriptionColumn {
+    width: 60%;
+  }
+
+  @media (min-width: 32rem) {
+    .ReferenceHeaderRow {
+      grid-template-columns: 12rem 1fr 2.5rem;
+    }
+
+    .ReferenceTrigger {
+      display: grid;
+      grid-template-columns: 12rem 1fr 2.5rem;
+    }
+
+    .ReferenceHeaderTypeCell {
+      display: table-cell;
+    }
+
+    .ReferenceTypeCell {
+      display: flex;
+    }
+
+    .ReferenceWideNameColumn {
+      width: 12rem;
+    }
+
+    .ReferenceContent {
+      display: grid;
+      gap: 0;
+      grid-template-columns: 12rem 1fr 2.5rem;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .ReferenceHeaderRow {
+      grid-template-columns: 14rem 1fr 2.5rem;
+    }
+
+    .ReferenceTrigger {
+      grid-template-columns: 14rem 1fr 2.5rem;
+    }
+
+    .ReferenceWideNameColumn {
+      width: 14rem;
+    }
+
+    .ReferenceContent {
+      grid-template-columns: 14rem 1fr 2.5rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .ReferenceHeaderDefaultCell {
+      display: table-cell;
+    }
+
+    .ReferenceHeaderIconCell {
+      display: table-cell;
+    }
+
+    .ReferenceDefaultCell {
+      display: block;
+    }
+
+    .ReferenceHeaderRow {
+      grid-template-columns: 5fr 7fr 4.5fr 2.5rem;
+    }
+
+    .ReferenceTrigger {
+      scroll-margin-top: 0;
+      grid-template-columns: 5fr 7fr 4.5fr 2.5rem;
+    }
+
+    [data-hide-default] > .ReferenceHeaderRow {
+      grid-template-columns: 5fr 7fr 2.5rem;
+    }
+
+    [data-hide-default] .ReferenceTrigger {
+      grid-template-columns: 5fr 7fr 2.5rem;
+    }
+
+    .ReferenceWideNameColumn {
+      width: calc(5 / 16.5 * 100%);
+    }
+
+    .ReferenceWideDescriptionColumn {
+      width: calc(11.5 / 16.5 * 100%);
+    }
+
+    .ReferenceContent {
+      grid-template-columns: 5fr 11.5fr 2.5rem;
+    }
+  }
+
+  @media (width < 32rem) {
+    .ReferenceIconWrap {
+      margin-left: auto;
+      margin-right: 0.75rem;
+    }
+
+    .ReferenceContent {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+
+  /* ---- Methods accordion ---- */
+
+  .MethodsHeaderRow {
+    display: grid;
+  }
+
+  .MethodsTrigger {
+    min-height: min-content;
+    scroll-margin-top: 3rem;
+    padding: 0;
+  }
+
+  @media (min-width: 32rem) {
+    .MethodsHeaderRow {
+      grid-template-columns: 1fr 12rem 2.5rem;
+    }
+
+    .MethodsTrigger {
+      display: grid;
+      grid-template-columns: 1fr 12rem 2.5rem;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .MethodsHeaderRow {
+      grid-template-columns: 1fr 14rem 2.5rem;
+    }
+
+    .MethodsTrigger {
+      grid-template-columns: 1fr 14rem 2.5rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .MethodsHeaderRow {
+      grid-template-columns: 8fr 4fr 2.5rem;
+    }
+
+    .MethodsTrigger {
+      scroll-margin-top: 0;
+      grid-template-columns: 8fr 4fr 2.5rem;
+    }
+  }
+
+  /* ---- Properties accordion (class) ---- */
+
+  .PropertiesHeaderModifiersCell {
+    display: none;
+  }
+
+  @media (min-width: 48rem) {
+    .PropertiesHeaderModifiersCell {
+      display: table-cell;
+    }
+  }
+
+  .MethodParamList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .MethodParamList > li + li {
+    margin-top: 0.5rem;
+  }
+
+  .MethodParamRow {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  .MethodParamSep {
+    color: var(--gray-p1);
+  }
+
+  .MethodParamDesc {
+    color: var(--gray-t1);
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    margin-top: 0.25rem;
+    margin-left: 0.125rem;
+  }
+
+  /* ---- Additional types ---- */
+
+  .AdditionalTypeWrapper {
+    display: none;
+    scroll-margin-top: 3rem;
+  }
+
+  .AdditionalTypeWrapper:target,
+  .AdditionalTypeWrapper[data-shown='true'] {
+    display: block;
+  }
+
+  .AdditionalTypeHeading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .AdditionalTypeBackLink {
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    font-weight: var(--font-weight-400);
+    color: var(--gray-p1);
+  }
+
+  .AdditionalTypeBackLink[data-hidden='true'] {
+    display: none;
+  }
+
+  .AdditionalTypeBackLink:hover {
+    color: var(--gray-t2);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .AdditionalTypeBackLink {
+      color: var(--gray-p2);
+    }
+
+    .AdditionalTypeBackLink:hover {
+      color: var(--gray-c2);
+    }
+  }
+
+  .AdditionalTypeReExport {
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    color: var(--gray-t1);
+  }
+
+  .AdditionalTypeCodeBlock {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5rem;
+  }
+
+  @media (min-width: 48rem) {
+    .AdditionalTypeWrapper {
+      scroll-margin-top: 0;
+    }
+  }
+
+  /* ---- Section heading (used in ReferenceTable) ---- */
+
+  .ReferenceSectionHeading {
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-size: var(--font-size-16);
+    line-height: 1.5rem;
+    font-weight: var(--font-weight-700);
+    color: var(--gray-t2);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .ReferenceSectionHeading {
+      color: white;
+    }
+  }
+
+  .ReferenceSectionSubtext {
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    color: var(--gray-t1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .ReferenceSectionSubtext {
+      color: var(--gray-p2);
+    }
+  }
+
+  .ReferenceBlockSpaced {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ReferenceBlockSpaced p:last-of-type,
+  .ReferenceBlock p:last-of-type {
+    margin: 0;
+  }
+
+  .ReferenceBlock {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Syntax highlighting theme using prettylights with global color variables.
+ * Based on prettylights classes with extensions for Base UI docs.
+ * See styles.css for global theme color definitions. */
+
+@layer theme {
+  :root {
+    /* Prettylights syntax colors mapped to global theme */
+    --color-prettylights-syntax-comment: var(--color-gray);
+    --color-prettylights-syntax-constant: var(--color-blue);
+    --color-prettylights-syntax-constant-other-reference-link: var(--color-navy);
+    --color-prettylights-syntax-entity: var(--color-violet);
+    --color-prettylights-syntax-entity-tag: var(--color-green);
+    --color-prettylights-syntax-keyword: var(--color-red);
+    --color-prettylights-syntax-string: var(--color-navy);
+    --color-prettylights-syntax-string-regexp: var(--color-green);
+    --color-prettylights-syntax-variable: var(--color-red);
+    --color-prettylights-syntax-storage-modifier-import: var(--color-navy);
+    --color-prettylights-syntax-brackethighlighter-angle: var(--color-gray);
+    --color-prettylights-syntax-brackethighlighter-unmatched: var(--color-red);
+    --color-prettylights-syntax-sublimelinter-gutter-mark: var(--color-gray);
+
+    /* Invalid/error states */
+    --color-prettylights-syntax-invalid-illegal-bg: var(--color-red);
+    --color-prettylights-syntax-invalid-illegal-text: var(--color-content);
+    --color-prettylights-syntax-carriage-return-bg: var(--color-red);
+    --color-prettylights-syntax-carriage-return-text: var(--color-content);
+
+    /* Markup/markdown (unused in code demos but included for completeness) */
+    --color-prettylights-syntax-markup-heading: var(--color-blue);
+    --color-prettylights-syntax-markup-bold: var(--color-foreground);
+    --color-prettylights-syntax-markup-italic: var(--color-foreground);
+    --color-prettylights-syntax-markup-list: var(--color-red);
+    --color-prettylights-syntax-markup-changed-bg: transparent;
+    --color-prettylights-syntax-markup-changed-text: var(--color-red);
+    --color-prettylights-syntax-markup-deleted-bg: transparent;
+    --color-prettylights-syntax-markup-deleted-text: var(--color-red);
+    --color-prettylights-syntax-markup-inserted-bg: transparent;
+    --color-prettylights-syntax-markup-inserted-text: var(--color-green);
+    --color-prettylights-syntax-markup-ignored-bg: transparent;
+    --color-prettylights-syntax-markup-ignored-text: var(--color-gray);
+    --color-prettylights-syntax-meta-diff-range: var(--color-violet);
+
+    /* Docs-infra extensions for concepts not in prettylights */
+    --color-docs-infra-syntax-number: var(--color-blue);
+    --color-docs-infra-syntax-boolean: var(--color-blue);
+    --color-docs-infra-syntax-nullish: var(--color-gray);
+    --color-docs-infra-syntax-attr-key: var(--color-violet);
+    --color-docs-infra-syntax-attr-value: var(--color-navy);
+    --color-docs-infra-syntax-attr-equals: var(--color-red);
+    --color-docs-infra-syntax-data-attr: var(--color-blue);
+    --color-docs-infra-syntax-css-property: var(--color-foreground);
+    --color-docs-infra-syntax-css-value: var(--color-blue);
+    --color-docs-infra-syntax-this: var(--color-red);
+    --color-docs-infra-syntax-builtin-type: var(--color-blue);
+    --color-docs-infra-syntax-jsx: var(--color-blue);
+    --color-docs-infra-syntax-html-tag: var(--color-green);
+    --color-docs-infra-syntax-jsx-tag: var(--color-blue);
+  }
+}
+
+@layer components {
+  .pl-c {
+    color: var(--color-prettylights-syntax-comment);
+  }
+
+  .pl-c1,
+  .pl-s .pl-v {
+    color: var(--color-prettylights-syntax-constant);
+  }
+
+  .pl-e,
+  .pl-en {
+    color: var(--color-prettylights-syntax-entity);
+  }
+
+  .pl-smi,
+  .pl-s .pl-s1 {
+    color: var(--color-prettylights-syntax-storage-modifier-import);
+  }
+
+  .pl-ent {
+    color: var(--color-prettylights-syntax-entity-tag);
+  }
+
+  .pl-k {
+    color: var(--color-prettylights-syntax-keyword);
+  }
+
+  .pl-s,
+  .pl-pds,
+  .pl-s .pl-pse .pl-s1,
+  .pl-sr,
+  .pl-sr .pl-cce,
+  .pl-sr .pl-sre,
+  .pl-sr .pl-sra {
+    color: var(--color-prettylights-syntax-string);
+  }
+
+  .pl-v,
+  .pl-smw {
+    color: var(--color-prettylights-syntax-variable);
+  }
+
+  .pl-bu {
+    color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+  }
+
+  .pl-ii {
+    color: var(--color-prettylights-syntax-invalid-illegal-text);
+    background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+  }
+
+  .pl-c2 {
+    color: var(--color-prettylights-syntax-carriage-return-text);
+    background-color: var(--color-prettylights-syntax-carriage-return-bg);
+  }
+
+  .pl-sr .pl-cce {
+    font-weight: bold;
+    color: var(--color-prettylights-syntax-string-regexp);
+  }
+
+  .pl-ml {
+    color: var(--color-prettylights-syntax-markup-list);
+  }
+
+  .pl-mh,
+  .pl-mh .pl-en,
+  .pl-ms {
+    font-weight: bold;
+    color: var(--color-prettylights-syntax-markup-heading);
+  }
+
+  .pl-mi {
+    font-style: italic;
+    color: var(--color-prettylights-syntax-markup-italic);
+  }
+
+  .pl-mb {
+    font-weight: bold;
+    color: var(--color-prettylights-syntax-markup-bold);
+  }
+
+  .pl-md {
+    color: var(--color-prettylights-syntax-markup-deleted-text);
+    background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+  }
+
+  .pl-mi1 {
+    color: var(--color-prettylights-syntax-markup-inserted-text);
+    background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+  }
+
+  .pl-mc {
+    color: var(--color-prettylights-syntax-markup-changed-text);
+    background-color: var(--color-prettylights-syntax-markup-changed-bg);
+  }
+
+  .pl-mi2 {
+    color: var(--color-prettylights-syntax-markup-ignored-text);
+    background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+  }
+
+  .pl-mdr {
+    font-weight: bold;
+    color: var(--color-prettylights-syntax-meta-diff-range);
+  }
+
+  .pl-ba {
+    color: var(--color-prettylights-syntax-brackethighlighter-angle);
+  }
+
+  .pl-sg {
+    color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+  }
+
+  .pl-corl {
+    text-decoration: underline;
+    color: var(--color-prettylights-syntax-constant-other-reference-link);
+  }
+
+  /* Docs-infra extensions (.di-* classes) */
+
+  .di-num {
+    color: var(--color-docs-infra-syntax-number);
+  }
+
+  .di-bool {
+    color: var(--color-docs-infra-syntax-boolean);
+  }
+
+  /* Nullish values (null, undefined) */
+  .di-n {
+    color: var(--color-docs-infra-syntax-nullish);
+  }
+
+  .di-ak {
+    color: var(--color-docs-infra-syntax-attr-key);
+  }
+
+  .di-av {
+    color: var(--color-docs-infra-syntax-attr-value);
+  }
+
+  .di-ae {
+    color: var(--color-docs-infra-syntax-attr-equals);
+  }
+
+  .di-da {
+    color: var(--color-docs-infra-syntax-data-attr);
+  }
+
+  .di-cp {
+    color: var(--color-docs-infra-syntax-css-property);
+  }
+
+  .di-cv {
+    color: var(--color-docs-infra-syntax-css-value);
+  }
+
+  .di-this {
+    color: var(--color-docs-infra-syntax-this);
+  }
+
+  .di-bt {
+    color: var(--color-docs-infra-syntax-builtin-type);
+  }
+
+  .di-jsx {
+    color: var(--color-docs-infra-syntax-jsx);
+  }
+
+  .di-ht {
+    color: var(--color-docs-infra-syntax-html-tag);
+  }
+
+  .di-jt {
+    color: var(--color-docs-infra-syntax-jsx-tag);
+  }
+
+  /* Special handling for CSS language */
+  .language-css {
+    --color-prettylights-syntax-variable: var(--color-navy);
+  }
+
+  /* Inline code and highlighted characters - collapse most colors to blue */
+  .MdCode[data-inline] {
+    --color-prettylights-syntax-comment: var(--color-blue);
+    --color-prettylights-syntax-constant: var(--color-blue);
+    --color-prettylights-syntax-entity: var(--color-blue);
+    --color-prettylights-syntax-keyword: var(--color-blue);
+    --color-prettylights-syntax-string: var(--color-blue);
+    --color-prettylights-syntax-variable: var(--color-blue);
+    --color-prettylights-syntax-storage-modifier-import: var(--color-blue);
+    --color-docs-infra-syntax-nullish: var(--color-blue);
+  }
+
+  /* stylelint-disable-next-line selector-pseudo-class-disallowed-list */
+  .MdCode[data-inline]:not(:has(> .di-ht)) {
+    display: inline-block;
+    background-color: var(--color-line-highlight);
+    padding: 0.05em 0.2em;
+  }
+
+  /* Frame highlighting */
+  pre .frame[data-frame-type='highlighted'],
+  pre .frame[data-frame-type='highlighted-unfocused'] {
+    background-color: var(--color-line-highlight);
+  }
+
+  /* Line highlighting */
+  pre .line[data-hl] {
+    background-color: var(--color-line-highlight);
+  }
+
+  pre .line[data-hl='strong'] {
+    background-color: var(--color-line-highlight-strong);
+  }
+
+  /* Mark (text) highlighting */
+  pre mark {
+    display: inline-flex;
+    background-color: var(--color-line-highlight);
+    color: var(--color-blue);
+  }
+
+  pre mark > * {
+    color: var(--color-blue);
+  }
+
+  /* Stronger emphasis for highlighted words inside already highlighted lines */
+  pre mark[data-hl] {
+    background-color: var(--color-line-highlight-strong);
+  }
+
+  /* Inside a strong highlighted line, mark steps up further */
+  pre mark[data-hl='strong'] {
+    background-color: var(--color-line-highlight-strong-mark);
+  }
+}
+
+@layer utilities {
+  .bui-ai-c {
+    align-items: center;
+  }
+
+  .bui-ai-e {
+    align-items: end;
+  }
+
+  .bui-ai-s {
+    align-items: start;
+  }
+}
+
+@layer utilities {
+  .bui-bs-bb {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .bui-d-n {
+    display: none;
+  }
+
+  .bui-d-b {
+    display: block;
+  }
+
+  .bui-d-if {
+    display: inline-flex;
+  }
+
+  .bui-d-f {
+    display: flex;
+  }
+
+  .bui-d-g {
+    display: grid;
+  }
+
+  .bui-d-c {
+    display: contents;
+  }
+
+  @media (min-width: 32rem) {
+    .bp0\:bui-d-b {
+      display: block;
+    }
+
+    .bp0\:bui-d-n {
+      display: none;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .bp2\:bui-d-n {
+      display: none;
+    }
+
+    .bp2\:bui-d-b {
+      display: block;
+    }
+
+    .bp2\:bui-d-if {
+      display: inline-flex;
+    }
+
+    .bp2\:bui-d-f {
+      display: flex;
+    }
+
+    .bp2\:bui-d-g {
+      display: grid;
+    }
+
+    .bp2\:bui-d-c {
+      display: contents;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .bp3\:bui-d-n {
+      display: none;
+    }
+
+    .bp3\:bui-d-b {
+      display: block;
+    }
+
+    .bp3\:bui-d-if {
+      display: inline-flex;
+    }
+
+    .bp3\:bui-d-f {
+      display: flex;
+    }
+
+    .bp3\:bui-d-g {
+      display: grid;
+    }
+
+    .bp3\:bui-d-c {
+      display: contents;
+    }
+  }
+}
+
+@layer utilities {
+  .bui-fd-c {
+    flex-direction: column;
+  }
+}
+
+@layer utilities {
+  .bui-fw-n {
+    flex-wrap: nowrap;
+  }
+
+  .bui-fw-w {
+    flex-wrap: wrap;
+  }
+}
+
+@layer utilities {
+  .bui-fw-1 {
+    font-weight: var(--font-weight-400);
+  }
+
+  .bui-fw-2 {
+    font-weight: var(--font-weight-700);
+  }
+}
+
+@layer utilities {
+  .bui-g-1 {
+    gap: 0.25rem;
+  }
+
+  .bui-g-2 {
+    gap: 0.5rem;
+  }
+
+  .bui-g-4 {
+    gap: 1rem;
+  }
+
+  .bui-g-5 {
+    gap: 1.25rem;
+  }
+
+  .bui-g-6 {
+    gap: 1.5rem;
+  }
+
+  .bui-g-8 {
+    gap: 2.5rem;
+  }
+
+  .bui-g-9 {
+    gap: 3rem;
+  }
+
+  @media (min-width: 32.5rem) {
+    .bp1\:bui-g-1 {
+      gap: 0.25rem;
+    }
+
+    .bp1\:bui-g-2 {
+      gap: 0.5rem;
+    }
+
+    .bp1\:bui-g-4 {
+      gap: 1rem;
+    }
+
+    .bp1\:bui-g-5 {
+      gap: 1.25rem;
+    }
+
+    .bp1\:bui-g-6 {
+      gap: 1.5rem;
+    }
+
+    .bp1\:bui-g-8 {
+      gap: 2.5rem;
+    }
+
+    .bp1\:bui-g-9 {
+      gap: 3rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .bp2\:bui-g-1 {
+      gap: 0.25rem;
+    }
+
+    .bp2\:bui-g-2 {
+      gap: 0.5rem;
+    }
+
+    .bp2\:bui-g-4 {
+      gap: 1rem;
+    }
+
+    .bp2\:bui-g-5 {
+      gap: 1.25rem;
+    }
+
+    .bp2\:bui-g-6 {
+      gap: 1.5rem;
+    }
+
+    .bp2\:bui-g-8 {
+      gap: 2.5rem;
+    }
+
+    .bp2\:bui-g-9 {
+      gap: 3rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .bp3\:bui-g-1 {
+      gap: 0.25rem;
+    }
+
+    .bp3\:bui-g-2 {
+      gap: 0.5rem;
+    }
+
+    .bp3\:bui-g-4 {
+      gap: 1rem;
+    }
+
+    .bp3\:bui-g-5 {
+      gap: 1.25rem;
+    }
+
+    .bp3\:bui-g-6 {
+      gap: 1.5rem;
+    }
+
+    .bp3\:bui-g-8 {
+      gap: 2.5rem;
+    }
+
+    .bp3\:bui-g-9 {
+      gap: 3rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .bp4\:bui-g-1 {
+      gap: 0.25rem;
+    }
+
+    .bp4\:bui-g-2 {
+      gap: 0.5rem;
+    }
+
+    .bp4\:bui-g-4 {
+      gap: 1rem;
+    }
+
+    .bp4\:bui-g-5 {
+      gap: 1.25rem;
+    }
+
+    .bp4\:bui-g-6 {
+      gap: 1.5rem;
+    }
+
+    .bp4\:bui-g-8 {
+      gap: 2.5rem;
+    }
+
+    .bp4\:bui-g-9 {
+      gap: 3rem;
+    }
+  }
+
+  @media (min-width: 102.5rem) {
+    .bp5\:bui-g-1 {
+      gap: 0.25rem;
+    }
+
+    .bp5\:bui-g-2 {
+      gap: 0.5rem;
+    }
+
+    .bp5\:bui-g-4 {
+      gap: 1rem;
+    }
+
+    .bp5\:bui-g-5 {
+      gap: 1.25rem;
+    }
+
+    .bp5\:bui-g-6 {
+      gap: 1.5rem;
+    }
+
+    .bp5\:bui-g-8 {
+      gap: 2.5rem;
+    }
+
+    .bp5\:bui-g-9 {
+      gap: 3rem;
+    }
+  }
+}
+
+@layer utilities {
+  .bui-gar-8 {
+    grid-auto-rows: var(--space-8);
+  }
+}
+
+@layer utilities {
+  .bui-gce-1 {
+    grid-column-end: 1;
+  }
+
+  .bui-gce-2 {
+    grid-column-end: 2;
+  }
+
+  .bui-gce-3 {
+    grid-column-end: 3;
+  }
+
+  .bui-gce-4 {
+    grid-column-end: 4;
+  }
+
+  .bui-gce-5 {
+    grid-column-end: 5;
+  }
+
+  .bui-gce-6 {
+    grid-column-end: 6;
+  }
+
+  .bui-gce-7 {
+    grid-column-end: 7;
+  }
+
+  .bui-gce-8 {
+    grid-column-end: 8;
+  }
+
+  .bui-gce-9 {
+    grid-column-end: 9;
+  }
+
+  @media (min-width: 32.5rem) {
+    .bp1\:bui-gce-1 {
+      grid-column-end: 1;
+    }
+
+    .bp1\:bui-gce-2 {
+      grid-column-end: 2;
+    }
+
+    .bp1\:bui-gce-3 {
+      grid-column-end: 3;
+    }
+
+    .bp1\:bui-gce-4 {
+      grid-column-end: 4;
+    }
+
+    .bp1\:bui-gce-5 {
+      grid-column-end: 5;
+    }
+
+    .bp1\:bui-gce-6 {
+      grid-column-end: 6;
+    }
+
+    .bp1\:bui-gce-7 {
+      grid-column-end: 7;
+    }
+
+    .bp1\:bui-gce-8 {
+      grid-column-end: 8;
+    }
+
+    .bp1\:bui-gce-9 {
+      grid-column-end: 9;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .bp2\:bui-gce-1 {
+      grid-column-end: 1;
+    }
+
+    .bp2\:bui-gce-2 {
+      grid-column-end: 2;
+    }
+
+    .bp2\:bui-gce-3 {
+      grid-column-end: 3;
+    }
+
+    .bp2\:bui-gce-4 {
+      grid-column-end: 4;
+    }
+
+    .bp2\:bui-gce-5 {
+      grid-column-end: 5;
+    }
+
+    .bp2\:bui-gce-6 {
+      grid-column-end: 6;
+    }
+
+    .bp2\:bui-gce-7 {
+      grid-column-end: 7;
+    }
+
+    .bp2\:bui-gce-8 {
+      grid-column-end: 8;
+    }
+
+    .bp2\:bui-gce-9 {
+      grid-column-end: 9;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .bp3\:bui-gce-1 {
+      grid-column-end: 1;
+    }
+
+    .bp3\:bui-gce-2 {
+      grid-column-end: 2;
+    }
+
+    .bp3\:bui-gce-3 {
+      grid-column-end: 3;
+    }
+
+    .bp3\:bui-gce-4 {
+      grid-column-end: 4;
+    }
+
+    .bp3\:bui-gce-5 {
+      grid-column-end: 5;
+    }
+
+    .bp3\:bui-gce-6 {
+      grid-column-end: 6;
+    }
+
+    .bp3\:bui-gce-7 {
+      grid-column-end: 7;
+    }
+
+    .bp3\:bui-gce-8 {
+      grid-column-end: 8;
+    }
+
+    .bp3\:bui-gce-9 {
+      grid-column-end: 9;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .bp4\:bui-gce-1 {
+      grid-column-end: 1;
+    }
+
+    .bp4\:bui-gce-2 {
+      grid-column-end: 2;
+    }
+
+    .bp4\:bui-gce-3 {
+      grid-column-end: 3;
+    }
+
+    .bp4\:bui-gce-4 {
+      grid-column-end: 4;
+    }
+
+    .bp4\:bui-gce-5 {
+      grid-column-end: 5;
+    }
+
+    .bp4\:bui-gce-6 {
+      grid-column-end: 6;
+    }
+
+    .bp4\:bui-gce-7 {
+      grid-column-end: 7;
+    }
+
+    .bp4\:bui-gce-8 {
+      grid-column-end: 8;
+    }
+
+    .bp4\:bui-gce-9 {
+      grid-column-end: 9;
+    }
+  }
+
+  @media (min-width: 102.5rem) {
+    .bp5\:bui-gce-1 {
+      grid-column-end: 1;
+    }
+
+    .bp5\:bui-gce-2 {
+      grid-column-end: 2;
+    }
+
+    .bp5\:bui-gce-3 {
+      grid-column-end: 3;
+    }
+
+    .bp5\:bui-gce-4 {
+      grid-column-end: 4;
+    }
+
+    .bp5\:bui-gce-5 {
+      grid-column-end: 5;
+    }
+
+    .bp5\:bui-gce-6 {
+      grid-column-end: 6;
+    }
+
+    .bp5\:bui-gce-7 {
+      grid-column-end: 7;
+    }
+
+    .bp5\:bui-gce-8 {
+      grid-column-end: 8;
+    }
+
+    .bp5\:bui-gce-9 {
+      grid-column-end: 9;
+    }
+  }
+}
+
+@layer utilities {
+  .bui-gcs-1 {
+    grid-column-start: 1;
+  }
+
+  .bui-gcs-2 {
+    grid-column-start: 2;
+  }
+
+  .bui-gcs-3 {
+    grid-column-start: 3;
+  }
+
+  .bui-gcs-4 {
+    grid-column-start: 4;
+  }
+
+  .bui-gcs-5 {
+    grid-column-start: 5;
+  }
+
+  .bui-gcs-6 {
+    grid-column-start: 6;
+  }
+
+  .bui-gcs-7 {
+    grid-column-start: 7;
+  }
+
+  .bui-gcs-8 {
+    grid-column-start: 8;
+  }
+
+  .bui-gcs-9 {
+    grid-column-start: 9;
+  }
+
+  @media (min-width: 32.5rem) {
+    .bp1\:bui-gcs-1 {
+      grid-column-start: 1;
+    }
+
+    .bp1\:bui-gcs-2 {
+      grid-column-start: 2;
+    }
+
+    .bp1\:bui-gcs-3 {
+      grid-column-start: 3;
+    }
+
+    .bp1\:bui-gcs-4 {
+      grid-column-start: 4;
+    }
+
+    .bp1\:bui-gcs-5 {
+      grid-column-start: 5;
+    }
+
+    .bp1\:bui-gcs-6 {
+      grid-column-start: 6;
+    }
+
+    .bp1\:bui-gcs-7 {
+      grid-column-start: 7;
+    }
+
+    .bp1\:bui-gcs-8 {
+      grid-column-start: 8;
+    }
+
+    .bp1\:bui-gcs-9 {
+      grid-column-start: 9;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .bp2\:bui-gcs-1 {
+      grid-column-start: 1;
+    }
+
+    .bp2\:bui-gcs-2 {
+      grid-column-start: 2;
+    }
+
+    .bp2\:bui-gcs-3 {
+      grid-column-start: 3;
+    }
+
+    .bp2\:bui-gcs-4 {
+      grid-column-start: 4;
+    }
+
+    .bp2\:bui-gcs-5 {
+      grid-column-start: 5;
+    }
+
+    .bp2\:bui-gcs-6 {
+      grid-column-start: 6;
+    }
+
+    .bp2\:bui-gcs-7 {
+      grid-column-start: 7;
+    }
+
+    .bp2\:bui-gcs-8 {
+      grid-column-start: 8;
+    }
+
+    .bp2\:bui-gcs-9 {
+      grid-column-start: 9;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .bp3\:bui-gcs-1 {
+      grid-column-start: 1;
+    }
+
+    .bp3\:bui-gcs-2 {
+      grid-column-start: 2;
+    }
+
+    .bp3\:bui-gcs-3 {
+      grid-column-start: 3;
+    }
+
+    .bp3\:bui-gcs-4 {
+      grid-column-start: 4;
+    }
+
+    .bp3\:bui-gcs-5 {
+      grid-column-start: 5;
+    }
+
+    .bp3\:bui-gcs-6 {
+      grid-column-start: 6;
+    }
+
+    .bp3\:bui-gcs-7 {
+      grid-column-start: 7;
+    }
+
+    .bp3\:bui-gcs-8 {
+      grid-column-start: 8;
+    }
+
+    .bp3\:bui-gcs-9 {
+      grid-column-start: 9;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .bp4\:bui-gcs-1 {
+      grid-column-start: 1;
+    }
+
+    .bp4\:bui-gcs-2 {
+      grid-column-start: 2;
+    }
+
+    .bp4\:bui-gcs-3 {
+      grid-column-start: 3;
+    }
+
+    .bp4\:bui-gcs-4 {
+      grid-column-start: 4;
+    }
+
+    .bp4\:bui-gcs-5 {
+      grid-column-start: 5;
+    }
+
+    .bp4\:bui-gcs-6 {
+      grid-column-start: 6;
+    }
+
+    .bp4\:bui-gcs-7 {
+      grid-column-start: 7;
+    }
+
+    .bp4\:bui-gcs-8 {
+      grid-column-start: 8;
+    }
+
+    .bp4\:bui-gcs-9 {
+      grid-column-start: 9;
+    }
+  }
+
+  @media (min-width: 102.5rem) {
+    .bp5\:bui-gcs-1 {
+      grid-column-start: 1;
+    }
+
+    .bp5\:bui-gcs-2 {
+      grid-column-start: 2;
+    }
+
+    .bp5\:bui-gcs-3 {
+      grid-column-start: 3;
+    }
+
+    .bp5\:bui-gcs-4 {
+      grid-column-start: 4;
+    }
+
+    .bp5\:bui-gcs-5 {
+      grid-column-start: 5;
+    }
+
+    .bp5\:bui-gcs-6 {
+      grid-column-start: 6;
+    }
+
+    .bp5\:bui-gcs-7 {
+      grid-column-start: 7;
+    }
+
+    .bp5\:bui-gcs-8 {
+      grid-column-start: 8;
+    }
+
+    .bp5\:bui-gcs-9 {
+      grid-column-start: 9;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .bp2\:bui-gcs-3 {
+      grid-column-start: 3;
+    }
+
+    .bp2\:bui-gcs-5 {
+      grid-column-start: 5;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .bp3\:bui-gcs-3 {
+      grid-column-start: 3;
+    }
+
+    .bp3\:bui-gcs-5 {
+      grid-column-start: 5;
+    }
+  }
+}
+
+@layer utilities {
+  .bui-gtc-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bui-gtc-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bui-gtc-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .bui-gtc-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @media (min-width: 32.5rem) {
+    .bp1\:bui-gtc-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bp1\:bui-gtc-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bp1\:bui-gtc-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .bp1\:bui-gtc-8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .bp2\:bui-gtc-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bp2\:bui-gtc-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bp2\:bui-gtc-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .bp2\:bui-gtc-8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .bp3\:bui-gtc-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bp3\:bui-gtc-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bp3\:bui-gtc-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .bp3\:bui-gtc-8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .bp4\:bui-gtc-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bp4\:bui-gtc-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bp4\:bui-gtc-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .bp4\:bui-gtc-8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @media (min-width: 102.5rem) {
+    .bp5\:bui-gtc-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bp5\:bui-gtc-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bp5\:bui-gtc-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .bp5\:bui-gtc-8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+}
+
+@layer utilities {
+  .bui-h-100 {
+    height: 100%;
+  }
+}
+
+@layer utilities {
+  .bui-jc-c {
+    justify-content: center;
+  }
+
+  .bui-jc-fs {
+    justify-content: flex-start;
+  }
+
+  .bui-jc-fe {
+    justify-content: flex-end;
+  }
+
+  .bui-jc-sb {
+    justify-content: space-between;
+  }
+}
+
+@layer utilities {
+  .bui-l-50 {
+    left: 50%;
+  }
+}
+
+@layer utilities {
+  .bui-mt-5 {
+    margin-top: 1.25rem;
+  }
+
+  .bui-mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .bui-ml--0\.5 {
+    margin-left: -0.125rem;
+  }
+
+  .bui-ml-a {
+    margin-left: auto;
+  }
+
+  .bui-mr-1 {
+    margin-right: 0.25rem;
+  }
+
+  .bui-my-4 {
+    margin-block: 1rem;
+  }
+}
+
+@layer utilities {
+  .bui-ol-n {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .bui-p-1 {
+    padding: 0.25rem;
+  }
+
+  .bui-p-4 {
+    padding: 1rem;
+  }
+
+  .bui-p-5 {
+    padding: 1.25rem;
+  }
+
+  .bui-p-6 {
+    padding: 1.5rem;
+  }
+
+  .bui-py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .bui-px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .bui-py-7 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .bui-px-9 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .bui-pl-3 {
+    padding-left: 0.75rem;
+  }
+
+  @media (min-width: 32.5rem) {
+    .bp1\:bui-p-1 {
+      padding: 0.25rem;
+    }
+
+    .bp1\:bui-p-4 {
+      padding: 1rem;
+    }
+
+    .bp1\:bui-p-5 {
+      padding: 1.25rem;
+    }
+
+    .bp1\:bui-py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .bp1\:bui-px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .bp1\:bui-py-7 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .bp1\:bui-px-9 {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .bp2\:bui-p-1 {
+      padding: 0.25rem;
+    }
+
+    .bp2\:bui-p-4 {
+      padding: 1rem;
+    }
+
+    .bp2\:bui-p-5 {
+      padding: 1.25rem;
+    }
+
+    .bp2\:bui-py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .bp2\:bui-px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .bp2\:bui-py-7 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .bp2\:bui-px-9 {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .bp3\:bui-p-1 {
+      padding: 0.25rem;
+    }
+
+    .bp3\:bui-p-4 {
+      padding: 1rem;
+    }
+
+    .bp3\:bui-p-5 {
+      padding: 1.25rem;
+    }
+
+    .bp3\:bui-py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .bp3\:bui-px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .bp3\:bui-py-7 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .bp3\:bui-px-9 {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .bp4\:bui-p-1 {
+      padding: 0.25rem;
+    }
+
+    .bp4\:bui-p-4 {
+      padding: 1rem;
+    }
+
+    .bp4\:bui-p-5 {
+      padding: 1.25rem;
+    }
+
+    .bp4\:bui-py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .bp4\:bui-px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .bp4\:bui-py-7 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .bp4\:bui-px-9 {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 102.5rem) {
+    .bp5\:bui-p-1 {
+      padding: 0.25rem;
+    }
+
+    .bp5\:bui-p-4 {
+      padding: 1rem;
+    }
+
+    .bp5\:bui-p-5 {
+      padding: 1.25rem;
+    }
+
+    .bp5\:bui-py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .bp5\:bui-px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .bp5\:bui-py-7 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .bp5\:bui-px-9 {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}
+
+@layer utilities {
+  .bui-p-a {
+    position: absolute;
+  }
+}
+
+@layer utilities {
+  .bui-scroll-mt-4 {
+    scroll-margin-top: 1rem;
+  }
+}
+
+@layer utilities {
+  .bui-ta-l {
+    text-align: left;
+  }
+
+  .bui-ta-c {
+    text-align: center;
+  }
+
+  .bui-ta-r {
+    text-align: right;
+  }
+}
+
+@layer utilities {
+  .bui-t-8 {
+    top: 2.5rem;
+  }
+}
+
+@layer utilities {
+  .bui-v-h {
+    visibility: hidden;
+  }
+}
+
+@layer utilities {
+  .bui-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+@layer utilities {
+  .bui-w-10 {
+    width: 2.5rem;
+  }
+
+  .bui-w-full {
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  .bui-ws-nw {
+    white-space: nowrap;
+  }
+}
+
+/* ═══ Safelist to generate Tailwind classes ═══ */
+
+/* Tailwind demos */
+
+/* Enable all CSS files in the docs to ensure that all Tailwind CSS vars are available e.g. `--font-serif` */
+
+/* Disable Tailwind CSS vars in CSS Modules demos */
+
+/* ═══ Tailwind theme ═══ */
+/* Register demo-relevant tokens so Tailwind can generate utility classes. */
+
+:root {
+  /* Handy link to the default Tailwind theme: https://github.com/tailwindlabs/tailwindcss/blob/next/packages/tailwindcss/theme.css */
+
+  /* Color */ /* Disable all Tailwind colors to only add our own */
+  --color-white: white;
+  --color-black: black;
+
+  --color-neutral-50: oklch(98.5% 0 0deg);
+  --color-neutral-100: oklch(97% 0 0deg);
+  --color-neutral-200: oklch(92.2% 0 0deg);
+  --color-neutral-300: oklch(87% 0 0deg);
+  --color-neutral-400: oklch(70.8% 0 0deg);
+  --color-neutral-500: oklch(55.6% 0 0deg);
+  --color-neutral-600: oklch(43.9% 0 0deg);
+  --color-neutral-700: oklch(37.1% 0 0deg);
+  --color-neutral-800: oklch(26.9% 0 0deg);
+  --color-neutral-900: oklch(20.5% 0 0deg);
+  --color-neutral-950: oklch(14.5% 0 0deg);
+
+  --color-blue-500: oklch(62.3% 0.214 259.815deg);
+  --color-blue-700: oklch(48.8% 0.243 264.376deg);
+  --color-blue-800: oklch(42.4% 0.199 265.638deg);
+
+  --color-red-400: oklch(70.4% 0.191 22.216deg);
+  --color-red-700: oklch(50.5% 0.213 27.518deg);
+
+  --color-green-400: oklch(79.2% 0.209 151.711deg);
+  --color-green-700: oklch(52.7% 0.154 150.069deg);
+
+  /* Typography */
+  --font-mono:
+    'Paper Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  --font-sans: 'die grotesk a', system-ui, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', Times, 'Noto Serif', 'DejaVu Serif', serif;
+
+}
+
+/* ═══ Demo isolation ═══ */
+/* Undo `tailwindcss/preflight` in non-Tailwind demos. */
+
+@layer base {
+  /*
+   * Disable Die Grotesk OpenType features in demos and regression tests.
+   * We disable it also on all portal elements because popups from demos are rendered outside [data-demo].
+   */
+  [data-demo],
+  [data-base-ui-portal],
+  [data-testid='testcase'] {
+    font-feature-settings: normal;
+  }
+
+  [data-demo]:not([data-demo='tailwind']) * {
+    all: revert-layer;
+  }
+}
+
+/* ═══ Docs-only theme tokens ═══ */
+
+@layer theme {
+  :root {
+    /* Colors */
+    --gray-s1: hsl(0deg 0% 99%);
+    --gray-s2: hsl(0deg 0% 97.5%);
+    --gray-c1: hsl(0deg 0% 95.25%);
+    --gray-c2: hsl(0deg 0% 94%);
+    --gray-c3: hsl(0deg 0% 88%);
+    --gray-p1: hsl(0deg 0% 55%);
+    --gray-p2: hsl(0deg 0% 51%);
+    --gray-t1: hsl(0deg 0% 46.4%);
+    --gray-t2: hsl(0deg 0% 18%);
+
+    --indigo-s1: hsl(204deg 100% 98.75%);
+    --indigo-s2: hsl(198deg 100% 97.5%);
+    --indigo-c1: hsl(204deg 100% 95%);
+    --indigo-c2: hsl(205deg 100% 93.5%);
+    --indigo-c3: hsl(206deg 100% 92.5%);
+    --indigo-p1: hsl(214deg 98% 50%);
+    --indigo-p2: hsl(207deg 96% 48%);
+    --indigo-t1: hsl(221deg 74% 51%);
+    --indigo-t2: hsl(221deg 74% 19.8%);
+
+    --blackA-1: hsl(0deg 0% 0% / 4%);
+    --blackA-2: hsl(0deg 0% 0% / 8%);
+    --blackA-3: hsl(0deg 0% 0% / 12%);
+    --blackA-4: hsl(0deg 0% 0% / 16%);
+    --blackA-5: hsl(0deg 0% 0% / 24%);
+    --blackA-6: hsl(0deg 0% 0% / 64%);
+
+    --whiteA-1: hsl(0deg 0% 100% / 4%);
+    --whiteA-2: hsl(0deg 0% 100% / 8%);
+    --whiteA-3: hsl(0deg 0% 100% / 12%);
+    --whiteA-4: hsl(0deg 0% 100% / 16%);
+    --whiteA-5: hsl(0deg 0% 100% / 24%);
+    --whiteA-6: hsl(0deg 0% 100% / 64%);
+
+    --poppy-t1: hsl(10deg 86% 48%);
+    --blue-t1: hsl(211deg 100% 49%);
+    --green-t1: hsl(156deg 81% 29%);
+    --orange-t1: hsl(14deg 96% 52.5%);
+    --pink-t1: hsl(316deg 84% 51%);
+    --grape-t1: hsl(276deg 66% 54%);
+    --lime-t1: hsl(91deg 64% 38.75%);
+
+    /* Legacy colors */
+    --color-blue: oklch(45% 50% 264deg);
+    --color-red: oklch(50% 55% 31deg);
+
+    /* Functional colors */
+    --color-content: white;
+    --color-background: var(--gray-s2);
+    --color-foreground: var(--gray-t2);
+    --color-border: var(--blackA-2);
+    --color-popup: white;
+    --color-gridline: var(--gray-c3);
+    --color-selection: hsl(0deg 0% 92%);
+    --color-line-highlight: hsl(205deg 100% 96%);
+    --color-line-highlight-strong: hsl(205deg 100% 90%);
+    --color-line-highlight-strong-mark: hsl(205deg 100% 80%);
+
+    /* Syntax highlighting */
+    --color-gray: var(--gray-t1);
+    --color-navy: oklch(31% 25% 264deg);
+    --color-green: oklch(46% 30% 150deg);
+    --color-violet: oklch(40% 60% 300deg);
+
+    /* Font family */
+    --font-sans-b: 'die grotesk b', system-ui, sans-serif;
+
+    /* Font size */
+    --font-size-13: 0.8125rem; /* 13px */
+    --font-size-14: 0.875rem; /* 14px */
+    --font-size-15: 0.9375rem; /* 15px */
+    --font-size-16: 1rem; /* 16px */
+    --font-size-18: 1.125rem; /* 18px */
+    --font-size-21: 1.3125rem; /* 21px */
+    --font-size-24: 1.5rem; /* 24px */
+    --font-size-34: 2.125rem; /* 34px */
+    --font-size-42: 2.625rem; /* 42px */
+
+    /* Font weight */
+    --font-weight-400: 400;
+    --font-weight-700: 700;
+
+    /* Spacing (`--spacing-*` is used by Tailwind) */
+    --space-4: 0.25rem;
+    --space-8: 0.5rem;
+    --space-12: 0.75rem;
+    --space-16: 1rem;
+    --space-20: 1.25rem;
+    --space-24: 1.5rem;
+    --space-28: 1.75rem;
+    --space-32: 2rem;
+    --space-36: 2.25rem;
+    --space-40: 2.5rem;
+    --space-48: 3rem;
+
+    /* Radius */
+    --radius-2: 0.125rem;
+    --radius-3: 0.1875rem;
+    --radius-4: 0.25rem;
+    --radius-6: 0.375rem;
+    --radius-8: 0.5rem;
+    --radius-12: 0.75rem;
+    --radius-16: 1rem;
+    --radius-24: 1.5rem;
+    --radius-36: 2.25rem;
+    --radius-pill: 9999px;
+    --radius-circle: 50%;
+
+    /* Shadow */
+    --shadow-1:
+      0 1px 1px 0 var(--blackA-1), 0 2px 1px -1px var(--blackA-1), 0 1px 3px 0 var(--blackA-1);
+    --shadow-2:
+      0 1px 1px 0 var(--blackA-1), 0 1px 3px -1px var(--blackA-1), 0 4px 8px -2px var(--blackA-1);
+    --shadow-3:
+      0 1px 1px 0 var(--blackA-1), 0 2px 6px -1px var(--blackA-1), 0 6px 12px -3px var(--blackA-1),
+      0 8px 16px -4px var(--blackA-1);
+    --shadow-4:
+      0 1px 1px 0 var(--blackA-1), 0 2px 4px -1px var(--blackA-1), 0 4px 8px -2px var(--blackA-1),
+      0 12px 32px -6px var(--blackA-3), 0 20px 48px -10px var(--blackA-1);
+    --shadow-5:
+      0 10px 32px var(--blackA-5), 0 1px 1px var(--blackA-1), 0 4px 6px var(--blackA-2),
+      0 1px 1px var(--blackA-2), 0 24px 68px var(--blackA-4);
+
+    /* Breakpoints (use custom-media.css where possible) */
+    --breakpoint-max-layout-width: 89rem; /* 1424px - this is a 1440px device minus 16px scrollbar */
+
+    --ease-out-fast: cubic-bezier(0.45, 1.005, 0, 1.005);
+    --ease-in-slow: cubic-bezier(0.375, 0.015, 0.545, 0.455);
+    --header-height: 3rem;
+  }
+
+  @media (min-width: 64rem) {
+    :root {
+      --header-height: 4rem;
+    }
+  }
+
+  /* ═══ Dark mode overrides ═══ */
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --gray-s1: hsl(0deg 0% 7.5%);
+      --gray-s2: hsl(0deg 0% 10%);
+      --gray-c1: hsl(0deg 0% 13%);
+      --gray-c2: hsl(0deg 0% 16%);
+      --gray-c3: hsl(0deg 0% 32%);
+      --gray-p1: hsl(0deg 0% 60%);
+      --gray-p2: hsl(0deg 0% 64%);
+      --gray-t1: hsl(0deg 0% 70%);
+      --gray-t2: hsl(0deg 0% 90%);
+
+      --indigo-s1: hsl(223deg 38% 10%);
+      --indigo-s2: hsl(223deg 42% 12%);
+      --indigo-c1: hsl(222deg 50% 16%);
+      --indigo-c2: hsl(221deg 56% 20%);
+      --indigo-c3: hsl(220deg 62% 24%);
+      --indigo-p1: hsl(214deg 94% 60%);
+      --indigo-p2: hsl(207deg 96% 64%);
+      --indigo-t1: hsl(214deg 93% 66%);
+      --indigo-t2: hsl(210deg 100% 86%);
+
+      --poppy-t1: hsl(10deg 96% 63%);
+      --blue-t1: hsl(210deg 98% 66%);
+      --green-t1: hsl(156deg 68% 54%);
+      --orange-t1: hsl(26deg 98% 63%);
+      --pink-t1: hsl(316deg 86% 68%);
+      --grape-t1: hsl(276deg 86% 70%);
+      --lime-t1: hsl(91deg 72% 56%);
+
+      --color-blue: oklch(69% 50% 264deg);
+      --color-red: oklch(80% 55% 31deg);
+
+      /* Functional colors */
+      --color-content: black;
+      --color-background: black;
+      --color-border: var(--whiteA-5);
+      --color-popup: var(--gray-s1);
+      --color-gridline: var(--gray-c1);
+      --color-selection: hsl(0deg 0% 18%);
+      --color-line-highlight: hsl(205deg 45% 12%);
+      --color-line-highlight-strong: hsl(205deg 55% 16%);
+      --color-line-highlight-strong-mark: hsl(205deg 65% 20%);
+
+      /* Syntax highlighting */
+      --color-green: oklch(75% 25% 150deg);
+      --color-navy: oklch(85% 25% 264deg);
+      --color-violet: oklch(80% 60% 280deg);
+
+      /* Shadow */
+      --shadow-1: transparent;
+      --shadow-2: transparent;
+      --shadow-3: transparent;
+      --shadow-4: transparent;
+      --shadow-5: transparent;
+    }
+  }
+
+  /* ═══ Disable docs-specific variables in demos ═══ */
+  /* Keep this in sync with the :root block above. */
+
+  [data-demo] {
+    --gray-s1: initial;
+    --gray-s2: initial;
+    --gray-c1: initial;
+    --gray-c2: initial;
+    --gray-c3: initial;
+    --gray-p1: initial;
+    --gray-p2: initial;
+    --gray-t1: initial;
+    --gray-t2: initial;
+
+    --indigo-s1: initial;
+    --indigo-s2: initial;
+    --indigo-c1: initial;
+    --indigo-c2: initial;
+    --indigo-c3: initial;
+    --indigo-p1: initial;
+    --indigo-p2: initial;
+    --indigo-t1: initial;
+    --indigo-t2: initial;
+
+    --blackA-1: initial;
+    --blackA-2: initial;
+    --blackA-3: initial;
+    --blackA-4: initial;
+    --blackA-5: initial;
+    --blackA-6: initial;
+
+    --whiteA-1: initial;
+    --whiteA-2: initial;
+    --whiteA-3: initial;
+    --whiteA-4: initial;
+    --whiteA-5: initial;
+    --whiteA-6: initial;
+
+    --poppy-t1: initial;
+    --blue-t1: initial;
+    --green-t1: initial;
+    --orange-t1: initial;
+    --pink-t1: initial;
+    --grape-t1: initial;
+    --lime-t1: initial;
+
+    --radius-2: initial;
+    --radius-3: initial;
+    --radius-4: initial;
+    --radius-6: initial;
+    --radius-8: initial;
+    --radius-12: initial;
+    --radius-16: initial;
+    --radius-24: initial;
+    --radius-36: initial;
+    --radius-pill: initial;
+    --radius-circle: initial;
+
+    --space-4: initial;
+    --space-8: initial;
+    --space-12: initial;
+    --space-16: initial;
+    --space-20: initial;
+    --space-24: initial;
+    --space-28: initial;
+    --space-32: initial;
+    --space-36: initial;
+    --space-40: initial;
+    --space-48: initial;
+
+    --color-content: initial;
+    --color-background: initial;
+    --color-foreground: initial;
+    --color-border: initial;
+    --color-popup: initial;
+    --color-gridline: initial;
+    --color-highlight: initial;
+    --color-line-highlight: initial;
+    --color-line-highlight-strong: initial;
+    --color-line-highlight-strong-mark: initial;
+
+    --color-gray: initial;
+    --color-navy: initial;
+    --color-green: initial;
+    --color-violet: initial;
+
+    --shadow-1: initial;
+    --shadow-2: initial;
+    --shadow-3: initial;
+    --shadow-4: initial;
+    --shadow-5: initial;
+
+    --font-size-13: initial;
+    --font-size-14: initial;
+    --font-size-15: initial;
+    --font-size-16: initial;
+    --font-size-18: initial;
+    --font-size-21: initial;
+    --font-size-24: initial;
+    --font-size-34: initial;
+    --font-size-42: initial;
+
+    --ease-out-fast: initial;
+    --ease-in-slow: initial;
+    --header-height: initial;
+
+    --breakpoint-max-layout-width: initial;
+  }
+}
+
+/* ═══ Global rules ═══ */
+
+@layer all {
+  html {
+    color-scheme: light dark;
+    word-break: break-word;
+  }
+
+  body {
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Stable scrollbar */
+    overflow-y: scroll;
+    /* Die Grotesk OpenType features */
+    font-feature-settings:
+      'ss02' 1,
+      'zero' 1;
+  }
+
+  ::selection {
+    background-color: var(--color-selection);
+  }
+
+  /* Debugging red text? You just forgot to set or inherit color in your demo. */
+  :where([data-demo]) {
+    color: red;
+  }
+  /* Controls usually have #000 text that needs to be explicitly overridden; only Tailwind reset handles it */
+  :where([data-demo]:not([data-demo='tailwind'])) :where(button, input, textarea) {
+    color: red;
+  }
+}
+
+@layer all, base, theme, components, utilities;
+
+/* 512px */
+
+/* 640px */
+
+/* 768px */
+
+/* 1024px */
+
+/* 1280px */
+
+/* stylelint-disable-next-line custom-media-pattern */
+
+/* 1536px */
+
+@layer components {
+  .MdCode {
+    margin-inline: 0.1em;
+  }
+
+  pre .MdCode {
+    margin-inline: 0;
+  }
+
+  .MdH1 {
+    margin-bottom: 1rem;
+    font-family: var(--font-sans-b);
+    font-size: var(--font-size-34);
+    line-height: 2.7rem;
+    font-weight: var(--font-weight-700);
+    text-wrap: balance;
+  }
+
+  .MdH2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+    font-family: var(--font-sans-b);
+    font-size: var(--font-size-21);
+    line-height: 1.625rem;
+    font-weight: var(--font-weight-700);
+    text-wrap: balance;
+  }
+
+  .Subtitle + .MdH2 {
+    margin-top: 0;
+  }
+
+  .MdH3 {
+    margin-top: 2rem;
+    margin-bottom: 0.375rem;
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+    font-family: var(--font-sans-b);
+    font-size: var(--font-size-18);
+    line-height: 1.75rem;
+    font-weight: var(--font-weight-700);
+    text-wrap: balance;
+  }
+
+  .MdH4,
+  .MdH5,
+  .MdH6 {
+    margin-top: 2rem;
+    margin-bottom: 0.375rem;
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+    font-weight: var(--font-weight-700);
+    text-wrap: balance;
+  }
+
+  @media (min-width: 84rem) {
+    .MdH2,
+    .MdH3,
+    .MdH4,
+    .MdH5,
+    .MdH6 {
+      scroll-margin-top: 1.5rem;
+    }
+  }
+
+  .MdP {
+    margin-bottom: 1rem;
+  }
+
+  .MdListItem {
+    margin-bottom: 0.125rem;
+  }
+
+  .MdListItem > p {
+    margin-bottom: 0.5rem;
+  }
+
+  .MdUl {
+    margin-bottom: 1rem;
+    margin-left: 1.125rem;
+    list-style-type: disc;
+  }
+
+  .MdOl {
+    margin-bottom: 1rem;
+    margin-left: 1.75rem;
+    list-style-type: decimal;
+  }
+
+  .MdTable {
+    margin-block: 1.25rem;
+  }
+
+  .MdReferenceBlock {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .MdFigure {
+    margin-top: var(--space-20);
+    margin-bottom: var(--space-24);
+  }
+
+  .MdEm {
+    font-family: var(--font-serif);
+    /* Adjust to visually match the sans-serif font */
+    font-size: 1.06em;
+  }
+
+  .MdHeadingBadge {
+    /* inline-block keeps the badge out of the heading link's hover underline */
+    display: inline-block;
+    vertical-align: middle;
+    margin-inline-start: 0.35em;
+    color: var(--poppy-t1);
+    line-height: inherit;
+    -webkit-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    font-weight: var(--font-weight-700);
+    letter-spacing: 0.035em;
+    padding-inline: 2px;
+    translate: 0 -0.15em;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+}
+
+/* Keep layer order stable when this file is emitted from a client CSS chunk. */
+
+@layer all, base, theme, components, utilities;
+
+/* 512px */
+
+/* 640px */
+
+/* 768px */
+
+/* 1024px */
+
+/* 1280px */
+
+/* stylelint-disable-next-line custom-media-pattern */
+
+/* 1536px */
+
+@layer base {
+  /* Scope body styles to only apply when docs layout is present */
+  body {
+    position: relative; /* iOS 26 `position: absolute` backdrops */
+    min-width: 320px;
+    line-height: 1.5;
+    /* It's also the iOS footer overscroll background */
+    background-color: var(--color-content);
+    color: var(--color-foreground);
+  }
+}
+
+@layer components {
+  .RootLayout {
+    z-index: 0;
+    position: relative;
+
+    --root-layout-padding-x: 0rem;
+    padding-inline: var(--root-layout-padding-x);
+
+    @media (min-width: 64rem) {
+      --root-layout-padding-x: 3rem;
+    }
+  }
+
+  .RootLayoutContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    min-height: 100dvh;
+    max-width: calc(var(--breakpoint-max-layout-width) - var(--root-layout-padding-x) * 2);
+
+    @media (min-width: 64rem) {
+      padding-block: var(--header-height);
+      padding-bottom: 0;
+    }
+  }
+
+  .RootLayoutContent {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: var(--color-content);
+  }
+
+  .ContentLayoutRoot {
+    --sidebar-width: 17.5rem;
+    --content-layout-padding-x: 1.5rem;
+
+    display: grid;
+    align-items: start;
+    padding-top: var(--header-height);
+    padding-inline: var(--content-layout-padding-x);
+    grid-template-columns: 1fr;
+
+    @media (min-width: 40rem) {
+      --content-layout-padding-x: 2.5rem;
+    }
+
+    @media (min-width: 48rem) {
+      --content-layout-padding-x: 3rem;
+    }
+
+    @media (min-width: 64rem) {
+      --content-layout-padding-x: 0rem;
+      padding-top: 0;
+      grid-template-columns: var(--sidebar-width) 1fr 3rem;
+    }
+
+    @media (min-width: 84rem) {
+      grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
+    }
+  }
+
+  .ContentLayoutMain {
+    min-width: 0;
+    max-width: 48rem;
+    width: 100%;
+
+    margin: 0 auto;
+
+    @media (min-width: 64rem) {
+      margin: 0;
+      grid-column: 2;
+    }
+
+    @media (min-width: 84rem) {
+      margin: 0;
+    }
+  }
+}
+
+/* Keep layer order stable when this file is emitted from a client CSS chunk. */
+
+@layer all, base, theme, components, utilities;
+
+/* 512px */
+
+/* 640px */
+
+/* 768px */
+
+/* 1024px */
+
+/* 1280px */
+
+/* stylelint-disable-next-line custom-media-pattern */
+
+/* 1536px */
+
+@layer components {
+  .SideNavRoot {
+    --side-nav-item-height: 1.75rem;
+    --side-nav-item-line-height: 1.375rem;
+    --side-nav-item-padding-y: calc(
+      var(--side-nav-item-height) / 2 - var(--side-nav-item-line-height) / 2
+    );
+    --side-nav-link-padding-x: 0.5rem;
+
+    --side-nav-scrollbar-thumb-width: 0.25rem;
+    --side-nav-scrollbar-width: 1.5rem;
+    --side-nav-scrollbar-gap-left: 1rem;
+    --side-nav-scrollbar-gap-right: 2.5rem;
+    /* Pull the sidebar's right edge in to leave a gap before the main content */
+    --side-nav-gap-right: calc(
+      var(--side-nav-scrollbar-gap-right) - var(--side-nav-scrollbar-width) / 2 +
+        var(--side-nav-scrollbar-thumb-width) / 2
+    );
+
+    font-size: var(--font-size-14);
+    line-height: 1.375rem;
+
+    display: none;
+
+    @media (min-width: 64rem) {
+      display: block;
+      position: fixed;
+      top: var(--header-height);
+      /* Extend left by the link padding so the hover/active pill can bleed past
+         the text (logo) alignment line without being clipped by the viewport. */
+      left: calc(
+        max(
+            var(--root-layout-padding-x),
+            calc(50% - var(--breakpoint-max-layout-width) / 2 + var(--root-layout-padding-x))
+          ) -
+          var(--side-nav-link-padding-x)
+      );
+      width: calc(
+        var(--sidebar-width) - var(--side-nav-gap-right) + var(--side-nav-link-padding-x)
+      );
+    }
+  }
+
+  .SideNavViewport {
+    max-height: calc(100dvh - var(--header-height));
+    padding: 0
+      calc(
+        var(--side-nav-scrollbar-gap-left) + var(--side-nav-scrollbar-width) / 2 +
+          var(--side-nav-scrollbar-thumb-width) / 2
+      )
+      2.5rem var(--side-nav-link-padding-x);
+
+    /* Scroll containers are focusable */
+    outline: 0;
+
+    /* stylelint-disable-next-line selector-pseudo-class-disallowed-list */
+    .SideNavRoot:has(&:focus-visible)::after {
+      content: '';
+      inset: 0 -2px;
+      pointer-events: none;
+      position: absolute;
+      outline: 2px solid var(--gray-t2);
+      outline-offset: -2px;
+    }
+  }
+
+  .SideNavScrollbar {
+    display: flex;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    /* Click target width */
+    width: var(--side-nav-scrollbar-width);
+
+    opacity: 0;
+    transition: opacity 200ms 500ms;
+
+    &:active,
+    &[data-scrolling],
+    .SideNavViewport:focus-visible + & {
+      transition-duration: 0ms;
+      transition-delay: 0ms;
+      opacity: 1;
+    }
+  }
+
+  .SideNavScrollbarThumb {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      /* Visible thumb width */
+      width: var(--side-nav-scrollbar-thumb-width);
+      border-radius: var(--radius-4);
+      background-color: var(--gray-p2);
+    }
+  }
+
+  .SideNavSection:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .SideNavHeading {
+    display: inline-flex;
+    padding-block: var(--side-nav-item-padding-y);
+    font-weight: var(--font-weight-400);
+    color: var(--gray-t1);
+  }
+
+  .SideNavSeparator {
+    margin-block: 1rem;
+    border: none;
+    border-top: 1px solid var(--color-border);
+    width: var(--space-32);
+  }
+
+  .SideNavItem {
+    display: flex;
+  }
+
+  .SideNavLink {
+    display: block;
+    flex-grow: 1;
+    padding-block: calc(var(--side-nav-item-padding-y) - 1px);
+    padding-inline: var(--side-nav-link-padding-x);
+    /* Negative offset by the left padding so link text aligns with the heading
+       and logo while the pill keeps its padding (bleeding into the viewport). */
+    margin-inline-start: calc(-1 * var(--side-nav-link-padding-x));
+    border-block: 1px solid transparent; /* Maintain a 1px gap between active an inactive item */
+    background-clip: padding-box;
+    border-radius: var(--radius-6);
+    -webkit-user-select: none;
+    user-select: none;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
+        text-decoration-color: var(--gray-t2);
+      }
+    }
+
+    &[data-active] {
+      border: none;
+      padding-block: var(--side-nav-item-padding-y);
+      padding-inline: var(--side-nav-link-padding-x);
+      background-color: var(--gray-s2);
+      outline: 1px solid var(--gray-c2);
+      outline-offset: -1px;
+      font-weight: var(--font-weight-400);
+      word-spacing: -0.005em;
+    }
+
+    &:focus-visible {
+      z-index: 1;
+      outline: 2px solid var(--gray-t2);
+      /* Fully inset (>= outline width) so the ring isn't clipped by the
+         scroll viewport's overflow where the pill bleeds to its edge */
+      outline-offset: -2px;
+    }
+  }
+
+  .SideNavBadge {
+    /* inline-block makes the badge an atomic inline so it doesn't inherit the
+       link's hover underline */
+    display: inline-block;
+    vertical-align: middle;
+    margin-inline-start: 4px;
+    color: var(--poppy-t1);
+    line-height: inherit;
+    -webkit-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    font-weight: var(--font-weight-700);
+    letter-spacing: 0.035em;
+    padding-inline: 2px;
+    translate: 0 -2px;
+    word-break: keep-all;
+  }
+
+  .SideNavLinkIconContainer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  .SideNavVersion {
+    /* inline-block keeps the version out of the link's hover underline */
+    display: inline-block;
+    margin-inline-start: 0.375rem;
+    color: var(--gray-t1);
+  }
+}
+
+/* Keep layer order stable when this file is emitted from a client CSS chunk. */
+
+@layer all, base, theme, components, utilities;
+
+/* 512px */
+
+/* 640px */
+
+/* 768px */
+
+/* 1024px */
+
+/* 1280px */
+
+/* stylelint-disable-next-line custom-media-pattern */
+
+/* 1536px */
+
+@layer components {
+  .QuickNavContainer {
+    /* Quick Nav's container shouldn't have any paddings to maintain correct positioning */
+    padding: 0;
+    position: relative;
+  }
+
+  .QuickNavContent {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+
+    @media (min-width: 64rem) {
+      padding-top: 0;
+    }
+  }
+
+  .QuickNavRoot {
+    --quick-nav-margin-x: 2rem;
+    --quick-nav-scrollbar-thumb-width: 0.25rem;
+    --quick-nav-scrollbar-width: 1.5rem;
+
+    /* Use line height instead of fixed item height in case text breaks into multiple lines */
+    --quick-nav-item-height: 1.75rem;
+    --quick-nav-item-line-height: 1.375rem;
+    --quick-nav-item-padding-y: calc(
+      var(--quick-nav-item-height) / 2 - var(--quick-nav-item-line-height) / 2
+    );
+
+    font-size: var(--font-size-14);
+    line-height: 1.375rem;
+    z-index: 1;
+    display: none;
+
+    @media (min-width: 84rem) {
+      display: block;
+      position: fixed;
+      top: var(--header-height);
+      right: max(
+        var(--root-layout-padding-x),
+        calc(50% - var(--breakpoint-max-layout-width) / 2 + var(--root-layout-padding-x))
+      );
+      width: calc(var(--sidebar-width) - var(--quick-nav-margin-x));
+    }
+  }
+
+  .QuickNavInner {
+    position: relative;
+    width: 100%;
+  }
+
+  .QuickNavViewport {
+    max-height: calc(100dvh - var(--header-height));
+    padding: 0 0 0.75rem;
+
+    /* Scroll containers are focusable */
+    outline: 0;
+
+    &:focus-visible {
+      outline: 2px solid var(--gray-t2);
+      outline-offset: -2px;
+    }
+  }
+
+  .QuickNavScrollbar {
+    display: flex;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    /* Click target width */
+    width: var(--quick-nav-scrollbar-width);
+
+    opacity: 0;
+    transition: opacity 200ms 500ms;
+
+    &:active,
+    &[data-scrolling],
+    .QuickNavViewport:focus-visible + & {
+      transition-duration: 0ms;
+      transition-delay: 0ms;
+      opacity: 1;
+    }
+  }
+
+  .QuickNavScrollbarThumb {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      /* Visible thumb width */
+      width: var(--quick-nav-scrollbar-thumb-width);
+      border-radius: var(--radius-4);
+      background-color: var(--gray-p2);
+    }
+  }
+
+  .QuickNavList {
+    color: var(--gray-t1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    & & {
+      padding-left: 0.75rem;
+    }
+  }
+
+  .QuickNavLink {
+    display: inline-flex;
+    padding: var(--quick-nav-item-padding-y) 0.5rem;
+    border-radius: var(--radius-6);
+
+    &:focus-visible {
+      z-index: 1;
+      outline: 2px solid var(--gray-t2);
+      outline-offset: -2px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
+        text-decoration-color: var(--gray-p1);
+      }
+    }
+  }
+}
+
+/* Keep layer order stable when this file is emitted from a client CSS chunk. */
+
+@layer all, base, theme, components, utilities;
+
+@layer components {
+  .Subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-size-18);
+    line-height: 1.75rem;
+    text-wrap: pretty;
+    color: var(--gray-t1);
+    margin-bottom: 1.5rem;
+    gap: var(--space-16);
+  }
+
+  .MdH1 + .Subtitle {
+    margin-top: -0.75rem;
+  }
+
+  .SubtitleLinks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: var(--space-24);
+    row-gap: 0;
+    max-width: 100%;
+  }
+
+  .SubtitleLink {
+    flex-shrink: 0;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  .SubtitleLinkText {
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5em;
+    padding: 0.5em;
+    margin-inline: -0.5em;
+    color: var(--color-foreground);
+  }
+
+  .SubtitleLink:focus-visible .SubtitleLinkText {
+    outline: 2px solid var(--gray-t2);
+    outline-offset: -2px;
+    border-radius: var(--radius-4);
+  }
+
+  .SubtitleLink:hover .SubtitleLinkText {
+    @media (hover: hover) {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: currentColor;
+    }
+  }
+
+  .SubtitleLinkText svg {
+    /* visually center the icon so we can baseline align it */
+    transform: translateY(3px);
+  }
+}
+
+/* Keep layer order stable when this file is emitted from a client CSS chunk. */
+
+@layer all, base, theme, components, utilities;
+
+@layer components {
+  .CodeBlockRoot {
+    align-self: stretch;
+    background-color: var(--color-content);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-12);
+
+    & code .frame {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+
+    & code .frame[data-lined] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    & code .frame[data-lined] .line {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+
+  /* Inline code placed directly in a block has no `.frame` or `pre` to carry the inset above. */
+  .CodeBlockRoot > code {
+    display: block;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .CodeBlockPanel {
+    font-size: var(--font-size-14);
+    line-height: 1;
+    background-color: var(--gray-s2);
+    background-clip: padding-box;
+    color: var(--gray-t2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    padding-inline-start: 0.75rem;
+    padding-inline-end: 0.25rem;
+    height: 2.25rem;
+    gap: 1rem;
+    border-top-left-radius: calc(var(--radius-12) - 1px);
+    border-top-right-radius: calc(var(--radius-12) - 1px);
+    border-bottom: 1px solid var(--color-border);
+
+    /* Scroll */
+    overflow: auto hidden;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Scroll containers may be focusable */
+    &:focus-visible {
+      position: relative;
+      outline: 2px solid var(--gray-t2);
+      outline-offset: -1px;
+      z-index: 1;
+    }
+  }
+
+  .CodeBlockPanelTitle {
+    font-size: var(--font-size-14);
+    line-height: 1.25rem;
+    color: var(--gray-t2);
+    font-weight: var(--font-weight-400);
+  }
+
+  .CodeBlockCopyIcon {
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .CodeBlockViewport {
+    outline: 0;
+    border-bottom-right-radius: calc(var(--radius-12) - 1px);
+    border-bottom-left-radius: calc(var(--radius-12) - 1px);
+
+    &[data-has-overflow-x] {
+      /* Prevent Chrome/Safari page navigation gestures when scrolling horizontally */
+      overscroll-behavior-x: contain;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--gray-t2);
+      outline-offset: 0;
+    }
+  }
+
+  .CodeBlockRoot > .CodeBlockPreContainer:first-child .CodeBlockViewport {
+    border-top-left-radius: calc(var(--radius-12) - 1px);
+    border-top-right-radius: calc(var(--radius-12) - 1px);
+  }
+
+  .CodeBlockPreInline {
+    font-size: 0.8125rem; /* 13px */
+    line-height: 1.25rem; /* 20px */
+    cursor: text;
+    color: var(--color-foreground);
+    outline: 0;
+
+    display: flex;
+
+    & code {
+      /* Different fonts may introduce vertical align issues */
+      display: block;
+      /* Make sure selection highlight spans full container width in Safari */
+      flex-grow: 1;
+    }
+
+    & code .frame {
+      display: block;
+    }
+
+    & code .frame[data-lined] {
+      white-space: normal;
+    }
+
+    & code .frame[data-lined] .line {
+      display: block;
+      white-space: pre;
+    }
+
+    & .line:empty {
+      height: 1lh;
+    }
+
+    /* Hide JSDoc comment frames */
+    &:not(.CodeBlockPre) [data-frame-type='comment'] {
+      display: none !important;
+    }
+  }
+
+  .CodeBlockPre,
+  .CodeBlockRoot .CodeBlockPreInline {
+    padding: 0.5rem 0;
+    border-radius: calc(var(--radius-12) - 1px);
+  }
+
+  .CodeBlockPreContainer {
+    width: 100%;
+    outline: 0;
+  }
+}

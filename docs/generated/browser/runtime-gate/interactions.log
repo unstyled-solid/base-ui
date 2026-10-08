@@ -1,0 +1,51 @@
+$ node docs/scripts/site/click-diagnostics.mjs
+{"family":"tooltip","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"tooltip","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"popover","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"popover","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"tabs","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"tabs","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"accordion","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"accordion","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"collapsible","style":"css-modules","passed":false,"interactionPassed":true,"diagnostics":["[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush."],"errors":[]}
+{"family":"collapsible","style":"tailwind","passed":false,"interactionPassed":true,"diagnostics":["[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush."],"errors":[]}
+{"family":"checkbox","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"checkbox","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"switch","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"switch","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"toggle","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"toggle","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"radio-group","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"radio-group","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"toggle-group","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"toggle-group","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"dialog","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"dialog","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"alert-dialog","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"alert-dialog","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"drawer","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"drawer","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"menu","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"menu","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"select","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"select","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"toast","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"toast","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"checkbox-group","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"checkbox-group","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"number-field","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"number-field","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"slider","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"slider","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"input","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"input","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"field","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"field","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"combobox","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"combobox","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"autocomplete","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"autocomplete","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"toolbar","style":"css-modules","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+{"family":"toolbar","style":"tailwind","passed":true,"interactionPassed":true,"diagnostics":[],"errors":[]}
+Evidence: /Users/avi/avir-oss/baseui-solid2/docs/generated/browser/click-diagnostics.json
+[ELIFECYCLE] Command failed with exit code 1.

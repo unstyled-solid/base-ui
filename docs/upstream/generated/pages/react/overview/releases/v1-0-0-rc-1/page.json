@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-1/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "153015fbd1b4f27827a8f0e4b3f87c6b35b2a842e116044bcfbf6dc528ffca69",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/overview/releases/v1-0-0-rc-1",
+  "route": "/upstream/react/overview/releases/v1-0-0-rc-1",
+  "disposition": "upstream-react-history",
+  "publishable": false,
+  "title": "v1.0.0-rc.1",
+  "subtitle": "Dec 11, 2025",
+  "metadata": {
+    "description": "v1.0.0-rc.1 release notes. Dec 11, 2025."
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "v1.0.0-rc.1",
+      "properties": {
+        "id": "v1-0-0-rc-1"
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-1/page.mdx:1:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-1/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "v1.0.0-rc.1 release notes. Dec 11, 2025."
+      },
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-1/page.mdx:4:1"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "react-release-history",
+      "location": "docs/src/app/(docs)/react/overview/releases/v1-0-0-rc-1/page.mdx:1:1",
+      "detail": "Keep historical code, dates, package names and claims scoped to React.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "v1.0.0-rc.1",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 14,
+                "offset": 13
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "offset": 13
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "v1-0-0-rc-1"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Dec 11, 2025",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 23,
+                    "offset": 37
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 15
+              },
+              "end": {
+                "line": 3,
+                "column": 34,
+                "offset": 48
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 15
+          },
+          "end": {
+            "line": 3,
+            "column": 34,
+            "offset": 48
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 7,
+                "offset": 55
+              },
+              "end": {
+                "line": 4,
+                "column": 25,
+                "offset": 73
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "v1.0.0-rc.1 release notes. Dec 11, 2025.",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 26,
+                "offset": 74
+              },
+              "end": {
+                "line": 4,
+                "column": 76,
+                "offset": 124
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 49
+          },
+          "end": {
+            "line": 4,
+            "column": 79,
+            "offset": 127
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This release contains the same code as v1.0.0.\nPlease refer to that version to see the changes.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 1,
+                "offset": 129
+              },
+              "end": {
+                "line": 7,
+                "column": 49,
+                "offset": 224
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 129
+          },
+          "end": {
+            "line": 7,
+            "column": 49,
+            "offset": 224
+          }
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 8,
+        "column": 1,
+        "offset": 225
+      }
+    }
+  },
+  "notice": {
+    "type": "paragraph",
+    "children": [
+      {
+        "type": "text",
+        "value": "Upstream React Base UI release history. These are not releases or verified capabilities of the Solid port."
+      }
+    ]
+  }
+}

@@ -1,0 +1,2225 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/toolbar/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "9e4a8954c63a3efec5d74aace7ae35e1e018df04e005e7f5fa58bb0f75f055b0",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/toolbar",
+  "route": "/solid/components/toolbar",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Toolbar",
+  "subtitle": "A container for grouping a set of buttons and controls.",
+  "metadata": {
+    "keywords": [
+      "React Toolbar",
+      "Toolbar Button Group",
+      "Action Bar",
+      "Button Bar",
+      "Command Strip",
+      "Headless Toolbar Component",
+      "Accessible Toolbar",
+      "Popup Trigger Toolbar",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React toolbar component that groups a set of buttons and controls."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoToolbarHero",
+      "imported": "DemoToolbarHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toolbar/demos/hero#DemoToolbarHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesToolbar",
+      "imported": "TypesToolbar",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Toolbar",
+      "properties": {
+        "id": "toolbar"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:19:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:38:1"
+    },
+    {
+      "depth": 3,
+      "text": "Using with Menu",
+      "properties": {
+        "id": "using-with-menu"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:40:1"
+    },
+    {
+      "depth": 3,
+      "text": "Using with Tooltip",
+      "properties": {
+        "id": "using-with-tooltip"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:61:1"
+    },
+    {
+      "depth": 3,
+      "text": "Using with NumberField",
+      "properties": {
+        "id": "using-with-numberfield"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:80:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:99:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:103:1"
+    },
+    {
+      "depth": 3,
+      "text": "Button",
+      "properties": {
+        "id": "button"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:107:1"
+    },
+    {
+      "depth": 3,
+      "text": "Link",
+      "properties": {
+        "id": "link"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:111:1"
+    },
+    {
+      "depth": 3,
+      "text": "Input",
+      "properties": {
+        "id": "input"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:115:1"
+    },
+    {
+      "depth": 3,
+      "text": "Group",
+      "properties": {
+        "id": "group"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:119:1"
+    },
+    {
+      "depth": 3,
+      "text": "Separator",
+      "properties": {
+        "id": "separator"
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:123:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React toolbar component that groups a set of buttons and controls."
+      },
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:4:1"
+    },
+    {
+      "name": "DemoToolbarHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toolbar/demos/hero#DemoToolbarHero"
+    },
+    {
+      "name": "TypesToolbar.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:105:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+    },
+    {
+      "name": "TypesToolbar.Button",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:109:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+    },
+    {
+      "name": "TypesToolbar.Link",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:113:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+    },
+    {
+      "name": "TypesToolbar.Input",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:117:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+    },
+    {
+      "name": "TypesToolbar.Group",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:121:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+    },
+    {
+      "name": "TypesToolbar.Separator",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:125:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:11:1",
+      "detail": "Site must implement DemoToolbarHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:23:1",
+      "detail": "Toolbar.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:23:1",
+      "detail": "Toolbar.Button",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:23:1",
+      "detail": "Toolbar.Link",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:23:1",
+      "detail": "Toolbar.Separator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:23:1",
+      "detail": "Toolbar.Group",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:23:1",
+      "detail": "Toolbar.Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:23:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:44:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:44:1",
+      "detail": "Toolbar.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:44:1",
+      "detail": "Menu.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:44:1",
+      "detail": "Toolbar.Button",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:44:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:44:1",
+      "detail": "Menu.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:44:1",
+      "detail": "Menu.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:44:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:65:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:65:1",
+      "detail": "Toolbar.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:65:1",
+      "detail": "Tooltip.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:65:1",
+      "detail": "Tooltip.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:65:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:65:1",
+      "detail": "Toolbar.Button",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:65:1",
+      "detail": "Tooltip.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:65:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "Toolbar.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "NumberField.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "NumberField.Group",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "NumberField.Decrement",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "Toolbar.Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "NumberField.Input",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "NumberField.Increment",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:84:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:105:1",
+      "detail": "Site must implement TypesToolbar.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:109:1",
+      "detail": "Site must implement TypesToolbar.Button; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:113:1",
+      "detail": "Site must implement TypesToolbar.Link; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:117:1",
+      "detail": "Site must implement TypesToolbar.Input; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:121:1",
+      "detail": "Site must implement TypesToolbar.Group; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:125:1",
+      "detail": "Site must implement TypesToolbar.Separator; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/toolbar/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Toolbar",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 10,
+                "offset": 9
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 10,
+            "offset": 9
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "toolbar"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A container for grouping a set of buttons and controls.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 21
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 66,
+                    "offset": 76
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 11
+              },
+              "end": {
+                "line": 3,
+                "column": 77,
+                "offset": 87
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 11
+          },
+          "end": {
+            "line": 3,
+            "column": 77,
+            "offset": 87
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 96
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 114
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React toolbar component that groups a set of buttons and controls.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 117
+              },
+              "end": {
+                "line": 6,
+                "column": 104,
+                "offset": 218
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 88
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 221
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToolbarHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 223
+          },
+          "end": {
+            "line": 9,
+            "column": 48,
+            "offset": 270
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToolbarHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 272
+          },
+          "end": {
+            "line": 11,
+            "column": 20,
+            "offset": 291
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toolbar/demos/hero#DemoToolbarHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 296
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 312
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 293
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 312
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To ensure that toolbars are accessible and helpful, follow these guidelines:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 314
+              },
+              "end": {
+                "line": 15,
+                "column": 77,
+                "offset": 390
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 314
+          },
+          "end": {
+            "line": 15,
+            "column": 77,
+            "offset": 390
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Use inputs sparingly",
+                        "position": {
+                          "start": {
+                            "line": 17,
+                            "column": 5,
+                            "offset": 396
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 25,
+                            "offset": 416
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 3,
+                        "offset": 394
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 27,
+                        "offset": 418
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": Left and right arrow keys are used to both move the text insertion cursor in an input, and to navigate among controls in horizontal toolbars. When using an input in a horizontal toolbar, use only one and place it as the last element of the toolbar.",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 27,
+                        "offset": 418
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 277,
+                        "offset": 668
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 17,
+                    "column": 3,
+                    "offset": 394
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 277,
+                    "offset": 668
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 392
+              },
+              "end": {
+                "line": 17,
+                "column": 277,
+                "offset": 668
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 392
+          },
+          "end": {
+            "line": 17,
+            "column": 277,
+            "offset": 668
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 4,
+                "offset": 673
+              },
+              "end": {
+                "line": 19,
+                "column": 11,
+                "offset": 680
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 19,
+            "column": 1,
+            "offset": 670
+          },
+          "end": {
+            "line": 19,
+            "column": 11,
+            "offset": 680
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 21,
+                "column": 1,
+                "offset": 682
+              },
+              "end": {
+                "line": 21,
+                "column": 45,
+                "offset": 726
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 682
+          },
+          "end": {
+            "line": 21,
+            "column": 45,
+            "offset": 726
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Toolbar } from 'baseui-solid2/toolbar';\n\n<Toolbar.Root>\n  <Toolbar.Button />\n  <Toolbar.Link />\n  <Toolbar.Separator />\n  <Toolbar.Group>\n    <Toolbar.Button />\n    <Toolbar.Button />\n  </Toolbar.Group>\n  <Toolbar.Input />\n</Toolbar.Root>;",
+        "position": {
+          "start": {
+            "line": 23,
+            "column": 1,
+            "offset": 728
+          },
+          "end": {
+            "line": 36,
+            "column": 4,
+            "offset": 1004
+          }
+        },
+        "data": {
+          "sourceValue": "import { Toolbar } from '@base-ui/react/toolbar';\n\n<Toolbar.Root>\n  <Toolbar.Button />\n  <Toolbar.Link />\n  <Toolbar.Separator />\n  <Toolbar.Group>\n    <Toolbar.Button />\n    <Toolbar.Button />\n  </Toolbar.Group>\n  <Toolbar.Input />\n</Toolbar.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/toolbar",
+              "start": 25,
+              "end": 47,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/toolbar",
+              "start": 25,
+              "end": 47,
+              "kind": "import",
+              "replacement": "baseui-solid2/toolbar"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 4,
+                "offset": 1009
+              },
+              "end": {
+                "line": 38,
+                "column": 12,
+                "offset": 1017
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 1006
+          },
+          "end": {
+            "line": 38,
+            "column": 12,
+            "offset": 1017
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using with Menu",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 5,
+                "offset": 1023
+              },
+              "end": {
+                "line": 40,
+                "column": 20,
+                "offset": 1038
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 40,
+            "column": 1,
+            "offset": 1019
+          },
+          "end": {
+            "line": 40,
+            "column": 20,
+            "offset": 1038
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "using-with-menu"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "All Base UI popup components that provide a ",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 1,
+                "offset": 1040
+              },
+              "end": {
+                "line": 42,
+                "column": 45,
+                "offset": 1084
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Trigger",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 45,
+                "offset": 1084
+              },
+              "end": {
+                "line": 42,
+                "column": 54,
+                "offset": 1093
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " component can be integrated with a toolbar by passing the trigger to ",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 54,
+                "offset": 1093
+              },
+              "end": {
+                "line": 42,
+                "column": 124,
+                "offset": 1163
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toolbar.Button>",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 124,
+                "offset": 1163
+              },
+              "end": {
+                "line": 42,
+                "column": 142,
+                "offset": 1181
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " with the ",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 142,
+                "offset": 1181
+              },
+              "end": {
+                "line": 42,
+                "column": 152,
+                "offset": 1191
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 152,
+                "offset": 1191
+              },
+              "end": {
+                "line": 42,
+                "column": 160,
+                "offset": 1199
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop:",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 160,
+                "offset": 1199
+              },
+              "end": {
+                "line": 42,
+                "column": 166,
+                "offset": 1205
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 42,
+            "column": 1,
+            "offset": 1040
+          },
+          "end": {
+            "line": 42,
+            "column": 166,
+            "offset": 1205
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using popups with toolbar\"",
+        "value": "return (\n  <Toolbar.Root>\n    <Menu.Root>\n      {/* @highlight */}\n      <Toolbar.Button render={<Menu.Trigger />} />\n      <Menu.Portal>\n        {/* prettier-ignore */}\n        {/* Compose the rest of the menu */}\n      </Menu.Portal>\n    </Menu.Root>\n  </Toolbar.Root>;\n)",
+        "position": {
+          "start": {
+            "line": 44,
+            "column": 1,
+            "offset": 1207
+          },
+          "end": {
+            "line": 57,
+            "column": 4,
+            "offset": 1525
+          }
+        },
+        "data": {
+          "sourceValue": "return (\n  <Toolbar.Root>\n    <Menu.Root>\n      {/* @highlight */}\n      <Toolbar.Button render={<Menu.Trigger />} />\n      <Menu.Portal>\n        {/* prettier-ignore */}\n        {/* Compose the rest of the menu */}\n      </Menu.Portal>\n    </Menu.Root>\n  </Toolbar.Root>;\n)",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 270,
+              "message": "')' expected."
+            },
+            {
+              "start": 272,
+              "message": "Declaration or statement expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This applies to ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 1,
+                "offset": 1527
+              },
+              "end": {
+                "line": 59,
+                "column": 17,
+                "offset": 1543
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<AlertDialog>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 17,
+                "offset": 1543
+              },
+              "end": {
+                "line": 59,
+                "column": 32,
+                "offset": 1558
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 32,
+                "offset": 1558
+              },
+              "end": {
+                "line": 59,
+                "column": 34,
+                "offset": 1560
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Dialog>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 34,
+                "offset": 1560
+              },
+              "end": {
+                "line": 59,
+                "column": 44,
+                "offset": 1570
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 44,
+                "offset": 1570
+              },
+              "end": {
+                "line": 59,
+                "column": 46,
+                "offset": 1572
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Menu>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 46,
+                "offset": 1572
+              },
+              "end": {
+                "line": 59,
+                "column": 54,
+                "offset": 1580
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 54,
+                "offset": 1580
+              },
+              "end": {
+                "line": 59,
+                "column": 56,
+                "offset": 1582
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 56,
+                "offset": 1582
+              },
+              "end": {
+                "line": 59,
+                "column": 67,
+                "offset": 1593
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 67,
+                "offset": 1593
+              },
+              "end": {
+                "line": 59,
+                "column": 73,
+                "offset": 1599
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Select>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 73,
+                "offset": 1599
+              },
+              "end": {
+                "line": 59,
+                "column": 83,
+                "offset": 1609
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 83,
+                "offset": 1609
+              },
+              "end": {
+                "line": 59,
+                "column": 84,
+                "offset": 1610
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 59,
+            "column": 1,
+            "offset": 1527
+          },
+          "end": {
+            "line": 59,
+            "column": 84,
+            "offset": 1610
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using with Tooltip",
+            "position": {
+              "start": {
+                "line": 61,
+                "column": 5,
+                "offset": 1616
+              },
+              "end": {
+                "line": 61,
+                "column": 23,
+                "offset": 1634
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 61,
+            "column": 1,
+            "offset": 1612
+          },
+          "end": {
+            "line": 61,
+            "column": 23,
+            "offset": 1634
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "using-with-tooltip"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Unlike other popups, the toolbar item should be passed to the ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 1,
+                "offset": 1636
+              },
+              "end": {
+                "line": 63,
+                "column": 63,
+                "offset": 1698
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 63,
+                "offset": 1698
+              },
+              "end": {
+                "line": 63,
+                "column": 71,
+                "offset": 1706
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop of ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 71,
+                "offset": 1706
+              },
+              "end": {
+                "line": 63,
+                "column": 80,
+                "offset": 1715
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Tooltip.Trigger>",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 80,
+                "offset": 1715
+              },
+              "end": {
+                "line": 63,
+                "column": 99,
+                "offset": 1734
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ":",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 99,
+                "offset": 1734
+              },
+              "end": {
+                "line": 63,
+                "column": 100,
+                "offset": 1735
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 63,
+            "column": 1,
+            "offset": 1636
+          },
+          "end": {
+            "line": 63,
+            "column": 100,
+            "offset": 1735
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using popups with toolbar\"",
+        "value": "return (\n  <Toolbar.Root>\n    <Tooltip.Root>\n      {/* @highlight */}\n      <Tooltip.Trigger render={<Toolbar.Button />} />\n      <Tooltip.Portal>\n        {/* prettier-ignore */}\n        {/* Compose the rest of the tooltip */}\n      </Tooltip.Portal>\n    </Tooltip.Root>\n  </Toolbar.Root>;\n)",
+        "position": {
+          "start": {
+            "line": 65,
+            "column": 1,
+            "offset": 1737
+          },
+          "end": {
+            "line": 78,
+            "column": 4,
+            "offset": 2073
+          }
+        },
+        "data": {
+          "sourceValue": "return (\n  <Toolbar.Root>\n    <Tooltip.Root>\n      {/* @highlight */}\n      <Tooltip.Trigger render={<Toolbar.Button />} />\n      <Tooltip.Portal>\n        {/* prettier-ignore */}\n        {/* Compose the rest of the tooltip */}\n      </Tooltip.Portal>\n    </Tooltip.Root>\n  </Toolbar.Root>;\n)",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 288,
+              "message": "')' expected."
+            },
+            {
+              "start": 290,
+              "message": "Declaration or statement expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using with NumberField",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 5,
+                "offset": 2079
+              },
+              "end": {
+                "line": 80,
+                "column": 27,
+                "offset": 2101
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 80,
+            "column": 1,
+            "offset": 2075
+          },
+          "end": {
+            "line": 80,
+            "column": 27,
+            "offset": 2101
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "using-with-numberfield"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To use a NumberField in the toolbar, pass ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 1,
+                "offset": 2103
+              },
+              "end": {
+                "line": 82,
+                "column": 43,
+                "offset": 2145
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<NumberField.Input>",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 43,
+                "offset": 2145
+              },
+              "end": {
+                "line": 82,
+                "column": 64,
+                "offset": 2166
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 64,
+                "offset": 2166
+              },
+              "end": {
+                "line": 82,
+                "column": 68,
+                "offset": 2170
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toolbar.Input>",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 68,
+                "offset": 2170
+              },
+              "end": {
+                "line": 82,
+                "column": 85,
+                "offset": 2187
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " using the ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 85,
+                "offset": 2187
+              },
+              "end": {
+                "line": 82,
+                "column": 96,
+                "offset": 2198
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 96,
+                "offset": 2198
+              },
+              "end": {
+                "line": 82,
+                "column": 104,
+                "offset": 2206
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop:",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 104,
+                "offset": 2206
+              },
+              "end": {
+                "line": 82,
+                "column": 110,
+                "offset": 2212
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 82,
+            "column": 1,
+            "offset": 2103
+          },
+          "end": {
+            "line": 82,
+            "column": 110,
+            "offset": 2212
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using NumberField with toolbar\"",
+        "value": "return (\n  <Toolbar.Root>\n    <NumberField.Root>\n      <NumberField.Group>\n        <NumberField.Decrement />\n        {/* @highlight */}\n        <Toolbar.Input render={<NumberField.Input />} />\n        <NumberField.Increment />\n      </NumberField.Group>\n    </NumberField.Root>\n  </Toolbar.Root>;\n)",
+        "position": {
+          "start": {
+            "line": 84,
+            "column": 1,
+            "offset": 2214
+          },
+          "end": {
+            "line": 97,
+            "column": 4,
+            "offset": 2562
+          }
+        },
+        "data": {
+          "sourceValue": "return (\n  <Toolbar.Root>\n    <NumberField.Root>\n      <NumberField.Group>\n        <NumberField.Decrement />\n        {/* @highlight */}\n        <Toolbar.Input render={<NumberField.Input />} />\n        <NumberField.Increment />\n      </NumberField.Group>\n    </NumberField.Root>\n  </Toolbar.Root>;\n)",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 295,
+              "message": "')' expected."
+            },
+            {
+              "start": 297,
+              "message": "Declaration or statement expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 99,
+                "column": 4,
+                "offset": 2567
+              },
+              "end": {
+                "line": 99,
+                "column": 17,
+                "offset": 2580
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 99,
+            "column": 1,
+            "offset": 2564
+          },
+          "end": {
+            "line": 99,
+            "column": 17,
+            "offset": 2580
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesToolbar } from './types';",
+        "position": {
+          "start": {
+            "line": 101,
+            "column": 1,
+            "offset": 2582
+          },
+          "end": {
+            "line": 101,
+            "column": 40,
+            "offset": 2621
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 103,
+                "column": 5,
+                "offset": 2627
+              },
+              "end": {
+                "line": 103,
+                "column": 9,
+                "offset": 2631
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 103,
+            "column": 1,
+            "offset": 2623
+          },
+          "end": {
+            "line": 103,
+            "column": 9,
+            "offset": 2631
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToolbar.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 105,
+            "column": 1,
+            "offset": 2633
+          },
+          "end": {
+            "line": 105,
+            "column": 22,
+            "offset": 2654
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Button",
+            "position": {
+              "start": {
+                "line": 107,
+                "column": 5,
+                "offset": 2660
+              },
+              "end": {
+                "line": 107,
+                "column": 11,
+                "offset": 2666
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 107,
+            "column": 1,
+            "offset": 2656
+          },
+          "end": {
+            "line": 107,
+            "column": 11,
+            "offset": 2666
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "button"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToolbar.Button",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 109,
+            "column": 1,
+            "offset": 2668
+          },
+          "end": {
+            "line": 109,
+            "column": 24,
+            "offset": 2691
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Link",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 5,
+                "offset": 2697
+              },
+              "end": {
+                "line": 111,
+                "column": 9,
+                "offset": 2701
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 111,
+            "column": 1,
+            "offset": 2693
+          },
+          "end": {
+            "line": 111,
+            "column": 9,
+            "offset": 2701
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "link"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToolbar.Link",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 113,
+            "column": 1,
+            "offset": 2703
+          },
+          "end": {
+            "line": 113,
+            "column": 22,
+            "offset": 2724
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Input",
+            "position": {
+              "start": {
+                "line": 115,
+                "column": 5,
+                "offset": 2730
+              },
+              "end": {
+                "line": 115,
+                "column": 10,
+                "offset": 2735
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 115,
+            "column": 1,
+            "offset": 2726
+          },
+          "end": {
+            "line": 115,
+            "column": 10,
+            "offset": 2735
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "input"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToolbar.Input",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 117,
+            "column": 1,
+            "offset": 2737
+          },
+          "end": {
+            "line": 117,
+            "column": 23,
+            "offset": 2759
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Group",
+            "position": {
+              "start": {
+                "line": 119,
+                "column": 5,
+                "offset": 2765
+              },
+              "end": {
+                "line": 119,
+                "column": 10,
+                "offset": 2770
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 119,
+            "column": 1,
+            "offset": 2761
+          },
+          "end": {
+            "line": 119,
+            "column": 10,
+            "offset": 2770
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "group"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToolbar.Group",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 121,
+            "column": 1,
+            "offset": 2772
+          },
+          "end": {
+            "line": 121,
+            "column": 23,
+            "offset": 2794
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Separator",
+            "position": {
+              "start": {
+                "line": 123,
+                "column": 5,
+                "offset": 2800
+              },
+              "end": {
+                "line": 123,
+                "column": 14,
+                "offset": 2809
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 123,
+            "column": 1,
+            "offset": 2796
+          },
+          "end": {
+            "line": 123,
+            "column": 14,
+            "offset": 2809
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "separator"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToolbar.Separator",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 125,
+            "column": 1,
+            "offset": 2811
+          },
+          "end": {
+            "line": 125,
+            "column": 27,
+            "offset": 2837
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toolbar/types#TypesToolbar"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Toolbar',\n    'Toolbar Button Group',\n    'Action Bar',\n    'Button Bar',\n    'Command Strip',\n    'Headless Toolbar Component',\n    'Accessible Toolbar',\n    'Popup Trigger Toolbar',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 127,
+            "column": 1,
+            "offset": 2839
+          },
+          "end": {
+            "line": 139,
+            "column": 3,
+            "offset": 3096
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 140,
+        "column": 1,
+        "offset": 3097
+      }
+    }
+  }
+}

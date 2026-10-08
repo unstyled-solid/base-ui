@@ -1,0 +1,31 @@
+var e=`// Adapted from mui/base-ui 19511bb171f3b360b006c94cf6d07e53cb446505; MIT.
+import { createSignal, createUniqueId, onCleanup, onSettled, omit, For } from 'solid-js';
+import type { Component } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
+import type { JSX, ComponentProps } from '@solidjs/web';
+import { Progress } from 'baseui-solid2/progress';
+
+export default function ExampleProgress() {
+  const [value, setValue] = createSignal(20);
+
+  // Simulate changes
+  onSettled(() => {
+    const interval = setInterval(() => {
+      setValue((current) => Math.min(100, Math.round(current + Math.random() * 25)));
+    }, 1000);
+    return () => clearInterval(interval);
+  });
+
+  return (
+    <Progress.Root class="grid max-w-full w-60 grid-cols-2 gap-y-2" value={value()}>
+      <Progress.Label class="text-sm font-normal text-neutral-950 dark:text-white">
+        Export data
+      </Progress.Label>
+      <Progress.Value class="text-right text-sm text-neutral-950 dark:text-white" />
+      <Progress.Track class="col-span-2 h-1 overflow-hidden bg-neutral-200 dark:bg-neutral-800">
+        <Progress.Indicator class="bg-neutral-950 transition-[width] duration-500 dark:bg-white" />
+      </Progress.Track>
+    </Progress.Root>
+  );
+}
+`;export{e as default};

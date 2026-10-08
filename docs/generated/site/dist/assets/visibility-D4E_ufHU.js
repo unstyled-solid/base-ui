@@ -1,0 +1,1 @@
+import{t as e}from"./floating-ui.utils.dom-CG096y3L.js";function t(e){return e.visibility===`hidden`||e.visibility===`collapse`}function n(n,r=n?e(n):null){return!n||!n.isConnected||!r||t(r)?!1:typeof n.checkVisibility==`function`?n.checkVisibility():r.display!==`none`&&r.display!==`contents`}export{n as t};

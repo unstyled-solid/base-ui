@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "owner": "bsolid-docs-content-font-provenance",
+  "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "repository": "https://github.com/mui/base-ui",
+  "publication": {
+    "readyForTypographyParity": false,
+    "blockerTicket": "bsolid-docs-content-font-provenance",
+    "publicRoot": "docs/content/assets/public",
+    "instruction": "Copy only publicRoot into site public output, preserving relative paths, and serve licenses. Never serve docs/upstream or blocked sourcePublicUrl entries. publicUrl is null for blocked entries. Source links are evidence, not a hosting workaround."
+  },
+  "entries": [
+    {
+      "kind": "font",
+      "source": "docs/public/fonts/die-grotesk-a-bold.woff2",
+      "capturedPath": "docs/upstream/base-ui/docs/public/fonts/die-grotesk-a-bold.woff2",
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/die-grotesk-a-bold.woff2",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/die-grotesk-a-bold.woff2",
+      "sha256": "9c6672ba21259aa181de5865ef7c70946d1e412899c904e6caeb7126ca8ce356",
+      "bytes": 45378,
+      "sourcePublicUrl": "/fonts/die-grotesk-a-bold.woff2",
+      "publishable": false,
+      "destination": null,
+      "publicUrl": null,
+      "license": {
+        "spdx": "NOASSERTION",
+        "copyright": "Copyright 2026 Klim Type Foundry. All Rights Reserved.",
+        "basis": "Embedded name-table ID 13: The use of this file is subject to the respective Klim Type Foundry Font Licence Agreement(s)",
+        "sourceUrl": "https://klim.co.nz/licences/",
+        "path": null,
+        "publicUrl": null
+      },
+      "blocker": "No applicable Klim agreement or grant authorizing redistribution/publication by this Solid documentation site is present in the pinned repository. Obtain an applicable grant or approve and visually replay a source-parity typography adaptation. Repository MIT does not resolve the embedded third-party restriction."
+    },
+    {
+      "kind": "font",
+      "source": "docs/public/fonts/die-grotesk-a-regular.woff2",
+      "capturedPath": "docs/upstream/base-ui/docs/public/fonts/die-grotesk-a-regular.woff2",
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/die-grotesk-a-regular.woff2",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/die-grotesk-a-regular.woff2",
+      "sha256": "406ace31d3ad19c59f283de09638bbf00b729367da35db779614a20c624a76a4",
+      "bytes": 45082,
+      "sourcePublicUrl": "/fonts/die-grotesk-a-regular.woff2",
+      "publishable": false,
+      "destination": null,
+      "publicUrl": null,
+      "license": {
+        "spdx": "NOASSERTION",
+        "copyright": "Copyright 2025 Klim Type Foundry. All Rights Reserved.",
+        "basis": "Embedded name-table ID 13: The use of this file is subject to the respective Klim Type Foundry Font Licence Agreement(s)",
+        "sourceUrl": "https://klim.co.nz/licences/",
+        "path": null,
+        "publicUrl": null
+      },
+      "blocker": "No applicable Klim agreement or grant authorizing redistribution/publication by this Solid documentation site is present in the pinned repository. Obtain an applicable grant or approve and visually replay a source-parity typography adaptation. Repository MIT does not resolve the embedded third-party restriction."
+    },
+    {
+      "kind": "font",
+      "source": "docs/public/fonts/die-grotesk-b-bold.woff2",
+      "capturedPath": "docs/upstream/base-ui/docs/public/fonts/die-grotesk-b-bold.woff2",
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/die-grotesk-b-bold.woff2",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/die-grotesk-b-bold.woff2",
+      "sha256": "a4de75e77bc3e83cd49bcd5054bb33cf0fd239a4f3fa6d1fd869994d96e95b53",
+      "bytes": 50632,
+      "sourcePublicUrl": "/fonts/die-grotesk-b-bold.woff2",
+      "publishable": false,
+      "destination": null,
+      "publicUrl": null,
+      "license": {
+        "spdx": "NOASSERTION",
+        "copyright": "Copyright 2026 Klim Type Foundry. All Rights Reserved.",
+        "basis": "Embedded name-table ID 13: The use of this file is subject to the respective Klim Type Foundry Font Licence Agreement(s)",
+        "sourceUrl": "https://klim.co.nz/licences/",
+        "path": null,
+        "publicUrl": null
+      },
+      "blocker": "No applicable Klim agreement or grant authorizing redistribution/publication by this Solid documentation site is present in the pinned repository. Obtain an applicable grant or approve and visually replay a source-parity typography adaptation. Repository MIT does not resolve the embedded third-party restriction."
+    },
+    {
+      "kind": "font",
+      "source": "docs/public/fonts/die-grotesk-b-regular.woff2",
+      "capturedPath": "docs/upstream/base-ui/docs/public/fonts/die-grotesk-b-regular.woff2",
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/die-grotesk-b-regular.woff2",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/die-grotesk-b-regular.woff2",
+      "sha256": "62ee94840980b5c4e5ac94f48f529636f2df49b47e28aa46bcef4c7417e989a8",
+      "bytes": 50754,
+      "sourcePublicUrl": "/fonts/die-grotesk-b-regular.woff2",
+      "publishable": false,
+      "destination": null,
+      "publicUrl": null,
+      "license": {
+        "spdx": "NOASSERTION",
+        "copyright": "Copyright 2025 Klim Type Foundry. All Rights Reserved.",
+        "basis": "Embedded name-table ID 13: The use of this file is subject to the respective Klim Type Foundry Font Licence Agreement(s)",
+        "sourceUrl": "https://klim.co.nz/licences/",
+        "path": null,
+        "publicUrl": null
+      },
+      "blocker": "No applicable Klim agreement or grant authorizing redistribution/publication by this Solid documentation site is present in the pinned repository. Obtain an applicable grant or approve and visually replay a source-parity typography adaptation. Repository MIT does not resolve the embedded third-party restriction."
+    },
+    {
+      "kind": "font",
+      "source": "docs/public/fonts/paper-mono.woff2",
+      "capturedPath": "docs/upstream/base-ui/docs/public/fonts/paper-mono.woff2",
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/paper-mono.woff2",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/fonts/paper-mono.woff2",
+      "sha256": "8b9b4c6112923a5b9b16d89b7b1b76ca4d76b9b6367f614b7d23f35b76c38f7d",
+      "bytes": 39164,
+      "sourcePublicUrl": "/fonts/paper-mono.woff2",
+      "publishable": true,
+      "destination": "docs/content/assets/public/fonts/paper-mono.woff2",
+      "publicUrl": "/fonts/paper-mono.woff2",
+      "license": {
+        "spdx": "OFL-1.1",
+        "copyright": "Copyright 2025 The Paper Mono Project Authors https://github.com/paper-design/paper-mono",
+        "basis": "Embedded name-table ID 13 explicitly licenses this exact captured binary under SIL OFL 1.1; ID 0 identifies its authors and project. Redistributed unmodified with copyright and complete OFL text.",
+        "sourceUrl": "https://github.com/paper-design/paper-mono/blob/e17d7d737987a4595a50cff2cb5ca4b32dbd0b8f/OFL.txt",
+        "path": "docs/content/assets/licenses/PaperMono-OFL.txt",
+        "publicUrl": "/licenses/PaperMono-OFL.txt",
+        "sha256": "6339be5d0f20ce8e18cfec6caf465d8ed2f2fc0c22033c27054c273d283604fd"
+      },
+      "blocker": null
+    },
+    {
+      "kind": "image",
+      "source": "docs/public/static/apple-touch-icon.png",
+      "capturedPath": null,
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/apple-touch-icon.png",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/apple-touch-icon.png",
+      "sha256": "273c9e8815244217b2990052b30d765686a912740d6c70f7f425fb453f91f5cf",
+      "bytes": 1875,
+      "sourcePublicUrl": "/static/apple-touch-icon.png",
+      "publishable": true,
+      "destination": "docs/content/assets/public/static/apple-touch-icon.png",
+      "publicUrl": "/static/apple-touch-icon.png",
+      "license": {
+        "spdx": "MIT",
+        "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/LICENSE",
+        "path": "docs/content/assets/licenses/BaseUI-MIT.txt",
+        "publicUrl": "/licenses/BaseUI-MIT.txt",
+        "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a",
+        "basis": "Pinned repository MIT license covers these documentation images; no separate asset license was found. This is copyright provenance, not permission to imply MUI endorsement."
+      },
+      "blocker": null
+    },
+    {
+      "kind": "image",
+      "source": "docs/public/static/favicon-dev.ico",
+      "capturedPath": null,
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/favicon-dev.ico",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/favicon-dev.ico",
+      "sha256": "3651fbb3517afa637184c29a7a7ff851ac5ea55cc850a8ee151f5ed83f19bc35",
+      "bytes": 4286,
+      "sourcePublicUrl": "/static/favicon-dev.ico",
+      "publishable": true,
+      "destination": "docs/content/assets/public/static/favicon-dev.ico",
+      "publicUrl": "/static/favicon-dev.ico",
+      "license": {
+        "spdx": "MIT",
+        "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/LICENSE",
+        "path": "docs/content/assets/licenses/BaseUI-MIT.txt",
+        "publicUrl": "/licenses/BaseUI-MIT.txt",
+        "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a",
+        "basis": "Pinned repository MIT license covers these documentation images; no separate asset license was found. This is copyright provenance, not permission to imply MUI endorsement."
+      },
+      "blocker": null
+    },
+    {
+      "kind": "image",
+      "source": "docs/public/static/favicon-dev.svg",
+      "capturedPath": null,
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/favicon-dev.svg",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/favicon-dev.svg",
+      "sha256": "97239780a144abb3de9609dc1731d567dde3b050add9193b33ea57d828a73842",
+      "bytes": 516,
+      "sourcePublicUrl": "/static/favicon-dev.svg",
+      "publishable": true,
+      "destination": "docs/content/assets/public/static/favicon-dev.svg",
+      "publicUrl": "/static/favicon-dev.svg",
+      "license": {
+        "spdx": "MIT",
+        "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/LICENSE",
+        "path": "docs/content/assets/licenses/BaseUI-MIT.txt",
+        "publicUrl": "/licenses/BaseUI-MIT.txt",
+        "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a",
+        "basis": "Pinned repository MIT license covers these documentation images; no separate asset license was found. This is copyright provenance, not permission to imply MUI endorsement."
+      },
+      "blocker": null
+    },
+    {
+      "kind": "image",
+      "source": "docs/public/static/favicon.ico",
+      "capturedPath": null,
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/favicon.ico",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/favicon.ico",
+      "sha256": "28d73942a3d265612828041331f2c543c7f3b900e76b46b2bffb752d34091f72",
+      "bytes": 4286,
+      "sourcePublicUrl": "/static/favicon.ico",
+      "publishable": true,
+      "destination": "docs/content/assets/public/static/favicon.ico",
+      "publicUrl": "/static/favicon.ico",
+      "license": {
+        "spdx": "MIT",
+        "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/LICENSE",
+        "path": "docs/content/assets/licenses/BaseUI-MIT.txt",
+        "publicUrl": "/licenses/BaseUI-MIT.txt",
+        "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a",
+        "basis": "Pinned repository MIT license covers these documentation images; no separate asset license was found. This is copyright provenance, not permission to imply MUI endorsement."
+      },
+      "blocker": null
+    },
+    {
+      "kind": "image",
+      "source": "docs/public/static/favicon.svg",
+      "capturedPath": null,
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/favicon.svg",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/favicon.svg",
+      "sha256": "bef5b7efbdca4df1fbfabfec1583423637adf909f9a2ac93b0d54399795a8dd0",
+      "bytes": 507,
+      "sourcePublicUrl": "/static/favicon.svg",
+      "publishable": true,
+      "destination": "docs/content/assets/public/static/favicon.svg",
+      "publicUrl": "/static/favicon.svg",
+      "license": {
+        "spdx": "MIT",
+        "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/LICENSE",
+        "path": "docs/content/assets/licenses/BaseUI-MIT.txt",
+        "publicUrl": "/licenses/BaseUI-MIT.txt",
+        "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a",
+        "basis": "Pinned repository MIT license covers these documentation images; no separate asset license was found. This is copyright provenance, not permission to imply MUI endorsement."
+      },
+      "blocker": null
+    },
+    {
+      "kind": "image",
+      "source": "docs/public/static/logo.svg",
+      "capturedPath": null,
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/logo.svg",
+      "rawUrl": "https://raw.githubusercontent.com/mui/base-ui/19511bb171f3b360b006c94cf6d07e53cb446505/docs/public/static/logo.svg",
+      "sha256": "bb08353779acd392595a8ca3b20bb69484e7b604fdb498bb540719099f8bc211",
+      "bytes": 612,
+      "sourcePublicUrl": "/static/logo.svg",
+      "publishable": true,
+      "destination": "docs/content/assets/public/static/logo.svg",
+      "publicUrl": "/static/logo.svg",
+      "license": {
+        "spdx": "MIT",
+        "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/LICENSE",
+        "path": "docs/content/assets/licenses/BaseUI-MIT.txt",
+        "publicUrl": "/licenses/BaseUI-MIT.txt",
+        "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a",
+        "basis": "Pinned repository MIT license covers these documentation images; no separate asset license was found. This is copyright provenance, not permission to imply MUI endorsement."
+      },
+      "blocker": null
+    }
+  ],
+  "stylesheets": [
+    {
+      "source": "docs/src/css/fonts/index.css",
+      "capturedPath": "docs/upstream/base-ui/docs/src/css/fonts/index.css",
+      "sourceUrl": "https://github.com/mui/base-ui/blob/19511bb171f3b360b006c94cf6d07e53cb446505/docs/src/css/fonts/index.css",
+      "sha256": "e8eb70cca5a44374a8af9643733c0a51d941916ea3b23982f530160d953f1aea",
+      "publishable": false,
+      "publicUrl": null,
+      "reason": "Original stylesheet references four unresolved Klim fonts."
+    },
+    {
+      "source": "docs/src/css/fonts/index.css",
+      "destination": "docs/content/assets/public/fonts/paper-mono.css",
+      "publicUrl": "/fonts/paper-mono.css",
+      "sha256": "cd4072014eee1afc4a199dd07ccf7eaf43ab87fd601ed778ef2197a00446e54d",
+      "publishable": true,
+      "license": "MIT",
+      "adaptation": "Only the two original Paper Mono rules; original weights 415/650 and size-adjust preserved. No sans-serif substitution or complete typography-parity approval."
+    }
+  ]
+}

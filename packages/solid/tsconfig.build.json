@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "jsxImportSource": "@solidjs/web",
+    "strict": true,
+    "skipLibCheck": false,
+    "types": ["node"],
+    "customConditions": ["browser"],
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "rootDir": "src",
+    "outDir": "build/types"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "src/**/*.test.*", "src/**/*.spec.*", "src/**/*.types.*",
+    "src/**/*.test-*", "src/**/*.fixture.*", "src/**/*.fixtures.*", "src/**/*Fixture.tsx", "src/**/*Fixture.ts", "src/**/*Fixtures.tsx", "src/**/*Fixtures.ts", "src/**/*.hydration-fixture.*", "src/**/*.touch-fixture.*", "src/**/testUtils.ts", "src/**/testImage.ts", "src/**/*.emit.tsx",
+    "src/**/test/**", "src/**/tests/**", "src/**/fixtures/**",
+    "src/**/__tests__/**", "src/**/proof/**", "src/**/describeGregorianAdapter/**"
+  ]
+}

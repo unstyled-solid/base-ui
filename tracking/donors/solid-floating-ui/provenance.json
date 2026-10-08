@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "donorId": "solid-floating-ui",
+  "ticket": "bsolid-donor-floating",
+  "statePath": "tracking/donors/solid-floating-ui.json",
+  "sourceSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+  "sourceUrl": "https://github.com/lxsmnsyc/solid-floating-ui/tree/0492e49b746deed543dbc167a9a58ed1210c2393",
+  "packagePath": "packages/solid-floating-ui/package.json",
+  "packageVersion": "1.0.1",
+  "pinSelection": "Resolved remote HEAD and refs/heads/main to the same full SHA, cloned as independent submodule, detached at that SHA. Package version is source metadata, not a claim of npm release contents.",
+  "behavioralOracle": {
+    "repositoryUrl": "https://github.com/mui/base-ui.git",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "submodulePath": "upstream/base-ui"
+  },
+  "license": {
+    "spdx": "MIT",
+    "copyright": "Copyright (c) 2021 Alexis Munsayac",
+    "sourcePath": "LICENSE",
+    "gitBlobSha": "d09db449aeea67b8d90d3180282fe1bbaf573a04",
+    "preservedCopy": "tracking/donors/solid-floating-ui/LICENSE",
+    "distributionGate": "bsolid-donor-notices"
+  },
+  "inheritedAttributions": [
+    {
+      "sourcePath": "packages/solid-floating-ui/src/utils/event.ts",
+      "citedSource": "https://github.com/adobe/react-spectrum/blob/b35d5c02fe900badccd0cf1a8f23bb593419f238/packages/@react-aria/utils/src/isVirtualEvent.ts",
+      "observedHeader": "Copyright 2022 Adobe. All rights reserved. Apache License, Version 2.0; source also references root NOTICE for React-origin method.",
+      "disposition": "Do not copy donor virtual-event implementation over Base UI semantics; audit inherited notices for adopted Base UI/donor portions in bsolid-donor-notices. This record is not a replacement for Apache LICENSE/NOTICE."
+    },
+    {
+      "sourcePath": "packages/solid-floating-ui/src/utils/markOthers.ts",
+      "citedSource": "https://github.com/theKashey/aria-hidden/blob/9220c8f4a4fd35f63bee5510a9f41a37264382d4/src/index.ts",
+      "licenseUrl": "https://github.com/theKashey/aria-hidden/blob/9220c8f4a4fd35f63bee5510a9f41a37264382d4/LICENSE",
+      "observedHeader": "MIT License; Copyright (c) 2017 Anton Korzunov",
+      "disposition": "Existing Base UI modified implementation remains dom-owned; preserve upstream attribution and audit packed notice in bsolid-donor-notices."
+    }
+  ],
+  "compatibility": {
+    "target": "2.0.0-rc.13",
+    "donorSolidPeer": "^1.8",
+    "donorSolidDev": "^1.9.9",
+    "donorDomPeer": "^1.5",
+    "donorDomDev": "^1.7.4",
+    "verdict": "not-compatible-as-installed; owned RC13 source adaptation required",
+    "adaptedSourceSha": null,
+    "assessmentPath": "tracking/donors/solid-floating-ui/assessment.md",
+    "sourceMapPath": "tracking/donors/solid-floating-ui/source-map.json"
+  },
+  "followups": [
+    "bsolid-donor-positioning-proof",
+    "bsolid-donor-interaction-proof",
+    "bsolid-donor-notices",
+    "bsolid-donor-update-proof"
+  ]
+}

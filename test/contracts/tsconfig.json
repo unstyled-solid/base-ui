@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "@vitest/browser-playwright"],
+    "paths": {
+      "#test-utils": ["./packages/solid/test/index.ts"],
+      "@testing-library/jest-dom/vitest": ["./test/harness/matchers.ts"]
+    },
+    "baseUrl": "../.."
+  },
+  "include": ["../../packages/solid/**/*.ts", "../../packages/solid/**/*.tsx", "../../vitest*.config.ts", "../harness/**/*.ts", "../harness/**/*.tsx", "../ssr-harness/**/*.ts", "../ssr-harness/**/*.tsx", "./types/**/*.tsx"],
+  "exclude": ["./negative/**", "../ssr-harness/.generated/**"]
+}

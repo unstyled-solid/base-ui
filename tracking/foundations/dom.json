@@ -1,0 +1,122 @@
+{
+  "ticket": "bsolid-dom",
+  "status": "in_progress_for_orchestrator_review",
+  "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "sourceCheckout": "upstream/base-ui",
+  "verifiedParitySha": null,
+  "targetRoot": "packages/solid/src",
+  "productionFiles": 43,
+  "sourceMappings": [
+    {
+      "sourceRoot": "packages/utils/src",
+      "targetRoot": "packages/solid/src/utils",
+      "sameStem": ["owner", "shadowDom", "addEventListener", "mergeCleanups", "areArraysEqual", "clamp", "empty", "fastObjectShallowCompare", "mergeObjects", "createLogOnce", "error", "warn", "formatErrorMessage", "inertValue", "isElementDisabled", "isHTMLElement", "isMouseWithinBounds", "getDefaultFormSubmitter", "visuallyHidden"],
+      "extension": ".ts"
+    },
+    {
+      "sourceRoot": "packages/utils/src/platform",
+      "targetRoot": "packages/solid/src/utils/platform",
+      "sameStem": ["index", "parts", "shared", "os", "engine", "env", "screen-reader", "media-query"],
+      "extension": ".ts"
+    },
+    {
+      "sourceRoot": "packages/react/src/utils",
+      "targetRoot": "packages/solid/src/utils",
+      "sameStem": ["getCssDimensions", "getPseudoElementBounds", "getElementAtPoint", "getElementTransform", "scrollable", "scrollEdges", "valueToPercent"],
+      "extension": ".ts"
+    },
+    {
+      "sourceRoot": "packages/react/src/floating-ui-react/utils",
+      "targetRoot": "packages/solid/src/floating-ui-react/utils",
+      "sameStem": ["element", "tabbable", "enqueueFocus", "markOthers", "createAttribute", "constants"],
+      "extension": ".ts"
+    },
+    {
+      "source": "packages/react/src/floating-ui-react/utils/composite.ts#isHiddenByStyles,isElementVisible",
+      "target": "packages/solid/src/floating-ui-react/utils/visibility.ts",
+      "reason": "Leaf extraction avoids a dependency on composite navigation. Remaining composite implementation belongs to bsolid-composite."
+    },
+    {
+      "sourceRoot": "packages/react/src/internals",
+      "targetRoot": "packages/solid/src/internals",
+      "sameStem": ["constants", "noop"],
+      "extension": ".ts"
+    }
+  ],
+  "adaptations": [
+    "Native MouseEvent/PointerEvent/FocusEvent replace React synthetic event types. isMouseWithinBounds retains its explicit HTMLElement currentTarget requirement.",
+    "Solid JSX.CSSProperties uses kebab-case CSS keys and explicit px for dimensions; inertValue passes native boolean/undefined through.",
+    "platform.os/engine/env/screenReader flag properties retain caller syntax but read lazily instead of resolving navigator/CSS during import. Direct internal category modules export getter objects rather than eager boolean bindings; no pinned callers use direct category imports.",
+    "ownerDocument additionally accepts Node, Document and undefined; fallback document is evaluated only on invocation. ownerWindow and realm predicates use installed @floating-ui/utils/dom.",
+    "contains preserves native containment and also traverses assigned slots as required by the ticket; closest and getTarget retain source traversal and post-dispatch fallback.",
+    "fastObjectShallowCompare uses realm-independent object/function tests rather than instanceof Object, including null-prototype records; enumerable-key and Object.is semantics retained.",
+    "element.ts consumes the bootstrap TriggerLookup type and shared TRIGGER_DISABLED_ATTRIBUTE='data-trigger-disabled', with no popup/tooltip runtime dependency. isEventTargetWithin retains the source's dispatch-time composedPath behavior, distinct from getTarget's post-dispatch fallback.",
+    "enqueueFocus retains one latest-focus queue, cancels via the window that scheduled it, and makes null-element cancellation safe without global RAF. shouldFocus is checked at execution; stale cleanup cannot cancel a replacement.",
+    "markOthers retains source outside-tree selection, script/live-region handling, and independent aria/marker counts. It additionally restores exact original values (including aria-hidden=false and preexisting marker strings), is idempotent on cleanup, and corrects nested shadow targets to their outer host.",
+    "disableFocusInside/enableFocusInside retain source marker API with raw weak-map locks for overlapping containers. Exact tabindex/data-tabindex values and SVG/moved nodes restore after final release. Existing externally saved data-tabindex markup remains supported.",
+    "No React dependency, old Solid port, reactive store, floating hook, observer proxy, shared manifest, export barrel or reference edit introduced."
+  ],
+  "unportedAndReplacementOwners": [
+    {
+      "source": "packages/utils/src/lruMemoize.ts",
+      "status": "dependency_decision_pending",
+      "reason": "One-line reselect re-export, not a tiny LRU implementation. reselect is unavailable; sole pinned production consumer is store/createSelectorMemoized.ts.",
+      "owners": ["bsolid-state", "bsolid-dist-contract"],
+      "issue": "bsolid-dom-lru-dependency",
+      "replacement": "State owner confirms native selector replacement, or integrator installs approved dependency and wires exact re-export. No toy cache or broken import added."
+    },
+    {
+      "source": "packages/utils/src/inertValue.ts#React-version-compatibility",
+      "owner": "bsolid-dom",
+      "replacement": "Native boolean passthrough; no reactVersion dependency."
+    },
+    {
+      "source": "React.CSSProperties and React event types in owned helpers",
+      "owner": "bsolid-dom",
+      "replacement": "@solidjs/web JSX.CSSProperties and native DOM event types; no React runtime."
+    },
+    {
+      "source": "React reactVersion/safeReact shims and testUtils runtime",
+      "owners": ["bsolid-lifecycle", "bsolid-harness"],
+      "replacement": "Explicit non-goals: native RC13 resources and real Solid harness; no shim port."
+    }
+  ],
+  "testMappings": [
+    { "source": "packages/utils/src/shadowDom.test.ts", "target": "utils/shadowDom.dom.test.ts", "coverage": "All closest/getTarget scenarios; additional nested focus/contains/slots/legacy events/iframe fixtures. Native click dispatch exercises composed targeting instead of pointer timing." },
+    { "source": "packages/utils/src/addEventListener.test.ts", "target": "utils/addEventListener.dom.test.ts", "coverage": "Exact attachment/removal options plus native this, object listener, once, AbortSignal." },
+    { "source": "packages/utils/src/mergeCleanups.test.ts", "target": "utils/addEventListener.dom.test.ts", "coverage": "Input order and false/null/undefined skips, plus repeated-call source semantics." },
+    { "source": "packages/utils/src/areArraysEqual.test.ts", "target": "utils/areArraysEqual.dom.test.ts", "coverage": "All eleven source comparison scenarios, regrouped/parameterized without changing outcomes." },
+    { "source": "packages/utils/src/clamp.test.ts", "target": "utils/areArraysEqual.dom.test.ts", "coverage": "All three source clamp assertions." },
+    { "source": "packages/utils/src/empty.test.ts", "target": "utils/areArraysEqual.dom.test.ts", "coverage": "Frozen shared array/object plus rejected mutation." },
+    { "source": "packages/utils/src/createLogOnce.test.ts", "target": "utils/createLogOnce.dom.test.ts", "coverage": "All five source cases through exact local expectDiagnostic counts; console output retained. Also error/warn wrappers." },
+    { "source": "packages/utils/src/formatErrorMessage.test.ts", "target": "utils/formatErrorMessage.dom.test.ts", "coverage": "All five source formatter scenarios; literal encoded URL assertions." },
+    { "source": "packages/utils/src/getDefaultFormSubmitter.test.ts", "target": "utils/getDefaultFormSubmitter.dom.test.ts", "coverage": "All five source cases plus null form." },
+    { "source": "packages/utils/src/visuallyHidden.test.tsx", "target": "utils/visuallyHidden.dom.test.ts", "coverage": "All four direction combinations authored as native browser fixtures; execution deferred." },
+    { "source": "packages/react/src/utils/scrollEdges.test.ts", "target": "utils/scrollEdges.dom.test.ts", "coverage": "All five source cases plus overscroll, equal-distance tie and nonnegative max." },
+    { "source": "packages/react/src/utils/getCssDimensions.test.ts", "target": "utils/getCssDimensions.dom.test.ts", "coverage": "Source SVG layout browser body retained; owner-realm fractional/offset/SVG-fallback tests added." },
+    { "source": "packages/react/src/utils/getPseudoElementBounds.test.ts", "target": "utils/getCssDimensions.dom.test.ts", "coverage": "No jsdom pseudo-style reads; inclusive/exclusive drift on all four edges; browser pseudo-element expansion body with equivalent geometry, plus actual transforms and scroll layout." },
+    { "source": "packages/react/src/floating-ui-react/utils/composite.test.ts#visibility", "target": "floating-ui-react/utils/visibility.dom.test.ts", "coverage": "Both visibility helper scenarios; navigation cases remain bsolid-composite-owned." },
+    { "source": "packages/react/src/floating-ui-react/utils/tabbable.test.ts", "target": "floating-ui-react/utils/tabbable.dom.test.ts", "coverage": "Basic/embedded/disabled controls; slots and unslotted content; details/summary; aria-disabled; CSS visibility/contents/checkVisibility/fallback; visually-hidden styles; checked/unchecked radios; inert slots; shadow/slot non-tabbable anchors; disabled/detached anchors; four checked/direction disabled-radio combinations. All six source browser cases authored and deferred. Additional form isolation, fieldset legend, fallback slot, exclusion, neighbors and overlapping exact focus restoration." },
+    { "source": "packages/react/src/floating-ui-react/utils/markOthers.test.ts", "target": "floating-ui-react/utils/markOthers.dom.test.ts", "coverage": "Source single/multiple/out-of-order/differing-control/three-lock/external-ownership/re-read/live-region/shadow-anchor cases combined into parameterized tests; exact false/empty/custom attributes, idempotent cleanup, nested roots, detached targets and iframe ownership added." },
+    { "source": "additional contract fixtures", "targets": ["floating-ui-react/utils/element.dom.test.ts", "floating-ui-react/utils/enqueueFocus.dom.test.ts", "utils/platform/platform.dom.test.ts", "utils/owner.dom.ssr.test.ts"], "coverage": "Structural trigger lookup and exact disabled attribute; owner-realm RAF/late guard/stale cleanup; lazy platform flags and UA data; all 36 implemented public leaf entry modules import while browser global getters throw." }
+  ],
+  "checks": [
+    { "command": "rtk pnpm test:jsdom .dom.test --no-watch", "result": "PASS: 100 tests; 12 explicitly deferred browser cases; 14 files passed, one browser-only file skipped." },
+    { "command": "rtk pnpm test:ssr owner.dom --no-watch", "result": "PASS: one separate-server import safety test; harness production SSR fixture compilation also passed." },
+    { "command": "rtk pnpm typescript", "result": "BLOCKED by shared-tree harness/filter/lifecycle/temporal diagnostics at initial run; no owned production diagnostic. No external file edited." },
+    { "command": "rtk pnpm test:types --no-watch", "result": "BLOCKED by missing baseui-solid2/internals/temporal augmentation target in both temporal adapters. One owned legacy event test cast diagnostic was fixed and rechecked in the focused strict program." },
+    { "command": "RTK-wrapped TypeScript createProgram using test/contracts/tsconfig.json compiler options and owned source/test roots", "result": "PASS after final edits: 59 owned files, zero diagnostics, strict=true and skipLibCheck=false. Does not certify the shared tree.", "reproduction": "Load config with ts.getParsedCommandLineOfConfigFile; select root names matching the sourceMappings stems, utils/platform/**, and their .dom tests; ts.createProgram(roots, config.options), then ts.getPreEmitDiagnostics. No compiler options overridden." }
+  ],
+  "followups": [
+    { "id": "bsolid-dom-browser-replay", "gate": "bsolid-browser", "classification": "deferred-validation", "cases": 12 },
+    { "id": "bsolid-dom-lru-dependency", "gate": "bsolid-integration", "classification": "integration-followup/dependency-request" },
+    { "id": "bsolid-dom-typecheck-integration", "gate": "bsolid-integration", "classification": "integration-followup/validation-blocker" }
+  ],
+  "provenance": {
+    "license": "MIT; repository LICENSE/NOTICE retained; no shared notice edits",
+    "markOthers": "Original pinned aria-hidden 9220c8f4a4fd35f63bee5510a9f41a37264382d4 attribution preserved in source; inherited packed notices remain bsolid-donor-notices-owned.",
+    "arrayAndObjectComparison": "Original mui-x source attribution URLs preserved.",
+    "donorCodeUsed": false
+  },
+  "handoff": "Leaf imports are ready for component/foundation consumers. Integration owns barrels/manifests/lockfiles. Main ticket intentionally remains in progress for orchestrator review; this is not browser parity."
+}

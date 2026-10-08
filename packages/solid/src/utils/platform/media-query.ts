@@ -1,0 +1,2 @@
+// https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html
+export const iOS = '@supports (-webkit-touch-callout: none)';

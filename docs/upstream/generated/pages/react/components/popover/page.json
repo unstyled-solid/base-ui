@@ -1,0 +1,5013 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/popover/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "68d62847e67ae00d6dfb9c28cd3b0278f056bcd36f616d1851a1355ef8fd25e6",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/popover",
+  "route": "/solid/components/popover",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Popover",
+  "subtitle": "An accessible popup anchored to a button.",
+  "metadata": {
+    "keywords": [
+      "React Popover",
+      "Popover Component",
+      "Popover Menu",
+      "Popup Menu",
+      "Anchored Popup",
+      "Dropdown",
+      "Overlay",
+      "Floating Panel",
+      "Tooltip Alternative",
+      "Info Box",
+      "Callout",
+      "Popup Content",
+      "Detached Trigger Popover",
+      "Multi Trigger Popover",
+      "Hover Trigger Popover",
+      "Click Trigger Popover",
+      "Focus Trigger Popover",
+      "Animated Popover",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React popover component that displays an accessible popup anchored to a button."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoPopoverHero",
+      "imported": "DemoPopoverHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/hero#DemoPopoverHero"
+    },
+    {
+      "from": "./demos/open-on-hover",
+      "local": "DemoPopoverOpenOnHover",
+      "imported": "DemoPopoverOpenOnHover",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/open-on-hover#DemoPopoverOpenOnHover"
+    },
+    {
+      "from": "./demos/detached-triggers-simple",
+      "local": "DemoPopoverDetachedTriggersSimple",
+      "imported": "DemoPopoverDetachedTriggersSimple",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-simple#DemoPopoverDetachedTriggersSimple"
+    },
+    {
+      "from": "./demos/detached-triggers-controlled",
+      "local": "DemoPopoverDetachedTriggersControlled",
+      "imported": "DemoPopoverDetachedTriggersControlled",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-controlled#DemoPopoverDetachedTriggersControlled"
+    },
+    {
+      "from": "./demos/detached-triggers-full",
+      "local": "DemoPopoverDetachedTriggersFull",
+      "imported": "DemoPopoverDetachedTriggersFull",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-full#DemoPopoverDetachedTriggersFull"
+    },
+    {
+      "from": "./types",
+      "local": "TypesPopover",
+      "imported": "TypesPopover",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Popover",
+      "properties": {
+        "id": "popover"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:38:1"
+    },
+    {
+      "depth": 3,
+      "text": "Opening on hover",
+      "properties": {
+        "id": "opening-on-hover"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:40:1"
+    },
+    {
+      "depth": 3,
+      "text": "Detached triggers",
+      "properties": {
+        "id": "detached-triggers"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:50:1"
+    },
+    {
+      "depth": 3,
+      "text": "Multiple triggers",
+      "properties": {
+        "id": "multiple-triggers"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:81:1"
+    },
+    {
+      "depth": 3,
+      "text": "Controlled mode with multiple triggers",
+      "properties": {
+        "id": "controlled-mode-with-multiple-triggers"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:152:1"
+    },
+    {
+      "depth": 3,
+      "text": "Animating the Popover",
+      "properties": {
+        "id": "animating-the-popover"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:165:1"
+    },
+    {
+      "depth": 4,
+      "text": "Position and Size",
+      "properties": {
+        "id": "position-and-size"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:170:1"
+    },
+    {
+      "depth": 4,
+      "text": "Content",
+      "properties": {
+        "id": "content"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:175:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:195:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:199:1"
+    },
+    {
+      "depth": 3,
+      "text": "Trigger",
+      "properties": {
+        "id": "trigger"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:203:1"
+    },
+    {
+      "depth": 3,
+      "text": "Backdrop",
+      "properties": {
+        "id": "backdrop"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:207:1"
+    },
+    {
+      "depth": 3,
+      "text": "Portal",
+      "properties": {
+        "id": "portal"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:211:1"
+    },
+    {
+      "depth": 3,
+      "text": "Positioner",
+      "properties": {
+        "id": "positioner"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:215:1"
+    },
+    {
+      "depth": 3,
+      "text": "Popup",
+      "properties": {
+        "id": "popup"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:219:1"
+    },
+    {
+      "depth": 3,
+      "text": "Arrow",
+      "properties": {
+        "id": "arrow"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:223:1"
+    },
+    {
+      "depth": 3,
+      "text": "Title",
+      "properties": {
+        "id": "title"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:227:1"
+    },
+    {
+      "depth": 3,
+      "text": "Description",
+      "properties": {
+        "id": "description"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:231:1"
+    },
+    {
+      "depth": 3,
+      "text": "Close",
+      "properties": {
+        "id": "close"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:235:1"
+    },
+    {
+      "depth": 3,
+      "text": "Viewport",
+      "properties": {
+        "id": "viewport"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:239:1"
+    },
+    {
+      "depth": 2,
+      "text": "createHandle",
+      "properties": {
+        "id": "createhandle"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:245:1"
+    },
+    {
+      "depth": 3,
+      "text": "Handle",
+      "properties": {
+        "data-exclude-toc": "",
+        "id": "handle"
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:251:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#",
+      "target": "#",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:249:1"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React popover component that displays an accessible popup anchored to a button."
+      },
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:4:1"
+    },
+    {
+      "name": "DemoPopoverHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/hero#DemoPopoverHero"
+    },
+    {
+      "name": "DemoPopoverOpenOnHover",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:48:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/open-on-hover#DemoPopoverOpenOnHover"
+    },
+    {
+      "name": "DemoPopoverDetachedTriggersSimple",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:79:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-simple#DemoPopoverDetachedTriggersSimple"
+    },
+    {
+      "name": "DemoPopoverDetachedTriggersControlled",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:163:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-controlled#DemoPopoverDetachedTriggersControlled"
+    },
+    {
+      "name": "DemoPopoverDetachedTriggersFull",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:193:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-full#DemoPopoverDetachedTriggersFull"
+    },
+    {
+      "name": "TypesPopover.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:201:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Trigger",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:205:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Backdrop",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:209:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Portal",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:213:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Positioner",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:217:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Popup",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:221:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Arrow",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:225:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Title",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:229:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Description",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:233:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Close",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:237:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Viewport",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:241:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.createHandle",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:247:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    },
+    {
+      "name": "TypesPopover.Handle",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:253:1",
+      "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:11:1",
+      "detail": "Site must implement DemoPopoverHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Backdrop",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Arrow",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Viewport",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Title",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Description",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Popover.Close",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:17:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:48:1",
+      "detail": "Site must implement DemoPopoverOpenOnHover; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:61:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:61:1",
+      "detail": "Popover.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:61:1",
+      "detail": "Popover.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:61:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:79:1",
+      "detail": "Site must implement DemoPopoverDetachedTriggersSimple; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:86:1",
+      "detail": "Popover.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:86:1",
+      "detail": "Popover.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:86:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:94:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:94:1",
+      "detail": "Popover.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:94:1",
+      "detail": "Popover.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:94:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Popover.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Popover.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Popover.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Popover.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Popover.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-className",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Popover.Arrow",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "ArrowSvg",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Popover.Title",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Popover.Description",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:115:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:163:1",
+      "detail": "Site must implement DemoPopoverDetachedTriggersControlled; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:193:1",
+      "detail": "Site must implement DemoPopoverDetachedTriggersFull; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:201:1",
+      "detail": "Site must implement TypesPopover.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:205:1",
+      "detail": "Site must implement TypesPopover.Trigger; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:209:1",
+      "detail": "Site must implement TypesPopover.Backdrop; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:213:1",
+      "detail": "Site must implement TypesPopover.Portal; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:217:1",
+      "detail": "Site must implement TypesPopover.Positioner; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:221:1",
+      "detail": "Site must implement TypesPopover.Popup; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:225:1",
+      "detail": "Site must implement TypesPopover.Arrow; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:229:1",
+      "detail": "Site must implement TypesPopover.Title; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:233:1",
+      "detail": "Site must implement TypesPopover.Description; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:237:1",
+      "detail": "Site must implement TypesPopover.Close; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:241:1",
+      "detail": "Site must implement TypesPopover.Viewport; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:247:1",
+      "detail": "Site must implement TypesPopover.createHandle; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:253:1",
+      "detail": "Site must implement TypesPopover.Handle; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/popover/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Popover",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 10,
+                "offset": 9
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 10,
+            "offset": 9
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "popover"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "An accessible popup anchored to a button.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 21
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 52,
+                    "offset": 62
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 11
+              },
+              "end": {
+                "line": 3,
+                "column": 63,
+                "offset": 73
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 11
+          },
+          "end": {
+            "line": 3,
+            "column": 63,
+            "offset": 73
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 82
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 100
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React popover component that displays an accessible popup anchored to a button.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 103
+              },
+              "end": {
+                "line": 6,
+                "column": 117,
+                "offset": 217
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 74
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 220
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoPopoverHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 222
+          },
+          "end": {
+            "line": 9,
+            "column": 48,
+            "offset": 269
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoPopoverHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 271
+          },
+          "end": {
+            "line": 11,
+            "column": 20,
+            "offset": 290
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/hero#DemoPopoverHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 295
+              },
+              "end": {
+                "line": 13,
+                "column": 11,
+                "offset": 302
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 292
+          },
+          "end": {
+            "line": 13,
+            "column": 11,
+            "offset": 302
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 304
+              },
+              "end": {
+                "line": 15,
+                "column": 45,
+                "offset": 348
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 304
+          },
+          "end": {
+            "line": 15,
+            "column": 45,
+            "offset": 348
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Popover } from 'baseui-solid2/popover';\n\n<Popover.Root>\n  <Popover.Trigger />\n  <Popover.Portal>\n    <Popover.Backdrop />\n    <Popover.Positioner>\n      <Popover.Popup>\n        <Popover.Arrow />\n        <Popover.Viewport>\n          <Popover.Title />\n          <Popover.Description />\n          <Popover.Close />\n        </Popover.Viewport>\n      </Popover.Popup>\n    </Popover.Positioner>\n  </Popover.Portal>\n</Popover.Root>;",
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 350
+          },
+          "end": {
+            "line": 36,
+            "column": 4,
+            "offset": 812
+          }
+        },
+        "data": {
+          "sourceValue": "import { Popover } from '@base-ui/react/popover';\n\n<Popover.Root>\n  <Popover.Trigger />\n  <Popover.Portal>\n    <Popover.Backdrop />\n    <Popover.Positioner>\n      <Popover.Popup>\n        <Popover.Arrow />\n        <Popover.Viewport>\n          <Popover.Title />\n          <Popover.Description />\n          <Popover.Close />\n        </Popover.Viewport>\n      </Popover.Popup>\n    </Popover.Positioner>\n  </Popover.Portal>\n</Popover.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/popover",
+              "start": 25,
+              "end": 47,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/popover",
+              "start": 25,
+              "end": 47,
+              "kind": "import",
+              "replacement": "baseui-solid2/popover"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 4,
+                "offset": 817
+              },
+              "end": {
+                "line": 38,
+                "column": 12,
+                "offset": 825
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 814
+          },
+          "end": {
+            "line": 38,
+            "column": 12,
+            "offset": 825
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Opening on hover",
+            "position": {
+              "start": {
+                "line": 40,
+                "column": 5,
+                "offset": 831
+              },
+              "end": {
+                "line": 40,
+                "column": 21,
+                "offset": 847
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 40,
+            "column": 1,
+            "offset": 827
+          },
+          "end": {
+            "line": 40,
+            "column": 21,
+            "offset": 847
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "opening-on-hover"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This example shows how you can configure the popover to open on hover using the ",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 1,
+                "offset": 849
+              },
+              "end": {
+                "line": 42,
+                "column": 81,
+                "offset": 929
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "openOnHover",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 81,
+                "offset": 929
+              },
+              "end": {
+                "line": 42,
+                "column": 94,
+                "offset": 942
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop.",
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 94,
+                "offset": 942
+              },
+              "end": {
+                "line": 42,
+                "column": 100,
+                "offset": 948
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 42,
+            "column": 1,
+            "offset": 849
+          },
+          "end": {
+            "line": 42,
+            "column": 100,
+            "offset": 948
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can use the ",
+            "position": {
+              "start": {
+                "line": 44,
+                "column": 1,
+                "offset": 950
+              },
+              "end": {
+                "line": 44,
+                "column": 17,
+                "offset": 966
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "delay",
+            "position": {
+              "start": {
+                "line": 44,
+                "column": 17,
+                "offset": 966
+              },
+              "end": {
+                "line": 44,
+                "column": 24,
+                "offset": 973
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to specify how long to wait (in milliseconds) before the popover opens on hover.",
+            "position": {
+              "start": {
+                "line": 44,
+                "column": 24,
+                "offset": 973
+              },
+              "end": {
+                "line": 44,
+                "column": 110,
+                "offset": 1059
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 44,
+            "column": 1,
+            "offset": 950
+          },
+          "end": {
+            "line": 44,
+            "column": 110,
+            "offset": 1059
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoPopoverOpenOnHover } from './demos/open-on-hover';",
+        "position": {
+          "start": {
+            "line": 46,
+            "column": 1,
+            "offset": 1061
+          },
+          "end": {
+            "line": 46,
+            "column": 64,
+            "offset": 1124
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoPopoverOpenOnHover",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 48,
+            "column": 1,
+            "offset": 1126
+          },
+          "end": {
+            "line": 48,
+            "column": 27,
+            "offset": 1152
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/open-on-hover#DemoPopoverOpenOnHover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Detached triggers",
+            "position": {
+              "start": {
+                "line": 50,
+                "column": 5,
+                "offset": 1158
+              },
+              "end": {
+                "line": 50,
+                "column": 22,
+                "offset": 1175
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 50,
+            "column": 1,
+            "offset": 1154
+          },
+          "end": {
+            "line": 50,
+            "column": 22,
+            "offset": 1175
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "detached-triggers"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A popover can be controlled by a trigger located either inside or outside the ",
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 1,
+                "offset": 1177
+              },
+              "end": {
+                "line": 52,
+                "column": 79,
+                "offset": 1255
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Root>",
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 79,
+                "offset": 1255
+              },
+              "end": {
+                "line": 52,
+                "column": 95,
+                "offset": 1271
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " component.\nFor simple, one-off interactions, place the ",
+            "position": {
+              "start": {
+                "line": 52,
+                "column": 95,
+                "offset": 1271
+              },
+              "end": {
+                "line": 53,
+                "column": 45,
+                "offset": 1327
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Trigger>",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 45,
+                "offset": 1327
+              },
+              "end": {
+                "line": 53,
+                "column": 64,
+                "offset": 1346
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " inside ",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 64,
+                "offset": 1346
+              },
+              "end": {
+                "line": 53,
+                "column": 72,
+                "offset": 1354
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Root>",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 72,
+                "offset": 1354
+              },
+              "end": {
+                "line": 53,
+                "column": 88,
+                "offset": 1370
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", as shown in the example at the top of this page.",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 88,
+                "offset": 1370
+              },
+              "end": {
+                "line": 53,
+                "column": 138,
+                "offset": 1420
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 52,
+            "column": 1,
+            "offset": 1177
+          },
+          "end": {
+            "line": 53,
+            "column": 138,
+            "offset": 1420
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "However, if defining the popover's content next to its trigger is not practical, you can use a detached trigger.\nThis involves placing the ",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 1,
+                "offset": 1422
+              },
+              "end": {
+                "line": 56,
+                "column": 27,
+                "offset": 1561
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Trigger>",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 27,
+                "offset": 1561
+              },
+              "end": {
+                "line": 56,
+                "column": 46,
+                "offset": 1580
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " outside of ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 46,
+                "offset": 1580
+              },
+              "end": {
+                "line": 56,
+                "column": 58,
+                "offset": 1592
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Root>",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 58,
+                "offset": 1592
+              },
+              "end": {
+                "line": 56,
+                "column": 74,
+                "offset": 1608
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and linking them with a ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 74,
+                "offset": 1608
+              },
+              "end": {
+                "line": 56,
+                "column": 99,
+                "offset": 1633
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "handle",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 99,
+                "offset": 1633
+              },
+              "end": {
+                "line": 56,
+                "column": 107,
+                "offset": 1641
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " created by the ",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 107,
+                "offset": 1641
+              },
+              "end": {
+                "line": 56,
+                "column": 123,
+                "offset": 1657
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Popover.createHandle()",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 123,
+                "offset": 1657
+              },
+              "end": {
+                "line": 56,
+                "column": 147,
+                "offset": 1681
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " function.",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 147,
+                "offset": 1681
+              },
+              "end": {
+                "line": 56,
+                "column": 157,
+                "offset": 1691
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 55,
+            "column": 1,
+            "offset": 1422
+          },
+          "end": {
+            "line": 56,
+            "column": 157,
+            "offset": 1691
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The imperative methods on the handle, such as ",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 1,
+                "offset": 1693
+              },
+              "end": {
+                "line": 58,
+                "column": 47,
+                "offset": 1739
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "open()",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 47,
+                "offset": 1739
+              },
+              "end": {
+                "line": 58,
+                "column": 55,
+                "offset": 1747
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 55,
+                "offset": 1747
+              },
+              "end": {
+                "line": 58,
+                "column": 60,
+                "offset": 1752
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "close()",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 60,
+                "offset": 1752
+              },
+              "end": {
+                "line": 58,
+                "column": 69,
+                "offset": 1761
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", require a ",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 69,
+                "offset": 1761
+              },
+              "end": {
+                "line": 58,
+                "column": 81,
+                "offset": 1773
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Root>",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 81,
+                "offset": 1773
+              },
+              "end": {
+                "line": 58,
+                "column": 97,
+                "offset": 1789
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " using the same handle to be mounted.\nCalls made while no root is attached to the handle — before one mounts, or after it unmounts — are ignored. Each time a root mounts, it starts from fresh state: a call made while no root was attached is not replayed, and no open state carries over from a previous mount.",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 97,
+                "offset": 1789
+              },
+              "end": {
+                "line": 59,
+                "column": 271,
+                "offset": 2097
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 1693
+          },
+          "end": {
+            "line": 59,
+            "column": 271,
+            "offset": 2097
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Detached triggers\"",
+        "value": "const demoPopover = Popover.createHandle();\n\n// @highlight\n// @highlight-text \"handle={demoPopover}\"\n<Popover.Trigger handle={demoPopover}>\n  Trigger\n</Popover.Trigger>\n\n// @highlight\n// @highlight-text \"handle={demoPopover}\"\n<Popover.Root handle={demoPopover}>\n  ...\n</Popover.Root>",
+        "position": {
+          "start": {
+            "line": 61,
+            "column": 1,
+            "offset": 2099
+          },
+          "end": {
+            "line": 75,
+            "column": 4,
+            "offset": 2419
+          }
+        },
+        "data": {
+          "sourceValue": "const demoPopover = Popover.createHandle();\n\n// @highlight\n// @highlight-text \"handle={demoPopover}\"\n<Popover.Trigger handle={demoPopover}>\n  Trigger\n</Popover.Trigger>\n\n// @highlight\n// @highlight-text \"handle={demoPopover}\"\n<Popover.Root handle={demoPopover}>\n  ...\n</Popover.Root>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 101,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoPopoverDetachedTriggersSimple } from './demos/detached-triggers-simple';",
+        "position": {
+          "start": {
+            "line": 77,
+            "column": 1,
+            "offset": 2421
+          },
+          "end": {
+            "line": 77,
+            "column": 86,
+            "offset": 2506
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoPopoverDetachedTriggersSimple",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 79,
+            "column": 1,
+            "offset": 2508
+          },
+          "end": {
+            "line": 79,
+            "column": 38,
+            "offset": 2545
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-simple#DemoPopoverDetachedTriggersSimple"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Multiple triggers",
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 5,
+                "offset": 2551
+              },
+              "end": {
+                "line": 81,
+                "column": 22,
+                "offset": 2568
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 81,
+            "column": 1,
+            "offset": 2547
+          },
+          "end": {
+            "line": 81,
+            "column": 22,
+            "offset": 2568
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "multiple-triggers"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A single popover can be opened by multiple trigger elements.\nYou can achieve this by using the same ",
+            "position": {
+              "start": {
+                "line": 83,
+                "column": 1,
+                "offset": 2570
+              },
+              "end": {
+                "line": 84,
+                "column": 40,
+                "offset": 2670
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "handle",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 40,
+                "offset": 2670
+              },
+              "end": {
+                "line": 84,
+                "column": 48,
+                "offset": 2678
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for several detached triggers, or by placing multiple ",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 48,
+                "offset": 2678
+              },
+              "end": {
+                "line": 84,
+                "column": 103,
+                "offset": 2733
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Trigger>",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 103,
+                "offset": 2733
+              },
+              "end": {
+                "line": 84,
+                "column": 122,
+                "offset": 2752
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " components inside a single ",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 122,
+                "offset": 2752
+              },
+              "end": {
+                "line": 84,
+                "column": 150,
+                "offset": 2780
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Root>",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 150,
+                "offset": 2780
+              },
+              "end": {
+                "line": 84,
+                "column": 166,
+                "offset": 2796
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 166,
+                "offset": 2796
+              },
+              "end": {
+                "line": 84,
+                "column": 167,
+                "offset": 2797
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 83,
+            "column": 1,
+            "offset": 2570
+          },
+          "end": {
+            "line": 84,
+            "column": 167,
+            "offset": 2797
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Multiple triggers within the Root part\"",
+        "value": "<Popover.Root>\n  <Popover.Trigger>Trigger 1</Popover.Trigger>\n  <Popover.Trigger>Trigger 2</Popover.Trigger>\n  ...\n</Popover.Root>",
+        "position": {
+          "start": {
+            "line": 86,
+            "column": 1,
+            "offset": 2799
+          },
+          "end": {
+            "line": 92,
+            "column": 4,
+            "offset": 2987
+          }
+        },
+        "data": {
+          "sourceValue": "<Popover.Root>\n  <Popover.Trigger>Trigger 1</Popover.Trigger>\n  <Popover.Trigger>Trigger 2</Popover.Trigger>\n  ...\n</Popover.Root>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Multiple detached triggers\"",
+        "value": "const demoPopover = Popover.createHandle();\n\n<Popover.Trigger handle={demoPopover}>\n  Trigger 1\n</Popover.Trigger>\n\n<Popover.Trigger handle={demoPopover}>\n  Trigger 2\n</Popover.Trigger>\n\n<Popover.Root handle={demoPopover}>\n  ...\n</Popover.Root>",
+        "position": {
+          "start": {
+            "line": 94,
+            "column": 1,
+            "offset": 2989
+          },
+          "end": {
+            "line": 108,
+            "column": 4,
+            "offset": 3279
+          }
+        },
+        "data": {
+          "sourceValue": "const demoPopover = Popover.createHandle();\n\n<Popover.Trigger handle={demoPopover}>\n  Trigger 1\n</Popover.Trigger>\n\n<Popover.Trigger handle={demoPopover}>\n  Trigger 2\n</Popover.Trigger>\n\n<Popover.Root handle={demoPopover}>\n  ...\n</Popover.Root>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 45,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The popover can render different content depending on which trigger opened it.\nThis is achieved by passing a ",
+            "position": {
+              "start": {
+                "line": 110,
+                "column": 1,
+                "offset": 3281
+              },
+              "end": {
+                "line": 111,
+                "column": 31,
+                "offset": 3390
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "payload",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 31,
+                "offset": 3390
+              },
+              "end": {
+                "line": 111,
+                "column": 40,
+                "offset": 3399
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to the ",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 40,
+                "offset": 3399
+              },
+              "end": {
+                "line": 111,
+                "column": 48,
+                "offset": 3407
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Trigger>",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 48,
+                "offset": 3407
+              },
+              "end": {
+                "line": 111,
+                "column": 67,
+                "offset": 3426
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and using the function-as-a-child pattern in ",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 67,
+                "offset": 3426
+              },
+              "end": {
+                "line": 111,
+                "column": 113,
+                "offset": 3472
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Root>",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 113,
+                "offset": 3472
+              },
+              "end": {
+                "line": 111,
+                "column": 129,
+                "offset": 3488
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 111,
+                "column": 129,
+                "offset": 3488
+              },
+              "end": {
+                "line": 111,
+                "column": 130,
+                "offset": 3489
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 110,
+            "column": 1,
+            "offset": 3281
+          },
+          "end": {
+            "line": 111,
+            "column": 130,
+            "offset": 3489
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The payload can be strongly typed by providing a type argument to the ",
+            "position": {
+              "start": {
+                "line": 113,
+                "column": 1,
+                "offset": 3491
+              },
+              "end": {
+                "line": 113,
+                "column": 71,
+                "offset": 3561
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "createHandle()",
+            "position": {
+              "start": {
+                "line": 113,
+                "column": 71,
+                "offset": 3561
+              },
+              "end": {
+                "line": 113,
+                "column": 87,
+                "offset": 3577
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " function:",
+            "position": {
+              "start": {
+                "line": 113,
+                "column": 87,
+                "offset": 3577
+              },
+              "end": {
+                "line": 113,
+                "column": 97,
+                "offset": 3587
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 113,
+            "column": 1,
+            "offset": 3491
+          },
+          "end": {
+            "line": 113,
+            "column": 97,
+            "offset": 3587
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Detached triggers with payload\"",
+        "value": "// @highlight\nconst demoPopover = Popover.createHandle<{ text: string }>();\n\n// @highlight\n// @highlight-text \"payload\"\n<Popover.Trigger handle={demoPopover} payload={{ text: 'Trigger 1' }}>\n  Trigger 1\n</Popover.Trigger>\n\n// @highlight\n// @highlight-text \"payload\"\n<Popover.Trigger handle={demoPopover} payload={{ text: 'Trigger 2' }}>\n  Trigger 2\n</Popover.Trigger>\n\n<Popover.Root handle={demoPopover}>\n  {({ payload }) => ( // @highlight-text \"payload\"\n    <Popover.Portal>\n      <Popover.Positioner sideOffset={8}>\n        <Popover.Popup className={styles.Popup}>\n          <Popover.Arrow className={styles.Arrow}>\n            <ArrowSvg />\n          </Popover.Arrow>\n          <Popover.Title className={styles.Title}>Popover</Popover.Title>\n          {payload !== undefined && ( // @highlight-text \"payload\"\n            <Popover.Description className={styles.Description}>\n              This has been opened by {payload.text} {/* @highlight-text \"payload\" */}\n            </Popover.Description>\n          )}\n        </Popover.Popup>\n      </Popover.Positioner>\n    </Popover.Portal>\n  )}\n</Popover.Root>",
+        "position": {
+          "start": {
+            "line": 115,
+            "column": 1,
+            "offset": 3589
+          },
+          "end": {
+            "line": 150,
+            "column": 4,
+            "offset": 4746
+          }
+        },
+        "data": {
+          "sourceValue": "// @highlight\nconst demoPopover = Popover.createHandle<{ text: string }>();\n\n// @highlight\n// @highlight-text \"payload\"\n<Popover.Trigger handle={demoPopover} payload={{ text: 'Trigger 1' }}>\n  Trigger 1\n</Popover.Trigger>\n\n// @highlight\n// @highlight-text \"payload\"\n<Popover.Trigger handle={demoPopover} payload={{ text: 'Trigger 2' }}>\n  Trigger 2\n</Popover.Trigger>\n\n<Popover.Root handle={demoPopover}>\n  {({ payload }) => ( // @highlight-text \"payload\"\n    <Popover.Portal>\n      <Popover.Positioner sideOffset={8}>\n        <Popover.Popup className={styles.Popup}>\n          <Popover.Arrow className={styles.Arrow}>\n            <ArrowSvg />\n          </Popover.Arrow>\n          <Popover.Title className={styles.Title}>Popover</Popover.Title>\n          {payload !== undefined && ( // @highlight-text \"payload\"\n            <Popover.Description className={styles.Description}>\n              This has been opened by {payload.text} {/* @highlight-text \"payload\" */}\n            </Popover.Description>\n          )}\n        </Popover.Popup>\n      </Popover.Positioner>\n    </Popover.Portal>\n  )}\n</Popover.Root>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 120,
+              "message": "JSX expressions must have one parent element."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Controlled mode with multiple triggers",
+            "position": {
+              "start": {
+                "line": 152,
+                "column": 5,
+                "offset": 4752
+              },
+              "end": {
+                "line": 152,
+                "column": 43,
+                "offset": 4790
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 152,
+            "column": 1,
+            "offset": 4748
+          },
+          "end": {
+            "line": 152,
+            "column": 43,
+            "offset": 4790
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "controlled-mode-with-multiple-triggers"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can control the popover's open state externally using the ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 1,
+                "offset": 4792
+              },
+              "end": {
+                "line": 154,
+                "column": 63,
+                "offset": 4854
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "open",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 63,
+                "offset": 4854
+              },
+              "end": {
+                "line": 154,
+                "column": 69,
+                "offset": 4860
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 69,
+                "offset": 4860
+              },
+              "end": {
+                "line": 154,
+                "column": 74,
+                "offset": 4865
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 74,
+                "offset": 4865
+              },
+              "end": {
+                "line": 154,
+                "column": 88,
+                "offset": 4879
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " props on ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 88,
+                "offset": 4879
+              },
+              "end": {
+                "line": 154,
+                "column": 98,
+                "offset": 4889
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Root>",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 98,
+                "offset": 4889
+              },
+              "end": {
+                "line": 154,
+                "column": 114,
+                "offset": 4905
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".\nThis allows you to manage the popover's visibility based on your application's state.\nWhen using multiple triggers, you have to manage which trigger is active with the ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 114,
+                "offset": 4905
+              },
+              "end": {
+                "line": 156,
+                "column": 83,
+                "offset": 5075
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "triggerId",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 83,
+                "offset": 5075
+              },
+              "end": {
+                "line": 156,
+                "column": 94,
+                "offset": 5086
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop on ",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 94,
+                "offset": 5086
+              },
+              "end": {
+                "line": 156,
+                "column": 103,
+                "offset": 5095
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Root>",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 103,
+                "offset": 5095
+              },
+              "end": {
+                "line": 156,
+                "column": 119,
+                "offset": 5111
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and the ",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 119,
+                "offset": 5111
+              },
+              "end": {
+                "line": 156,
+                "column": 128,
+                "offset": 5120
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "id",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 128,
+                "offset": 5120
+              },
+              "end": {
+                "line": 156,
+                "column": 132,
+                "offset": 5124
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop on each ",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 132,
+                "offset": 5124
+              },
+              "end": {
+                "line": 156,
+                "column": 146,
+                "offset": 5138
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Trigger>",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 146,
+                "offset": 5138
+              },
+              "end": {
+                "line": 156,
+                "column": 165,
+                "offset": 5157
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 156,
+                "column": 165,
+                "offset": 5157
+              },
+              "end": {
+                "line": 156,
+                "column": 166,
+                "offset": 5158
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 154,
+            "column": 1,
+            "offset": 4792
+          },
+          "end": {
+            "line": 156,
+            "column": 166,
+            "offset": 5158
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Note that there is no separate ",
+            "position": {
+              "start": {
+                "line": 158,
+                "column": 1,
+                "offset": 5160
+              },
+              "end": {
+                "line": 158,
+                "column": 32,
+                "offset": 5191
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onTriggerIdChange",
+            "position": {
+              "start": {
+                "line": 158,
+                "column": 32,
+                "offset": 5191
+              },
+              "end": {
+                "line": 158,
+                "column": 51,
+                "offset": 5210
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop.\nInstead, the ",
+            "position": {
+              "start": {
+                "line": 158,
+                "column": 51,
+                "offset": 5210
+              },
+              "end": {
+                "line": 159,
+                "column": 14,
+                "offset": 5230
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "onOpenChange",
+            "position": {
+              "start": {
+                "line": 159,
+                "column": 14,
+                "offset": 5230
+              },
+              "end": {
+                "line": 159,
+                "column": 28,
+                "offset": 5244
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " callback receives an additional argument, ",
+            "position": {
+              "start": {
+                "line": 159,
+                "column": 28,
+                "offset": 5244
+              },
+              "end": {
+                "line": 159,
+                "column": 71,
+                "offset": 5287
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "eventDetails",
+            "position": {
+              "start": {
+                "line": 159,
+                "column": 71,
+                "offset": 5287
+              },
+              "end": {
+                "line": 159,
+                "column": 85,
+                "offset": 5301
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which contains the trigger element that initiated the state change.",
+            "position": {
+              "start": {
+                "line": 159,
+                "column": 85,
+                "offset": 5301
+              },
+              "end": {
+                "line": 159,
+                "column": 154,
+                "offset": 5370
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 158,
+            "column": 1,
+            "offset": 5160
+          },
+          "end": {
+            "line": 159,
+            "column": 154,
+            "offset": 5370
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoPopoverDetachedTriggersControlled } from './demos/detached-triggers-controlled';",
+        "position": {
+          "start": {
+            "line": 161,
+            "column": 1,
+            "offset": 5372
+          },
+          "end": {
+            "line": 161,
+            "column": 94,
+            "offset": 5465
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoPopoverDetachedTriggersControlled",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 163,
+            "column": 1,
+            "offset": 5467
+          },
+          "end": {
+            "line": 163,
+            "column": 42,
+            "offset": 5508
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-controlled#DemoPopoverDetachedTriggersControlled"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Animating the Popover",
+            "position": {
+              "start": {
+                "line": 165,
+                "column": 5,
+                "offset": 5514
+              },
+              "end": {
+                "line": 165,
+                "column": 26,
+                "offset": 5535
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 165,
+            "column": 1,
+            "offset": 5510
+          },
+          "end": {
+            "line": 165,
+            "column": 26,
+            "offset": 5535
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "animating-the-popover"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can animate a popover as it moves between different trigger elements.\nThis includes animating its position, size, and content.",
+            "position": {
+              "start": {
+                "line": 167,
+                "column": 1,
+                "offset": 5537
+              },
+              "end": {
+                "line": 168,
+                "column": 57,
+                "offset": 5667
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 167,
+            "column": 1,
+            "offset": 5537
+          },
+          "end": {
+            "line": 168,
+            "column": 57,
+            "offset": 5667
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "Position and Size",
+            "position": {
+              "start": {
+                "line": 170,
+                "column": 6,
+                "offset": 5674
+              },
+              "end": {
+                "line": 170,
+                "column": 23,
+                "offset": 5691
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 170,
+            "column": 1,
+            "offset": 5669
+          },
+          "end": {
+            "line": 170,
+            "column": 23,
+            "offset": 5691
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "position-and-size"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To animate the popover's position, apply CSS transitions to the ",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 1,
+                "offset": 5693
+              },
+              "end": {
+                "line": 172,
+                "column": 65,
+                "offset": 5757
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "left",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 65,
+                "offset": 5757
+              },
+              "end": {
+                "line": 172,
+                "column": 71,
+                "offset": 5763
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 71,
+                "offset": 5763
+              },
+              "end": {
+                "line": 172,
+                "column": 73,
+                "offset": 5765
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "right",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 73,
+                "offset": 5765
+              },
+              "end": {
+                "line": 172,
+                "column": 80,
+                "offset": 5772
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 80,
+                "offset": 5772
+              },
+              "end": {
+                "line": 172,
+                "column": 82,
+                "offset": 5774
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "top",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 82,
+                "offset": 5774
+              },
+              "end": {
+                "line": 172,
+                "column": 87,
+                "offset": 5779
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and ",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 87,
+                "offset": 5779
+              },
+              "end": {
+                "line": 172,
+                "column": 93,
+                "offset": 5785
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "bottom",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 93,
+                "offset": 5785
+              },
+              "end": {
+                "line": 172,
+                "column": 101,
+                "offset": 5793
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " properties of the ",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 101,
+                "offset": 5793
+              },
+              "end": {
+                "line": 172,
+                "column": 120,
+                "offset": 5812
+              }
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Positioner",
+                "position": {
+                  "start": {
+                    "line": 172,
+                    "column": 122,
+                    "offset": 5814
+                  },
+                  "end": {
+                    "line": 172,
+                    "column": 132,
+                    "offset": 5824
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 120,
+                "offset": 5812
+              },
+              "end": {
+                "line": 172,
+                "column": 134,
+                "offset": 5826
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " part.\nTo animate its size, transition the ",
+            "position": {
+              "start": {
+                "line": 172,
+                "column": 134,
+                "offset": 5826
+              },
+              "end": {
+                "line": 173,
+                "column": 37,
+                "offset": 5869
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "width",
+            "position": {
+              "start": {
+                "line": 173,
+                "column": 37,
+                "offset": 5869
+              },
+              "end": {
+                "line": 173,
+                "column": 44,
+                "offset": 5876
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 173,
+                "column": 44,
+                "offset": 5876
+              },
+              "end": {
+                "line": 173,
+                "column": 49,
+                "offset": 5881
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "height",
+            "position": {
+              "start": {
+                "line": 173,
+                "column": 49,
+                "offset": 5881
+              },
+              "end": {
+                "line": 173,
+                "column": 57,
+                "offset": 5889
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " of the ",
+            "position": {
+              "start": {
+                "line": 173,
+                "column": 57,
+                "offset": 5889
+              },
+              "end": {
+                "line": 173,
+                "column": 65,
+                "offset": 5897
+              }
+            }
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Popup",
+                "position": {
+                  "start": {
+                    "line": 173,
+                    "column": 67,
+                    "offset": 5899
+                  },
+                  "end": {
+                    "line": 173,
+                    "column": 72,
+                    "offset": 5904
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 173,
+                "column": 65,
+                "offset": 5897
+              },
+              "end": {
+                "line": 173,
+                "column": 74,
+                "offset": 5906
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " part.",
+            "position": {
+              "start": {
+                "line": 173,
+                "column": 74,
+                "offset": 5906
+              },
+              "end": {
+                "line": 173,
+                "column": 80,
+                "offset": 5912
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 172,
+            "column": 1,
+            "offset": 5693
+          },
+          "end": {
+            "line": 173,
+            "column": 80,
+            "offset": 5912
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "Content",
+            "position": {
+              "start": {
+                "line": 175,
+                "column": 6,
+                "offset": 5919
+              },
+              "end": {
+                "line": 175,
+                "column": 13,
+                "offset": 5926
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 175,
+            "column": 1,
+            "offset": 5914
+          },
+          "end": {
+            "line": 175,
+            "column": 13,
+            "offset": 5926
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "content"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The popover also supports content transitions.\nThis is useful when different triggers display different content within the same popover.",
+            "position": {
+              "start": {
+                "line": 177,
+                "column": 1,
+                "offset": 5928
+              },
+              "end": {
+                "line": 178,
+                "column": 90,
+                "offset": 6064
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 177,
+            "column": 1,
+            "offset": 5928
+          },
+          "end": {
+            "line": 178,
+            "column": 90,
+            "offset": 6064
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To enable content animations, wrap the content in the ",
+            "position": {
+              "start": {
+                "line": 180,
+                "column": 1,
+                "offset": 6066
+              },
+              "end": {
+                "line": 180,
+                "column": 55,
+                "offset": 6120
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Viewport>",
+            "position": {
+              "start": {
+                "line": 180,
+                "column": 55,
+                "offset": 6120
+              },
+              "end": {
+                "line": 180,
+                "column": 75,
+                "offset": 6140
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " part.\nThis part provides features to create direction-aware animations.\nIt renders a ",
+            "position": {
+              "start": {
+                "line": 180,
+                "column": 75,
+                "offset": 6140
+              },
+              "end": {
+                "line": 182,
+                "column": 14,
+                "offset": 6226
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "div",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 14,
+                "offset": 6226
+              },
+              "end": {
+                "line": 182,
+                "column": 19,
+                "offset": 6231
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " with a ",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 19,
+                "offset": 6231
+              },
+              "end": {
+                "line": 182,
+                "column": 27,
+                "offset": 6239
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-activation-direction",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 27,
+                "offset": 6239
+              },
+              "end": {
+                "line": 182,
+                "column": 54,
+                "offset": 6266
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute that indicates the new trigger's position relative to the previous one. The value is a space-separated set of up to two tokens (one per axis) — ",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 54,
+                "offset": 6266
+              },
+              "end": {
+                "line": 182,
+                "column": 209,
+                "offset": 6421
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "left",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 209,
+                "offset": 6421
+              },
+              "end": {
+                "line": 182,
+                "column": 215,
+                "offset": 6427
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 215,
+                "offset": 6427
+              },
+              "end": {
+                "line": 182,
+                "column": 219,
+                "offset": 6431
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "right",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 219,
+                "offset": 6431
+              },
+              "end": {
+                "line": 182,
+                "column": 226,
+                "offset": 6438
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for the horizontal axis and ",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 226,
+                "offset": 6438
+              },
+              "end": {
+                "line": 182,
+                "column": 255,
+                "offset": 6467
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "up",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 255,
+                "offset": 6467
+              },
+              "end": {
+                "line": 182,
+                "column": 259,
+                "offset": 6471
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 259,
+                "offset": 6471
+              },
+              "end": {
+                "line": 182,
+                "column": 263,
+                "offset": 6475
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "down",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 263,
+                "offset": 6475
+              },
+              "end": {
+                "line": 182,
+                "column": 269,
+                "offset": 6481
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " for the vertical axis (for example, ",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 269,
+                "offset": 6481
+              },
+              "end": {
+                "line": 182,
+                "column": 306,
+                "offset": 6518
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "right down",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 306,
+                "offset": 6518
+              },
+              "end": {
+                "line": 182,
+                "column": 318,
+                "offset": 6530
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": "). Match a single token with the ",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 318,
+                "offset": 6530
+              },
+              "end": {
+                "line": 182,
+                "column": 351,
+                "offset": 6563
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "~=",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 351,
+                "offset": 6563
+              },
+              "end": {
+                "line": 182,
+                "column": 355,
+                "offset": 6567
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute selector, such as ",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 355,
+                "offset": 6567
+              },
+              "end": {
+                "line": 182,
+                "column": 384,
+                "offset": 6596
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "[data-activation-direction~='right']",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 384,
+                "offset": 6596
+              },
+              "end": {
+                "line": 182,
+                "column": 422,
+                "offset": 6634
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 182,
+                "column": 422,
+                "offset": 6634
+              },
+              "end": {
+                "line": 182,
+                "column": 423,
+                "offset": 6635
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 180,
+            "column": 1,
+            "offset": 6066
+          },
+          "end": {
+            "line": 182,
+            "column": 423,
+            "offset": 6635
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Inside the ",
+            "position": {
+              "start": {
+                "line": 184,
+                "column": 1,
+                "offset": 6637
+              },
+              "end": {
+                "line": 184,
+                "column": 12,
+                "offset": 6648
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Popover.Viewport>",
+            "position": {
+              "start": {
+                "line": 184,
+                "column": 12,
+                "offset": 6648
+              },
+              "end": {
+                "line": 184,
+                "column": 32,
+                "offset": 6668
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", the content is further wrapped in ",
+            "position": {
+              "start": {
+                "line": 184,
+                "column": 32,
+                "offset": 6668
+              },
+              "end": {
+                "line": 184,
+                "column": 68,
+                "offset": 6704
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "div",
+            "position": {
+              "start": {
+                "line": 184,
+                "column": 68,
+                "offset": 6704
+              },
+              "end": {
+                "line": 184,
+                "column": 73,
+                "offset": 6709
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": "s with data attributes to help with styling:",
+            "position": {
+              "start": {
+                "line": 184,
+                "column": 73,
+                "offset": 6709
+              },
+              "end": {
+                "line": 184,
+                "column": 117,
+                "offset": 6753
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 184,
+            "column": 1,
+            "offset": 6637
+          },
+          "end": {
+            "line": 184,
+            "column": 117,
+            "offset": 6753
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "data-current",
+                    "position": {
+                      "start": {
+                        "line": 186,
+                        "column": 3,
+                        "offset": 6757
+                      },
+                      "end": {
+                        "line": 186,
+                        "column": 17,
+                        "offset": 6771
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": The currently visible content when no transitions are present or the incoming content.",
+                    "position": {
+                      "start": {
+                        "line": 186,
+                        "column": 17,
+                        "offset": 6771
+                      },
+                      "end": {
+                        "line": 186,
+                        "column": 105,
+                        "offset": 6859
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 186,
+                    "column": 3,
+                    "offset": 6757
+                  },
+                  "end": {
+                    "line": 186,
+                    "column": 105,
+                    "offset": 6859
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 186,
+                "column": 1,
+                "offset": 6755
+              },
+              "end": {
+                "line": 186,
+                "column": 105,
+                "offset": 6859
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "data-previous",
+                    "position": {
+                      "start": {
+                        "line": 187,
+                        "column": 3,
+                        "offset": 6862
+                      },
+                      "end": {
+                        "line": 187,
+                        "column": 18,
+                        "offset": 6877
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": The outgoing content during a transition.",
+                    "position": {
+                      "start": {
+                        "line": 187,
+                        "column": 18,
+                        "offset": 6877
+                      },
+                      "end": {
+                        "line": 187,
+                        "column": 61,
+                        "offset": 6920
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 187,
+                    "column": 3,
+                    "offset": 6862
+                  },
+                  "end": {
+                    "line": 187,
+                    "column": 61,
+                    "offset": 6920
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 187,
+                "column": 1,
+                "offset": 6860
+              },
+              "end": {
+                "line": 187,
+                "column": 61,
+                "offset": 6920
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 186,
+            "column": 1,
+            "offset": 6755
+          },
+          "end": {
+            "line": 187,
+            "column": 61,
+            "offset": 6920
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can use these attributes to style the enter and exit animations.",
+            "position": {
+              "start": {
+                "line": 189,
+                "column": 1,
+                "offset": 6922
+              },
+              "end": {
+                "line": 189,
+                "column": 69,
+                "offset": 6990
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 189,
+            "column": 1,
+            "offset": 6922
+          },
+          "end": {
+            "line": 189,
+            "column": 69,
+            "offset": 6990
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoPopoverDetachedTriggersFull } from './demos/detached-triggers-full';",
+        "position": {
+          "start": {
+            "line": 191,
+            "column": 1,
+            "offset": 6992
+          },
+          "end": {
+            "line": 191,
+            "column": 82,
+            "offset": 7073
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoPopoverDetachedTriggersFull",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 193,
+            "column": 1,
+            "offset": 7075
+          },
+          "end": {
+            "line": 193,
+            "column": 36,
+            "offset": 7110
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/popover/demos/detached-triggers-full#DemoPopoverDetachedTriggersFull"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 195,
+                "column": 4,
+                "offset": 7115
+              },
+              "end": {
+                "line": 195,
+                "column": 17,
+                "offset": 7128
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 195,
+            "column": 1,
+            "offset": 7112
+          },
+          "end": {
+            "line": 195,
+            "column": 17,
+            "offset": 7128
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesPopover } from './types';",
+        "position": {
+          "start": {
+            "line": 197,
+            "column": 1,
+            "offset": 7130
+          },
+          "end": {
+            "line": 197,
+            "column": 40,
+            "offset": 7169
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 199,
+                "column": 5,
+                "offset": 7175
+              },
+              "end": {
+                "line": 199,
+                "column": 9,
+                "offset": 7179
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 199,
+            "column": 1,
+            "offset": 7171
+          },
+          "end": {
+            "line": 199,
+            "column": 9,
+            "offset": 7179
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 201,
+            "column": 1,
+            "offset": 7181
+          },
+          "end": {
+            "line": 201,
+            "column": 22,
+            "offset": 7202
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Trigger",
+            "position": {
+              "start": {
+                "line": 203,
+                "column": 5,
+                "offset": 7208
+              },
+              "end": {
+                "line": 203,
+                "column": 12,
+                "offset": 7215
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 203,
+            "column": 1,
+            "offset": 7204
+          },
+          "end": {
+            "line": 203,
+            "column": 12,
+            "offset": 7215
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "trigger"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Trigger",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 205,
+            "column": 1,
+            "offset": 7217
+          },
+          "end": {
+            "line": 205,
+            "column": 25,
+            "offset": 7241
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Backdrop",
+            "position": {
+              "start": {
+                "line": 207,
+                "column": 5,
+                "offset": 7247
+              },
+              "end": {
+                "line": 207,
+                "column": 13,
+                "offset": 7255
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 207,
+            "column": 1,
+            "offset": 7243
+          },
+          "end": {
+            "line": 207,
+            "column": 13,
+            "offset": 7255
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "backdrop"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Backdrop",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 209,
+            "column": 1,
+            "offset": 7257
+          },
+          "end": {
+            "line": 209,
+            "column": 26,
+            "offset": 7282
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Portal",
+            "position": {
+              "start": {
+                "line": 211,
+                "column": 5,
+                "offset": 7288
+              },
+              "end": {
+                "line": 211,
+                "column": 11,
+                "offset": 7294
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 211,
+            "column": 1,
+            "offset": 7284
+          },
+          "end": {
+            "line": 211,
+            "column": 11,
+            "offset": 7294
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "portal"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Portal",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 213,
+            "column": 1,
+            "offset": 7296
+          },
+          "end": {
+            "line": 213,
+            "column": 24,
+            "offset": 7319
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Positioner",
+            "position": {
+              "start": {
+                "line": 215,
+                "column": 5,
+                "offset": 7325
+              },
+              "end": {
+                "line": 215,
+                "column": 15,
+                "offset": 7335
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 215,
+            "column": 1,
+            "offset": 7321
+          },
+          "end": {
+            "line": 215,
+            "column": 15,
+            "offset": 7335
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "positioner"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Positioner",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 217,
+            "column": 1,
+            "offset": 7337
+          },
+          "end": {
+            "line": 217,
+            "column": 28,
+            "offset": 7364
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Popup",
+            "position": {
+              "start": {
+                "line": 219,
+                "column": 5,
+                "offset": 7370
+              },
+              "end": {
+                "line": 219,
+                "column": 10,
+                "offset": 7375
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 219,
+            "column": 1,
+            "offset": 7366
+          },
+          "end": {
+            "line": 219,
+            "column": 10,
+            "offset": 7375
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "popup"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Popup",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 221,
+            "column": 1,
+            "offset": 7377
+          },
+          "end": {
+            "line": 221,
+            "column": 23,
+            "offset": 7399
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Arrow",
+            "position": {
+              "start": {
+                "line": 223,
+                "column": 5,
+                "offset": 7405
+              },
+              "end": {
+                "line": 223,
+                "column": 10,
+                "offset": 7410
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 223,
+            "column": 1,
+            "offset": 7401
+          },
+          "end": {
+            "line": 223,
+            "column": 10,
+            "offset": 7410
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "arrow"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Arrow",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 225,
+            "column": 1,
+            "offset": 7412
+          },
+          "end": {
+            "line": 225,
+            "column": 23,
+            "offset": 7434
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Title",
+            "position": {
+              "start": {
+                "line": 227,
+                "column": 5,
+                "offset": 7440
+              },
+              "end": {
+                "line": 227,
+                "column": 10,
+                "offset": 7445
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 227,
+            "column": 1,
+            "offset": 7436
+          },
+          "end": {
+            "line": 227,
+            "column": 10,
+            "offset": 7445
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "title"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Title",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 229,
+            "column": 1,
+            "offset": 7447
+          },
+          "end": {
+            "line": 229,
+            "column": 23,
+            "offset": 7469
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Description",
+            "position": {
+              "start": {
+                "line": 231,
+                "column": 5,
+                "offset": 7475
+              },
+              "end": {
+                "line": 231,
+                "column": 16,
+                "offset": 7486
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 231,
+            "column": 1,
+            "offset": 7471
+          },
+          "end": {
+            "line": 231,
+            "column": 16,
+            "offset": 7486
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "description"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Description",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 233,
+            "column": 1,
+            "offset": 7488
+          },
+          "end": {
+            "line": 233,
+            "column": 29,
+            "offset": 7516
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Close",
+            "position": {
+              "start": {
+                "line": 235,
+                "column": 5,
+                "offset": 7522
+              },
+              "end": {
+                "line": 235,
+                "column": 10,
+                "offset": 7527
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 235,
+            "column": 1,
+            "offset": 7518
+          },
+          "end": {
+            "line": 235,
+            "column": 10,
+            "offset": 7527
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "close"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Close",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 237,
+            "column": 1,
+            "offset": 7529
+          },
+          "end": {
+            "line": 237,
+            "column": 23,
+            "offset": 7551
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Viewport",
+            "position": {
+              "start": {
+                "line": 239,
+                "column": 5,
+                "offset": 7557
+              },
+              "end": {
+                "line": 239,
+                "column": 13,
+                "offset": 7565
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 239,
+            "column": 1,
+            "offset": 7553
+          },
+          "end": {
+            "line": 239,
+            "column": 13,
+            "offset": 7565
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "viewport"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Viewport",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 241,
+            "column": 1,
+            "offset": 7567
+          },
+          "end": {
+            "line": 241,
+            "column": 26,
+            "offset": 7592
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 1,
+                "offset": 7594
+              },
+              "end": {
+                "line": 243,
+                "column": 5,
+                "offset": 7598
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Viewport",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 5,
+                "offset": 7598
+              },
+              "end": {
+                "line": 243,
+                "column": 15,
+                "offset": 7608
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is optional — reach for it only when a single popup is opened by multiple triggers, its content differs per trigger, and the switch between them is animated. When used, set ",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 15,
+                "offset": 7608
+              },
+              "end": {
+                "line": 243,
+                "column": 189,
+                "offset": 7782
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "width: var(--positioner-width)",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 189,
+                "offset": 7782
+              },
+              "end": {
+                "line": 243,
+                "column": 221,
+                "offset": 7814
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 221,
+                "offset": 7814
+              },
+              "end": {
+                "line": 243,
+                "column": 226,
+                "offset": 7819
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "height: var(--positioner-height)",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 226,
+                "offset": 7819
+              },
+              "end": {
+                "line": 243,
+                "column": 260,
+                "offset": 7853
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " on the ",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 260,
+                "offset": 7853
+              },
+              "end": {
+                "line": 243,
+                "column": 268,
+                "offset": 7861
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Positioner",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 268,
+                "offset": 7861
+              },
+              "end": {
+                "line": 243,
+                "column": 280,
+                "offset": 7873
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " so its box is frozen to the measured size during the transition; otherwise content-driven resizing can make the popup thrash or flip to another side.",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 280,
+                "offset": 7873
+              },
+              "end": {
+                "line": 243,
+                "column": 430,
+                "offset": 8023
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 243,
+            "column": 1,
+            "offset": 7594
+          },
+          "end": {
+            "line": 243,
+            "column": 430,
+            "offset": 8023
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "createHandle",
+            "position": {
+              "start": {
+                "line": 245,
+                "column": 4,
+                "offset": 8028
+              },
+              "end": {
+                "line": 245,
+                "column": 16,
+                "offset": 8040
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 245,
+            "column": 1,
+            "offset": 8025
+          },
+          "end": {
+            "line": 245,
+            "column": 16,
+            "offset": 8040
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "createhandle"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.createHandle",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 247,
+            "column": 1,
+            "offset": 8042
+          },
+          "end": {
+            "line": 247,
+            "column": 30,
+            "offset": 8071
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "definition",
+        "identifier": "//",
+        "label": "//",
+        "title": "@exclude-table-of-contents",
+        "url": "#",
+        "position": {
+          "start": {
+            "line": 249,
+            "column": 1,
+            "offset": 8073
+          },
+          "end": {
+            "line": 249,
+            "column": 37,
+            "offset": 8109
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Handle",
+            "position": {
+              "start": {
+                "line": 251,
+                "column": 5,
+                "offset": 8115
+              },
+              "end": {
+                "line": 251,
+                "column": 11,
+                "offset": 8121
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 251,
+            "column": 1,
+            "offset": 8111
+          },
+          "end": {
+            "line": 251,
+            "column": 11,
+            "offset": 8121
+          }
+        },
+        "data": {
+          "hProperties": {
+            "data-exclude-toc": "",
+            "id": "handle"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesPopover.Handle",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 253,
+            "column": 1,
+            "offset": 8123
+          },
+          "end": {
+            "line": 253,
+            "column": 24,
+            "offset": 8146
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/popover/types#TypesPopover"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Popover',\n    'Popover Component',\n    'Popover Menu',\n    'Popup Menu',\n    'Anchored Popup',\n    'Dropdown',\n    'Overlay',\n    'Floating Panel',\n    'Tooltip Alternative',\n    'Info Box',\n    'Callout',\n    'Popup Content',\n    'Detached Trigger Popover',\n    'Multi Trigger Popover',\n    'Hover Trigger Popover',\n    'Click Trigger Popover',\n    'Focus Trigger Popover',\n    'Animated Popover',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 255,
+            "column": 1,
+            "offset": 8148
+          },
+          "end": {
+            "line": 278,
+            "column": 3,
+            "offset": 8653
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 279,
+        "column": 1,
+        "offset": 8654
+      }
+    }
+  }
+}

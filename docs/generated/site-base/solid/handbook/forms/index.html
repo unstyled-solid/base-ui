@@ -1,0 +1,478 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Forms · Base UI Solid</title><meta name="description" content="Base UI for Solid 2: Forms"><link rel="canonical" href="https://docs.example.test/qualification/solid/handbook/forms"><meta property="og:title" content="Forms"><meta property="og:description" content="A guide to building forms with Base UI components."><meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="/qualification/source.css"><link rel="stylesheet" href="/qualification/site.css"></head><body>
+<a class="SiteSkip" href="#main-content">Skip to content</a>
+<header class="SiteHeader"><a class="SiteBrand" href="/qualification/solid/overview/quick-start" aria-label="Base UI Solid home"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 3h9v8H2zm11 0h9v8h-9zM2 13h9v8H2zm11 0h9v8h-9z"/></svg><span>Base UI</span><span class="SiteFramework">Solid</span></a><div class="SiteHeaderActions"><div id="shell-island"></div><a href="https://github.com/mui/base-ui/tree/19511bb171f3b360b006c94cf6d07e53cb446505" aria-label="Pinned React source on GitHub">Source ↗</a></div><details class="SiteMobileNav"><summary>Browse documentation</summary><nav aria-label="Mobile documentation"><section class="SideNavSection"><h2 class="SideNavHeading">Overview</h2><ul><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/overview/quick-start">Quick start</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/overview/accessibility">Accessibility</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/upstream/react/overview/releases">Releases</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/overview/community">Community</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/overview/about">About Base UI</a></li></ul></section><section class="SideNavSection"><h2 class="SideNavHeading">Handbook</h2><ul><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/styling">Styling</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/animation">Animation</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/composition">Composition</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/customization">Customization</a></li><li class="SideNavItem"><a class="SideNavLink" aria-current="page" data-active href="/qualification/solid/handbook/forms">Forms</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/typescript">TypeScript</a></li></ul></section><section class="SideNavSection"><h2 class="SideNavHeading">Components</h2><ul><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/accordion">Accordion</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/alert-dialog">Alert Dialog</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/autocomplete">Autocomplete</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/avatar">Avatar</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/button">Button</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/checkbox">Checkbox</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/checkbox-group">Checkbox Group</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/collapsible">Collapsible</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/combobox">Combobox</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/context-menu">Context Menu</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/dialog">Dialog</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/drawer">Drawer</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/field">Field</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/fieldset">Fieldset</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/form">Form</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/input">Input</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/menu">Menu</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/menubar">Menubar</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/meter">Meter</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/navigation-menu">Navigation Menu</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/number-field">Number Field</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/otp-field">OTP Field</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/popover">Popover</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/preview-card">Preview Card</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/progress">Progress</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/radio-group">Radio Group</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/scroll-area">Scroll Area</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/select">Select</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/separator">Separator</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/slider">Slider</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/switch">Switch</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/tabs">Tabs</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/toast">Toast</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/toggle">Toggle</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/toggle-group">Toggle Group</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/toolbar">Toolbar</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/tooltip">Tooltip</a></li></ul></section><section class="SideNavSection"><h2 class="SideNavHeading">Utils</h2><ul><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/utils/csp-provider">CSP Provider</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/utils/direction-provider">Direction Provider</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/utils/merge-props">mergeProps</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/utils/use-render">useRender</a></li></ul></section></nav></details></header>
+<div class="RootLayout"><div class="RootLayoutContainer"><div class="RootLayoutContent"><div class="ContentLayoutRoot">
+<nav class="SideNavRoot" aria-label="Documentation"><div class="SideNavViewport" tabindex="0"><section class="SideNavSection"><h2 class="SideNavHeading">Overview</h2><ul><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/overview/quick-start">Quick start</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/overview/accessibility">Accessibility</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/upstream/react/overview/releases">Releases</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/overview/community">Community</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/overview/about">About Base UI</a></li></ul></section><section class="SideNavSection"><h2 class="SideNavHeading">Handbook</h2><ul><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/styling">Styling</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/animation">Animation</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/composition">Composition</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/customization">Customization</a></li><li class="SideNavItem"><a class="SideNavLink" aria-current="page" data-active href="/qualification/solid/handbook/forms">Forms</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/handbook/typescript">TypeScript</a></li></ul></section><section class="SideNavSection"><h2 class="SideNavHeading">Components</h2><ul><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/accordion">Accordion</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/alert-dialog">Alert Dialog</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/autocomplete">Autocomplete</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/avatar">Avatar</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/button">Button</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/checkbox">Checkbox</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/checkbox-group">Checkbox Group</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/collapsible">Collapsible</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/combobox">Combobox</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/context-menu">Context Menu</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/dialog">Dialog</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/drawer">Drawer</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/field">Field</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/fieldset">Fieldset</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/form">Form</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/input">Input</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/menu">Menu</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/menubar">Menubar</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/meter">Meter</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/navigation-menu">Navigation Menu</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/number-field">Number Field</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/otp-field">OTP Field</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/popover">Popover</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/preview-card">Preview Card</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/progress">Progress</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/radio-group">Radio Group</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/scroll-area">Scroll Area</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/select">Select</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/separator">Separator</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/slider">Slider</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/switch">Switch</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/tabs">Tabs</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/toast">Toast</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/toggle">Toggle</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/toggle-group">Toggle Group</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/toolbar">Toolbar</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/components/tooltip">Tooltip</a></li></ul></section><section class="SideNavSection"><h2 class="SideNavHeading">Utils</h2><ul><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/utils/csp-provider">CSP Provider</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/utils/direction-provider">Direction Provider</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/utils/merge-props">mergeProps</a></li><li class="SideNavItem"><a class="SideNavLink"  href="/qualification/solid/utils/use-render">useRender</a></li></ul></section></div></nav>
+<main class="ContentLayoutMain" id="main-content" tabindex="-1"><div class="SitePageContent"><h1 id="forms" class="MdH1"><a class="HeadingLink" href="#forms">Forms</a></h1><p class="MdP"><span class="Subtitle">A guide to building forms with Base UI components.</span></p><p class="MdP">Upstream React context: Base UI form control components extend the native constraint validation API so you can build forms for collecting user input or providing control over an interface. They also integrate seamlessly with third-party libraries like React Hook Form and TanStack Form. These integrations and historical React instructions are not verified Solid support. Use native Solid composition and independently qualify any ecosystem adapter.</p><section class="SiteDemo"><div data-demo-id="handbook-forms/hero"><p>Interactive demo requires JavaScript.</p></div><details><summary>Source files</summary><h4>Tailwind</h4><p><code>docs/demos/handbook-forms/hero/tailwind/index.tsx</code></p><p><code>docs/demos/handbook-forms/components/button.tsx</code></p><p><code>docs/demos/handbook-forms/components/checkbox-group.tsx</code></p><p><code>docs/demos/handbook-forms/components/form.tsx</code></p><p><code>docs/demos/handbook-forms/components/radio-group.tsx</code></p><p><code>docs/demos/handbook-forms/components/toast.tsx</code></p><p><code>docs/demos/handbook-forms/components/autocomplete.tsx</code></p><p><code>docs/demos/handbook-forms/components/checkbox.tsx</code></p><p><code>docs/demos/handbook-forms/components/combobox.tsx</code></p><p><code>docs/demos/handbook-forms/components/field.tsx</code></p><p><code>docs/demos/handbook-forms/components/fieldset.tsx</code></p><p><code>docs/demos/handbook-forms/components/number-field.tsx</code></p><p><code>docs/demos/handbook-forms/components/radio.tsx</code></p><p><code>docs/demos/handbook-forms/components/select.tsx</code></p><p><code>docs/demos/handbook-forms/components/slider.tsx</code></p><p><code>docs/demos/handbook-forms/components/switch.tsx</code></p></details></section><h2 id="naming-form-controls" class="MdH2"><a class="HeadingLink" href="#naming-form-controls">Naming form controls</a></h2><p class="MdP">Form controls must have an accessible name in order to be recognized by assistive technologies. Use the label strategy below for each control type.</p><h3 id="input-controls" class="MdH3"><a class="HeadingLink" href="#input-controls">Input controls</a></h3><p class="MdP">Use <code class="MdCode Code">&lt;Field.Label&gt;</code> or a native <code class="MdCode Code">&lt;label&gt;</code> to label the following controls:</p><ul class="MdUl"><li class="MdListItem"><code class="MdCode Code">Input</code></li><li class="MdListItem"><code class="MdCode Code">NumberField</code></li><li class="MdListItem"><code class="MdCode Code">OTPField</code></li><li class="MdListItem"><code class="MdCode Code">Autocomplete</code></li><li class="MdListItem"><code class="MdCode Code">Combobox</code> (input outside popup)</li><li class="MdListItem"><code class="MdCode Code">Checkbox</code></li><li class="MdListItem"><code class="MdCode Code">Radio</code></li><li class="MdListItem"><code class="MdCode Code">Switch</code></li></ul><p class="MdP">You can implicitly label <code class="MdCode Code">&lt;Checkbox&gt;</code>, <code class="MdCode Code">&lt;Radio&gt;</code> and <code class="MdCode Code">&lt;Switch&gt;</code> components by enclosing them with <code class="MdCode Code">&lt;Field.Label&gt;</code>:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Implicitly labeling a switch</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Switch } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/switch&#39;</span>;
+
+&lt;Field.Root&gt;
+  &lt;Field.Label&gt;
+    &lt;Switch.Root /&gt;
+    Developer mode
+  &lt;/Field.Label&gt;
+  &lt;Field.Description&gt;Enables extra tools <span class="SiteToken-keyword">for</span> web developers&lt;/Field.Description&gt;
+&lt;/Field.Root&gt;;</code></pre></figure><h3 id="trigger-based-controls" class="MdH3"><a class="HeadingLink" href="#trigger-based-controls">Trigger-based controls</a></h3><ul class="MdUl"><li class="MdListItem"><code class="MdCode Code">Combobox</code> (input inside popup): use <code class="MdCode Code">&lt;Combobox.Label&gt;</code>.</li><li class="MdListItem"><code class="MdCode Code">Select</code>: use <code class="MdCode Code">&lt;Select.Label&gt;</code>.</li><li class="MdListItem"><code class="MdCode Code">Slider</code>: use <code class="MdCode Code">&lt;Slider.Label&gt;</code>. For multi-thumb sliders, also add an <code class="MdCode Code">aria-label</code> on each
+<code class="MdCode Code">&lt;Slider.Thumb&gt;</code> to distinguish the thumbs.</li></ul><h3 id="fallback" class="MdH3"><a class="HeadingLink" href="#fallback">Fallback</a></h3><p class="MdP">If no visible label is rendered, provide <code class="MdCode Code">aria-label</code> on the actual form control.</p><h3 id="describing-the-control" class="MdH3"><a class="HeadingLink" href="#describing-the-control">Describing the control</a></h3><p class="MdP"><code class="MdCode Code">&lt;Field.Description&gt;</code> automatically assigns an accessible description:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Labeling select and slider</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Select } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/select&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Slider } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/slider&#39;</span>;
+
+&lt;Form&gt;
+  &lt;Field.Root&gt;
+    &lt;Select.Root&gt;
+      &lt;Select.Label&gt;Time zone&lt;/Select.Label&gt;
+      &lt;Select.Trigger /&gt;
+    &lt;/Select.Root&gt;
+    &lt;Field.Description&gt;Used <span class="SiteToken-keyword">for</span> notifications and reminders&lt;/Field.Description&gt;
+  &lt;/Field.Root&gt;
+
+  &lt;Field.Root&gt;
+    &lt;Slider.Root defaultValue={<span class="SiteToken-number">50</span>}&gt;
+      &lt;Slider.Label&gt;Zoom level&lt;/Slider.Label&gt;
+      &lt;Field.Description&gt;Adjust the size <span class="SiteToken-keyword">of</span> the user <span class="SiteToken-keyword">interface</span>&lt;/Field.Description&gt;
+      &lt;Slider.Control&gt;
+        &lt;Slider.Track&gt;
+          &lt;Slider.Thumb /&gt;
+        &lt;/Slider.Track&gt;
+      &lt;/Slider.Control&gt;
+    &lt;/Slider.Root&gt;
+  &lt;/Field.Root&gt;
+&lt;/Form&gt;;</code></pre></figure><h3 id="labeling-control-groups" class="MdH3"><a class="HeadingLink" href="#labeling-control-groups">Labeling control groups</a></h3><p class="MdP">Compose <code class="MdCode Code">&lt;Fieldset&gt;</code> when a single label applies to multiple controls, such as a range slider with multiple thumbs or a section that combines several inputs. For checkbox and radio groups, keep the group label in <code class="MdCode Code">&lt;Fieldset.Legend&gt;</code> and wrap each option with <code class="MdCode Code">&lt;Field.Item&gt;</code>:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Composing range slider and radio group with fieldset</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Fieldset } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/fieldset&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Radio } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/radio&#39;</span>;
+<span class="SiteToken-keyword">import</span> { RadioGroup } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/radio-group&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Slider } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/slider&#39;</span>;
+
+&lt;Form&gt;
+  &lt;Field.Root&gt;
+    
+    &lt;Fieldset.Root render={renderProps =&gt; &lt;Slider.Root {...renderProps}/&gt;}&gt;
+      &lt;Fieldset.Legend&gt;Price range&lt;/Fieldset.Legend&gt;
+      
+      &lt;Slider.Control&gt;
+        &lt;Slider.Track&gt;
+          &lt;Slider.Thumb aria-label=<span class="SiteToken-string">&quot;Minimum price&quot;</span> /&gt;
+          &lt;Slider.Thumb aria-label=<span class="SiteToken-string">&quot;Maximum price&quot;</span> /&gt;
+        &lt;/Slider.Track&gt;
+      &lt;/Slider.Control&gt;
+      
+    &lt;/Fieldset.Root&gt;
+  &lt;/Field.Root&gt;
+
+  &lt;Field.Root&gt;
+    
+    &lt;Fieldset.Root render={renderProps =&gt; &lt;RadioGroup {...renderProps}/&gt;}&gt;
+      &lt;Fieldset.Legend&gt;Storage <span class="SiteToken-keyword">type</span>&lt;/Fieldset.Legend&gt;
+      
+      &lt;Radio.Root value=<span class="SiteToken-string">&quot;ssd&quot;</span> /&gt;
+      &lt;Radio.Root value=<span class="SiteToken-string">&quot;hdd&quot;</span> /&gt;
+      
+    &lt;/Fieldset.Root&gt;
+  &lt;/Field.Root&gt;
+&lt;/Form&gt;;</code></pre></figure><p class="MdP"><code class="MdCode Code">&lt;Field.Item&gt;</code> should enclose each checkbox or radio option so every control has its own label and description:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Explicitly labeling checkboxes in a checkbox group</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Fieldset } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/fieldset&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Checkbox } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/checkbox&#39;</span>;
+<span class="SiteToken-keyword">import</span> { CheckboxGroup } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/checkbox-group&#39;</span>;
+
+&lt;Field.Root&gt;
+  &lt;Fieldset.Root render={renderProps =&gt; &lt;CheckboxGroup {...renderProps}/&gt;}&gt;
+    &lt;Fieldset.Legend&gt;Backup schedule&lt;/Fieldset.Legend&gt;
+    
+    &lt;Field.Item&gt;
+      &lt;Checkbox.Root value=<span class="SiteToken-string">&quot;daily&quot;</span> /&gt;
+      &lt;Field.Label&gt;Daily&lt;/Field.Label&gt;
+      &lt;Field.Description&gt;Daily at <span class="SiteToken-number">00</span>:<span class="SiteToken-number">00</span>&lt;/Field.Description&gt;
+      
+    &lt;/Field.Item&gt;
+    &lt;Field.Item&gt;
+      
+      &lt;Checkbox.Root value=<span class="SiteToken-string">&quot;monthly&quot;</span> /&gt;
+      &lt;Field.Label&gt;Monthly&lt;/Field.Label&gt;
+      &lt;Field.Description&gt;On the <span class="SiteToken-number">5</span>th <span class="SiteToken-keyword">of</span> every month at <span class="SiteToken-number">23</span>:<span class="SiteToken-number">59</span>&lt;/Field.Description&gt;
+      
+    &lt;/Field.Item&gt;
+  &lt;/Fieldset.Root&gt;
+&lt;/Field.Root&gt;;</code></pre></figure><h2 id="building-form-fields" class="MdH2"><a class="HeadingLink" href="#building-form-fields">Building form fields</a></h2><p class="MdP">Pass the <code class="MdCode Code">name</code> prop to <code class="MdCode Code">&lt;Field.Root&gt;</code> to include the wrapped control&#39;s value when a parent form is submitted:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Assigning field name to combobox</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Combobox } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/combobox&#39;</span>;
+
+&lt;Form&gt;
+  
+  
+  &lt;Field.Root name=<span class="SiteToken-string">&quot;country&quot;</span>&gt;
+    
+    &lt;Field.Label&gt;Country <span class="SiteToken-keyword">of</span> residence&lt;/Field.Label&gt;
+    &lt;Combobox.Root /&gt;
+  &lt;/Field.Root&gt;
+&lt;/Form&gt;;</code></pre></figure><h2 id="submitting-data" class="MdH2"><a class="HeadingLink" href="#submitting-data">Submitting data</a></h2><p class="MdP">You can take over form submission using the native <code class="MdCode Code">onSubmit</code>, or custom <code class="MdCode Code">onFormSubmit</code> props:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Native submission using onSubmit</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+
+&lt;Form
+  
+  onSubmit={<span class="SiteToken-keyword">async</span> (event) =&gt; {
+    <span class="SiteToken-comment">// Prevent the browser&#39;s default full-page refresh</span>
+    event.preventDefault();
+    <span class="SiteToken-comment">// Create a FormData object</span>
+    <span class="SiteToken-keyword">const</span> formData = <span class="SiteToken-keyword">new</span> FormData(event.currentTarget);
+    <span class="SiteToken-comment">// Send the FormData instance in a fetch request</span>
+    
+    <span class="SiteToken-keyword">await</span> fetch(<span class="SiteToken-string">&#39;https://api.example.com&#39;</span>, {
+      method: <span class="SiteToken-string">&#39;POST&#39;</span>,
+      body: formData,
+    });
+  }}
+/&gt;;</code></pre></figure><p class="MdP">When using <code class="MdCode Code">onFormSubmit</code>, you receive form values as a JavaScript object, with <code class="MdCode Code">eventDetails</code> provided as a second argument. Additionally, <code class="MdCode Code">preventDefault()</code> is automatically called on the native submit event:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Submission using onFormSubmit</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+
+&lt;Form
+  
+  onFormSubmit={<span class="SiteToken-keyword">async</span> (formValues) =&gt; {
+    <span class="SiteToken-keyword">const</span> payload = {
+      product_id: formValues.id,
+      order_quantity: formValues.quantity,
+    };
+    <span class="SiteToken-keyword">await</span> fetch(<span class="SiteToken-string">&#39;https://api.example.com&#39;</span>, {
+      
+      method: <span class="SiteToken-string">&#39;POST&#39;</span>,
+      body: JSON.stringify(payload),
+    });
+  }}
+/&gt;;</code></pre></figure><h2 id="constraint-validation" class="MdH2"><a class="HeadingLink" href="#constraint-validation">Constraint validation</a></h2><p class="MdP">Base UI form components support native HTML validation attributes for many validation rules:</p><ul class="MdUl"><li class="MdListItem"><code class="MdCode Code">required</code> specifies a required field.</li><li class="MdListItem"><code class="MdCode Code">minLength</code> and <code class="MdCode Code">maxLength</code> specify a valid length for text fields.</li><li class="MdListItem"><code class="MdCode Code">pattern</code> specifies a regular expression that the field value must match.</li><li class="MdListItem"><code class="MdCode Code">step</code> specifies an increment that numeric field values must be an integral multiple of.</li></ul><figure class="MdFigure CodeBlockRoot"><figcaption>Defining constraint validation on a text field</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+
+&lt;Field.Root name=<span class="SiteToken-string">&quot;website&quot;</span>&gt;
+  &lt;Field.Control <span class="SiteToken-keyword">type</span>=<span class="SiteToken-string">&quot;url&quot;</span> required pattern=<span class="SiteToken-string">&quot;https?://.*&quot;</span> /&gt;
+  &lt;Field.Error /&gt;
+&lt;/Field.Root&gt;;</code></pre></figure><p class="MdP">Base UI form components use a hidden input to participate in native form submission and validation.
+To anchor the hidden input near a control so the native validation bubble points to the correct area, ensure the component has been given a <code class="MdCode Code">name</code>, and wrap controls in a relatively positioned container for best results.</p><figure class="MdFigure CodeBlockRoot"><figcaption>Positioning hidden inputs</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Select } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/select&#39;</span>;
+
+&lt;Field.Root name=<span class="SiteToken-string">&quot;apple&quot;</span>&gt;
+  &lt;Select.Root&gt;
+    &lt;Select.Label&gt;Apple&lt;/Select.Label&gt;
+    &lt;div <span class="SiteToken-keyword">class</span>=<span class="SiteToken-string">&quot;relative&quot;</span>&gt;
+      &lt;Select.Trigger /&gt;
+    &lt;/div&gt;
+  &lt;/Select.Root&gt;
+&lt;/Field.Root&gt;;</code></pre></figure><h2 id="custom-validation" class="MdH2"><a class="HeadingLink" href="#custom-validation">Custom validation</a></h2><p class="MdP">You can add custom validation logic by passing a synchronous or asynchronous validation function to the <code class="MdCode Code">validate</code> prop, which runs after native validations have passed.</p><p class="MdP">Use the <code class="MdCode Code">validationMode</code> prop to configure when validation is performed:</p><ul class="MdUl"><li class="MdListItem"><code class="MdCode Code">onSubmit</code> (default) validates all fields when the containing <code class="MdCode Code">&lt;Form&gt;</code> is submitted, afterwards invalid fields revalidate when their value changes.</li><li class="MdListItem"><code class="MdCode Code">onBlur</code> validates the field when focus moves away.</li><li class="MdListItem"><code class="MdCode Code">onChange</code> validates the field when the value changes, for example, after each keypress in a text field or when a checkbox is checked or unchecked.</li></ul><p class="MdP"><code class="MdCode Code">validationDebounceTime</code> can be used to debounce the function in use cases such as asynchronous requests or text fields that validate <code class="MdCode Code">onChange</code>.</p><figure class="MdFigure CodeBlockRoot"><figcaption>Text input using custom asynchronous validation</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+
+&lt;Field.Root
+  name=<span class="SiteToken-string">&quot;username&quot;</span>
+  
+  validationMode=<span class="SiteToken-string">&quot;onChange&quot;</span>
+  validationDebounceTime={<span class="SiteToken-number">300</span>}
+  validate={<span class="SiteToken-keyword">async</span> (value) =&gt; {
+  
+    <span class="SiteToken-keyword">if</span> (value === <span class="SiteToken-string">&#39;admin&#39;</span>) {
+      <span class="SiteToken-comment">/* return an error message when invalid */</span>
+      <span class="SiteToken-keyword">return</span> <span class="SiteToken-string">&#39;Reserved for system use.&#39;</span>;
+    }
+
+    <span class="SiteToken-keyword">const</span> result = <span class="SiteToken-keyword">await</span> fetch(
+      {<span class="SiteToken-comment">/* prettier-ignore */</span>},
+      <span class="SiteToken-comment">/* check the availability of a username from an external API */</span>
+    );
+
+    <span class="SiteToken-keyword">if</span> (!result) {
+      <span class="SiteToken-keyword">return</span> `${value} <span class="SiteToken-keyword">is</span> unavailable.<span class="SiteToken-string">`;
+    }
+
+    /* return `</span><span class="SiteToken-keyword">null</span><span class="SiteToken-string">` when valid */
+    return null;
+  }}
+&gt;
+  &lt;Field.Control required minLength={3} /&gt;
+  &lt;Field.Error /&gt;
+&lt;/Field.Root&gt;;</span></code></pre></figure><h2 id="server-side-validation" class="MdH2"><a class="HeadingLink" href="#server-side-validation">Server-side validation</a></h2><p class="MdP">You can pass errors returned by (post-submission) server-side validation to the <code class="MdCode Code">errors</code> prop, which will be merged into the client-side field state for display.</p><p class="MdP">This should be an object with field names as keys, and an error string or array of strings as the value. Once a field&#39;s value changes, any corresponding error in <code class="MdCode Code">errors</code> will be cleared from the field state.</p><figure class="MdFigure CodeBlockRoot"><figcaption>Displaying errors returned by server-side validation</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+
+<span class="SiteToken-keyword">async</span> <span class="SiteToken-keyword">function</span> submitToServer(<span class="SiteToken-comment">/* payload */</span>) {
+  <span class="SiteToken-keyword">return</span> {
+    errors: { {
+      promoCode: <span class="SiteToken-string">&#39;This promo code has expired&#39;</span>,
+    },
+  };
+}
+
+<span class="SiteToken-keyword">const</span> [errors, setErrors] = createSignal(); 
+
+&lt;Form
+  errors={errors()} { 
+  onSubmit={<span class="SiteToken-keyword">async</span> (event) =&gt; {
+    event.preventDefault();
+    <span class="SiteToken-keyword">const</span> response = <span class="SiteToken-keyword">await</span> submitToServer(<span class="SiteToken-comment">/* data */</span>);
+    setErrors(response.errors); 
+  }}
+&gt;
+  &lt;Field.Root name=<span class="SiteToken-string">&quot;promoCode&quot;</span> /&gt;
+&lt;/Form&gt;;</code></pre></figure><p class="MdP">Upstream React context: When using Server Functions with Form Actions you can return server-side errors from useActionState to the errors prop. A demo is available here. These integrations and historical React instructions are not verified Solid support. Use native Solid composition and independently qualify any ecosystem adapter.</p><figure class="MdFigure CodeBlockRoot"><figcaption>Returning errors from useActionState · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-comment">// app/form.tsx</span>
+<span class="SiteToken-comment">/* prettier-ignore */</span>
+<span class="SiteToken-string">&#39;use client&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+<span class="SiteToken-keyword">import</span> { login } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;./actions&#39;</span>;
+
+<span class="SiteToken-comment">// @highlight-text &quot;state&quot; &quot;formAction&quot;</span>
+<span class="SiteToken-keyword">const</span> [state, formAction, loading] = React.useActionState(login, {});
+
+<span class="SiteToken-comment">// @highlight-text &quot;state&quot; &quot;errors&quot; &quot;formAction&quot;</span>
+&lt;Form action={formAction} errors={state.errors}&gt;
+  &lt;Field.Root name=<span class="SiteToken-string">&quot;password&quot;</span>&gt;
+    &lt;Field.Control /&gt;
+    &lt;Field.Error /&gt;
+  &lt;/Field.Root&gt;
+&lt;/Form&gt;;
+
+<span class="SiteToken-comment">// app/actions.ts</span>
+<span class="SiteToken-comment">/* prettier-ignore */</span>
+<span class="SiteToken-string">&#39;use server&#39;</span>;
+<span class="SiteToken-keyword">export</span> <span class="SiteToken-keyword">async</span> <span class="SiteToken-keyword">function</span> login(formData: FormData) {
+  <span class="SiteToken-keyword">const</span> result = authenticateUser(formData);
+
+  <span class="SiteToken-keyword">if</span> (!result.success) {
+    <span class="SiteToken-keyword">return</span> {
+      <span class="SiteToken-comment">// @highlight-text &quot;errors&quot;</span>
+      errors: {
+        password: <span class="SiteToken-string">&#39;Invalid username or password&#39;</span>,
+      },
+    };
+  }
+  <span class="SiteToken-comment">/* redirect on the server on success */</span>
+}</code></pre></figure><h2 id="displaying-errors" class="MdH2"><a class="HeadingLink" href="#displaying-errors">Displaying errors</a></h2><p class="MdP">Use <code class="MdCode Code">&lt;Field.Error&gt;</code> without <code class="MdCode Code">children</code> to automatically display the field&#39;s native error message when invalid. The <code class="MdCode Code">match</code> prop can be used to customize the message based on the validity state, and manage internationalization from your application logic:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Customizing error message for a required field</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx">&lt;Field.Error match=<span class="SiteToken-string">&quot;valueMissing&quot;</span>&gt;You must create a username&lt;/Field.Error&gt;</code></pre></figure><h2 id="react-hook-form" class="MdH2"><a class="HeadingLink" href="#react-hook-form">React Hook Form</a></h2><p class="MdP">Upstream React context: React Hook Form is a popular library that you can integrate with Base UI to externally manage form and field state for your existing components. These integrations and historical React instructions are not verified Solid support. Use native Solid composition and independently qualify any ecosystem adapter.</p><aside class="SiteFrameworkNote"><strong>React ecosystem example</strong><p>React Hook Form requires React hooks. The native Solid Form example above demonstrates the same Base UI controls and validation responsibilities.</p><a href="/qualification/solid/components/form">Solid documentation</a></aside><h3 id="initialize-the-form" class="MdH3"><a class="HeadingLink" href="#initialize-the-form">Initialize the form</a></h3><p class="MdP">Initialize the form with the <code class="MdCode Code">useForm</code> hook, assigning the initial value of each field by their name in the <code class="MdCode Code">defaultValues</code> parameter:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Initialize a form instance · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { useForm } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;react-hook-form&#39;</span>;
+
+<span class="SiteToken-keyword">const</span> { control, handleSubmit } = useForm&lt;FormValues&gt;({
+  defaultValues: {
+    username: <span class="SiteToken-string">&#39;&#39;</span>,
+    email: <span class="SiteToken-string">&#39;&#39;</span>,
+  },
+});</code></pre></figure><h3 id="integrate-components" class="MdH3"><a class="HeadingLink" href="#integrate-components">Integrate components</a></h3><p class="MdP">Use the <code class="MdCode Code">&lt;Controller&gt;</code> component to integrate with any <code class="MdCode Code">&lt;Field&gt;</code> component, forwarding the <code class="MdCode Code">name</code>, <code class="MdCode Code">field</code>, and <code class="MdCode Code">fieldState</code> render props to the appropriate part:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Integrating the controller component with Base UI field · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { useForm, Controller } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&quot;react-hook-form&quot;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+
+<span class="SiteToken-keyword">const</span> { control, handleSubmit} = useForm({
+  defaultValues: {
+    username: <span class="SiteToken-string">&#39;&#39;</span>,
+  }
+})
+
+&lt;Controller
+  {<span class="SiteToken-comment">/* @highlight-start */</span>}
+  name=<span class="SiteToken-string">&quot;username&quot;</span>
+  control={control}
+  render={({
+    <span class="SiteToken-comment">// @highlight-text &quot;ref&quot; &quot;value&quot; &quot;onBlur&quot; &quot;onChange&quot;</span>
+    field: { name, ref, value, onBlur, onChange },
+    <span class="SiteToken-comment">// @highlight-text &quot;invalid&quot; &quot;isTouched&quot; &quot;isDirty&quot; &quot;error&quot;</span>
+    fieldState: { invalid, isTouched, isDirty, error },
+  }) =&gt; (
+    {<span class="SiteToken-comment">/* @highlight-text &quot;invalid&quot; &quot;isTouched&quot; &quot;isDirty&quot; */</span>}
+    &lt;Field.Root name={name} invalid={invalid} touched={isTouched} dirty={isDirty}&gt;
+    {<span class="SiteToken-comment">/* @highlight-end */</span>}
+      &lt;Field.Label&gt;Username&lt;/Field.Label&gt;
+      &lt;Field.Description&gt;
+        May appear where you contribute or are mentioned. You can remove it at <span class="SiteToken-keyword">any</span> time.
+      &lt;/Field.Description&gt;
+      {<span class="SiteToken-comment">/* @highlight-start */</span>}
+      &lt;Field.Control
+        placeholder=<span class="SiteToken-string">&quot;e.g. alice132&quot;</span>
+        value={value} {<span class="SiteToken-comment">/* @highlight-text &quot;value&quot; */</span>}
+        onBlur={onBlur} {<span class="SiteToken-comment">/* @highlight-text &quot;onBlur&quot; */</span>}
+        onValueChange={onChange} {<span class="SiteToken-comment">/* @highlight-text &quot;onChange&quot; */</span>}
+        ref={ref} {<span class="SiteToken-comment">/* @highlight-text &quot;ref&quot; */</span>}
+      /&gt;
+      {<span class="SiteToken-comment">/* @highlight-end */</span>}
+      &lt;Field.Error match={!!error}&gt; {<span class="SiteToken-comment">/* @highlight-text &quot;error&quot; */</span>}
+        {error?.message} {<span class="SiteToken-comment">/* @highlight-text &quot;error&quot; */</span>}
+      &lt;/Field.Error&gt;
+    &lt;/Field.Root&gt;
+  )}
+/&gt;</code></pre></figure><p class="MdP">Upstream React context: For React Hook Form to focus invalid fields when performing validation, you must ensure that any wrapping components forward the ref to the underlying Base UI component. You can typically accomplish this using the inputRef prop, or directly as the ref for components that render an input element like &lt;NumberField.Input&gt;. These integrations and historical React instructions are not verified Solid support. Use native Solid composition and independently qualify any ecosystem adapter.</p><h3 id="field-validation" class="MdH3"><a class="HeadingLink" href="#field-validation">Field validation</a></h3><p class="MdP">Specify <code class="MdCode Code">rules</code> on the <code class="MdCode Code">&lt;Controller&gt;</code> in the same format as <a href="https://react-hook-form.com/docs/useform/register"><code class="MdCode Code">register</code></a> options, and use the <code class="MdCode Code">match</code> prop to delegate control of the error rendering:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Defining validation rules and displaying errors · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Controller } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&quot;react-hook-form&quot;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+
+&lt;Controller
+  {<span class="SiteToken-comment">/* @highlight-start */</span>}
+  name=<span class="SiteToken-string">&quot;username&quot;</span>
+  control={control}
+  rules={{
+    required: <span class="SiteToken-string">&#39;This is a required field&#39;</span>,
+    minLength: { value: <span class="SiteToken-number">2</span>, message: <span class="SiteToken-string">&#39;Too short&#39;</span> },
+    validate: (value) =&gt; {
+      <span class="SiteToken-keyword">if</span> (<span class="SiteToken-comment">/* custom logic */</span>) {
+        <span class="SiteToken-keyword">return</span> <span class="SiteToken-string">&#39;Invalid&#39;</span>
+      }
+      <span class="SiteToken-keyword">return</span> <span class="SiteToken-keyword">null</span>;
+    },
+    {<span class="SiteToken-comment">/* @highlight-end */</span>}
+  }}
+  render={({
+    field: { name, ref, value, onBlur, onChange },
+    fieldState: { invalid, isTouched, isDirty, error },
+  }) =&gt; (
+    &lt;Field.Root name={name} invalid={invalid} touched={isTouched} dirty={isDirty}&gt;
+      &lt;Field.Label&gt;Username&lt;/Field.Label&gt;
+      &lt;Field.Description&gt;
+        May appear where you contribute or are mentioned. You can remove it at <span class="SiteToken-keyword">any</span> time.
+      &lt;/Field.Description&gt;
+      &lt;Field.Control
+        placeholder=<span class="SiteToken-string">&quot;e.g. alice132&quot;</span>
+        value={value}
+        onBlur={onBlur}
+        onValueChange={onChange}
+        ref={ref}
+      /&gt;
+      {<span class="SiteToken-comment">/* @highlight-start */</span>}
+      &lt;Field.Error match={!!error}&gt;
+        {error?.message}
+      &lt;/Field.Error&gt;
+      {<span class="SiteToken-comment">/* @highlight-end */</span>}
+    &lt;/Field.Root&gt;
+  )}
+/&gt;</code></pre></figure><h3 id="submitting-data-1" class="MdH3"><a class="HeadingLink" href="#submitting-data-1">Submitting data</a></h3><p class="MdP">Wrap your submit handler function with <code class="MdCode Code">handleSubmit</code> to receive the form values as a JavaScript object for further handling:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Form submission handler · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { useForm } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;react-hook-form&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Form } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/form&#39;</span>;
+
+<span class="SiteToken-keyword">interface</span> FormValues {
+  username: <span class="SiteToken-keyword">string</span>;
+  email: <span class="SiteToken-keyword">string</span>;
+}
+
+<span class="SiteToken-keyword">const</span> { handleSubmit } = useForm&lt;FormValues&gt;();
+
+<span class="SiteToken-keyword">async</span> <span class="SiteToken-keyword">function</span> submitForm(data: FormValues) {
+  <span class="SiteToken-comment">// transform the object and/or submit it to a server</span>
+  <span class="SiteToken-keyword">await</span> fetch(<span class="SiteToken-comment">/* ... */</span>);
+}
+
+&lt;Form onSubmit={handleSubmit(submitForm)} /&gt;;</code></pre></figure><h2 id="tanstack-form" class="MdH2"><a class="HeadingLink" href="#tanstack-form">TanStack Form</a></h2><p class="MdP"><a href="https://tanstack.com/form/v1/docs/overview">TanStack Form</a> is a form library with a function-based API for orchestrating validations that can also be integrated with Base UI.</p><aside class="SiteFrameworkNote"><strong>React ecosystem example</strong><p>This source example uses @tanstack/react-form. It does not establish compatibility with @tanstack/solid-form; the native Solid Form example demonstrates the controls without a React adapter.</p><a href="/qualification/solid/components/form">Solid documentation</a></aside><h3 id="initialize-the-form-1" class="MdH3"><a class="HeadingLink" href="#initialize-the-form-1">Initialize the form</a></h3><p class="MdP">Create a form instance with the <code class="MdCode Code">useForm</code> hook, assigning the initial value of each field by their name in the <code class="MdCode Code">defaultValues</code> parameter:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Initialize a form instance · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { useForm } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;@tanstack/react-form&#39;</span>;
+
+<span class="SiteToken-keyword">interface</span> FormValues {
+  username: <span class="SiteToken-keyword">string</span>;
+  email: <span class="SiteToken-keyword">string</span>;
+}
+
+<span class="SiteToken-keyword">const</span> defaultValues: FormValues = {
+  username: <span class="SiteToken-string">&#39;&#39;</span>,
+  email: <span class="SiteToken-string">&#39;&#39;</span>,
+};
+
+{<span class="SiteToken-comment">/* @highlight-start */</span>}
+<span class="SiteToken-comment">/* useForm returns a form instance */</span>
+<span class="SiteToken-keyword">const</span> form = useForm&lt;FormValues&gt;({
+{<span class="SiteToken-comment">/* @highlight-end */</span>}
+  defaultValues,
+});</code></pre></figure><h3 id="integrate-components-1" class="MdH3"><a class="HeadingLink" href="#integrate-components-1">Integrate components</a></h3><p class="MdP">Use the <code class="MdCode Code">&lt;form.Field&gt;</code> component from the form instance to integrate with Base UI components using the <code class="MdCode Code">children</code> prop, forwarding the various <code class="MdCode Code">field</code> render props to the appropriate part:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Integrating TanStack Form with Base UI components · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { useForm } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;@tanstack/react-form&#39;</span>;
+<span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+
+<span class="SiteToken-keyword">const</span> form = useForm(<span class="SiteToken-comment">/* defaultValues, other parameters */</span>)
+
+&lt;form&gt;
+  {<span class="SiteToken-comment">/* @highlight-start */</span>}
+  &lt;form.Field
+    name=<span class="SiteToken-string">&quot;username&quot;</span>
+    children={(field) =&gt; (
+    <span class="SiteToken-comment">// @highlight-end</span>
+      &lt;Field.Root
+        {<span class="SiteToken-comment">/* @highlight-start */</span>}
+        name={field.name} {<span class="SiteToken-comment">/* @highlight-text &quot;field.name&quot; */</span>}
+        invalid={!field.state.meta.isValid} {<span class="SiteToken-comment">/* @highlight-text &quot;isValid&quot; */</span>}
+        dirty={field.state.meta.isDirty} {<span class="SiteToken-comment">/* @highlight-text &quot;isDirty&quot; */</span>}
+        touched={field.state.meta.isTouched} {<span class="SiteToken-comment">/* @highlight-text &quot;isTouched&quot; */</span>}
+        {<span class="SiteToken-comment">/* @highlight-end */</span>}
+      &gt;
+        &lt;Field.Label&gt;Username&lt;/Field.Label&gt;
+        &lt;Field.Control
+          {<span class="SiteToken-comment">/* @highlight-start */</span>}
+          value={field.state.value} {<span class="SiteToken-comment">/* @highlight-text &quot;value&quot; */</span>}
+          onValueChange={field.handleChange} {<span class="SiteToken-comment">/* @highlight-text &quot;handleChange&quot; */</span>}
+          onBlur={field.handleBlur} {<span class="SiteToken-comment">/* @highlight-text &quot;handleBlur&quot; */</span>}
+          {<span class="SiteToken-comment">/* @highlight-end */</span>}
+          placeholder=<span class="SiteToken-string">&quot;e.g. bob276&quot;</span>
+        /&gt;
+
+        {<span class="SiteToken-comment">/* @highlight-start */</span>}
+        &lt;Field.Error match={!field.state.meta.isValid}&gt; {<span class="SiteToken-comment">/* @highlight-text &quot;isValid&quot; */</span>}
+        {<span class="SiteToken-comment">/* @highlight-end */</span>}
+          {field.state.meta.errors.join(<span class="SiteToken-string">&#39;,&#39;</span>)}
+        &lt;/Field.Error&gt;
+      &lt;/Field.Root&gt;
+    )}
+  /&gt;
+&lt;/form&gt;</code></pre></figure><p class="MdP">The Base UI <code class="MdCode Code">&lt;Form&gt;</code> component is not needed when using TanStack Form.</p><h3 id="form-validation" class="MdH3"><a class="HeadingLink" href="#form-validation">Form validation</a></h3><p class="MdP">To configure a native <code class="MdCode Code">&lt;form&gt;</code>-like validation strategy:</p><ol class="MdOl"><li class="MdListItem">Use the additional <code class="MdCode Code">revalidateLogic</code> hook and pass it to <code class="MdCode Code">useForm</code>.</li><li class="MdListItem">Pass a validation function to the <code class="MdCode Code">validators.onDynamic</code> prop on <code class="MdCode Code">&lt;form.Field&gt;</code> that returns an error object with keys corresponding to the field <code class="MdCode Code">name</code>s.</li></ol><p class="MdP">This validates all fields when the first submission is attempted, and revalidates any invalid fields when their values change again.</p><figure class="MdFigure CodeBlockRoot"><figcaption>Form-level validators · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { useForm, revalidateLogic } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;@tanstack/react-form&#39;</span>; <span class="SiteToken-comment">// @highlight-text &quot;revalidateLogic&quot;</span>
+
+<span class="SiteToken-keyword">const</span> form = useForm({
+  defaultValues: {
+    username: <span class="SiteToken-string">&#39;&#39;</span>,
+    email: <span class="SiteToken-string">&#39;&#39;</span>,
+  },
+  {<span class="SiteToken-comment">/* @highlight-start */</span>}
+  validationLogic: revalidateLogic({ {<span class="SiteToken-comment">/* @highlight-text &quot;revalidateLogic&quot; */</span>}
+  {<span class="SiteToken-comment">/* @highlight-end */</span>}
+    mode: <span class="SiteToken-string">&#39;submit&#39;</span>,
+    modeAfterSubmission: <span class="SiteToken-string">&#39;change&#39;</span>,
+  }),
+  validators: {
+    <span class="SiteToken-comment">// @highlight-start</span>
+    onDynamic: ({ value: formValues }) =&gt; { <span class="SiteToken-comment">// @highlight-text &quot;onDynamic&quot;</span>
+    <span class="SiteToken-comment">// @highlight-end</span>
+      <span class="SiteToken-keyword">const</span> errors = {};
+
+      <span class="SiteToken-keyword">if</span> (!formValues.username) {
+        errors.username = <span class="SiteToken-string">&#39;Username is required.&#39;</span>;
+      } <span class="SiteToken-keyword">else</span> <span class="SiteToken-keyword">if</span> (formValues.username.length &lt; <span class="SiteToken-number">3</span>) {
+        errors.username = <span class="SiteToken-string">&#39;At least 3 characters.&#39;</span>;
+      }
+
+      <span class="SiteToken-keyword">if</span> (!formValues.email) {
+        errors.email = <span class="SiteToken-string">&#39;Email is required.&#39;</span>;
+      } <span class="SiteToken-keyword">else</span> <span class="SiteToken-keyword">if</span> (!isValidEmail(formValues.email)) {
+        errors.email = <span class="SiteToken-string">&#39;Invalid email address.&#39;</span>;
+      }
+
+      <span class="SiteToken-keyword">return</span> { form: errors, fields: errors };
+    },
+  },
+});</code></pre></figure><h3 id="field-validation-1" class="MdH3"><a class="HeadingLink" href="#field-validation-1">Field validation</a></h3><p class="MdP">You can pass additional validator functions to individual <code class="MdCode Code">&lt;form.Field&gt;</code> components to add validations on top of the form-level validators:</p><figure class="MdFigure CodeBlockRoot"><figcaption>Field-level validators · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { Field } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;baseui-solid2/field&#39;</span>;
+<span class="SiteToken-keyword">import</span> { useForm } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;@tanstack/react-form&#39;</span>;
+
+<span class="SiteToken-keyword">const</span> form = useForm();
+
+&lt;form.Field
+  name=<span class="SiteToken-string">&quot;username&quot;</span>
+  {<span class="SiteToken-comment">/* @highlight-start */</span>}
+  validators={{
+    onChangeAsync: <span class="SiteToken-keyword">async</span> ({ value: username }) =&gt; {
+      <span class="SiteToken-keyword">const</span> result = <span class="SiteToken-keyword">await</span> fetch(
+        <span class="SiteToken-comment">/* check the availability of a username from an external API */</span>
+      );
+
+      <span class="SiteToken-keyword">return</span> result.success ? <span class="SiteToken-keyword">undefined</span> : `${username} <span class="SiteToken-keyword">is</span> not available.<span class="SiteToken-string">`
+    }
+  }}
+  {/* @highlight-end */}
+  children={(field) =&gt; (
+    &lt;Field.Root name={field.name} /* forward the field props */ /&gt;
+  )}
+&gt;</span></code></pre></figure><h3 id="submitting-data-2" class="MdH3"><a class="HeadingLink" href="#submitting-data-2">Submitting data</a></h3><p class="MdP">To submit the form:</p><ol class="MdOl"><li class="MdListItem">Pass a submit handler function to the <code class="MdCode Code">onSubmit</code> parameter of <code class="MdCode Code">useForm</code>.</li><li class="MdListItem">Call <code class="MdCode Code">form.handleSubmit()</code> from an event handler such as form <code class="MdCode Code">onSubmit</code> or <code class="MdCode Code">onClick</code> on a button.</li></ol><figure class="MdFigure CodeBlockRoot"><figcaption>Form submission handler · Upstream React integration</figcaption><pre class="CodeBlockPre" tabindex="0"><code class="language-tsx"><span class="SiteToken-keyword">import</span> { useForm } <span class="SiteToken-keyword">from</span> <span class="SiteToken-string">&#39;@tanstack/react-form&#39;</span>;
+
+<span class="SiteToken-keyword">const</span> form = useForm({
+  <span class="SiteToken-comment">// @highlight-start</span>
+  onSubmit: <span class="SiteToken-keyword">async</span> ({ value: formValues }) =&gt; {
+    <span class="SiteToken-comment">/* prettier-ignore */</span>
+    <span class="SiteToken-keyword">await</span> fetch(<span class="SiteToken-comment">/* POST the `formValues` to an external API */</span>);
+  },
+  {<span class="SiteToken-comment">/* @highlight-end */</span>}
+});
+
+&lt;form
+  onSubmit={(event) =&gt; {
+    event.preventDefault();
+    <span class="SiteToken-comment">// @highlight-start</span>
+    form.handleSubmit(); <span class="SiteToken-comment">// @highlight-text &quot;form.handleSubmit()&quot;</span>
+    <span class="SiteToken-comment">// @highlight-end</span>
+  }}
+&gt;
+  {<span class="SiteToken-comment">/* form fields */</span>}
+  {<span class="SiteToken-comment">/* @highlight-start */</span>}
+  &lt;button <span class="SiteToken-keyword">type</span>=<span class="SiteToken-string">&quot;submit&quot;</span>&gt;Submit&lt;/button&gt;
+  {<span class="SiteToken-comment">/* @highlight-end */</span>}
+&lt;/form&gt;;</code></pre></figure><footer class="SiteFooter"><p>baseui-solid2 0.0.0 · Solid 2.0.0-rc.13 · <a href="https://github.com/mui/base-ui/tree/19511bb171f3b360b006c94cf6d07e53cb446505">upstream 19511bb</a></p><p><a href="/qualification/LICENSE.txt">MIT license</a> · <a href="/qualification/llms.txt">Plain-text documentation</a></p></footer></div></main>
+<aside class="SiteOutline" aria-label="On this page"><p>On this page</p><ul><li style="padding-left:0px"><a href="#naming-form-controls">Naming form controls</a></li><li style="padding-left:12px"><a href="#input-controls">Input controls</a></li><li style="padding-left:12px"><a href="#trigger-based-controls">Trigger-based controls</a></li><li style="padding-left:12px"><a href="#fallback">Fallback</a></li><li style="padding-left:12px"><a href="#describing-the-control">Describing the control</a></li><li style="padding-left:12px"><a href="#labeling-control-groups">Labeling control groups</a></li><li style="padding-left:0px"><a href="#building-form-fields">Building form fields</a></li><li style="padding-left:0px"><a href="#submitting-data">Submitting data</a></li><li style="padding-left:0px"><a href="#constraint-validation">Constraint validation</a></li><li style="padding-left:0px"><a href="#custom-validation">Custom validation</a></li><li style="padding-left:0px"><a href="#server-side-validation">Server-side validation</a></li><li style="padding-left:0px"><a href="#displaying-errors">Displaying errors</a></li><li style="padding-left:0px"><a href="#react-hook-form">React Hook Form</a></li><li style="padding-left:12px"><a href="#initialize-the-form">Initialize the form</a></li><li style="padding-left:12px"><a href="#integrate-components">Integrate components</a></li><li style="padding-left:12px"><a href="#field-validation">Field validation</a></li><li style="padding-left:12px"><a href="#submitting-data-1">Submitting data</a></li><li style="padding-left:0px"><a href="#tanstack-form">TanStack Form</a></li><li style="padding-left:12px"><a href="#initialize-the-form-1">Initialize the form</a></li><li style="padding-left:12px"><a href="#integrate-components-1">Integrate components</a></li><li style="padding-left:12px"><a href="#form-validation">Form validation</a></li><li style="padding-left:12px"><a href="#field-validation-1">Field validation</a></li><li style="padding-left:12px"><a href="#submitting-data-2">Submitting data</a></li></ul></aside>
+</div></div></div></div><script type="module" src="/qualification/islands.js"></script></body></html>

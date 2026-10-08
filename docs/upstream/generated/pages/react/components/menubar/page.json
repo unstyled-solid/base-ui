@@ -1,0 +1,691 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/menubar/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "3e913c69dd53509658e296bf03e16a5119109085a65cdf900a6c9767df8b55b3",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/menubar",
+  "route": "/solid/components/menubar",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Menubar",
+  "subtitle": "A menu bar providing commands and options for your application.",
+  "metadata": {
+    "keywords": [
+      "React Menubar",
+      "Menubar Component",
+      "Application Menu Bar",
+      "App Menu",
+      "Navigation Bar",
+      "Command Bar",
+      "Desktop Style Menu",
+      "Keyboard Navigation Menu",
+      "Accessible Menubar",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A menu bar providing commands and options for your application."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoMenubarHero",
+      "imported": "DemoMenubarHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/menubar/demos/hero#DemoMenubarHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesMenubar",
+      "imported": "TypesMenubar",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/menubar/types#TypesMenubar"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Menubar",
+      "properties": {
+        "id": "menubar"
+      },
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:59:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A menu bar providing commands and options for your application."
+      },
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:4:1"
+    },
+    {
+      "name": "DemoMenubarHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/menubar/demos/hero#DemoMenubarHero"
+    },
+    {
+      "name": "TypesMenubar",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:63:1",
+      "reference": "api:docs/src/app/(docs)/react/components/menubar/types#TypesMenubar"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:11:1",
+      "detail": "Site must implement DemoMenubarHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menubar",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Trigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Backdrop",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Popup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Arrow",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Item",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.LinkItem",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Separator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.SubmenuRoot",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.SubmenuTrigger",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Group",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.GroupLabel",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.RadioGroup",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.RadioItem",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.RadioItemIndicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.CheckboxItem",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.CheckboxItemIndicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Menu.Viewport",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:17:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:63:1",
+      "detail": "Site must implement TypesMenubar; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/menubar/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Menubar",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 10,
+                "offset": 9
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 10,
+            "offset": 9
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "menubar"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A menu bar providing commands and options for your application.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 21
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 74,
+                    "offset": 84
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 11
+              },
+              "end": {
+                "line": 3,
+                "column": 85,
+                "offset": 95
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 11
+          },
+          "end": {
+            "line": 3,
+            "column": 85,
+            "offset": 95
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 104
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 122
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A menu bar providing commands and options for your application.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 125
+              },
+              "end": {
+                "line": 6,
+                "column": 76,
+                "offset": 198
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 96
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 201
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoMenubarHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 203
+          },
+          "end": {
+            "line": 9,
+            "column": 48,
+            "offset": 250
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoMenubarHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 252
+          },
+          "end": {
+            "line": 11,
+            "column": 20,
+            "offset": 271
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/menubar/demos/hero#DemoMenubarHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 276
+              },
+              "end": {
+                "line": 13,
+                "column": 11,
+                "offset": 283
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 273
+          },
+          "end": {
+            "line": 13,
+            "column": 11,
+            "offset": 283
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 285
+              },
+              "end": {
+                "line": 15,
+                "column": 45,
+                "offset": 329
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 285
+          },
+          "end": {
+            "line": 15,
+            "column": 45,
+            "offset": 329
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Menubar } from 'baseui-solid2/menubar';\nimport { Menu } from 'baseui-solid2/menu';\n\n<Menubar>\n  <Menu.Root>\n    <Menu.Trigger />\n    <Menu.Portal>\n      <Menu.Backdrop />\n      <Menu.Positioner>\n        <Menu.Popup>\n          <Menu.Arrow />\n          <Menu.Item />\n          <Menu.LinkItem />\n          <Menu.Separator />\n\n          <Menu.SubmenuRoot>\n            <Menu.SubmenuTrigger />\n          </Menu.SubmenuRoot>\n\n          <Menu.Group>\n            <Menu.GroupLabel />\n          </Menu.Group>\n\n          <Menu.RadioGroup>\n            <Menu.RadioItem>\n              <Menu.RadioItemIndicator />\n            </Menu.RadioItem>\n          </Menu.RadioGroup>\n\n          <Menu.CheckboxItem>\n            <Menu.CheckboxItemIndicator />\n          </Menu.CheckboxItem>\n\n          <Menu.Viewport />\n        </Menu.Popup>\n      </Menu.Positioner>\n    </Menu.Portal>\n  </Menu.Root>\n</Menubar>;",
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 331
+          },
+          "end": {
+            "line": 57,
+            "column": 4,
+            "offset": 1252
+          }
+        },
+        "data": {
+          "sourceValue": "import { Menubar } from '@base-ui/react/menubar';\nimport { Menu } from '@base-ui/react/menu';\n\n<Menubar>\n  <Menu.Root>\n    <Menu.Trigger />\n    <Menu.Portal>\n      <Menu.Backdrop />\n      <Menu.Positioner>\n        <Menu.Popup>\n          <Menu.Arrow />\n          <Menu.Item />\n          <Menu.LinkItem />\n          <Menu.Separator />\n\n          <Menu.SubmenuRoot>\n            <Menu.SubmenuTrigger />\n          </Menu.SubmenuRoot>\n\n          <Menu.Group>\n            <Menu.GroupLabel />\n          </Menu.Group>\n\n          <Menu.RadioGroup>\n            <Menu.RadioItem>\n              <Menu.RadioItemIndicator />\n            </Menu.RadioItem>\n          </Menu.RadioGroup>\n\n          <Menu.CheckboxItem>\n            <Menu.CheckboxItemIndicator />\n          </Menu.CheckboxItem>\n\n          <Menu.Viewport />\n        </Menu.Popup>\n      </Menu.Positioner>\n    </Menu.Portal>\n  </Menu.Root>\n</Menubar>;",
+          "references": [
+            {
+              "value": "@base-ui/react/menubar",
+              "start": 25,
+              "end": 47,
+              "kind": "import"
+            },
+            {
+              "value": "@base-ui/react/menu",
+              "start": 72,
+              "end": 91,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/menu",
+              "start": 72,
+              "end": 91,
+              "kind": "import",
+              "replacement": "baseui-solid2/menu"
+            },
+            {
+              "value": "@base-ui/react/menubar",
+              "start": 25,
+              "end": 47,
+              "kind": "import",
+              "replacement": "baseui-solid2/menubar"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 4,
+                "offset": 1257
+              },
+              "end": {
+                "line": 59,
+                "column": 17,
+                "offset": 1270
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 59,
+            "column": 1,
+            "offset": 1254
+          },
+          "end": {
+            "line": 59,
+            "column": 17,
+            "offset": 1270
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesMenubar } from './types';",
+        "position": {
+          "start": {
+            "line": 61,
+            "column": 1,
+            "offset": 1272
+          },
+          "end": {
+            "line": 61,
+            "column": 40,
+            "offset": 1311
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesMenubar",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 63,
+            "column": 1,
+            "offset": 1313
+          },
+          "end": {
+            "line": 63,
+            "column": 17,
+            "offset": 1329
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/menubar/types#TypesMenubar"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Menubar',\n    'Menubar Component',\n    'Application Menu Bar',\n    'App Menu',\n    'Navigation Bar',\n    'Command Bar',\n    'Desktop Style Menu',\n    'Keyboard Navigation Menu',\n    'Accessible Menubar',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 65,
+            "column": 1,
+            "offset": 1331
+          },
+          "end": {
+            "line": 79,
+            "column": 3,
+            "offset": 1641
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 80,
+        "column": 1,
+        "offset": 1642
+      }
+    }
+  }
+}

@@ -1,0 +1,4770 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/overview/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "dc3a4b1256a558faf7400b0197d7a8e86eb575ebe63c7a039fc12582fb75c0bd",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/overview",
+  "route": "/solid/overview",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Overview",
+  "subtitle": null,
+  "metadata": {
+    "robots": {
+      "index": false
+    },
+    "other": {
+      "audience": "private"
+    }
+  },
+  "imports": [],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Overview",
+      "properties": {
+        "id": "overview"
+      },
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Quick start",
+      "properties": {
+        "id": "quick-start"
+      },
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Accessibility",
+      "properties": {
+        "id": "accessibility"
+      },
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:36:1"
+    },
+    {
+      "depth": 2,
+      "text": "Releases",
+      "properties": {
+        "id": "releases"
+      },
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:56:1"
+    },
+    {
+      "depth": 2,
+      "text": "Community",
+      "properties": {
+        "id": "community"
+      },
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:73:1"
+    },
+    {
+      "depth": 2,
+      "text": "About Base UI",
+      "properties": {
+        "id": "about-base-ui"
+      },
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:98:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#",
+      "target": "#",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:3:1"
+    },
+    {
+      "source": "#quick-start",
+      "target": "#quick-start",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:5:18"
+    },
+    {
+      "source": "./quick-start/page.mdx",
+      "target": "/solid/overview/quick-start",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:5:43"
+    },
+    {
+      "source": "#accessibility",
+      "target": "#accessibility",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:6:20"
+    },
+    {
+      "source": "./accessibility/page.mdx",
+      "target": "/solid/overview/accessibility",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:6:47"
+    },
+    {
+      "source": "#releases",
+      "target": "#releases",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:7:15"
+    },
+    {
+      "source": "./releases/page.mdx",
+      "target": "/upstream/react/overview/releases",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:7:37"
+    },
+    {
+      "source": "#community",
+      "target": "#community",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:8:16"
+    },
+    {
+      "source": "./community/page.mdx",
+      "target": "/solid/overview/community",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:8:39"
+    },
+    {
+      "source": "#about-base-ui",
+      "target": "#about-base-ui",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:9:20"
+    },
+    {
+      "source": "./about/page.mdx",
+      "target": "/solid/overview/about",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:9:47"
+    },
+    {
+      "source": "#",
+      "target": "#",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:11:1"
+    },
+    {
+      "source": "./quick-start/page.mdx",
+      "target": "/solid/overview/quick-start",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:34:1"
+    },
+    {
+      "source": "./accessibility/page.mdx",
+      "target": "/solid/overview/accessibility",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:54:1"
+    },
+    {
+      "source": "./releases/page.mdx",
+      "target": "/upstream/react/overview/releases",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:71:1"
+    },
+    {
+      "source": "./community/page.mdx",
+      "target": "/solid/overview/community",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:96:1"
+    },
+    {
+      "source": "./about/page.mdx",
+      "target": "/solid/overview/about",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:120:1"
+    },
+    {
+      "source": "#",
+      "target": "#",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:122:1"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "details",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:17:1"
+    },
+    {
+      "name": "summary",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:19:1"
+    },
+    {
+      "name": "details",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:40:1"
+    },
+    {
+      "name": "summary",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:42:1"
+    },
+    {
+      "name": "details",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:60:1"
+    },
+    {
+      "name": "summary",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:62:1"
+    },
+    {
+      "name": "details",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:77:1"
+    },
+    {
+      "name": "summary",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:79:1"
+    },
+    {
+      "name": "details",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:102:1"
+    },
+    {
+      "name": "summary",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:104:1"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:21:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:44:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:64:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:81:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:100:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:106:3",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/overview/page.mdx:114:5",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Overview",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 11,
+                "offset": 10
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 11,
+            "offset": 10
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "overview"
+          }
+        }
+      },
+      {
+        "type": "definition",
+        "identifier": "//",
+        "label": "//",
+        "title": "This section is autogenerated, but the following list order, title, and [Tag]s can be modified, but nothing within the parentheses.",
+        "url": "#",
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 12
+          },
+          "end": {
+            "line": 3,
+            "column": 142,
+            "offset": 153
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Quick start - (",
+                    "position": {
+                      "start": {
+                        "line": 5,
+                        "column": 3,
+                        "offset": 157
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 18,
+                        "offset": 172
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#quick-start",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Outline",
+                        "position": {
+                          "start": {
+                            "line": 5,
+                            "column": 19,
+                            "offset": 173
+                          },
+                          "end": {
+                            "line": 5,
+                            "column": 26,
+                            "offset": 180
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 5,
+                        "column": 18,
+                        "offset": 172
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 41,
+                        "offset": 195
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", ",
+                    "position": {
+                      "start": {
+                        "line": 5,
+                        "column": 41,
+                        "offset": 195
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 43,
+                        "offset": 197
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/overview/quick-start",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Contents",
+                        "position": {
+                          "start": {
+                            "line": 5,
+                            "column": 44,
+                            "offset": 198
+                          },
+                          "end": {
+                            "line": 5,
+                            "column": 52,
+                            "offset": 206
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 5,
+                        "column": 43,
+                        "offset": 197
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 77,
+                        "offset": 231
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 5,
+                        "column": 77,
+                        "offset": 231
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 78,
+                        "offset": 232
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 5,
+                    "column": 3,
+                    "offset": 157
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 78,
+                    "offset": 232
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 1,
+                "offset": 155
+              },
+              "end": {
+                "line": 5,
+                "column": 78,
+                "offset": 232
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Accessibility - (",
+                    "position": {
+                      "start": {
+                        "line": 6,
+                        "column": 3,
+                        "offset": 235
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 20,
+                        "offset": 252
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#accessibility",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Outline",
+                        "position": {
+                          "start": {
+                            "line": 6,
+                            "column": 21,
+                            "offset": 253
+                          },
+                          "end": {
+                            "line": 6,
+                            "column": 28,
+                            "offset": 260
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 6,
+                        "column": 20,
+                        "offset": 252
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 45,
+                        "offset": 277
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", ",
+                    "position": {
+                      "start": {
+                        "line": 6,
+                        "column": 45,
+                        "offset": 277
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 47,
+                        "offset": 279
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/overview/accessibility",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Contents",
+                        "position": {
+                          "start": {
+                            "line": 6,
+                            "column": 48,
+                            "offset": 280
+                          },
+                          "end": {
+                            "line": 6,
+                            "column": 56,
+                            "offset": 288
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 6,
+                        "column": 47,
+                        "offset": 279
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 83,
+                        "offset": 315
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 6,
+                        "column": 83,
+                        "offset": 315
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 84,
+                        "offset": 316
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 6,
+                    "column": 3,
+                    "offset": 235
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 84,
+                    "offset": 316
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 1,
+                "offset": 233
+              },
+              "end": {
+                "line": 6,
+                "column": 84,
+                "offset": 316
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Releases - (",
+                    "position": {
+                      "start": {
+                        "line": 7,
+                        "column": 3,
+                        "offset": 319
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 15,
+                        "offset": 331
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#releases",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Outline",
+                        "position": {
+                          "start": {
+                            "line": 7,
+                            "column": 16,
+                            "offset": 332
+                          },
+                          "end": {
+                            "line": 7,
+                            "column": 23,
+                            "offset": 339
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 7,
+                        "column": 15,
+                        "offset": 331
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 35,
+                        "offset": 351
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", ",
+                    "position": {
+                      "start": {
+                        "line": 7,
+                        "column": 35,
+                        "offset": 351
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 37,
+                        "offset": 353
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/upstream/react/overview/releases",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Contents",
+                        "position": {
+                          "start": {
+                            "line": 7,
+                            "column": 38,
+                            "offset": 354
+                          },
+                          "end": {
+                            "line": 7,
+                            "column": 46,
+                            "offset": 362
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 7,
+                        "column": 37,
+                        "offset": 353
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 68,
+                        "offset": 384
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 7,
+                        "column": 68,
+                        "offset": 384
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 69,
+                        "offset": 385
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 7,
+                    "column": 3,
+                    "offset": 319
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 69,
+                    "offset": 385
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 1,
+                "offset": 317
+              },
+              "end": {
+                "line": 7,
+                "column": 69,
+                "offset": 385
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Community - (",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 3,
+                        "offset": 388
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 16,
+                        "offset": 401
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#community",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Outline",
+                        "position": {
+                          "start": {
+                            "line": 8,
+                            "column": 17,
+                            "offset": 402
+                          },
+                          "end": {
+                            "line": 8,
+                            "column": 24,
+                            "offset": 409
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 16,
+                        "offset": 401
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 37,
+                        "offset": 422
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", ",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 37,
+                        "offset": 422
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 39,
+                        "offset": 424
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/overview/community",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Contents",
+                        "position": {
+                          "start": {
+                            "line": 8,
+                            "column": 40,
+                            "offset": 425
+                          },
+                          "end": {
+                            "line": 8,
+                            "column": 48,
+                            "offset": 433
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 39,
+                        "offset": 424
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 71,
+                        "offset": 456
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 8,
+                        "column": 71,
+                        "offset": 456
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 72,
+                        "offset": 457
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 8,
+                    "column": 3,
+                    "offset": 388
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 72,
+                    "offset": 457
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 1,
+                "offset": 386
+              },
+              "end": {
+                "line": 8,
+                "column": 72,
+                "offset": 457
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "About Base UI - (",
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 3,
+                        "offset": 460
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 20,
+                        "offset": 477
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#about-base-ui",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Outline",
+                        "position": {
+                          "start": {
+                            "line": 9,
+                            "column": 21,
+                            "offset": 478
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 28,
+                            "offset": 485
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 20,
+                        "offset": 477
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 45,
+                        "offset": 502
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", ",
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 45,
+                        "offset": 502
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 47,
+                        "offset": 504
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/overview/about",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Contents",
+                        "position": {
+                          "start": {
+                            "line": 9,
+                            "column": 48,
+                            "offset": 505
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 56,
+                            "offset": 513
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 47,
+                        "offset": 504
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 75,
+                        "offset": 532
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 75,
+                        "offset": 532
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 76,
+                        "offset": 533
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 9,
+                    "column": 3,
+                    "offset": 460
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 76,
+                    "offset": 533
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 1,
+                "offset": 458
+              },
+              "end": {
+                "line": 9,
+                "column": 76,
+                "offset": 533
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 155
+          },
+          "end": {
+            "line": 9,
+            "column": 76,
+            "offset": 533
+          }
+        }
+      },
+      {
+        "type": "definition",
+        "identifier": "//",
+        "label": "//",
+        "title": "This section is autogenerated, DO NOT EDIT AFTER THIS LINE, run: pnpm docs:validate \"(docs)/react/overview\"",
+        "url": "#",
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 535
+          },
+          "end": {
+            "line": 11,
+            "column": 118,
+            "offset": 652
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Quick start",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 657
+              },
+              "end": {
+                "line": 13,
+                "column": 15,
+                "offset": 668
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 654
+          },
+          "end": {
+            "line": 13,
+            "column": 15,
+            "offset": 668
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "quick-start"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A quick guide to getting started with Base UI.",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 670
+              },
+              "end": {
+                "line": 15,
+                "column": 47,
+                "offset": 716
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 670
+          },
+          "end": {
+            "line": 15,
+            "column": 47,
+            "offset": 716
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "details",
+        "attributes": [],
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "mdxJsxTextElement",
+                "name": "summary",
+                "attributes": [],
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Outline",
+                    "position": {
+                      "start": {
+                        "line": 19,
+                        "column": 10,
+                        "offset": 738
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 17,
+                        "offset": 745
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 19,
+                    "column": 1,
+                    "offset": 729
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 27,
+                    "offset": 755
+                  }
+                },
+                "data": {
+                  "handler": "html"
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 729
+              },
+              "end": {
+                "line": 19,
+                "column": 27,
+                "offset": 755
+              }
+            }
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "start": null,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keywords: Base UI Quick Start, Install Base UI, Base UI shadcn, Base UI shadcn/ui, React Portal Setup, iOS Safari Backdrop Fix, Popover Assembly Example, llms.txt Link, Getting Started Guide, npm Install, Setup Guide, Installation Guide, Getting Started Tutorial, First Steps, Beginner Guide",
+                        "position": {
+                          "start": {
+                            "line": 21,
+                            "column": 3,
+                            "offset": 759
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 294,
+                            "offset": 1050
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 21,
+                        "column": 3,
+                        "offset": 759
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 294,
+                        "offset": 1050
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 21,
+                    "column": 1,
+                    "offset": 757
+                  },
+                  "end": {
+                    "line": 21,
+                    "column": 294,
+                    "offset": 1050
+                  }
+                }
+              },
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Sections:",
+                        "position": {
+                          "start": {
+                            "line": 22,
+                            "column": 3,
+                            "offset": 1053
+                          },
+                          "end": {
+                            "line": 22,
+                            "column": 12,
+                            "offset": 1062
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 22,
+                        "column": 3,
+                        "offset": 1053
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 12,
+                        "offset": 1062
+                      }
+                    }
+                  },
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "start": null,
+                    "spread": false,
+                    "children": [
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Install the library",
+                                "position": {
+                                  "start": {
+                                    "line": 23,
+                                    "column": 5,
+                                    "offset": 1067
+                                  },
+                                  "end": {
+                                    "line": 23,
+                                    "column": 24,
+                                    "offset": 1086
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 23,
+                                "column": 5,
+                                "offset": 1067
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 24,
+                                "offset": 1086
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 23,
+                            "column": 3,
+                            "offset": 1065
+                          },
+                          "end": {
+                            "line": 23,
+                            "column": 24,
+                            "offset": 1086
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Set up",
+                                "position": {
+                                  "start": {
+                                    "line": 24,
+                                    "column": 5,
+                                    "offset": 1091
+                                  },
+                                  "end": {
+                                    "line": 24,
+                                    "column": 11,
+                                    "offset": 1097
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 24,
+                                "column": 5,
+                                "offset": 1091
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 11,
+                                "offset": 1097
+                              }
+                            }
+                          },
+                          {
+                            "type": "list",
+                            "ordered": false,
+                            "start": null,
+                            "spread": false,
+                            "children": [
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "Portals",
+                                        "position": {
+                                          "start": {
+                                            "line": 25,
+                                            "column": 7,
+                                            "offset": 1104
+                                          },
+                                          "end": {
+                                            "line": 25,
+                                            "column": 14,
+                                            "offset": 1111
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 25,
+                                        "column": 7,
+                                        "offset": 1104
+                                      },
+                                      "end": {
+                                        "line": 25,
+                                        "column": 14,
+                                        "offset": 1111
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 25,
+                                    "column": 5,
+                                    "offset": 1102
+                                  },
+                                  "end": {
+                                    "line": 25,
+                                    "column": 14,
+                                    "offset": 1111
+                                  }
+                                }
+                              },
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "iOS 26+ Safari",
+                                        "position": {
+                                          "start": {
+                                            "line": 26,
+                                            "column": 7,
+                                            "offset": 1118
+                                          },
+                                          "end": {
+                                            "line": 26,
+                                            "column": 21,
+                                            "offset": 1132
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 26,
+                                        "column": 7,
+                                        "offset": 1118
+                                      },
+                                      "end": {
+                                        "line": 26,
+                                        "column": 21,
+                                        "offset": 1132
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 26,
+                                    "column": 5,
+                                    "offset": 1116
+                                  },
+                                  "end": {
+                                    "line": 26,
+                                    "column": 21,
+                                    "offset": 1132
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 25,
+                                "column": 5,
+                                "offset": 1102
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 21,
+                                "offset": 1132
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 24,
+                            "column": 3,
+                            "offset": 1089
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 21,
+                            "offset": 1132
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Assemble a component",
+                                "position": {
+                                  "start": {
+                                    "line": 27,
+                                    "column": 5,
+                                    "offset": 1137
+                                  },
+                                  "end": {
+                                    "line": 27,
+                                    "column": 25,
+                                    "offset": 1157
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 27,
+                                "column": 5,
+                                "offset": 1137
+                              },
+                              "end": {
+                                "line": 27,
+                                "column": 25,
+                                "offset": 1157
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 27,
+                            "column": 3,
+                            "offset": 1135
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 25,
+                            "offset": 1157
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Pre-styled components",
+                                "position": {
+                                  "start": {
+                                    "line": 28,
+                                    "column": 5,
+                                    "offset": 1162
+                                  },
+                                  "end": {
+                                    "line": 28,
+                                    "column": 26,
+                                    "offset": 1183
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 28,
+                                "column": 5,
+                                "offset": 1162
+                              },
+                              "end": {
+                                "line": 28,
+                                "column": 26,
+                                "offset": 1183
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 28,
+                            "column": 3,
+                            "offset": 1160
+                          },
+                          "end": {
+                            "line": 28,
+                            "column": 26,
+                            "offset": 1183
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Working with LLMs",
+                                "position": {
+                                  "start": {
+                                    "line": 29,
+                                    "column": 5,
+                                    "offset": 1188
+                                  },
+                                  "end": {
+                                    "line": 29,
+                                    "column": 22,
+                                    "offset": 1205
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 29,
+                                "column": 5,
+                                "offset": 1188
+                              },
+                              "end": {
+                                "line": 29,
+                                "column": 22,
+                                "offset": 1205
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 29,
+                            "column": 3,
+                            "offset": 1186
+                          },
+                          "end": {
+                            "line": 29,
+                            "column": 22,
+                            "offset": 1205
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Next steps",
+                                "position": {
+                                  "start": {
+                                    "line": 30,
+                                    "column": 5,
+                                    "offset": 1210
+                                  },
+                                  "end": {
+                                    "line": 30,
+                                    "column": 15,
+                                    "offset": 1220
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 30,
+                                "column": 5,
+                                "offset": 1210
+                              },
+                              "end": {
+                                "line": 30,
+                                "column": 15,
+                                "offset": 1220
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 30,
+                            "column": 3,
+                            "offset": 1208
+                          },
+                          "end": {
+                            "line": 30,
+                            "column": 15,
+                            "offset": 1220
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 23,
+                        "column": 3,
+                        "offset": 1065
+                      },
+                      "end": {
+                        "line": 30,
+                        "column": 15,
+                        "offset": 1220
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 22,
+                    "column": 1,
+                    "offset": 1051
+                  },
+                  "end": {
+                    "line": 30,
+                    "column": 15,
+                    "offset": 1220
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 21,
+                "column": 1,
+                "offset": 757
+              },
+              "end": {
+                "line": 30,
+                "column": 15,
+                "offset": 1220
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 718
+          },
+          "end": {
+            "line": 32,
+            "column": 11,
+            "offset": 1232
+          }
+        },
+        "data": {
+          "handler": "html"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/overview/quick-start",
+            "children": [
+              {
+                "type": "text",
+                "value": "Read more",
+                "position": {
+                  "start": {
+                    "line": 34,
+                    "column": 2,
+                    "offset": 1235
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 11,
+                    "offset": 1244
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 1,
+                "offset": 1234
+              },
+              "end": {
+                "line": 34,
+                "column": 36,
+                "offset": 1269
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 34,
+            "column": 1,
+            "offset": 1234
+          },
+          "end": {
+            "line": 34,
+            "column": 36,
+            "offset": 1269
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Accessibility",
+            "position": {
+              "start": {
+                "line": 36,
+                "column": 4,
+                "offset": 1274
+              },
+              "end": {
+                "line": 36,
+                "column": 17,
+                "offset": 1287
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 36,
+            "column": 1,
+            "offset": 1271
+          },
+          "end": {
+            "line": 36,
+            "column": 17,
+            "offset": 1287
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "accessibility"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Learn how to make the most of Base UI's accessibility features and guidelines.",
+            "position": {
+              "start": {
+                "line": 38,
+                "column": 1,
+                "offset": 1289
+              },
+              "end": {
+                "line": 38,
+                "column": 79,
+                "offset": 1367
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 38,
+            "column": 1,
+            "offset": 1289
+          },
+          "end": {
+            "line": 38,
+            "column": 79,
+            "offset": 1367
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "details",
+        "attributes": [],
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "mdxJsxTextElement",
+                "name": "summary",
+                "attributes": [],
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Outline",
+                    "position": {
+                      "start": {
+                        "line": 42,
+                        "column": 10,
+                        "offset": 1389
+                      },
+                      "end": {
+                        "line": 42,
+                        "column": 17,
+                        "offset": 1396
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 42,
+                    "column": 1,
+                    "offset": 1380
+                  },
+                  "end": {
+                    "line": 42,
+                    "column": 27,
+                    "offset": 1406
+                  }
+                },
+                "data": {
+                  "handler": "html"
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 42,
+                "column": 1,
+                "offset": 1380
+              },
+              "end": {
+                "line": 42,
+                "column": 27,
+                "offset": 1406
+              }
+            }
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "start": null,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keywords: Base UI Accessibility, React Accessibility Guidelines, Keyboard Navigation Base UI, Focus Management Tips, Color Contrast Guidance, Accessible Labels Base UI, Accessibility Overview, WCAG Compliance, ARIA Attributes, A11y, Screen Reader Support, Accessible UI, Inclusive Design",
+                        "position": {
+                          "start": {
+                            "line": 44,
+                            "column": 3,
+                            "offset": 1410
+                          },
+                          "end": {
+                            "line": 44,
+                            "column": 290,
+                            "offset": 1697
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 44,
+                        "column": 3,
+                        "offset": 1410
+                      },
+                      "end": {
+                        "line": 44,
+                        "column": 290,
+                        "offset": 1697
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 44,
+                    "column": 1,
+                    "offset": 1408
+                  },
+                  "end": {
+                    "line": 44,
+                    "column": 290,
+                    "offset": 1697
+                  }
+                }
+              },
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Sections:",
+                        "position": {
+                          "start": {
+                            "line": 45,
+                            "column": 3,
+                            "offset": 1700
+                          },
+                          "end": {
+                            "line": 45,
+                            "column": 12,
+                            "offset": 1709
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 45,
+                        "column": 3,
+                        "offset": 1700
+                      },
+                      "end": {
+                        "line": 45,
+                        "column": 12,
+                        "offset": 1709
+                      }
+                    }
+                  },
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "start": null,
+                    "spread": false,
+                    "children": [
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Keyboard navigation",
+                                "position": {
+                                  "start": {
+                                    "line": 46,
+                                    "column": 5,
+                                    "offset": 1714
+                                  },
+                                  "end": {
+                                    "line": 46,
+                                    "column": 24,
+                                    "offset": 1733
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 46,
+                                "column": 5,
+                                "offset": 1714
+                              },
+                              "end": {
+                                "line": 46,
+                                "column": 24,
+                                "offset": 1733
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 46,
+                            "column": 3,
+                            "offset": 1712
+                          },
+                          "end": {
+                            "line": 46,
+                            "column": 24,
+                            "offset": 1733
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Focus management",
+                                "position": {
+                                  "start": {
+                                    "line": 47,
+                                    "column": 5,
+                                    "offset": 1738
+                                  },
+                                  "end": {
+                                    "line": 47,
+                                    "column": 21,
+                                    "offset": 1754
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 47,
+                                "column": 5,
+                                "offset": 1738
+                              },
+                              "end": {
+                                "line": 47,
+                                "column": 21,
+                                "offset": 1754
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 47,
+                            "column": 3,
+                            "offset": 1736
+                          },
+                          "end": {
+                            "line": 47,
+                            "column": 21,
+                            "offset": 1754
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Color contrast",
+                                "position": {
+                                  "start": {
+                                    "line": 48,
+                                    "column": 5,
+                                    "offset": 1759
+                                  },
+                                  "end": {
+                                    "line": 48,
+                                    "column": 19,
+                                    "offset": 1773
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 48,
+                                "column": 5,
+                                "offset": 1759
+                              },
+                              "end": {
+                                "line": 48,
+                                "column": 19,
+                                "offset": 1773
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 48,
+                            "column": 3,
+                            "offset": 1757
+                          },
+                          "end": {
+                            "line": 48,
+                            "column": 19,
+                            "offset": 1773
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Accessible labels",
+                                "position": {
+                                  "start": {
+                                    "line": 49,
+                                    "column": 5,
+                                    "offset": 1778
+                                  },
+                                  "end": {
+                                    "line": 49,
+                                    "column": 22,
+                                    "offset": 1795
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 49,
+                                "column": 5,
+                                "offset": 1778
+                              },
+                              "end": {
+                                "line": 49,
+                                "column": 22,
+                                "offset": 1795
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 49,
+                            "column": 3,
+                            "offset": 1776
+                          },
+                          "end": {
+                            "line": 49,
+                            "column": 22,
+                            "offset": 1795
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Testing",
+                                "position": {
+                                  "start": {
+                                    "line": 50,
+                                    "column": 5,
+                                    "offset": 1800
+                                  },
+                                  "end": {
+                                    "line": 50,
+                                    "column": 12,
+                                    "offset": 1807
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 50,
+                                "column": 5,
+                                "offset": 1800
+                              },
+                              "end": {
+                                "line": 50,
+                                "column": 12,
+                                "offset": 1807
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 50,
+                            "column": 3,
+                            "offset": 1798
+                          },
+                          "end": {
+                            "line": 50,
+                            "column": 12,
+                            "offset": 1807
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 46,
+                        "column": 3,
+                        "offset": 1712
+                      },
+                      "end": {
+                        "line": 50,
+                        "column": 12,
+                        "offset": 1807
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 45,
+                    "column": 1,
+                    "offset": 1698
+                  },
+                  "end": {
+                    "line": 50,
+                    "column": 12,
+                    "offset": 1807
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 44,
+                "column": 1,
+                "offset": 1408
+              },
+              "end": {
+                "line": 50,
+                "column": 12,
+                "offset": 1807
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 40,
+            "column": 1,
+            "offset": 1369
+          },
+          "end": {
+            "line": 52,
+            "column": 11,
+            "offset": 1819
+          }
+        },
+        "data": {
+          "handler": "html"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/overview/accessibility",
+            "children": [
+              {
+                "type": "text",
+                "value": "Read more",
+                "position": {
+                  "start": {
+                    "line": 54,
+                    "column": 2,
+                    "offset": 1822
+                  },
+                  "end": {
+                    "line": 54,
+                    "column": 11,
+                    "offset": 1831
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 1821
+              },
+              "end": {
+                "line": 54,
+                "column": 38,
+                "offset": 1858
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 54,
+            "column": 1,
+            "offset": 1821
+          },
+          "end": {
+            "line": 54,
+            "column": 38,
+            "offset": 1858
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Releases",
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 4,
+                "offset": 1863
+              },
+              "end": {
+                "line": 56,
+                "column": 12,
+                "offset": 1871
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 56,
+            "column": 1,
+            "offset": 1860
+          },
+          "end": {
+            "line": 56,
+            "column": 12,
+            "offset": 1871
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "releases"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Changelogs for each Base UI release.",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 1,
+                "offset": 1873
+              },
+              "end": {
+                "line": 58,
+                "column": 37,
+                "offset": 1909
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 1873
+          },
+          "end": {
+            "line": 58,
+            "column": 37,
+            "offset": 1909
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "details",
+        "attributes": [],
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "mdxJsxTextElement",
+                "name": "summary",
+                "attributes": [],
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Outline",
+                    "position": {
+                      "start": {
+                        "line": 62,
+                        "column": 10,
+                        "offset": 1931
+                      },
+                      "end": {
+                        "line": 62,
+                        "column": 17,
+                        "offset": 1938
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 62,
+                    "column": 1,
+                    "offset": 1922
+                  },
+                  "end": {
+                    "line": 62,
+                    "column": 27,
+                    "offset": 1948
+                  }
+                },
+                "data": {
+                  "handler": "html"
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 62,
+                "column": 1,
+                "offset": 1922
+              },
+              "end": {
+                "line": 62,
+                "column": 27,
+                "offset": 1948
+              }
+            }
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "start": null,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keywords: Base UI releases, Base UI changelog, Release notes beta, Breaking changes Base UI, Component updates history, Headless React release log, Version history, Changelog history, Upgrade guide, Migration guide, What's new, Release updates",
+                        "position": {
+                          "start": {
+                            "line": 64,
+                            "column": 3,
+                            "offset": 1952
+                          },
+                          "end": {
+                            "line": 64,
+                            "column": 246,
+                            "offset": 2195
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 64,
+                        "column": 3,
+                        "offset": 1952
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 246,
+                        "offset": 2195
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 64,
+                    "column": 1,
+                    "offset": 1950
+                  },
+                  "end": {
+                    "line": 64,
+                    "column": 246,
+                    "offset": 2195
+                  }
+                }
+              },
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Sections:",
+                        "position": {
+                          "start": {
+                            "line": 65,
+                            "column": 3,
+                            "offset": 2198
+                          },
+                          "end": {
+                            "line": 65,
+                            "column": 12,
+                            "offset": 2207
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 65,
+                        "column": 3,
+                        "offset": 2198
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 12,
+                        "offset": 2207
+                      }
+                    }
+                  },
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "start": null,
+                    "spread": false,
+                    "children": [
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Canary releases",
+                                "position": {
+                                  "start": {
+                                    "line": 66,
+                                    "column": 5,
+                                    "offset": 2212
+                                  },
+                                  "end": {
+                                    "line": 66,
+                                    "column": 20,
+                                    "offset": 2227
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 66,
+                                "column": 5,
+                                "offset": 2212
+                              },
+                              "end": {
+                                "line": 66,
+                                "column": 20,
+                                "offset": 2227
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 66,
+                            "column": 3,
+                            "offset": 2210
+                          },
+                          "end": {
+                            "line": 66,
+                            "column": 20,
+                            "offset": 2227
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Full release notes",
+                                "position": {
+                                  "start": {
+                                    "line": 67,
+                                    "column": 5,
+                                    "offset": 2232
+                                  },
+                                  "end": {
+                                    "line": 67,
+                                    "column": 23,
+                                    "offset": 2250
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 67,
+                                "column": 5,
+                                "offset": 2232
+                              },
+                              "end": {
+                                "line": 67,
+                                "column": 23,
+                                "offset": 2250
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 67,
+                            "column": 3,
+                            "offset": 2230
+                          },
+                          "end": {
+                            "line": 67,
+                            "column": 23,
+                            "offset": 2250
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 66,
+                        "column": 3,
+                        "offset": 2210
+                      },
+                      "end": {
+                        "line": 67,
+                        "column": 23,
+                        "offset": 2250
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 65,
+                    "column": 1,
+                    "offset": 2196
+                  },
+                  "end": {
+                    "line": 67,
+                    "column": 23,
+                    "offset": 2250
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 64,
+                "column": 1,
+                "offset": 1950
+              },
+              "end": {
+                "line": 67,
+                "column": 23,
+                "offset": 2250
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 60,
+            "column": 1,
+            "offset": 1911
+          },
+          "end": {
+            "line": 69,
+            "column": 11,
+            "offset": 2262
+          }
+        },
+        "data": {
+          "handler": "html"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "/upstream/react/overview/releases",
+            "children": [
+              {
+                "type": "text",
+                "value": "Read more",
+                "position": {
+                  "start": {
+                    "line": 71,
+                    "column": 2,
+                    "offset": 2265
+                  },
+                  "end": {
+                    "line": 71,
+                    "column": 11,
+                    "offset": 2274
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 71,
+                "column": 1,
+                "offset": 2264
+              },
+              "end": {
+                "line": 71,
+                "column": 33,
+                "offset": 2296
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 71,
+            "column": 1,
+            "offset": 2264
+          },
+          "end": {
+            "line": 71,
+            "column": 33,
+            "offset": 2296
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Community",
+            "position": {
+              "start": {
+                "line": 73,
+                "column": 4,
+                "offset": 2301
+              },
+              "end": {
+                "line": 73,
+                "column": 13,
+                "offset": 2310
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 73,
+            "column": 1,
+            "offset": 2298
+          },
+          "end": {
+            "line": 73,
+            "column": 13,
+            "offset": 2310
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "community"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The Base UI ecosystem, support channels, and ways to stay up to date.",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 1,
+                "offset": 2312
+              },
+              "end": {
+                "line": 75,
+                "column": 70,
+                "offset": 2381
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 75,
+            "column": 1,
+            "offset": 2312
+          },
+          "end": {
+            "line": 75,
+            "column": 70,
+            "offset": 2381
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "details",
+        "attributes": [],
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "mdxJsxTextElement",
+                "name": "summary",
+                "attributes": [],
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Outline",
+                    "position": {
+                      "start": {
+                        "line": 79,
+                        "column": 10,
+                        "offset": 2403
+                      },
+                      "end": {
+                        "line": 79,
+                        "column": 17,
+                        "offset": 2410
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 79,
+                    "column": 1,
+                    "offset": 2394
+                  },
+                  "end": {
+                    "line": 79,
+                    "column": 27,
+                    "offset": 2420
+                  }
+                },
+                "data": {
+                  "handler": "html"
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 79,
+                "column": 1,
+                "offset": 2394
+              },
+              "end": {
+                "line": 79,
+                "column": 27,
+                "offset": 2420
+              }
+            }
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "start": null,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keywords: Base UI Community, Base UI shadcn, Base UI shadcn/ui, Base UI GitHub, Base UI Discord, Base UI X, Base UI Bluesky, Base UI Styling, Base UI Ecosystem, Base UI Support, Headless React Community, Accessible React Components",
+                        "position": {
+                          "start": {
+                            "line": 81,
+                            "column": 3,
+                            "offset": 2424
+                          },
+                          "end": {
+                            "line": 81,
+                            "column": 234,
+                            "offset": 2655
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 81,
+                        "column": 3,
+                        "offset": 2424
+                      },
+                      "end": {
+                        "line": 81,
+                        "column": 234,
+                        "offset": 2655
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 81,
+                    "column": 1,
+                    "offset": 2422
+                  },
+                  "end": {
+                    "line": 81,
+                    "column": 234,
+                    "offset": 2655
+                  }
+                }
+              },
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Sections:",
+                        "position": {
+                          "start": {
+                            "line": 82,
+                            "column": 3,
+                            "offset": 2658
+                          },
+                          "end": {
+                            "line": 82,
+                            "column": 12,
+                            "offset": 2667
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 82,
+                        "column": 3,
+                        "offset": 2658
+                      },
+                      "end": {
+                        "line": 82,
+                        "column": 12,
+                        "offset": 2667
+                      }
+                    }
+                  },
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "start": null,
+                    "spread": false,
+                    "children": [
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "shadcn/ui",
+                                "position": {
+                                  "start": {
+                                    "line": 83,
+                                    "column": 5,
+                                    "offset": 2672
+                                  },
+                                  "end": {
+                                    "line": 83,
+                                    "column": 14,
+                                    "offset": 2681
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 83,
+                                "column": 5,
+                                "offset": 2672
+                              },
+                              "end": {
+                                "line": 83,
+                                "column": 14,
+                                "offset": 2681
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 83,
+                            "column": 3,
+                            "offset": 2670
+                          },
+                          "end": {
+                            "line": 83,
+                            "column": 14,
+                            "offset": 2681
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Styled libraries",
+                                "position": {
+                                  "start": {
+                                    "line": 84,
+                                    "column": 5,
+                                    "offset": 2686
+                                  },
+                                  "end": {
+                                    "line": 84,
+                                    "column": 21,
+                                    "offset": 2702
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 84,
+                                "column": 5,
+                                "offset": 2686
+                              },
+                              "end": {
+                                "line": 84,
+                                "column": 21,
+                                "offset": 2702
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 84,
+                            "column": 3,
+                            "offset": 2684
+                          },
+                          "end": {
+                            "line": 84,
+                            "column": 21,
+                            "offset": 2702
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Unofficial ports",
+                                "position": {
+                                  "start": {
+                                    "line": 85,
+                                    "column": 5,
+                                    "offset": 2707
+                                  },
+                                  "end": {
+                                    "line": 85,
+                                    "column": 21,
+                                    "offset": 2723
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 85,
+                                "column": 5,
+                                "offset": 2707
+                              },
+                              "end": {
+                                "line": 85,
+                                "column": 21,
+                                "offset": 2723
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 85,
+                            "column": 3,
+                            "offset": 2705
+                          },
+                          "end": {
+                            "line": 85,
+                            "column": 21,
+                            "offset": 2723
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Get help and contribute",
+                                "position": {
+                                  "start": {
+                                    "line": 86,
+                                    "column": 5,
+                                    "offset": 2728
+                                  },
+                                  "end": {
+                                    "line": 86,
+                                    "column": 28,
+                                    "offset": 2751
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 86,
+                                "column": 5,
+                                "offset": 2728
+                              },
+                              "end": {
+                                "line": 86,
+                                "column": 28,
+                                "offset": 2751
+                              }
+                            }
+                          },
+                          {
+                            "type": "list",
+                            "ordered": false,
+                            "start": null,
+                            "spread": false,
+                            "children": [
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "GitHub",
+                                        "position": {
+                                          "start": {
+                                            "line": 87,
+                                            "column": 7,
+                                            "offset": 2758
+                                          },
+                                          "end": {
+                                            "line": 87,
+                                            "column": 13,
+                                            "offset": 2764
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 87,
+                                        "column": 7,
+                                        "offset": 2758
+                                      },
+                                      "end": {
+                                        "line": 87,
+                                        "column": 13,
+                                        "offset": 2764
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 87,
+                                    "column": 5,
+                                    "offset": 2756
+                                  },
+                                  "end": {
+                                    "line": 87,
+                                    "column": 13,
+                                    "offset": 2764
+                                  }
+                                }
+                              },
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "Discord",
+                                        "position": {
+                                          "start": {
+                                            "line": 88,
+                                            "column": 7,
+                                            "offset": 2771
+                                          },
+                                          "end": {
+                                            "line": 88,
+                                            "column": 14,
+                                            "offset": 2778
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 88,
+                                        "column": 7,
+                                        "offset": 2771
+                                      },
+                                      "end": {
+                                        "line": 88,
+                                        "column": 14,
+                                        "offset": 2778
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 88,
+                                    "column": 5,
+                                    "offset": 2769
+                                  },
+                                  "end": {
+                                    "line": 88,
+                                    "column": 14,
+                                    "offset": 2778
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 87,
+                                "column": 5,
+                                "offset": 2756
+                              },
+                              "end": {
+                                "line": 88,
+                                "column": 14,
+                                "offset": 2778
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 86,
+                            "column": 3,
+                            "offset": 2726
+                          },
+                          "end": {
+                            "line": 88,
+                            "column": 14,
+                            "offset": 2778
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Stay up to date",
+                                "position": {
+                                  "start": {
+                                    "line": 89,
+                                    "column": 5,
+                                    "offset": 2783
+                                  },
+                                  "end": {
+                                    "line": 89,
+                                    "column": 20,
+                                    "offset": 2798
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 89,
+                                "column": 5,
+                                "offset": 2783
+                              },
+                              "end": {
+                                "line": 89,
+                                "column": 20,
+                                "offset": 2798
+                              }
+                            }
+                          },
+                          {
+                            "type": "list",
+                            "ordered": false,
+                            "start": null,
+                            "spread": false,
+                            "children": [
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "X",
+                                        "position": {
+                                          "start": {
+                                            "line": 90,
+                                            "column": 7,
+                                            "offset": 2805
+                                          },
+                                          "end": {
+                                            "line": 90,
+                                            "column": 8,
+                                            "offset": 2806
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 90,
+                                        "column": 7,
+                                        "offset": 2805
+                                      },
+                                      "end": {
+                                        "line": 90,
+                                        "column": 8,
+                                        "offset": 2806
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 90,
+                                    "column": 5,
+                                    "offset": 2803
+                                  },
+                                  "end": {
+                                    "line": 90,
+                                    "column": 8,
+                                    "offset": 2806
+                                  }
+                                }
+                              },
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "Bluesky",
+                                        "position": {
+                                          "start": {
+                                            "line": 91,
+                                            "column": 7,
+                                            "offset": 2813
+                                          },
+                                          "end": {
+                                            "line": 91,
+                                            "column": 14,
+                                            "offset": 2820
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 91,
+                                        "column": 7,
+                                        "offset": 2813
+                                      },
+                                      "end": {
+                                        "line": 91,
+                                        "column": 14,
+                                        "offset": 2820
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 91,
+                                    "column": 5,
+                                    "offset": 2811
+                                  },
+                                  "end": {
+                                    "line": 91,
+                                    "column": 14,
+                                    "offset": 2820
+                                  }
+                                }
+                              },
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "GitHub releases",
+                                        "position": {
+                                          "start": {
+                                            "line": 92,
+                                            "column": 7,
+                                            "offset": 2827
+                                          },
+                                          "end": {
+                                            "line": 92,
+                                            "column": 22,
+                                            "offset": 2842
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 92,
+                                        "column": 7,
+                                        "offset": 2827
+                                      },
+                                      "end": {
+                                        "line": 92,
+                                        "column": 22,
+                                        "offset": 2842
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 92,
+                                    "column": 5,
+                                    "offset": 2825
+                                  },
+                                  "end": {
+                                    "line": 92,
+                                    "column": 22,
+                                    "offset": 2842
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 90,
+                                "column": 5,
+                                "offset": 2803
+                              },
+                              "end": {
+                                "line": 92,
+                                "column": 22,
+                                "offset": 2842
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 89,
+                            "column": 3,
+                            "offset": 2781
+                          },
+                          "end": {
+                            "line": 92,
+                            "column": 22,
+                            "offset": 2842
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 83,
+                        "column": 3,
+                        "offset": 2670
+                      },
+                      "end": {
+                        "line": 92,
+                        "column": 22,
+                        "offset": 2842
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 82,
+                    "column": 1,
+                    "offset": 2656
+                  },
+                  "end": {
+                    "line": 92,
+                    "column": 22,
+                    "offset": 2842
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 81,
+                "column": 1,
+                "offset": 2422
+              },
+              "end": {
+                "line": 92,
+                "column": 22,
+                "offset": 2842
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 77,
+            "column": 1,
+            "offset": 2383
+          },
+          "end": {
+            "line": 94,
+            "column": 11,
+            "offset": 2854
+          }
+        },
+        "data": {
+          "handler": "html"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/overview/community",
+            "children": [
+              {
+                "type": "text",
+                "value": "Read more",
+                "position": {
+                  "start": {
+                    "line": 96,
+                    "column": 2,
+                    "offset": 2857
+                  },
+                  "end": {
+                    "line": 96,
+                    "column": 11,
+                    "offset": 2866
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 96,
+                "column": 1,
+                "offset": 2856
+              },
+              "end": {
+                "line": 96,
+                "column": 34,
+                "offset": 2889
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 96,
+            "column": 1,
+            "offset": 2856
+          },
+          "end": {
+            "line": 96,
+            "column": 34,
+            "offset": 2889
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "About Base UI",
+            "position": {
+              "start": {
+                "line": 98,
+                "column": 4,
+                "offset": 2894
+              },
+              "end": {
+                "line": 98,
+                "column": 17,
+                "offset": 2907
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 98,
+            "column": 1,
+            "offset": 2891
+          },
+          "end": {
+            "line": 98,
+            "column": 17,
+            "offset": 2907
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "about-base-ui"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "An open-source React component library for building accessible user interfaces.",
+            "position": {
+              "start": {
+                "line": 100,
+                "column": 1,
+                "offset": 2909
+              },
+              "end": {
+                "line": 100,
+                "column": 80,
+                "offset": 2988
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 100,
+            "column": 1,
+            "offset": 2909
+          },
+          "end": {
+            "line": 100,
+            "column": 80,
+            "offset": 2988
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "details",
+        "attributes": [],
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "mdxJsxTextElement",
+                "name": "summary",
+                "attributes": [],
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Outline",
+                    "position": {
+                      "start": {
+                        "line": 104,
+                        "column": 10,
+                        "offset": 3010
+                      },
+                      "end": {
+                        "line": 104,
+                        "column": 17,
+                        "offset": 3017
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 104,
+                    "column": 1,
+                    "offset": 3001
+                  },
+                  "end": {
+                    "line": 104,
+                    "column": 27,
+                    "offset": 3027
+                  }
+                },
+                "data": {
+                  "handler": "html"
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 104,
+                "column": 1,
+                "offset": 3001
+              },
+              "end": {
+                "line": 104,
+                "column": 27,
+                "offset": 3027
+              }
+            }
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "start": null,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keywords: About Base UI, Base UI Team, Headless React Components, Accessible React Library, Open Source UI Components, Base UI Community, Base UI Overview, Unstyled Components, Component Library, Headless UI Library, React UI Toolkit, MUI Team, Radix Alternative",
+                        "position": {
+                          "start": {
+                            "line": 106,
+                            "column": 3,
+                            "offset": 3031
+                          },
+                          "end": {
+                            "line": 106,
+                            "column": 265,
+                            "offset": 3293
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 106,
+                        "column": 3,
+                        "offset": 3031
+                      },
+                      "end": {
+                        "line": 106,
+                        "column": 265,
+                        "offset": 3293
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 106,
+                    "column": 1,
+                    "offset": 3029
+                  },
+                  "end": {
+                    "line": 106,
+                    "column": 265,
+                    "offset": 3293
+                  }
+                }
+              },
+              {
+                "type": "listItem",
+                "spread": false,
+                "checked": null,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Sections:",
+                        "position": {
+                          "start": {
+                            "line": 107,
+                            "column": 3,
+                            "offset": 3296
+                          },
+                          "end": {
+                            "line": 107,
+                            "column": 12,
+                            "offset": 3305
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 107,
+                        "column": 3,
+                        "offset": 3296
+                      },
+                      "end": {
+                        "line": 107,
+                        "column": 12,
+                        "offset": 3305
+                      }
+                    }
+                  },
+                  {
+                    "type": "list",
+                    "ordered": false,
+                    "start": null,
+                    "spread": false,
+                    "children": [
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Features",
+                                "position": {
+                                  "start": {
+                                    "line": 108,
+                                    "column": 5,
+                                    "offset": 3310
+                                  },
+                                  "end": {
+                                    "line": 108,
+                                    "column": 13,
+                                    "offset": 3318
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 108,
+                                "column": 5,
+                                "offset": 3310
+                              },
+                              "end": {
+                                "line": 108,
+                                "column": 13,
+                                "offset": 3318
+                              }
+                            }
+                          },
+                          {
+                            "type": "list",
+                            "ordered": false,
+                            "start": null,
+                            "spread": false,
+                            "children": [
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "Headless",
+                                        "position": {
+                                          "start": {
+                                            "line": 109,
+                                            "column": 7,
+                                            "offset": 3325
+                                          },
+                                          "end": {
+                                            "line": 109,
+                                            "column": 15,
+                                            "offset": 3333
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 109,
+                                        "column": 7,
+                                        "offset": 3325
+                                      },
+                                      "end": {
+                                        "line": 109,
+                                        "column": 15,
+                                        "offset": 3333
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 109,
+                                    "column": 5,
+                                    "offset": 3323
+                                  },
+                                  "end": {
+                                    "line": 109,
+                                    "column": 15,
+                                    "offset": 3333
+                                  }
+                                }
+                              },
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "Accessible",
+                                        "position": {
+                                          "start": {
+                                            "line": 110,
+                                            "column": 7,
+                                            "offset": 3340
+                                          },
+                                          "end": {
+                                            "line": 110,
+                                            "column": 17,
+                                            "offset": 3350
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 110,
+                                        "column": 7,
+                                        "offset": 3340
+                                      },
+                                      "end": {
+                                        "line": 110,
+                                        "column": 17,
+                                        "offset": 3350
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 110,
+                                    "column": 5,
+                                    "offset": 3338
+                                  },
+                                  "end": {
+                                    "line": 110,
+                                    "column": 17,
+                                    "offset": 3350
+                                  }
+                                }
+                              },
+                              {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                  {
+                                    "type": "paragraph",
+                                    "children": [
+                                      {
+                                        "type": "text",
+                                        "value": "Composable",
+                                        "position": {
+                                          "start": {
+                                            "line": 111,
+                                            "column": 7,
+                                            "offset": 3357
+                                          },
+                                          "end": {
+                                            "line": 111,
+                                            "column": 17,
+                                            "offset": 3367
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "position": {
+                                      "start": {
+                                        "line": 111,
+                                        "column": 7,
+                                        "offset": 3357
+                                      },
+                                      "end": {
+                                        "line": 111,
+                                        "column": 17,
+                                        "offset": 3367
+                                      }
+                                    }
+                                  }
+                                ],
+                                "position": {
+                                  "start": {
+                                    "line": 111,
+                                    "column": 5,
+                                    "offset": 3355
+                                  },
+                                  "end": {
+                                    "line": 111,
+                                    "column": 17,
+                                    "offset": 3367
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 109,
+                                "column": 5,
+                                "offset": 3323
+                              },
+                              "end": {
+                                "line": 111,
+                                "column": 17,
+                                "offset": 3367
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 108,
+                            "column": 3,
+                            "offset": 3308
+                          },
+                          "end": {
+                            "line": 111,
+                            "column": 17,
+                            "offset": 3367
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Team",
+                                "position": {
+                                  "start": {
+                                    "line": 112,
+                                    "column": 5,
+                                    "offset": 3372
+                                  },
+                                  "end": {
+                                    "line": 112,
+                                    "column": 9,
+                                    "offset": 3376
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 112,
+                                "column": 5,
+                                "offset": 3372
+                              },
+                              "end": {
+                                "line": 112,
+                                "column": 9,
+                                "offset": 3376
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 112,
+                            "column": 3,
+                            "offset": 3370
+                          },
+                          "end": {
+                            "line": 112,
+                            "column": 9,
+                            "offset": 3376
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Browser support",
+                                "position": {
+                                  "start": {
+                                    "line": 113,
+                                    "column": 5,
+                                    "offset": 3381
+                                  },
+                                  "end": {
+                                    "line": 113,
+                                    "column": 20,
+                                    "offset": 3396
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 113,
+                                "column": 5,
+                                "offset": 3381
+                              },
+                              "end": {
+                                "line": 113,
+                                "column": 20,
+                                "offset": 3396
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 113,
+                            "column": 3,
+                            "offset": 3379
+                          },
+                          "end": {
+                            "line": 113,
+                            "column": 20,
+                            "offset": 3396
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "React versions",
+                                "position": {
+                                  "start": {
+                                    "line": 114,
+                                    "column": 5,
+                                    "offset": 3401
+                                  },
+                                  "end": {
+                                    "line": 114,
+                                    "column": 19,
+                                    "offset": 3415
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 114,
+                                "column": 5,
+                                "offset": 3401
+                              },
+                              "end": {
+                                "line": 114,
+                                "column": 19,
+                                "offset": 3415
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 114,
+                            "column": 3,
+                            "offset": 3399
+                          },
+                          "end": {
+                            "line": 114,
+                            "column": 19,
+                            "offset": 3415
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Bundler support",
+                                "position": {
+                                  "start": {
+                                    "line": 115,
+                                    "column": 5,
+                                    "offset": 3420
+                                  },
+                                  "end": {
+                                    "line": 115,
+                                    "column": 20,
+                                    "offset": 3435
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 115,
+                                "column": 5,
+                                "offset": 3420
+                              },
+                              "end": {
+                                "line": 115,
+                                "column": 20,
+                                "offset": 3435
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 115,
+                            "column": 3,
+                            "offset": 3418
+                          },
+                          "end": {
+                            "line": 115,
+                            "column": 20,
+                            "offset": 3435
+                          }
+                        }
+                      },
+                      {
+                        "type": "listItem",
+                        "spread": false,
+                        "checked": null,
+                        "children": [
+                          {
+                            "type": "paragraph",
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Community",
+                                "position": {
+                                  "start": {
+                                    "line": 116,
+                                    "column": 5,
+                                    "offset": 3440
+                                  },
+                                  "end": {
+                                    "line": 116,
+                                    "column": 14,
+                                    "offset": 3449
+                                  }
+                                }
+                              }
+                            ],
+                            "position": {
+                              "start": {
+                                "line": 116,
+                                "column": 5,
+                                "offset": 3440
+                              },
+                              "end": {
+                                "line": 116,
+                                "column": 14,
+                                "offset": 3449
+                              }
+                            }
+                          }
+                        ],
+                        "position": {
+                          "start": {
+                            "line": 116,
+                            "column": 3,
+                            "offset": 3438
+                          },
+                          "end": {
+                            "line": 116,
+                            "column": 14,
+                            "offset": 3449
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 108,
+                        "column": 3,
+                        "offset": 3308
+                      },
+                      "end": {
+                        "line": 116,
+                        "column": 14,
+                        "offset": 3449
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 107,
+                    "column": 1,
+                    "offset": 3294
+                  },
+                  "end": {
+                    "line": 116,
+                    "column": 14,
+                    "offset": 3449
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 106,
+                "column": 1,
+                "offset": 3029
+              },
+              "end": {
+                "line": 116,
+                "column": 14,
+                "offset": 3449
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 102,
+            "column": 1,
+            "offset": 2990
+          },
+          "end": {
+            "line": 118,
+            "column": 11,
+            "offset": 3461
+          }
+        },
+        "data": {
+          "handler": "html"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/overview/about",
+            "children": [
+              {
+                "type": "text",
+                "value": "Read more",
+                "position": {
+                  "start": {
+                    "line": 120,
+                    "column": 2,
+                    "offset": 3464
+                  },
+                  "end": {
+                    "line": 120,
+                    "column": 11,
+                    "offset": 3473
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 120,
+                "column": 1,
+                "offset": 3463
+              },
+              "end": {
+                "line": 120,
+                "column": 30,
+                "offset": 3492
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 120,
+            "column": 1,
+            "offset": 3463
+          },
+          "end": {
+            "line": 120,
+            "column": 30,
+            "offset": 3492
+          }
+        }
+      },
+      {
+        "type": "definition",
+        "identifier": "//",
+        "label": "//",
+        "title": "The above section is autogenerated, but the remainder of the file can be modified.",
+        "url": "#",
+        "position": {
+          "start": {
+            "line": 122,
+            "column": 1,
+            "offset": 3494
+          },
+          "end": {
+            "line": 122,
+            "column": 93,
+            "offset": 3586
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata =\n  /** @type {import('@mui/internal-docs-infra/createSitemap/types').NextMetadata} */ ({\n    robots: {\n      index: false,\n    },\n    other: {\n      audience: 'private',\n    },\n  });",
+        "position": {
+          "start": {
+            "line": 124,
+            "column": 1,
+            "offset": 3588
+          },
+          "end": {
+            "line": 132,
+            "column": 6,
+            "offset": 3793
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 133,
+        "column": 1,
+        "offset": 3794
+      }
+    }
+  }
+}

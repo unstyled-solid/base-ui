@@ -1,0 +1,386 @@
+{
+  "family": "combobox",
+  "sourceCommit": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "sourceRoot": "upstream/base-ui/packages/react/src/combobox",
+  "targetRoot": "packages/solid/src/combobox",
+  "completion": "incomplete",
+  "batchSweep": {
+    "verification":"Verified upstream HEAD at pinned commit; no runtime/type/browser gates run this batch. Prior mapping/counts below are historical subset accounting. Parent owns qualification.",
+    "cases":[
+      {"sourceFile":"packages/react/src/combobox/collection/ComboboxCollection.test.tsx","sourceLine":9,"title":"renders filtered items","parameters":{"items":["alpha","beta","alpine"],"defaultOpen":true,"query":"empty"},"sourcePredicate":"unconditional","lane":"jsdom and browser","sequence":["mount Root/Input/Portal/Positioner/Popup/List/Collection"],"assertions":["item-alpha present","item-beta present","item-alpine present"],"targetFile":"packages/solid/src/combobox/collection/ComboboxCollection.test.tsx","targetTitle":"renders all source collection items in an initially empty query","disposition":"matched","evidence":"Read complete source and existing target bodies; added exact three presence assertions in actual Combobox composition. Source title does not imply a typing/filtering action: body only checks empty initial query."},
+      {"sourceFile":"packages/react/src/combobox/collection/ComboboxCollection.test.tsx","sourceLine":36,"title":"renders nothing when a nested group does not provide items","parameters":{"defaultOpen":true,"rootItems":"omitted","groupItems":"omitted"},"sourcePredicate":"unconditional","lane":"jsdom and browser","sequence":["mount Root/Portal/Positioner/Popup/List/Group/Collection"],"assertions":["group empty DOM element"],"targetFile":"packages/solid/src/combobox/collection/ComboboxCollection.test.tsx","targetTitle":"renders nothing when a nested group does not provide items","disposition":"matched","evidence":"Added source-shaped no-Input/no-items fixture and exact empty-group assertion; native row/attribution tests preserved separately."},
+      {"sourceFile":"packages/react/src/combobox/root/ComboboxRoot.test.tsx","sourceLine":287,"title":"ignores an opt-out on a canceled close","parameters":{"defaultOpen":true,"cancel":[true,false]},"sourcePredicate":"unconditional","lane":"jsdom and browser","sequence":["click item; close opt-out plus cancel","inspect expanded and mounted list","disable cancellation","click item again"],"assertions":["expanded=true","list remains","list finally absent"],"targetFile":"packages/solid/src/combobox/root/ComboboxRoot.test.tsx","targetTitle":"ignores an opt-out on a canceled close","disposition":"matched","evidence":"Added missing intermediate list presence before cancel=false; supersedes additionalManualFiles root line287 partial row."},
+      {"sourceFile":"packages/react/src/combobox/root/ComboboxRoot.test.tsx","sourceLine":367,"title":"ignores `unmount` while the popup is open","parameters":{"defaultOpen":true},"sourcePredicate":"unconditional","lane":"jsdom and browser","sequence":["mount open","stale unmount action"],"assertions":["same list host","no false completion","expanded=true"],"targetFile":"packages/solid/src/combobox/root/ComboboxReview.test.tsx","targetTitle":"ignores an unmount action while open and does not repeat close completion","disposition":"matched","evidence":"Added expanded=true alongside retained identity and no false completion. Target subsequent close/unmount/unmount segment remains extra; does not replace separately committed source close at line476."},
+      {"sourceFile":"packages/react/src/combobox/root/ComboboxRoot.test.tsx","sourceLine":466,"title":"does not call `onOpenChange` when the `close` action is called while closed","parameters":{"initialOpen":false},"sourcePredicate":"unconditional","lane":"jsdom and browser","sequence":["mount closed","close action"],"assertions":["no open callback","expanded=false"],"targetFile":"packages/solid/src/combobox/root/ComboboxReview.test.tsx","targetTitle":"opening an already open input and closing an already closed root are no-op callbacks","disposition":"matched","evidence":"Added exact closed expanded attribute immediately after retained callback no-op assertion; later double input click retained."}
+    ],
+    "sourceBodiesNewlyRead":["packages/react/src/combobox/collection/ComboboxCollection.test.tsx (all 57 lines)","packages/react/src/combobox/empty/ComboboxEmpty.test.tsx (all 214 lines)"],
+    "emptyBodyGaps": {
+      "lane":"jsdom and browser","sourcePredicate":"unconditional; a11y block uses fake timers","sourceFile":"packages/react/src/combobox/empty/ComboboxEmpty.test.tsx",
+      "cases":[
+        {"line":28,"title":"renders when there are no filtered items","parameters":{"items":[]},"sequence":["mount defaultOpen Input and popup Empty/List"],"assertions":["No results text","role=status"],"disposition":"missing","targetTitles":[],"evidence":"Existing combined Status/Empty timer fixture omits popup composition and Empty status-role assertion."},
+        {"line":53,"title":"does not render when there are items","parameters":{"items":["a"]},"sequence":["mount"],"assertions":["No results text absent"],"disposition":"not-reviewed","targetTitles":[],"evidence":"No body-level target mapping completed."},
+        {"line":77,"title":"renders when the search query matches no items","parameters":{"items":["a","b","c"],"defaultInputValue":"d"},"sequence":["mount"],"assertions":["No results text"],"disposition":"not-reviewed","targetTitles":[],"evidence":"No body-level target mapping completed."},
+        {"line":101,"title":"does not render when the search query matches an item","parameters":{"items":["a","b","c"],"defaultInputValue":"c"},"sequence":["mount"],"assertions":["No results text absent"],"disposition":"not-reviewed","targetTitles":[],"evidence":"No body-level target mapping completed."},
+        {"line":130,"title":"removes the initial text mutation after the reset delay","parameters":{"items":[],"delay":"INITIAL_LIVE_REGION_TEXT_MUTATION_RESET_DELAY"},"sequence":["mount","advance exact delay"],"assertions":["status identifies Empty","No results with U+2060 initially","No results after delay"],"disposition":"partial","targetTitles":["ComboboxReview.test.tsx > Status and Empty mutate initial live-region text then restore it without replacing hosts"],"evidence":"Exact initial/post-delay text retained but target omits Empty role identity and defaultOpen popup fixture."},
+        {"line":153,"title":"updates the live region immediately when the empty content appears after mount","parameters":{"items":[["a"],[]]},"sequence":["mount nonempty items","replace items with empty"],"assertions":["Empty text initially empty","status host identity","No results immediately after update"],"disposition":"missing","targetTitles":[],"evidence":"Combined timer fixture starts empty and has no dynamic items update."},
+        {"line":188,"title":"preserves a custom render prop on the visible element","parameters":{"host":"p","items":[]},"sequence":["mount custom Empty","advance exact reset delay"],"assertions":["P tag","status host identity","initial mutation then exact restored text"],"disposition":"missing","targetTitles":[],"evidence":"Existing timer fixture uses default host; conformance style/ref tests do not assert temporal text."}
+      ],
+      "helper":{"sourceLine":10,"sourceOptions":{"refInstanceof":"HTMLDivElement","only":["propsSpread","refForwarding","renderProp","className"],"skip":[],"customTag":"div","button":false,"wrappingAllowed":true,"wrapper":"defaultOpen Root/Portal/Positioner/Popup plus List"},"target":"ComboboxConformance.test.tsx > Empty > Base UI component API (Solid 2)","targetOptions":{"refInstanceof":"HTMLDivElement","initialProps":{},"customTag":"div","wrapper":"closed Root items=[] without popup/list"},"expandedCases":15,"caseReference":"test/source-parity-manual/conformance.json#/cases","disposition":"partial","evidence":"Read shared source helper and four runtime bodies plus target helper: six prop/style, one ref, seven render/ref/class, one class-string. Exact host assertions correspond but wrapper/open policy differs, so zero family helper credit. Extra native handler/live identity/disposal checks target-only."}
+    },
+    "accounting":"Collection's two direct registrations now fully compared/matched; three previously partial root rows strengthened/matched. Empty seven direct bodies and 15 helper parameters inventoried, still not completely mapped. No whole-family expanded count or completeness claim. Preserve existing native Collection row/attribution tests as target-only."
+  },
+  "method": "Direct manual reading of the source bodies and target bodies named below. No title-based or generated matching. Matched means assertion coverage by inspection, not a runtime pass.",
+  "verification": {
+    "upstreamHeadVerified": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "runtimeSuitesRun": false,
+    "reason": "User requires all edits before the final coordinated jsdom/browser run.",
+    "solid2DocsConsulted": ["https://v2.solidjs.com/concepts/reactivity", "https://v2.solidjs.com/migration/from-react"],
+    "newReactivePrimitives": "none; utility assertions are synchronous; the iOS temporal assertion uses the existing harness advanceTimers adapter"
+  },
+  "accounting": {
+    "inventoriedRuntimeSourceFiles": 38,
+    "inventoriedTypeSourceFiles": 1,
+    "fullyComparedDirectRegistrationFiles": 13,
+    "comparedDirectSourceRegistrationsExpanded": 27,
+    "matchedByInspection": 15,
+    "missing": 12,
+    "partial": 0,
+    "unsupported": 0,
+    "newTargetRegistrations": 10,
+    "strengthenedExistingTargetRegistrations": 1,
+    "remainingRuntimeSourceFiles": 25,
+    "remainingExpandedRegistrationCount": null,
+    "generatedConformanceCredit": 0,
+    "note": "These are exact counts only for the reviewed direct subset. The family-wide expanded total is unknown. Conformance invocations, the large root/input suites, and remaining source files are not certified. Missing context-message coverage is a production adaptation concern, not an unsupported-lane exemption."
+  },
+  "defaults": {
+    "caseParameters": {},
+    "sourcePredicate": "unconditional unless a case explicitly records otherwise",
+    "targetPathConvention": "Paths in targetFile are repository-relative; paths in sourceFile are upstream repository-relative.",
+    "matchedExecutionStatus": "pending final qualification"
+  },
+  "cases": [
+    {
+      "sourceFile": "packages/react/src/combobox/input/ComboboxInput.android.test.tsx", "sourceLine": 23,
+      "title": "propagates changes during Android composition", "parameters": {"android": true}, "lane": "platform-specific/android/jsdom-and-browser",
+      "sourcePredicate": "Unconditional; vi.mock sets platform.os.android=true, retaining other platform flags.",
+      "sequence": ["mount Root with onInputValueChange and Input", "compositionStart", "React change to a during composition"],
+      "assertions": ["onInputValueChange called with a and event details"],
+      "targetFile": "packages/solid/src/combobox/input/ComboboxInput.android.test.tsx", "targetTitles": ["Combobox.Input Android (canonical platform suite) > propagates changes during Android composition"],
+      "disposition": "matched", "evidence": "Lines 5-15 preserve the platform mock and compositionStart-before-edit ordering; native input replaces React change, with insertCompositionText. The callback is asserted with a and reason=input-change, stronger than the source's anything details matcher. No real-device claim."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/input/ComboboxInput.gecko.test.tsx", "sourceLine": 24,
+      "title": "uses Gecko RTL caret positions for Home and End", "parameters": {"gecko": true, "direction": "rtl", "defaultInputValue": "apple"}, "lane": "platform-specific/gecko/jsdom-and-browser",
+      "sourcePredicate": "Unconditional; vi.mock forces platform.engine.gecko=true.",
+      "sequence": ["mount in RTL provider", "focus input", "Home", "End"],
+      "assertions": ["after Home selectionStart=input.value.length", "after End selectionStart=0"],
+      "targetFile": "packages/solid/src/combobox/input/ComboboxInput.gecko.test.tsx", "targetTitles": ["Combobox.Input Gecko RTL (canonical platform suite) > uses Gecko RTL caret positions for Home and End"],
+      "disposition": "matched", "evidence": "Lines 6-15 force the same engine branch; native DirectionContext accessor supplies rtl. Both exact caret assertions occur in source order. This tests the mocked branch, not native Firefox qualification."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/status/ComboboxStatus.iOS.test.tsx", "sourceLine": 25,
+      "title": "skips the initial text mutation", "parameters": {"ios": true, "apple": true, "text": "Searching…"}, "lane": "platform-specific/ios/jsdom-and-browser",
+      "sourcePredicate": "Unconditional; platform.os.ios and apple forced true; fake timers.",
+      "sequence": ["mount status", "inspect initial text and role host", "advance INITIAL_LIVE_REGION_TEXT_MUTATION_RESET_DELAY", "inspect text again"],
+      "assertions": ["role=status identifies the status host", "initial text exactly Searching… without U+2060", "after reset delay text remains Searching…"],
+      "targetFile": "packages/solid/src/combobox/status/ComboboxStatus.iOS.test.tsx", "targetTitles": ["Combobox.Status iOS (canonical platform suite) > skips the initial text mutation and preserves the polite region"],
+      "disposition": "matched", "evidence": "Strengthened existing registration with fake timers, the same exported delay, post-delay exact text, and same-host identity. Target additionally asserts polite/atomic. Target mounts Status directly; inspected ComboboxStatus.tsx has no Root context dependency, so popup composition is not needed to exercise this platform text-mutation predicate. Unmount precedes restoration of real timers."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/utils/index.test.ts", "sourceLine": 13,
+      "title": "getComboboxPopupId > derives an id only when the root has an id", "lane": "jsdom-and-browser/pure-utility",
+      "parameters": {"ids": ["fruit", null, "undefined"]},
+      "sequence": ["call helper for nonnull id, null, undefined"], "assertions": ["fruit -> fruit-popup", "null -> undefined", "undefined -> undefined"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox filter utility source cases > uses one popup id convention and preserves missing ids"],
+      "disposition": "matched", "evidence": "Existing target asserts food -> food-popup and both nullish -> undefined branches. Only the arbitrary nonnull ID token differs."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/utils/index.test.ts", "sourceLine": 21,
+      "title": "createCollatorItemFilter > rejects nullish items and filters primitives and projected objects", "lane": "jsdom-and-browser/pure-utility", "parameters": {"locale": "en"},
+      "sequence": ["create primitive and projected-name filters", "call null/undefined/Apple/Banana"],
+      "assertions": ["null/app=false", "undefined/app=false", "Apple/app=true", "{name:Banana}/nan=true"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox filter utility source cases > rejects both nullish items and filters primitives and projected objects"],
+      "disposition": "matched", "evidence": "Added exact four source calls and boolean assertions with en collator. The old accent test did not cover undefined or projected objects."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/utils/index.test.ts", "sourceLine": 33,
+      "title": "createSingleSelectionCollatorFilter > shows all items for an empty query and rejects nullish items", "lane": "jsdom-and-browser/pure-utility", "parameters": {"locale": "en"},
+      "sequence": ["create filter without selection", "null/app", "undefined/app", "Apple/empty"],
+      "assertions": ["false", "false", "true"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox filter utility source cases > single-selection filtering rejects both nullish items before accepting an empty query"],
+      "disposition": "matched", "evidence": "Added all three exact source assertions. Existing full-selected-label test covered empty query but not either nullish input branch in the single-selection helper."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/utils/index.test.ts", "sourceLine": 41,
+      "title": "createSingleSelectionCollatorFilter > shows all items when the query exactly matches the selected label", "lane": "jsdom-and-browser/pure-utility", "parameters": {"locale": "en", "selected": "Apple", "query": "apple", "item": "Banana"},
+      "sequence": ["create filter with selected label", "call nonmatching current item with case-insensitive full selected label"], "assertions": ["true"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox filter utility source cases > shows all items only for a full single-selection query match"],
+      "disposition": "matched", "evidence": "Existing target selection Banana, current item Apple, query BANANA asserts true; the arbitrary fruit roles are exchanged and case direction reversed, retaining the full-length case-insensitive selected-label bypass. Also asserts partial query does not bypass."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/utils/index.test.ts", "sourceLine": 47,
+      "title": "createSingleSelectionCollatorFilter > otherwise filters the current item", "lane": "jsdom-and-browser/pure-utility", "parameters": {"locale": "en", "selected": "Apple", "item": "Banana"},
+      "sequence": ["call with partial selected label app", "call with current-item substring nan"], "assertions": ["app=false", "nan=true"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox filter utility source cases > single-selection filtering otherwise matches the current item"],
+      "disposition": "matched", "evidence": "Added both exact calls/assertions. Previous bypass test lacked the positive current-item match alongside a partial selected label."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/utils/useFilter.test.tsx", "sourceLine": 9,
+      "title": "uses default options when called without arguments", "lane": "jsdom-and-browser/pure-utility",
+      "sequence": ["call useComboboxFilter()", "contains Apple/app"], "assertions": ["rendered boolean true"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox filter utility source cases > uses default filter options when called without arguments"],
+      "disposition": "matched", "evidence": "Added no-argument helper call and exact boolean assertion. Inspected target useFilter.ts: stateless invocation-time option reads, no provider/render lifecycle requirement. Pure return-value assertion replaces displaying String(true)."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/utils/useFilter.test.tsx", "sourceLine": 20,
+      "title": "matches the start and end of an item label", "lane": "jsdom-and-browser/pure-utility", "parameters": {"locale": "en"},
+      "sequence": ["create en filter", "evaluate four startsWith cases", "evaluate four endsWith cases", "evaluate object label projection"],
+      "assertions": ["Éclair/ec=true", "Éclair/clair=false", "Éclair/empty=true", "Tea/teapot=false", "Crème brûlée/BRULEE=true", "Crème brûlée/crème=false", "Crème brûlée/empty=true", "Tea/iced tea=false", "{label:Banana}/ban projected startsWith=true"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox filter utility source cases > matches the start and end of labels with all source boundary cases"],
+      "disposition": "matched", "evidence": "Added all nine exact source method/input/boolean combinations in source order. Pure boolean assertions replace span text assertions; no weakened accent, case, empty, length, or projection coverage."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/utils/useFilter.test.tsx", "sourceLine": 53,
+      "title": "filters selected and unselected items in single and multiple modes", "lane": "jsdom-and-browser/pure-utility", "parameters": {"locale": "en", "value": "Apple", "multipleTransition": [false, true]},
+      "sequence": ["single-mode contains Banana/apple and Banana/nan", "change multiple to true", "repeat both calls"],
+      "assertions": ["single selected-match=true", "single current-item-match=true", "multiple selected-match=false", "multiple current-item-match=true"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox filter utility source cases > filters selected and unselected items in single and multiple modes"],
+      "disposition": "matched", "evidence": "Added all four exact assertions using live invocation-time options on one filter object. Existing live-options test did not assert that the current-item positive substring survives the multiple transition. No effect or React rerender emulation."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/utils/parts.test.ts", "sourceLine": 6,
+      "title": "returns no index after removing the only chip", "lane": "jsdom-and-browser/pure-utility", "parameters": {"index": 0, "count": 1},
+      "sequence": ["getIndexAfterChipRemoval(0,1)"], "assertions": ["undefined"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox source part utility regressions > returns no index after removing the only chip"], "disposition": "matched", "evidence": "Added exact helper/input/result assertion; integration chip-deletion tests do not substitute for this edge case."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/utils/parts.test.ts", "sourceLine": 10,
+      "title": "does nothing when the highlighted item is not rendered", "lane": "jsdom-and-browser/DOM-utility", "parameters": {"index": 1, "list": [], "key": "Enter"},
+      "sequence": ["selectionEventRef starts null", "clickHighlightedItem with unrendered index"], "assertions": ["selectionEventRef remains null"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox source part utility regressions > does nothing when the highlighted item is not rendered"], "disposition": "matched", "evidence": "Added exact empty-list direct helper characterization, including originating KeyboardEvent and null retained state. Source and target use narrow synthetic store fixtures."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/utils/parts.test.ts", "sourceLine": 24,
+      "title": "clicks the rendered highlighted item with the originating event", "lane": "jsdom-and-browser/DOM-utility", "parameters": {"index": 0, "key": "Enter"},
+      "sequence": ["create click spy and null selectionEventRef", "capture ref during click", "call clickHighlightedItem", "inspect cleared ref after call"],
+      "assertions": ["click called once", "event at click is originating event by identity", "ref cleared to null after click"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox source part utility regressions > clicks the rendered highlighted item with the originating event"], "disposition": "matched", "evidence": "Added all three exact assertions, including the load-bearing transient event identity inside the callback, not just after the call."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/utils/handleInputPress.test.ts", "sourceLine": 7,
+      "title": "handles an event whose target is not an Element", "lane": "jsdom-and-browser/DOM-utility", "parameters": {"target": "Text(padding)", "currentTarget": "div", "disabled": false, "openOnInputClick": false},
+      "sequence": ["create non-Element target event", "handleInputPress(event,store,false)"], "assertions": ["preventDefault called once", "focus called once"],
+      "targetFile": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "targetTitles": ["Combobox source part utility regressions > handles an input-area press whose target is not an Element"], "disposition": "matched", "evidence": "Added exact two callback-count assertions. Native MouseEvent target/currentTarget properties replace React nativeEvent wrapper; state.inputElement supplies the focus host instead of source context.inputRef. This is the actual target helper read path verified in handleInputPress.ts."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/ComboboxRootContext.test.tsx", "sourceLine": 31,
+      "title": "throws when its provider is missing: Base UI: ComboboxRootContext is missing. Combobox parts must be placed within <Combobox.Root>.",
+      "parameters": {"useContext": "useComboboxRootContext", "caseIndex": 0}, "lane": "jsdom-and-browser/context", "sequence": ["render consumer outside provider"],
+      "assertions": ["render rejects with exact Base UI root-context message"], "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "All 13 existing family target test files inspected; no equivalent rejection assertion. Target ComboboxRootContext.tsx:9,14 delegates to defaultless Solid useContext without the required Base UI error text. Source console.error suppression is React test machinery and must not be copied."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/ComboboxRootContext.test.tsx", "sourceLine": 31,
+      "title": "throws when its provider is missing: Base UI: ComboboxFloatingContext is missing. Combobox parts must be placed within <Combobox.Root>.",
+      "parameters": {"useContext": "useComboboxFloatingContext", "caseIndex": 1}, "lane": "jsdom-and-browser/context", "sequence": ["render consumer outside provider"],
+      "assertions": ["render rejects with exact Base UI floating-context message"], "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No target rejection assertion; target root context lines 10,15 delegate directly to defaultless Solid context. Framework failure does not establish the exact descriptive source message."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/root/ComboboxRootContext.test.tsx", "sourceLine": 31,
+      "title": "throws when its provider is missing: Base UI: ComboboxItemsContext is missing. Combobox parts must be placed within <Combobox.Root>.",
+      "parameters": {"useContext": "useComboboxDerivedItemsContext", "caseIndex": 2}, "lane": "jsdom-and-browser/context", "sequence": ["render consumer outside provider"],
+      "assertions": ["render rejects with exact Base UI ItemsContext message, despite hook name DerivedItems"], "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No target rejection assertion; target root context lines 11,16 delegate directly to defaultless Solid context. Preserved the source's ItemsContext wording rather than normalizing its name."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/item/ComboboxItemContext.test.tsx", "sourceLine": 8,
+      "title": "throws a descriptive error when used outside <Combobox.Item>", "lane": "jsdom-and-browser/context", "sequence": ["render hook consumer outside Item"],
+      "assertions": ["rejects: Base UI: ComboboxItemContext is missing. ComboboxItem parts must be placed within <Combobox.Item>."], "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No target error assertion; target item/ComboboxItemContext.ts directly delegates to a defaultless Solid context."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/group/ComboboxGroupContext.test.tsx", "sourceLine": 8,
+      "title": "throws a descriptive error when used outside <Combobox.Group>", "lane": "jsdom-and-browser/context", "sequence": ["render hook consumer outside Group"],
+      "assertions": ["rejects: Base UI: ComboboxGroupContext is missing. ComboboxGroup parts must be placed within <Combobox.Group>."], "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No target error assertion; target group/ComboboxGroupContext.ts directly delegates to a defaultless Solid context."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/portal/ComboboxPortalContext.test.tsx", "sourceLine": 8,
+      "title": "throws a descriptive error when used outside <Combobox.Portal>", "lane": "jsdom-and-browser/context", "sequence": ["render hook consumer outside Portal"],
+      "assertions": ["rejects: Base UI: <Combobox.Portal> is missing."], "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No target error assertion. Target portal/ComboboxPortalContext.tsx installs a false accessor default and does not reject missing provider at all. Production adaptation concern retained; not classified as framework-only unsupported."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/positioner/ComboboxPositionerContext.test.tsx", "sourceLine": 8,
+      "title": "throws a descriptive error when a required consumer is outside the positioner", "lane": "jsdom-and-browser/context", "sequence": ["render required hook consumer outside Positioner"],
+      "assertions": ["rejects: Base UI: <Combobox.Popup> and <Combobox.Arrow> must be used within the <Combobox.Positioner> component"], "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No target error assertion. Target positioner/ComboboxPositionerContext.tsx:8 throws a different message: Base UI: ComboboxPositionerContext is missing. Place this part inside Combobox.Positioner. Exact source rejection text remains unmapped."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/store.test.tsx", "sourceLine": 72,
+      "title": "publishes an inline transition in a single store transaction", "lane": "jsdom-and-browser/store-characterization", "parameters": {"selectionMode": "none", "inlineTransition": [false, true], "portalKeepMounted": true, "popupInput": true},
+      "sourcePredicate": "Unconditional; BASE_UI_ANIMATIONS_DISABLED=true in beforeEach.",
+      "sequence": ["mount Autocomplete with closed kept popup input", "subscribe directly to store", "set inline true", "unsubscribe", "deduplicate consecutive inline/ownership projections"],
+      "assertions": ["no inline=true,ownership=false snapshot", "exactly one changed projection, also detecting reverse-order split"],
+      "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No target transition-observation assertion. Native store.ts:200,203 derives ownership and inline directly from props; React subscribe API is intentionally absent. A native tracked observer must retain BOTH anti-split invariants; steady-state DOM/name checks alone cannot substitute."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/store.test.tsx", "sourceLine": 115,
+      "title": "settles inputOwnsFormValue through the useStore path when inline is set", "lane": "jsdom-and-browser/store-characterization", "parameters": {"selectionMode": "none", "inlineTransition": [false, true], "portalKeepMounted": true},
+      "sourcePredicate": "Unconditional; animations disabled.",
+      "sequence": ["mount memoized subscriber reading inline and ownership", "clear observations", "set inline true"], "assertions": ["last observed projection true:true"],
+      "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No target native subscription convergence test. React memo/useStore must become owned tracked Solid reads; this steady-state observation is separate from the previous direct transaction assertion."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/store.test.tsx", "sourceLine": 145,
+      "title": "exposes real commands to a descendant ref callback on the first commit", "lane": "jsdom-and-browser/store-characterization", "parameters": {"key": "ArrowDown", "items": ["alpha", "beta"]},
+      "sourcePredicate": "Unconditional; animations disabled.",
+      "sequence": ["first nonnull trigger ref synchronously dispatches bubbling ArrowDown once", "finish initial mount"], "assertions": ["ref dispatch occurred", "open callback called", "first callback open=true"],
+      "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "Existing target imperative/user-event tests invoke commands after mount and cannot reach the first-ref window. Native ref callback remains ownerless; any future adapter must allocate no reactive primitive inside it."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/store.test.tsx", "sourceLine": 188,
+      "title": "gives form value ownership to the hidden input when the input is inside the popup", "lane": "jsdom-and-browser/store-characterization", "parameters": {"name": "search", "selectionMode": "none", "inline": false, "portalKeepMounted": true},
+      "sourcePredicate": "Unconditional; source StrictMode ref replay and double render; animations disabled.",
+      "sequence": ["mount kept popup input", "inspect store and all named controls", "remove popup input", "inspect one named control", "remount popup input", "repeat store and two-sided ownership assertions"],
+      "assertions": ["inputInsidePopup=true", "inputOwnsFormValue=false", "popup input lacks name", "exactly one search control", "named control aria-hidden=true", "after remove still one named control", "after remount ownership false, popup nameless, exactly one hidden named control"],
+      "targetFile": null, "targetTitles": [], "disposition": "missing", "evidence": "No equivalent target remove/remount ownership assertions. Existing hidden autofill, selection serialization and server none-mode tests do not establish this two-sided popup ownership invariant. Native live renderProps mount replacement is required; React StrictMode replay is not a Solid mechanism."
+    },
+    {
+      "sourceFile": "packages/react/src/combobox/store.test.tsx", "sourceLine": 220,
+      "title": "keeps form value ownership across hydration", "lane": "SSR-and-hydration", "parameters": {"selectionMode": "none", "name": "search", "inputOutsidePopup": true},
+      "sourcePredicate": "Unconditional; animations disabled.",
+      "sequence": ["server render outside input", "assert role and sole named host", "hydrate", "repeat role and sole named host identity"],
+      "assertions": ["role=combobox before and after hydrate", "exactly one search control before and after", "named control is visible input before and after"],
+      "targetFile": "packages/solid/src/combobox/root/ComboboxRoot.ssr.test.tsx", "targetTitles": ["Combobox server external windows > none mode gives the visible server input sole form-name ownership"],
+      "disposition": "missing", "evidence": "Candidate target only checks server HTML name count, value=query and aria-autocomplete=list. It does not hydrate, assert original DOM host identity, or repeat ownership after hydration, so earns no case parity credit. Hydration must use separately compiled server/client evidence, not jsdom render masquerading as SSR."
+    }
+  ],
+  "remainingRuntimeInventory": [
+    {"file": "arrow/ComboboxArrow.test.tsx", "disposition": "not-reviewed", "note": "Source body read; only generated conformance invocation; options/wrapper expansion mapping unfinished."},
+    {"file": "backdrop/ComboboxBackdrop.test.tsx", "disposition": "not-reviewed", "note": "Source body read; only generated conformance invocation; Portal wrapper differs from target direct Root and needs compatibility verification."},
+    {"file": "chip/ComboboxChip.test.tsx", "disposition": "not-reviewed", "note": "All 539 source lines read; direct mappings and helper expansion unfinished. Do not infer chip keyboard/disabled/readOnly coverage from existing integration titles."},
+    {"file": "chip-remove/ComboboxChipRemove.test.tsx", "disposition": "not-reviewed", "note": "All 537 source lines read; includes expanded disabled/readOnly non-native host cases; mapping unfinished."},
+    {"file": "chips/ComboboxChips.test.tsx", "disposition": "not-reviewed", "note": "All 310 source lines read; focus/prevention/popup composition assertions need individual mapping."},
+    {"file": "clear/ComboboxClear.test.tsx", "disposition": "not-reviewed"},
+    {"file": "collection/ComboboxCollection.test.tsx", "disposition": "not-reviewed"},
+    {"file": "empty/ComboboxEmpty.test.tsx", "disposition": "not-reviewed"},
+    {"file": "group-label/ComboboxGroupLabel.test.tsx", "disposition": "not-reviewed"},
+    {"file": "group/ComboboxGroup.test.tsx", "disposition": "not-reviewed"},
+    {"file": "icon/ComboboxIcon.test.tsx", "disposition": "not-reviewed"},
+    {"file": "input-group/ComboboxInputGroup.test.tsx", "disposition": "not-reviewed"},
+    {"file": "input/ComboboxInput.test.tsx", "disposition": "not-reviewed", "note": "1074 source lines, not compared; Android and Gecko suites are separate reviewed records, not proxies for this suite."},
+    {"file": "item-indicator/ComboboxItemIndicator.test.tsx", "disposition": "not-reviewed"},
+    {"file": "item/ComboboxItem.test.tsx", "disposition": "not-reviewed"},
+    {"file": "items/createItems.test.tsx", "disposition": "not-reviewed"},
+    {"file": "label/ComboboxLabel.test.tsx", "disposition": "not-reviewed"},
+    {"file": "list/ComboboxList.test.tsx", "disposition": "not-reviewed"},
+    {"file": "popup/ComboboxPopup.test.tsx", "disposition": "not-reviewed"},
+    {"file": "portal/ComboboxPortal.test.tsx", "disposition": "not-reviewed"},
+    {"file": "positioner/ComboboxPositioner.test.tsx", "disposition": "not-reviewed"},
+    {"file": "root/ComboboxRoot.test.tsx", "disposition": "not-reviewed", "note": "14533 source lines, not compared; embedded browser predicates and helper-generated cases need expansion. Existing sourceCase metadata does not establish correspondence."},
+    {"file": "status/ComboboxStatus.test.tsx", "disposition": "not-reviewed", "note": "All 124 source lines read; direct delayed text reset partly overlaps ComboboxReview but mount-update/custom-host/early-unmount and conformance mappings unfinished."},
+    {"file": "trigger/ComboboxTrigger.test.tsx", "disposition": "not-reviewed"},
+    {"file": "value/ComboboxValue.test.tsx", "disposition": "not-reviewed"}
+  ],
+  "typeInventory": [
+    {
+      "sourceFile": "packages/react/src/combobox/root/ComboboxRoot.spec.tsx", "lane": "compile-time/types", "disposition": "not-reviewed",
+      "note": "All 627 source lines read, target type-fixture mapping unfinished. No runtime registration count assigned. Covers value/defaultValue-driven inference; single nullability; multiple scalar/array distinctions, readonly tuples, dynamic multiple; serializers/comparer domains; reason-specific event narrowing; mergeProps generics; pinned Item=Value filteredItems constraint; createItems required projections, primitive restrictions, mixed group rejection, possibly group-shaped items properties, any/index-signature exceptions, unloaded data, collection API/variance, source-vs-derived domains and generic wrappers. No type pass claimed."
+    }
+  ],
+  "browserInventory": {
+    "disposition": "not-reviewed",
+    "note": "Existing browserCase registrations in ComboboxRoot.test.tsx and ComboboxReview.test.tsx retained. Root/input/popup/positioner source browser predicates not yet exhaustively compared; no browser cases reclassified into jsdom and no new skip introduced."
+  },
+  "sharedHelpers": {
+    "conformanceLedger": "test/source-parity-manual/conformance.json",
+    "disposition": "not-reviewed",
+    "note": "Read shared ledger but did not verify all combobox invocation options and upstream helper bodies. No generated conformance count or family credit granted. Source helper expansions remain mandatory."
+  },
+  "targetOnly": [
+    {"file": "packages/solid/src/combobox/ComboboxConformance.test.tsx", "scope": ["Row conformance", "Separator conformance", "additional native live-prop/host/disposal conformance checks"], "note": "Preserved; no direct corresponding upstream row/separator suite inventoried. Other conformance invocations pending manual source option/helper mapping."},
+    {"file": "packages/solid/src/combobox/root/ComboboxDerivedItems.test.tsx", "scope": "All existing registrations retained; source mapping pending", "note": "Includes custom/null policies expanded separately, transaction-safe initialization, live locale/label identity, scan counts, sparse inputs and 10000-item effective-query read counts; no wholesale upstream credit."},
+    {"file": "packages/solid/src/combobox/root/ComboboxFilterVirtualizer.test.tsx", "scope": ["derives count without an effect relay and releases replaced observers/listeners"], "note": "Solid-native observation/disposal evidence; no upstream case credit."},
+    {"file": "packages/solid/src/combobox/collection/ComboboxCollection.test.tsx", "scope": "Both existing row/provider ownership and attribution registrations", "note": "Preexisting dirty work preserved; no source collection credit until source bodies compared."},
+    {"file": "packages/solid/src/combobox/input/ComboboxAttributes.test.tsx", "scope": "All three existing native attribute/live-host registrations", "note": "Preserved; source input/popup mapping pending."},
+    {"file": "packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts", "scope": ["matches accents, case, punctuation and explicit locale", "uses selected-domain converter independently of source labels", "reads live multiple/value/options rather than capturing a selection"], "note": "Preserved additional utility coverage beyond this reviewed source subset; full family source attribution pending."},
+    {"file": "packages/solid/src/combobox/root/ComboboxRoot.ssr.test.tsx", "scope": "All four existing server-only registrations", "note": "Preserved; server-only sole-name check does not satisfy source store hydration test."},
+    {"file": "packages/solid/src/combobox/items/createItems.test.ts", "scope": "All existing registrations, including flat/grouped and 0/empty/false/10n parameters", "note": "Preserved; source createItems registration mapping pending."},
+    {"file": "packages/solid/src/combobox/root/ComboboxRoot.test.tsx", "scope": "All existing sourceCase, direct it and browserCase registrations", "note": "Preserved; reviewed target bodies but large upstream root mappings unfinished. No title or sourceCase-based credit."},
+    {"file": "packages/solid/src/combobox/root/ComboboxReview.test.tsx", "scope": "All existing registrations and parameter tables", "note": "Preexisting dirty work preserved. Native same-turn transactions, callback replacement and host identity tests retained explicitly; full root/source mapping pending."}
+  ],
+  "additionalManualRowSchema": ["sourceLine", "sourceTitle", "lane", "parametersAndOrderedInteractions", "assertions", "disposition", "actualTargetPathAndTitles", "mappingEvidenceOrGap"],
+  "additionalManualFiles": {
+    "packages/react/src/combobox/root/ComboboxRoot.test.tsx": [
+      [154,"exposes the orientation attribute rendered by Separator","jsdom/browser","Separator orientation=vertical; mount","presentation host data-orientation=vertical","missing",[],"Conformance Separator tests forwarding rather than this orientation assertion."],
+      [215,"automatically unmounts with an actions ref and completes closing once","jsdom/browser","closed Popup; open input; Escape; unmount action after automatic exit","no initial completion; absent list; exactly one false completion before AND after stale action","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > ignores an unmount action while open and does not repeat close completion"],"Candidate covers manually opted-out exit, not automatic exit followed by stale unmount."],
+      [234,"keeps the popup mounted until the unmount action completes closing","jsdom/browser","defaultOpen; item press preventUnmountOnClose; unmount; set open true then false","retained list/no false completion before action; absent after; false count1; next automatic close count2","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > controlled closing retains the manual opt-out and a reopen releases it for a later close"],"Candidate lacks first unmount action followed by second close count2."],
+      [264,"clears the opt-out when a controlled reopen interrupts a pending unmount","jsdom/browser","defaultOpen; select item with opt-out; controlled reopen then close","list retained/no false completion initially; absent finally; false count1","matched",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > controlled closing retains the manual opt-out and a reopen releases it for a later close"],"Candidate requests close via action rather than item; same opt-out and controlled reopen/close lifecycle and exact completion cardinality."],
+      [287,"ignores an opt-out on a canceled close","jsdom/browser","defaultOpen; item close calls preventUnmountOnClose+cancel; disable cancel; press item again","expanded true AND list remains; final list absent","partial",["packages/solid/src/combobox/root/ComboboxRoot.test.tsx > ignores an opt-out on a canceled close"],"Target checks expanded and final absent list but omits intermediate list-presence assertion."],
+      [309,"keeps the opt-out when a controlled close is applied in a transition","jsdom/browser","controlled open=true; selection; onOpenChange uses React.startTransition; opt-out; unmount","expanded false; list retained; no false completion before unmount; absent after/count1","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > controlled closing retains the manual opt-out and a reopen releases it for a later close"],"No deferred controlled acceptance/transition and no expanded=false or unmount assertions; native held-update adaptation required."],
+      [342,"closes through the `close` action so `onOpenChange` can opt out","jsdom/browser","defaultOpen; actions.close; opt-out; actions.unmount","reasons exactly imperative-action; expanded false; mounted until action; absent after","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > ignores an unmount action while open and does not repeat close completion"],"Candidate lacks reasons array and intermediate expanded/mount assertions."],
+      [367,"ignores `unmount` while the popup is open","jsdom/browser","defaultOpen; actions.unmount","same list node; no false completion; expanded true","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > ignores an unmount action while open and does not repeat close completion"],"Target covers host identity and completion but omits expanded=true."],
+      [382,"unmounts when `close` and `unmount` are called in one batch","jsdom/browser","defaultOpen; opt-out close; close+unmount same batch","list absent; false completion count1","matched",["packages/solid/src/combobox/root/ComboboxRoot.test.tsx > manual unmount: close and unmount in one staged transaction"],"Native button callback invokes both actions same turn; awaited absent list and exact false count preserve source outcomes without React act."],
+      [407,"still unmounts on a later close after `unmount` was called while open","jsdom/browser","defaultOpen; stale unmount; Escape","list remains after stale action; absent after Escape; last completion false","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > ignores an unmount action while open and does not repeat close completion"],"Candidate later uses close+manual unmount, not automatic Escape exit after stale action."],
+      [423,"still unmounts on a later close after `unmount` and a reopen in one batch","jsdom/browser","controlled default open; opted-out close; unmount callback synchronously reopens once; disable opt-out; item close","list retained through reopen; false counts1 then2; final absent","missing",[],"No exit-completion callback reopens same turn in target tests."],
+      [466,"does not call `onOpenChange` when the `close` action is called while closed","jsdom/browser","closed; actions.close","callback absent; expanded=false","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > opening an already open input and closing an already closed root are no-op callbacks"],"Callback no-op covered, closed expanded attribute omitted."],
+      [476,"completes closing once when `unmount` is called twice in one batch","jsdom/browser","item opt-out close; unmount twice same batch","list retained before actions; absent after; false count1","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > ignores an unmount action while open and does not repeat close completion"],"Target close+unmount+unmount in same turn; does not observe separately committed opted-out close before repeated actions."],
+      [504,"sets combobox aria attributes on the input","ssr","server Root outside Input and closed Portal","role combobox; expanded=false; autocomplete=list; haspopup=listbox","partial",["packages/solid/src/combobox/root/ComboboxRoot.ssr.test.tsx > resolves a server-rendered defaultValue label from its root-local external window"],"Candidate checks role/expanded but not autocomplete/haspopup for single mode."],
+      [522,"sets combobox aria attributes on the trigger when input is inside popup","ssr","server Root Trigger and closed Portal/Positioner","trigger role combobox; expanded=false; haspopup=dialog","missing",[],"No server trigger-pattern assertions in existing family tests."],
+      [539,"does not link Combobox.Label to trigger before hydration","ssr","inline server Root Label Food Trigger Open Input","label and trigger ids nonempty; trigger has no aria-labelledby","missing",[],"No prehydration label/trigger association test."],
+      [557,"does not focus input when closing via trigger click (input inside popup)","jsdom/browser","trigger opens; input focus settles; trigger closes","list initially present; popup input focused; trigger focused finally","missing",[],"Existing browser keyboard-selection return-focus test closes with item, not trigger."],
+      [595,"selects with the keyboard, restores focus, and resets the query on reopen","jsdom/browser","Apple/Banana/Cherry; trigger open; type ban; Down Enter; reopen","input focused; dialog absent; trigger focused AND text Banana; reopened input empty; Banana selected AND highlighted","partial",["packages/solid/src/combobox/root/ComboboxRoot.test.tsx > input inside popup: keyboard selection restores trigger focus"],"Browser candidate Bob query bo covers focus/close/empty reopen; no trigger selected text or reopened selected/highlighted item assertions."],
+      [642,"discards an uncommitted query on Escape and preserves the selection","jsdom/browser","default Apple; open/type ban/Escape/reopen","dialog absent; trigger focused/text Apple; no value callback; empty input; Apple selected; Banana present","missing",[],"No popup-input Escape discard+selection-preservation+reopen case."],
+      [690,"keeps filtering responsive when the selection close is canceled","jsdom/browser","Apple/Apricot/Banana; on close cancel; popup input type ap/select Apple/clear/type ba","dialog stays; trigger text Apple; Banana appears; Apple absent","missing",[],"Existing canceled selection tests cancel value change, not accepted value with canceled close and subsequent filtering."],
+      [735,"clears a single-select query and restores the selection when reopening during the close animation","browser; skipIf(isJSDOM)","100ms exit CSS; default Banana; type banana; Escape; ending; trigger reopen","ending cleared; selectedIndex1; input empty; Apple present; Banana highlighted; activeDescendant Banana id","missing",[],"No animated query restoration/selected-index regression."],
+      [804,"preserves a typed query when input reopens single-select during the close animation","browser; skipIf(isJSDOM)","100ms exit; type ap; Escape; ending; focus still-mounted input/type b skipClick","ending cleared; query apb; No matches status; no options","missing",[],"No native typing reopen during exit test."],
+      [869,"does not aria-hide the input group when the input is outside the popup","jsdom/browser","InputGroup contains Input+Trigger; open input","list present; input focus; group not aria-hidden=true","missing",[],"No InputGroup inertness assertion."],
+      [900,"dismisses the popup when clicking a plain wrapper around the input","jsdom/browser","plain padded div/span around Input+Trigger; trigger open; padding click","list present then absent","missing",[],"No outside-press plain input-wrapper distinction case."],
+      [931,"does not dismiss when pressing portalled content inside the popup but outside the list","jsdom/browser","defaultOpen; popup child ReactDOM portal into document.body; click content","list remains","missing",[],"No nested physical portal/logical popup containment test."],
+      [954,"does not navigate the list with arrow keys from portalled controls inside the popup","jsdom/browser","defaultOpen; popup portalled button focus; dispatch Down","activeIndex remains null","missing",[],"No portalled-control navigation exclusion test."],
+      [983,"does not dismiss when pressing content inside a nested popover","jsdom/browser","defaultOpen combobox; open nested Popover; click nested button","list remains","missing",[],"No nested popover containment assertion."],
+      [1017,"wraps modal focus from popup controls back to the input","jsdom/browser","defaultOpen modal; focus popup input; Tab extra button; Tab again","extra button focus; input focus wraps","missing",[],"No modal Tab wrap regression."],
+      [1046,"does not cause infinite re-renders when items becomes undefined","jsdom/browser","defaultOpen items=[]; replace items with undefined","combobox still exists; update terminates","partial",["packages/solid/src/combobox/root/ComboboxDerivedItems.test.tsx > treats undefined data as absent and renders external results"],"Candidate starts unloaded collection then becomes loaded; opposite transition and no real root host."],
+      [1076,"hides the trigger when popup is open with input outside the popup","jsdom/browser","outside button; Input+Trigger; click Input","list appears; outside inert via ancestor aria-hidden/inert/data marker; trigger also inert","missing",[],"No physical ancestor-inertness assertions."],
+      [1116,"does not render the start dismiss button while closed","jsdom/browser","closed Root with Input/Portal/Popup","no Dismiss button","missing",[],"No dismiss-button closed-state test."],
+      [1139,"renders internal dismiss buttons before the input and after the popup","jsdom/browser","defaultOpen modal popup input; outside button; click end dismiss","input previous sibling=start dismiss; popup next sibling=end dismiss; neither tabindex; outside inert; list closes","missing",[],"No dismiss button DOM order/tabindex/inertness test."],
+      [1186,"renders an internal dismiss button for the input-outside-popup pattern","jsdom/browser","outside Input; open; click start dismiss","input previous=start; popup next=end; neither tabindex; list closes","missing",[],"No external-input dismiss button order case."],
+      [1228,"fires onOpenChange once with reason item-press on mouse click","jsdom/browser","apple/banana; open input; clear callback; select apple","close count1; false; reason item-press; event instanceof MouseEvent","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > selection callbacks run value, input fill, close, and close completion in source order"],"Candidate order/reason covered but no event-class or exact one close callback assertion."],
+      [1268,"fires onOpenChange once with reason item-press on Enter selection","jsdom/browser","open; Down; clear open callback; Enter","list absent; close count1 false/item-press/KeyboardEvent","partial",["packages/solid/src/combobox/root/ComboboxRoot.test.tsx > selects derived values with the keyboard and retains virtual input focus"],"Candidate selected value/input focus assertions lack close callback provenance/count."],
+      [1309,"should auto-close popup after selection when open state is uncontrolled","jsdom/browser","trigger opens; select apple","list present+expanded true; list absent+expanded false","partial",["packages/solid/src/combobox/root/ComboboxRoot.test.tsx > selects derived values with the keyboard and retains virtual input focus"],"Candidate keyboard selection checks value/focus but not both expanded and list lifetime sides."],
+      [1348,"syncs selected index when items change after close","jsdom/browser","AsyncItemsCombobox selects Cherry; close completion narrows items to selected; reopen","list closes/reopens; Cherry data-selected empty","missing",[],"No close-completion items replacement followed by selected registration test."],
+      [1365,"should not auto-close popup when open state is controlled","jsdom/browser","open=true; click apple","list remains","missing",[],"No controlled-open refusal after accepted selection case."],
+      [1392,"should show all items when query is empty with enhanced filter","jsdom/browser","defaultOpen apple/banana/cherry; empty query","each of three items present","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > cancellation prevents value, input-fill and close after an item press"],"No exact all-three-empty-query assertion in candidate; utility bypass alone not root composition coverage."],
+      [1419,"should show all items when query matches current selection","jsdom/browser","default apple; trigger opens; select apple; reopen","input apple; all apple/banana/cherry present on reopen","partial",["packages/solid/src/combobox/root/ComboboxDerivedItems.test.tsx > preserves full selection-label query browsing but respects unresolved external selections"],"Derived model bypass covered without close/reopen actual Input/List composition."],
+      [1459,"should reset input value to selected value when popup closes without selection","jsdom/browser","default apple; open/select/reopen; append xyz; outside press","apple then applexyz then apple; last input callback apple/reason none","missing",[],"No outside-close edited-query reversion callback assertion."],
+      [1503,"should not auto-close during browser autofill","jsdom/browser","name=test defaultOpen; hidden change apple","list remains before and after autofill","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > hidden autofill matches serialized/derived label %s without opening"],"Candidate starts closed and checks no opening; does not preserve already-open list."],
+      [1535,"highlights and scrolls the selected item into view on first open (no items prop)","browser; skipIf(isJSDOM)","direct apple/banana/cherry default banana; first open; scrollIntoView spy","banana highlighted; activeDescendant banana; spy contexts exactly [banana]; nearest block+inline","missing",[],"No direct registration first-open exact scroll receiver/options assertion."],
+      [1575,"highlights and scrolls the selected item into view on mount when inline (items prop)","browser; skipIf(isJSDOM)","items apple/banana/cherry inline open default banana","banana highlighted; activeDescendant banana; nearest scroll options","missing",[],"No selected inline mount scroll assertions."],
+      [1609,"does not restore the initial highlight after focus leaves an inline input (items prop)","browser; skipIf(isJSDOM)","inline open controlled banana; focus input; click Change value to cherry","initial banana highlighted; no activeDescendant after blur; cherry not highlighted","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > inline blur clears highlight and refocus restores only an existing slot"],"Candidate blur assertions have no controlled selection change; source browser lane required."],
+      [1658,"does not apply the initial highlight when a selection resolves after blur (items prop)","browser; skipIf(isJSDOM)","inline open initial null; focus/blur; resolve banana","banana not highlighted; no activeDescendant; no scroll","missing",[],"No late-selection-after-blur test."],
+      [1707,"does not snap the highlight to a stale index while filtering an inline list (items prop)","browser; skipIf(isJSDOM)","apple/banana/blueberry/cherry inline default banana; focus/type b","initial banana highlight; cherry absent; no activeDescendant; blueberry not highlighted","missing",[],"No filtered-coordinate stale-index inline regression."],
+      [1754,"does not transfer a stale highlight when clearing an inline list without a selection (items prop)","browser; skipIf(isJSDOM)","inline no selection; type b; Down twice; clear","blueberry initially highlighted; after clear no activeDescendant; banana not highlighted","missing",[],"No no-selection query-clear stale highlight case."],
+      [1788,"waits for a controlled query clear to commit before restoring the selection (items prop)","browser; skipIf(isJSDOM)","controlled query b refuses writes; selected banana; clear highlight; attempt clear; force rerender","no highlight/activeDescendant throughout; input remains b; rerender does not restore","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > controlled input rejection restores the actual prop without a blanket flush"],"Candidate only DOM input rejection, not selected highlight reconciliation after refused clear."],
+      [1842,"highlights the first selected item on mount and keeps the highlight when toggling in a multiple inline list (items prop)","browser; skipIf(isJSDOM)","inline multiple apple/date selected; click date","initial apple highlight/activeDescendant; date deselected; apple no longer highlighted and not activeDescendant","missing",[],"Title says keeps highlight but actual source asserts apple loses it; recorded actual assertions."],
+      [1887,"does not highlight a non-selected item when an initial input value pre-filters the inline list (items prop)","browser; skipIf(isJSDOM)","b0/sel/b1/b2/b3; selected sel; initial query b; inline","sel absent; b1 no highlight; no activeDescendant","missing",[],"No initial prefiltered selection-out-of-window coordinate guard."],
+      [1923,"does not replace a pointer highlight when the initial selection resolves after mount (items prop)","browser; skipIf(isJSDOM)","inline items apple/cherry default banana; hover apple; insert banana; next animation frame","apple retains highlight; banana not highlighted; activeDescendant apple; no scroll","missing",[],"No late-registration selection preserving pointer highlight."],
+      [1966,"does not restore the initial highlight after pointer navigation is cleared (items prop)","browser; skipIf(isJSDOM)","inline missing banana selected; hover/unhover apple; insert banana","apple highlight then cleared; banana no highlight; no activeDescendant; no scroll","missing",[],"No cleared-pointer intent surviving selected registration."],
+      [2009,"emits the selected item index to onItemHighlighted on mount when inline and virtualized (items prop)","browser; skipIf(isJSDOM)","50 items explicit indices; inline virtualized default item-30","callback item-30,index30","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > virtualized lookup uses filtered derived coordinates even when explicit DOM indexes are omitted"],"Candidate keyboard lookup index0 after filtering, not initial selected inline index30."],
+      [2044,"restores the highlight and scroll to the selected item when the query is cleared","browser; skipIf(isJSDOM)","popup input selected banana; type cherry; clear scroll spy; clear query","banana filtered out then restored highlighted; activeDescendant banana; nearest scroll","missing",[],"No selected query-clear scroll restore assertions."],
+      [2099,"restores the selected direct item after its registration index changes","browser; skipIf(isJSDOM)","no items prop; default banana; autoHighlight; type c yields cherry index0; mousemove; clear query restores direct registrations","final banana highlight/activeDescendant; final scroll receiver banana/options nearest; callback banana; no value/index-inconsistent callback ever","missing",[],"No direct-registration reindex restoration transient callback consistency test."],
+      [2173,"does not navigate kept-mounted items while controlled closed","jsdom/browser","open=false autoHighlight keepMounted; type banana","activeIndex null; no activeDescendant","missing",[],"No closed keepMounted navigation rejection test."],
+      [2200,"restores the selected item with the input outside the popup","jsdom/browser","controlled value banana defaultOpen; type cherry; clear","banana absent then restored highlighted; activeDescendant banana","missing",[],"No outside-input query-clear selected highlight restoration case."],
+      [2231,"scrolls to programmatic highlights after the filtered list changes","browser; skipIf(isJSDOM)","200 item-000..199; selected180 autoHighlight; list maxHeight100; scroll bottom; type9; scroll bottom; clear","item009 highlighted and scrollTop0; selected180 highlighted and fully within list rect","missing",[],"Existing scroll-wrapper reset test lacks restore-to-selected geometric visibility."],
+      [2292,"restores the selected item instead of the first item when clearing with autoHighlight","jsdom/browser","selected banana autoHighlight; open popup input/type a/clear","apple highlighted while filtered; banana highlighted after clear; apple not highlighted","missing",[],"No selected-vs-first autoHighlight restore distinction."],
+      [2337,"emits onItemHighlighted for the selected item when the query is cleared","jsdom/browser","selected banana; popup query cherry; clear callback; clear query","banana callback reason none,index1","missing",[],"Existing autoHighlight callback regression emits freshly filtered Bob index0, not selected restore index1."],
+      [2384,"restores the selected item through an externally virtualized list","browser; skipIf(isJSDOM)","100 padded string items; selected080; window10 starts80; query000 resets window; clear","scrollToIndex80; rendered080 highlighted; activeDescendant080","partial",["packages/solid/src/combobox/root/ComboboxReview.test.tsx > targets items an external virtualizer has not rendered"],"Candidate imperatively targets last99, no selected query-clear restoration or activeDescendant assertion."],
+      [2471,"consumes a query-clear restore when the selected item is absent","jsdom/browser","direct items controlled query; selected banana autoHighlight; query a; remove selected; clear","active0 before; two options after; active null; no banana callback","missing",[],"No absent-selected restore consumption test."],
+      [2531,"clears selectedIndex when the value is cleared externally while closed (no items prop)","jsdom/browser","controlled banana direct items; open/Escape; external null; reopen","selectedIndex1 then null; banana no highlight; no activeDescendant","missing",[],"No closed external null selected-index probe."],
+      [2588,"clears selectedIndex when the value is set to an unmatched value while closed (no items prop)","jsdom/browser","controlled banana direct items; open/Escape; external dragonfruit; reopen","selectedIndex1 then null; banana no highlight; no activeDescendant","missing",[],"No closed unmatched selected-index reconciliation test."],
+      [2649,"registers selectedIndex before opening with a keepMounted portal (no items prop)","jsdom/browser","default banana direct registrations in closed kept Portal","selectedIndex1 while closed","missing",[],"No kept-portal closed selected-index registration probe."],
+      [2679,"does not highlight the previous item after the value changes while open (no items prop)","jsdom/browser","controlled banana; open; synthetic external cherry without outside dismissal; Escape/reopen","index1 while open; list stays; close index2; reopen cherry highlight; banana no highlight nor callback","missing",[],"No externally changed direct selected index across close/reopen." ]
+    ]
+  },
+  "adaptationConcerns": [
+    "Seven missing-provider source cases require exact Base UI descriptive messages. Portal currently supplies a default and cannot satisfy required-provider rejection; Positioner throws a different message; other defaultless contexts rely on framework errors. Production changes are outside this write allowlist.",
+    "Five store source registrations remain gaps: direct anti-split observation, subscriber convergence, earliest descendant-ref command availability, remove/remount two-sided form ownership, and actual hydration ownership. React subscribe/useStore/StrictMode mechanisms require native Solid adaptation without weakening their assertions.",
+    "The whole family is not complete: 25 runtime files plus the type/spec file and generated conformance registrations still require assertion-level mappings. Exact family-wide case totals cannot be inferred from this partial ledger.",
+    "Platform mocks qualify branch assertions only. Native Android/Firefox/iOS behavior and all browser-lane source interactions still belong to final qualification."
+  ]
+}

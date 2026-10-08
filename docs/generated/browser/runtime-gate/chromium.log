@@ -1,0 +1,296 @@
+$ node scripts/test/run.mjs chromium createRenderElement Events.test getStateAttributesProps NumberField.reactivity RadioIndicator.test RadioGroup.field SelectField.test TabsActivation.browser createPopup.test --no-watch
+[HARNESS_BATCH] 1/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.hydration.browser.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+Port 63315 is in use, trying another one...
+6:54:32 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-7GNYk5/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-7GNYk5/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=8a887e55
+[33m[NAMESPACE_CONFLICT] [0mConflicting namespaces: "packages/solid/src/internals/composite/index.ts" re-exports "$$moduleUrl" from one of the modules "packages/solid/src/internals/composite/list/CompositeList.tsx", "packages/solid/src/internals/composite/root/CompositeRoot.tsx" and "packages/solid/src/internals/composite/item/CompositeItem.tsx" (will be ignored).
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m packages/solid/src/internals/composite/list/CompositeList.tsx:176:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m176 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m$$moduleUrl[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m"[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mk[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249ms[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249md[0m[38;5;249m/[0m[38;5;249ms[0m[38;5;249mr[0m[38;5;249mc[0m[38;5;249m/[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249m/[0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m/[0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mL[0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249mx[0m[38;5;249m"[0m[38;5;249m;[0m
+ [38;5;240m    │[0m              ─────┬─────  
+ [38;5;240m    │[0m                   ╰─────── One matching export is here.
+     [38;5;246m│[0m
+     [38;5;246m├[0m[38;5;246m─[0m[38;5;246m[[0m packages/solid/src/internals/composite/root/CompositeRoot.tsx:266:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m266 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m$$moduleUrl[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m"[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mk[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249ms[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249md[0m[38;5;249m/[0m[38;5;249ms[0m[38;5;249mr[0m[38;5;249mc[0m[38;5;249m/[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249m/[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mo[0m[38;5;249mt[0m[38;5;249m/[0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mR[0m[38;5;249mo[0m[38;5;249mo[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249mx[0m[38;5;249m"[0m[38;5;249m;[0m
+ [38;5;240m    │[0m              ─────┬─────  
+ [38;5;240m    │[0m                   ╰─────── One matching export is here.
+     [38;5;246m│[0m
+     [38;5;246m├[0m[38;5;246m─[0m[38;5;246m[[0m packages/solid/src/internals/composite/item/CompositeItem.tsx:84:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 84 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m$$moduleUrl[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m"[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mk[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249ms[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249md[0m[38;5;249m/[0m[38;5;249ms[0m[38;5;249mr[0m[38;5;249mc[0m[38;5;249m/[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249m/[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mm[0m[38;5;249m/[0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mI[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mm[0m[38;5;249m.[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249mx[0m[38;5;249m"[0m[38;5;249m;[0m
+ [38;5;240m    │[0m              ─────┬─────  
+ [38;5;240m    │[0m                   ╰─────── One matching export is here.
+[38;5;246m─────╯[0m
+
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/internals/createRenderElement.hydration.browser.test.tsx (4 tests) 951ms
+   ✓ [browser:bsolid-itlx] [source:packages/react/src/internals/useRenderElement.test.tsx#default dynamic text host and sibling retain server ownership slots]  300ms
+   ✓ [browser:bsolid-itlx] [source:packages/react/src/field/control/FieldControl.test.tsx#native input value/defaultValue and stable selection after actual SSR hydration]  368ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  18:54:31
+   Duration  2.08s (transform 0ms, setup 123ms, import 304ms, tests 951ms, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=4 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 2/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+Port 63315 is in use, trying another one...
+6:54:35 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-edLYUN/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-edLYUN/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=37087c45
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/internals/createRenderElement.test.tsx (25 tests) 1344ms
+
+ Test Files  1 passed (1)
+      Tests  25 passed (25)
+   Start at  18:54:34
+   Duration  3.04s (transform 0ms, setup 139ms, import 797ms, tests 1.34s, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=25 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 3/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/getStateAttributesProps.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+6:54:38 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-JV8oPx/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-JV8oPx/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=c9a909ac
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/internals/getStateAttributesProps.test.tsx (12 tests) 652ms
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  18:54:38
+   Duration  1.52s (transform 0ms, setup 135ms, import 109ms, tests 652ms, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=12 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 4/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/Events.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+6:54:41 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-zAN5qG/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-zAN5qG/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=40fe2b1b
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/merge-props/Events.test.tsx (42 tests) 2139ms
+
+ Test Files  1 passed (1)
+      Tests  42 passed (42)
+   Start at  18:54:40
+   Duration  2.96s (transform 0ms, setup 116ms, import 90ms, tests 2.14s, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=42 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 5/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/NumberField.reactivity.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+6:54:44 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-erIONb/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-erIONb/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=04c4dce0
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/number-field/NumberField.reactivity.test.tsx (1 test) 244ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  18:54:44
+   Duration  1.20s (transform 0ms, setup 110ms, import 227ms, tests 244ms, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=1 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 6/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/radio-group/RadioGroup.field.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+6:54:46 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-Xz2eIz/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-Xz2eIz/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=47864fe9
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/radio-group/RadioGroup.field.test.tsx (28 tests) 1502ms
+
+ Test Files  1 passed (1)
+      Tests  28 passed (28)
+   Start at  18:54:46
+   Duration  2.58s (transform 0ms, setup 111ms, import 349ms, tests 1.50s, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=28 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 7/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/radio/indicator/RadioIndicator.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+6:54:50 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-9dfnXY/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-9dfnXY/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=3f6572b9
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/radio/indicator/RadioIndicator.test.tsx (16 tests) 1275ms
+
+ Test Files  1 passed (1)
+      Tests  16 passed (16)
+   Start at  18:54:49
+   Duration  2.27s (transform 0ms, setup 117ms, import 255ms, tests 1.27s, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=16 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 8/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/select/root/SelectField.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+6:54:53 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-5ikbSG/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-5ikbSG/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=5c5eddcb
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/select/root/SelectField.test.tsx (9 tests) 571ms
+
+ Test Files  1 passed (1)
+      Tests  9 passed (9)
+   Start at  18:54:52
+   Duration  1.87s (transform 0ms, setup 124ms, import 521ms, tests 571ms, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=9 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 9/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/tabs/root/TabsActivation.browser.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+6:54:56 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-a2KxQm/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-a2KxQm/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=be9f2d19
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/tabs/root/TabsActivation.browser.test.tsx (2 tests) 149ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  18:54:55
+   Duration  1.23s (transform 0ms, setup 135ms, import 262ms, tests 149ms, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=2 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH] 10/10 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/popups/createPopup.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+6:54:58 PM [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-N0CKeo/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1600 |  		if (hy.modules[key]) continue;
+1601 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1602 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1603 |  			hy.modules[key] = mod;
+1604 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-N0CKeo/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=f08fa4da
+ ✓ |solid2-real-browser-development (chromium)| packages/solid/src/utils/popups/createPopup.test.tsx (10 tests) 515ms
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  18:54:57
+   Duration  1.85s (transform 0ms, setup 135ms, import 163ms, tests 515ms, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=10 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH_FINAL] {"intended":10,"executed":10,"resumed":0,"failedBatches":0,"engines":{"chromium":{"files":10,"passed":149,"failed":0,"skipped":0,"pending":0,"unhandled":0,"incomplete":0}}}

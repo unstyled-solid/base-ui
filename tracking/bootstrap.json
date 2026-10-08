@@ -1,0 +1,152 @@
+{
+  "ticket": "bsolid-bootstrap",
+  "status": "implementation-complete-awaiting-orchestrator-review",
+  "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "verifiedParitySha": null,
+  "packageIdentity": "baseui-solid2",
+  "identityCorrection": {
+    "owner": "bsolid-dist-contract",
+    "originalBootstrapIdentity": "@base-ui-solid/solid",
+    "reason": "Orchestrator-authorized correction after bootstrap closure to the ticket-required private identity; original command results below remain historical bootstrap evidence."
+  },
+  "private": true,
+  "manifestHandoff": "bsolid-dist-contract after orchestrator approval and bootstrap closure",
+  "reference": {
+    "path": "/Users/avi/avir-oss/ref/base-ui",
+    "head": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "status": " M pnpm-lock.yaml",
+    "dirtyLockfileGitHash": "90a732531ddc1a3ed76ff30ffbd596503c45da74",
+    "modifiedByBootstrap": false
+  },
+  "submodule": {
+    "path": "upstream/base-ui",
+    "url": "https://github.com/mui/base-ui.git",
+    "branch": "master",
+    "head": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "gitlink": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "status": "clean",
+    "stagedByInitialization": [".gitmodules", "upstream/base-ui"],
+    "committed": false
+  },
+  "versions": {
+    "node": "25.8.1",
+    "pnpm": "11.8.0",
+    "solid-js": "2.0.0-rc.13",
+    "@solidjs/signals": "2.0.0-rc.13",
+    "@solidjs/web": "2.0.0-rc.13",
+    "@solidjs/compiler": "2.0.0-rc.13",
+    "@solidjs/babel-plugin": "2.0.0-rc.13",
+    "@solidjs/vite-plugin": "3.0.0-next.47",
+    "@solidjs/testing-library": "1.0.0-beta.3",
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/user-event": "14.6.7",
+    "vite": "8.3.2",
+    "vitest": "4.1.11",
+    "typescript": "5.9.3",
+    "jsdom": "27.4.0",
+    "@babel/core": "7.29.7",
+    "@types/node": "25.9.9"
+  },
+  "apiEvidence": [
+    "indexed solidjs@2: guides/testing, concepts/rendering-and-ssr, guides/custom-primitives, guides/integrate-non-solid-code, migration/from-solid-1",
+    "node_modules/solid-js/types/index.d.ts",
+    "node_modules/solid-js/types/client/core.d.ts",
+    "node_modules/solid-js/types/client/component.d.ts",
+    "node_modules/@solidjs/web/types/index.d.ts",
+    "node_modules/@solidjs/web/types/jsx.d.ts",
+    "node_modules/@solidjs/web/package.json exports",
+    "node_modules/@solidjs/vite-plugin/dist/types/src/index.d.ts",
+    "node_modules/@solidjs/vite-plugin/dist/esm/index.mjs per-project test posture",
+    "node_modules/@solidjs/compiler/types.d.ts",
+    "node_modules/@solidjs/testing-library/dist/index.d.ts"
+  ],
+  "sourceMappings": [
+    { "source": "packages/react/src/internals/types.ts", "target": "packages/solid/src/internals/types.ts", "adaptation": "Type-only facade with native events, Solid class, live render callback, @solidjs/web JSX ownership" },
+    { "source": "packages/react/src/types/index.ts", "target": "packages/solid/src/internals/contracts/render.ts", "adaptation": "Keep HTMLProps/ComponentRenderFn/BaseUIEvent names; public type barrel remains integration-owned" },
+    { "source": "packages/react/src/internals/createBaseUIEventDetails.ts", "target": "packages/solid/src/internals/contracts/events.ts", "adaptation": "Only common structural transaction shape; events owns reason discrimination and runtime flags" },
+    { "source": "packages/react/src/internals/useTransitionStatus.ts", "target": "packages/solid/src/internals/contracts/core.ts", "adaptation": "Exact transition union, no presence implementation" },
+    { "source": "packages/react/src/internals/useItemRegistry.ts", "target": "packages/solid/src/internals/contracts/items.ts", "adaptation": "Live imperative registry plus getter-backed immutable snapshot" },
+    { "source": "packages/react/src/internals/composite/list/CompositeListContext.ts", "target": "packages/solid/src/internals/contracts/items.ts", "adaptation": "Preserve index/label/metadata nullability, raw text element accessor" },
+    { "source": "packages/react/src/utils/popups/store.ts", "target": "packages/solid/src/internals/contracts/popup.ts", "adaptation": "Preserve state distinctions and names through live views, no ReactStore imitation" },
+    { "source": "packages/react/src/utils/popups/popupHandle.ts", "target": "packages/solid/src/internals/contracts/popup.ts", "adaptation": "Reactive store getter replaces subscription API, stable server fallback and committed attachment cleanup" },
+    { "source": "packages/react/src/utils/popups/popupTriggerMap.ts", "target": "packages/solid/src/internals/contracts/floating.ts", "adaptation": "Read-only lookup and structural mutation interface, no class implementation import" },
+    { "source": "packages/react/src/floating-ui-react/components/FloatingRootStore.ts", "target": "packages/solid/src/internals/contracts/floating.ts", "adaptation": "Raw DOM versus virtual reference, explicit accepted next-open dispatch" },
+    { "source": "packages/react/src/floating-ui-react/components/FloatingTreeStore.ts", "target": "packages/solid/src/internals/contracts/floating.ts", "adaptation": "Plain live node list and typed event emitter" },
+    { "source": "packages/react/src/floating-ui-react/components/FloatingPortal.tsx", "target": "packages/solid/src/internals/contracts/portal.ts", "adaptation": "Accessor container replaces ref object; literal-null waiting distinct from unresolved accessor fallback; Element mount requires ShadowRoot wrapper" },
+    { "source": "packages/react/src/internals/form-context/FormContext.ts", "target": "packages/solid/src/internals/contracts/field.ts", "adaptation": "Live Map, raw control/form accessors, optional null context instead of shared mutable fallback" },
+    { "source": "packages/react/src/internals/field-register-control/useFieldControlRegistration.ts", "target": "packages/solid/src/internals/contracts/field.ts", "adaptation": "Source token registration and separate value/getValue" },
+    { "source": "packages/react/src/field/root/FieldRoot.tsx", "target": "packages/solid/src/internals/contracts/field.ts", "adaptation": "Extract validity data below public components, preserve nullable valid flag" },
+    { "source": "packages/react/src/internals/getStateAttributesProps.ts", "target": "packages/solid/src/internals/contracts/render.ts", "adaptation": "Exact mapping return shape; implementation belongs to render" },
+    { "source": "packages/react/package.json", "target": "docs/contracts.md", "adaptation": "Complete foundation subpath and explicit use/create alias handoff, not unfinished runtime exports" },
+    { "source": "LICENSE", "target": "packages/solid/src/internals/contracts/UPSTREAM-LICENSE.txt", "adaptation": "MIT notice retained verbatim" }
+  ],
+  "proofCases": [
+    {
+      "source": "docs/solid2-contract.md scheduling, rendering, refs, effects and lifecycle obligations",
+      "target": "packages/solid/src/internals/contracts/proof/Bootstrap.test.tsx",
+      "title": "Bootstrap: staged updates, current callbacks and live render state retain one host",
+      "result": "passed"
+    },
+    {
+      "source": "RC13 installed core.d.ts context contract",
+      "target": "packages/solid/src/internals/contracts/proof/Bootstrap.test.tsx",
+      "title": "Bootstrap: required context throws, optional context is null, direct provider stays live",
+      "result": "passed"
+    },
+    {
+      "source": "RC13 installed web server entry and createUniqueId declaration",
+      "target": "packages/solid/src/internals/contracts/proof/Bootstrap.ssr.test.tsx",
+      "title": "Bootstrap SSR: server compiler/runtime render JSX without running client effects or refs",
+      "result": "passed"
+    },
+    {
+      "source": "Structural contracts and native RC13 JSX adaptation",
+      "target": "packages/solid/src/internals/contracts/proof/contracts.spec.tsx",
+      "title": "Self-reference consumer, callback/tuple/ref/class/transition/seam types and three deliberate negative type cases",
+      "result": "passed"
+    }
+  ],
+  "commands": [
+    { "command": "rtk pnpm install", "result": "passed; 170 packages, strict peers/engines" },
+    { "command": "rtk pnpm install --frozen-lockfile", "result": "passed" },
+    { "command": "rtk proxy node packages/solid/src/internals/contracts/proof/frozen-install.mjs", "result": "passed; fresh isolated node_modules, 170 packages, unchanged lockfile" },
+    { "command": "rtk pnpm typescript", "result": "passed, including installed declarations; skipLibCheck=false" },
+    { "command": "rtk pnpm test:types --no-watch", "result": "passed" },
+    { "command": "rtk pnpm test:jsdom Bootstrap --no-watch", "result": "passed; 2 tests" },
+    { "command": "rtk pnpm test:ssr --no-watch", "result": "passed; 1 test in independent server process" },
+    { "command": "rtk pnpm test:contracts --no-watch", "result": "passed; strict types, single resolved runtime/core identity, four native/Babel DOM/SSR compile checks, 3 runtime tests" },
+    { "command": "rtk pnpm test:jsdom DefinitelyNoMatchingBootstrapFixture --no-watch", "result": "expected exit 1; unmatched filters do not pass" },
+    { "command": "rtk pnpm test:coverage-map --no-watch", "result": "expected exit 1; explicit owner reservation, not completed validation" },
+    { "command": "rtk pnpm build:package", "result": "expected exit 1; explicit owner reservation, not a built artifact" },
+    { "command": "rtk pnpm test:browsers --no-watch", "result": "expected exit 1; explicit final qualification reservation" },
+    { "command": "rtk pnpm test:parity --no-watch", "result": "expected exit 1; explicit final qualification reservation" },
+    { "command": "rtk proxy git rev-parse HEAD (upstream/base-ui)", "result": "19511bb171f3b360b006c94cf6d07e53cb446505" },
+    { "command": "rtk proxy git status --porcelain=v1 (upstream/base-ui)", "result": "empty; clean source checkout" },
+    { "command": "rtk proxy git ls-files --stage upstream/base-ui .gitmodules", "result": "160000 gitlink matches canonical SHA; .gitmodules records canonical URL and master" },
+    { "command": "rtk proxy git status --porcelain=v1 and rtk proxy git hash-object pnpm-lock.yaml (research reference, separate calls)", "result": "original dirty lockfile status and 90a732531ddc1a3ed76ff30ffbd596503c45da74 unchanged" },
+    { "command": "rtk git diff --check", "result": "passed" },
+    { "command": "rtk proxy bd dep cycles", "result": "no dependency cycles detected after followups" }
+  ],
+  "implementationCorrections": [
+    "Compiler proof initially rejected valid HTML template strings using a substring check; replaced with Babel parse without JSX syntax support, so uncompiled JSX fails while valid templates pass.",
+    "Vitest CLI is not an exported package subpath; locate its declared CLI next to exported package metadata. No dependency workaround or diagnostic suppression needed."
+  ],
+  "deferredCommands": {
+    "test:coverage-map": "bsolid-inventory",
+    "build:package": "bsolid-dist-build",
+    "test:browsers": "bsolid-browser",
+    "test:parity": "bsolid-browser / bsolid-upstream-verify"
+  },
+  "followups": ["bsolid-bootstrap-command-handoff", "bsolid-bootstrap-hydration-replay"],
+  "indexing": "Earlier ccc index was user-aborted; indexing completion is not claimed. Developer owns indexing; no further index, refresh or initialization commands are permitted.",
+  "donorAssessment": "Orchestrator-owned separate lane; no donor source or speculative contract changes included in bootstrap.",
+  "limitations": [
+    "Proof-only test routing until bsolid-harness integrates family suites.",
+    "No production hydration, multiple-root/concurrent-request ID isolation, focus/selection or browser paint evidence.",
+    "No component parity, built package, tarball consumers or publication claim."
+  ],
+  "seamConflicts": [
+    "Planning prose mentions bootstrap/main ownership of types/** and floating shared facades, but ticket owns does not authorize those paths. Contracts are importable under internals/contracts; bsolid-integration owns later facades.",
+    "Original root/library manifest and lockfile ownership transfers only when orchestrator closes bootstrap; no other worker should edit them before that handoff."
+  ]
+}

@@ -1,0 +1,1 @@
+function e(e,t){return e.getAnimations(t).filter(e=>{let t=e.effect?.getTiming();return t?.duration!==1/0&&t?.iterations!==1/0})}export{e as t};

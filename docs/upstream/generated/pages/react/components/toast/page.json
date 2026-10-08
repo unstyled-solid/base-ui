@@ -1,0 +1,6728 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/toast/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "3a3e46351d4e4a47043ef03bea1764ae89179c862212a4976f46cb92b5301836",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/toast",
+  "route": "/solid/components/toast",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Toast",
+  "subtitle": "Generates toast notifications.",
+  "metadata": {
+    "keywords": [
+      "React Toast",
+      "Toast Notification",
+      "Toast Notifications",
+      "Notification Component",
+      "Notification",
+      "Snackbar",
+      "Message Notification",
+      "Alert Notification",
+      "Alert Message",
+      "Flash Message",
+      "Push Notification",
+      "Temporary Message",
+      "Dismissible Notification",
+      "Toast Message",
+      "Toast Manager",
+      "Anchored Toast",
+      "Swipe Dismiss Toast",
+      "Status Message",
+      "Timed Notification",
+      "Stacked Toasts",
+      "Live Region",
+      "Accessible Toast",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React toast component to generate notifications."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoToastHero",
+      "imported": "DemoToastHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/hero#DemoToastHero"
+    },
+    {
+      "from": "./demos/anchored",
+      "local": "DemoToastAnchored",
+      "imported": "DemoToastAnchored",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/anchored#DemoToastAnchored"
+    },
+    {
+      "from": "./demos/position",
+      "local": "DemoToastPosition",
+      "imported": "DemoToastPosition",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/position#DemoToastPosition"
+    },
+    {
+      "from": "./demos/undo",
+      "local": "DemoToastUndo",
+      "imported": "DemoToastUndo",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/undo#DemoToastUndo"
+    },
+    {
+      "from": "./demos/promise",
+      "local": "DemoToastPromise",
+      "imported": "DemoToastPromise",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/promise#DemoToastPromise"
+    },
+    {
+      "from": "./demos/custom",
+      "local": "DemoToastCustom",
+      "imported": "DemoToastCustom",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/custom#DemoToastCustom"
+    },
+    {
+      "from": "./demos/deduplicate",
+      "local": "DemoToastDeduplicate",
+      "imported": "DemoToastDeduplicate",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/deduplicate#DemoToastDeduplicate"
+    },
+    {
+      "from": "./demos/varying-heights",
+      "local": "DemoToastVaryingHeights",
+      "imported": "DemoToastVaryingHeights",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/varying-heights#DemoToastVaryingHeights"
+    },
+    {
+      "from": "./types",
+      "local": "TypesToast",
+      "imported": "TypesToast",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "from": "./types",
+      "local": "TypesToastAdditional",
+      "imported": "TypesToastAdditional",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToastAdditional"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Toast",
+      "properties": {
+        "id": "toast"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:14:1"
+    },
+    {
+      "depth": 2,
+      "text": "General usage",
+      "properties": {
+        "id": "general-usage"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:51:1"
+    },
+    {
+      "depth": 2,
+      "text": "Global manager",
+      "properties": {
+        "id": "global-manager"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:58:1"
+    },
+    {
+      "depth": 2,
+      "text": "Stacking and animations",
+      "properties": {
+        "id": "stacking-and-animations"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:73:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:160:1"
+    },
+    {
+      "depth": 3,
+      "text": "Anchored toasts",
+      "properties": {
+        "id": "anchored-toasts"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:162:1"
+    },
+    {
+      "depth": 3,
+      "text": "Custom position",
+      "properties": {
+        "id": "custom-position"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:222:1"
+    },
+    {
+      "depth": 3,
+      "text": "Undo action",
+      "properties": {
+        "id": "undo-action"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:233:1"
+    },
+    {
+      "depth": 3,
+      "text": "Promise",
+      "properties": {
+        "id": "promise"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:241:1"
+    },
+    {
+      "depth": 3,
+      "text": "Custom",
+      "properties": {
+        "id": "custom"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:251:1"
+    },
+    {
+      "depth": 3,
+      "text": "Deduplicated toast",
+      "properties": {
+        "id": "deduplicated-toast"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:260:1"
+    },
+    {
+      "depth": 3,
+      "text": "Varying heights",
+      "properties": {
+        "id": "varying-heights"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:268:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:277:1"
+    },
+    {
+      "depth": 3,
+      "text": "Provider",
+      "properties": {
+        "id": "provider"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:281:1"
+    },
+    {
+      "depth": 3,
+      "text": "Portal",
+      "properties": {
+        "id": "portal"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:285:1"
+    },
+    {
+      "depth": 3,
+      "text": "Viewport",
+      "properties": {
+        "id": "viewport"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:289:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:293:1"
+    },
+    {
+      "depth": 3,
+      "text": "Content",
+      "properties": {
+        "id": "content"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:297:1"
+    },
+    {
+      "depth": 3,
+      "text": "Title",
+      "properties": {
+        "id": "title"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:301:1"
+    },
+    {
+      "depth": 3,
+      "text": "Description",
+      "properties": {
+        "id": "description"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:305:1"
+    },
+    {
+      "depth": 3,
+      "text": "Action",
+      "properties": {
+        "id": "action"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:309:1"
+    },
+    {
+      "depth": 3,
+      "text": "Close",
+      "properties": {
+        "id": "close"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:313:1"
+    },
+    {
+      "depth": 3,
+      "text": "Positioner",
+      "properties": {
+        "id": "positioner"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:317:1"
+    },
+    {
+      "depth": 3,
+      "text": "Arrow",
+      "properties": {
+        "id": "arrow"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:321:1"
+    },
+    {
+      "depth": 2,
+      "text": "useToastManager",
+      "properties": {
+        "id": "usetoastmanager"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:325:1"
+    },
+    {
+      "depth": 3,
+      "text": "add method",
+      "properties": {
+        "id": "add-method"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:335:1"
+    },
+    {
+      "depth": 3,
+      "text": "update method",
+      "properties": {
+        "id": "update-method"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:373:1"
+    },
+    {
+      "depth": 3,
+      "text": "close method",
+      "properties": {
+        "id": "close-method"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:391:1"
+    },
+    {
+      "depth": 3,
+      "text": "promise method",
+      "properties": {
+        "id": "promise-method"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:405:1"
+    },
+    {
+      "depth": 2,
+      "text": "Additional types",
+      "properties": {
+        "data-exclude-toc": "",
+        "id": "additional-types"
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:457:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#toastmanagerupdateoptions",
+      "target": "#toastmanagerupdateoptions",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:245:37"
+    },
+    {
+      "source": "#toastmanagerupdateoptions",
+      "target": "#toastmanagerupdateoptions",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:423:29"
+    },
+    {
+      "source": "#ToastuseToastManager-promise",
+      "target": "#ToastuseToastManager-promise",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:453:10"
+    },
+    {
+      "source": "#",
+      "target": "#",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:455:1"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React toast component to generate notifications."
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:5:1"
+    },
+    {
+      "name": "DemoToastHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:12:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/hero#DemoToastHero"
+    },
+    {
+      "name": "kbd",
+      "handler": "html",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:54:3"
+    },
+    {
+      "name": "DemoToastAnchored",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:220:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/anchored#DemoToastAnchored"
+    },
+    {
+      "name": "DemoToastPosition",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:231:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/position#DemoToastPosition"
+    },
+    {
+      "name": "DemoToastUndo",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:239:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/undo#DemoToastUndo"
+    },
+    {
+      "name": "DemoToastPromise",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:249:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/promise#DemoToastPromise"
+    },
+    {
+      "name": "DemoToastCustom",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:258:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/custom#DemoToastCustom"
+    },
+    {
+      "name": "DemoToastDeduplicate",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:266:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/deduplicate#DemoToastDeduplicate"
+    },
+    {
+      "name": "DemoToastVaryingHeights",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:275:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/varying-heights#DemoToastVaryingHeights"
+    },
+    {
+      "name": "TypesToast.Provider",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:283:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Portal",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:287:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Viewport",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:291:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:295:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Content",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:299:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Title",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:303:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Description",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:307:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Action",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:311:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Close",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:315:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Positioner",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:319:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.Arrow",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:323:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToast.useToastManager",
+      "handler": "api",
+      "attributes": {
+        "hideDescription": true
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:333:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+    },
+    {
+      "name": "TypesToastAdditional",
+      "handler": "api",
+      "attributes": {
+        "showAdditionalTypes": [
+          "toastmanagerupdateoptions"
+        ]
+      },
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:459:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToastAdditional"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:5:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:12:1",
+      "detail": "Site must implement DemoToastHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Provider",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Viewport",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Content",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Title",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Description",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Action",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Close",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Toast.Arrow",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:18:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:60:99",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:63:100",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:63:189",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:65:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:69:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:69:1",
+      "detail": "Toast.Provider",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:69:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:157:16",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "React.Fragment",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "Toast.Provider",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "AnchoredToasts",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "StackedToasts",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "Toast.Portal",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "Toast.Viewport",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "Toast.Positioner",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "Toast.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:168:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:220:1",
+      "detail": "Site must implement DemoToastAnchored; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:231:1",
+      "detail": "Site must implement DemoToastPosition; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:239:1",
+      "detail": "Site must implement DemoToastUndo; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:249:1",
+      "detail": "Site must implement DemoToastPromise; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:258:1",
+      "detail": "Site must implement DemoToastCustom; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:266:1",
+      "detail": "Site must implement DemoToastDeduplicate; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:275:1",
+      "detail": "Site must implement DemoToastVaryingHeights; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:283:1",
+      "detail": "Site must implement TypesToast.Provider; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:287:1",
+      "detail": "Site must implement TypesToast.Portal; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:291:1",
+      "detail": "Site must implement TypesToast.Viewport; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:295:1",
+      "detail": "Site must implement TypesToast.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:299:1",
+      "detail": "Site must implement TypesToast.Content; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:303:1",
+      "detail": "Site must implement TypesToast.Title; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:307:1",
+      "detail": "Site must implement TypesToast.Description; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:311:1",
+      "detail": "Site must implement TypesToast.Action; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:315:1",
+      "detail": "Site must implement TypesToast.Close; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:319:1",
+      "detail": "Site must implement TypesToast.Positioner; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:323:1",
+      "detail": "Site must implement TypesToast.Arrow; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:325:4",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:329:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:329:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:333:1",
+      "detail": "Site must implement TypesToast.useToastManager; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:343:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:349:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-language",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:349:1",
+      "detail": "Retained source language requires semantic review; not silently relabeled.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:377:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:385:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:395:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:401:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:409:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:425:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:459:1",
+      "detail": "Site must implement TypesToastAdditional; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/toast/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Toast",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 8,
+                "offset": 7
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 8,
+            "offset": 7
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "toast"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Generates toast notifications.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 19
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 41,
+                    "offset": 49
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 52,
+                "offset": 60
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 9
+          },
+          "end": {
+            "line": 3,
+            "column": 52,
+            "offset": 60
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 70
+              },
+              "end": {
+                "line": 6,
+                "column": 21,
+                "offset": 88
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React toast component to generate notifications.",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 3,
+                "offset": 91
+              },
+              "end": {
+                "line": 7,
+                "column": 86,
+                "offset": 174
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "offset": 62
+          },
+          "end": {
+            "line": 8,
+            "column": 3,
+            "offset": 177
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToastHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 179
+          },
+          "end": {
+            "line": 10,
+            "column": 46,
+            "offset": 224
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToastHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 226
+          },
+          "end": {
+            "line": 12,
+            "column": 18,
+            "offset": 243
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/hero#DemoToastHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 4,
+                "offset": 248
+              },
+              "end": {
+                "line": 14,
+                "column": 11,
+                "offset": 255
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 14,
+            "column": 1,
+            "offset": 245
+          },
+          "end": {
+            "line": 14,
+            "column": 11,
+            "offset": 255
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 257
+              },
+              "end": {
+                "line": 16,
+                "column": 45,
+                "offset": 301
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 16,
+            "column": 1,
+            "offset": 257
+          },
+          "end": {
+            "line": 16,
+            "column": 45,
+            "offset": 301
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Toast } from 'baseui-solid2/toast';\n\n<Toast.Provider>\n  <Toast.Portal>\n    <Toast.Viewport>\n      {/* Stacked toasts */}\n      <Toast.Root>\n        <Toast.Content>\n          <Toast.Title />\n          <Toast.Description />\n          <Toast.Action />\n          <Toast.Close />\n        </Toast.Content>\n      </Toast.Root>\n\n      {/* Anchored toasts */}\n      <Toast.Positioner>\n        <Toast.Root>\n          <Toast.Arrow />\n          <Toast.Content>\n            <Toast.Title />\n            <Toast.Description />\n            <Toast.Action />\n            <Toast.Close />\n          </Toast.Content>\n        </Toast.Root>\n      </Toast.Positioner>\n    </Toast.Viewport>\n  </Toast.Portal>\n</Toast.Provider>;",
+        "position": {
+          "start": {
+            "line": 18,
+            "column": 1,
+            "offset": 303
+          },
+          "end": {
+            "line": 49,
+            "column": 4,
+            "offset": 1041
+          }
+        },
+        "data": {
+          "sourceValue": "import { Toast } from '@base-ui/react/toast';\n\n<Toast.Provider>\n  <Toast.Portal>\n    <Toast.Viewport>\n      {/* Stacked toasts */}\n      <Toast.Root>\n        <Toast.Content>\n          <Toast.Title />\n          <Toast.Description />\n          <Toast.Action />\n          <Toast.Close />\n        </Toast.Content>\n      </Toast.Root>\n\n      {/* Anchored toasts */}\n      <Toast.Positioner>\n        <Toast.Root>\n          <Toast.Arrow />\n          <Toast.Content>\n            <Toast.Title />\n            <Toast.Description />\n            <Toast.Action />\n            <Toast.Close />\n          </Toast.Content>\n        </Toast.Root>\n      </Toast.Positioner>\n    </Toast.Viewport>\n  </Toast.Portal>\n</Toast.Provider>;",
+          "references": [
+            {
+              "value": "@base-ui/react/toast",
+              "start": 23,
+              "end": 43,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/toast",
+              "start": 23,
+              "end": 43,
+              "kind": "import",
+              "replacement": "baseui-solid2/toast"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "General usage",
+            "position": {
+              "start": {
+                "line": 51,
+                "column": 4,
+                "offset": 1046
+              },
+              "end": {
+                "line": 51,
+                "column": 17,
+                "offset": 1059
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 51,
+            "column": 1,
+            "offset": 1043
+          },
+          "end": {
+            "line": 51,
+            "column": 17,
+            "offset": 1059
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "general-usage"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "<Toast.Provider>",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 3,
+                        "offset": 1063
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 21,
+                        "offset": 1081
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " can be wrapped around your entire app, ensuring all toasts are rendered in the same viewport.",
+                    "position": {
+                      "start": {
+                        "line": 53,
+                        "column": 21,
+                        "offset": 1081
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 115,
+                        "offset": 1175
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 53,
+                    "column": 3,
+                    "offset": 1063
+                  },
+                  "end": {
+                    "line": 53,
+                    "column": 115,
+                    "offset": 1175
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 1,
+                "offset": 1061
+              },
+              "end": {
+                "line": 53,
+                "column": 115,
+                "offset": 1175
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "mdxJsxTextElement",
+                    "name": "kbd",
+                    "attributes": [],
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "F6",
+                        "position": {
+                          "start": {
+                            "line": 54,
+                            "column": 8,
+                            "offset": 1183
+                          },
+                          "end": {
+                            "line": 54,
+                            "column": 10,
+                            "offset": 1185
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 3,
+                        "offset": 1178
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 16,
+                        "offset": 1191
+                      }
+                    },
+                    "data": {
+                      "handler": "html"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " lets users jump into the toast viewport landmark region to navigate toasts with\nkeyboard focus.",
+                    "position": {
+                      "start": {
+                        "line": 54,
+                        "column": 16,
+                        "offset": 1191
+                      },
+                      "end": {
+                        "line": 55,
+                        "column": 18,
+                        "offset": 1289
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 54,
+                    "column": 3,
+                    "offset": 1178
+                  },
+                  "end": {
+                    "line": 55,
+                    "column": 18,
+                    "offset": 1289
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 54,
+                "column": 1,
+                "offset": 1176
+              },
+              "end": {
+                "line": 55,
+                "column": 18,
+                "offset": 1289
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The ",
+                    "position": {
+                      "start": {
+                        "line": 56,
+                        "column": 3,
+                        "offset": 1292
+                      },
+                      "end": {
+                        "line": 56,
+                        "column": 7,
+                        "offset": 1296
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "data-base-ui-swipe-ignore",
+                    "position": {
+                      "start": {
+                        "line": 56,
+                        "column": 7,
+                        "offset": 1296
+                      },
+                      "end": {
+                        "line": 56,
+                        "column": 34,
+                        "offset": 1323
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " attribute can be manually added to elements inside of a toast to prevent swipe-to-dismiss gestures on them. Interactive elements are automatically prevented.",
+                    "position": {
+                      "start": {
+                        "line": 56,
+                        "column": 34,
+                        "offset": 1323
+                      },
+                      "end": {
+                        "line": 56,
+                        "column": 192,
+                        "offset": 1481
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 56,
+                    "column": 3,
+                    "offset": 1292
+                  },
+                  "end": {
+                    "line": 56,
+                    "column": 192,
+                    "offset": 1481
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 56,
+                "column": 1,
+                "offset": 1290
+              },
+              "end": {
+                "line": 56,
+                "column": 192,
+                "offset": 1481
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 53,
+            "column": 1,
+            "offset": 1061
+          },
+          "end": {
+            "line": 56,
+            "column": 192,
+            "offset": 1481
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Global manager",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 4,
+                "offset": 1486
+              },
+              "end": {
+                "line": 58,
+                "column": 18,
+                "offset": 1500
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 1483
+          },
+          "end": {
+            "line": 58,
+            "column": 18,
+            "offset": 1500
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "global-manager"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A global toast manager can be created by passing the ",
+            "position": {
+              "start": {
+                "line": 60,
+                "column": 1,
+                "offset": 1502
+              },
+              "end": {
+                "line": 60,
+                "column": 54,
+                "offset": 1555
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "toastManager",
+            "position": {
+              "start": {
+                "line": 60,
+                "column": 54,
+                "offset": 1555
+              },
+              "end": {
+                "line": 60,
+                "column": 68,
+                "offset": 1569
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to the ",
+            "position": {
+              "start": {
+                "line": 60,
+                "column": 68,
+                "offset": 1569
+              },
+              "end": {
+                "line": 60,
+                "column": 81,
+                "offset": 1582
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Provider>",
+            "position": {
+              "start": {
+                "line": 60,
+                "column": 81,
+                "offset": 1582
+              },
+              "end": {
+                "line": 60,
+                "column": 99,
+                "offset": 1600
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".\nThis enables you to queue a toast from anywhere in the app (such as in functions outside the React tree) while still using the same toast renderer.",
+            "position": {
+              "start": {
+                "line": 60,
+                "column": 99,
+                "offset": 1600
+              },
+              "end": {
+                "line": 61,
+                "column": 148,
+                "offset": 1749
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 60,
+            "column": 1,
+            "offset": 1502
+          },
+          "end": {
+            "line": 61,
+            "column": 148,
+            "offset": 1749
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The created ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 1,
+                "offset": 1751
+              },
+              "end": {
+                "line": 63,
+                "column": 13,
+                "offset": 1763
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "toastManager",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 13,
+                "offset": 1763
+              },
+              "end": {
+                "line": 63,
+                "column": 27,
+                "offset": 1777
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " exposes the same ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 27,
+                "offset": 1777
+              },
+              "end": {
+                "line": 63,
+                "column": 45,
+                "offset": 1795
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "add",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 45,
+                "offset": 1795
+              },
+              "end": {
+                "line": 63,
+                "column": 50,
+                "offset": 1800
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 50,
+                "offset": 1800
+              },
+              "end": {
+                "line": 63,
+                "column": 52,
+                "offset": 1802
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "close",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 52,
+                "offset": 1802
+              },
+              "end": {
+                "line": 63,
+                "column": 59,
+                "offset": 1809
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 59,
+                "offset": 1809
+              },
+              "end": {
+                "line": 63,
+                "column": 61,
+                "offset": 1811
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "update",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 61,
+                "offset": 1811
+              },
+              "end": {
+                "line": 63,
+                "column": 69,
+                "offset": 1819
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 69,
+                "offset": 1819
+              },
+              "end": {
+                "line": 63,
+                "column": 75,
+                "offset": 1825
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "promise",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 75,
+                "offset": 1825
+              },
+              "end": {
+                "line": 63,
+                "column": 84,
+                "offset": 1834
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " methods as the ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 84,
+                "offset": 1834
+              },
+              "end": {
+                "line": 63,
+                "column": 100,
+                "offset": 1850
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "Toast.useToastManager()",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 100,
+                "offset": 1850
+              },
+              "end": {
+                "line": 63,
+                "column": 125,
+                "offset": 1875
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " hook. Unlike the hook, it does not return the reactive ",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 125,
+                "offset": 1875
+              },
+              "end": {
+                "line": 63,
+                "column": 181,
+                "offset": 1931
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "toasts",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 181,
+                "offset": 1931
+              },
+              "end": {
+                "line": 63,
+                "column": 189,
+                "offset": 1939
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " array, since it lives outside the React tree.",
+            "position": {
+              "start": {
+                "line": 63,
+                "column": 189,
+                "offset": 1939
+              },
+              "end": {
+                "line": 63,
+                "column": 235,
+                "offset": 1985
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 63,
+            "column": 1,
+            "offset": 1751
+          },
+          "end": {
+            "line": 63,
+            "column": 235,
+            "offset": 1985
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Creating a manager instance\"",
+        "value": "const toastManager = Toast.createToastManager();",
+        "position": {
+          "start": {
+            "line": 65,
+            "column": 1,
+            "offset": 1987
+          },
+          "end": {
+            "line": 67,
+            "column": 4,
+            "offset": 2082
+          }
+        },
+        "data": {
+          "sourceValue": "const toastManager = Toast.createToastManager();",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Using the instance\"",
+        "value": "<Toast.Provider toastManager={toastManager}>",
+        "position": {
+          "start": {
+            "line": 69,
+            "column": 1,
+            "offset": 2084
+          },
+          "end": {
+            "line": 71,
+            "column": 4,
+            "offset": 2166
+          }
+        },
+        "data": {
+          "sourceValue": "<Toast.Provider toastManager={toastManager}>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 1,
+              "message": "JSX element 'Toast.Provider' has no corresponding closing tag."
+            },
+            {
+              "start": 44,
+              "message": "'</' expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Stacking and animations",
+            "position": {
+              "start": {
+                "line": 73,
+                "column": 4,
+                "offset": 2171
+              },
+              "end": {
+                "line": 73,
+                "column": 27,
+                "offset": 2194
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 73,
+            "column": 1,
+            "offset": 2168
+          },
+          "end": {
+            "line": 73,
+            "column": 27,
+            "offset": 2194
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "stacking-and-animations"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 1,
+                "offset": 2196
+              },
+              "end": {
+                "line": 75,
+                "column": 5,
+                "offset": 2200
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "--toast-index",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 5,
+                "offset": 2200
+              },
+              "end": {
+                "line": 75,
+                "column": 20,
+                "offset": 2215
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " CSS variable can be used to determine the stacking order of the toasts.\nThe 0th index toast appears at the front.",
+            "position": {
+              "start": {
+                "line": 75,
+                "column": 20,
+                "offset": 2215
+              },
+              "end": {
+                "line": 76,
+                "column": 42,
+                "offset": 2329
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 75,
+            "column": 1,
+            "offset": 2196
+          },
+          "end": {
+            "line": 76,
+            "column": 42,
+            "offset": 2329
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"z-index stacking\"",
+        "value": ".Toast {\n  z-index: calc(1000 - var(--toast-index));\n  transform: scale(calc(max(0, 1 - (var(--toast-index) * 0.1))));\n}",
+        "position": {
+          "start": {
+            "line": 78,
+            "column": 1,
+            "offset": 2331
+          },
+          "end": {
+            "line": 83,
+            "column": 4,
+            "offset": 2487
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 85,
+                "column": 1,
+                "offset": 2489
+              },
+              "end": {
+                "line": 85,
+                "column": 5,
+                "offset": 2493
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "--toast-offset-y",
+            "position": {
+              "start": {
+                "line": 85,
+                "column": 5,
+                "offset": 2493
+              },
+              "end": {
+                "line": 85,
+                "column": 23,
+                "offset": 2511
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " CSS variable can be used to determine the vertical offset of the toasts when positioned absolutely with a translation offset — this is usually used with the ",
+            "position": {
+              "start": {
+                "line": 85,
+                "column": 23,
+                "offset": 2511
+              },
+              "end": {
+                "line": 85,
+                "column": 181,
+                "offset": 2669
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-expanded",
+            "position": {
+              "start": {
+                "line": 85,
+                "column": 181,
+                "offset": 2669
+              },
+              "end": {
+                "line": 85,
+                "column": 196,
+                "offset": 2684
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute, present when the toast viewport is being hovered or has focus.",
+            "position": {
+              "start": {
+                "line": 85,
+                "column": 196,
+                "offset": 2684
+              },
+              "end": {
+                "line": 85,
+                "column": 270,
+                "offset": 2758
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 85,
+            "column": 1,
+            "offset": 2489
+          },
+          "end": {
+            "line": 85,
+            "column": 270,
+            "offset": 2758
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"Expanded offset\"",
+        "value": ".Toast[data-expanded] {\n  transform: translateY(var(--toast-offset-y));\n}",
+        "position": {
+          "start": {
+            "line": 87,
+            "column": 1,
+            "offset": 2760
+          },
+          "end": {
+            "line": 91,
+            "column": 4,
+            "offset": 2868
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "While the stack is collapsed, each toast's height can be clamped to the frontmost toast's height using the ",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 1,
+                "offset": 2870
+              },
+              "end": {
+                "line": 93,
+                "column": 108,
+                "offset": 2977
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "--toast-frontmost-height",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 108,
+                "offset": 2977
+              },
+              "end": {
+                "line": 93,
+                "column": 134,
+                "offset": 3003
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " CSS variable, and ",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 134,
+                "offset": 3003
+              },
+              "end": {
+                "line": 93,
+                "column": 153,
+                "offset": 3022
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Content>",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 153,
+                "offset": 3022
+              },
+              "end": {
+                "line": 93,
+                "column": 170,
+                "offset": 3039
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is used to hide the content of the toasts behind it.\nThe ",
+            "position": {
+              "start": {
+                "line": 93,
+                "column": 170,
+                "offset": 3039
+              },
+              "end": {
+                "line": 94,
+                "column": 5,
+                "offset": 3097
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-behind",
+            "position": {
+              "start": {
+                "line": 94,
+                "column": 5,
+                "offset": 3097
+              },
+              "end": {
+                "line": 94,
+                "column": 18,
+                "offset": 3110
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute marks content that sits behind the frontmost toast and pairs with the ",
+            "position": {
+              "start": {
+                "line": 94,
+                "column": 18,
+                "offset": 3110
+              },
+              "end": {
+                "line": 94,
+                "column": 99,
+                "offset": 3191
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-expanded",
+            "position": {
+              "start": {
+                "line": 94,
+                "column": 99,
+                "offset": 3191
+              },
+              "end": {
+                "line": 94,
+                "column": 114,
+                "offset": 3206
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute so the content fades back in when the viewport expands:",
+            "position": {
+              "start": {
+                "line": 94,
+                "column": 114,
+                "offset": 3206
+              },
+              "end": {
+                "line": 94,
+                "column": 180,
+                "offset": 3272
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 93,
+            "column": 1,
+            "offset": 2870
+          },
+          "end": {
+            "line": 94,
+            "column": 180,
+            "offset": 3272
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"Collapsed content\"",
+        "value": ".Toast {\n  height: var(--toast-frontmost-height, var(--toast-height));\n}\n\n.ToastContent {\n  transition: opacity 0.25s;\n}\n\n/* @highlight-text \"data-behind\" */\n.ToastContent[data-behind] {\n  opacity: 0;\n}\n\n/* @highlight-text \"data-expanded\" */\n.ToastContent[data-expanded] {\n  opacity: 1;\n}",
+        "position": {
+          "start": {
+            "line": 96,
+            "column": 1,
+            "offset": 3274
+          },
+          "end": {
+            "line": 114,
+            "column": 4,
+            "offset": 3599
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 116,
+                "column": 1,
+                "offset": 3601
+              },
+              "end": {
+                "line": 116,
+                "column": 5,
+                "offset": 3605
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "--toast-swipe-movement-x",
+            "position": {
+              "start": {
+                "line": 116,
+                "column": 5,
+                "offset": 3605
+              },
+              "end": {
+                "line": 116,
+                "column": 31,
+                "offset": 3631
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 116,
+                "column": 31,
+                "offset": 3631
+              },
+              "end": {
+                "line": 116,
+                "column": 36,
+                "offset": 3636
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "--toast-swipe-movement-y",
+            "position": {
+              "start": {
+                "line": 116,
+                "column": 36,
+                "offset": 3636
+              },
+              "end": {
+                "line": 116,
+                "column": 62,
+                "offset": 3662
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " CSS variables are used to determine the swipe movement of the toasts in order to add a translation offset.",
+            "position": {
+              "start": {
+                "line": 116,
+                "column": 62,
+                "offset": 3662
+              },
+              "end": {
+                "line": 116,
+                "column": 169,
+                "offset": 3769
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 116,
+            "column": 1,
+            "offset": 3601
+          },
+          "end": {
+            "line": 116,
+            "column": 169,
+            "offset": 3769
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"Swipe offset\"",
+        "value": ".Toast {\n  transform: scale(calc(max(0, 1 - (var(--toast-index) * 0.1))))\n    translateX(var(--toast-swipe-movement-x)) /* @highlight-text \"--toast-swipe-movement-x\" */\n    /* @highlight-text \"--toast-swipe-movement-y\" */\n    translateY(calc(var(--toast-swipe-movement-y) + (var(--toast-index) * -20%)));\n}",
+        "position": {
+          "start": {
+            "line": 118,
+            "column": 1,
+            "offset": 3771
+          },
+          "end": {
+            "line": 125,
+            "column": 4,
+            "offset": 4109
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 1,
+                "offset": 4111
+              },
+              "end": {
+                "line": 127,
+                "column": 5,
+                "offset": 4115
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-swipe-direction",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 5,
+                "offset": 4115
+              },
+              "end": {
+                "line": 127,
+                "column": 27,
+                "offset": 4137
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute can be used to determine the swipe direction of the toasts to add a translation offset upon dismissal.",
+            "position": {
+              "start": {
+                "line": 127,
+                "column": 27,
+                "offset": 4137
+              },
+              "end": {
+                "line": 127,
+                "column": 140,
+                "offset": 4250
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 127,
+            "column": 1,
+            "offset": 4111
+          },
+          "end": {
+            "line": 127,
+            "column": 140,
+            "offset": 4250
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"Swipe direction\"",
+        "value": "&[data-ending-style] {\n  opacity: 0;\n\n  /* @highlight-text \"data-swipe-direction\" */\n  &[data-swipe-direction='up'] {\n    transform: translateY(calc(var(--toast-swipe-movement-y) - 150%));\n  }\n  /* @highlight-text \"data-swipe-direction\" */\n  &[data-swipe-direction='down'] {\n    transform: translateY(calc(var(--toast-swipe-movement-y) + 150%));\n  }\n  /* Note: --offset-y is defined locally in these examples and derives from\n   --toast-offset-y, --toast-index, and swipe movement values */\n  /* @highlight-text \"data-swipe-direction\" */\n  &[data-swipe-direction='left'] {\n    transform: translateX(calc(var(--toast-swipe-movement-x) - 150%)) translateY(var(--offset-y));\n  }\n  /* @highlight-text \"data-swipe-direction\" */\n  &[data-swipe-direction='right'] {\n    transform: translateX(calc(var(--toast-swipe-movement-x) + 150%)) translateY(var(--offset-y));\n  }\n}",
+        "position": {
+          "start": {
+            "line": 129,
+            "column": 1,
+            "offset": 4252
+          },
+          "end": {
+            "line": 152,
+            "column": 4,
+            "offset": 5150
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 1,
+                "offset": 5152
+              },
+              "end": {
+                "line": 154,
+                "column": 5,
+                "offset": 5156
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-limited",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 5,
+                "offset": 5156
+              },
+              "end": {
+                "line": 154,
+                "column": 19,
+                "offset": 5170
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute indicates that the toast exceeded the ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 19,
+                "offset": 5170
+              },
+              "end": {
+                "line": 154,
+                "column": 68,
+                "offset": 5219
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "limit",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 68,
+                "offset": 5219
+              },
+              "end": {
+                "line": 154,
+                "column": 75,
+                "offset": 5226
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " option.\nLimited toasts remain mounted with the HTML ",
+            "position": {
+              "start": {
+                "line": 154,
+                "column": 75,
+                "offset": 5226
+              },
+              "end": {
+                "line": 155,
+                "column": 45,
+                "offset": 5279
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "inert",
+            "position": {
+              "start": {
+                "line": 155,
+                "column": 45,
+                "offset": 5279
+              },
+              "end": {
+                "line": 155,
+                "column": 52,
+                "offset": 5286
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute, so this is useful for hiding them or animating them differently.",
+            "position": {
+              "start": {
+                "line": 155,
+                "column": 52,
+                "offset": 5286
+              },
+              "end": {
+                "line": 155,
+                "column": 128,
+                "offset": 5362
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 154,
+            "column": 1,
+            "offset": 5152
+          },
+          "end": {
+            "line": 155,
+            "column": 128,
+            "offset": 5362
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The ",
+            "position": {
+              "start": {
+                "line": 157,
+                "column": 1,
+                "offset": 5364
+              },
+              "end": {
+                "line": 157,
+                "column": 5,
+                "offset": 5368
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "updateKey",
+            "position": {
+              "start": {
+                "line": 157,
+                "column": 5,
+                "offset": 5368
+              },
+              "end": {
+                "line": 157,
+                "column": 16,
+                "offset": 5379
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " property increments when a toast is updated or upserted.\nThis can be used to replay attention-grabbing styles by switching animation names or, when remounting is acceptable, by including it in a React ",
+            "position": {
+              "start": {
+                "line": 157,
+                "column": 16,
+                "offset": 5379
+              },
+              "end": {
+                "line": 158,
+                "column": 145,
+                "offset": 5581
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "key",
+            "position": {
+              "start": {
+                "line": 158,
+                "column": 145,
+                "offset": 5581
+              },
+              "end": {
+                "line": 158,
+                "column": 150,
+                "offset": 5586
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 158,
+                "column": 150,
+                "offset": 5586
+              },
+              "end": {
+                "line": 158,
+                "column": 151,
+                "offset": 5587
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 157,
+            "column": 1,
+            "offset": 5364
+          },
+          "end": {
+            "line": 158,
+            "column": 151,
+            "offset": 5587
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 160,
+                "column": 4,
+                "offset": 5592
+              },
+              "end": {
+                "line": 160,
+                "column": 12,
+                "offset": 5600
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 160,
+            "column": 1,
+            "offset": 5589
+          },
+          "end": {
+            "line": 160,
+            "column": 12,
+            "offset": 5600
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anchored toasts",
+            "position": {
+              "start": {
+                "line": 162,
+                "column": 5,
+                "offset": 5606
+              },
+              "end": {
+                "line": 162,
+                "column": 20,
+                "offset": 5621
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 162,
+            "column": 1,
+            "offset": 5602
+          },
+          "end": {
+            "line": 162,
+            "column": 20,
+            "offset": 5621
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anchored-toasts"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Toasts can be anchored to a specific element using ",
+            "position": {
+              "start": {
+                "line": 164,
+                "column": 1,
+                "offset": 5623
+              },
+              "end": {
+                "line": 164,
+                "column": 52,
+                "offset": 5674
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Positioner>",
+            "position": {
+              "start": {
+                "line": 164,
+                "column": 52,
+                "offset": 5674
+              },
+              "end": {
+                "line": 164,
+                "column": 72,
+                "offset": 5694
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and the ",
+            "position": {
+              "start": {
+                "line": 164,
+                "column": 72,
+                "offset": 5694
+              },
+              "end": {
+                "line": 164,
+                "column": 81,
+                "offset": 5703
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "positionerProps",
+            "position": {
+              "start": {
+                "line": 164,
+                "column": 81,
+                "offset": 5703
+              },
+              "end": {
+                "line": 164,
+                "column": 98,
+                "offset": 5720
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " option when adding a toast. This is useful for showing contextual feedback like transient \"Copied\" toasts that appear near the button that triggered the action.",
+            "position": {
+              "start": {
+                "line": 164,
+                "column": 98,
+                "offset": 5720
+              },
+              "end": {
+                "line": 164,
+                "column": 259,
+                "offset": 5881
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 164,
+            "column": 1,
+            "offset": 5623
+          },
+          "end": {
+            "line": 164,
+            "column": 259,
+            "offset": 5881
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Anchored toasts should be rendered in a separate ",
+            "position": {
+              "start": {
+                "line": 166,
+                "column": 1,
+                "offset": 5883
+              },
+              "end": {
+                "line": 166,
+                "column": 50,
+                "offset": 5932
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Provider>",
+            "position": {
+              "start": {
+                "line": 166,
+                "column": 50,
+                "offset": 5932
+              },
+              "end": {
+                "line": 166,
+                "column": 68,
+                "offset": 5950
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " from stacked toasts. A global toast manager can be created for each to manage them separately throughout your app:",
+            "position": {
+              "start": {
+                "line": 166,
+                "column": 68,
+                "offset": 5950
+              },
+              "end": {
+                "line": 166,
+                "column": 183,
+                "offset": 6065
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 166,
+            "column": 1,
+            "offset": 5883
+          },
+          "end": {
+            "line": 166,
+            "column": 183,
+            "offset": 6065
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Mixing stacked and anchored toasts\"",
+        "value": "const anchoredToastManager = Toast.createToastManager();\nconst stackedToastManager = Toast.createToastManager();\n\nfunction App() {\n  return (\n    <React.Fragment>\n      <Toast.Provider toastManager={anchoredToastManager}>\n        <AnchoredToasts />\n      </Toast.Provider>\n      <Toast.Provider toastManager={stackedToastManager}>\n        <StackedToasts />\n      </Toast.Provider>\n\n      {/* App content */}\n    </React.Fragment>\n  );\n}\n\nfunction AnchoredToasts() {\n  const { toasts } = Toast.useToastManager();\n  return (\n    <Toast.Portal>\n      <Toast.Viewport>\n        {toasts.map((toast) => (\n          <Toast.Positioner key={toast.id} toast={toast}>\n            <Toast.Root toast={toast}>{/* ... */}</Toast.Root>\n          </Toast.Positioner>\n        ))}\n      </Toast.Viewport>\n    </Toast.Portal>\n  );\n}\n\nfunction StackedToasts() {\n  const { toasts } = Toast.useToastManager();\n  return (\n    <Toast.Portal>\n      <Toast.Viewport>\n        {toasts.map((toast) => (\n          <Toast.Root key={toast.id} toast={toast}>\n            {/* ... */}\n          </Toast.Root>\n        ))}\n      </Toast.Viewport>\n    </Toast.Portal>\n  );\n}",
+        "position": {
+          "start": {
+            "line": 168,
+            "column": 1,
+            "offset": 6067
+          },
+          "end": {
+            "line": 216,
+            "column": 4,
+            "offset": 7255
+          }
+        },
+        "data": {
+          "sourceValue": "const anchoredToastManager = Toast.createToastManager();\nconst stackedToastManager = Toast.createToastManager();\n\nfunction App() {\n  return (\n    <React.Fragment>\n      <Toast.Provider toastManager={anchoredToastManager}>\n        <AnchoredToasts />\n      </Toast.Provider>\n      <Toast.Provider toastManager={stackedToastManager}>\n        <StackedToasts />\n      </Toast.Provider>\n\n      {/* App content */}\n    </React.Fragment>\n  );\n}\n\nfunction AnchoredToasts() {\n  const { toasts } = Toast.useToastManager();\n  return (\n    <Toast.Portal>\n      <Toast.Viewport>\n        {toasts.map((toast) => (\n          <Toast.Positioner key={toast.id} toast={toast}>\n            <Toast.Root toast={toast}>{/* ... */}</Toast.Root>\n          </Toast.Positioner>\n        ))}\n      </Toast.Viewport>\n    </Toast.Portal>\n  );\n}\n\nfunction StackedToasts() {\n  const { toasts } = Toast.useToastManager();\n  return (\n    <Toast.Portal>\n      <Toast.Viewport>\n        {toasts.map((toast) => (\n          <Toast.Root key={toast.id} toast={toast}>\n            {/* ... */}\n          </Toast.Root>\n        ))}\n      </Toast.Viewport>\n    </Toast.Portal>\n  );\n}",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToastAnchored } from './demos/anchored';",
+        "position": {
+          "start": {
+            "line": 218,
+            "column": 1,
+            "offset": 7257
+          },
+          "end": {
+            "line": 218,
+            "column": 54,
+            "offset": 7310
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToastAnchored",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 220,
+            "column": 1,
+            "offset": 7312
+          },
+          "end": {
+            "line": 220,
+            "column": 22,
+            "offset": 7333
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/anchored#DemoToastAnchored"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Custom position",
+            "position": {
+              "start": {
+                "line": 222,
+                "column": 5,
+                "offset": 7339
+              },
+              "end": {
+                "line": 222,
+                "column": 20,
+                "offset": 7354
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 222,
+            "column": 1,
+            "offset": 7335
+          },
+          "end": {
+            "line": 222,
+            "column": 20,
+            "offset": 7354
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "custom-position"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The position of the toasts is controlled by your own CSS.\nTo change the toasts' position, you can modify the ",
+            "position": {
+              "start": {
+                "line": 224,
+                "column": 1,
+                "offset": 7356
+              },
+              "end": {
+                "line": 225,
+                "column": 52,
+                "offset": 7465
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": ".Viewport",
+            "position": {
+              "start": {
+                "line": 225,
+                "column": 52,
+                "offset": 7465
+              },
+              "end": {
+                "line": 225,
+                "column": 63,
+                "offset": 7476
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 225,
+                "column": 63,
+                "offset": 7476
+              },
+              "end": {
+                "line": 225,
+                "column": 68,
+                "offset": 7481
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": ".Root",
+            "position": {
+              "start": {
+                "line": 225,
+                "column": 68,
+                "offset": 7481
+              },
+              "end": {
+                "line": 225,
+                "column": 75,
+                "offset": 7488
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " styles.\nA more general component could accept a ",
+            "position": {
+              "start": {
+                "line": 225,
+                "column": 75,
+                "offset": 7488
+              },
+              "end": {
+                "line": 226,
+                "column": 41,
+                "offset": 7537
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-position",
+            "position": {
+              "start": {
+                "line": 226,
+                "column": 41,
+                "offset": 7537
+              },
+              "end": {
+                "line": 226,
+                "column": 56,
+                "offset": 7552
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute, which the CSS handles for each variation.\nThe following shows a top-center position:",
+            "position": {
+              "start": {
+                "line": 226,
+                "column": 56,
+                "offset": 7552
+              },
+              "end": {
+                "line": 227,
+                "column": 43,
+                "offset": 7648
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 224,
+            "column": 1,
+            "offset": 7356
+          },
+          "end": {
+            "line": 227,
+            "column": 43,
+            "offset": 7648
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToastPosition } from './demos/position';",
+        "position": {
+          "start": {
+            "line": 229,
+            "column": 1,
+            "offset": 7650
+          },
+          "end": {
+            "line": 229,
+            "column": 54,
+            "offset": 7703
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToastPosition",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 231,
+            "column": 1,
+            "offset": 7705
+          },
+          "end": {
+            "line": 231,
+            "column": 22,
+            "offset": 7726
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/position#DemoToastPosition"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Undo action",
+            "position": {
+              "start": {
+                "line": 233,
+                "column": 5,
+                "offset": 7732
+              },
+              "end": {
+                "line": 233,
+                "column": 16,
+                "offset": 7743
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 233,
+            "column": 1,
+            "offset": 7728
+          },
+          "end": {
+            "line": 233,
+            "column": 16,
+            "offset": 7743
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "undo-action"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When adding a toast, the ",
+            "position": {
+              "start": {
+                "line": 235,
+                "column": 1,
+                "offset": 7745
+              },
+              "end": {
+                "line": 235,
+                "column": 26,
+                "offset": 7770
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "actionProps",
+            "position": {
+              "start": {
+                "line": 235,
+                "column": 26,
+                "offset": 7770
+              },
+              "end": {
+                "line": 235,
+                "column": 39,
+                "offset": 7783
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " option can be used to define props for an action button inside of it—this enables the ability to undo an action associated with the toast.",
+            "position": {
+              "start": {
+                "line": 235,
+                "column": 39,
+                "offset": 7783
+              },
+              "end": {
+                "line": 235,
+                "column": 178,
+                "offset": 7922
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 235,
+            "column": 1,
+            "offset": 7745
+          },
+          "end": {
+            "line": 235,
+            "column": 178,
+            "offset": 7922
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToastUndo } from './demos/undo';",
+        "position": {
+          "start": {
+            "line": 237,
+            "column": 1,
+            "offset": 7924
+          },
+          "end": {
+            "line": 237,
+            "column": 46,
+            "offset": 7969
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToastUndo",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 239,
+            "column": 1,
+            "offset": 7971
+          },
+          "end": {
+            "line": 239,
+            "column": 18,
+            "offset": 7988
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/undo#DemoToastUndo"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Promise",
+            "position": {
+              "start": {
+                "line": 241,
+                "column": 5,
+                "offset": 7994
+              },
+              "end": {
+                "line": 241,
+                "column": 12,
+                "offset": 8001
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 241,
+            "column": 1,
+            "offset": 7990
+          },
+          "end": {
+            "line": 241,
+            "column": 12,
+            "offset": 8001
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "promise"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "An asynchronous toast can be created with three possible states: ",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 1,
+                "offset": 8003
+              },
+              "end": {
+                "line": 243,
+                "column": 66,
+                "offset": 8068
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "loading",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 66,
+                "offset": 8068
+              },
+              "end": {
+                "line": 243,
+                "column": 75,
+                "offset": 8077
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 75,
+                "offset": 8077
+              },
+              "end": {
+                "line": 243,
+                "column": 77,
+                "offset": 8079
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "success",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 77,
+                "offset": 8079
+              },
+              "end": {
+                "line": 243,
+                "column": 86,
+                "offset": 8088
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and ",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 86,
+                "offset": 8088
+              },
+              "end": {
+                "line": 243,
+                "column": 92,
+                "offset": 8094
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "error",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 92,
+                "offset": 8094
+              },
+              "end": {
+                "line": 243,
+                "column": 99,
+                "offset": 8101
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".\nThe ",
+            "position": {
+              "start": {
+                "line": 243,
+                "column": 99,
+                "offset": 8101
+              },
+              "end": {
+                "line": 244,
+                "column": 5,
+                "offset": 8107
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "type",
+            "position": {
+              "start": {
+                "line": 244,
+                "column": 5,
+                "offset": 8107
+              },
+              "end": {
+                "line": 244,
+                "column": 11,
+                "offset": 8113
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " string matches these states to change the styling.\nEach of the states also accepts the ",
+            "position": {
+              "start": {
+                "line": 244,
+                "column": 11,
+                "offset": 8113
+              },
+              "end": {
+                "line": 245,
+                "column": 37,
+                "offset": 8201
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "#toastmanagerupdateoptions",
+            "children": [
+              {
+                "type": "text",
+                "value": "method options",
+                "position": {
+                  "start": {
+                    "line": 245,
+                    "column": 38,
+                    "offset": 8202
+                  },
+                  "end": {
+                    "line": 245,
+                    "column": 52,
+                    "offset": 8216
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 245,
+                "column": 37,
+                "offset": 8201
+              },
+              "end": {
+                "line": 245,
+                "column": 81,
+                "offset": 8245
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " object for more granular control.",
+            "position": {
+              "start": {
+                "line": 245,
+                "column": 81,
+                "offset": 8245
+              },
+              "end": {
+                "line": 245,
+                "column": 115,
+                "offset": 8279
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 243,
+            "column": 1,
+            "offset": 8003
+          },
+          "end": {
+            "line": 245,
+            "column": 115,
+            "offset": 8279
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToastPromise } from './demos/promise';",
+        "position": {
+          "start": {
+            "line": 247,
+            "column": 1,
+            "offset": 8281
+          },
+          "end": {
+            "line": 247,
+            "column": 52,
+            "offset": 8332
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToastPromise",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 249,
+            "column": 1,
+            "offset": 8334
+          },
+          "end": {
+            "line": 249,
+            "column": 21,
+            "offset": 8354
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/promise#DemoToastPromise"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Custom",
+            "position": {
+              "start": {
+                "line": 251,
+                "column": 5,
+                "offset": 8360
+              },
+              "end": {
+                "line": 251,
+                "column": 11,
+                "offset": 8366
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 251,
+            "column": 1,
+            "offset": 8356
+          },
+          "end": {
+            "line": 251,
+            "column": 11,
+            "offset": 8366
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "custom"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A toast with custom data can be created by passing any typed object interface to the ",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 1,
+                "offset": 8368
+              },
+              "end": {
+                "line": 253,
+                "column": 86,
+                "offset": 8453
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 86,
+                "offset": 8453
+              },
+              "end": {
+                "line": 253,
+                "column": 92,
+                "offset": 8459
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " option.\nThis enables you to pass any data (including functions) you need to the toast and access it in the toast's rendering logic.",
+            "position": {
+              "start": {
+                "line": 253,
+                "column": 92,
+                "offset": 8459
+              },
+              "end": {
+                "line": 254,
+                "column": 124,
+                "offset": 8591
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 253,
+            "column": 1,
+            "offset": 8368
+          },
+          "end": {
+            "line": 254,
+            "column": 124,
+            "offset": 8591
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToastCustom } from './demos/custom';",
+        "position": {
+          "start": {
+            "line": 256,
+            "column": 1,
+            "offset": 8593
+          },
+          "end": {
+            "line": 256,
+            "column": 50,
+            "offset": 8642
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToastCustom",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 258,
+            "column": 1,
+            "offset": 8644
+          },
+          "end": {
+            "line": 258,
+            "column": 20,
+            "offset": 8663
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/custom#DemoToastCustom"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Deduplicated toast",
+            "position": {
+              "start": {
+                "line": 260,
+                "column": 5,
+                "offset": 8669
+              },
+              "end": {
+                "line": 260,
+                "column": 23,
+                "offset": 8687
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 260,
+            "column": 1,
+            "offset": 8665
+          },
+          "end": {
+            "line": 260,
+            "column": 23,
+            "offset": 8687
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "deduplicated-toast"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "When you upsert the same toast by ",
+            "position": {
+              "start": {
+                "line": 262,
+                "column": 1,
+                "offset": 8689
+              },
+              "end": {
+                "line": 262,
+                "column": 35,
+                "offset": 8723
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "id",
+            "position": {
+              "start": {
+                "line": 262,
+                "column": 35,
+                "offset": 8723
+              },
+              "end": {
+                "line": 262,
+                "column": 39,
+                "offset": 8727
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", the ",
+            "position": {
+              "start": {
+                "line": 262,
+                "column": 39,
+                "offset": 8727
+              },
+              "end": {
+                "line": 262,
+                "column": 45,
+                "offset": 8733
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "updateKey",
+            "position": {
+              "start": {
+                "line": 262,
+                "column": 45,
+                "offset": 8733
+              },
+              "end": {
+                "line": 262,
+                "column": 56,
+                "offset": 8744
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " property increments so a custom renderer can replay a visual animation. This demo alternates CSS animation names from ",
+            "position": {
+              "start": {
+                "line": 262,
+                "column": 56,
+                "offset": 8744
+              },
+              "end": {
+                "line": 262,
+                "column": 175,
+                "offset": 8863
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "updateKey",
+            "position": {
+              "start": {
+                "line": 262,
+                "column": 175,
+                "offset": 8863
+              },
+              "end": {
+                "line": 262,
+                "column": 186,
+                "offset": 8874
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which keeps the same toast mounted while replaying the pulse.",
+            "position": {
+              "start": {
+                "line": 262,
+                "column": 186,
+                "offset": 8874
+              },
+              "end": {
+                "line": 262,
+                "column": 249,
+                "offset": 8937
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 262,
+            "column": 1,
+            "offset": 8689
+          },
+          "end": {
+            "line": 262,
+            "column": 249,
+            "offset": 8937
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToastDeduplicate } from './demos/deduplicate';",
+        "position": {
+          "start": {
+            "line": 264,
+            "column": 1,
+            "offset": 8939
+          },
+          "end": {
+            "line": 264,
+            "column": 60,
+            "offset": 8998
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToastDeduplicate",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 266,
+            "column": 1,
+            "offset": 9000
+          },
+          "end": {
+            "line": 266,
+            "column": 25,
+            "offset": 9024
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/deduplicate#DemoToastDeduplicate"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Varying heights",
+            "position": {
+              "start": {
+                "line": 268,
+                "column": 5,
+                "offset": 9030
+              },
+              "end": {
+                "line": 268,
+                "column": 20,
+                "offset": 9045
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 268,
+            "column": 1,
+            "offset": 9026
+          },
+          "end": {
+            "line": 268,
+            "column": 20,
+            "offset": 9045
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "varying-heights"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Toasts with varying heights are stacked by clamping every toast's height to the frontmost toast at index 0 using the ",
+            "position": {
+              "start": {
+                "line": 270,
+                "column": 1,
+                "offset": 9047
+              },
+              "end": {
+                "line": 270,
+                "column": 118,
+                "offset": 9164
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "--toast-frontmost-height",
+            "position": {
+              "start": {
+                "line": 270,
+                "column": 118,
+                "offset": 9164
+              },
+              "end": {
+                "line": 270,
+                "column": 144,
+                "offset": 9190
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " CSS variable, while the ",
+            "position": {
+              "start": {
+                "line": 270,
+                "column": 144,
+                "offset": 9190
+              },
+              "end": {
+                "line": 270,
+                "column": 169,
+                "offset": 9215
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-behind",
+            "position": {
+              "start": {
+                "line": 270,
+                "column": 169,
+                "offset": 9215
+              },
+              "end": {
+                "line": 270,
+                "column": 182,
+                "offset": 9228
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute hides the content of the toasts behind it.\nAvoid sizing ",
+            "position": {
+              "start": {
+                "line": 270,
+                "column": 182,
+                "offset": 9228
+              },
+              "end": {
+                "line": 271,
+                "column": 14,
+                "offset": 9295
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Content>",
+            "position": {
+              "start": {
+                "line": 271,
+                "column": 14,
+                "offset": 9295
+              },
+              "end": {
+                "line": 271,
+                "column": 31,
+                "offset": 9312
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to the root's height (such as ",
+            "position": {
+              "start": {
+                "line": 271,
+                "column": 31,
+                "offset": 9312
+              },
+              "end": {
+                "line": 271,
+                "column": 62,
+                "offset": 9343
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "height: 100%",
+            "position": {
+              "start": {
+                "line": 271,
+                "column": 62,
+                "offset": 9343
+              },
+              "end": {
+                "line": 271,
+                "column": 76,
+                "offset": 9357
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": "), as resizing it alongside the root cancels the root's height transition.",
+            "position": {
+              "start": {
+                "line": 271,
+                "column": 76,
+                "offset": 9357
+              },
+              "end": {
+                "line": 271,
+                "column": 150,
+                "offset": 9431
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 270,
+            "column": 1,
+            "offset": 9047
+          },
+          "end": {
+            "line": 271,
+            "column": 150,
+            "offset": 9431
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToastVaryingHeights } from './demos/varying-heights';",
+        "position": {
+          "start": {
+            "line": 273,
+            "column": 1,
+            "offset": 9433
+          },
+          "end": {
+            "line": 273,
+            "column": 67,
+            "offset": 9499
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToastVaryingHeights",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 275,
+            "column": 1,
+            "offset": 9501
+          },
+          "end": {
+            "line": 275,
+            "column": 28,
+            "offset": 9528
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toast/demos/varying-heights#DemoToastVaryingHeights"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 277,
+                "column": 4,
+                "offset": 9533
+              },
+              "end": {
+                "line": 277,
+                "column": 17,
+                "offset": 9546
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 277,
+            "column": 1,
+            "offset": 9530
+          },
+          "end": {
+            "line": 277,
+            "column": 17,
+            "offset": 9546
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesToast, TypesToastAdditional } from './types';",
+        "position": {
+          "start": {
+            "line": 279,
+            "column": 1,
+            "offset": 9548
+          },
+          "end": {
+            "line": 279,
+            "column": 60,
+            "offset": 9607
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Provider",
+            "position": {
+              "start": {
+                "line": 281,
+                "column": 5,
+                "offset": 9613
+              },
+              "end": {
+                "line": 281,
+                "column": 13,
+                "offset": 9621
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 281,
+            "column": 1,
+            "offset": 9609
+          },
+          "end": {
+            "line": 281,
+            "column": 13,
+            "offset": 9621
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "provider"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Provider",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 283,
+            "column": 1,
+            "offset": 9623
+          },
+          "end": {
+            "line": 283,
+            "column": 24,
+            "offset": 9646
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Portal",
+            "position": {
+              "start": {
+                "line": 285,
+                "column": 5,
+                "offset": 9652
+              },
+              "end": {
+                "line": 285,
+                "column": 11,
+                "offset": 9658
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 285,
+            "column": 1,
+            "offset": 9648
+          },
+          "end": {
+            "line": 285,
+            "column": 11,
+            "offset": 9658
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "portal"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Portal",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 287,
+            "column": 1,
+            "offset": 9660
+          },
+          "end": {
+            "line": 287,
+            "column": 22,
+            "offset": 9681
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Viewport",
+            "position": {
+              "start": {
+                "line": 289,
+                "column": 5,
+                "offset": 9687
+              },
+              "end": {
+                "line": 289,
+                "column": 13,
+                "offset": 9695
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 289,
+            "column": 1,
+            "offset": 9683
+          },
+          "end": {
+            "line": 289,
+            "column": 13,
+            "offset": 9695
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "viewport"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Viewport",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 291,
+            "column": 1,
+            "offset": 9697
+          },
+          "end": {
+            "line": 291,
+            "column": 24,
+            "offset": 9720
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 293,
+                "column": 5,
+                "offset": 9726
+              },
+              "end": {
+                "line": 293,
+                "column": 9,
+                "offset": 9730
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 293,
+            "column": 1,
+            "offset": 9722
+          },
+          "end": {
+            "line": 293,
+            "column": 9,
+            "offset": 9730
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 295,
+            "column": 1,
+            "offset": 9732
+          },
+          "end": {
+            "line": 295,
+            "column": 20,
+            "offset": 9751
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Content",
+            "position": {
+              "start": {
+                "line": 297,
+                "column": 5,
+                "offset": 9757
+              },
+              "end": {
+                "line": 297,
+                "column": 12,
+                "offset": 9764
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 297,
+            "column": 1,
+            "offset": 9753
+          },
+          "end": {
+            "line": 297,
+            "column": 12,
+            "offset": 9764
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "content"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Content",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 299,
+            "column": 1,
+            "offset": 9766
+          },
+          "end": {
+            "line": 299,
+            "column": 23,
+            "offset": 9788
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Title",
+            "position": {
+              "start": {
+                "line": 301,
+                "column": 5,
+                "offset": 9794
+              },
+              "end": {
+                "line": 301,
+                "column": 10,
+                "offset": 9799
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 301,
+            "column": 1,
+            "offset": 9790
+          },
+          "end": {
+            "line": 301,
+            "column": 10,
+            "offset": 9799
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "title"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Title",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 303,
+            "column": 1,
+            "offset": 9801
+          },
+          "end": {
+            "line": 303,
+            "column": 21,
+            "offset": 9821
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Description",
+            "position": {
+              "start": {
+                "line": 305,
+                "column": 5,
+                "offset": 9827
+              },
+              "end": {
+                "line": 305,
+                "column": 16,
+                "offset": 9838
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 305,
+            "column": 1,
+            "offset": 9823
+          },
+          "end": {
+            "line": 305,
+            "column": 16,
+            "offset": 9838
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "description"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Description",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 307,
+            "column": 1,
+            "offset": 9840
+          },
+          "end": {
+            "line": 307,
+            "column": 27,
+            "offset": 9866
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Action",
+            "position": {
+              "start": {
+                "line": 309,
+                "column": 5,
+                "offset": 9872
+              },
+              "end": {
+                "line": 309,
+                "column": 11,
+                "offset": 9878
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 309,
+            "column": 1,
+            "offset": 9868
+          },
+          "end": {
+            "line": 309,
+            "column": 11,
+            "offset": 9878
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "action"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Action",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 311,
+            "column": 1,
+            "offset": 9880
+          },
+          "end": {
+            "line": 311,
+            "column": 22,
+            "offset": 9901
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Close",
+            "position": {
+              "start": {
+                "line": 313,
+                "column": 5,
+                "offset": 9907
+              },
+              "end": {
+                "line": 313,
+                "column": 10,
+                "offset": 9912
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 313,
+            "column": 1,
+            "offset": 9903
+          },
+          "end": {
+            "line": 313,
+            "column": 10,
+            "offset": 9912
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "close"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Close",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 315,
+            "column": 1,
+            "offset": 9914
+          },
+          "end": {
+            "line": 315,
+            "column": 21,
+            "offset": 9934
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Positioner",
+            "position": {
+              "start": {
+                "line": 317,
+                "column": 5,
+                "offset": 9940
+              },
+              "end": {
+                "line": 317,
+                "column": 15,
+                "offset": 9950
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 317,
+            "column": 1,
+            "offset": 9936
+          },
+          "end": {
+            "line": 317,
+            "column": 15,
+            "offset": 9950
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "positioner"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Positioner",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 319,
+            "column": 1,
+            "offset": 9952
+          },
+          "end": {
+            "line": 319,
+            "column": 26,
+            "offset": 9977
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Arrow",
+            "position": {
+              "start": {
+                "line": 321,
+                "column": 5,
+                "offset": 9983
+              },
+              "end": {
+                "line": 321,
+                "column": 10,
+                "offset": 9988
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 321,
+            "column": 1,
+            "offset": 9979
+          },
+          "end": {
+            "line": 321,
+            "column": 10,
+            "offset": 9988
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "arrow"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.Arrow",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 323,
+            "column": 1,
+            "offset": 9990
+          },
+          "end": {
+            "line": 323,
+            "column": 21,
+            "offset": 10010
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "useToastManager",
+            "position": {
+              "start": {
+                "line": 325,
+                "column": 4,
+                "offset": 10015
+              },
+              "end": {
+                "line": 325,
+                "column": 19,
+                "offset": 10030
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 325,
+            "column": 1,
+            "offset": 10012
+          },
+          "end": {
+            "line": 325,
+            "column": 19,
+            "offset": 10030
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usetoastmanager"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Manages toasts, called inside of a ",
+            "position": {
+              "start": {
+                "line": 327,
+                "column": 1,
+                "offset": 10032
+              },
+              "end": {
+                "line": 327,
+                "column": 36,
+                "offset": 10067
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Provider>",
+            "position": {
+              "start": {
+                "line": 327,
+                "column": 36,
+                "offset": 10067
+              },
+              "end": {
+                "line": 327,
+                "column": 54,
+                "offset": 10085
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 327,
+                "column": 54,
+                "offset": 10085
+              },
+              "end": {
+                "line": 327,
+                "column": 55,
+                "offset": 10086
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 327,
+            "column": 1,
+            "offset": 10032
+          },
+          "end": {
+            "line": 327,
+            "column": 55,
+            "offset": 10086
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Usage\"",
+        "value": "const toastManager = Toast.useToastManager();",
+        "position": {
+          "start": {
+            "line": 329,
+            "column": 1,
+            "offset": 10088
+          },
+          "end": {
+            "line": 331,
+            "column": 4,
+            "offset": 10158
+          }
+        },
+        "data": {
+          "sourceValue": "const toastManager = Toast.useToastManager();",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToast.useToastManager",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "hideDescription",
+            "value": null,
+            "position": {
+              "start": {
+                "line": 333,
+                "column": 29,
+                "offset": 10188
+              },
+              "end": {
+                "line": 333,
+                "column": 44,
+                "offset": 10203
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 333,
+            "column": 1,
+            "offset": 10160
+          },
+          "end": {
+            "line": 333,
+            "column": 47,
+            "offset": 10206
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToast"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "add",
+            "position": {
+              "start": {
+                "line": 335,
+                "column": 5,
+                "offset": 10212
+              },
+              "end": {
+                "line": 335,
+                "column": 10,
+                "offset": 10217
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " method",
+            "position": {
+              "start": {
+                "line": 335,
+                "column": 10,
+                "offset": 10217
+              },
+              "end": {
+                "line": 335,
+                "column": 17,
+                "offset": 10224
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 335,
+            "column": 1,
+            "offset": 10208
+          },
+          "end": {
+            "line": 335,
+            "column": 17,
+            "offset": 10224
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "add-method"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Creates a toast by adding it to the toast list.",
+            "position": {
+              "start": {
+                "line": 337,
+                "column": 1,
+                "offset": 10226
+              },
+              "end": {
+                "line": 337,
+                "column": 48,
+                "offset": 10273
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 337,
+            "column": 1,
+            "offset": 10226
+          },
+          "end": {
+            "line": 337,
+            "column": 48,
+            "offset": 10273
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you pass an ",
+            "position": {
+              "start": {
+                "line": 339,
+                "column": 1,
+                "offset": 10275
+              },
+              "end": {
+                "line": 339,
+                "column": 16,
+                "offset": 10290
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "id",
+            "position": {
+              "start": {
+                "line": 339,
+                "column": 16,
+                "offset": 10290
+              },
+              "end": {
+                "line": 339,
+                "column": 20,
+                "offset": 10294
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " that already exists, the existing toast is updated in place instead of creating a duplicate.",
+            "position": {
+              "start": {
+                "line": 339,
+                "column": 20,
+                "offset": 10294
+              },
+              "end": {
+                "line": 339,
+                "column": 113,
+                "offset": 10387
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 339,
+            "column": 1,
+            "offset": 10275
+          },
+          "end": {
+            "line": 339,
+            "column": 113,
+            "offset": 10387
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Returns a ",
+            "position": {
+              "start": {
+                "line": 341,
+                "column": 1,
+                "offset": 10389
+              },
+              "end": {
+                "line": 341,
+                "column": 11,
+                "offset": 10399
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "toastId",
+            "position": {
+              "start": {
+                "line": 341,
+                "column": 11,
+                "offset": 10399
+              },
+              "end": {
+                "line": 341,
+                "column": 20,
+                "offset": 10408
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " that can be used to update or close the toast later.",
+            "position": {
+              "start": {
+                "line": 341,
+                "column": 20,
+                "offset": 10408
+              },
+              "end": {
+                "line": 341,
+                "column": 73,
+                "offset": 10461
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 341,
+            "column": 1,
+            "offset": 10389
+          },
+          "end": {
+            "line": 341,
+            "column": 73,
+            "offset": 10461
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Usage\"",
+        "value": "const toastId = toastManager.add({\n  description: 'Hello, world!',\n});",
+        "position": {
+          "start": {
+            "line": 343,
+            "column": 1,
+            "offset": 10463
+          },
+          "end": {
+            "line": 347,
+            "column": 4,
+            "offset": 10558
+          }
+        },
+        "data": {
+          "sourceValue": "const toastId = toastManager.add({\n  description: 'Hello, world!',\n});",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Example\"",
+        "value": "function App() {\n  // @highlight\n  const toastManager = Toast.useToastManager();\n  return (\n    <button\n      type=\"button\"\n      onClick={() => {\n        // @highlight-start\n        toastManager.add({\n          description: 'Hello, world!',\n        });\n        // @highlight-end\n      }}\n    >\n      Add toast\n    </button>\n  );\n}",
+        "position": {
+          "start": {
+            "line": 349,
+            "column": 1,
+            "offset": 10560
+          },
+          "end": {
+            "line": 368,
+            "column": 4,
+            "offset": 10918
+          }
+        },
+        "data": {
+          "sourceValue": "function App() {\n  // @highlight\n  const toastManager = Toast.useToastManager();\n  return (\n    <button\n      type=\"button\"\n      onClick={() => {\n        // @highlight-start\n        toastManager.add({\n          description: 'Hello, world!',\n        });\n        // @highlight-end\n      }}\n    >\n      Add toast\n    </button>\n  );\n}",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For high priority toasts, the ",
+            "position": {
+              "start": {
+                "line": 370,
+                "column": 1,
+                "offset": 10920
+              },
+              "end": {
+                "line": 370,
+                "column": 31,
+                "offset": 10950
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "title",
+            "position": {
+              "start": {
+                "line": 370,
+                "column": 31,
+                "offset": 10950
+              },
+              "end": {
+                "line": 370,
+                "column": 38,
+                "offset": 10957
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 370,
+                "column": 38,
+                "offset": 10957
+              },
+              "end": {
+                "line": 370,
+                "column": 43,
+                "offset": 10962
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 370,
+                "column": 43,
+                "offset": 10962
+              },
+              "end": {
+                "line": 370,
+                "column": 56,
+                "offset": 10975
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " strings are what are used to announce the toast to screen readers.\nScreen readers do not announce any extra content rendered inside ",
+            "position": {
+              "start": {
+                "line": 370,
+                "column": 56,
+                "offset": 10975
+              },
+              "end": {
+                "line": 371,
+                "column": 66,
+                "offset": 11108
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Root>",
+            "position": {
+              "start": {
+                "line": 371,
+                "column": 66,
+                "offset": 11108
+              },
+              "end": {
+                "line": 371,
+                "column": 80,
+                "offset": 11122
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", including the ",
+            "position": {
+              "start": {
+                "line": 371,
+                "column": 80,
+                "offset": 11122
+              },
+              "end": {
+                "line": 371,
+                "column": 96,
+                "offset": 11138
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Title>",
+            "position": {
+              "start": {
+                "line": 371,
+                "column": 96,
+                "offset": 11138
+              },
+              "end": {
+                "line": 371,
+                "column": 111,
+                "offset": 11153
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": {
+                "line": 371,
+                "column": 111,
+                "offset": 11153
+              },
+              "end": {
+                "line": 371,
+                "column": 115,
+                "offset": 11157
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Toast.Description>",
+            "position": {
+              "start": {
+                "line": 371,
+                "column": 115,
+                "offset": 11157
+              },
+              "end": {
+                "line": 371,
+                "column": 136,
+                "offset": 11178
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " components, unless they intentionally navigate to the toast viewport.",
+            "position": {
+              "start": {
+                "line": 371,
+                "column": 136,
+                "offset": 11178
+              },
+              "end": {
+                "line": 371,
+                "column": 206,
+                "offset": 11248
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 370,
+            "column": 1,
+            "offset": 10920
+          },
+          "end": {
+            "line": 371,
+            "column": 206,
+            "offset": 11248
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "update",
+            "position": {
+              "start": {
+                "line": 373,
+                "column": 5,
+                "offset": 11254
+              },
+              "end": {
+                "line": 373,
+                "column": 13,
+                "offset": 11262
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " method",
+            "position": {
+              "start": {
+                "line": 373,
+                "column": 13,
+                "offset": 11262
+              },
+              "end": {
+                "line": 373,
+                "column": 20,
+                "offset": 11269
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 373,
+            "column": 1,
+            "offset": 11250
+          },
+          "end": {
+            "line": 373,
+            "column": 20,
+            "offset": 11269
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "update-method"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Updates the toast with new options.",
+            "position": {
+              "start": {
+                "line": 375,
+                "column": 1,
+                "offset": 11271
+              },
+              "end": {
+                "line": 375,
+                "column": 36,
+                "offset": 11306
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 375,
+            "column": 1,
+            "offset": 11271
+          },
+          "end": {
+            "line": 375,
+            "column": 36,
+            "offset": 11306
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Usage\"",
+        "value": "toastManager.update(toastId, {\n  description: 'New description',\n});",
+        "position": {
+          "start": {
+            "line": 377,
+            "column": 1,
+            "offset": 11308
+          },
+          "end": {
+            "line": 381,
+            "column": 4,
+            "offset": 11401
+          }
+        },
+        "data": {
+          "sourceValue": "toastManager.update(toastId, {\n  description: 'New description',\n});",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Options replace the corresponding values of the toast, including custom ",
+            "position": {
+              "start": {
+                "line": 383,
+                "column": 1,
+                "offset": 11403
+              },
+              "end": {
+                "line": 383,
+                "column": 73,
+                "offset": 11475
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data",
+            "position": {
+              "start": {
+                "line": 383,
+                "column": 73,
+                "offset": 11475
+              },
+              "end": {
+                "line": 383,
+                "column": 79,
+                "offset": 11481
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which is replaced as a whole. To derive the update from the current state of the toast, pass a function instead. It receives the current toast and returns the options to apply. Custom ",
+            "position": {
+              "start": {
+                "line": 383,
+                "column": 79,
+                "offset": 11481
+              },
+              "end": {
+                "line": 383,
+                "column": 265,
+                "offset": 11667
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data",
+            "position": {
+              "start": {
+                "line": 383,
+                "column": 265,
+                "offset": 11667
+              },
+              "end": {
+                "line": 383,
+                "column": 271,
+                "offset": 11673
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is ",
+            "position": {
+              "start": {
+                "line": 383,
+                "column": 271,
+                "offset": 11673
+              },
+              "end": {
+                "line": 383,
+                "column": 275,
+                "offset": 11677
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "undefined",
+            "position": {
+              "start": {
+                "line": 383,
+                "column": 275,
+                "offset": 11677
+              },
+              "end": {
+                "line": 383,
+                "column": 286,
+                "offset": 11688
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " when the toast has none yet:",
+            "position": {
+              "start": {
+                "line": 383,
+                "column": 286,
+                "offset": 11688
+              },
+              "end": {
+                "line": 383,
+                "column": 315,
+                "offset": 11717
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 383,
+            "column": 1,
+            "offset": 11403
+          },
+          "end": {
+            "line": 383,
+            "column": 315,
+            "offset": 11717
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Deriving the update from the current toast\"",
+        "value": "toastManager.update(toastId, (prevToast) => ({\n  data: prevToast.data && { ...prevToast.data, progress: 100 },\n}));",
+        "position": {
+          "start": {
+            "line": 385,
+            "column": 1,
+            "offset": 11719
+          },
+          "end": {
+            "line": 389,
+            "column": 4,
+            "offset": 11896
+          }
+        },
+        "data": {
+          "sourceValue": "toastManager.update(toastId, (prevToast) => ({\n  data: prevToast.data && { ...prevToast.data, progress: 100 },\n}));",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "close",
+            "position": {
+              "start": {
+                "line": 391,
+                "column": 5,
+                "offset": 11902
+              },
+              "end": {
+                "line": 391,
+                "column": 12,
+                "offset": 11909
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " method",
+            "position": {
+              "start": {
+                "line": 391,
+                "column": 12,
+                "offset": 11909
+              },
+              "end": {
+                "line": 391,
+                "column": 19,
+                "offset": 11916
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 391,
+            "column": 1,
+            "offset": 11898
+          },
+          "end": {
+            "line": 391,
+            "column": 19,
+            "offset": 11916
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "close-method"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Closes the toast, removing it from the toast list after any animations complete.",
+            "position": {
+              "start": {
+                "line": 393,
+                "column": 1,
+                "offset": 11918
+              },
+              "end": {
+                "line": 393,
+                "column": 81,
+                "offset": 11998
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 393,
+            "column": 1,
+            "offset": 11918
+          },
+          "end": {
+            "line": 393,
+            "column": 81,
+            "offset": 11998
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Usage\"",
+        "value": "toastManager.close(toastId);",
+        "position": {
+          "start": {
+            "line": 395,
+            "column": 1,
+            "offset": 12000
+          },
+          "end": {
+            "line": 397,
+            "column": 4,
+            "offset": 12053
+          }
+        },
+        "data": {
+          "sourceValue": "toastManager.close(toastId);",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Or you can close all toasts at once by not passing an ID:",
+            "position": {
+              "start": {
+                "line": 399,
+                "column": 1,
+                "offset": 12055
+              },
+              "end": {
+                "line": 399,
+                "column": 58,
+                "offset": 12112
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 399,
+            "column": 1,
+            "offset": 12055
+          },
+          "end": {
+            "line": 399,
+            "column": 58,
+            "offset": 12112
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Close all toasts\"",
+        "value": "toastManager.close();",
+        "position": {
+          "start": {
+            "line": 401,
+            "column": 1,
+            "offset": 12114
+          },
+          "end": {
+            "line": 403,
+            "column": 4,
+            "offset": 12171
+          }
+        },
+        "data": {
+          "sourceValue": "toastManager.close();",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "promise",
+            "position": {
+              "start": {
+                "line": 405,
+                "column": 5,
+                "offset": 12177
+              },
+              "end": {
+                "line": 405,
+                "column": 14,
+                "offset": 12186
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " method",
+            "position": {
+              "start": {
+                "line": 405,
+                "column": 14,
+                "offset": 12186
+              },
+              "end": {
+                "line": 405,
+                "column": 21,
+                "offset": 12193
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 405,
+            "column": 1,
+            "offset": 12173
+          },
+          "end": {
+            "line": 405,
+            "column": 21,
+            "offset": 12193
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "promise-method"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Creates an asynchronous toast with three possible states: ",
+            "position": {
+              "start": {
+                "line": 407,
+                "column": 1,
+                "offset": 12195
+              },
+              "end": {
+                "line": 407,
+                "column": 59,
+                "offset": 12253
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "loading",
+            "position": {
+              "start": {
+                "line": 407,
+                "column": 59,
+                "offset": 12253
+              },
+              "end": {
+                "line": 407,
+                "column": 68,
+                "offset": 12262
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", ",
+            "position": {
+              "start": {
+                "line": 407,
+                "column": 68,
+                "offset": 12262
+              },
+              "end": {
+                "line": 407,
+                "column": 70,
+                "offset": 12264
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "success",
+            "position": {
+              "start": {
+                "line": 407,
+                "column": 70,
+                "offset": 12264
+              },
+              "end": {
+                "line": 407,
+                "column": 79,
+                "offset": 12273
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", and ",
+            "position": {
+              "start": {
+                "line": 407,
+                "column": 79,
+                "offset": 12273
+              },
+              "end": {
+                "line": 407,
+                "column": 85,
+                "offset": 12279
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "error",
+            "position": {
+              "start": {
+                "line": 407,
+                "column": 85,
+                "offset": 12279
+              },
+              "end": {
+                "line": 407,
+                "column": 92,
+                "offset": 12286
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 407,
+                "column": 92,
+                "offset": 12286
+              },
+              "end": {
+                "line": 407,
+                "column": 93,
+                "offset": 12287
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 407,
+            "column": 1,
+            "offset": 12195
+          },
+          "end": {
+            "line": 407,
+            "column": 93,
+            "offset": 12287
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Description configuration\"",
+        "value": "const promise = toastManager.promise(\n  new Promise((resolve) => {\n    setTimeout(() => resolve('world!'), 1000);\n  }),\n  {\n    // Each are a shortcut for the `description` option\n    loading: 'Loading…',\n    success: (data) => `Hello ${data}`,\n    error: (err) => `Error: ${err}`,\n  },\n);",
+        "position": {
+          "start": {
+            "line": 409,
+            "column": 1,
+            "offset": 12289
+          },
+          "end": {
+            "line": 421,
+            "column": 4,
+            "offset": 12623
+          }
+        },
+        "data": {
+          "sourceValue": "const promise = toastManager.promise(\n  new Promise((resolve) => {\n    setTimeout(() => resolve('world!'), 1000);\n  }),\n  {\n    // Each are a shortcut for the `description` option\n    loading: 'Loading…',\n    success: (data) => `Hello ${data}`,\n    error: (err) => `Error: ${err}`,\n  },\n);",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Each state also accepts the ",
+            "position": {
+              "start": {
+                "line": 423,
+                "column": 1,
+                "offset": 12625
+              },
+              "end": {
+                "line": 423,
+                "column": 29,
+                "offset": 12653
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "#toastmanagerupdateoptions",
+            "children": [
+              {
+                "type": "text",
+                "value": "method options",
+                "position": {
+                  "start": {
+                    "line": 423,
+                    "column": 30,
+                    "offset": 12654
+                  },
+                  "end": {
+                    "line": 423,
+                    "column": 44,
+                    "offset": 12668
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 423,
+                "column": 29,
+                "offset": 12653
+              },
+              "end": {
+                "line": 423,
+                "column": 73,
+                "offset": 12697
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " object to granularly control the toast for each state:",
+            "position": {
+              "start": {
+                "line": 423,
+                "column": 73,
+                "offset": 12697
+              },
+              "end": {
+                "line": 423,
+                "column": 128,
+                "offset": 12752
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 423,
+            "column": 1,
+            "offset": 12625
+          },
+          "end": {
+            "line": 423,
+            "column": 128,
+            "offset": 12752
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Method options configuration\"",
+        "value": "const promise = toastManager.promise(\n  new Promise((resolve) => {\n    setTimeout(() => resolve('world!'), 1000);\n  }),\n  {\n    loading: {\n      title: 'Loading…',\n      description: 'The promise is loading.',\n    },\n    success: {\n      title: 'Success',\n      description: 'The promise resolved successfully.',\n    },\n    error: {\n      title: 'Error',\n      description: 'The promise rejected.',\n      actionProps: {\n        children: 'Contact support',\n        onClick() {\n          // Redirect to support page\n        },\n      },\n    },\n  },\n);",
+        "position": {
+          "start": {
+            "line": 425,
+            "column": 1,
+            "offset": 12754
+          },
+          "end": {
+            "line": 451,
+            "column": 4,
+            "offset": 13351
+          }
+        },
+        "data": {
+          "sourceValue": "const promise = toastManager.promise(\n  new Promise((resolve) => {\n    setTimeout(() => resolve('world!'), 1000);\n  }),\n  {\n    loading: {\n      title: 'Loading…',\n      description: 'The promise is loading.',\n    },\n    success: {\n      title: 'Success',\n      description: 'The promise resolved successfully.',\n    },\n    error: {\n      title: 'Error',\n      description: 'The promise rejected.',\n      actionProps: {\n        children: 'Contact support',\n        onClick() {\n          // Redirect to support page\n        },\n      },\n    },\n  },\n);",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "See full ",
+            "position": {
+              "start": {
+                "line": 453,
+                "column": 1,
+                "offset": 13353
+              },
+              "end": {
+                "line": 453,
+                "column": 10,
+                "offset": 13362
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "#ToastuseToastManager-promise",
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "promise",
+                "position": {
+                  "start": {
+                    "line": 453,
+                    "column": 11,
+                    "offset": 13363
+                  },
+                  "end": {
+                    "line": 453,
+                    "column": 20,
+                    "offset": 13372
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "value": " method",
+                "position": {
+                  "start": {
+                    "line": 453,
+                    "column": 20,
+                    "offset": 13372
+                  },
+                  "end": {
+                    "line": 453,
+                    "column": 27,
+                    "offset": 13379
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 453,
+                "column": 10,
+                "offset": 13362
+              },
+              "end": {
+                "line": 453,
+                "column": 59,
+                "offset": 13411
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 453,
+            "column": 1,
+            "offset": 13353
+          },
+          "end": {
+            "line": 453,
+            "column": 59,
+            "offset": 13411
+          }
+        }
+      },
+      {
+        "type": "definition",
+        "identifier": "//",
+        "label": "//",
+        "title": "@exclude-table-of-contents",
+        "url": "#",
+        "position": {
+          "start": {
+            "line": 455,
+            "column": 1,
+            "offset": 13413
+          },
+          "end": {
+            "line": 455,
+            "column": 37,
+            "offset": 13449
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Additional types",
+            "position": {
+              "start": {
+                "line": 457,
+                "column": 4,
+                "offset": 13454
+              },
+              "end": {
+                "line": 457,
+                "column": 20,
+                "offset": 13470
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 457,
+            "column": 1,
+            "offset": 13451
+          },
+          "end": {
+            "line": 457,
+            "column": 20,
+            "offset": 13470
+          }
+        },
+        "data": {
+          "hProperties": {
+            "data-exclude-toc": "",
+            "id": "additional-types"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToastAdditional",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "showAdditionalTypes",
+            "value": {
+              "type": "mdxJsxAttributeValueExpression",
+              "value": "['toastmanagerupdateoptions']",
+              "data": {}
+            },
+            "position": {
+              "start": {
+                "line": 459,
+                "column": 23,
+                "offset": 13494
+              },
+              "end": {
+                "line": 459,
+                "column": 74,
+                "offset": 13545
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 459,
+            "column": 1,
+            "offset": 13472
+          },
+          "end": {
+            "line": 459,
+            "column": 77,
+            "offset": 13548
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toast/types#TypesToastAdditional"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Toast',\n    'Toast Notification',\n    'Toast Notifications',\n    'Notification Component',\n    'Notification',\n    'Snackbar',\n    'Message Notification',\n    'Alert Notification',\n    'Alert Message',\n    'Flash Message',\n    'Push Notification',\n    'Temporary Message',\n    'Dismissible Notification',\n    'Toast Message',\n    'Toast Manager',\n    'Anchored Toast',\n    'Swipe Dismiss Toast',\n    'Status Message',\n    'Timed Notification',\n    'Stacked Toasts',\n    'Live Region',\n    'Accessible Toast',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 461,
+            "column": 1,
+            "offset": 13550
+          },
+          "end": {
+            "line": 488,
+            "column": 3,
+            "offset": 14165
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 489,
+        "column": 1,
+        "offset": 14166
+      }
+    }
+  }
+}

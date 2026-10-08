@@ -1,0 +1,2614 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "614a007bcb4c4e677aee1d52c1685aef86943ca2f675d94c5542574611d1846c",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/utils/csp-provider",
+  "route": "/solid/utils/csp-provider",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "CSP Provider",
+  "subtitle": "Configures CSP-related behavior for inline tags rendered by Base UI components.",
+  "metadata": {
+    "keywords": [
+      "Base UI CSP Provider",
+      "Content Security Policy",
+      "CSP nonce",
+      "React CSP",
+      "Inline script nonce",
+      "Inline style nonce"
+    ],
+    "description": "A CSP provider component that applies a nonce to inline <style> and <script> tags rendered by Base UI components, and can disable inline <style> elements."
+  },
+  "imports": [
+    {
+      "from": "./types",
+      "local": "TypesCSPProvider",
+      "imported": "TypesCSPProvider",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/utils/csp-provider/types#TypesCSPProvider"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "CSP Provider",
+      "properties": {
+        "id": "csp-provider"
+      },
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:9:1"
+    },
+    {
+      "depth": 2,
+      "text": "Supplying a nonce",
+      "properties": {
+        "id": "supplying-a-nonce"
+      },
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:26:1"
+    },
+    {
+      "depth": 2,
+      "text": "Disable inline style elements",
+      "properties": {
+        "id": "disable-inline-style-elements"
+      },
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:57:1"
+    },
+    {
+      "depth": 2,
+      "text": "Inline style attributes",
+      "properties": {
+        "id": "inline-style-attributes"
+      },
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:80:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:92:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/nonce",
+      "target": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/nonce",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:22:244"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A CSP provider component that applies a nonce to inline <style> and <script> tags rendered by Base UI components, and can disable inline <style> elements."
+      },
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:4:1"
+    },
+    {
+      "name": "TypesCSPProvider",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:96:1",
+      "reference": "api:docs/src/app/(docs)/react/utils/csp-provider/types#TypesCSPProvider"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:13:1",
+      "detail": "CSPProvider",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:13:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:34:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:47:1",
+      "detail": "CSPProvider",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:47:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:74:1",
+      "detail": "CSPProvider",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:74:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:96:1",
+      "detail": "Site must implement TypesCSPProvider; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/utils/csp-provider/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "CSP Provider",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 15,
+                "offset": 14
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 15,
+            "offset": 14
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "csp-provider"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Configures CSP-related behavior for inline tags rendered by Base UI components.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 26
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 90,
+                    "offset": 105
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 16
+              },
+              "end": {
+                "line": 3,
+                "column": 101,
+                "offset": 116
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 16
+          },
+          "end": {
+            "line": 3,
+            "column": 101,
+            "offset": 116
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 125
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 143
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A CSP provider component that applies a nonce to inline <style> and <script> tags rendered by Base UI components, and can disable inline <style> elements.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 146
+              },
+              "end": {
+                "line": 6,
+                "column": 167,
+                "offset": 310
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 117
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 313
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 4,
+                "offset": 318
+              },
+              "end": {
+                "line": 9,
+                "column": 11,
+                "offset": 325
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 315
+          },
+          "end": {
+            "line": 9,
+            "column": 11,
+            "offset": 325
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and wrap it around your app:",
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 1,
+                "offset": 327
+              },
+              "end": {
+                "line": 11,
+                "column": 50,
+                "offset": 376
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 327
+          },
+          "end": {
+            "line": 11,
+            "column": 50,
+            "offset": 376
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { CSPProvider } from 'baseui-solid2/csp-provider';\n\n// prettier-ignore\n<CSPProvider nonce=\"...\">\n  {/* Your app or a group of components */}\n</CSPProvider>",
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 378
+          },
+          "end": {
+            "line": 20,
+            "column": 4,
+            "offset": 568
+          }
+        },
+        "data": {
+          "sourceValue": "import { CSPProvider } from '@base-ui/react/csp-provider';\n\n// prettier-ignore\n<CSPProvider nonce=\"...\">\n  {/* Your app or a group of components */}\n</CSPProvider>",
+          "references": [
+            {
+              "value": "@base-ui/react/csp-provider",
+              "start": 29,
+              "end": 56,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/csp-provider",
+              "start": 29,
+              "end": 56,
+              "kind": "import",
+              "replacement": "baseui-solid2/csp-provider"
+            }
+          ]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Some Base UI components render inline ",
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 1,
+                "offset": 570
+              },
+              "end": {
+                "line": 22,
+                "column": 39,
+                "offset": 608
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<style>",
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 39,
+                "offset": 608
+              },
+              "end": {
+                "line": 22,
+                "column": 48,
+                "offset": 617
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 48,
+                "offset": 617
+              },
+              "end": {
+                "line": 22,
+                "column": 52,
+                "offset": 621
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<script>",
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 52,
+                "offset": 621
+              },
+              "end": {
+                "line": 22,
+                "column": 62,
+                "offset": 631
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " tags for functionality such as removing scrollbars or pre-hydration behavior. Under a strict Content Security Policy (CSP), these tags may be blocked unless they include a matching ",
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 62,
+                "offset": 631
+              },
+              "end": {
+                "line": 22,
+                "column": 244,
+                "offset": 813
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/nonce",
+            "children": [
+              {
+                "type": "text",
+                "value": "nonce",
+                "position": {
+                  "start": {
+                    "line": 22,
+                    "column": 245,
+                    "offset": 814
+                  },
+                  "end": {
+                    "line": 22,
+                    "column": 250,
+                    "offset": 819
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 244,
+                "offset": 813
+              },
+              "end": {
+                "line": 22,
+                "column": 336,
+                "offset": 905
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attribute.",
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 336,
+                "offset": 905
+              },
+              "end": {
+                "line": 22,
+                "column": 347,
+                "offset": 916
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 22,
+            "column": 1,
+            "offset": 570
+          },
+          "end": {
+            "line": 22,
+            "column": 347,
+            "offset": 916
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "CSPProvider",
+            "position": {
+              "start": {
+                "line": 24,
+                "column": 1,
+                "offset": 918
+              },
+              "end": {
+                "line": 24,
+                "column": 14,
+                "offset": 931
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " allows configuring this behavior globally for all Base UI components within its tree.",
+            "position": {
+              "start": {
+                "line": 24,
+                "column": 14,
+                "offset": 931
+              },
+              "end": {
+                "line": 24,
+                "column": 100,
+                "offset": 1017
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 24,
+            "column": 1,
+            "offset": 918
+          },
+          "end": {
+            "line": 24,
+            "column": 100,
+            "offset": 1017
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Supplying a nonce",
+            "position": {
+              "start": {
+                "line": 26,
+                "column": 4,
+                "offset": 1022
+              },
+              "end": {
+                "line": 26,
+                "column": 21,
+                "offset": 1039
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 26,
+            "column": 1,
+            "offset": 1019
+          },
+          "end": {
+            "line": 26,
+            "column": 21,
+            "offset": 1039
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "supplying-a-nonce"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you enforce a CSP that blocks inline tags by default, configure your server to:",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 1,
+                "offset": 1041
+              },
+              "end": {
+                "line": 28,
+                "column": 83,
+                "offset": 1123
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 28,
+            "column": 1,
+            "offset": 1041
+          },
+          "end": {
+            "line": 28,
+            "column": 83,
+            "offset": 1123
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Generate a random nonce per request",
+                    "position": {
+                      "start": {
+                        "line": 30,
+                        "column": 4,
+                        "offset": 1128
+                      },
+                      "end": {
+                        "line": 30,
+                        "column": 39,
+                        "offset": 1163
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 30,
+                    "column": 4,
+                    "offset": 1128
+                  },
+                  "end": {
+                    "line": 30,
+                    "column": 39,
+                    "offset": 1163
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 30,
+                "column": 1,
+                "offset": 1125
+              },
+              "end": {
+                "line": 30,
+                "column": 39,
+                "offset": 1163
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Include it in your CSP header (via ",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 4,
+                        "offset": 1167
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 39,
+                        "offset": 1202
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "style-src-elem",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 39,
+                        "offset": 1202
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 55,
+                        "offset": 1218
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "/",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 55,
+                        "offset": 1218
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 56,
+                        "offset": 1219
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "script-src",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 56,
+                        "offset": 1219
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 68,
+                        "offset": 1231
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ")",
+                    "position": {
+                      "start": {
+                        "line": 31,
+                        "column": 68,
+                        "offset": 1231
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 69,
+                        "offset": 1232
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 31,
+                    "column": 4,
+                    "offset": 1167
+                  },
+                  "end": {
+                    "line": 31,
+                    "column": 69,
+                    "offset": 1232
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 1,
+                "offset": 1164
+              },
+              "end": {
+                "line": 31,
+                "column": 69,
+                "offset": 1232
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Pass the same nonce into ",
+                    "position": {
+                      "start": {
+                        "line": 32,
+                        "column": 4,
+                        "offset": 1236
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 29,
+                        "offset": 1261
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "CSPProvider",
+                    "position": {
+                      "start": {
+                        "line": 32,
+                        "column": 29,
+                        "offset": 1261
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 42,
+                        "offset": 1274
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " during rendering",
+                    "position": {
+                      "start": {
+                        "line": 32,
+                        "column": 42,
+                        "offset": 1274
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 59,
+                        "offset": 1291
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 32,
+                    "column": 4,
+                    "offset": 1236
+                  },
+                  "end": {
+                    "line": 32,
+                    "column": 59,
+                    "offset": 1291
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 32,
+                "column": 1,
+                "offset": 1233
+              },
+              "end": {
+                "line": 32,
+                "column": 59,
+                "offset": 1291
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 1125
+          },
+          "end": {
+            "line": 32,
+            "column": 59,
+            "offset": 1291
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "ts",
+        "meta": "title=\"Example\"",
+        "value": "const nonce = crypto.randomUUID();\n\n// Example CSP header\nconst csp = [\n  `default-src 'self'`,\n  `script-src 'self' 'nonce-${nonce}'`,\n  `style-src-elem 'self' 'nonce-${nonce}'`,\n].join('; ');",
+        "position": {
+          "start": {
+            "line": 34,
+            "column": 1,
+            "offset": 1293
+          },
+          "end": {
+            "line": 43,
+            "column": 4,
+            "offset": 1512
+          }
+        },
+        "data": {
+          "sourceValue": "const nonce = crypto.randomUUID();\n\n// Example CSP header\nconst csp = [\n  `default-src 'self'`,\n  `script-src 'self' 'nonce-${nonce}'`,\n  `style-src-elem 'self' 'nonce-${nonce}'`,\n].join('; ');",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Then:",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 1,
+                "offset": 1514
+              },
+              "end": {
+                "line": 45,
+                "column": 6,
+                "offset": 1519
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 1514
+          },
+          "end": {
+            "line": 45,
+            "column": 6,
+            "offset": 1519
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Providing the nonce\"",
+        "value": "import { CSPProvider } from 'baseui-solid2/csp-provider';\n\nfunction App({ nonce }) {\n  return <CSPProvider nonce={nonce}>{/* ... */}</CSPProvider>;\n}",
+        "position": {
+          "start": {
+            "line": 47,
+            "column": 1,
+            "offset": 1521
+          },
+          "end": {
+            "line": 53,
+            "column": 4,
+            "offset": 1710
+          }
+        },
+        "data": {
+          "sourceValue": "import { CSPProvider } from '@base-ui/react/csp-provider';\n\nfunction App({ nonce }) {\n  return <CSPProvider nonce={nonce}>{/* ... */}</CSPProvider>;\n}",
+          "references": [
+            {
+              "value": "@base-ui/react/csp-provider",
+              "start": 29,
+              "end": 56,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/csp-provider",
+              "start": 29,
+              "end": 56,
+              "kind": "import",
+              "replacement": "baseui-solid2/csp-provider"
+            }
+          ]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This will ensure that all inline ",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 1,
+                "offset": 1712
+              },
+              "end": {
+                "line": 55,
+                "column": 34,
+                "offset": 1745
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<style>",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 34,
+                "offset": 1745
+              },
+              "end": {
+                "line": 55,
+                "column": 43,
+                "offset": 1754
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 43,
+                "offset": 1754
+              },
+              "end": {
+                "line": 55,
+                "column": 48,
+                "offset": 1759
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<script>",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 48,
+                "offset": 1759
+              },
+              "end": {
+                "line": 55,
+                "column": 58,
+                "offset": 1769
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " tags rendered by Base UI components include the correct nonce attribute, allowing them to function under your CSP.",
+            "position": {
+              "start": {
+                "line": 55,
+                "column": 58,
+                "offset": 1769
+              },
+              "end": {
+                "line": 55,
+                "column": 173,
+                "offset": 1884
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 55,
+            "column": 1,
+            "offset": 1712
+          },
+          "end": {
+            "line": 55,
+            "column": 173,
+            "offset": 1884
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Disable inline style elements",
+            "position": {
+              "start": {
+                "line": 57,
+                "column": 4,
+                "offset": 1889
+              },
+              "end": {
+                "line": 57,
+                "column": 33,
+                "offset": 1918
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 57,
+            "column": 1,
+            "offset": 1886
+          },
+          "end": {
+            "line": 57,
+            "column": 33,
+            "offset": 1918
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "disable-inline-style-elements"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can avoid supplying a ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 1,
+                "offset": 1920
+              },
+              "end": {
+                "line": 59,
+                "column": 27,
+                "offset": 1946
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "nonce",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 27,
+                "offset": 1946
+              },
+              "end": {
+                "line": 59,
+                "column": 34,
+                "offset": 1953
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " if you disable inline ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 34,
+                "offset": 1953
+              },
+              "end": {
+                "line": 59,
+                "column": 57,
+                "offset": 1976
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<style>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 57,
+                "offset": 1976
+              },
+              "end": {
+                "line": 59,
+                "column": 66,
+                "offset": 1985
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " elements entirely and rely on external stylesheets only. The relevant components are ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 66,
+                "offset": 1985
+              },
+              "end": {
+                "line": 59,
+                "column": 152,
+                "offset": 2071
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<ScrollArea.Viewport>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 152,
+                "offset": 2071
+              },
+              "end": {
+                "line": 59,
+                "column": 175,
+                "offset": 2094
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 175,
+                "offset": 2094
+              },
+              "end": {
+                "line": 59,
+                "column": 180,
+                "offset": 2099
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Select.Popup>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 180,
+                "offset": 2099
+              },
+              "end": {
+                "line": 59,
+                "column": 196,
+                "offset": 2115
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " or ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 196,
+                "offset": 2115
+              },
+              "end": {
+                "line": 59,
+                "column": 200,
+                "offset": 2119
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Select.List>",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 200,
+                "offset": 2119
+              },
+              "end": {
+                "line": 59,
+                "column": 215,
+                "offset": 2134
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " when ",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 215,
+                "offset": 2134
+              },
+              "end": {
+                "line": 59,
+                "column": 221,
+                "offset": 2140
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "alignItemWithTrigger",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 221,
+                "offset": 2140
+              },
+              "end": {
+                "line": 59,
+                "column": 243,
+                "offset": 2162
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is enabled, which inject a style tag to disable native scrollbars.",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 243,
+                "offset": 2162
+              },
+              "end": {
+                "line": 59,
+                "column": 310,
+                "offset": 2229
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 59,
+            "column": 1,
+            "offset": 1920
+          },
+          "end": {
+            "line": 59,
+            "column": 310,
+            "offset": 2229
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "html",
+        "meta": null,
+        "value": "<style>\n  .base-ui-disable-scrollbar {\n    scrollbar-width: none;\n  }\n  .base-ui-disable-scrollbar::-webkit-scrollbar {\n    display: none;\n  }\n</style>",
+        "position": {
+          "start": {
+            "line": 61,
+            "column": 1,
+            "offset": 2231
+          },
+          "end": {
+            "line": 70,
+            "column": 4,
+            "offset": 2394
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Specify ",
+            "position": {
+              "start": {
+                "line": 72,
+                "column": 1,
+                "offset": 2396
+              },
+              "end": {
+                "line": 72,
+                "column": 9,
+                "offset": 2404
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "disableStyleElements",
+            "position": {
+              "start": {
+                "line": 72,
+                "column": 9,
+                "offset": 2404
+              },
+              "end": {
+                "line": 72,
+                "column": 31,
+                "offset": 2426
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to remove these tags:",
+            "position": {
+              "start": {
+                "line": 72,
+                "column": 31,
+                "offset": 2426
+              },
+              "end": {
+                "line": 72,
+                "column": 53,
+                "offset": 2448
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 72,
+            "column": 1,
+            "offset": 2396
+          },
+          "end": {
+            "line": 72,
+            "column": 53,
+            "offset": 2448
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Disabling style elements\"",
+        "value": "<CSPProvider disableStyleElements>{/* ... */}</CSPProvider>",
+        "position": {
+          "start": {
+            "line": 74,
+            "column": 1,
+            "offset": 2450
+          },
+          "end": {
+            "line": 76,
+            "column": 4,
+            "offset": 2553
+          }
+        },
+        "data": {
+          "sourceValue": "<CSPProvider disableStyleElements>{/* ... */}</CSPProvider>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "<script>",
+            "position": {
+              "start": {
+                "line": 78,
+                "column": 1,
+                "offset": 2555
+              },
+              "end": {
+                "line": 78,
+                "column": 11,
+                "offset": 2565
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " tags across all components are opt-in, so they are not affected by this prop and don't have their own disable flag. A ",
+            "position": {
+              "start": {
+                "line": 78,
+                "column": 11,
+                "offset": 2565
+              },
+              "end": {
+                "line": 78,
+                "column": 130,
+                "offset": 2684
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "nonce",
+            "position": {
+              "start": {
+                "line": 78,
+                "column": 130,
+                "offset": 2684
+              },
+              "end": {
+                "line": 78,
+                "column": 137,
+                "offset": 2691
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is required if any component uses inline scripts.",
+            "position": {
+              "start": {
+                "line": 78,
+                "column": 137,
+                "offset": 2691
+              },
+              "end": {
+                "line": 78,
+                "column": 187,
+                "offset": 2741
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 78,
+            "column": 1,
+            "offset": 2555
+          },
+          "end": {
+            "line": 78,
+            "column": 187,
+            "offset": 2741
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Inline style attributes",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 4,
+                "offset": 2746
+              },
+              "end": {
+                "line": 80,
+                "column": 27,
+                "offset": 2769
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 80,
+            "column": 1,
+            "offset": 2743
+          },
+          "end": {
+            "line": 80,
+            "column": 27,
+            "offset": 2769
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "inline-style-attributes"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "CSPProvider",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 1,
+                "offset": 2771
+              },
+              "end": {
+                "line": 82,
+                "column": 14,
+                "offset": 2784
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " covers inline ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 14,
+                "offset": 2784
+              },
+              "end": {
+                "line": 82,
+                "column": 29,
+                "offset": 2799
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<style>",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 29,
+                "offset": 2799
+              },
+              "end": {
+                "line": 82,
+                "column": 38,
+                "offset": 2808
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 38,
+                "offset": 2808
+              },
+              "end": {
+                "line": 82,
+                "column": 43,
+                "offset": 2813
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<script>",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 43,
+                "offset": 2813
+              },
+              "end": {
+                "line": 82,
+                "column": 53,
+                "offset": 2823
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " tags rendered as elements, but it does not cover inline style attributes (for example, ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 53,
+                "offset": 2823
+              },
+              "end": {
+                "line": 82,
+                "column": 141,
+                "offset": 2911
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<div style=\"...\">",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 141,
+                "offset": 2911
+              },
+              "end": {
+                "line": 82,
+                "column": 160,
+                "offset": 2930
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": "). The ",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 160,
+                "offset": 2930
+              },
+              "end": {
+                "line": 82,
+                "column": 167,
+                "offset": 2937
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "style-src-attr",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 167,
+                "offset": 2937
+              },
+              "end": {
+                "line": 82,
+                "column": 183,
+                "offset": 2953
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " directive in CSP governs inline style attributes encountered when parsing HTML from server pre-rendered components (it does not affect client-side JavaScript that sets styles).",
+            "position": {
+              "start": {
+                "line": 82,
+                "column": 183,
+                "offset": 2953
+              },
+              "end": {
+                "line": 82,
+                "column": 360,
+                "offset": 3130
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 82,
+            "column": 1,
+            "offset": 2771
+          },
+          "end": {
+            "line": 82,
+            "column": 360,
+            "offset": 3130
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In CSP, ",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 1,
+                "offset": 3132
+              },
+              "end": {
+                "line": 84,
+                "column": 9,
+                "offset": 3140
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "style-src",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 9,
+                "offset": 3140
+              },
+              "end": {
+                "line": 84,
+                "column": 20,
+                "offset": 3151
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " applies to both ",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 20,
+                "offset": 3151
+              },
+              "end": {
+                "line": 84,
+                "column": 37,
+                "offset": 3168
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<style>",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 37,
+                "offset": 3168
+              },
+              "end": {
+                "line": 84,
+                "column": 46,
+                "offset": 3177
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " elements and ",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 46,
+                "offset": 3177
+              },
+              "end": {
+                "line": 84,
+                "column": 60,
+                "offset": 3191
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "style=\"\"",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 60,
+                "offset": 3191
+              },
+              "end": {
+                "line": 84,
+                "column": 70,
+                "offset": 3201
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attributes. If you only want to control ",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 70,
+                "offset": 3201
+              },
+              "end": {
+                "line": 84,
+                "column": 111,
+                "offset": 3242
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<style>",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 111,
+                "offset": 3242
+              },
+              "end": {
+                "line": 84,
+                "column": 120,
+                "offset": 3251
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " elements, use ",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 120,
+                "offset": 3251
+              },
+              "end": {
+                "line": 84,
+                "column": 135,
+                "offset": 3266
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "style-src-elem",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 135,
+                "offset": 3266
+              },
+              "end": {
+                "line": 84,
+                "column": 151,
+                "offset": 3282
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " instead.",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 151,
+                "offset": 3282
+              },
+              "end": {
+                "line": 84,
+                "column": 160,
+                "offset": 3291
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 84,
+            "column": 1,
+            "offset": 3132
+          },
+          "end": {
+            "line": 84,
+            "column": 160,
+            "offset": 3291
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If your CSP blocks inline style ",
+            "position": {
+              "start": {
+                "line": 86,
+                "column": 1,
+                "offset": 3293
+              },
+              "end": {
+                "line": 86,
+                "column": 33,
+                "offset": 3325
+              }
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "attributes",
+                "position": {
+                  "start": {
+                    "line": 86,
+                    "column": 34,
+                    "offset": 3326
+                  },
+                  "end": {
+                    "line": 86,
+                    "column": 44,
+                    "offset": 3336
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 86,
+                "column": 33,
+                "offset": 3325
+              },
+              "end": {
+                "line": 86,
+                "column": 45,
+                "offset": 3337
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " in addition to ",
+            "position": {
+              "start": {
+                "line": 86,
+                "column": 45,
+                "offset": 3337
+              },
+              "end": {
+                "line": 86,
+                "column": 61,
+                "offset": 3353
+              }
+            }
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "elements",
+                "position": {
+                  "start": {
+                    "line": 86,
+                    "column": 62,
+                    "offset": 3354
+                  },
+                  "end": {
+                    "line": 86,
+                    "column": 70,
+                    "offset": 3362
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 86,
+                "column": 61,
+                "offset": 3353
+              },
+              "end": {
+                "line": 86,
+                "column": 71,
+                "offset": 3363
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", you have a few options:",
+            "position": {
+              "start": {
+                "line": 86,
+                "column": 71,
+                "offset": 3363
+              },
+              "end": {
+                "line": 86,
+                "column": 96,
+                "offset": 3388
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 86,
+            "column": 1,
+            "offset": 3293
+          },
+          "end": {
+            "line": 86,
+            "column": 96,
+            "offset": 3388
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Relax your CSP by adding ",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 4,
+                        "offset": 3393
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 29,
+                        "offset": 3418
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "'unsafe-inline'",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 29,
+                        "offset": 3418
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 46,
+                        "offset": 3435
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " to the ",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 46,
+                        "offset": 3435
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 54,
+                        "offset": 3443
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "style-src-attr",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 54,
+                        "offset": 3443
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 70,
+                        "offset": 3459
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " directive (or using only ",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 70,
+                        "offset": 3459
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 96,
+                        "offset": 3485
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "style-src-elem",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 96,
+                        "offset": 3485
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 112,
+                        "offset": 3501
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " instead of ",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 112,
+                        "offset": 3501
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 124,
+                        "offset": 3513
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "style-src",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 124,
+                        "offset": 3513
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 135,
+                        "offset": 3524
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "). Style attributes specifically pose a less severe security risk than style elements, but this approach may not be acceptable in high-security environments.",
+                    "position": {
+                      "start": {
+                        "line": 88,
+                        "column": 135,
+                        "offset": 3524
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 292,
+                        "offset": 3681
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 88,
+                    "column": 4,
+                    "offset": 3393
+                  },
+                  "end": {
+                    "line": 88,
+                    "column": 292,
+                    "offset": 3681
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 88,
+                "column": 1,
+                "offset": 3390
+              },
+              "end": {
+                "line": 88,
+                "column": 292,
+                "offset": 3681
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Render the affected components only on the client, so that no inline styles are present in the initial HTML.",
+                    "position": {
+                      "start": {
+                        "line": 89,
+                        "column": 4,
+                        "offset": 3685
+                      },
+                      "end": {
+                        "line": 89,
+                        "column": 112,
+                        "offset": 3793
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 89,
+                    "column": 4,
+                    "offset": 3685
+                  },
+                  "end": {
+                    "line": 89,
+                    "column": 112,
+                    "offset": 3793
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 89,
+                "column": 1,
+                "offset": 3682
+              },
+              "end": {
+                "line": 89,
+                "column": 112,
+                "offset": 3793
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Manually unset inline styles and specify them in your CSS instead. Any component can have its inline styles unset, such as ",
+                    "position": {
+                      "start": {
+                        "line": 90,
+                        "column": 4,
+                        "offset": 3797
+                      },
+                      "end": {
+                        "line": 90,
+                        "column": 127,
+                        "offset": 3920
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<ScrollArea.Viewport style={{ overflow: undefined  }}>",
+                    "position": {
+                      "start": {
+                        "line": 90,
+                        "column": 127,
+                        "offset": 3920
+                      },
+                      "end": {
+                        "line": 90,
+                        "column": 183,
+                        "offset": 3976
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ". Note that you'll need to ensure you vet upgrades for any new inline styles added by Base UI components.",
+                    "position": {
+                      "start": {
+                        "line": 90,
+                        "column": 183,
+                        "offset": 3976
+                      },
+                      "end": {
+                        "line": 90,
+                        "column": 288,
+                        "offset": 4081
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 90,
+                    "column": 4,
+                    "offset": 3797
+                  },
+                  "end": {
+                    "line": 90,
+                    "column": 288,
+                    "offset": 4081
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 1,
+                "offset": 3794
+              },
+              "end": {
+                "line": 90,
+                "column": 288,
+                "offset": 4081
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 88,
+            "column": 1,
+            "offset": 3390
+          },
+          "end": {
+            "line": 90,
+            "column": 288,
+            "offset": 4081
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 92,
+                "column": 4,
+                "offset": 4086
+              },
+              "end": {
+                "line": 92,
+                "column": 17,
+                "offset": 4099
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 92,
+            "column": 1,
+            "offset": 4083
+          },
+          "end": {
+            "line": 92,
+            "column": 17,
+            "offset": 4099
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesCSPProvider } from './types';",
+        "position": {
+          "start": {
+            "line": 94,
+            "column": 1,
+            "offset": 4101
+          },
+          "end": {
+            "line": 94,
+            "column": 44,
+            "offset": 4144
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesCSPProvider",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 96,
+            "column": 1,
+            "offset": 4146
+          },
+          "end": {
+            "line": 96,
+            "column": 21,
+            "offset": 4166
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/utils/csp-provider/types#TypesCSPProvider"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'Base UI CSP Provider',\n    'Content Security Policy',\n    'CSP nonce',\n    'React CSP',\n    'Inline script nonce',\n    'Inline style nonce',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 98,
+            "column": 1,
+            "offset": 4168
+          },
+          "end": {
+            "line": 107,
+            "column": 3,
+            "offset": 4361
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 108,
+        "column": 1,
+        "offset": 4362
+      }
+    }
+  }
+}

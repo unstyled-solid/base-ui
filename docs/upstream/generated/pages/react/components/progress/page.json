@@ -1,0 +1,966 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/progress/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "2471c0483b34a811596982cdc4c1cc9107d27f76b293e73720f95f52a73605c0",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/progress",
+  "route": "/solid/components/progress",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Progress",
+  "subtitle": "Displays the status of a task that takes a long time.",
+  "metadata": {
+    "keywords": [
+      "React Progress Bar",
+      "Progress Component",
+      "Progress Indicator",
+      "Loader",
+      "Loading Bar",
+      "Upload Progress",
+      "Download Progress",
+      "Task Status Indicator",
+      "Determinate Progress",
+      "Indeterminate Progress",
+      "Accessible Progress",
+      "Headless React Components",
+      "Loading Indicator",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React progress bar component that displays the status of a task that takes a long time."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoProgressHero",
+      "imported": "DemoProgressHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/progress/demos/hero#DemoProgressHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesProgress",
+      "imported": "TypesProgress",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Progress",
+      "properties": {
+        "id": "progress"
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:29:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:33:1"
+    },
+    {
+      "depth": 3,
+      "text": "Track",
+      "properties": {
+        "id": "track"
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:37:1"
+    },
+    {
+      "depth": 3,
+      "text": "Indicator",
+      "properties": {
+        "id": "indicator"
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:41:1"
+    },
+    {
+      "depth": 3,
+      "text": "Value",
+      "properties": {
+        "id": "value"
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:45:1"
+    },
+    {
+      "depth": 3,
+      "text": "Label",
+      "properties": {
+        "id": "label"
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:49:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React progress bar component that displays the status of a task that takes a long time."
+      },
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:4:1"
+    },
+    {
+      "name": "DemoProgressHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/progress/demos/hero#DemoProgressHero"
+    },
+    {
+      "name": "TypesProgress.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:35:1",
+      "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+    },
+    {
+      "name": "TypesProgress.Track",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:39:1",
+      "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+    },
+    {
+      "name": "TypesProgress.Indicator",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:43:1",
+      "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+    },
+    {
+      "name": "TypesProgress.Value",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:47:1",
+      "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+    },
+    {
+      "name": "TypesProgress.Label",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:51:1",
+      "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:11:1",
+      "detail": "Site must implement DemoProgressHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:17:1",
+      "detail": "Progress.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:17:1",
+      "detail": "Progress.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:17:1",
+      "detail": "Progress.Track",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:17:1",
+      "detail": "Progress.Indicator",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:17:1",
+      "detail": "Progress.Value",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:17:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:35:1",
+      "detail": "Site must implement TypesProgress.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:39:1",
+      "detail": "Site must implement TypesProgress.Track; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:43:1",
+      "detail": "Site must implement TypesProgress.Indicator; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:47:1",
+      "detail": "Site must implement TypesProgress.Value; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:51:1",
+      "detail": "Site must implement TypesProgress.Label; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/progress/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Progress",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 11,
+                "offset": 10
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 11,
+            "offset": 10
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "progress"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "Displays the status of a task that takes a long time.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 22
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 64,
+                    "offset": 75
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 12
+              },
+              "end": {
+                "line": 3,
+                "column": 75,
+                "offset": 86
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 12
+          },
+          "end": {
+            "line": 3,
+            "column": 75,
+            "offset": 86
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 95
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 113
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React progress bar component that displays the status of a task that takes a long time.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 116
+              },
+              "end": {
+                "line": 6,
+                "column": 125,
+                "offset": 238
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 87
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 241
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoProgressHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 243
+          },
+          "end": {
+            "line": 9,
+            "column": 49,
+            "offset": 291
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoProgressHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 293
+          },
+          "end": {
+            "line": 11,
+            "column": 21,
+            "offset": 313
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/progress/demos/hero#DemoProgressHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 318
+              },
+              "end": {
+                "line": 13,
+                "column": 11,
+                "offset": 325
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 315
+          },
+          "end": {
+            "line": 13,
+            "column": 11,
+            "offset": 325
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 327
+              },
+              "end": {
+                "line": 15,
+                "column": 45,
+                "offset": 371
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 327
+          },
+          "end": {
+            "line": 15,
+            "column": 45,
+            "offset": 371
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Progress } from 'baseui-solid2/progress';\n\n<Progress.Root>\n  <Progress.Label />\n  <Progress.Track>\n    <Progress.Indicator />\n  </Progress.Track>\n  <Progress.Value />\n</Progress.Root>;",
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 373
+          },
+          "end": {
+            "line": 27,
+            "column": 4,
+            "offset": 594
+          }
+        },
+        "data": {
+          "sourceValue": "import { Progress } from '@base-ui/react/progress';\n\n<Progress.Root>\n  <Progress.Label />\n  <Progress.Track>\n    <Progress.Indicator />\n  </Progress.Track>\n  <Progress.Value />\n</Progress.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/progress",
+              "start": 26,
+              "end": 49,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/progress",
+              "start": 26,
+              "end": 49,
+              "kind": "import",
+              "replacement": "baseui-solid2/progress"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 29,
+                "column": 4,
+                "offset": 599
+              },
+              "end": {
+                "line": 29,
+                "column": 17,
+                "offset": 612
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 29,
+            "column": 1,
+            "offset": 596
+          },
+          "end": {
+            "line": 29,
+            "column": 17,
+            "offset": 612
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesProgress } from './types';",
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 614
+          },
+          "end": {
+            "line": 31,
+            "column": 41,
+            "offset": 654
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 5,
+                "offset": 660
+              },
+              "end": {
+                "line": 33,
+                "column": 9,
+                "offset": 664
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 656
+          },
+          "end": {
+            "line": 33,
+            "column": 9,
+            "offset": 664
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesProgress.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 666
+          },
+          "end": {
+            "line": 35,
+            "column": 23,
+            "offset": 688
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Track",
+            "position": {
+              "start": {
+                "line": 37,
+                "column": 5,
+                "offset": 694
+              },
+              "end": {
+                "line": 37,
+                "column": 10,
+                "offset": 699
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 37,
+            "column": 1,
+            "offset": 690
+          },
+          "end": {
+            "line": 37,
+            "column": 10,
+            "offset": 699
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "track"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesProgress.Track",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 39,
+            "column": 1,
+            "offset": 701
+          },
+          "end": {
+            "line": 39,
+            "column": 24,
+            "offset": 724
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Indicator",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 5,
+                "offset": 730
+              },
+              "end": {
+                "line": 41,
+                "column": 14,
+                "offset": 739
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 726
+          },
+          "end": {
+            "line": 41,
+            "column": 14,
+            "offset": 739
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "indicator"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesProgress.Indicator",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 741
+          },
+          "end": {
+            "line": 43,
+            "column": 28,
+            "offset": 768
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Value",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 5,
+                "offset": 774
+              },
+              "end": {
+                "line": 45,
+                "column": 10,
+                "offset": 779
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 770
+          },
+          "end": {
+            "line": 45,
+            "column": 10,
+            "offset": 779
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "value"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesProgress.Value",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 47,
+            "column": 1,
+            "offset": 781
+          },
+          "end": {
+            "line": 47,
+            "column": 24,
+            "offset": 804
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Label",
+            "position": {
+              "start": {
+                "line": 49,
+                "column": 5,
+                "offset": 810
+              },
+              "end": {
+                "line": 49,
+                "column": 10,
+                "offset": 815
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 49,
+            "column": 1,
+            "offset": 806
+          },
+          "end": {
+            "line": 49,
+            "column": 10,
+            "offset": 815
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "label"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesProgress.Label",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 51,
+            "column": 1,
+            "offset": 817
+          },
+          "end": {
+            "line": 51,
+            "column": 24,
+            "offset": 840
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/progress/types#TypesProgress"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Progress Bar',\n    'Progress Component',\n    'Progress Indicator',\n    'Loader',\n    'Loading Bar',\n    'Upload Progress',\n    'Download Progress',\n    'Task Status Indicator',\n    'Determinate Progress',\n    'Indeterminate Progress',\n    'Accessible Progress',\n    'Headless React Components',\n    'Loading Indicator',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 53,
+            "column": 1,
+            "offset": 842
+          },
+          "end": {
+            "line": 70,
+            "column": 3,
+            "offset": 1235
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 71,
+        "column": 1,
+        "offset": 1236
+      }
+    }
+  }
+}

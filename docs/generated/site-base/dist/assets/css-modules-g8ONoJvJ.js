@@ -1,0 +1,142 @@
+var e=`import type { ComponentProps } from '@solidjs/web';
+import { NavigationMenu } from 'baseui-solid2/navigation-menu';
+import styles from './index.module.css';
+
+export default function ExampleNavigationMenu() {
+  return (
+    <NavigationMenu.Root class={styles.Root}>
+      <NavigationMenu.List class={styles.List}>
+        <NavigationMenu.Item>
+          <NavigationMenu.Trigger class={styles.Trigger}>
+            Overview
+            <NavigationMenu.Icon class={styles.Icon}>
+              <CaretDownIcon />
+            </NavigationMenu.Icon>
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content class={styles.Content}>
+            <ul class={styles.GridLinkList}>
+              {overviewLinks.map((item) => (
+                <li>
+                  <Link class={styles.LinkCard} href={item.href}>
+                    <h3 class={styles.LinkTitle}>{item.title}</h3>
+                    <p class={styles.LinkDescription}>{item.description}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </NavigationMenu.Content>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <NavigationMenu.Trigger class={styles.Trigger}>
+            Handbook
+            <NavigationMenu.Icon class={styles.Icon}>
+              <CaretDownIcon />
+            </NavigationMenu.Icon>
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content class={styles.Content}>
+            <ul class={styles.FlexLinkList}>
+              {handbookLinks.map((item) => (
+                <li>
+                  <Link class={styles.LinkCard} href={item.href}>
+                    <h3 class={styles.LinkTitle}>{item.title}</h3>
+                    <p class={styles.LinkDescription}>{item.description}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </NavigationMenu.Content>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <Link class={styles.Trigger} href="https://github.com/mui/base-ui">
+            GitHub
+          </Link>
+        </NavigationMenu.Item>
+      </NavigationMenu.List>
+
+      <NavigationMenu.Portal>
+        <NavigationMenu.Positioner
+          class={styles.Positioner}
+          sideOffset={10}
+          collisionPadding={{ top: 5, bottom: 5, left: 20, right: 20 }}
+          collisionAvoidance={{ side: 'none' }}
+        >
+          <NavigationMenu.Popup class={styles.Popup}>
+            <NavigationMenu.Arrow class={styles.Arrow} />
+            <NavigationMenu.Viewport class={styles.Viewport} />
+          </NavigationMenu.Popup>
+        </NavigationMenu.Positioner>
+      </NavigationMenu.Portal>
+    </NavigationMenu.Root>
+  );
+}
+
+function Link(props: NavigationMenu.Link.Props) {
+  return (
+    <NavigationMenu.Link
+      render={(linkProps) => <a {...linkProps} />}
+      {...props}
+    />
+  );
+}
+
+function CaretDownIcon(props: ComponentProps<'svg'>) {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      {...props}
+      style={{ display: 'block', ...(typeof props.style === 'object' ? props.style : {}) }}
+    >
+      <path d="M12 6H4l4 4.5z" />
+    </svg>
+  );
+}
+
+const overviewLinks = [
+  {
+    href: '/react/overview/quick-start',
+    title: 'Quick Start',
+    description: 'Install and assemble your first component.',
+  },
+  {
+    href: '/react/overview/accessibility',
+    title: 'Accessibility',
+    description: 'Learn how we build accessible components.',
+  },
+  {
+    href: '/react/overview/releases',
+    title: 'Releases',
+    description: 'See what’s new in the latest Base\xA0UI versions.',
+  },
+  {
+    href: '/react/overview/about',
+    title: 'About',
+    description: 'Learn more about Base\xA0UI and our mission.',
+  },
+] as const;
+
+const handbookLinks = [
+  {
+    href: '/react/handbook/styling',
+    title: 'Styling',
+    description:
+      'Base\xA0UI components can be styled with plain CSS, Tailwind CSS, CSS-in-JS, or CSS Modules.',
+  },
+  {
+    href: '/react/handbook/animation',
+    title: 'Animation',
+    description:
+      'Base\xA0UI components can be animated with CSS transitions, CSS animations, or JavaScript libraries.',
+  },
+  {
+    href: '/react/handbook/composition',
+    title: 'Composition',
+    description:
+      'Base\xA0UI components can be replaced and composed with your own existing components.',
+  },
+] as const;
+`;export{e as default};

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext", "moduleResolution": "Bundler", "jsx": "preserve",
+    "jsxImportSource": "@solidjs/web", "strict": true, "noEmit": true,
+    "verbatimModuleSyntax": true, "isolatedModules": true, "skipLibCheck": false,
+    "customConditions": ["browser", "development"], "types": ["node"]
+  },
+  "include": ["./host.tsx"], "exclude": ["./.cache"]
+}

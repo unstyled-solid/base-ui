@@ -1,0 +1,7 @@
+body { font-family: sans-serif; }
+.tab-list { position: relative; display: flex; width: 300px; }
+.tab { width: 100px; height: 40px; flex-shrink: 0; }
+.slider-control { position: relative; width: 200px; height: 40px; }
+.slider-track { position: relative; width: 200px; height: 8px; }
+.slider-thumb { width: 20px; height: 20px; }
+[data-probe="popup"] { background: white; padding: 12px; }

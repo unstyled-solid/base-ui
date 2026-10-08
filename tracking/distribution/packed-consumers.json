@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "owner": "bsolid-dist-pack",
+  "baseline": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "claim": {
+    "recordedBeforeEdits": true,
+    "tracker": "bsolid-dist-pack Beads claim/notes",
+    "allowlist": ["scripts/distribution/consumers/**", "test/distribution/consumers/**", "tracking/distribution/packed-consumers.json"]
+  },
+  "status": "correction-implemented-focused-diagnosis-complete-full-gate-blocked",
+  "entrypoint": "scripts/distribution/consumers/run.mjs",
+  "commandHandoff": { "owner": "manifest-integrator", "script": "test:packed-consumers", "value": "node scripts/distribution/consumers/run.mjs" },
+  "executionPolicy": {
+    "noFinalExecutionBeforeCoordinatorFreshBuildFreeze": true,
+    "tarball": "required absolute actual archive; runner never packs or builds",
+    "output": "required absolute new directory under approved external temporary root",
+    "temporaryRoot": "/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode",
+    "dependencies": "four fresh npm archive installs; exact independent registry peers/tools; no source aliases, copied workspace dependencies or package links",
+    "backend": "babel RC13 with Babel 7.29.7 and Vite 8.3.2, matching supported build configuration",
+    "runtimeProvenance": "stock external RC13; workspace signals patch absent in consumers and separately recorded",
+    "terminal": "RTK for coordinator commands and every runner subprocess"
+  },
+  "contractsReused": [
+    "distribution/exports.json",
+    "distribution/package-contract.json",
+    "scripts/distribution/types/shared.mjs:contracts/assertExportMap",
+    "scripts/distribution/types/attw.mjs:classifyAnalysis",
+    "test/distribution/types/ordinary.fixture.txt assertions",
+    "packages/solid/src/internals/temporal/consumers/{core,date-fns,luxon,both}.fixture.mts assertions",
+    "scripts/distribution/build/compiler.mjs and types/shared.mjs import portability obligations",
+    "scripts/distribution/build/smoke.mjs default-host identity/event/disposal assertions"
+  ],
+  "implementedObligations": [
+    "actual tar bytes/hash/file inventory and export/metadata/map/license checks",
+    "ordinary/date-fns-timezone/luxon-types/both independent exact archive installs",
+    "strict Bundler and NodeNext skipLibCheck=false full applicable export types and 64 resolution subsets",
+    "generic/ref/private-export negatives and missing-adapter exact diagnostics",
+    "temporal generic specialization/null/range/augmentation declaration emission and runtime DST checks",
+    "actual Node conditional resolver/import subprocesses; type-only distinction",
+    "separate Vite production client/Node SSR compilation",
+    "actual Chromium all-runtime-export imports, hydration original identity, mount/native events, prehydration click replay",
+    "optimized root/subpath mounts and style/CSP/disposal replay with unused/module graph/raw-gzip evidence",
+    "publint and ATTW archive-file analysis with exact classification",
+    "full logs, immutable input checks and fail-closed mandatory evidence validation"
+  ],
+  "verification": {
+    "status": "node-and-fresh-fixture-types-passed-focused-browser-partial-full-gate-blocked",
+    "tests": 24,
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "syntax": "node --check all authored mjs; pinned TypeScript parser for TSX syntax only",
+    "allowedCommand": "rtk proxy node --test test/distribution/consumers/policy.test.mjs test/distribution/consumers/process.test.mjs test/distribution/consumers/replay.test.mjs test/distribution/consumers/syntax.test.mjs",
+    "finalConsumersExecuted": true,
+    "workerExecutedCompleteFinalGate": false,
+    "archiveSha256": "352d394087cd48b29facdbfd9f48d810f233375c990ba9c523a50491194485c8",
+    "browserEvidence": "/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-release-20261006-02/consumers-correction-01/report.json"
+  },
+  "correctionWave": {
+    "planRecordedBeforeEdits": "bsolid-dist-pack Beads append-notes authorized consolidated correction plan",
+    "originalReport": "/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-release-20261006-02/consumers/report.json",
+    "completePriorLogCensus": { "stdoutStderrLogs": 714, "fixtureImportGraphFailures": 64, "conservativeSideEffectFailures": 4, "otherExecutedFailureClasses": 0 },
+    "priorPassed": "all four real archive installs; strict two-mode type graphs; all64 resolution sets per graph; import audit, temporal, Node SSR, publint and ATTW",
+    "fixtureCorrection": "real executable static namespace imports, retained namespace objects and every binding observation; browser oracle checks exact applicable keys/symbols; warning rejection unchanged",
+    "replayEntrypoint": "scripts/distribution/consumers/replay.mjs",
+    "replayFlags": "--tarball absolute --report complete-original-report --consumer retained-external-consumer --output unique-external-directory --conditions all|focused|default",
+    "byteVerification": "installed library exact archive file inventory/content; all pinned stock tools/core/renderer/signals checked against original private npm cache SHA512 tarballs; complete prior command/results/log provenance; rechecked immutability after matrix",
+    "newFixtureTypes": { "Bundler": "passed", "NodeNext": "passed", "strict": true, "skipLibCheck": false, "checkJs": true },
+    "executedScope": "ONE ordinary stock RC13 focused matrix, masks 2/6/10/18; no reinstall or known-passing resolver replay; full16/all4 left to coordinator",
+    "results": [
+      { "mask": 2, "conditions": ["browser"], "build": "passed", "browser": "passed", "runtimeNamespaces": 74, "bindingObservations": 630, "diagnostics": [] },
+      { "mask": 6, "conditions": ["browser", "node"], "build": "passed", "browser": "passed", "runtimeNamespaces": 74, "bindingObservations": 630, "diagnostics": [] },
+      { "mask": 10, "conditions": ["browser", "worker"], "build": "passed", "browser": "failed", "classification": "genuine advertised renderer/library condition mismatch", "renderer": "@solidjs/web/dist/server.js", "error": "Client-only API called on the server side. Run client-only code in onMount, or conditionally run client-only component with <Show>.", "mappedFrames": ["@solidjs/web/dist/server.js:4273:12", "baseui-solid2/dom/utils/createPopupViewport.js:11:27"] },
+      { "mask": 18, "conditions": ["browser", "deno"], "build": "passed", "browser": "passed", "runtimeNamespaces": 74, "bindingObservations": 630, "diagnostics": [] }
+    ],
+    "shakingCausalEvidence": { "sideEffects": true, "unchanged": true, "unusedRetainedLibraryModules": 125, "unusedRawBytes": 39377, "unusedGzipBytes": 12357, "emptyRawBytes": 99, "rootRetainedLibraryModules": 143, "subpathRetainedLibraryModules": 24, "census": "/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode/bsolid-release-20261006-02/consumers-correction-01/prior-failure-census.json" },
+    "coordinatorNoticesPolicySeam": "notices directory and THIRD-PARTY-NOTICES.md allowance preserved",
+    "fullGateStatus": "blocked"
+  },
+  "mandatoryBlockers": [
+    { "ticket": "bsolid-dist-pack", "gap": "corrected full16 browser matrices in all four retained graphs and final joined qualification still coordinator-owned" },
+    { "ticket": "bsolid-dist-mixed-conditions", "gap": "actual browser+worker selects packed DOM plus stock server renderer and throws client-only template error; browser+node/deno passed focused replay; reviewed resolver/contract strategy required" },
+    { "ticket": "bsolid-components-complete", "gap": "finished source/symbol-to-export qualification artifact required" },
+    { "ticket": "bsolid-docs-complete", "gap": "current versioned Markdown exact packed hash inventory and archive-bound qualification artifact required" },
+    { "ticket": "bsolid-donor-notices", "gap": "adopted-source applicability/notice mapping and archive-bound qualification artifact required" },
+    { "ticket": "bsolid-dist-shaking", "gap": "sideEffects:true genuine unused/root graph retention requires authored/compiler initialization audit and reviewed metadata policy; full shared-listener disposal and package Tabs/Slider prehydration evidence remain mandatory; focused passing style probes do not replace them" }
+  ],
+  "acceptance": "unchanged complete ticket acceptance; all mandatory executions/evidence required; infrastructure and local unit/syntax checks are not distribution qualification"
+}

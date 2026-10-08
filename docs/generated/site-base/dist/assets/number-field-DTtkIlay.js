@@ -1,0 +1,59 @@
+var e=`// Adapted from mui/base-ui 19511bb171f3b360b006c94cf6d07e53cb446505; MIT.
+import { createSignal, createUniqueId, onCleanup, onSettled, omit, For } from 'solid-js';
+import type { Component } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
+import type { JSX, ComponentProps } from '@solidjs/web';
+import clsx from 'clsx';
+import { NumberField } from 'baseui-solid2/number-field';
+
+export function Root(allProps: NumberField.Root.Props) {
+const props = omit(allProps, 'class');
+  return (
+    <NumberField.Root class={clsx('flex flex-col items-start gap-1', allProps.class)} {...props} />
+  );
+}
+
+export function Group(allProps: NumberField.Group.Props) {
+const props = omit(allProps, 'class');
+  return <NumberField.Group class={clsx('flex h-8', allProps.class)} {...props} />;
+}
+
+export function Decrement(allProps: NumberField.Decrement.Props) {
+const props = omit(allProps, 'class');
+  return (
+    <NumberField.Decrement
+      class={clsx(
+        'flex h-full w-8 items-center justify-center rounded-none border border-neutral-950 bg-white bg-clip-padding text-neutral-950 outline-0 select-none hover:not-data-disabled:bg-neutral-100 active:not-data-disabled:bg-neutral-200 data-disabled:border-neutral-500 data-disabled:text-neutral-500 focus-visible:z-1 focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-neutral-950 dark:focus-visible:outline-white dark:border-white dark:bg-neutral-950 dark:text-white dark:hover:not-data-disabled:bg-neutral-800 dark:active:not-data-disabled:bg-neutral-700 dark:data-disabled:border-neutral-400 dark:data-disabled:text-neutral-400',
+        allProps.class,
+      )}
+      {...props}
+    />
+  );
+}
+
+export const Input = function Input(allProps: NumberField.Input.Props) {
+const props = omit(allProps, 'class');
+  return (
+    <NumberField.Input
+      class={clsx(
+        'h-full w-16 rounded-none border-y border-neutral-950 bg-white px-2 text-sm any-pointer-coarse:text-base font-normal text-neutral-950 tabular-nums focus:z-1 focus:outline-2 focus:-outline-offset-1 focus:outline-neutral-950 dark:focus:outline-white dark:border-white dark:bg-neutral-950 dark:text-white',
+        allProps.class,
+      )}
+      {...props}
+    />
+  );
+};
+
+export function Increment(allProps: NumberField.Increment.Props) {
+const props = omit(allProps, 'class');
+  return (
+    <NumberField.Increment
+      class={clsx(
+        'flex h-full w-8 items-center justify-center rounded-none border border-neutral-950 bg-white bg-clip-padding text-neutral-950 outline-0 select-none hover:not-data-disabled:bg-neutral-100 active:not-data-disabled:bg-neutral-200 data-disabled:border-neutral-500 data-disabled:text-neutral-500 focus-visible:z-1 focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-neutral-950 dark:focus-visible:outline-white dark:border-white dark:bg-neutral-950 dark:text-white dark:hover:not-data-disabled:bg-neutral-800 dark:active:not-data-disabled:bg-neutral-700 dark:data-disabled:border-neutral-400 dark:data-disabled:text-neutral-400',
+        allProps.class,
+      )}
+      {...props}
+    />
+  );
+}
+`;export{e as default};

@@ -1,0 +1,12 @@
+export * as Tabs from './index.parts';
+export type * from './root/TabsRoot';
+export type * from './list/TabsList';
+export type * from './tab/TabsTab';
+export type * from './panel/TabsPanel';
+export type * from './indicator/TabsIndicator';
+export * as TabsRootDataAttributes from './root/TabsRootDataAttributes';
+export * as TabsListDataAttributes from './list/TabsListDataAttributes';
+export * as TabsTabDataAttributes from './tab/TabsTabDataAttributes';
+export * as TabsPanelDataAttributes from './panel/TabsPanelDataAttributes';
+export * as TabsIndicatorDataAttributes from './indicator/TabsIndicatorDataAttributes';
+export * as TabsIndicatorCssVariables from './indicator/TabsIndicatorCssVars';

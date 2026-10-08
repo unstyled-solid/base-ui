@@ -1,0 +1,1912 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/avatar/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "a5439519d29561730908197cae57b7d26332b0f603e67d3a734cefa093b3c954",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/avatar",
+  "route": "/solid/components/avatar",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Avatar",
+  "subtitle": "An easily stylable avatar component.",
+  "metadata": {
+    "keywords": [
+      "React Avatar",
+      "Avatar Component",
+      "Profile Image UI",
+      "User Image",
+      "User Avatar",
+      "Profile Picture",
+      "Account Image",
+      "Profile Icon",
+      "Initials Fallback",
+      "Accessible Avatar",
+      "Headless React Components",
+      "Customizable Avatar",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React avatar component that is easy to customize."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoAvatarHero",
+      "imported": "DemoAvatarHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/avatar/demos/hero#DemoAvatarHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesAvatar",
+      "imported": "TypesAvatar",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatar"
+    },
+    {
+      "from": "./types",
+      "local": "TypesAvatarAdditional",
+      "imported": "TypesAvatarAdditional",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatarAdditional"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Avatar",
+      "properties": {
+        "id": "avatar"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Optimized and lazy-loaded images",
+      "properties": {
+        "id": "optimized-and-lazy-loaded-images"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:26:1"
+    },
+    {
+      "depth": 3,
+      "text": "Stacking",
+      "properties": {
+        "id": "stacking"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:41:1"
+    },
+    {
+      "depth": 3,
+      "text": "Server rendering",
+      "properties": {
+        "id": "server-rendering"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:68:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:72:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:76:1"
+    },
+    {
+      "depth": 3,
+      "text": "Image",
+      "properties": {
+        "id": "image"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:80:1"
+    },
+    {
+      "depth": 3,
+      "text": "Fallback",
+      "properties": {
+        "id": "fallback"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:84:1"
+    },
+    {
+      "depth": 2,
+      "text": "Additional types",
+      "properties": {
+        "data-exclude-toc": "",
+        "id": "additional-types"
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:90:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#",
+      "target": "#",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:88:1"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React avatar component that is easy to customize."
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:4:1"
+    },
+    {
+      "name": "DemoAvatarHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/avatar/demos/hero#DemoAvatarHero"
+    },
+    {
+      "name": "TypesAvatar.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:78:1",
+      "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatar"
+    },
+    {
+      "name": "TypesAvatar.Image",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:82:1",
+      "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatar"
+    },
+    {
+      "name": "TypesAvatar.Fallback",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:86:1",
+      "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatar"
+    },
+    {
+      "name": "TypesAvatarAdditional",
+      "handler": "api",
+      "attributes": {
+        "showAdditionalTypes": [
+          "imageloadingstatus"
+        ]
+      },
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:92:1",
+      "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatarAdditional"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:11:1",
+      "detail": "Site must implement DemoAvatarHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:17:1",
+      "detail": "Avatar.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:17:1",
+      "detail": "Avatar.Image",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:17:1",
+      "detail": "Avatar.Fallback",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:17:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:32:1",
+      "detail": "Avatar.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:32:1",
+      "detail": "Avatar.Fallback",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:32:1",
+      "detail": "Avatar.Image",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:32:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:32:1",
+      "detail": "Image",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:32:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:78:1",
+      "detail": "Site must implement TypesAvatar.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:82:1",
+      "detail": "Site must implement TypesAvatar.Image; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:86:1",
+      "detail": "Site must implement TypesAvatar.Fallback; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:92:1",
+      "detail": "Site must implement TypesAvatarAdditional; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/avatar/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Avatar",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 9,
+                "offset": 8
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 9,
+            "offset": 8
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "avatar"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "An easily stylable avatar component.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 20
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 47,
+                    "offset": 56
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 10
+              },
+              "end": {
+                "line": 3,
+                "column": 58,
+                "offset": 67
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 10
+          },
+          "end": {
+            "line": 3,
+            "column": 58,
+            "offset": 67
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 76
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 94
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React avatar component that is easy to customize.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 97
+              },
+              "end": {
+                "line": 6,
+                "column": 87,
+                "offset": 181
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 68
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 184
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoAvatarHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 186
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "offset": 232
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoAvatarHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 234
+          },
+          "end": {
+            "line": 11,
+            "column": 19,
+            "offset": 252
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/avatar/demos/hero#DemoAvatarHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 257
+              },
+              "end": {
+                "line": 13,
+                "column": 11,
+                "offset": 264
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 254
+          },
+          "end": {
+            "line": 13,
+            "column": 11,
+            "offset": 264
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 266
+              },
+              "end": {
+                "line": 15,
+                "column": 45,
+                "offset": 310
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 266
+          },
+          "end": {
+            "line": 15,
+            "column": 45,
+            "offset": 310
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Avatar } from 'baseui-solid2/avatar';\n\n<Avatar.Root>\n  <Avatar.Image src=\"\" />\n  <Avatar.Fallback>LT</Avatar.Fallback>\n</Avatar.Root>;",
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 312
+          },
+          "end": {
+            "line": 24,
+            "column": 4,
+            "offset": 483
+          }
+        },
+        "data": {
+          "sourceValue": "import { Avatar } from '@base-ui/react/avatar';\n\n<Avatar.Root>\n  <Avatar.Image src=\"\" />\n  <Avatar.Fallback>LT</Avatar.Fallback>\n</Avatar.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/avatar",
+              "start": 24,
+              "end": 45,
+              "kind": "import"
+            },
+            {
+              "value": "",
+              "start": 84,
+              "end": 84,
+              "kind": "asset"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/avatar",
+              "start": 24,
+              "end": 45,
+              "kind": "import",
+              "replacement": "baseui-solid2/avatar"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Optimized and lazy-loaded images",
+            "position": {
+              "start": {
+                "line": 26,
+                "column": 4,
+                "offset": 488
+              },
+              "end": {
+                "line": 26,
+                "column": 36,
+                "offset": 520
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 26,
+            "column": 1,
+            "offset": 485
+          },
+          "end": {
+            "line": 26,
+            "column": 36,
+            "offset": 520
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "optimized-and-lazy-loaded-images"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "By default, ",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 1,
+                "offset": 522
+              },
+              "end": {
+                "line": 28,
+                "column": 13,
+                "offset": 534
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Avatar.Image>",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 13,
+                "offset": 534
+              },
+              "end": {
+                "line": 28,
+                "column": 29,
+                "offset": 550
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " preloads ",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 29,
+                "offset": 550
+              },
+              "end": {
+                "line": 28,
+                "column": 39,
+                "offset": 560
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "src",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 39,
+                "offset": 560
+              },
+              "end": {
+                "line": 28,
+                "column": 44,
+                "offset": 565
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and renders the image only once it has loaded. This doesn't compose with image optimizers such as ",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 44,
+                "offset": 565
+              },
+              "end": {
+                "line": 28,
+                "column": 143,
+                "offset": 664
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "next/image",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 143,
+                "offset": 664
+              },
+              "end": {
+                "line": 28,
+                "column": 155,
+                "offset": 676
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", which serve a different URL than the raw ",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 155,
+                "offset": 676
+              },
+              "end": {
+                "line": 28,
+                "column": 198,
+                "offset": 719
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "src",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 198,
+                "offset": 719
+              },
+              "end": {
+                "line": 28,
+                "column": 203,
+                "offset": 724
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", or with ",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 203,
+                "offset": 724
+              },
+              "end": {
+                "line": 28,
+                "column": 213,
+                "offset": 734
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "loading=\"lazy\"",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 213,
+                "offset": 734
+              },
+              "end": {
+                "line": 28,
+                "column": 229,
+                "offset": 750
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 28,
+                "column": 229,
+                "offset": 750
+              },
+              "end": {
+                "line": 28,
+                "column": 230,
+                "offset": 751
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 28,
+            "column": 1,
+            "offset": 522
+          },
+          "end": {
+            "line": 28,
+            "column": 230,
+            "offset": 751
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Add the ",
+            "position": {
+              "start": {
+                "line": 30,
+                "column": 1,
+                "offset": 753
+              },
+              "end": {
+                "line": 30,
+                "column": 9,
+                "offset": 761
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "keepMounted",
+            "position": {
+              "start": {
+                "line": 30,
+                "column": 9,
+                "offset": 761
+              },
+              "end": {
+                "line": 30,
+                "column": 22,
+                "offset": 774
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop to render the image element right away and let it load in place. Only the image that is actually displayed is requested:",
+            "position": {
+              "start": {
+                "line": 30,
+                "column": 22,
+                "offset": 774
+              },
+              "end": {
+                "line": 30,
+                "column": 148,
+                "offset": 900
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 753
+          },
+          "end": {
+            "line": 30,
+            "column": 148,
+            "offset": 900
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Using next/image\"",
+        "value": "import Image from 'next/image';\n\n<Avatar.Root>\n  <Avatar.Fallback>LT</Avatar.Fallback>\n  <Avatar.Image keepMounted render={<Image src=\"/avatar.png\" width={32} height={32} alt=\"\" />} />\n</Avatar.Root>;",
+        "position": {
+          "start": {
+            "line": 32,
+            "column": 1,
+            "offset": 902
+          },
+          "end": {
+            "line": 39,
+            "column": 4,
+            "offset": 1138
+          }
+        },
+        "data": {
+          "sourceValue": "import Image from 'next/image';\n\n<Avatar.Root>\n  <Avatar.Fallback>LT</Avatar.Fallback>\n  <Avatar.Image keepMounted render={<Image src=\"/avatar.png\" width={32} height={32} alt=\"\" />} />\n</Avatar.Root>;",
+          "references": [
+            {
+              "value": "next/image",
+              "start": 19,
+              "end": 29,
+              "kind": "import"
+            },
+            {
+              "value": "/avatar.png",
+              "start": 135,
+              "end": 146,
+              "kind": "asset"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Stacking",
+            "position": {
+              "start": {
+                "line": 41,
+                "column": 5,
+                "offset": 1144
+              },
+              "end": {
+                "line": 41,
+                "column": 13,
+                "offset": 1152
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 41,
+            "column": 1,
+            "offset": 1140
+          },
+          "end": {
+            "line": 41,
+            "column": 13,
+            "offset": 1152
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "stacking"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "With ",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 1,
+                "offset": 1154
+              },
+              "end": {
+                "line": 43,
+                "column": 6,
+                "offset": 1159
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "keepMounted",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 6,
+                "offset": 1159
+              },
+              "end": {
+                "line": 43,
+                "column": 19,
+                "offset": 1172
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", the image and the fallback are both present until the image loads. The image is hidden from assistive technology until then, so the fallback provides the accessible name on its own.",
+            "position": {
+              "start": {
+                "line": 43,
+                "column": 19,
+                "offset": 1172
+              },
+              "end": {
+                "line": 43,
+                "column": 202,
+                "offset": 1355
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 43,
+            "column": 1,
+            "offset": 1154
+          },
+          "end": {
+            "line": 43,
+            "column": 202,
+            "offset": 1355
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Stack the two in the same box, and place ",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 1,
+                "offset": 1357
+              },
+              "end": {
+                "line": 45,
+                "column": 42,
+                "offset": 1398
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Avatar.Image>",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 42,
+                "offset": 1398
+              },
+              "end": {
+                "line": 45,
+                "column": 58,
+                "offset": 1414
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " after ",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 58,
+                "offset": 1414
+              },
+              "end": {
+                "line": 45,
+                "column": 65,
+                "offset": 1421
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Avatar.Fallback>",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 65,
+                "offset": 1421
+              },
+              "end": {
+                "line": 45,
+                "column": 84,
+                "offset": 1440
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ". Both are positioned, so whichever comes later in the DOM paints on top. The fallback then shows through until the image covers it.",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 84,
+                "offset": 1440
+              },
+              "end": {
+                "line": 45,
+                "column": 216,
+                "offset": 1572
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 1357
+          },
+          "end": {
+            "line": 45,
+            "column": 216,
+            "offset": 1572
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A loading image paints nothing, so the fallback shows through on its own. An image that failed to load paints a broken-image icon on top of it. Hide the image in either state with the ",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 1,
+                "offset": 1574
+              },
+              "end": {
+                "line": 47,
+                "column": 185,
+                "offset": 1758
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-loading",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 185,
+                "offset": 1758
+              },
+              "end": {
+                "line": 47,
+                "column": 199,
+                "offset": 1772
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 199,
+                "offset": 1772
+              },
+              "end": {
+                "line": 47,
+                "column": 204,
+                "offset": 1777
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-error",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 204,
+                "offset": 1777
+              },
+              "end": {
+                "line": 47,
+                "column": 216,
+                "offset": 1789
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " attributes:",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 216,
+                "offset": 1789
+              },
+              "end": {
+                "line": 47,
+                "column": 228,
+                "offset": 1801
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 47,
+            "column": 1,
+            "offset": 1574
+          },
+          "end": {
+            "line": 47,
+            "column": 228,
+            "offset": 1801
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "css",
+        "meta": "title=\"Stacked image and fallback\"",
+        "value": ".Root {\n  position: relative;\n}\n\n.Image,\n.Fallback {\n  position: absolute;\n  inset: 0;\n}\n\n.Image[data-loading],\n.Image[data-error] {\n  visibility: hidden;\n}",
+        "position": {
+          "start": {
+            "line": 49,
+            "column": 1,
+            "offset": 1803
+          },
+          "end": {
+            "line": 64,
+            "column": 4,
+            "offset": 2005
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Avoid ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 1,
+                "offset": 2007
+              },
+              "end": {
+                "line": 66,
+                "column": 7,
+                "offset": 2013
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "display: none",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 7,
+                "offset": 2013
+              },
+              "end": {
+                "line": 66,
+                "column": 22,
+                "offset": 2028
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " here: an element without a box never intersects the viewport, so ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 22,
+                "offset": 2028
+              },
+              "end": {
+                "line": 66,
+                "column": 88,
+                "offset": 2094
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "loading=\"lazy\"",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 88,
+                "offset": 2094
+              },
+              "end": {
+                "line": 66,
+                "column": 104,
+                "offset": 2110
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " would never fetch the image. ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 104,
+                "offset": 2110
+              },
+              "end": {
+                "line": 66,
+                "column": 134,
+                "offset": 2140
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "visibility",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 134,
+                "offset": 2140
+              },
+              "end": {
+                "line": 66,
+                "column": 146,
+                "offset": 2152
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " and ",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 146,
+                "offset": 2152
+              },
+              "end": {
+                "line": 66,
+                "column": 151,
+                "offset": 2157
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "opacity",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 151,
+                "offset": 2157
+              },
+              "end": {
+                "line": 66,
+                "column": 160,
+                "offset": 2166
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " both keep lazy loading working.",
+            "position": {
+              "start": {
+                "line": 66,
+                "column": 160,
+                "offset": 2166
+              },
+              "end": {
+                "line": 66,
+                "column": 192,
+                "offset": 2198
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 66,
+            "column": 1,
+            "offset": 2007
+          },
+          "end": {
+            "line": 66,
+            "column": 192,
+            "offset": 2198
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Server rendering",
+            "position": {
+              "start": {
+                "line": 68,
+                "column": 5,
+                "offset": 2204
+              },
+              "end": {
+                "line": 68,
+                "column": 21,
+                "offset": 2220
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 68,
+            "column": 1,
+            "offset": 2200
+          },
+          "end": {
+            "line": 68,
+            "column": 21,
+            "offset": 2220
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "server-rendering"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "With ",
+            "position": {
+              "start": {
+                "line": 70,
+                "column": 1,
+                "offset": 2222
+              },
+              "end": {
+                "line": 70,
+                "column": 6,
+                "offset": 2227
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "keepMounted",
+            "position": {
+              "start": {
+                "line": 70,
+                "column": 6,
+                "offset": 2227
+              },
+              "end": {
+                "line": 70,
+                "column": 19,
+                "offset": 2240
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", the image is part of the server-rendered HTML and starts loading before hydration. So is the fallback, which stays visible until hydration resolves the loading status. A cached image is displayed immediately, without an enter animation.",
+            "position": {
+              "start": {
+                "line": 70,
+                "column": 19,
+                "offset": 2240
+              },
+              "end": {
+                "line": 70,
+                "column": 257,
+                "offset": 2478
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 70,
+            "column": 1,
+            "offset": 2222
+          },
+          "end": {
+            "line": 70,
+            "column": 257,
+            "offset": 2478
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 72,
+                "column": 4,
+                "offset": 2483
+              },
+              "end": {
+                "line": 72,
+                "column": 17,
+                "offset": 2496
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 72,
+            "column": 1,
+            "offset": 2480
+          },
+          "end": {
+            "line": 72,
+            "column": 17,
+            "offset": 2496
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesAvatar, TypesAvatarAdditional } from './types';",
+        "position": {
+          "start": {
+            "line": 74,
+            "column": 1,
+            "offset": 2498
+          },
+          "end": {
+            "line": 74,
+            "column": 62,
+            "offset": 2559
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 76,
+                "column": 5,
+                "offset": 2565
+              },
+              "end": {
+                "line": 76,
+                "column": 9,
+                "offset": 2569
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 76,
+            "column": 1,
+            "offset": 2561
+          },
+          "end": {
+            "line": 76,
+            "column": 9,
+            "offset": 2569
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAvatar.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 78,
+            "column": 1,
+            "offset": 2571
+          },
+          "end": {
+            "line": 78,
+            "column": 21,
+            "offset": 2591
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatar"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Image",
+            "position": {
+              "start": {
+                "line": 80,
+                "column": 5,
+                "offset": 2597
+              },
+              "end": {
+                "line": 80,
+                "column": 10,
+                "offset": 2602
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 80,
+            "column": 1,
+            "offset": 2593
+          },
+          "end": {
+            "line": 80,
+            "column": 10,
+            "offset": 2602
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "image"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAvatar.Image",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 82,
+            "column": 1,
+            "offset": 2604
+          },
+          "end": {
+            "line": 82,
+            "column": 22,
+            "offset": 2625
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatar"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Fallback",
+            "position": {
+              "start": {
+                "line": 84,
+                "column": 5,
+                "offset": 2631
+              },
+              "end": {
+                "line": 84,
+                "column": 13,
+                "offset": 2639
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 84,
+            "column": 1,
+            "offset": 2627
+          },
+          "end": {
+            "line": 84,
+            "column": 13,
+            "offset": 2639
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "fallback"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAvatar.Fallback",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 86,
+            "column": 1,
+            "offset": 2641
+          },
+          "end": {
+            "line": 86,
+            "column": 25,
+            "offset": 2665
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatar"
+        }
+      },
+      {
+        "type": "definition",
+        "identifier": "//",
+        "label": "//",
+        "title": "@exclude-table-of-contents",
+        "url": "#",
+        "position": {
+          "start": {
+            "line": 88,
+            "column": 1,
+            "offset": 2667
+          },
+          "end": {
+            "line": 88,
+            "column": 37,
+            "offset": 2703
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Additional types",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 4,
+                "offset": 2708
+              },
+              "end": {
+                "line": 90,
+                "column": 20,
+                "offset": 2724
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 90,
+            "column": 1,
+            "offset": 2705
+          },
+          "end": {
+            "line": 90,
+            "column": 20,
+            "offset": 2724
+          }
+        },
+        "data": {
+          "hProperties": {
+            "data-exclude-toc": "",
+            "id": "additional-types"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesAvatarAdditional",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "showAdditionalTypes",
+            "value": {
+              "type": "mdxJsxAttributeValueExpression",
+              "value": "['imageloadingstatus']",
+              "data": {}
+            },
+            "position": {
+              "start": {
+                "line": 92,
+                "column": 24,
+                "offset": 2749
+              },
+              "end": {
+                "line": 92,
+                "column": 68,
+                "offset": 2793
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 92,
+            "column": 1,
+            "offset": 2726
+          },
+          "end": {
+            "line": 92,
+            "column": 71,
+            "offset": 2796
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/avatar/types#TypesAvatarAdditional"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Avatar',\n    'Avatar Component',\n    'Profile Image UI',\n    'User Image',\n    'User Avatar',\n    'Profile Picture',\n    'Account Image',\n    'Profile Icon',\n    'Initials Fallback',\n    'Accessible Avatar',\n    'Headless React Components',\n    'Customizable Avatar',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 94,
+            "column": 1,
+            "offset": 2798
+          },
+          "end": {
+            "line": 110,
+            "column": 3,
+            "offset": 3139
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 111,
+        "column": 1,
+        "offset": 3140
+      }
+    }
+  }
+}

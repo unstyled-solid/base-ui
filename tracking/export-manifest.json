@@ -1,0 +1,970 @@
+{
+  "schemaVersion": 1,
+  "baseline": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "treeDigest": "9395e1f104c57c666dc1ebd4a72e01fd2c661a0d67206d93c1d9dab7d7f5d96d",
+  "ownershipDigest": "ff01cf1f75f2d57b4d80bc13ff05424b9cfdb616211696dd29b9ff64d6d46eb4",
+  "policyDigest": "11b8f68575b0a099e588e7d2e8ad7f964671b5321d39b2045558abb9bfda802e",
+  "package": "@base-ui/react",
+  "exports": [
+    {
+      "key": ".",
+      "conditions": [],
+      "sourcePath": "packages/react/src/index.ts",
+      "blob": "c2c9c5d56de3fcf331d21ef99a85b809bbb2d9e5",
+      "owner": "bsolid-integration",
+      "targets": [
+        "packages/solid/src/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root"
+    },
+    {
+      "key": "./accordion",
+      "conditions": [],
+      "sourcePath": "packages/react/src/accordion/index.ts",
+      "blob": "2978f06c4f4c47c17b6a46e311ccf6f12aaa49db",
+      "owner": "bsolid-c-accordion",
+      "targets": [
+        "packages/solid/src/accordion/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./alert-dialog",
+      "conditions": [],
+      "sourcePath": "packages/react/src/alert-dialog/index.ts",
+      "blob": "18e22fba3badff4604e7f97f84dc1d982354314c",
+      "owner": "bsolid-c-alert-dialog",
+      "targets": [
+        "packages/solid/src/alert-dialog/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./autocomplete",
+      "conditions": [],
+      "sourcePath": "packages/react/src/autocomplete/index.ts",
+      "blob": "3daa7f82a93a2be1836deb2847d6d3ac04eef083",
+      "owner": "bsolid-c-autocomplete",
+      "targets": [
+        "packages/solid/src/autocomplete/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./avatar",
+      "conditions": [],
+      "sourcePath": "packages/react/src/avatar/index.ts",
+      "blob": "14f1dc3e3fe152cc79a79a6f97546862e6554d60",
+      "owner": "bsolid-c-avatar",
+      "targets": [
+        "packages/solid/src/avatar/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./button",
+      "conditions": [],
+      "sourcePath": "packages/react/src/button/index.ts",
+      "blob": "d913430d3220cfedee6731e851b647461d8d0185",
+      "owner": "bsolid-c-button",
+      "targets": [
+        "packages/solid/src/button/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./checkbox-group",
+      "conditions": [],
+      "sourcePath": "packages/react/src/checkbox-group/index.ts",
+      "blob": "ff6de40bec6ce67d54e98680c587fcb49b342059",
+      "owner": "bsolid-c-checkbox",
+      "targets": [
+        "packages/solid/src/checkbox-group/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./checkbox",
+      "conditions": [],
+      "sourcePath": "packages/react/src/checkbox/index.ts",
+      "blob": "796595d2be945fb2bc264653c10e4d4b3709ca06",
+      "owner": "bsolid-c-checkbox",
+      "targets": [
+        "packages/solid/src/checkbox/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./collapsible",
+      "conditions": [],
+      "sourcePath": "packages/react/src/collapsible/index.ts",
+      "blob": "7157801d53ee7840ae6657b6430640c34af170b4",
+      "owner": "bsolid-c-collapsible",
+      "targets": [
+        "packages/solid/src/collapsible/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./combobox",
+      "conditions": [],
+      "sourcePath": "packages/react/src/combobox/index.ts",
+      "blob": "5a827508e5f4e3389fe6d110f27597900f866b03",
+      "owner": "bsolid-c-combobox",
+      "targets": [
+        "packages/solid/src/combobox/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./context-menu",
+      "conditions": [],
+      "sourcePath": "packages/react/src/context-menu/index.ts",
+      "blob": "865822a186dfd2d3394163703b13aeded92ac517",
+      "owner": "bsolid-c-context-menu",
+      "targets": [
+        "packages/solid/src/context-menu/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./csp-provider",
+      "conditions": [],
+      "sourcePath": "packages/react/src/csp-provider/index.ts",
+      "blob": "267a7f66f4471f2ca05357e598c0fcf1c9a59158",
+      "owner": "bsolid-providers",
+      "targets": [
+        "packages/solid/src/csp-provider/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./dialog",
+      "conditions": [],
+      "sourcePath": "packages/react/src/dialog/index.ts",
+      "blob": "54fb6e710450b4b73f2e056d306385b7dec193eb",
+      "owner": "bsolid-c-dialog",
+      "targets": [
+        "packages/solid/src/dialog/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./direction-provider",
+      "conditions": [],
+      "sourcePath": "packages/react/src/direction-provider/index.ts",
+      "blob": "834323baa8fad62b2d3b5090ce93bd353bcebe07",
+      "owner": "bsolid-providers",
+      "targets": [
+        "packages/solid/src/direction-provider/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./drawer",
+      "conditions": [],
+      "sourcePath": "packages/react/src/drawer/index.ts",
+      "blob": "65c828250c6f92076f372386edd76cf528fcb9d2",
+      "owner": "bsolid-c-drawer",
+      "targets": [
+        "packages/solid/src/drawer/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./field",
+      "conditions": [],
+      "sourcePath": "packages/react/src/field/index.ts",
+      "blob": "c2b028f7c7b52443038a115d6547cd9352d890c9",
+      "owner": "bsolid-c-field",
+      "targets": [
+        "packages/solid/src/field/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./fieldset",
+      "conditions": [],
+      "sourcePath": "packages/react/src/fieldset/index.ts",
+      "blob": "9b7319890075f9bfcea460f79432b67c3626ac50",
+      "owner": "bsolid-c-fieldset",
+      "targets": [
+        "packages/solid/src/fieldset/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./form",
+      "conditions": [],
+      "sourcePath": "packages/react/src/form/index.ts",
+      "blob": "0253efffb38354bfe8a881606d11d9d41b7e751e",
+      "owner": "bsolid-c-form",
+      "targets": [
+        "packages/solid/src/form/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./input",
+      "conditions": [],
+      "sourcePath": "packages/react/src/input/index.ts",
+      "blob": "a5087dd5ba56d66bdfca2757b59144b99204d70c",
+      "owner": "bsolid-c-input",
+      "targets": [
+        "packages/solid/src/input/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./internals/composite",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/composite/index.ts",
+      "blob": "7f8d9e2c0df7b3a5fb61c34ea8fd91ff50dd3c87",
+      "owner": "bsolid-composite",
+      "targets": [
+        "packages/solid/src/internals/composite/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/constants",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/constants.ts",
+      "blob": "8e0f87debae3466f8a2f62ec3136071c94282113",
+      "owner": "bsolid-dom",
+      "targets": [
+        "packages/solid/src/internals/constants.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/createBaseUIEventDetails",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/createBaseUIEventDetails.ts",
+      "blob": "f1a6834264dfe68a13d74665053730923b853ac2",
+      "owner": "bsolid-events",
+      "targets": [
+        "packages/solid/src/internals/createBaseUIEventDetails.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/csp-context",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/csp-context/index.ts",
+      "blob": "417d872b017c488d2505ac7188c139cf1074da67",
+      "owner": "bsolid-providers",
+      "targets": [
+        "packages/solid/src/internals/csp-context/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/direction-context",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/direction-context/index.ts",
+      "blob": "f3808e242f4b6271b47c4581309d0c7dc1b86237",
+      "owner": "bsolid-providers",
+      "targets": [
+        "packages/solid/src/internals/direction-context/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/field-constants",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/field-constants/index.ts",
+      "blob": "67aa287503a29c4509253e24bf69d52e02823ffe",
+      "owner": "bsolid-field-core",
+      "targets": [
+        "packages/solid/src/internals/field-constants/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/field-register-control",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/field-register-control/index.ts",
+      "blob": "84000d2cef4a832068d17f2c2a4339d75466bdbc",
+      "owner": "bsolid-field-core",
+      "targets": [
+        "packages/solid/src/internals/field-register-control/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/field-root-context",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/field-root-context/index.ts",
+      "blob": "dd8f7268d2ac53be56abab866386798fef606fa5",
+      "owner": "bsolid-field-core",
+      "targets": [
+        "packages/solid/src/internals/field-root-context/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/filter",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/filter.ts",
+      "blob": "fd8d5dee052926fcc03ba13adc7c8937338b75b7",
+      "owner": "bsolid-filter",
+      "targets": [
+        "packages/solid/src/internals/filter.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/form-context",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/form-context/index.ts",
+      "blob": "04cef874bcf4ea83a5b36c321039a0bf7cb66d63",
+      "owner": "bsolid-field-core",
+      "targets": [
+        "packages/solid/src/internals/form-context/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/getDisabledMountTransitionStyles",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/getDisabledMountTransitionStyles.ts",
+      "blob": "4d2d3679253e794deebadca3af0f25ffc39556e3",
+      "owner": "bsolid-presence",
+      "targets": [
+        "packages/solid/src/internals/getDisabledMountTransitionStyles.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/getStateAttributesProps",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/getStateAttributesProps.ts",
+      "blob": "58c0c0d0aca15ea171bda1501253a6087c08da79",
+      "owner": "bsolid-render",
+      "targets": [
+        "packages/solid/src/internals/getStateAttributesProps.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/itemEquality",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/itemEquality.ts",
+      "blob": "2dc295dd3acd5afea85dbb3677025be830da45db",
+      "owner": "bsolid-filter",
+      "targets": [
+        "packages/solid/src/internals/itemEquality.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/labelable-provider",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/labelable-provider/index.ts",
+      "blob": "2117492ab49784da4be444ef627653126a280579",
+      "owner": "bsolid-providers",
+      "targets": [
+        "packages/solid/src/internals/labelable-provider/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/noop",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/noop.ts",
+      "blob": "2e99d7fcc73b11d0ce210c29aabefb4ef09d1b67",
+      "owner": "bsolid-dom",
+      "targets": [
+        "packages/solid/src/internals/noop.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/reasons",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/reasons.ts",
+      "blob": "70f9631f4cb99e76fc28176b0cbe53057bb6fc74",
+      "owner": "bsolid-events",
+      "targets": [
+        "packages/solid/src/internals/reasons.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/RequestQueue",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/RequestQueue.ts",
+      "blob": "7d9169d5555c6151c922455f063f4c038c779582",
+      "owner": "bsolid-lifecycle",
+      "targets": [
+        "packages/solid/src/internals/RequestQueue.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/resolveValueLabel",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/resolveValueLabel.tsx",
+      "blob": "595e988d5a7c16bab3944e2034d2de128937a1c9",
+      "owner": "bsolid-filter",
+      "targets": [
+        "packages/solid/src/internals/resolveValueLabel.tsx"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/serializeValue",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/serializeValue.ts",
+      "blob": "d6ecea617e6c22aef5d2d0b9d4879a58eda70edb",
+      "owner": "bsolid-filter",
+      "targets": [
+        "packages/solid/src/internals/serializeValue.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/stateAttributesMapping",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/stateAttributesMapping.ts",
+      "blob": "948c0f257a8109a603397a8a6f0afc9354618182",
+      "owner": "bsolid-render",
+      "targets": [
+        "packages/solid/src/internals/stateAttributesMapping.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/temporal-adapter-date-fns",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/temporal-adapter-date-fns/index.ts",
+      "blob": "55c7845308a5b1bbd340743b853ed7f83f441155",
+      "owner": "bsolid-temporal",
+      "targets": [
+        "packages/solid/src/internals/temporal-adapter-date-fns/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/temporal-adapter-luxon",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/temporal-adapter-luxon/index.ts",
+      "blob": "e64f8b6024c20941dd6bffab32246b67c9867567",
+      "owner": "bsolid-temporal",
+      "targets": [
+        "packages/solid/src/internals/temporal-adapter-luxon/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/temporal",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/temporal/index.ts",
+      "blob": "650e094cec055dcb0db167c318aed17f3aa2c3da",
+      "owner": "bsolid-temporal",
+      "targets": [
+        "packages/solid/src/internals/temporal/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/TimeoutManager",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/TimeoutManager.ts",
+      "blob": "97b6c91509042b436a432b5903300738c1254c5a",
+      "owner": "bsolid-lifecycle",
+      "targets": [
+        "packages/solid/src/internals/TimeoutManager.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/types",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/types.ts",
+      "blob": "b8cd7a0331b9f428070b3ff4be81a1e0865ae63b",
+      "owner": "bsolid-bootstrap",
+      "targets": [
+        "packages/solid/src/internals/types.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/use-button",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/use-button/index.ts",
+      "blob": "95acb7a36d0515ef1ea2612723b02051908fca83",
+      "owner": "bsolid-composite",
+      "targets": [
+        "packages/solid/src/internals/use-button/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/useAnchorPositioning",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/useAnchorPositioning.ts",
+      "blob": "af1b936af827428305c375c736fe338d327db008",
+      "owner": "bsolid-positioning",
+      "targets": [
+        "packages/solid/src/internals/createAnchorPositioning.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/useAnimationsFinished",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/useAnimationsFinished.ts",
+      "blob": "9ee8a06546018e4e8cfe8cf5535faf89eeabbd25",
+      "owner": "bsolid-presence",
+      "targets": [
+        "packages/solid/src/internals/createAnimationsFinished.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/useBaseUiId",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/useBaseUiId.ts",
+      "blob": "c46d78204bfcc6743c2fce2fd74ecb683cbe73f6",
+      "owner": "bsolid-lifecycle",
+      "targets": [
+        "packages/solid/src/internals/createBaseUiId.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/useOpenChangeComplete",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/useOpenChangeComplete.tsx",
+      "blob": "c823fe3aa474de9caceb3d7c9bdb1c40c2024beb",
+      "owner": "bsolid-presence",
+      "targets": [
+        "packages/solid/src/internals/createOpenChangeComplete.tsx"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/usePressAndHold",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/usePressAndHold.ts",
+      "blob": "aff1f9991bff9306ab7f3802c6f0a74687f0512b",
+      "owner": "bsolid-gestures",
+      "targets": [
+        "packages/solid/src/internals/createPressAndHold.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/useRenderElement",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/useRenderElement.tsx",
+      "blob": "f42e97355d218931081c1a49735e8fdef568058a",
+      "owner": "bsolid-render",
+      "targets": [
+        "packages/solid/src/internals/createRenderElement.tsx"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/useTransitionStatus",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/useTransitionStatus.ts",
+      "blob": "85f72d85d83570a61f9fef91521c86b805aec9fb",
+      "owner": "bsolid-presence",
+      "targets": [
+        "packages/solid/src/internals/createTransitionStatus.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./internals/useValueChanged",
+      "conditions": [],
+      "sourcePath": "packages/react/src/internals/useValueChanged.ts",
+      "blob": "ac5e95ad4cc8665fc5bd326cc5140b1ec917bf67",
+      "owner": "bsolid-state",
+      "targets": [
+        "packages/solid/src/internals/createValueChanged.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./menu",
+      "conditions": [],
+      "sourcePath": "packages/react/src/menu/index.ts",
+      "blob": "09714b9ab3ef21faa4fb376416b806efcdcf6163",
+      "owner": "bsolid-c-menu",
+      "targets": [
+        "packages/solid/src/menu/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./menubar",
+      "conditions": [],
+      "sourcePath": "packages/react/src/menubar/index.ts",
+      "blob": "6e8de38bbe21a95de230dd15f44be4b51ed3174f",
+      "owner": "bsolid-c-menubar",
+      "targets": [
+        "packages/solid/src/menubar/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./merge-props",
+      "conditions": [],
+      "sourcePath": "packages/react/src/merge-props/index.ts",
+      "blob": "e03df598cb287a0228cabb37f2a01e50cb8b2aa1",
+      "owner": "bsolid-events",
+      "targets": [
+        "packages/solid/src/merge-props/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./meter",
+      "conditions": [],
+      "sourcePath": "packages/react/src/meter/index.ts",
+      "blob": "06dd198fce49776cd27ffd34f9d62941eda1a04c",
+      "owner": "bsolid-c-meter",
+      "targets": [
+        "packages/solid/src/meter/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./navigation-menu",
+      "conditions": [],
+      "sourcePath": "packages/react/src/navigation-menu/index.ts",
+      "blob": "4dbe279dd328f07fa49a77d4cc5b57a3bf461996",
+      "owner": "bsolid-c-navigation-menu",
+      "targets": [
+        "packages/solid/src/navigation-menu/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./number-field",
+      "conditions": [],
+      "sourcePath": "packages/react/src/number-field/index.ts",
+      "blob": "0d2d25b92881294b9b1afd4f14ed5784bb2450ba",
+      "owner": "bsolid-c-number-field",
+      "targets": [
+        "packages/solid/src/number-field/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./otp-field",
+      "conditions": [],
+      "sourcePath": "packages/react/src/otp-field/index.ts",
+      "blob": "0433f63f02bf9fa789150c4f2822231e3e1a87f0",
+      "owner": "bsolid-c-otp-field",
+      "targets": [
+        "packages/solid/src/otp-field/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./popover",
+      "conditions": [],
+      "sourcePath": "packages/react/src/popover/index.ts",
+      "blob": "8a14533f37947c1a84f92fcd3b3959a4108e9169",
+      "owner": "bsolid-c-popover",
+      "targets": [
+        "packages/solid/src/popover/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./preview-card",
+      "conditions": [],
+      "sourcePath": "packages/react/src/preview-card/index.ts",
+      "blob": "a7a75a40d17815a809201684cd01f8367c9726e7",
+      "owner": "bsolid-c-preview-card",
+      "targets": [
+        "packages/solid/src/preview-card/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./progress",
+      "conditions": [],
+      "sourcePath": "packages/react/src/progress/index.ts",
+      "blob": "5fe947ac52c6122bdf32d6d1dbb43c4cefe5ecaf",
+      "owner": "bsolid-c-progress",
+      "targets": [
+        "packages/solid/src/progress/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./radio-group",
+      "conditions": [],
+      "sourcePath": "packages/react/src/radio-group/index.ts",
+      "blob": "5835045796643c220b9f0240337212ab84985975",
+      "owner": "bsolid-c-radio",
+      "targets": [
+        "packages/solid/src/radio-group/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./radio",
+      "conditions": [],
+      "sourcePath": "packages/react/src/radio/index.ts",
+      "blob": "34418e789b3cc618d101b3af4d581652386473e4",
+      "owner": "bsolid-c-radio",
+      "targets": [
+        "packages/solid/src/radio/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./scroll-area",
+      "conditions": [],
+      "sourcePath": "packages/react/src/scroll-area/index.ts",
+      "blob": "10a0f321085c8c07d3d5574b9d5dbe1fa8b99393",
+      "owner": "bsolid-c-scroll-area",
+      "targets": [
+        "packages/solid/src/scroll-area/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./select",
+      "conditions": [],
+      "sourcePath": "packages/react/src/select/index.ts",
+      "blob": "48b3f24eabca79a7f66fce1bb1d9fe1a9430e605",
+      "owner": "bsolid-c-select",
+      "targets": [
+        "packages/solid/src/select/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./separator",
+      "conditions": [],
+      "sourcePath": "packages/react/src/separator/index.ts",
+      "blob": "47b1c7b87679392708047a27d8cfeeba9dcb25d7",
+      "owner": "bsolid-c-separator",
+      "targets": [
+        "packages/solid/src/separator/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./slider",
+      "conditions": [],
+      "sourcePath": "packages/react/src/slider/index.ts",
+      "blob": "7690a3f6657d27755d2d37dce88db96d72c84dc0",
+      "owner": "bsolid-c-slider",
+      "targets": [
+        "packages/solid/src/slider/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./switch",
+      "conditions": [],
+      "sourcePath": "packages/react/src/switch/index.ts",
+      "blob": "ee358a8d1be53aecabc922d62a544cb4a61010c2",
+      "owner": "bsolid-c-switch",
+      "targets": [
+        "packages/solid/src/switch/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./tabs",
+      "conditions": [],
+      "sourcePath": "packages/react/src/tabs/index.ts",
+      "blob": "88c915106c3244a325625774ae0bb8868c5ac571",
+      "owner": "bsolid-c-tabs",
+      "targets": [
+        "packages/solid/src/tabs/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./toast",
+      "conditions": [],
+      "sourcePath": "packages/react/src/toast/index.ts",
+      "blob": "e6dff7a4c702548aa042437e9634c93dae09caac",
+      "owner": "bsolid-c-toast",
+      "targets": [
+        "packages/solid/src/toast/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./toggle-group",
+      "conditions": [],
+      "sourcePath": "packages/react/src/toggle-group/index.ts",
+      "blob": "737599a70b9307568aeb8c95a08449a0cd253d23",
+      "owner": "bsolid-c-toggle-group",
+      "targets": [
+        "packages/solid/src/toggle-group/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./toggle",
+      "conditions": [],
+      "sourcePath": "packages/react/src/toggle/index.ts",
+      "blob": "59b29b39d5235be1c4a420fe83868413f715328b",
+      "owner": "bsolid-c-toggle",
+      "targets": [
+        "packages/solid/src/toggle/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./toolbar",
+      "conditions": [],
+      "sourcePath": "packages/react/src/toolbar/index.ts",
+      "blob": "fa15687718bf9fcbed2efeb398aabc79947823c8",
+      "owner": "bsolid-c-toolbar",
+      "targets": [
+        "packages/solid/src/toolbar/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./tooltip",
+      "conditions": [],
+      "sourcePath": "packages/react/src/tooltip/index.ts",
+      "blob": "71efdd6f63441d7ff1c971593e6222e1f905cb0d",
+      "owner": "bsolid-c-tooltip",
+      "targets": [
+        "packages/solid/src/tooltip/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    },
+    {
+      "key": "./types",
+      "conditions": [],
+      "sourcePath": "packages/react/src/types/index.ts",
+      "blob": "ae3f6419e86e49e5005fa8aa460c7204180d02e5",
+      "owner": "bsolid-integration",
+      "targets": [
+        "packages/solid/src/types/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "type-only"
+    },
+    {
+      "key": "./unstable-use-media-query",
+      "conditions": [],
+      "sourcePath": "packages/react/src/unstable-use-media-query/index.ts",
+      "blob": "d023b7e1be6194994e38a14cf6499694ca683af3",
+      "owner": "bsolid-media-query",
+      "targets": [
+        "packages/solid/src/unstable-use-media-query/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "subpath-only"
+    },
+    {
+      "key": "./use-render",
+      "conditions": [],
+      "sourcePath": "packages/react/src/use-render/index.ts",
+      "blob": "45b191a14b3e1e24e63f7fae825630b527431de2",
+      "owner": "bsolid-render",
+      "targets": [
+        "packages/solid/src/use-render/index.ts"
+      ],
+      "disposition": "translated",
+      "rootPolicy": "root-and-subpath"
+    }
+  ],
+  "imports": {
+    "#test-utils": "./test/index.ts",
+    "#formatErrorMessage": "@base-ui/utils/formatErrorMessage",
+    "#prehydration/tabs/indicator": {
+      "browser": "./src/internals/prehydrationScript.stub.ts",
+      "default": "./src/tabs/indicator/prehydrationScript.min.ts"
+    },
+    "#prehydration/slider/thumb": {
+      "browser": "./src/internals/prehydrationScript.stub.ts",
+      "default": "./src/slider/thumb/prehydrationScript.min.ts"
+    }
+  }
+}

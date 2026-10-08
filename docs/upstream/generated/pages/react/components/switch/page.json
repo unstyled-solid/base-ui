@@ -1,0 +1,1789 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/switch/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "08644d550caf4a0f033b1c5ef9822bd09d902287dcc5ab40e06c14ea573a9deb",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/switch",
+  "route": "/solid/components/switch",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Switch",
+  "subtitle": "A control that indicates whether a setting is on or off.",
+  "metadata": {
+    "keywords": [
+      "React Switch",
+      "Toggle Switch Component",
+      "Toggle Switch",
+      "Toggle Button",
+      "On/Off Control",
+      "On Off Switch",
+      "Binary Switch",
+      "Checkbox Alternative",
+      "Form Toggle Control",
+      "Aria Switch Role",
+      "Accessible Switch",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React switch component that indicates whether a setting is on or off."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoSwitchHero",
+      "imported": "DemoSwitchHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/switch/demos/hero#DemoSwitchHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesSwitch",
+      "imported": "TypesSwitch",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/switch/types#TypesSwitch"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Switch",
+      "properties": {
+        "id": "switch"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:17:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:29:1"
+    },
+    {
+      "depth": 3,
+      "text": "Labeling a switch",
+      "properties": {
+        "id": "labeling-a-switch"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:31:1"
+    },
+    {
+      "depth": 3,
+      "text": "Rendering as a native button",
+      "properties": {
+        "id": "rendering-as-a-native-button"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:44:1"
+    },
+    {
+      "depth": 3,
+      "text": "Form integration",
+      "properties": {
+        "id": "form-integration"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:74:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:90:1"
+    },
+    {
+      "depth": 3,
+      "text": "Root",
+      "properties": {
+        "id": "root"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:94:1"
+    },
+    {
+      "depth": 3,
+      "text": "Thumb",
+      "properties": {
+        "id": "thumb"
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:98:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#labeling-a-switch",
+      "target": "#labeling-a-switch",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:15:125"
+    },
+    {
+      "source": "/react/handbook/forms",
+      "target": "/solid/handbook/forms",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:15:173"
+    },
+    {
+      "source": "/react/components/field",
+      "target": "/solid/components/field",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:76:5"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React switch component that indicates whether a setting is on or off."
+      },
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:4:1"
+    },
+    {
+      "name": "DemoSwitchHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/switch/demos/hero#DemoSwitchHero"
+    },
+    {
+      "name": "TypesSwitch.Root",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:96:1",
+      "reference": "api:docs/src/app/(docs)/react/components/switch/types#TypesSwitch"
+    },
+    {
+      "name": "TypesSwitch.Thumb",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:100:1",
+      "reference": "api:docs/src/app/(docs)/react/components/switch/types#TypesSwitch"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:11:1",
+      "detail": "Site must implement DemoSwitchHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:21:1",
+      "detail": "Switch.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:21:1",
+      "detail": "Switch.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:21:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:35:1",
+      "detail": "Switch.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:35:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:48:1",
+      "detail": "Switch.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:48:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:48:1",
+      "detail": "Switch.Thumb",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:48:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "incomplete-code-example",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:60:1",
+      "detail": "Fragment is preserved; semantic overlay must compile complete examples.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:60:1",
+      "detail": "Switch.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:60:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:60:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:78:1",
+      "detail": "Form",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:78:1",
+      "detail": "Field.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:78:1",
+      "detail": "Field.Label",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:78:1",
+      "detail": "Switch.Root",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:78:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:96:1",
+      "detail": "Site must implement TypesSwitch.Root; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:100:1",
+      "detail": "Site must implement TypesSwitch.Thumb; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/switch/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Switch",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 9,
+                "offset": 8
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 9,
+            "offset": 8
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "switch"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A control that indicates whether a setting is on or off.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 20
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 67,
+                    "offset": 76
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 10
+              },
+              "end": {
+                "line": 3,
+                "column": 78,
+                "offset": 87
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 10
+          },
+          "end": {
+            "line": 3,
+            "column": 78,
+            "offset": 87
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 96
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 114
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React switch component that indicates whether a setting is on or off.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 117
+              },
+              "end": {
+                "line": 6,
+                "column": 107,
+                "offset": 221
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 88
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 224
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoSwitchHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 226
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "offset": 272
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoSwitchHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 274
+          },
+          "end": {
+            "line": 11,
+            "column": 19,
+            "offset": 292
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/switch/demos/hero#DemoSwitchHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 297
+              },
+              "end": {
+                "line": 13,
+                "column": 20,
+                "offset": 313
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 294
+          },
+          "end": {
+            "line": 13,
+            "column": 20,
+            "offset": 313
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Form controls must have an accessible name",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 5,
+                            "offset": 319
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 47,
+                            "offset": 361
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 3,
+                        "offset": 317
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 363
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": It can be created using a ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 49,
+                        "offset": 363
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 77,
+                        "offset": 391
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "<label>",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 77,
+                        "offset": 391
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 86,
+                        "offset": 400
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " element or the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 86,
+                        "offset": 400
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 416
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "Field",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 102,
+                        "offset": 416
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 109,
+                        "offset": 423
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " component. See ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 109,
+                        "offset": 423
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 125,
+                        "offset": 439
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#labeling-a-switch",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Labeling a switch",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 126,
+                            "offset": 440
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 143,
+                            "offset": 457
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 125,
+                        "offset": 439
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 164,
+                        "offset": 478
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " and the ",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 164,
+                        "offset": 478
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 173,
+                        "offset": 487
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "/solid/handbook/forms",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "forms guide",
+                        "position": {
+                          "start": {
+                            "line": 15,
+                            "column": 174,
+                            "offset": 488
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 185,
+                            "offset": 499
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 173,
+                        "offset": 487
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 209,
+                        "offset": 523
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ".",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 209,
+                        "offset": 523
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 210,
+                        "offset": 524
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 15,
+                    "column": 3,
+                    "offset": 317
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 210,
+                    "offset": 524
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 315
+              },
+              "end": {
+                "line": 15,
+                "column": 210,
+                "offset": 524
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 315
+          },
+          "end": {
+            "line": 15,
+            "column": 210,
+            "offset": 524
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 4,
+                "offset": 529
+              },
+              "end": {
+                "line": 17,
+                "column": 11,
+                "offset": 536
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 526
+          },
+          "end": {
+            "line": 17,
+            "column": 11,
+            "offset": 536
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and assemble its parts:",
+            "position": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 538
+              },
+              "end": {
+                "line": 19,
+                "column": 45,
+                "offset": 582
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 19,
+            "column": 1,
+            "offset": 538
+          },
+          "end": {
+            "line": 19,
+            "column": 45,
+            "offset": 582
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Switch } from 'baseui-solid2/switch';\n\n<Switch.Root>\n  <Switch.Thumb />\n</Switch.Root>;",
+        "position": {
+          "start": {
+            "line": 21,
+            "column": 1,
+            "offset": 584
+          },
+          "end": {
+            "line": 27,
+            "column": 4,
+            "offset": 708
+          }
+        },
+        "data": {
+          "sourceValue": "import { Switch } from '@base-ui/react/switch';\n\n<Switch.Root>\n  <Switch.Thumb />\n</Switch.Root>;",
+          "references": [
+            {
+              "value": "@base-ui/react/switch",
+              "start": 24,
+              "end": 45,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/switch",
+              "start": 24,
+              "end": 45,
+              "kind": "import",
+              "replacement": "baseui-solid2/switch"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 29,
+                "column": 4,
+                "offset": 713
+              },
+              "end": {
+                "line": 29,
+                "column": 12,
+                "offset": 721
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 29,
+            "column": 1,
+            "offset": 710
+          },
+          "end": {
+            "line": 29,
+            "column": 12,
+            "offset": 721
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Labeling a switch",
+            "position": {
+              "start": {
+                "line": 31,
+                "column": 5,
+                "offset": 727
+              },
+              "end": {
+                "line": 31,
+                "column": 22,
+                "offset": 744
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 723
+          },
+          "end": {
+            "line": 31,
+            "column": 22,
+            "offset": 744
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "labeling-a-switch"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "An enclosing ",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 1,
+                "offset": 746
+              },
+              "end": {
+                "line": 33,
+                "column": 14,
+                "offset": 759
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<label>",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 14,
+                "offset": 759
+              },
+              "end": {
+                "line": 33,
+                "column": 23,
+                "offset": 768
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " is the simplest labeling pattern:",
+            "position": {
+              "start": {
+                "line": 33,
+                "column": 23,
+                "offset": 768
+              },
+              "end": {
+                "line": 33,
+                "column": 57,
+                "offset": 802
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 33,
+            "column": 1,
+            "offset": 746
+          },
+          "end": {
+            "line": 33,
+            "column": 57,
+            "offset": 802
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Wrapping a label around a switch\"",
+        "value": "// @highlight\n<label>\n  <Switch.Root />\n  Notifications\n  {/* @highlight */}\n</label>",
+        "position": {
+          "start": {
+            "line": 35,
+            "column": 1,
+            "offset": 804
+          },
+          "end": {
+            "line": 42,
+            "column": 4,
+            "offset": 941
+          }
+        },
+        "data": {
+          "sourceValue": "// @highlight\n<label>\n  <Switch.Root />\n  Notifications\n  {/* @highlight */}\n</label>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Rendering as a native button",
+            "position": {
+              "start": {
+                "line": 44,
+                "column": 5,
+                "offset": 947
+              },
+              "end": {
+                "line": 44,
+                "column": 33,
+                "offset": 975
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 44,
+            "column": 1,
+            "offset": 943
+          },
+          "end": {
+            "line": 44,
+            "column": 33,
+            "offset": 975
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "rendering-as-a-native-button"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "By default, ",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 1,
+                "offset": 977
+              },
+              "end": {
+                "line": 46,
+                "column": 13,
+                "offset": 989
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<Switch.Root>",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 13,
+                "offset": 989
+              },
+              "end": {
+                "line": 46,
+                "column": 28,
+                "offset": 1004
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " renders a ",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 28,
+                "offset": 1004
+              },
+              "end": {
+                "line": 46,
+                "column": 39,
+                "offset": 1015
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<span>",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 39,
+                "offset": 1015
+              },
+              "end": {
+                "line": 46,
+                "column": 47,
+                "offset": 1023
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " element to support enclosing labels. Prefer rendering the switch as a native button when using sibling labels (",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 47,
+                "offset": 1023
+              },
+              "end": {
+                "line": 46,
+                "column": 159,
+                "offset": 1135
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "htmlFor",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 159,
+                "offset": 1135
+              },
+              "end": {
+                "line": 46,
+                "column": 168,
+                "offset": 1144
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": "/",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 168,
+                "offset": 1144
+              },
+              "end": {
+                "line": 46,
+                "column": 169,
+                "offset": 1145
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "id",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 169,
+                "offset": 1145
+              },
+              "end": {
+                "line": 46,
+                "column": 173,
+                "offset": 1149
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ").",
+            "position": {
+              "start": {
+                "line": 46,
+                "column": 173,
+                "offset": 1149
+              },
+              "end": {
+                "line": 46,
+                "column": 175,
+                "offset": 1151
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 46,
+            "column": 1,
+            "offset": 977
+          },
+          "end": {
+            "line": 46,
+            "column": 175,
+            "offset": 1151
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Sibling label pattern with a native button\"",
+        "value": "<div>\n  <label htmlFor=\"notifications-switch\">Notifications</label>\n  {/* @highlight-text \"nativeButton\" \"render={<button />}\" */}\n  <Switch.Root id=\"notifications-switch\" nativeButton render={<button />}>\n    <Switch.Thumb />\n  </Switch.Root>\n</div>",
+        "position": {
+          "start": {
+            "line": 48,
+            "column": 1,
+            "offset": 1153
+          },
+          "end": {
+            "line": 56,
+            "column": 4,
+            "offset": 1465
+          }
+        },
+        "data": {
+          "sourceValue": "<div>\n  <label htmlFor=\"notifications-switch\">Notifications</label>\n  {/* @highlight-text \"nativeButton\" \"render={<button />}\" */}\n  <Switch.Root id=\"notifications-switch\" nativeButton render={<button />}>\n    <Switch.Thumb />\n  </Switch.Root>\n</div>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Native buttons with wrapping labels are supported by using the ",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 1,
+                "offset": 1467
+              },
+              "end": {
+                "line": 58,
+                "column": 64,
+                "offset": 1530
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 64,
+                "offset": 1530
+              },
+              "end": {
+                "line": 58,
+                "column": 72,
+                "offset": 1538
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " callback to avoid invalid HTML, so the hidden input is placed outside the label:",
+            "position": {
+              "start": {
+                "line": 58,
+                "column": 72,
+                "offset": 1538
+              },
+              "end": {
+                "line": 58,
+                "column": 153,
+                "offset": 1619
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 58,
+            "column": 1,
+            "offset": 1467
+          },
+          "end": {
+            "line": 58,
+            "column": 153,
+            "offset": 1619
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Render callback\"",
+        "value": "<Switch.Root\n  nativeButton\n  // @highlight-start\n  render={(buttonProps) => (\n    <label>\n      <button {...buttonProps} />\n      Notifications\n    </label>\n  )}\n  {/* @highlight-end */}\n/>",
+        "position": {
+          "start": {
+            "line": 60,
+            "column": 1,
+            "offset": 1621
+          },
+          "end": {
+            "line": 72,
+            "column": 4,
+            "offset": 1846
+          }
+        },
+        "data": {
+          "sourceValue": "<Switch.Root\n  nativeButton\n  // @highlight-start\n  render={(buttonProps) => (\n    <label>\n      <button {...buttonProps} />\n      Notifications\n    </label>\n  )}\n  {/* @highlight-end */}\n/>",
+          "references": [],
+          "diagnostics": [
+            {
+              "start": 186,
+              "message": "'...' expected."
+            }
+          ],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Form integration",
+            "position": {
+              "start": {
+                "line": 74,
+                "column": 5,
+                "offset": 1852
+              },
+              "end": {
+                "line": 74,
+                "column": 21,
+                "offset": 1868
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 74,
+            "column": 1,
+            "offset": 1848
+          },
+          "end": {
+            "line": 74,
+            "column": 21,
+            "offset": 1868
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "form-integration"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use ",
+            "position": {
+              "start": {
+                "line": 76,
+                "column": 1,
+                "offset": 1870
+              },
+              "end": {
+                "line": 76,
+                "column": 5,
+                "offset": 1874
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "/solid/components/field",
+            "children": [
+              {
+                "type": "text",
+                "value": "Field",
+                "position": {
+                  "start": {
+                    "line": 76,
+                    "column": 6,
+                    "offset": 1875
+                  },
+                  "end": {
+                    "line": 76,
+                    "column": 11,
+                    "offset": 1880
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 76,
+                "column": 5,
+                "offset": 1874
+              },
+              "end": {
+                "line": 76,
+                "column": 37,
+                "offset": 1906
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to handle label associations and form integration:",
+            "position": {
+              "start": {
+                "line": 76,
+                "column": 37,
+                "offset": 1906
+              },
+              "end": {
+                "line": 76,
+                "column": 88,
+                "offset": 1957
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 76,
+            "column": 1,
+            "offset": 1870
+          },
+          "end": {
+            "line": 76,
+            "column": 88,
+            "offset": 1957
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "tsx",
+        "meta": "title=\"Using Switch in a form\"",
+        "value": "<Form>\n  {/* @highlight */}\n  <Field.Root name=\"notifications\">\n    <Field.Label>\n      <Switch.Root />\n      Notifications\n    </Field.Label>\n  </Field.Root>\n</Form>",
+        "position": {
+          "start": {
+            "line": 78,
+            "column": 1,
+            "offset": 1959
+          },
+          "end": {
+            "line": 88,
+            "column": 4,
+            "offset": 2167
+          }
+        },
+        "data": {
+          "sourceValue": "<Form>\n  {/* @highlight */}\n  <Field.Root name=\"notifications\">\n    <Field.Label>\n      <Switch.Root />\n      Notifications\n    </Field.Label>\n  </Field.Root>\n</Form>",
+          "references": [],
+          "diagnostics": [],
+          "packageEdits": []
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 90,
+                "column": 4,
+                "offset": 2172
+              },
+              "end": {
+                "line": 90,
+                "column": 17,
+                "offset": 2185
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 90,
+            "column": 1,
+            "offset": 2169
+          },
+          "end": {
+            "line": 90,
+            "column": 17,
+            "offset": 2185
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesSwitch } from './types';",
+        "position": {
+          "start": {
+            "line": 92,
+            "column": 1,
+            "offset": 2187
+          },
+          "end": {
+            "line": 92,
+            "column": 39,
+            "offset": 2225
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Root",
+            "position": {
+              "start": {
+                "line": 94,
+                "column": 5,
+                "offset": 2231
+              },
+              "end": {
+                "line": 94,
+                "column": 9,
+                "offset": 2235
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 94,
+            "column": 1,
+            "offset": 2227
+          },
+          "end": {
+            "line": 94,
+            "column": 9,
+            "offset": 2235
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "root"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSwitch.Root",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 96,
+            "column": 1,
+            "offset": 2237
+          },
+          "end": {
+            "line": 96,
+            "column": 21,
+            "offset": 2257
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/switch/types#TypesSwitch"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Thumb",
+            "position": {
+              "start": {
+                "line": 98,
+                "column": 5,
+                "offset": 2263
+              },
+              "end": {
+                "line": 98,
+                "column": 10,
+                "offset": 2268
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 98,
+            "column": 1,
+            "offset": 2259
+          },
+          "end": {
+            "line": 98,
+            "column": 10,
+            "offset": 2268
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "thumb"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesSwitch.Thumb",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 100,
+            "column": 1,
+            "offset": 2270
+          },
+          "end": {
+            "line": 100,
+            "column": 22,
+            "offset": 2291
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/switch/types#TypesSwitch"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Switch',\n    'Toggle Switch Component',\n    'Toggle Switch',\n    'Toggle Button',\n    'On/Off Control',\n    'On Off Switch',\n    'Binary Switch',\n    'Checkbox Alternative',\n    'Form Toggle Control',\n    'Aria Switch Role',\n    'Accessible Switch',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 102,
+            "column": 1,
+            "offset": 2293
+          },
+          "end": {
+            "line": 118,
+            "column": 3,
+            "offset": 2649
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 119,
+        "column": 1,
+        "offset": 2650
+      }
+    }
+  }
+}

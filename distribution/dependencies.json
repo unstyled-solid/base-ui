@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "owner": "bsolid-dist-contract",
+  "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "audit": {
+    "scope": ["packages/react/src", "packages/utils/src", "packages/react/package.json", "packages/utils/package.json", "pnpm-lock.yaml"],
+    "method": "Enumerate tracked TS/TSX/JS/JSX files from git ls-tree at sourceSha; read git blobs, parse with TypeScript 5.9.3; collect import/export declarations, import types, literal dynamic imports and require calls. Separate test/spec/testUtils/test-utils support. Include manifest-only dependencies separately. No reference checkout or old port is read.",
+    "scannedSourceFiles": 1319,
+    "productionSpecifierCount": 108,
+    "literalTestSpecifierCount": 80,
+    "nonliteralImports": [
+      { "file": "packages/react/src/index.test.tsx", "lines": [21, 41], "expression": "importSpecifier", "disposition": "Self-reference test loops bounded by pinned manifest exports: internals, then stable public root families. External root is @base-ui/react; no new external package. Runtime execution remains integration/inventory qualification." }
+    ],
+    "coverage": "All observed external package roots and production subpaths are classified below. Relative imports and package #imports are internal; #imports are specified in package-contract.json. This is a pinned-source dependency audit, not a claim about future compiled output.",
+    "upstreamLock": { "@floating-ui/dom": "1.8.0", "@floating-ui/core": "1.8.0", "@floating-ui/utils": "0.2.12" },
+    "futureGraphGate": "bsolid-dist-pack"
+  },
+  "runtimeDependencies": {
+    "@floating-ui/dom": {
+      "version": "1.8.0",
+      "license": "MIT",
+      "upstreamImports": ["@floating-ui/react-dom"],
+      "evidence": ["packages/react/src/floating-ui-react/index.ts", "packages/react/src/floating-ui-react/types.ts", "packages/react/src/floating-ui-react/hooks/useFloating.ts", "packages/react/src/floating-ui-react/middleware/arrow.ts", "packages/react/src/utils/hideMiddleware.ts", "packages/react/src/utils/popups/inlineRect.ts"],
+      "reason": "Replace React binding's geometry runtime and exposed Middleware/VirtualElement/Placement/etc types with the framework-neutral DOM package. computePosition, autoUpdate, platform, middleware and getOverflowAncestors are actual upstream reexports. React UseFloatingOptions/Return cannot be blindly reexported; owned RC13 interfaces replace those wrapper types.",
+      "owners": ["bsolid-positioning", "bsolid-floating-core", "bsolid-integration"],
+      "registryDependencies": { "@floating-ui/core": "^1.8.0", "@floating-ui/utils": "^0.2.12" }
+    },
+    "@floating-ui/utils": {
+      "version": "0.2.12",
+      "license": "MIT",
+      "upstreamImports": ["@floating-ui/utils", "@floating-ui/utils/dom"],
+      "evidence": ["packages/react/src/internals/useAnchorPositioning.ts", "packages/react/src/floating-ui-react/utils/tabbable.ts", "packages/utils/src/owner.ts", "packages/utils/src/shadowDom.ts", "packages/utils/src/isHTMLElement.ts"],
+      "reason": "Direct runtime/type imports require a direct dependency; do not rely on @floating-ui/dom's transitive installation.",
+      "owners": ["bsolid-dom", "bsolid-positioning", "bsolid-composite", "bsolid-focus", "bsolid-dismiss"]
+    }
+  },
+  "transitivePins": {
+    "@floating-ui/core": { "version": "1.8.0", "via": "@floating-ui/dom", "license": "MIT", "directDependency": false },
+    "@floating-ui/utils": { "version": "0.2.12", "via": ["@floating-ui/dom", "@floating-ui/core"], "directDependency": true },
+    "@solidjs/signals": { "version": "2.0.0-rc.13", "via": "solid-js", "directDevelopmentDependency": true }
+  },
+  "requiredPeers": {
+    "solid-js": { "range": "2.0.0-rc.13", "developmentPin": "2.0.0-rc.13", "role": "reactivity and owned state", "bundled": false },
+    "@solidjs/web": { "range": "2.0.0-rc.13", "developmentPin": "2.0.0-rc.13", "role": "matching DOM/server renderer, JSX and native event types", "bundled": false }
+  },
+  "optionalPeers": {
+    "date-fns": {
+      "range": "^4.0.0", "developmentPin": "4.4.0", "license": "MIT", "role": "runtime and bundled declarations",
+      "entry": "./internals/temporal-adapter-date-fns", "owner": "bsolid-temporal",
+      "requiresTogether": ["@date-fns/tz"],
+      "upstreamSubpaths": ["addDays", "addHours", "addMinutes", "addMonths", "addSeconds", "addMilliseconds", "addWeeks", "addYears", "differenceInDays", "differenceInHours", "differenceInMinutes", "differenceInMonths", "differenceInWeeks", "differenceInYears", "endOfDay", "endOfHour", "endOfMinute", "endOfMonth", "endOfSecond", "endOfWeek", "endOfYear", "format", "getDate", "getDay", "getISODay", "getDaysInMonth", "getHours", "getMilliseconds", "getMinutes", "getMonth", "getSeconds", "getWeek", "getYear", "isAfter", "isBefore", "isEqual", "isSameDay", "isSameHour", "isSameYear", "isSameMonth", "isValid", "isWithinInterval", "locale", "locale/en-US", "parse", "setDate", "setHours", "setMilliseconds", "setMinutes", "setMonth", "setSeconds", "setYear", "startOfDay", "startOfHour", "startOfMinute", "startOfMonth", "startOfSecond", "startOfYear", "startOfWeek"],
+      "testOnlySubpaths": ["locale/ar-EG", "locale/ar-SA", "locale/en-IN", "locale/fr", "locale/he", "locale/hi"]
+    },
+    "@date-fns/tz": {
+      "range": "^1.2.0", "developmentPin": "1.5.0", "license": "MIT", "role": "TZDate runtime and bundled declarations",
+      "entry": "./internals/temporal-adapter-date-fns", "owner": "bsolid-temporal", "requiresTogether": ["date-fns"],
+      "evidence": "TemporalAdapterDateFns.ts imports TZDate unconditionally; timezone support is not a separately lazy optional import."
+    },
+    "luxon": {
+      "range": "^3.7.2", "developmentPin": "3.7.2", "license": "MIT", "role": "DateTime/Info runtime",
+      "entry": "./internals/temporal-adapter-luxon", "owner": "bsolid-temporal",
+      "requiresTypesForTypeScript": "@types/luxon",
+      "correction": "Upstream exports the adapter but declares luxon only in devDependencies. Solid declares an optional runtime peer, required when importing this adapter."
+    },
+    "@types/luxon": {
+      "range": "^3.7.6", "developmentPin": "3.7.6", "license": "MIT", "role": "adapter declaration dependency, no runtime import",
+      "entry": "./internals/temporal-adapter-luxon", "owner": "bsolid-dist-types",
+      "reason": "Public method signatures expose DateTime; luxon does not ship those declarations. Optional at package level only because ordinary entrypoints must never traverse the adapter's declarations. Do not copy upstream ts-nocheck or its disabled augmentation to evade validation."
+    }
+  },
+  "optionalIsolation": {
+    "rootRuntimeImportsAdapters": false,
+    "rootDeclarationsImportAdapters": false,
+    "augmentationModule": "baseui-solid2/internals/temporal",
+    "autoInstallPeers": false,
+    "strictPeerDependencies": true,
+    "consumerCases": ["ordinary root and component imports with all four optional peers absent", "date-fns adapter with date-fns and @date-fns/tz only", "Luxon adapter with luxon and @types/luxon only", "requested adapter without its runtime peer fails locally without affecting ordinary imports", "Bundler and NodeNext skipLibCheck=false with no React ambient types"],
+    "gates": ["bsolid-temporal", "bsolid-dist-types", "bsolid-dist-pack"]
+  },
+  "upstreamUtilities": {
+    "package": "@base-ui/utils",
+    "decision": "Do not install: package contains React peers and store/hook code. Adapt source-mapped pure leaves with MIT notices and replace framework machinery in the assigned foundations.",
+    "productionSubpaths": ["useStableCallback", "useIsoLayoutEffect", "warn", "useControlled", "empty", "useTimeout", "areArraysEqual", "useMergedRefs", "visuallyHidden", "owner", "getDefaultFormSubmitter", "addEventListener", "useAnimationFrame", "useValueAsRef", "platform", "error", "safeReact", "useEnhancedClickHandler", "inertValue", "useOnFirstRender", "useRefWithInit", "store", "useId", "fastHooks", "useScrollLock", "clamp", "mergeCleanups", "useOnMount", "shadowDom", "isElementDisabled", "stringifyLocale", "useInterval", "getReactElementRef", "mergeObjects", "useForcedRerendering", "formatNumber", "usePreviousValue", "generateId", "hydration"],
+    "pureAdaptationOwners": ["bsolid-dom", "bsolid-filter", "bsolid-events"],
+    "frameworkReplacementOwners": ["bsolid-lifecycle", "bsolid-state", "bsolid-render", "bsolid-composite", "bsolid-scroll-lock"],
+    "tinyHelperPolicy": "Assess source behavior, size and license per leaf. Pure clamp/array equality/cleanup/owner helpers are licensed one-time Base UI adaptations, not separate external donors. getReactElementRef, safeReact and fastHooks are framework-only and must not be imitated."
+  },
+  "excluded": {
+    "react": { "reason": "Native Solid components/reactivity", "owners": ["bsolid-integration", "bsolid-state", "bsolid-render"] },
+    "react-dom": { "reason": "@solidjs/web renderer/Portal and owned lifecycle; no flushSync compatibility layer", "owners": ["bsolid-portal", "bsolid-lifecycle"] },
+    "@types/react": { "reason": "JSX/native events/refs come from @solidjs/web", "owners": ["bsolid-dist-types"] },
+    "@types/react-dom": { "reason": "No React renderer declarations", "owners": ["bsolid-dist-types"] },
+    "@floating-ui/react-dom": { "reason": "Substantial React geometry binding replaced with @floating-ui/dom and separately pinned donor adapted to RC13", "owners": ["bsolid-positioning", "bsolid-donor-floating"] },
+    "use-sync-external-store": { "reason": "React subscription compatibility is framework-only; native accessors/memos and setup-owned subscriptions preserve observable behavior", "subpaths": ["shim", "shim/with-selector"], "owners": ["bsolid-state", "bsolid-popup", "bsolid-lifecycle", "bsolid-media-query"] },
+    "@types/use-sync-external-store": { "reason": "No React external-store types", "owners": ["bsolid-dist-types"] },
+    "reselect": { "reason": "Framework-neutral, not React-only. Observed only in utils/lruMemoize and store selector machinery. Native Solid derivations replace that machinery; do not copy a library or install it speculatively. State owner may request a justified pure use with cache semantics preserved.", "owners": ["bsolid-state"] },
+    "@babel/runtime": { "reason": "Declared upstream build helper, no authored production imports found. RC13 compiler output uses external @solidjs/web helpers; build owner must audit any new helper before requesting it.", "owners": ["bsolid-dist-build"] }
+  },
+  "testOnlyImports": {
+    "@base-ui/react": "Self-reference roots/subpaths in upstream tests and toast/utils/test-utils.tsx; translate to completed family-local Solid entries, never install React package.",
+    "@base-ui/utils": "Test helper imports follow the same foundation adaptations as production.",
+    "@mui/internal-test-utils": "React harness replaced by bsolid-harness.",
+    "@testing-library/react": "Replace with exact @solidjs/testing-library 1.0.0-beta.3.",
+    "@testing-library/user-event": "Retain exact 14.6.7 development-only.",
+    "vitest": "Retain exact 4.1.11 development-only; vitest/browser remains final-browser infrastructure.",
+    "@vitest/browser-playwright": "Final browser owner requests compatible exact tooling later.",
+    "vitest-browser-react": "Replace React browser rendering in bsolid-browser.",
+    "react-router": "React-only integration scenarios require explicit test adaptation, not a runtime dependency.",
+    "react-dom": "client/server subpaths replaced by Solid DOM/server harness.",
+    "react": "Replace React act/rerender with native harness.",
+    "@floating-ui/react-dom": "Geometry-only test imports translate to @floating-ui/dom.",
+    "date-fns": "Locale test subpaths use the adapter's exact development installation.",
+    "luxon": "Temporal test development installation only.",
+    "reselect": "Selector behavior tests assigned to bsolid-state; library not installed."
+  },
+  "donor": {
+    "ticket": "bsolid-donor-floating",
+    "source": "https://github.com/lxsmnsyc/solid-floating-ui",
+    "stateOwner": "bsolid-donor-floating",
+    "adaptationOwner": "bsolid-positioning",
+    "decision": "Read immutable donor source and adapt maintained positioning logic into owned RC13 foundations; do not add solid-floating-ui or Solid 1 reactive utility packages as runtime dependencies. Donor source never overrides Base UI behavior or RC13 semantics.",
+    "reconciliation": "Explicit developer-requested updates via separate source state; no automatic adaptation overwrite.",
+    "sourceSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
+    "noticeHandoff": "Actual adaptation owners retain donor MIT/source-local notices and send staged NOTICE additions to distribution owner. bsolid-donor-notices gates adopted-source packing, including inherited Adobe Apache/React NOTICE and aria-hidden MIT where applicable."
+  },
+  "integratedDevelopmentRequests": {
+    "bsolid-harness": { "@testing-library/jest-dom": "6.9.1" },
+    "bsolid-docs-content": { "unified": "11.0.5", "remark-parse": "11.0.0", "remark-mdx": "3.1.1", "remark-gfm": "4.0.1", "unist-util-visit": "5.0.0", "hast-util-heading-rank": "3.0.0", "hast-util-to-string": "3.0.1", "postcss": "8.5.6", "postcss-value-parser": "4.2.0" }
+  },
+  "integrationRequests": [
+    { "owner": "bsolid-harness", "request": "test:jsdom/ssr/types/contracts -> node scripts/test/run.mjs <mode> <args>", "status": "integrated", "dependencies": "existing pinned toolchain plus requested jest-dom 6.9.1", "rootTsconfigRequest": "Superseded by harness-owned test/contracts/tsconfig.json; root typescript remains strict source check." },
+    { "owner": "bsolid-upstream-cli", "request": "upstream:init/update/status/verify/abandon -> node scripts/upstream/cli.mjs <command>; test:upstream:git -> node --test test/upstream/git/*.test.mjs; --source solid-floating-ui selects donor", "status": "integrated", "dependencies": "Node builtins and RTK Git; verify remains explicit fail-closed reservation" },
+    { "owner": "bsolid-inventory", "request": "test:coverage-map -> node scripts/tracking/cli.mjs check; inventory:generate -> generate; test:tracking -> node --test test/tracking/*.test.mjs", "status": "integrated", "dependencies": "existing TypeScript 5.9.3" },
+    { "owner": "bsolid-docs-content", "request": "docs:sync -> node docs/scripts/sync/index.mjs; docs:test:content -> node --test docs/scripts/sync/content.test.mjs; exact parser pins above", "status": "integrated", "handoff": "bsolid-docs-content-command-integration" },
+    { "owner": "bsolid-dist-build", "request": "build:package", "status": "bootstrap-fail-closed-reservation" },
+    { "owner": "bsolid-browser", "request": "test:browsers and test:parity", "status": "bootstrap-fail-closed-reservation" },
+    { "owner": "bsolid-donor-floating", "request": "Floating DOM/utils and React-only dependency audit coordination", "status": "shared-in-Beads; donor files remain exclusively donor-owned" }
+  ]
+}

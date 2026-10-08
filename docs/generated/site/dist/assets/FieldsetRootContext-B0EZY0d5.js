@@ -1,0 +1,1 @@
+import{E as e,M as t}from"../islands.js";var n=e(null);function r(e=!1){let r=t(n);if(r===null&&!e)throw Error(`Base UI: FieldsetRootContext is missing. Fieldset parts must be placed within <Fieldset.Root>.`);return r}export{r as n,n as t};

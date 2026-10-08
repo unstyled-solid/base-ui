@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "owner": "bsolid-dist-contract",
+  "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "identity": {
+    "workspaceName": "baseui-solid2",
+    "private": true,
+    "publicationName": "@unstyled-solid/base-ui",
+    "publicationDecision": "user-selected",
+    "publicationOwner": "bsolid-dist-publish",
+    "previousBootstrapName": "@base-ui-solid/solid",
+    "version": "0.0.1",
+    "homepage": "https://github.com/unstyled-solid",
+    "installation": {
+      "workspace": "rtk pnpm add {workspaceName}@workspace:*",
+      "tarball": "rtk pnpm add ./artifacts/{workspaceName}-{version}.tgz",
+      "registry": "npm install @unstyled-solid/base-ui",
+      "runtimePeers": "rtk pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13",
+      "generationRule": "Publish the compiled staged package under publicationName at version. Workspace source remains private. Registry examples use the user-selected name; publication status is established by npm receipts."
+    }
+  },
+  "format": {
+    "type": "module",
+    "runtime": "compiled-module-preserving-esm",
+    "outputDirectory": "packages/solid/build",
+    "domDirectory": "dom",
+    "serverDirectory": "server",
+    "declarationsDirectory": "types",
+    "commonjs": false,
+    "preservedJsx": false,
+    "bundleRuntime": false,
+    "jsxImportSource": "@solidjs/web",
+    "moduleName": "@solidjs/web",
+    "relativeRuntimeExtension": ".js",
+    "relativeDeclarationExtension": ".js",
+    "licenseFiles": ["LICENSE", "NOTICE"],
+    "sideEffects": { "workspaceValue": false, "qualificationOwner": "bsolid-dist-shaking", "qualified": true, "stagingRule": "Stage audited false. Authored initialization only allocates module-local contexts, caches, closures and symbols; DOM templates are lazy pure factories. Required styles, listeners and timers are installed by invoked owned code. Test-only fixture modules with import-time delegation are excluded. See docs/distribution-initialization-audit.md and the independent optimized consumer evidence." }
+  },
+  "toolchain": {
+    "node": "25.8.1",
+    "pnpm": "11.8.0",
+    "solid-js": "2.0.0-rc.13",
+    "@solidjs/web": "2.0.0-rc.13",
+    "@solidjs/signals": "2.0.0-rc.13",
+    "@solidjs/compiler": "2.0.0-rc.13",
+    "@solidjs/babel-plugin": "2.0.0-rc.13",
+    "@solidjs/vite-plugin": "3.0.0-next.47",
+    "vite": "8.3.2",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11",
+    "@solidjs/testing-library": "1.0.0-beta.3"
+  },
+  "resolution": {
+    "exportContract": "distribution/exports.json",
+    "runtimeConditionOrder": ["types", "worker", "browser", "deno", "node", "default"],
+    "runtimeTemplate": {
+      "types": "./types/{stem}.d.ts",
+      "worker": "./server/{stem}.js",
+      "browser": "./dom/{stem}.js",
+      "deno": "./server/{stem}.js",
+      "node": "./server/{stem}.js",
+      "default": "./server/{stem}.js"
+    },
+    "typeOnlyTemplate": { "types": "./types/{stem}.d.ts" },
+    "typeOnlyEntries": ["./types", "./internals/temporal", "./internals/types"],
+    "typeOnlyRuntimeBehavior": "No runtime target; normal ESM import fails ERR_PACKAGE_PATH_NOT_EXPORTED. Do not emit empty public runtime modules as accidental substitutes.",
+    "matrix": [
+      { "conditions": [], "runtime": "server", "typesOnly": "unexported" },
+      { "conditions": ["browser"], "runtime": "dom", "typesOnly": "unexported" },
+      { "conditions": ["node"], "runtime": "server", "typesOnly": "unexported" },
+      { "conditions": ["worker"], "runtime": "server", "typesOnly": "unexported" },
+      { "conditions": ["deno"], "runtime": "server", "typesOnly": "unexported" },
+      { "conditions": ["browser", "node", "worker", "deno"], "runtime": "server", "typesOnly": "unexported" },
+      { "conditions": ["development"], "runtime": "server", "typesOnly": "unexported" },
+      { "conditions": ["browser", "development"], "runtime": "dom", "typesOnly": "unexported" },
+      { "conditions": ["types"], "runtime": "types", "typesOnly": "types" },
+      { "conditions": ["types", "browser", "node", "worker", "deno"], "runtime": "types", "typesOnly": "types" }
+    ],
+    "matrixExpansion": "Validate every subset of types/browser/node/worker/deno/development (64 sets). types wins; otherwise worker selects server before browser, matching stock RC13; otherwise browser selects DOM; otherwise server. Resolver condition-list order cannot override export-object key order.",
+    "requirePolicy": "No require branch and no CJS artifact. Modern Node may synchronously require ESM; that does not constitute a supported CommonJS build.",
+    "solidPolicy": "No solid branch. A supplied solid condition falls through to ordinary ESM default.",
+    "typeConsumers": ["Bundler", "NodeNext"],
+    "skipLibCheck": false
+  },
+  "imports": {
+    "#test-utils": { "owner": "bsolid-harness", "workspaceOnly": true, "staged": false, "status": "awaiting-owner-request" },
+    "#formatErrorMessage": { "owner": "bsolid-dom", "buildOwner": "bsolid-dist-build", "status": "reserved-until-implementation", "rule": "Resolve to owned Solid utility output, never @base-ui/utils or an unresolved source alias." },
+    "#prehydration/tabs/indicator": { "owner": "bsolid-c-tabs", "sharedOwner": "bsolid-providers", "status": "reserved-until-implementation", "browser": "./dom/internals/prehydrationScript.stub.js", "node": "./server/tabs/indicator/prehydrationScript.min.js", "worker": "./server/tabs/indicator/prehydrationScript.min.js", "deno": "./server/tabs/indicator/prehydrationScript.min.js", "default": "./server/tabs/indicator/prehydrationScript.min.js" },
+    "#prehydration/slider/thumb": { "owner": "bsolid-c-slider", "sharedOwner": "bsolid-providers", "status": "reserved-until-implementation", "browser": "./dom/internals/prehydrationScript.stub.js", "node": "./server/slider/thumb/prehydrationScript.min.js", "worker": "./server/slider/thumb/prehydrationScript.min.js", "deno": "./server/slider/thumb/prehydrationScript.min.js", "default": "./server/slider/thumb/prehydrationScript.min.js" }
+  },
+  "staging": {
+    "manifestOwner": "bsolid-dist-contract",
+    "generatorOwner": "bsolid-dist-build",
+    "barrelOwner": "bsolid-integration",
+    "declarationsOwner": "bsolid-dist-types",
+    "rules": [
+      "Generate exports only from the exact entries and templates; do not publish workspaceOnlyExports, wildcard entries or package.json as an extra entry.",
+      "Verify all proposed source and output paths are normalized relative paths with no parent traversal, node_modules, wildcard or encoded traversal.",
+      "Workspace source remains private. When publicationName is selected, stage that name with public npm access; do not inherit upstream author/repository identity claims.",
+      "Every runtime entry needs both DOM and server artifacts plus independent declarations. Complete-package staging fails on missing paths. Isolated build fixtures cannot claim whole-library completion.",
+      "Preserve module boundaries and declarations needed transitively without exposing extra export keys. Exclude tests, proof fixtures, source aliases, caches and absolute local paths.",
+      "Optional temporal adapters stay out of root runtime and declaration graphs. Rewrite workspace self-references in staged declarations to the selected publicationName.",
+      "Copy LICENSE and NOTICE into the staged package; preserve adapted Base UI and donor source-local notices."
+    ]
+  },
+  "qualificationGates": ["bsolid-dist-build", "bsolid-dist-types", "bsolid-integration", "bsolid-dist-shaking", "bsolid-dist-pack", "bsolid-dist-publish"],
+  "commandHandoffGate": "bsolid-bootstrap-command-handoff",
+  "knownIntegrationGaps": [
+    { "ticket": "bsolid-donor-notices", "gates": ["bsolid-dist-pack", "bsolid-release-ready"], "evidence": "Donor-owned audit must qualify notices for actual adopted files; no adopted-source packing claim at contract stage." }
+  ]
+}

@@ -1,0 +1,8 @@
+import { TemporalAdapterDateFns } from 'baseui-solid2/internals/temporal-adapter-date-fns';
+import type { TemporalSupportedObjectLookup, TemporalAdapter } from 'baseui-solid2/internals/temporal';
+import { enUS } from 'date-fns/locale/en-US';
+const adapter: TemporalAdapter<Date> = new TemporalAdapterDateFns({ locale: enUS });
+const date: Date = adapter.date('2026-10-05', 'UTC');
+const nil: null = adapter.date(null, 'UTC');
+const registered: TemporalSupportedObjectLookup['date-fns'] = date;
+void [nil, registered];

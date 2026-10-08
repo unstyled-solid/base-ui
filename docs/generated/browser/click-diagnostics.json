@@ -1,0 +1,1942 @@
+[
+  {
+    "family": "tooltip",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "tooltip",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "popover",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "popover",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "tabs",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "tabs",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "accordion",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "accordion",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "collapsible",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [
+      "[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Collapsible.Root> › <CollapsibleRootContext> › computed › <Host> › computed › computed › <Collapsible.Panel> › <Host> › computed › <Ready> › computed › <NativeHost> › effect\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md JSHandle@node"
+    ],
+    "errors": [],
+    "passed": false,
+    "layoutMeasurements": [
+      "[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Collapsible.Root> › <CollapsibleRootContext> › computed › <Host> › computed › computed › <Collapsible.Panel> › <Host> › computed › <Ready> › computed › <NativeHost> › effect\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md JSHandle@node"
+    ]
+  },
+  {
+    "family": "collapsible",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [
+      "[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Collapsible.Root> › <CollapsibleRootContext> › computed › <Host> › computed › computed › <Collapsible.Panel> › <Host> › computed › <Ready> › computed › <NativeHost> › effect\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md JSHandle@node"
+    ],
+    "errors": [],
+    "passed": false,
+    "layoutMeasurements": [
+      "[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Collapsible.Root> › <CollapsibleRootContext> › computed › <Host> › computed › computed › <Collapsible.Panel> › <Host> › computed › <Ready> › computed › <NativeHost> › effect\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md JSHandle@node"
+    ]
+  },
+  {
+    "family": "checkbox",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "checkbox",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "switch",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "switch",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "toggle",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "toggle",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "radio-group",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "radio-group",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "toggle-group",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "toggle-group",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "dialog",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "dialog",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "alert-dialog",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "alert-dialog",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "drawer",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "drawer",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "menu",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "menu",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "select",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "select",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "toast",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "toast",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "checkbox-group",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "checkbox-group",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "number-field",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "profile": [
+      {
+        "frame": "createEffect.transparent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:119",
+        "ms": 10.369
+      },
+      {
+        "frame": "ownKeys http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:174",
+        "ms": 1.302
+      },
+      {
+        "frame": "setValue http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:190",
+        "ms": 1.192
+      },
+      {
+        "frame": "getFormatParts http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:54",
+        "ms": 0.905
+      },
+      {
+        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:90",
+        "ms": 0.792
+      },
+      {
+        "frame": "read http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:96",
+        "ms": 0.556
+      },
+      {
+        "frame": " http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:125",
+        "ms": 0.518
+      },
+      {
+        "frame": "formatNumber http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/formatNumber.ts:16",
+        "ms": 0.512
+      },
+      {
+        "frame": "get http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:191",
+        "ms": 0.504
+      },
+      {
+        "frame": "dispatch http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:210",
+        "ms": 0.398
+      },
+      {
+        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:182",
+        "ms": 0.395
+      },
+      {
+        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:126",
+        "ms": 0.385
+      },
+      {
+        "frame": "call http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:75",
+        "ms": 0.383
+      },
+      {
+        "frame": "readRawData http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/platform/shared.ts:1",
+        "ms": 0.382
+      },
+      {
+        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:56",
+        "ms": 0.371
+      },
+      {
+        "frame": "isNativeEvent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:2",
+        "ms": 0.268
+      },
+      {
+        "frame": "get http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:132",
+        "ms": 0.262
+      },
+      {
+        "frame": "makeEventPreventable http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:18",
+        "ms": 0.261
+      },
+      {
+        "frame": "parseNumber http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:71",
+        "ms": 0.256
+      },
+      {
+        "frame": "get http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:13",
+        "ms": 0.255
+      }
+    ],
+    "costs": {
+      "scopes": [
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 4.5000001192092896,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 3.2999998927116394,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 3.1999998092651367,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 2.600000023841858,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "computed",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.9000000357627869,
+          "wastedMs": 0.9000000357627869,
+          "overlayMs": 0
+        },
+        {
+          "name": "text",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.6999998688697815,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "Button.disabled",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.30000001192092896,
+          "wastedMs": 0.30000001192092896,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 55,
+          "selfMs": 0.2999999523162842,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 55,
+          "selfMs": 0.20000004768371582,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.20000004768371582,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "Button.disabled",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.20000004768371582,
+          "wastedMs": 0.20000004768371582,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 55,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0.10000002384185791,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0.10000002384185791,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0.10000002384185791,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 55,
+          "selfMs": 0.09999996423721313,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.09999996423721313,
+          "wastedMs": 0.09999996423721313,
+          "overlayMs": 0
+        },
+        {
+          "name": "computed",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.09999996423721313,
+          "wastedMs": 0.09999996423721313,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 55,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        }
+      ],
+      "writes": [
+        {
+          "name": "createControlled.local",
+          "runs": 972,
+          "downstreamMs": 16.999999821186066
+        },
+        {
+          "name": "draft",
+          "runs": 10,
+          "downstreamMs": 0.2999999523162842
+        },
+        {
+          "name": "createRenderElement.node",
+          "runs": 28,
+          "downstreamMs": 0.10000002384185791
+        },
+        {
+          "name": "input",
+          "runs": 3,
+          "downstreamMs": 0
+        },
+        {
+          "name": "element",
+          "runs": 4,
+          "downstreamMs": 0
+        },
+        {
+          "name": "createButton.element",
+          "runs": 2,
+          "downstreamMs": 0
+        }
+      ]
+    },
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "number-field",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "profile": [
+      {
+        "frame": "createEffect.transparent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:119",
+        "ms": 10.698
+      },
+      {
+        "frame": "ownKeys http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:174",
+        "ms": 1.032
+      },
+      {
+        "frame": "readRawData http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/platform/shared.ts:1",
+        "ms": 0.837
+      },
+      {
+        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:126",
+        "ms": 0.829
+      },
+      {
+        "frame": "setValue http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:190",
+        "ms": 0.797
+      },
+      {
+        "frame": "getFormatParts http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:54",
+        "ms": 0.787
+      },
+      {
+        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:182",
+        "ms": 0.771
+      },
+      {
+        "frame": "ownKeys http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:125",
+        "ms": 0.769
+      },
+      {
+        "frame": "read http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:96",
+        "ms": 0.765
+      },
+      {
+        "frame": "onKeyDown http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/input/NumberFieldInput.tsx:145",
+        "ms": 0.646
+      },
+      {
+        "frame": " http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:125",
+        "ms": 0.64
+      },
+      {
+        "frame": "get http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:191",
+        "ms": 0.5
+      },
+      {
+        "frame": "removeFloatingPointErrors http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/validate.ts:9",
+        "ms": 0.416
+      },
+      {
+        "frame": "createMemo.transparent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:104",
+        "ms": 0.401
+      },
+      {
+        "frame": "toValidatedNumber http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/validate.ts:34",
+        "ms": 0.376
+      },
+      {
+        "frame": "parseNumber http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:71",
+        "ms": 0.268
+      },
+      {
+        "frame": " http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:110",
+        "ms": 0.265
+      },
+      {
+        "frame": "onInput http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/input/NumberFieldInput.tsx:121",
+        "ms": 0.26
+      },
+      {
+        "frame": "isNativeEvent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:2",
+        "ms": 0.257
+      },
+      {
+        "frame": "createChangeEventDetails http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createBaseUIEventDetails.ts:0",
+        "ms": 0.255
+      }
+    ],
+    "costs": {
+      "scopes": [
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 4.100000083446503,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 3.5999999046325684,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 3.199999988079071,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 2.099999964237213,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "text",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.8000000715255737,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "computed",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.800000011920929,
+          "wastedMs": 0.800000011920929,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 55,
+          "selfMs": 0.5999999642372131,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "computed",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.30000001192092896,
+          "wastedMs": 0.30000001192092896,
+          "overlayMs": 0
+        },
+        {
+          "name": "Button.disabled",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.20000004768371582,
+          "wastedMs": 0.20000004768371582,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 55,
+          "selfMs": 0.19999998807907104,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0.10000002384185791,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "Button.disabled",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0.10000002384185791,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.09999996423721313,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0.09999996423721313,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 55,
+          "selfMs": 0.09999996423721313,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.09999996423721313,
+          "wastedMs": 0.09999996423721313,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 55,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 55,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        }
+      ],
+      "writes": [
+        {
+          "name": "createControlled.local",
+          "runs": 972,
+          "downstreamMs": 16.400000035762787
+        },
+        {
+          "name": "draft",
+          "runs": 10,
+          "downstreamMs": 0.2999999523162842
+        },
+        {
+          "name": "createRenderElement.node",
+          "runs": 56,
+          "downstreamMs": 0.19999998807907104
+        },
+        {
+          "name": "input",
+          "runs": 6,
+          "downstreamMs": 0.09999996423721313
+        },
+        {
+          "name": "element",
+          "runs": 8,
+          "downstreamMs": 0
+        },
+        {
+          "name": "createButton.element",
+          "runs": 4,
+          "downstreamMs": 0
+        }
+      ]
+    },
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "slider",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "slider",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "input",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "input",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "field",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "field",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "combobox",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "combobox",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "autocomplete",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "autocomplete",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "toolbar",
+    "style": "css-modules",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "toolbar",
+    "style": "tailwind",
+    "interactionPassed": true,
+    "diagnostics": [],
+    "errors": [],
+    "passed": true,
+    "layoutMeasurements": []
+  }
+]

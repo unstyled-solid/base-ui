@@ -1,0 +1,1 @@
+import{L as e,j as t,k as n}from"../islands.js";function r(){let[r,i]=n(!t());return e(()=>{i(!0)}),r}function i(){let e=r();return()=>!e()}export{i as n,r as t};

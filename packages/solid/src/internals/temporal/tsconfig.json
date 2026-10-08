@@ -1,0 +1,11 @@
+{
+  "extends": "../../../../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "baseui-solid2/internals/temporal": ["./index.ts"],
+      "baseui-solid2/internals/temporal-adapter-date-fns": ["../temporal-adapter-date-fns/index.ts"],
+      "baseui-solid2/internals/temporal-adapter-luxon": ["../temporal-adapter-luxon/index.ts"]
+    }
+  },
+  "include": ["./**/*.ts", "../temporal-adapter-date-fns/**/*.ts", "../temporal-adapter-luxon/**/*.ts"]
+}

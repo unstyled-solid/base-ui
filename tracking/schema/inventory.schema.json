@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baseui-solid2.local/tracking/inventory-v1",
+  "title": "Generated source/export/report bundle v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sourceManifest", "exportManifest", "report"],
+  "properties": {
+    "sourceManifest": { "$ref": "#/$defs/sourceManifest" },
+    "exportManifest": { "$ref": "#/$defs/exportManifest" },
+    "report": { "$ref": "#/$defs/report" }
+  },
+  "$defs": {
+    "sha": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "text": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "strings": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "paths": { "type": "array", "items": { "$ref": "#/$defs/path" }, "uniqueItems": true },
+    "path": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)(?!.*:)(?!.*[\\x00-\\x1f*?])[^/](?:.*[^/])?$" },
+    "owner": { "type": "string", "pattern": "^bsolid-[a-z0-9-]+$" },
+    "disposition": { "enum": ["translated", "pure-adapted", "framework-only", "excluded-with-reason"] },
+    "sourceManifest": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "baseline", "treeDigest", "ownershipDigest", "policyDigest", "sources"],
+      "properties": {
+        "schemaVersion": { "const": 1 }, "baseline": { "$ref": "#/$defs/sha" },
+        "treeDigest": { "$ref": "#/$defs/digest" }, "ownershipDigest": { "$ref": "#/$defs/digest" }, "policyDigest": { "$ref": "#/$defs/digest" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+        "runtimeCollection": { "$ref": "#/$defs/runtimeCollection" }
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "blob", "mode", "category", "owner", "targets", "disposition", "reason", "provenance", "targetState", "transitiveConsumers"],
+      "properties": {
+        "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" },
+        "mode": { "enum": ["100644", "100755", "120000"] },
+        "category": { "enum": ["runtime", "type", "test", "test-support", "docs", "license", "build-metadata"] },
+        "owner": { "$ref": "#/$defs/owner" }, "targets": { "$ref": "#/$defs/paths" },
+        "disposition": { "$ref": "#/$defs/disposition" }, "reason": { "$ref": "#/$defs/text" },
+        "targetState": { "enum": ["planned", "worker-mapped"] },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "ownershipSeam": { "$ref": "#/$defs/owner" },
+        "dependencies": { "$ref": "#/$defs/paths" }, "unresolvedImports": { "$ref": "#/$defs/strings" },
+        "transitiveConsumers": { "$ref": "#/$defs/paths" },
+        "tests": { "$ref": "#/$defs/tests" }
+      }
+    },
+    "provenance": {
+      "type": "object", "required": ["kind"], "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["target-allowlist", "override", "policy", "ledger"] },
+        "rule": { "$ref": "#/$defs/text" }, "candidates": { "$ref": "#/$defs/strings" },
+        "previousClaims": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["owner", "target"],
+          "properties": { "owner": { "$ref": "#/$defs/owner" }, "target": { "$ref": "#/$defs/path" } }
+        } },
+        "ledger": { "$ref": "#/$defs/path" },
+        "previousMapping": { "type": "object", "additionalProperties": false,
+          "required": ["owner", "targets", "disposition", "reason", "provenance"],
+          "properties": { "owner": { "$ref": "#/$defs/owner" }, "targets": { "$ref": "#/$defs/paths" },
+            "disposition": { "$ref": "#/$defs/disposition" }, "reason": { "$ref": "#/$defs/text" }, "provenance": { "$ref": "#/$defs/provenance" } }
+        }
+      }
+    },
+    "tests": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "collection", "runtimeCaseCount", "declarations", "unresolved", "environmentHints"],
+      "properties": {
+        "kind": { "enum": ["type-spec", "test-file", "conformance-helper"] },
+        "collection": { "const": "unresolved" }, "runtimeCaseCount": { "type": "null" },
+        "declarations": { "type": "array", "items": { "$ref": "#/$defs/declaration" } },
+        "unresolved": { "type": "array", "items": { "$ref": "#/$defs/unresolved" } },
+        "environmentHints": { "$ref": "#/$defs/strings" },
+        "suiteTitles": { "$ref": "#/$defs/strings" },
+        "typeDeclarations": { "type": "array", "items": { "$ref": "#/$defs/compilerStatement" } },
+        "typeExpectErrorLines": { "$ref": "#/$defs/lineNumbers" }
+      }
+    },
+    "declaration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "line", "column", "kind", "title", "titleExpression", "suites", "suiteRegistrations", "registration", "flags", "dynamic", "runtimeSkip"],
+      "properties": {
+        "id": { "$ref": "#/$defs/text" }, "line": { "type": "number" }, "column": { "type": "number" },
+        "kind": { "const": "static-declaration" }, "title": { "type": ["string", "null"] }, "titleExpression": { "type": "string" },
+        "suites": { "type": "array", "items": { "type": "string" } },
+        "suiteRegistrations": { "type": "array", "items": { "type": "string" } },
+        "registration": { "$ref": "#/$defs/text" }, "flags": { "$ref": "#/$defs/strings" },
+        "dynamic": { "type": "boolean" }, "runtimeSkip": { "type": "boolean" }
+      }
+    },
+    "unresolved": {
+      "type": "object", "additionalProperties": false, "required": ["id", "kind", "reason"],
+      "properties": {
+        "id": { "$ref": "#/$defs/text" }, "kind": { "const": "unresolved-dynamic" },
+        "reason": { "$ref": "#/$defs/text" }, "line": { "type": "number" }, "column": { "type": "number" },
+        "expression": { "$ref": "#/$defs/text" }
+      }
+    },
+    "exportManifest": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "baseline", "treeDigest", "ownershipDigest", "policyDigest", "package", "exports", "imports"],
+      "properties": {
+        "schemaVersion": { "const": 1 }, "baseline": { "$ref": "#/$defs/sha" },
+        "treeDigest": { "$ref": "#/$defs/digest" }, "ownershipDigest": { "$ref": "#/$defs/digest" }, "policyDigest": { "$ref": "#/$defs/digest" },
+        "package": { "$ref": "#/$defs/text" }, "imports": { "type": "object" },
+        "exports": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["key", "conditions", "sourcePath", "blob", "owner", "targets", "disposition", "rootPolicy"],
+          "properties": {
+            "key": { "$ref": "#/$defs/text" }, "conditions": { "$ref": "#/$defs/strings" },
+            "sourcePath": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" },
+            "owner": { "$ref": "#/$defs/owner" }, "targets": { "$ref": "#/$defs/paths" },
+            "disposition": { "$ref": "#/$defs/disposition" },
+            "rootPolicy": { "enum": ["root", "type-only", "subpath-only", "root-and-subpath"] }
+          }
+        } }
+      }
+    },
+    "report": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "baseline", "integrity", "parity", "totals", "caseStatuses", "runtimeCoverage", "unresolved", "unmapped"],
+      "properties": {
+        "schemaVersion": { "const": 1 }, "baseline": { "$ref": "#/$defs/sha" },
+        "integrity": { "const": "valid" }, "parity": { "const": "unverified" },
+        "totals": { "type": "object" }, "caseStatuses": { "type": "object" },
+        "runtimeCoverage": { "anyOf": [{ "type": "object", "required": ["collectedCases", "totalCases", "passingCases", "percentage", "complete", "blocker", "reason"],
+          "additionalProperties": false,
+          "properties": { "collectedCases": { "const": 0 }, "totalCases": { "type": "null" }, "passingCases": { "const": 0 },
+            "percentage": { "type": "null" }, "complete": { "const": false }, "blocker": { "$ref": "#/$defs/owner" }, "reason": { "$ref": "#/$defs/text" } }
+        }, { "$ref": "#/$defs/collectedCoverage" }] },
+        "unresolved": { "$ref": "#/$defs/strings" }, "unmapped": { "$ref": "#/$defs/strings" },
+        "evidenceOnlyInputs": { "$ref": "#/$defs/paths" },
+        "ownershipSeams": { "type": "array", "items": { "type": "object", "additionalProperties": false,
+          "required": ["path", "owner", "blocker"], "properties": { "path": { "$ref": "#/$defs/path" }, "owner": { "$ref": "#/$defs/owner" }, "blocker": { "$ref": "#/$defs/owner" } } }
+        },
+        "dependencyAnalysis": { "type": "object", "required": ["scope", "unresolved"], "additionalProperties": false,
+          "properties": { "scope": { "$ref": "#/$defs/text" }, "unresolved": { "type": "array", "items": {
+            "type": "object", "additionalProperties": false, "required": ["path", "imports"], "properties": { "path": { "$ref": "#/$defs/path" }, "imports": { "$ref": "#/$defs/strings" } }
+          } } }
+        }
+      }
+    },
+    "count": { "type": "integer", "minimum": 0 },
+    "environment": { "enum": ["jsdom", "chromium", "firefox", "webkit", "node"] },
+    "location": {
+      "type": "object", "additionalProperties": false, "required": ["line", "column"],
+      "properties": { "line": { "type": "integer", "minimum": 1 }, "column": { "type": "integer", "minimum": 1 } }
+    },
+    "task": {
+      "type": "object", "additionalProperties": false, "required": ["type", "name", "mode", "each"],
+      "properties": {
+        "type": { "enum": ["test", "suite"] }, "name": { "$ref": "#/$defs/text" },
+        "mode": { "enum": ["run", "skip", "todo", "only"] }, "each": { "type": "boolean" },
+        "location": { "$ref": "#/$defs/location" },
+        "tasks": { "type": "array", "items": { "$ref": "#/$defs/task" } }
+      },
+      "anyOf": [
+        { "properties": { "type": { "const": "suite" } }, "required": ["tasks"] },
+        { "properties": { "type": { "const": "test" } }, "not": { "required": ["tasks"] } }
+      ]
+    },
+    "fileEnvironment": {
+      "type": "object", "additionalProperties": false, "required": ["path", "blob", "environment", "project"],
+      "properties": { "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" },
+        "environment": { "$ref": "#/$defs/environment" }, "project": { "$ref": "#/$defs/text" },
+        "runnerProject": { "$ref": "#/$defs/text" } }
+    },
+    "collectedFile": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "blob", "environment", "project", "mode", "tasks", "errors"],
+      "properties": { "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" },
+        "environment": { "$ref": "#/$defs/environment" }, "project": { "$ref": "#/$defs/text" },
+        "runnerProject": { "$ref": "#/$defs/text" },
+        "helperModules": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/sourcePin" } },
+        "mode": { "enum": ["run", "skip", "todo", "only"] },
+        "tasks": { "type": "array", "items": { "$ref": "#/$defs/task" } }, "errors": { "$ref": "#/$defs/strings" } }
+    },
+    "collectionInput": { "anyOf": [{ "$ref": "#/$defs/singleCollectionInput" }, { "$ref": "#/$defs/collectionBatch" }] },
+    "singleCollectionInput": { "anyOf": [{ "$ref": "#/$defs/vitestInput" }, { "$ref": "#/$defs/compilerInput" }, { "$ref": "#/$defs/playwrightInput" }] },
+    "collectionBatch": { "type": "object", "additionalProperties": false, "required": ["schemaVersion", "baseline", "method", "documents"],
+      "properties": { "schemaVersion": { "const": 1 }, "baseline": { "$ref": "#/$defs/sha" }, "method": { "const": "collection-batch" },
+        "documents": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/singleCollectionInput" } } } },
+    "vitestInput": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "baseline", "method", "command", "toolchain", "specifications", "files", "errors"],
+      "properties": {
+        "schemaVersion": { "const": 1 }, "baseline": { "$ref": "#/$defs/sha" }, "method": { "const": "vitest-runtime-collect" },
+        "command": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+        "toolchain": { "type": "object", "additionalProperties": false, "required": ["node", "vitest"],
+          "properties": { "node": { "type": "string", "pattern": "^v24\\.[0-9]+\\.[0-9]+$" }, "vitest": { "type": "string", "pattern": "^5\\." } } },
+        "specifications": { "type": "array", "items": { "$ref": "#/$defs/fileEnvironment" } },
+        "files": { "type": "array", "items": { "$ref": "#/$defs/collectedFile" } }, "errors": { "$ref": "#/$defs/strings" }
+      }
+    },
+    "runtimeCase": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "kind", "sourcePath", "sourceBlob", "environment", "project", "position", "titles", "mode", "parameterized", "parameterValues", "location", "registrations", "conformanceObligations", "helperOrigins", "runtimeSkipPossible"],
+      "properties": {
+        "id": { "$ref": "#/$defs/text" }, "kind": { "const": "runtime-case" },
+        "sourcePath": { "$ref": "#/$defs/path" }, "sourceBlob": { "$ref": "#/$defs/sha" },
+        "environment": { "$ref": "#/$defs/environment" }, "project": { "$ref": "#/$defs/text" },
+        "position": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/count" } },
+        "titles": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+        "mode": { "enum": ["run", "skip", "todo"] }, "parameterized": { "type": "boolean" },
+        "parameterValues": { "const": "not-exposed-by-vitest" },
+        "location": { "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/location" }] },
+        "registrations": { "$ref": "#/$defs/strings" }, "conformanceObligations": { "$ref": "#/$defs/strings" },
+        "runtimeSkipPossible": { "type": "boolean" },
+        "helperOrigins": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["path", "blob", "registration"],
+          "properties": { "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" }, "registration": { "$ref": "#/$defs/text" } } } }
+      }
+    },
+    "runtimeCollection": {
+      "type": "object", "additionalProperties": false,
+      "required": ["digests", "files", "cases", "missing", "blocked", "typeSpecPaths", "typeCases", "typeFiles", "helperProvenance", "complete"],
+      "properties": {
+        "digests": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/digest" } },
+        "files": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["path", "blob", "environment", "project", "inputDigest", "caseCount"],
+          "properties": { "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" },
+            "environment": { "$ref": "#/$defs/environment" }, "project": { "$ref": "#/$defs/text" },
+            "inputDigest": { "$ref": "#/$defs/digest" }, "caseCount": { "type": "integer", "minimum": 1 } }
+        } },
+        "cases": { "type": "array", "items": { "$ref": "#/$defs/runtimeCase" } },
+        "missing": { "type": "array", "items": { "$ref": "#/$defs/fileEnvironment" } },
+        "blocked": { "$ref": "#/$defs/strings" }, "typeSpecPaths": { "$ref": "#/$defs/paths" }, "complete": { "type": "boolean" },
+        "typeCases": { "type": "array", "items": { "$ref": "#/$defs/typeScenario" } },
+        "typeFiles": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["path", "blob", "scenarioCount", "inputDigest"],
+          "properties": { "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" }, "scenarioCount": { "type": "integer", "minimum": 1 }, "inputDigest": { "$ref": "#/$defs/digest" } } } },
+        "helperProvenance": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["path", "blob", "cases"],
+          "properties": { "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" }, "cases": { "$ref": "#/$defs/strings" } } } }
+      }
+    },
+    "collectedCoverage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["collectedCases", "totalCases", "passingCases", "percentage", "complete", "blocker", "reason", "collectionDigests", "missingFileEnvironments", "typeSpecFiles", "collectionBlockers"],
+      "properties": {
+        "collectedCases": { "$ref": "#/$defs/count" }, "totalCases": { "type": ["integer", "null"], "minimum": 1 },
+        "passingCases": { "$ref": "#/$defs/count" }, "percentage": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "complete": { "type": "boolean" }, "blocker": { "$ref": "#/$defs/owner" }, "reason": { "$ref": "#/$defs/text" },
+        "collectionDigests": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/digest" } },
+        "missingFileEnvironments": { "$ref": "#/$defs/count" }, "typeSpecFiles": { "$ref": "#/$defs/count" },
+        "collectionBlockers": { "$ref": "#/$defs/strings" }, "collectedTypeScenarios": { "$ref": "#/$defs/count" }
+      },
+      "anyOf": [
+        { "properties": { "complete": { "const": false }, "totalCases": { "type": "null" }, "percentage": { "type": "null" } } },
+        { "properties": { "complete": { "const": true }, "totalCases": { "type": "integer", "minimum": 1 }, "collectedCases": { "type": "integer", "minimum": 1 },
+          "missingFileEnvironments": { "const": 0 }, "typeSpecFiles": { "const": 0 }, "collectionBlockers": { "const": [] } } }
+      ]
+    },
+    "sourcePin": { "type": "object", "additionalProperties": false, "required": ["path", "blob"],
+      "properties": { "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" } } },
+    "lineNumbers": { "type": "array", "uniqueItems": true, "items": { "type": "integer", "minimum": 1 } },
+    "compilerStatement": { "type": "object", "additionalProperties": false, "required": ["start", "end", "syntaxKind"],
+      "properties": { "start": { "$ref": "#/$defs/count" }, "end": { "type": "integer", "minimum": 1 }, "syntaxKind": { "$ref": "#/$defs/text" } } },
+    "compilerInput": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "baseline", "method", "command", "toolchain", "programPolicy", "configurations", "files", "errors"],
+      "properties": {
+        "schemaVersion": { "const": 1 }, "baseline": { "$ref": "#/$defs/sha" }, "method": { "const": "typescript-compiler-collect" },
+        "programPolicy": { "const": "source-only-no-emit-pinned-test-options" },
+        "command": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+        "toolchain": { "type": "object", "additionalProperties": false, "required": ["node", "typescript"],
+          "properties": { "node": { "type": "string", "pattern": "^v24\\.[0-9]+\\.[0-9]+$" }, "typescript": { "type": "string", "pattern": "^6\\." } } },
+        "configurations": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/sourcePin" } },
+        "files": { "type": "array", "items": { "type": "object", "additionalProperties": false,
+          "required": ["path", "blob", "configuration", "scenarios", "expectErrorLines", "diagnostics"],
+          "properties": { "path": { "$ref": "#/$defs/path" }, "blob": { "$ref": "#/$defs/sha" }, "configuration": { "$ref": "#/$defs/path" },
+            "scenarios": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["start", "end", "syntaxKind", "checkedType"],
+              "properties": { "start": { "$ref": "#/$defs/count" }, "end": { "type": "integer", "minimum": 1 }, "syntaxKind": { "$ref": "#/$defs/text" }, "checkedType": { "$ref": "#/$defs/text" } } } },
+            "expectErrorLines": { "$ref": "#/$defs/lineNumbers" }, "diagnostics": { "$ref": "#/$defs/strings" } } } },
+        "errors": { "$ref": "#/$defs/strings" }
+      }
+    },
+    "typeScenario": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "kind", "sourcePath", "sourceBlob", "environment", "configuration", "start", "end", "syntaxKind", "checkedType", "expectErrorLines", "compilerDiagnostics"],
+      "properties": { "id": { "$ref": "#/$defs/text" }, "kind": { "const": "type-scenario" },
+        "sourcePath": { "$ref": "#/$defs/path" }, "sourceBlob": { "$ref": "#/$defs/sha" }, "environment": { "const": "typescript" }, "configuration": { "$ref": "#/$defs/path" },
+        "start": { "$ref": "#/$defs/count" }, "end": { "type": "integer", "minimum": 1 }, "syntaxKind": { "$ref": "#/$defs/text" }, "checkedType": { "$ref": "#/$defs/text" },
+        "expectErrorLines": { "$ref": "#/$defs/lineNumbers" }, "compilerDiagnostics": { "$ref": "#/$defs/strings" } }
+    },
+    "playwrightInput": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "baseline", "method", "command", "toolchain", "specifications", "files", "errors"],
+      "properties": { "schemaVersion": { "const": 1 }, "baseline": { "$ref": "#/$defs/sha" }, "method": { "const": "playwright-list" },
+        "command": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+        "toolchain": { "type": "object", "additionalProperties": false, "required": ["node", "playwright"],
+          "properties": { "node": { "type": "string", "pattern": "^v24\\.[0-9]+\\.[0-9]+$" }, "playwright": { "type": "string", "pattern": "^1\\." } } },
+        "specifications": { "type": "array", "items": { "$ref": "#/$defs/fileEnvironment" } }, "files": { "type": "array", "items": { "$ref": "#/$defs/collectedFile" } }, "errors": { "$ref": "#/$defs/strings" } }
+    }
+  }
+}

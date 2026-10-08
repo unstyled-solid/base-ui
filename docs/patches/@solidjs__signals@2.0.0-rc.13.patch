@@ -1,0 +1,40 @@
+diff --git a/dist/dev.attribution.js b/dist/dev.attribution.js
+index 549396588ea0244709b8c085cfe5dcde5d73fef1..e801d88ddb67ecd16c1e227170d135535e9c588b 100644
+--- a/dist/dev.attribution.js
++++ b/dist/dev.attribution.js
+@@ -841,20 +841,32 @@ function isPlainShape(v) {
+ }
+ /** Shallow structural equivalence, capped so hot paths stay cheap. */
+ const UNSTABLE_KEY_CAP = 64;
++// Diagnostic inspection must not evaluate accessors: a getter may create JSX,
++// read context, or mutate state, and this runs after the compute owner restores.
++// Accessor-bearing shapes are conservatively ineligible for this heuristic.
++function equivalentDataProperty(a, b, key) {
++  const left = Object.getOwnPropertyDescriptor(a, key);
++  const right = Object.getOwnPropertyDescriptor(b, key);
++  if (!left || !right) return !left && !right;
++  return "value" in left && "value" in right && left.value === right.value;
++}
+ function shallowEquivalent(a, b) {
+   const aArr = Array.isArray(a);
+   if (aArr !== Array.isArray(b)) return false;
+   if (aArr) {
+     const arrA = a;
+     const arrB = b;
+-    if (arrA.length !== arrB.length || arrA.length > UNSTABLE_KEY_CAP) return false;
+-    for (let i = 0; i < arrA.length; i++) if (arrA[i] !== arrB[i]) return false;
++    const lengthA = Object.getOwnPropertyDescriptor(arrA, "length");
++    const lengthB = Object.getOwnPropertyDescriptor(arrB, "length");
++    if (!lengthA || !lengthB || !("value" in lengthA) || !("value" in lengthB)) return false;
++    if (lengthA.value !== lengthB.value || lengthA.value > UNSTABLE_KEY_CAP) return false;
++    for (let i = 0; i < lengthA.value; i++) if (!equivalentDataProperty(arrA, arrB, String(i))) return false;
+     return true;
+   }
+   const keys = Object.keys(a);
+   if (keys.length > UNSTABLE_KEY_CAP || keys.length !== Object.keys(b).length) return false;
+   for (const key of keys) {
+-    if (!(key in b) || a[key] !== b[key]) return false;
++    if (!equivalentDataProperty(a, b, key)) return false;
+   }
+   return true;
+ }

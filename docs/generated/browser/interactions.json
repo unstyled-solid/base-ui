@@ -1,0 +1,79 @@
+[
+  {
+    "family": "button",
+    "passed": true,
+    "diagnostics": []
+  },
+  {
+    "family": "accordion",
+    "passed": false,
+    "error": "TimeoutError: page.waitForFunction: Timeout 6000ms exceeded.",
+    "diagnostics": [
+      "ContextNotFoundError: Context must either be created with a default value or a value must be provided before accessing it.\n    at getContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:107:30)\n    at useContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7052:9)\n    at useAccordionRootContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/accordion/root/AccordionRootContext.ts:4:9)\n    at AccordionItem (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/accordion/item/AccordionItem.tsx:13:15)\n    at http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7085:24\n    at untrack (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:3818:10)\n    at createRoot$1.transparent (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7085:10)\n    at http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:2538:35\n    at runWithOwner (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:4494:10)\n    at createRoot (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:2538:9)"
+    ]
+  },
+  {
+    "family": "checkbox",
+    "passed": true,
+    "diagnostics": []
+  },
+  {
+    "family": "switch",
+    "passed": true,
+    "diagnostics": []
+  },
+  {
+    "family": "number-field",
+    "passed": false,
+    "error": "TimeoutError: page.waitForFunction: Timeout 6000ms exceeded.",
+    "diagnostics": [
+      "ContextNotFoundError: Context must either be created with a default value or a value must be provided before accessing it.\n    at getContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:107:30)\n    at useContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7052:9)\n    at useNumberFieldRootContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRootContext.ts:4:9)\n    at NumberFieldScrubArea (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/scrub-area/NumberFieldScrubArea.tsx:18:15)\n    at http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7085:24\n    at untrack (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:3818:10)\n    at createRoot$1.transparent (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7085:10)\n    at http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:2538:35\n    at runWithOwner (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:4494:10)\n    at createRoot (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:2538:9)"
+    ]
+  },
+  {
+    "family": "tabs",
+    "passed": false,
+    "error": "TimeoutError: locator.click: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-demo-id=\"tabs/hero\"]').getByRole('tab').nth(1)\u001b[22m\n",
+    "diagnostics": []
+  },
+  {
+    "family": "dialog",
+    "passed": true,
+    "diagnostics": []
+  },
+  {
+    "family": "select",
+    "passed": true,
+    "diagnostics": []
+  },
+  {
+    "family": "autocomplete",
+    "passed": false,
+    "diagnostics": [
+      "[EFFECT_WRITES_OWN_SOURCE] effect \"effect\" re-ran because of its own write: it wrote \"createPopup.metadata\" ([Object] → [Object]), which fed back into its inputs. Two flushes to settle, and the screen rendered the pre-write value in between. The written value is a function of what the effect reads — compute it in a memo (or normalize where the source is written) instead of correcting it after the fact.\n  in <Errored> › children › <Component> › <Autocomplete.Root> › <AriaCombobox> › effect\n[EFFECT_WRITES_OWN_SOURCE] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_writes_own_source\n[EFFECT_WRITES_OWN_SOURCE] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md"
+    ]
+  },
+  {
+    "family": "menu",
+    "passed": false,
+    "diagnostics": [
+      "[EFFECT_RELAY_TEAR] memo \"computed\" ran twice for one write of \"version\": once in the flush where \"version\" changed, and again after effect \"effect\" relayed it by writing \"createMenuStore.metadataVersion\" — the first frame showed the new \"version\" with the stale \"createMenuStore.metadataVersion\" (3 times so far). If \"createMenuStore.metadataVersion\" is computed from what the effect reads, make it a memo so readers get it in the same flush; if the write reads something outside the graph (layout, time), the tear is the cost of measuring.\n  in <Errored> › children › <Component> › <Menu.Trigger> › computed\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md",
+      "[EFFECT_RELAY_TEAR] memo \"computed\" ran twice for one write of \"version\": once in the flush where \"version\" changed, and again after effect \"effect\" relayed it by writing \"createMenuStore.metadataVersion\" — the first frame showed the new \"version\" with the stale \"createMenuStore.metadataVersion\" (3 times so far). If \"createMenuStore.metadataVersion\" is computed from what the effect reads, make it a memo so readers get it in the same flush; if the write reads something outside the graph (layout, time), the tear is the cost of measuring.\n  in <Errored> › children › <Component> › <Menu.Trigger> › computed",
+      "[EFFECT_RELAY_TEAR] memo \"computed\" ran twice for one write of \"version\": once in the flush where \"version\" changed, and again after effect \"effect\" relayed it by writing \"createMenuStore.metadataVersion\" — the first frame showed the new \"version\" with the stale \"createMenuStore.metadataVersion\" (3 times so far). Nothing else writes \"createMenuStore.metadataVersion\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Menu.Trigger> › computed",
+      "[EFFECT_RELAY_TEAR] memo \"boundary\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"focus\" — the first frame showed the new \"createControlled.local\" with the stale \"focus\" (3 times so far). Nothing else writes \"focus\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › boundary",
+      "[UNSTABLE_MEMO_OUTPUT] memo \"computed\" produced a new-but-equivalent object on 4 consecutive runs — its equality gate never closes, so every subscriber re-runs on every upstream change. Return stable references or pass an `equals` option.\n  in <Errored> › children › <Component> › <Menu.Root> › <MenuRootInternal> › <FloatingTree> › <FloatingTreeContext> › computed › <MenuRootContext> › computed › <Content> › content › <Menu.Trigger> › computed\n[UNSTABLE_MEMO_OUTPUT] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#unstable_memo_output\n[UNSTABLE_MEMO_OUTPUT] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md"
+    ]
+  },
+  {
+    "family": "toast",
+    "passed": false,
+    "error": "TimeoutError: locator.click: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Dismiss', exact: true })\u001b[22m\n",
+    "diagnostics": [
+      "ContextNotFoundError: Context must either be created with a default value or a value must be provided before accessing it.\n    at getContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:107:30)\n    at useContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7052:9)\n    at useToastRootContext (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/toast/root/ToastRootContext.ts:4:9)\n    at createToastLabelPart (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/toast/utils/createToastLabelPart.tsx:10:15)\n    at ToastTitle (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/toast/title/ToastTitle.tsx:3:9)\n    at http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7085:24\n    at untrack (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:3818:10)\n    at createRoot$1.transparent (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/solid.dev-Crw3eCdf.js?v=ee567c00:7085:10)\n    at http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:2538:35\n    at runWithOwner (http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/docs/node_modules/.vite/deps/dev-shared-BVhWeZgS.js?v=ee567c00:4494:10)"
+    ]
+  },
+  {
+    "family": "shell-search-nojs",
+    "passed": true
+  }
+]

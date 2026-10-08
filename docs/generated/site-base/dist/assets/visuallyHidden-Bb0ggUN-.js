@@ -1,0 +1,1 @@
+var e={"clip-path":`inset(50%)`,overflow:`hidden`,"white-space":`nowrap`,border:`0`,padding:`0`,width:`1px`,height:`1px`,margin:`-1px`},t={...e,position:`fixed`,margin:`0`,top:`0`,left:`0`},n={...e,position:`absolute`};export{n,t};

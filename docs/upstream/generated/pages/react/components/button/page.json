@@ -1,0 +1,1706 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/button/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "4226f41abb053056d06f43e47482ff36d6f3d52fbdd4e086dd85643a10e86121",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/button",
+  "route": "/solid/components/button",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Button",
+  "subtitle": "A button component that can be rendered as another tag or focusable when disabled.",
+  "metadata": {
+    "keywords": [
+      "React Button",
+      "Button Component",
+      "Focusable Disabled Button",
+      "Custom Element Button",
+      "Clickable Element",
+      "Action Button",
+      "Submit Button",
+      "Accessible Button",
+      "Loading State Button",
+      "Button as Link",
+      "Link Button",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React button component that can be rendered as another tag or focusable when disabled."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoButtonHero",
+      "imported": "DemoButtonHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/button/demos/hero#DemoButtonHero"
+    },
+    {
+      "from": "./demos/loading",
+      "local": "DemoButtonLoading",
+      "imported": "DemoButtonLoading",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/button/demos/loading#DemoButtonLoading"
+    },
+    {
+      "from": "./types",
+      "local": "TypesButton",
+      "imported": "TypesButton",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/button/types#TypesButton"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Button",
+      "properties": {
+        "id": "button"
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Usage guidelines",
+      "properties": {
+        "id": "usage-guidelines"
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:15:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:20:1"
+    },
+    {
+      "depth": 2,
+      "text": "Examples",
+      "properties": {
+        "id": "examples"
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:30:1"
+    },
+    {
+      "depth": 3,
+      "text": "Rendering as another tag",
+      "properties": {
+        "id": "rendering-as-another-tag"
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:32:1"
+    },
+    {
+      "depth": 3,
+      "text": "Rendering links as buttons",
+      "properties": {
+        "id": "rendering-links-as-buttons"
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:45:1"
+    },
+    {
+      "depth": 3,
+      "text": "Loading states",
+      "properties": {
+        "id": "loading-states"
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:51:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:59:1"
+    }
+  ],
+  "links": [
+    {
+      "source": "#rendering-links-as-buttons",
+      "target": "#rendering-links-as-buttons",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:18:155"
+    },
+    {
+      "source": "https://www.w3.org/TR/accname-1.2/#computation-steps",
+      "target": "https://www.w3.org/TR/accname-1.2/#computation-steps",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:53:271"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React button component that can be rendered as another tag or focusable when disabled."
+      },
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:6:1"
+    },
+    {
+      "name": "DemoButtonHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:13:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/button/demos/hero#DemoButtonHero"
+    },
+    {
+      "name": "DemoButtonLoading",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:57:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/button/demos/loading#DemoButtonLoading"
+    },
+    {
+      "name": "TypesButton",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:63:1",
+      "reference": "api:docs/src/app/(docs)/react/components/button/types#TypesButton"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:6:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:13:1",
+      "detail": "Site must implement DemoButtonHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:24:1",
+      "detail": "Button",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:24:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:36:1",
+      "detail": "Button",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "react-render",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:36:1",
+      "detail": "Requires reviewed Solid render/ref/class/native-event adaptation.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:36:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:57:1",
+      "detail": "Site must implement DemoButtonLoading; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:63:1",
+      "detail": "Site must implement TypesButton; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/button/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Button",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 9,
+                "offset": 8
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 9,
+            "offset": 8
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "button"
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Subtitle",
+        "attributes": [],
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "A button component that can be rendered as another tag or focusable when disabled.",
+                "position": {
+                  "start": {
+                    "line": 4,
+                    "column": 3,
+                    "offset": 23
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 85,
+                    "offset": 105
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 3,
+                "offset": 23
+              },
+              "end": {
+                "line": 4,
+                "column": 85,
+                "offset": 105
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 10
+          },
+          "end": {
+            "line": 5,
+            "column": 12,
+            "offset": 117
+          }
+        },
+        "data": {
+          "handler": "subtitle"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 3,
+                "offset": 126
+              },
+              "end": {
+                "line": 7,
+                "column": 21,
+                "offset": 144
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React button component that can be rendered as another tag or focusable when disabled.",
+            "position": {
+              "start": {
+                "line": 8,
+                "column": 3,
+                "offset": 147
+              },
+              "end": {
+                "line": 8,
+                "column": 124,
+                "offset": 268
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 118
+          },
+          "end": {
+            "line": 9,
+            "column": 3,
+            "offset": 271
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoButtonHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 273
+          },
+          "end": {
+            "line": 11,
+            "column": 47,
+            "offset": 319
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoButtonHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 321
+          },
+          "end": {
+            "line": 13,
+            "column": 19,
+            "offset": 339
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/button/demos/hero#DemoButtonHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage guidelines",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 4,
+                "offset": 344
+              },
+              "end": {
+                "line": 15,
+                "column": 20,
+                "offset": 360
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 341
+          },
+          "end": {
+            "line": 15,
+            "column": 20,
+            "offset": 360
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "usage-guidelines"
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Submit buttons",
+                        "position": {
+                          "start": {
+                            "line": 17,
+                            "column": 5,
+                            "offset": 366
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 19,
+                            "offset": 380
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 3,
+                        "offset": 364
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 21,
+                        "offset": 382
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": Unlike the native button element, ",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 21,
+                        "offset": 382
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 57,
+                        "offset": 418
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "type=\"submit\"",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 57,
+                        "offset": 418
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 72,
+                        "offset": 433
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " must be specified on Button for it to act as a submit button.",
+                    "position": {
+                      "start": {
+                        "line": 17,
+                        "column": 72,
+                        "offset": 433
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 134,
+                        "offset": 495
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 17,
+                    "column": 3,
+                    "offset": 364
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 134,
+                    "offset": 495
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 362
+              },
+              "end": {
+                "line": 17,
+                "column": 134,
+                "offset": 495
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Links",
+                        "position": {
+                          "start": {
+                            "line": 18,
+                            "column": 5,
+                            "offset": 500
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 10,
+                            "offset": 505
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 3,
+                        "offset": 498
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 12,
+                        "offset": 507
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ": The Button component enforces button semantics (",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 12,
+                        "offset": 507
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 62,
+                        "offset": 557
+                      }
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "role=\"button\"",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 62,
+                        "offset": 557
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 77,
+                        "offset": 572
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": ", keyboard interaction, disabled state). It should not be used for links. See ",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 77,
+                        "offset": 572
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 155,
+                        "offset": 650
+                      }
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#rendering-links-as-buttons",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Rendering links as buttons",
+                        "position": {
+                          "start": {
+                            "line": 18,
+                            "column": 156,
+                            "offset": 651
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 182,
+                            "offset": 677
+                          }
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 155,
+                        "offset": 650
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 212,
+                        "offset": 707
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " below.",
+                    "position": {
+                      "start": {
+                        "line": 18,
+                        "column": 212,
+                        "offset": 707
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 219,
+                        "offset": 714
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 18,
+                    "column": 3,
+                    "offset": 498
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 219,
+                    "offset": 714
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 18,
+                "column": 1,
+                "offset": 496
+              },
+              "end": {
+                "line": 18,
+                "column": 219,
+                "offset": 714
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 362
+          },
+          "end": {
+            "line": 18,
+            "column": 219,
+            "offset": 714
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 20,
+                "column": 4,
+                "offset": 719
+              },
+              "end": {
+                "line": 20,
+                "column": 11,
+                "offset": 726
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 20,
+            "column": 1,
+            "offset": 716
+          },
+          "end": {
+            "line": 20,
+            "column": 11,
+            "offset": 726
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component:",
+            "position": {
+              "start": {
+                "line": 22,
+                "column": 1,
+                "offset": 728
+              },
+              "end": {
+                "line": 22,
+                "column": 22,
+                "offset": 749
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 22,
+            "column": 1,
+            "offset": 728
+          },
+          "end": {
+            "line": 22,
+            "column": 22,
+            "offset": 749
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Button } from 'baseui-solid2/button';\n\n<Button />;",
+        "position": {
+          "start": {
+            "line": 24,
+            "column": 1,
+            "offset": 751
+          },
+          "end": {
+            "line": 28,
+            "column": 4,
+            "offset": 838
+          }
+        },
+        "data": {
+          "sourceValue": "import { Button } from '@base-ui/react/button';\n\n<Button />;",
+          "references": [
+            {
+              "value": "@base-ui/react/button",
+              "start": 24,
+              "end": 45,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/button",
+              "start": 24,
+              "end": 45,
+              "kind": "import",
+              "replacement": "baseui-solid2/button"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples",
+            "position": {
+              "start": {
+                "line": 30,
+                "column": 4,
+                "offset": 843
+              },
+              "end": {
+                "line": 30,
+                "column": 12,
+                "offset": 851
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 30,
+            "column": 1,
+            "offset": 840
+          },
+          "end": {
+            "line": 30,
+            "column": 12,
+            "offset": 851
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "examples"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Rendering as another tag",
+            "position": {
+              "start": {
+                "line": 32,
+                "column": 5,
+                "offset": 857
+              },
+              "end": {
+                "line": 32,
+                "column": 29,
+                "offset": 881
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 32,
+            "column": 1,
+            "offset": 853
+          },
+          "end": {
+            "line": 32,
+            "column": 29,
+            "offset": 881
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "rendering-as-another-tag"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The button can remain keyboard accessible while being rendered as another tag, such as a ",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 1,
+                "offset": 883
+              },
+              "end": {
+                "line": 34,
+                "column": 90,
+                "offset": 972
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<div>",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 90,
+                "offset": 972
+              },
+              "end": {
+                "line": 34,
+                "column": 97,
+                "offset": 979
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", by specifying ",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 97,
+                "offset": 979
+              },
+              "end": {
+                "line": 34,
+                "column": 113,
+                "offset": 995
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "nativeButton={false}",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 113,
+                "offset": 995
+              },
+              "end": {
+                "line": 34,
+                "column": 135,
+                "offset": 1017
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ".",
+            "position": {
+              "start": {
+                "line": 34,
+                "column": 135,
+                "offset": 1017
+              },
+              "end": {
+                "line": 34,
+                "column": 136,
+                "offset": 1018
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 34,
+            "column": 1,
+            "offset": 883
+          },
+          "end": {
+            "line": 34,
+            "column": 136,
+            "offset": 1018
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Custom tag button\"",
+        "value": "import { Button } from 'baseui-solid2/button';\n\n// @highlight-text \"nativeButton={false}\"\n<Button render={<div />} nativeButton={false}>\n  Button that can contain complex children\n</Button>;",
+        "position": {
+          "start": {
+            "line": 36,
+            "column": 1,
+            "offset": 1020
+          },
+          "end": {
+            "line": 43,
+            "column": 4,
+            "offset": 1248
+          }
+        },
+        "data": {
+          "sourceValue": "import { Button } from '@base-ui/react/button';\n\n// @highlight-text \"nativeButton={false}\"\n<Button render={<div />} nativeButton={false}>\n  Button that can contain complex children\n</Button>;",
+          "references": [
+            {
+              "value": "@base-ui/react/button",
+              "start": 24,
+              "end": 45,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/button",
+              "start": 24,
+              "end": 45,
+              "kind": "import",
+              "replacement": "baseui-solid2/button"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Rendering links as buttons",
+            "position": {
+              "start": {
+                "line": 45,
+                "column": 5,
+                "offset": 1254
+              },
+              "end": {
+                "line": 45,
+                "column": 31,
+                "offset": 1280
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 45,
+            "column": 1,
+            "offset": 1250
+          },
+          "end": {
+            "line": 45,
+            "column": 31,
+            "offset": 1280
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "rendering-links-as-buttons"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The Button component enforces button semantics. ",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 1,
+                "offset": 1282
+              },
+              "end": {
+                "line": 47,
+                "column": 49,
+                "offset": 1330
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "nativeButton={false}",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 49,
+                "offset": 1330
+              },
+              "end": {
+                "line": 47,
+                "column": 71,
+                "offset": 1352
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " signals that the rendered tag is not a ",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 71,
+                "offset": 1352
+              },
+              "end": {
+                "line": 47,
+                "column": 111,
+                "offset": 1392
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<button>",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 111,
+                "offset": 1392
+              },
+              "end": {
+                "line": 47,
+                "column": 121,
+                "offset": 1402
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", but it must still be a tag that can receive button semantics (",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 121,
+                "offset": 1402
+              },
+              "end": {
+                "line": 47,
+                "column": 185,
+                "offset": 1466
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "role=\"button\"",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 185,
+                "offset": 1466
+              },
+              "end": {
+                "line": 47,
+                "column": 200,
+                "offset": 1481
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ", keyboard interaction handlers). Links (",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 200,
+                "offset": 1481
+              },
+              "end": {
+                "line": 47,
+                "column": 241,
+                "offset": 1522
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<a>",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 241,
+                "offset": 1522
+              },
+              "end": {
+                "line": 47,
+                "column": 246,
+                "offset": 1527
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": ") have their own semantics and should not be rendered as buttons through the ",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 246,
+                "offset": 1527
+              },
+              "end": {
+                "line": 47,
+                "column": 323,
+                "offset": 1604
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "render",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 323,
+                "offset": 1604
+              },
+              "end": {
+                "line": 47,
+                "column": 331,
+                "offset": 1612
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " prop.",
+            "position": {
+              "start": {
+                "line": 47,
+                "column": 331,
+                "offset": 1612
+              },
+              "end": {
+                "line": 47,
+                "column": 337,
+                "offset": 1618
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 47,
+            "column": 1,
+            "offset": 1282
+          },
+          "end": {
+            "line": 47,
+            "column": 337,
+            "offset": 1618
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If a link needs to look like a button visually, style the ",
+            "position": {
+              "start": {
+                "line": 49,
+                "column": 1,
+                "offset": 1620
+              },
+              "end": {
+                "line": 49,
+                "column": 59,
+                "offset": 1678
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "<a>",
+            "position": {
+              "start": {
+                "line": 49,
+                "column": 59,
+                "offset": 1678
+              },
+              "end": {
+                "line": 49,
+                "column": 64,
+                "offset": 1683
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " element directly with CSS rather than using the Button component.",
+            "position": {
+              "start": {
+                "line": 49,
+                "column": 64,
+                "offset": 1683
+              },
+              "end": {
+                "line": 49,
+                "column": 130,
+                "offset": 1749
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 49,
+            "column": 1,
+            "offset": 1620
+          },
+          "end": {
+            "line": 49,
+            "column": 130,
+            "offset": 1749
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Loading states",
+            "position": {
+              "start": {
+                "line": 51,
+                "column": 5,
+                "offset": 1755
+              },
+              "end": {
+                "line": 51,
+                "column": 19,
+                "offset": 1769
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 51,
+            "column": 1,
+            "offset": 1751
+          },
+          "end": {
+            "line": 51,
+            "column": 19,
+            "offset": 1769
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "loading-states"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For buttons that enter a loading state after activation, specify ",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 1,
+                "offset": 1771
+              },
+              "end": {
+                "line": 53,
+                "column": 66,
+                "offset": 1836
+              }
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "focusableWhenDisabled",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 66,
+                "offset": 1836
+              },
+              "end": {
+                "line": 53,
+                "column": 89,
+                "offset": 1859
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " so focus remains on the button while it is disabled. Because some browser and screen reader combinations do not reliably announce changes to a focused button's descendant text, use ",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 89,
+                "offset": 1859
+              },
+              "end": {
+                "line": 53,
+                "column": 271,
+                "offset": 2041
+              }
+            }
+          },
+          {
+            "type": "link",
+            "title": null,
+            "url": "https://www.w3.org/TR/accname-1.2/#computation-steps",
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "aria-labelledby",
+                "position": {
+                  "start": {
+                    "line": 53,
+                    "column": 272,
+                    "offset": 2042
+                  },
+                  "end": {
+                    "line": 53,
+                    "column": 289,
+                    "offset": 2059
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 271,
+                "offset": 2041
+              },
+              "end": {
+                "line": 53,
+                "column": 344,
+                "offset": 2114
+              }
+            }
+          },
+          {
+            "type": "text",
+            "value": " to make the changing text the button's explicit accessible name.",
+            "position": {
+              "start": {
+                "line": 53,
+                "column": 344,
+                "offset": 2114
+              },
+              "end": {
+                "line": 53,
+                "column": 409,
+                "offset": 2179
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 53,
+            "column": 1,
+            "offset": 1771
+          },
+          "end": {
+            "line": 53,
+            "column": 409,
+            "offset": 2179
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoButtonLoading } from './demos/loading';",
+        "position": {
+          "start": {
+            "line": 55,
+            "column": 1,
+            "offset": 2181
+          },
+          "end": {
+            "line": 55,
+            "column": 53,
+            "offset": 2233
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoButtonLoading",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 57,
+            "column": 1,
+            "offset": 2235
+          },
+          "end": {
+            "line": 57,
+            "column": 22,
+            "offset": 2256
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/button/demos/loading#DemoButtonLoading"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 59,
+                "column": 4,
+                "offset": 2261
+              },
+              "end": {
+                "line": 59,
+                "column": 17,
+                "offset": 2274
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 59,
+            "column": 1,
+            "offset": 2258
+          },
+          "end": {
+            "line": 59,
+            "column": 17,
+            "offset": 2274
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesButton } from './types';",
+        "position": {
+          "start": {
+            "line": 61,
+            "column": 1,
+            "offset": 2276
+          },
+          "end": {
+            "line": 61,
+            "column": 39,
+            "offset": 2314
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesButton",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 63,
+            "column": 1,
+            "offset": 2316
+          },
+          "end": {
+            "line": 63,
+            "column": 16,
+            "offset": 2331
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/button/types#TypesButton"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Button',\n    'Button Component',\n    'Focusable Disabled Button',\n    'Custom Element Button',\n    'Clickable Element',\n    'Action Button',\n    'Submit Button',\n    'Accessible Button',\n    'Loading State Button',\n    'Button as Link',\n    'Link Button',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 65,
+            "column": 1,
+            "offset": 2333
+          },
+          "end": {
+            "line": 81,
+            "column": 3,
+            "offset": 2695
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 82,
+        "column": 1,
+        "offset": 2696
+      }
+    }
+  }
+}

@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "bsolid-docs-content/1",
+  "source": "docs/src/app/(docs)/react/components/toggle/page.mdx",
+  "provenance": {
+    "repository": "https://github.com/mui/base-ui",
+    "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+    "sourceSha256": "cf146eb21fff5b5e9abba20afeb651dbe55274c200174eea25c6ba19abce7928",
+    "license": "docs/upstream/base-ui/LICENSE",
+    "copyright": "Copyright (c) 2019 Material-UI SAS"
+  },
+  "sourceRoute": "/react/components/toggle",
+  "route": "/solid/components/toggle",
+  "disposition": "semantic-review-required",
+  "publishable": false,
+  "title": "Toggle",
+  "subtitle": "A two-state button that can be on or off.",
+  "metadata": {
+    "keywords": [
+      "React Toggle",
+      "Toggle Button Component",
+      "Two State Button",
+      "Press Button",
+      "Push Toggle",
+      "Pressed State Button",
+      "Toggle Control",
+      "ARIA Pressed Control",
+      "Accessible Toggle",
+      "Headless React Components",
+      "Base UI"
+    ],
+    "description": "A high-quality, unstyled React toggle component that displays a two-state button that can be on or off."
+  },
+  "imports": [
+    {
+      "from": "./demos/hero",
+      "local": "DemoToggleHero",
+      "imported": "DemoToggleHero",
+      "kind": "demo",
+      "reference": "demo:docs/src/app/(docs)/react/components/toggle/demos/hero#DemoToggleHero"
+    },
+    {
+      "from": "./types",
+      "local": "TypesToggle",
+      "imported": "TypesToggle",
+      "kind": "api",
+      "reference": "api:docs/src/app/(docs)/react/components/toggle/types#TypesToggle"
+    }
+  ],
+  "headings": [
+    {
+      "depth": 1,
+      "text": "Toggle",
+      "properties": {
+        "id": "toggle"
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:1:1"
+    },
+    {
+      "depth": 2,
+      "text": "Anatomy",
+      "properties": {
+        "id": "anatomy"
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:13:1"
+    },
+    {
+      "depth": 2,
+      "text": "API reference",
+      "properties": {
+        "id": "api-reference"
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:23:1"
+    }
+  ],
+  "links": [],
+  "nodes": [
+    {
+      "name": "Subtitle",
+      "handler": "subtitle",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:3:1"
+    },
+    {
+      "name": "Meta",
+      "handler": "metadata",
+      "attributes": {
+        "name": "description",
+        "content": "A high-quality, unstyled React toggle component that displays a two-state button that can be on or off."
+      },
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:4:1"
+    },
+    {
+      "name": "DemoToggleHero",
+      "handler": "demo",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:11:1",
+      "reference": "demo:docs/src/app/(docs)/react/components/toggle/demos/hero#DemoToggleHero"
+    },
+    {
+      "name": "TypesToggle",
+      "handler": "api",
+      "attributes": {},
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:27:1",
+      "reference": "api:docs/src/app/(docs)/react/components/toggle/types#TypesToggle"
+    }
+  ],
+  "adaptations": [
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:4:1",
+      "detail": "Source attributes/SEO remain React-scoped until reviewed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:demo",
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:11:1",
+      "detail": "Site must implement DemoToggleHero; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "public-component-reference",
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:17:1",
+      "detail": "Toggle",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "source-snippet",
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:17:1",
+      "detail": "Package mapping alone is not a valid Solid example; review and compile before publication.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "handler:api",
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:27:1",
+      "detail": "Site must implement TypesToggle; source retained, never executed.",
+      "status": "unreviewed"
+    },
+    {
+      "kind": "framework-metadata",
+      "location": "docs/src/app/(docs)/react/components/toggle/page.mdx:1:1",
+      "detail": "Preserve original metadata as evidence; site must use reviewed framework-specific metadata.",
+      "status": "unreviewed"
+    }
+  ],
+  "ast": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Toggle",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 9,
+                "offset": 8
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 9,
+            "offset": 8
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "toggle"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "mdxJsxTextElement",
+            "name": "Subtitle",
+            "attributes": [],
+            "children": [
+              {
+                "type": "text",
+                "value": "A two-state button that can be on or off.",
+                "position": {
+                  "start": {
+                    "line": 3,
+                    "column": 11,
+                    "offset": 20
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 52,
+                    "offset": 61
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 3,
+                "column": 1,
+                "offset": 10
+              },
+              "end": {
+                "line": 3,
+                "column": 63,
+                "offset": 72
+              }
+            },
+            "data": {
+              "handler": "subtitle"
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "offset": 10
+          },
+          "end": {
+            "line": 3,
+            "column": 63,
+            "offset": 72
+          }
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "Meta",
+        "attributes": [
+          {
+            "type": "mdxJsxAttribute",
+            "name": "name",
+            "value": "description",
+            "position": {
+              "start": {
+                "line": 5,
+                "column": 3,
+                "offset": 81
+              },
+              "end": {
+                "line": 5,
+                "column": 21,
+                "offset": 99
+              }
+            }
+          },
+          {
+            "type": "mdxJsxAttribute",
+            "name": "content",
+            "value": "A high-quality, unstyled React toggle component that displays a two-state button that can be on or off.",
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 3,
+                "offset": 102
+              },
+              "end": {
+                "line": 6,
+                "column": 116,
+                "offset": 215
+              }
+            }
+          }
+        ],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 73
+          },
+          "end": {
+            "line": 7,
+            "column": 3,
+            "offset": 218
+          }
+        },
+        "data": {
+          "handler": "metadata"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { DemoToggleHero } from './demos/hero';",
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 220
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "offset": 266
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "DemoToggleHero",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 11,
+            "column": 1,
+            "offset": 268
+          },
+          "end": {
+            "line": 11,
+            "column": 19,
+            "offset": 286
+          }
+        },
+        "data": {
+          "handler": "demo",
+          "reference": "demo:docs/src/app/(docs)/react/components/toggle/demos/hero#DemoToggleHero"
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Anatomy",
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 4,
+                "offset": 291
+              },
+              "end": {
+                "line": 13,
+                "column": 11,
+                "offset": 298
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 288
+          },
+          "end": {
+            "line": 13,
+            "column": 11,
+            "offset": 298
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "anatomy"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import the component and use it as a single part:",
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 300
+              },
+              "end": {
+                "line": 15,
+                "column": 50,
+                "offset": 349
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 15,
+            "column": 1,
+            "offset": 300
+          },
+          "end": {
+            "line": 15,
+            "column": 50,
+            "offset": 349
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "jsx",
+        "meta": "title=\"Anatomy\"",
+        "value": "import { Toggle } from 'baseui-solid2/toggle';\n\n<Toggle />;",
+        "position": {
+          "start": {
+            "line": 17,
+            "column": 1,
+            "offset": 351
+          },
+          "end": {
+            "line": 21,
+            "column": 4,
+            "offset": 438
+          }
+        },
+        "data": {
+          "sourceValue": "import { Toggle } from '@base-ui/react/toggle';\n\n<Toggle />;",
+          "references": [
+            {
+              "value": "@base-ui/react/toggle",
+              "start": 24,
+              "end": 45,
+              "kind": "import"
+            }
+          ],
+          "diagnostics": [],
+          "packageEdits": [
+            {
+              "value": "@base-ui/react/toggle",
+              "start": 24,
+              "end": 45,
+              "kind": "import",
+              "replacement": "baseui-solid2/toggle"
+            }
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "API reference",
+            "position": {
+              "start": {
+                "line": 23,
+                "column": 4,
+                "offset": 443
+              },
+              "end": {
+                "line": 23,
+                "column": 17,
+                "offset": 456
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 23,
+            "column": 1,
+            "offset": 440
+          },
+          "end": {
+            "line": 23,
+            "column": 17,
+            "offset": 456
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "api-reference"
+          }
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "import { TypesToggle } from './types';",
+        "position": {
+          "start": {
+            "line": 25,
+            "column": 1,
+            "offset": 458
+          },
+          "end": {
+            "line": 25,
+            "column": 39,
+            "offset": 496
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      },
+      {
+        "type": "mdxJsxFlowElement",
+        "name": "TypesToggle",
+        "attributes": [],
+        "children": [],
+        "position": {
+          "start": {
+            "line": 27,
+            "column": 1,
+            "offset": 498
+          },
+          "end": {
+            "line": 27,
+            "column": 16,
+            "offset": 513
+          }
+        },
+        "data": {
+          "handler": "api",
+          "reference": "api:docs/src/app/(docs)/react/components/toggle/types#TypesToggle"
+        }
+      },
+      {
+        "type": "sourceModule",
+        "value": "export const metadata = {\n  keywords: [\n    'React Toggle',\n    'Toggle Button Component',\n    'Two State Button',\n    'Press Button',\n    'Push Toggle',\n    'Pressed State Button',\n    'Toggle Control',\n    'ARIA Pressed Control',\n    'Accessible Toggle',\n    'Headless React Components',\n    'Base UI',\n  ],\n};",
+        "position": {
+          "start": {
+            "line": 29,
+            "column": 1,
+            "offset": 515
+          },
+          "end": {
+            "line": 43,
+            "column": 3,
+            "offset": 827
+          }
+        },
+        "data": {
+          "handler": "non-executable-import-metadata"
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 44,
+        "column": 1,
+        "offset": 828
+      }
+    }
+  }
+}
