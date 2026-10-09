@@ -1,0 +1,1 @@
+import{o as e}from"./DialogPortal-DMtV22pE.js";function t(t){return e(`alert-dialog`,t)}export{t};

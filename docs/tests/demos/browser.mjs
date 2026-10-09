@@ -6,6 +6,8 @@ import path from 'node:path';
 import http from 'node:http';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
+import { describePublicSource } from '../../scripts/demos/catalog.mjs';
+import { applyPublicSource } from '../../demos/shared/public-source.mjs';
 
 const root = fileURLToPath(new URL('../../../', import.meta.url));
 const outDir = path.join(root, 'docs/tests/demos/.build');
@@ -111,12 +113,13 @@ try {
     path.join(root, 'docs/tests/demos/fixtures/state.tsx'),
     'utf8',
   );
-  assert.equal(await page.locator('code').textContent(), original);
+  const publicSource = applyPublicSource(original, describePublicSource(original, 'state.tsx').edits);
+  assert.equal(await page.locator('code').textContent(), publicSource);
   await page.getByRole('button', { name: 'Copy code' }).click();
   await page.getByRole('status').filter({ hasText: 'Code copied.' }).waitFor();
   assert.equal(
     await page.evaluate(() => navigator.clipboard.readText()),
-    original,
+    publicSource,
   );
   const variantSelect = page.getByRole('combobox', { name: 'Styling method' });
   await variantSelect.focus();

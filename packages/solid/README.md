@@ -1,67 +1,55 @@
-# @unstyled-solid/base-ui
+# Base UI for Solid 2
 
-Unstyled, accessible UI components for Solid 2, based on React Base UI.
+Base UI for Solid 2 is a library of unstyled Solid components for building accessible user interfaces. You gain complete control over your app's CSS.
 
-## Install
+[`@unstyled-solid/base-ui`](https://www.npmjs.com/package/@unstyled-solid/base-ui) is an independent, unofficial port of [React Base UI](https://github.com/mui/base-ui), not maintained by MUI or the upstream Base UI team. Version **0.0.2 is an alpha** targeting **Solid 2.0.0-rc.13**, not Solid 1.
 
-```sh
+## Installation
+
+Install the package in your project directory with:
+
+```bash
 npm install @unstyled-solid/base-ui solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
 ```
 
-## Usage
+Use a compatible Solid 2 compiler and set TypeScript's `jsxImportSource` to `@solidjs/web`. The pinned Vite toolchain uses `@solidjs/vite-plugin@3.0.0-next.47` with `@solidjs/compiler@2.0.0-rc.13` and `@solidjs/babel-plugin@2.0.0-rc.13`; see the [toolchain contracts](https://github.com/unstyled-solid/base-ui/blob/main/docs/contracts.md) for configuration.
 
 ```tsx
-import { Button } from '@unstyled-solid/base-ui';
+import { Button } from '@unstyled-solid/base-ui/button';
 
 export function Example() {
-  return <Button onClick={() => console.log('Clicked')}>Click me</Button>;
+  return <Button class="my-button">Click me</Button>;
 }
 ```
 
-Component subpaths are also available:
+Root imports such as `import { Button } from '@unstyled-solid/base-ui'` are also available. Components use `class`, native events and callback refs. Custom element composition uses a live `(props, state) => JSX` render callback rather than React element cloning; see the [Solid 2 contract](https://github.com/unstyled-solid/base-ui/blob/main/docs/solid2-contract.md).
 
-```tsx
-import { Dialog } from '@unstyled-solid/base-ui/dialog';
-import { Checkbox } from '@unstyled-solid/base-ui/checkbox';
-```
+The package includes tree-shakeable ESM browser and server modules and TypeScript declarations. Like Solid RC13, export conditions prioritize `worker` before `browser`; hydrate in a browser build without a `worker` condition.
 
-This package targets **Solid 2.0.0-rc.13** and uses `@solidjs/web` as its JSX
-runtime. Configure `jsxImportSource` as `@solidjs/web` and use a compatible
-Solid 2 compiler. It is not a Solid 1 package.
+## Documentation
 
-The package includes compiled ESM browser and server modules and TypeScript
-declarations. Use `class` for styling and native callback refs.
+See the [documentation website setup](https://github.com/unstyled-solid/base-ui/blob/main/docs/site/README.md) to run the docs locally. A hosted documentation website is forthcoming.
 
-Exports prioritize `worker` before `browser`, matching Solid 2 RC13: worker
-conditions select server modules, browser conditions without `worker` select DOM
-modules, and ordinary Node imports select server modules. DOM hydration belongs
-in a browser build without a `worker` condition.
+## Questions
 
-The compiled modules support tree-shaking; unused components and optional date
-adapters can be eliminated. Component subpaths are available for explicit imports.
+For how-to questions, support, and bug reports, use the [project on GitHub](https://github.com/unstyled-solid/base-ui).
 
-## Project
+## Contributing
 
-Maintained by [Unstyled Solid](https://github.com/unstyled-solid).
-Version 0.0.1 is based on React Base UI 1.8.0 at commit
-`19511bb171f3b360b006c94cf6d07e53cb446505`.
+Propose bug fixes and improvements through [GitHub issues and pull requests](https://github.com/unstyled-solid/base-ui). Read the [architecture](https://github.com/unstyled-solid/base-ui/blob/main/docs/architecture.md) and [toolchain contracts](https://github.com/unstyled-solid/base-ui/blob/main/docs/contracts.md) to learn about the development and testing process.
 
-## Initial release limitations
+## Changelog
 
-The exhaustive upstream source-case audit is incomplete; passing runtime suites
-do not establish complete source-test parity.
+Check the [releases](https://github.com/unstyled-solid/base-ui/releases) for updates.
 
-- Collapsible layout measurement can report `EFFECT_RELAY_TEAR`; this accepted
-  diagnostic remains visible.
-- WebKit focus restoration uses a MutationObserver fallback whose native
-  focus-event ordering still needs investigation.
-- Touch/CDP and pointer-lock checks require their supported browser capability
-  lanes. Concurrent pointer-lock runs can suffer OS pointer interference.
-- Autocomplete WebKit fixtures supply nonzero motion; raw native Safari hover
-  behavior remains unverified.
-- The date-fns adapter does not offer a configurable default-zone setter.
+## Roadmap
+
+Feature requests and planned improvements are tracked in the [project on GitHub](https://github.com/unstyled-solid/base-ui).
 
 ## License
 
-MIT. See `LICENSE`, `NOTICE`, and `THIRD-PARTY-NOTICES.md` for upstream and
-third-party attribution.
+This project is licensed under the terms of the [MIT license](https://github.com/unstyled-solid/base-ui/blob/main/LICENSE). Adapted from React Base UI **1.8.0**, pinned at `19511bb171f3b360b006c94cf6d07e53cb446505`; see the included `LICENSE`, `NOTICE`, and `THIRD-PARTY-NOTICES.md` for upstream and third-party attribution.
+
+## Security
+
+For security reporting options, use the [project's GitHub security page](https://github.com/unstyled-solid/base-ui/security). Do not disclose sensitive vulnerability details in public issues.

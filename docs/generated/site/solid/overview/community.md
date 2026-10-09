@@ -1,12 +1,20 @@
+<a id="community"></a>
+
 # Community
 
 The Base UI ecosystem, support channels, and ways to stay up to date.
 
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
 
+This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
+
+<a id="shadcnui"></a>
 
 ## shadcn/ui
 
-[shadcn/ui](https://ui.shadcn.com/) uses upstream React Base UI as its unstyled foundation. If you want Tailwind-styled wrapper components and higher-level APIs without building that layer yourself, you can create a component library with the shadcn/ui [create](https://ui.shadcn.com/create) tool.
+[shadcn/ui](https://ui.shadcn.com/) offers pre-styled React components built on upstream Base UI. It is an upstream React ecosystem project, not a Solid component library or an integration with this port.
+
+<a id="styled-libraries"></a>
 
 ## Styled libraries
 
@@ -20,36 +28,23 @@ Here's a non-exhaustive list of styled libraries built with upstream React Base�
 - [ReUI](https://reui.io): a large collection of components and templates built on shadcn/ui.
 - [FigUI](https://figui.dev): a Figma UI3 style component library for building Figma plugins.
 
+<a id="unofficial-ports"></a>
+
 ## Unofficial ports
 
 - [base-ui-solid](https://github.com/msviderok/base-ui-solid): unofficial port of Base UI to SolidJS.
 - [base-ui-vue](https://github.com/vuepont/base-ui-vue): unofficial port of Base UI to Vue.
 - [radix-ng](https://github.com/radix-ng/primitives): unofficial Angular adaptation of Base UI architecture and behavior (originally a Radix UI port).
 
+<a id="get-help-and-contribute"></a>
+
 ## Get help and contribute
 
-### GitHub
+For support, questions, bug reports, and contributions to Base UI for Solid, visit the [project GitHub repository](https://github.com/unstyled-solid/base-ui).
 
-Upstream Base UI is an open-source project.
-If you want to file a bug report or contribute, visit the upstream [GitHub](https://github.com/mui/base-ui).
-
-### Discord
-
-For community support, questions, tips, and showcases, join the upstream [Discord](https://base-ui.com/r/discord).
+<a id="stay-up-to-date"></a>
 
 ## Stay up to date
 
-### X
-
-For upstream React releases and announcements, follow [@base_ui](https://x.com/base_ui) on X.
-
-### Bluesky
-
-Upstream Base UI is also on [Bluesky](https://bsky.app/profile/base-ui.com).
-
-### GitHub releases
-
-You can also subscribe to the [GitHub releases](https://github.com/mui/base-ui/releases) to get notified.
-
-Detailed upstream React release notes are published on the [releases](/upstream/react/overview/releases) page as well.
+Follow [project GitHub releases](https://github.com/unstyled-solid/base-ui/releases) for Base UI for Solid release notes and updates.
 

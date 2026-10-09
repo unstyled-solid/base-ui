@@ -9,6 +9,7 @@
     "pnpm": "11.8.0"
   },
   "scripts": {
+    "release": "node scripts/release.mjs",
     "typescript": "tsc --noEmit -p tsconfig.json",
     "test:jsdom": "node scripts/test/run.mjs jsdom",
     "test:interactions": "node scripts/test/runtime-interactions.mjs",
@@ -36,7 +37,8 @@
     "docs:dev": "pnpm docs:generate:demos && vite --config docs/vite.config.ts --host 127.0.0.1 --port 5173",
     "docs:build": "pnpm docs:generate:demos && vite build --config docs/vite.config.ts",
     "docs:preview": "vite preview --config docs/vite.config.ts --host 127.0.0.1 --port 4173",
-    "docs:check": "node docs/scripts/demos/generate.mjs --check --complete && tsc --noEmit -p docs/tsconfig.demos.json && node docs/scripts/site/semantic-check.mjs && node docs/scripts/site/check.mjs",
+    "docs:check": "tsc --noEmit -p docs/tsconfig.demos.json && node docs/scripts/site/check.mjs --dist",
+    "docs:check:source": "node docs/scripts/demos/generate.mjs --check --complete && node docs/scripts/site/semantic-check.mjs",
     "docs:test:browser": "node docs/scripts/site/browser-all.mjs && node docs/scripts/site/interactions.mjs",
     "docs:test:interactions": "node docs/scripts/site/click-diagnostics.mjs",
     "docs:generate:demos": "node docs/scripts/demos/generate.mjs",

@@ -1,8 +1,10 @@
+<a id="composition"></a>
+
 # Composition
 
 A guide to composing Base UI components with your own Solid components.
 
-
+<a id="composing-custom-react-components"></a>
 
 ## Composing custom Solid components
 
@@ -18,6 +20,8 @@ The code snippet below shows how to use a custom button instead.
 ```
 
 The custom component must forward the `ref`, and spread all the received props on its underlying DOM node.
+
+<a id="composing-multiple-components"></a>
 
 ## Composing multiple components
 
@@ -48,6 +52,8 @@ Working with Tooltip is a common example.
 </Dialog.Root>;
 ```
 
+<a id="changing-the-default-rendered-element"></a>
+
 ## Changing the default rendered element
 
 You can also use the `render` prop to override the rendered element of the component.
@@ -56,7 +62,7 @@ For example, `<Menu.Item>` renders a `<div>` by default.
 The code snippet below shows how to render it as an `<a>` element so that it works like a link.
 
 ```tsx
-import { Menu } from 'baseui-solid2/menu';
+import { Menu } from '@unstyled-solid/base-ui/menu';
 export default () => (
   <Menu.Root>
     <Menu.Trigger>Song</Menu.Trigger>
@@ -76,6 +82,8 @@ export default () => (
 ```
 
 Each Base UI component renders the most appropriate element by default, and in most cases, rendering a different element is recommended only on a case-by-case basis.
+
+<a id="render-function"></a>
 
 ## Render function
 

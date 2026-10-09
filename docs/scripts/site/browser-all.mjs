@@ -3,6 +3,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { root } from "./paths.mjs";
+import crypto from 'node:crypto';
+import { applyPublicSource } from '../../demos/shared/public-source.mjs';
 
 // Catalog traversal order is not the live source toolbar's declaration order.
 // Validate coverage independently, then address tabs by their exact file identity.
@@ -132,9 +134,17 @@ export async function runBrowserInventory() {
               /\.(png|jpe?g|gif|webp|avif|ico|woff2?|ttf|otf|mp4|webm|pdf)$/i.test(
                 filePath,
               );
+            const original = await fs.readFile(path.join(root, filePath));
+            const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
+            if (original.length !== file.bytes || digest(original) !== file.sha256)
+              throw new Error(`Executing source provenance differs for ${filePath}`);
+            if (!binary && !file.publicSource)
+              throw new Error(`Missing public source metadata for ${filePath}`);
             const expected = binary
               ? `Binary asset: ${filePath}`
-              : await fs.readFile(path.join(root, filePath), "utf8");
+              : applyPublicSource(original.toString('utf8'), file.publicSource.edits);
+            if (!binary && (Buffer.byteLength(expected) !== file.publicSource.bytes || digest(expected) !== file.publicSource.sha256))
+              throw new Error(`Public source provenance differs for ${filePath}`);
             await page.waitForFunction(
               (expected) =>
                 document.querySelector("#inventory-demo pre code")
@@ -143,7 +153,7 @@ export async function runBrowserInventory() {
             );
             if ((await source.textContent()) !== expected)
               throw new Error(
-                `Displayed source differs from executing file ${filePath}`,
+                `Displayed source differs from declared public source ${filePath}`,
               );
             if ((await host.locator(".DemoCopyButton").isDisabled()) !== binary)
               throw new Error(`Incorrect copy availability for ${filePath}`);

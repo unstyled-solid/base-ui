@@ -9,7 +9,7 @@
     "publicationDecision": "user-selected",
     "publicationOwner": "bsolid-dist-publish",
     "previousBootstrapName": "@base-ui-solid/solid",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "homepage": "https://github.com/unstyled-solid",
     "installation": {
       "workspace": "rtk pnpm add {workspaceName}@workspace:*",
@@ -33,8 +33,16 @@
     "moduleName": "@solidjs/web",
     "relativeRuntimeExtension": ".js",
     "relativeDeclarationExtension": ".js",
-    "licenseFiles": ["LICENSE", "NOTICE"],
-    "sideEffects": { "workspaceValue": false, "qualificationOwner": "bsolid-dist-shaking", "qualified": true, "stagingRule": "Stage audited false. Authored initialization only allocates module-local contexts, caches, closures and symbols; DOM templates are lazy pure factories. Required styles, listeners and timers are installed by invoked owned code. Test-only fixture modules with import-time delegation are excluded. See docs/distribution-initialization-audit.md and the independent optimized consumer evidence." }
+    "licenseFiles": [
+      "LICENSE",
+      "NOTICE"
+    ],
+    "sideEffects": {
+      "workspaceValue": false,
+      "qualificationOwner": "bsolid-dist-shaking",
+      "qualified": true,
+      "stagingRule": "Stage audited false. Authored initialization only allocates module-local contexts, caches, closures and symbols; DOM templates are lazy pure factories. Required styles, listeners and timers are installed by invoked owned code. Test-only fixture modules with import-time delegation are excluded. See docs/distribution-initialization-audit.md and the independent optimized consumer evidence."
+    }
   },
   "toolchain": {
     "node": "25.8.1",
@@ -52,7 +60,14 @@
   },
   "resolution": {
     "exportContract": "distribution/exports.json",
-    "runtimeConditionOrder": ["types", "worker", "browser", "deno", "node", "default"],
+    "runtimeConditionOrder": [
+      "types",
+      "worker",
+      "browser",
+      "deno",
+      "node",
+      "default"
+    ],
     "runtimeTemplate": {
       "types": "./types/{stem}.d.ts",
       "worker": "./server/{stem}.js",
@@ -61,32 +76,135 @@
       "node": "./server/{stem}.js",
       "default": "./server/{stem}.js"
     },
-    "typeOnlyTemplate": { "types": "./types/{stem}.d.ts" },
-    "typeOnlyEntries": ["./types", "./internals/temporal", "./internals/types"],
+    "typeOnlyTemplate": {
+      "types": "./types/{stem}.d.ts"
+    },
+    "typeOnlyEntries": [
+      "./types",
+      "./internals/temporal",
+      "./internals/types"
+    ],
     "typeOnlyRuntimeBehavior": "No runtime target; normal ESM import fails ERR_PACKAGE_PATH_NOT_EXPORTED. Do not emit empty public runtime modules as accidental substitutes.",
     "matrix": [
-      { "conditions": [], "runtime": "server", "typesOnly": "unexported" },
-      { "conditions": ["browser"], "runtime": "dom", "typesOnly": "unexported" },
-      { "conditions": ["node"], "runtime": "server", "typesOnly": "unexported" },
-      { "conditions": ["worker"], "runtime": "server", "typesOnly": "unexported" },
-      { "conditions": ["deno"], "runtime": "server", "typesOnly": "unexported" },
-      { "conditions": ["browser", "node", "worker", "deno"], "runtime": "server", "typesOnly": "unexported" },
-      { "conditions": ["development"], "runtime": "server", "typesOnly": "unexported" },
-      { "conditions": ["browser", "development"], "runtime": "dom", "typesOnly": "unexported" },
-      { "conditions": ["types"], "runtime": "types", "typesOnly": "types" },
-      { "conditions": ["types", "browser", "node", "worker", "deno"], "runtime": "types", "typesOnly": "types" }
+      {
+        "conditions": [],
+        "runtime": "server",
+        "typesOnly": "unexported"
+      },
+      {
+        "conditions": [
+          "browser"
+        ],
+        "runtime": "dom",
+        "typesOnly": "unexported"
+      },
+      {
+        "conditions": [
+          "node"
+        ],
+        "runtime": "server",
+        "typesOnly": "unexported"
+      },
+      {
+        "conditions": [
+          "worker"
+        ],
+        "runtime": "server",
+        "typesOnly": "unexported"
+      },
+      {
+        "conditions": [
+          "deno"
+        ],
+        "runtime": "server",
+        "typesOnly": "unexported"
+      },
+      {
+        "conditions": [
+          "browser",
+          "node",
+          "worker",
+          "deno"
+        ],
+        "runtime": "server",
+        "typesOnly": "unexported"
+      },
+      {
+        "conditions": [
+          "development"
+        ],
+        "runtime": "server",
+        "typesOnly": "unexported"
+      },
+      {
+        "conditions": [
+          "browser",
+          "development"
+        ],
+        "runtime": "dom",
+        "typesOnly": "unexported"
+      },
+      {
+        "conditions": [
+          "types"
+        ],
+        "runtime": "types",
+        "typesOnly": "types"
+      },
+      {
+        "conditions": [
+          "types",
+          "browser",
+          "node",
+          "worker",
+          "deno"
+        ],
+        "runtime": "types",
+        "typesOnly": "types"
+      }
     ],
     "matrixExpansion": "Validate every subset of types/browser/node/worker/deno/development (64 sets). types wins; otherwise worker selects server before browser, matching stock RC13; otherwise browser selects DOM; otherwise server. Resolver condition-list order cannot override export-object key order.",
     "requirePolicy": "No require branch and no CJS artifact. Modern Node may synchronously require ESM; that does not constitute a supported CommonJS build.",
     "solidPolicy": "No solid branch. A supplied solid condition falls through to ordinary ESM default.",
-    "typeConsumers": ["Bundler", "NodeNext"],
+    "typeConsumers": [
+      "Bundler",
+      "NodeNext"
+    ],
     "skipLibCheck": false
   },
   "imports": {
-    "#test-utils": { "owner": "bsolid-harness", "workspaceOnly": true, "staged": false, "status": "awaiting-owner-request" },
-    "#formatErrorMessage": { "owner": "bsolid-dom", "buildOwner": "bsolid-dist-build", "status": "reserved-until-implementation", "rule": "Resolve to owned Solid utility output, never @base-ui/utils or an unresolved source alias." },
-    "#prehydration/tabs/indicator": { "owner": "bsolid-c-tabs", "sharedOwner": "bsolid-providers", "status": "reserved-until-implementation", "browser": "./dom/internals/prehydrationScript.stub.js", "node": "./server/tabs/indicator/prehydrationScript.min.js", "worker": "./server/tabs/indicator/prehydrationScript.min.js", "deno": "./server/tabs/indicator/prehydrationScript.min.js", "default": "./server/tabs/indicator/prehydrationScript.min.js" },
-    "#prehydration/slider/thumb": { "owner": "bsolid-c-slider", "sharedOwner": "bsolid-providers", "status": "reserved-until-implementation", "browser": "./dom/internals/prehydrationScript.stub.js", "node": "./server/slider/thumb/prehydrationScript.min.js", "worker": "./server/slider/thumb/prehydrationScript.min.js", "deno": "./server/slider/thumb/prehydrationScript.min.js", "default": "./server/slider/thumb/prehydrationScript.min.js" }
+    "#test-utils": {
+      "owner": "bsolid-harness",
+      "workspaceOnly": true,
+      "staged": false,
+      "status": "awaiting-owner-request"
+    },
+    "#formatErrorMessage": {
+      "owner": "bsolid-dom",
+      "buildOwner": "bsolid-dist-build",
+      "status": "reserved-until-implementation",
+      "rule": "Resolve to owned Solid utility output, never @base-ui/utils or an unresolved source alias."
+    },
+    "#prehydration/tabs/indicator": {
+      "owner": "bsolid-c-tabs",
+      "sharedOwner": "bsolid-providers",
+      "status": "reserved-until-implementation",
+      "browser": "./dom/internals/prehydrationScript.stub.js",
+      "node": "./server/tabs/indicator/prehydrationScript.min.js",
+      "worker": "./server/tabs/indicator/prehydrationScript.min.js",
+      "deno": "./server/tabs/indicator/prehydrationScript.min.js",
+      "default": "./server/tabs/indicator/prehydrationScript.min.js"
+    },
+    "#prehydration/slider/thumb": {
+      "owner": "bsolid-c-slider",
+      "sharedOwner": "bsolid-providers",
+      "status": "reserved-until-implementation",
+      "browser": "./dom/internals/prehydrationScript.stub.js",
+      "node": "./server/slider/thumb/prehydrationScript.min.js",
+      "worker": "./server/slider/thumb/prehydrationScript.min.js",
+      "deno": "./server/slider/thumb/prehydrationScript.min.js",
+      "default": "./server/slider/thumb/prehydrationScript.min.js"
+    }
   },
   "staging": {
     "manifestOwner": "bsolid-dist-contract",
@@ -103,9 +221,23 @@
       "Copy LICENSE and NOTICE into the staged package; preserve adapted Base UI and donor source-local notices."
     ]
   },
-  "qualificationGates": ["bsolid-dist-build", "bsolid-dist-types", "bsolid-integration", "bsolid-dist-shaking", "bsolid-dist-pack", "bsolid-dist-publish"],
+  "qualificationGates": [
+    "bsolid-dist-build",
+    "bsolid-dist-types",
+    "bsolid-integration",
+    "bsolid-dist-shaking",
+    "bsolid-dist-pack",
+    "bsolid-dist-publish"
+  ],
   "commandHandoffGate": "bsolid-bootstrap-command-handoff",
   "knownIntegrationGaps": [
-    { "ticket": "bsolid-donor-notices", "gates": ["bsolid-dist-pack", "bsolid-release-ready"], "evidence": "Donor-owned audit must qualify notices for actual adopted files; no adopted-source packing claim at contract stage." }
+    {
+      "ticket": "bsolid-donor-notices",
+      "gates": [
+        "bsolid-dist-pack",
+        "bsolid-release-ready"
+      ],
+      "evidence": "Donor-owned audit must qualify notices for actual adopted files; no adopted-source packing claim at contract stage."
+    }
   ]
 }

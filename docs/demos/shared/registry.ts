@@ -1,8 +1,10 @@
 import type { DemoEntry, DemoFamily } from './types';
+import { applyPublicSource, type PublicSourceEdit } from './public-source.mjs';
 
 export type FamilyLoader = () => Promise<{ default: DemoFamily }>;
 const families = import.meta.glob<{ default: DemoFamily }>('../*/entry.ts');
-// Raw imports are build inputs, never transformed snippets or library internals.
+// Raw imports remain executable build inputs. Only display/copy receives the
+// catalog's AST-recorded public package identity adaptation.
 const sources = import.meta.glob<string>(['../**/*.{tsx,ts,js,css,json,svg}', '!../shared/**', '!../**/*.test.*', '!../**/*.config.*', '!../**/.*/**', '!../**/validation/**', '../../tests/demos/fixtures/**'], {
   query: '?raw', import: 'default',
 });
@@ -32,10 +34,27 @@ export function createRegistry(loaders: Record<string, FamilyLoader>) {
 }
 
 export const loadDemo = createRegistry(families);
+let publicEdits: Promise<Map<string, readonly PublicSourceEdit[]>> | undefined;
+function loadPublicEdits() {
+  return publicEdits ??= import('../../generated/demos/catalog.json').then(({ default: catalog }) => {
+    const files = new Map<string, readonly PublicSourceEdit[]>();
+    for (const entry of catalog.entries) for (const variant of entry.variants) for (const file of variant.files) {
+      const record = file as typeof file & { publicSource?: { edits: PublicSourceEdit[] } };
+      if (!record.assets && !record.publicSource) throw new Error('Missing public source adaptation; regenerate the demo catalog');
+      if (record.publicSource) files.set(record.path, record.publicSource.edits);
+    }
+    return files;
+  });
+}
 export async function loadSource(path: string): Promise<string> {
   if (path.includes('..') || (!path.startsWith('docs/demos/') && !path.startsWith('docs/tests/demos/fixtures/'))) throw new Error(`Invalid demo source: ${path}`);
   const key = path.startsWith('docs/demos/') ? `../${path.slice('docs/demos/'.length)}` : `../../${path.slice('docs/'.length)}`;
   const load = sources[key];
   if (!load) throw new Error(`Missing raw demo source: ${path}`);
-  return load();
+  const raw = await load();
+  // Browser harness fixtures have no private package imports and are not catalog entries.
+  if (path.startsWith('docs/tests/demos/fixtures/')) return raw;
+  const edits = (await loadPublicEdits()).get(path);
+  if (!edits) throw new Error(`Missing public demo source metadata: ${path}`);
+  return applyPublicSource(raw, edits);
 }

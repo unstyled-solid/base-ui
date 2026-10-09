@@ -49,7 +49,7 @@ export default function ExampleNavigationMenu() {
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <Link class={styles.Trigger} href="https://github.com/mui/base-ui">
+          <Link class={styles.Trigger} href="https://github.com/unstyled-solid/base-ui">
             GitHub
           </Link>
         </NavigationMenu.Item>

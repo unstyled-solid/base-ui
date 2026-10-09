@@ -1,5 +1,6 @@
 import { ordering } from '../../../upstream/base-ui/docs/src/utils/typeOrder.mjs';
 import ts from 'typescript';
+import { enrichReference } from '../../content/api/guidance.mjs';
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function ordered(rows, section) {
   const order = ordering[section] ?? [];
@@ -31,6 +32,7 @@ function summaryType(prop) {
   return brief.length > 72 ? brief.slice(0,69) + '…' : brief;
 }
 export function renderReference(entry, attrs = {}, seen = new Set()) {
+  entry = enrichReference(entry);
   if (entry.anchor && seen.has('render:' + entry.anchor)) return '';
   if (entry.anchor) seen.add('render:' + entry.anchor);
   function id(value) {
@@ -56,9 +58,19 @@ export function renderReference(entry, attrs = {}, seen = new Set()) {
   const def = value => typeof value === 'object' && value !== null ? value.status === 'unavailable' ? '—' : value.value : value ?? '—';
   let html = `<section class="ApiReference" data-api-status="generated"${id(entry.anchor)}>${anchors}`;
   if (!attrs.hideDescription && entry.description) html += `<p class="MdP">${esc(entry.description)}</p>`;
-  if (props.length && !attrs.hideProps) html += `<div class="ApiTable"><div class="ApiHeader"><span>${entry.kind === 'helper' ? 'Parameter' : entry.kind === 'type' ? 'Property' : 'Prop'}</span><span>Type</span><span>Default</span><span></span></div>${props.map(prop => {
+  if (props.length && !attrs.hideProps) html += `<p class="ApiDefaultLegend">Default <code>—</code> means unavailable: no documented or statically verified default was found. It does not mean there is no default.</p><div class="ApiTable"><div class="ApiHeader"><span>${entry.kind === 'helper' ? 'Parameter' : entry.kind === 'type' ? 'Property' : 'Prop'}</span><span>Type</span><span>Default</span><span></span></div>${props.map(prop => {
     const full = cleanType(prop.type), value = def(prop.default ?? prop.defaultValue);
-    const related = (entry.related ?? []).filter(type => !/(?:\.Props|Props)$/.test(type.name) && (prop.name === 'render' && /State$/.test(type.name) || full.includes(type.name.split('.').at(-1))));
+    const relatedSeen = new Set();
+    const related = (entry.related ?? []).filter(type => {
+      if (/(?:\.Props|Props)$/.test(type.name)) return false;
+      const leaf = type.name.split('.').at(-1);
+      const referenced = prop.links?.length ? prop.links.some(link => link.anchor === type.anchor) : new RegExp(`\\b${leaf.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`).test(full);
+      if (!referenced) return false;
+      const canonical = (entry.related ?? []).find(other => other.anchor === type.canonicalAnchor) ?? type;
+      const identity = canonical.source ? `${canonical.source.file}:${canonical.source.line}` : canonical.anchor ?? canonical.name;
+      if (relatedSeen.has(identity)) return false;
+      relatedSeen.add(identity); return true;
+    });
     const declaration = type => type.properties?.length ? `{\n${type.properties.map(p => `  ${p.description ? '/** '+p.description.replaceAll('*/','* /')+' */\n  ' : ''}${p.name}${p.required ? '' : '?'}: ${cleanType(p.type)};`).join('\n')}\n}` : cleanType(type.type);
     return `<details class="ApiRow"${id(prop.anchor)}><summary><span class="ApiName"><span${id(alias+'-'+prop.name)}></span>${esc(prop.name)}${prop.required ? '<sup aria-label="required">*</sup>' : ''}</span><code class="ApiType">${esc(summaryType(prop))}</code><code class="ApiDefault">${esc(value)}</code><span class="ApiChevron" aria-hidden="true">⌄</span></summary><div class="ApiDetails">${prop.description ? `<p>${esc(prop.description)}</p>` : ''}<pre tabindex="0"><code>${esc(full)}</code></pre>${related.map(type => `<p><code>${esc(type.name)}</code></p><pre tabindex="0"><code>${esc(declaration(type))}</code></pre>`).join('')}</div></details>`;
   }).join('')}</div>`;

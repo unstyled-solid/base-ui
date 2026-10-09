@@ -1,8 +1,15 @@
 import ts from 'typescript';
 
+// Presentation directives only; ordinary comments and license notices survive.
+export function stripPresentationAnnotations(source) {
+  return source.replace(/\{\s*\/\*\s*@highlight[^]*?\*\/\s*\}/g, '')
+    .replace(/\/\*\s*@highlight[^]*?\*\//g, '')
+    .replace(/\/\/\s*@highlight[^\n]*/g, '');
+}
+
 /** Adapt syntax in source examples, leaving formatting to the site's Prettier pass. */
 export function adaptSnippet(source) {
-  let code = source.replaceAll('@base-ui/react', 'baseui-solid2')
+  let code = stripPresentationAnnotations(source)
     .replaceAll('className', 'class').replaceAll('htmlFor=', 'for=')
     .replaceAll('React.ComponentProps', 'ComponentProps').replaceAll('React.ReactNode', 'JSX.Element').replaceAll('React.JSX.Element', 'JSX.Element')
     .replaceAll('<React.Fragment>', '<>').replaceAll('</React.Fragment>', '</>')
@@ -59,6 +66,11 @@ export function adaptSnippet(source) {
   collectDerivations(ast);
   const transformed = ts.transform(ast, [(ctx) => {
     function visit(node) {
+      if (ts.isImportDeclaration(node) && ts.isStringLiteral(node.moduleSpecifier)) {
+        const name = node.moduleSpecifier.text;
+        if (/^(?:@base-ui\/react|baseui-solid2)(?:\/|$)/.test(name)) return f.updateImportDeclaration(node,
+          node.modifiers, node.importClause, f.createStringLiteral(name.replace(/^(?:@base-ui\/react|baseui-solid2)/, '@unstyled-solid/base-ui')), node.attributes);
+      }
       if (ts.isVariableDeclaration(node) && ts.isIdentifier(node.name) && derivations.has(node.name.text)) {
         imports.add('createMemo');
         return f.updateVariableDeclaration(node, node.name, node.exclamationToken, node.type,

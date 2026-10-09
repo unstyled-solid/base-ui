@@ -4,6 +4,7 @@ import ts from 'typescript';
 import { demoDispositions } from '../../content/demo-dispositions.mjs';
 import { renderReference } from './reference.mjs';
 import { markdownIcon, githubIcon } from './icons.mjs';
+import { repository, publicIdentity } from './release.mjs';
 
 export const handlers = ['html', 'subtitle', 'metadata', 'demo', 'api', 'private-install-instructions', 'react-release-history', 'react-production-error', 'solid-type-reference', 'solid-prop-reference', 'quick-nav-root', 'quick-nav-trigger', 'quick-nav-popup'];
 export const escape = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -33,7 +34,7 @@ export function renderPage(page, { base = '/', pages = [], demos = [], demoRefer
   const headings = new Map(page.headings.map((h) => [h.location, h]));
   const missing = (kind, node, detail) => {
     issues.push({ kind, location: location(page, node), detail });
-    return `<aside class="SiteMissing" data-missing="${escape(kind)}"><strong>${escape(kind)} unavailable</strong><p>${escape(detail)}</p><code>${escape(location(page, node))}</code></aside>`;
+    return `<aside class="SiteMissing" data-missing="${escape(kind)}"><strong>${kind === 'demo' ? 'Example' : 'API reference'} temporarily unavailable</strong><p>Please <a href="${repository}">report this on GitHub</a> with the page URL.</p></aside>`;
   };
   function render(node, tight = false) {
     const at = location(page, node);
@@ -88,7 +89,7 @@ export function renderPage(page, { base = '/', pages = [], demos = [], demoRefer
         const attrs = record.attributes;
         switch (record.handler) {
           case 'metadata': return '';
-          case 'subtitle': return tag('div', `<div>${children()}</div><div class="SubtitleLinks"><a class="SubtitleLink" href="${escape(localUrl(page.route + '.md',base))}"><span class="SubtitleLinkText">${markdownIcon} View as Markdown</span></a>${page.route.includes('/components/') ? `<a class="SubtitleLink" href="https://github.com/mui/base-ui/blob/${page.provenance.sourceSha}/${escape(page.source)}"><span class="SubtitleLinkText">${githubIcon} View source</span></a>` : ''}</div>`, { class: 'Subtitle' });
+          case 'subtitle': return tag('div', `<div>${children()}</div><div class="SubtitleLinks"><a class="SubtitleLink" href="${escape(localUrl(page.route + '.md',base))}"><span class="SubtitleLinkText">${markdownIcon} View as Markdown</span></a>${page.route.includes('/components/') ? `<a class="SubtitleLink" href="${repository}/tree/HEAD/packages/solid/src/${escape(page.route.split('/').at(-1))}"><span class="SubtitleLinkText">${githubIcon} View Solid source</span></a>` : ''}</div>`, { class: 'Subtitle' });
           case 'html': {
             if (!nativeTags.has(node.name)) fail(`unsupported HTML tag ${node.name}`);
             const values = { ...attrs, ...(node.data?.hProperties ?? {}) };
@@ -106,7 +107,7 @@ export function renderPage(page, { base = '/', pages = [], demos = [], demoRefer
             if (!entry) return missing('api', node, `Generate Solid declarations for ${record.name} (${record.reference}) using bsolid-docs-api; no React tables are substituted.`);
             return renderApi(entry, attrs, renderedApi);
           }
-          case 'private-install-instructions': return '<aside class="SiteMissing"><strong>Private workspace package</strong><p>Use the locally built tarball of <code>baseui-solid2</code>. From the repository run <code>pnpm build:package</code>, then pack <code>packages/solid</code> and install that tarball in your consumer. No public npm release is claimed.</p></aside>';
+          case 'private-install-instructions': return `<p>Install the published alpha package: <code>pnpm add ${escape(publicIdentity.name)} solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13</code>. See the <a href="${escape(localUrl('/solid/overview/quick-start', base))}">quick start</a> for compiler configuration.</p>`;
           case 'react-release-history': return `<p>Upstream React release history; these are not Solid releases.</p><ul>${pages.filter((p) => p.route.startsWith('/upstream/react/overview/releases/')).sort((a, b) => b.title.localeCompare(a.title, undefined, { numeric: true })).map((p) => `<li><a href="${escape(localUrl(p.route, base))}">${escape(p.title)}</a></li>`).join('')}</ul>`;
           case 'react-production-error': return node.name === 'ErrorCode' ? '<span>upstream React error</span>' : '<p>Consult the pinned upstream React error reference. This is not a Solid error-code catalog.</p>';
           default: fail(`unsupported MDX handler ${record.handler}`);

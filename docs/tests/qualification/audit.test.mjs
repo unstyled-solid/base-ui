@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { audit, binding } from '../../scripts/qualification/audit.mjs';
+import { audit, binding, formattedPage } from '../../scripts/qualification/audit.mjs';
+import { markdownPage } from '../../scripts/site/markdown.mjs';
 import { hash, sourceSha } from '../../scripts/qualification/io.mjs';
 import { extract, markdown } from '../../scripts/api/engine.mjs';
 import { generateCatalog } from '../../scripts/demos/catalog.mjs';
@@ -15,13 +16,14 @@ async function fixture(t) {
   for (const directory of ['docs/site','docs/content','docs/scripts/site','docs/scripts/api','docs/scripts/demos','docs/scripts/qualification','docs/tests','docs/patches']) await fs.mkdir(path.join(root,directory),{recursive:true});
   for (const file of ['package.json','pnpm-lock.yaml','docs/package.json','docs/vite.config.ts','docs/tsconfig.json','docs/tsconfig.demos.json']) await put(file,'{}');
   const source='docs/src/app/(docs)/react/components/button/page.mdx';
-  const page={schemaVersion:1,source,route:'/solid/components/button',publishable:true,provenance:{sourceSha,sourceSha256:hash('# Button\n')},semanticOverlay:{version:1,pending:[]},title:'Button',nodes:[],headings:[{properties:{id:'button'}}],ast:{type:'root',children:[{type:'heading',depth:1,children:[{type:'text',value:'Button'}]}]}};
+  const page={schemaVersion:1,source,route:'/solid/components/button',publishable:true,provenance:{sourceSha,sourceSha256:hash('# Button\n')},semanticOverlay:{version:1,pending:[]},title:'Button',metadata:{},adaptations:[],nodes:[],headings:[{properties:{id:'button'},location:`${source}:1:1`}],ast:{type:'root',children:[{type:'heading',depth:1,children:[{type:'text',value:'Button'}]}]}};
   await put('upstream/base-ui/'+source,'# Button\n');await put('docs/upstream/generated/pages/button.json',page);
   await put('upstream/base-ui/LICENSE','fixture MIT\n');await put('docs/generated/site/dist/LICENSE.txt','fixture MIT\n');
   const manifest={schemaVersion:1,sourceSha,pages:[{route:page.route,source,destination:'docs/upstream/generated/pages/button.json',sha256:hash(await fs.readFile(path.join(root,'docs/upstream/generated/pages/button.json')))}]};
   await put('docs/upstream-manifest.json',manifest);
   await put('distribution/exports.json',{exports:{'./button':{target:'./src/button/index.ts'}}});
   await put('packages/solid/package.json',{name:'baseui-solid2',version:'0.0.0',private:true});
+  await put('distribution/package-contract.json',{identity:{publicationName:'@unstyled-solid/base-ui',version:'0.0.1'}});
   await put('packages/solid/src/button/index.ts','export const answer = 42;');
   await put('packages/solid/build/types/button/index.d.ts','export declare const answer: 42;');
   const api=await extract({root,entries:[{entrypoint:'./button',file:path.join(root,'packages/solid/build/types/button/index.d.ts')}]});
@@ -35,8 +37,8 @@ async function fixture(t) {
   await put('docs/generated/demos/catalog.json',await generateCatalog(root));
   const report={schemaVersion:1,sourceSha,base:'/',routes:[{route:page.route,source,file:'solid/components/button/index.html',publishable:true}],issues:[],blockers:[]};
   await put('docs/generated/site/report.json',report);
-  await put('docs/generated/site/solid/components/button.md','# Button\n\n');
-  await put('docs/generated/site/dist/solid/components/button/index.html',`<!doctype html><html><head><title>Button</title><link rel="canonical" href="https://example.org/solid/components/button"></head><body><main><h1 id="button">Button</h1><a href="#button">Button</a><footer class="SiteFooter">baseui-solid2 0.0.0 · Solid 2.0.0-rc.13<a href="https://github.com/mui/base-ui/tree/${sourceSha}">Upstream</a></footer></main></body></html>`);
+  await put('docs/generated/site/solid/components/button.md', markdownPage(await formattedPage(structuredClone(page)), { api, demos: [], demoReferences: {} }));
+  await put('docs/generated/site/dist/solid/components/button/index.html',`<!doctype html><html><head><title>Button</title><link rel="canonical" href="https://example.org/solid/components/button"></head><body><main><h1 id="button">Button</h1><a href="#button">Button</a><footer class="SiteFooter">@unstyled-solid/base-ui 0.0.1 · Solid 2.0.0-rc.13<a href="https://github.com/mui/base-ui/tree/${sourceSha}">Upstream</a></footer></main></body></html>`);
   return {root,put,manifest,report,api};
 }
 test('complete inventory/output fixture still fails without execution, never treating build success as coverage',async t=>{

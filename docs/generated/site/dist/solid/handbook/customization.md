@@ -1,8 +1,10 @@
+<a id="customization"></a>
+
 # Customization
 
 A guide to customizing the behavior of Base UI components.
 
-
+<a id="base-ui-events"></a>
 
 ## Base UI events
 
@@ -30,12 +32,14 @@ interface BaseUIChangeEventDetails {
 ```
 
 - `reason` is used to determine why the change event occurred, which can be useful to conditionally run certain side effects.
-Most IDEs show the possible string values after typing `reason === '`.
+  Most IDEs show the possible string values after typing `reason === '`.
 - `event` is the native DOM event that caused the change.
 - `cancel` stops the component from changing its internal state.
 - `allowPropagation` allows the DOM event to propagate in cases where Base UI stops the propagation.
 - `isCanceled` indicates whether the change event has been canceled.
 - `isPropagationAllowed` indicates whether the DOM event is allowed to propagate.
+
+<a id="canceling-a-base-ui-event"></a>
 
 ### Canceling a Base UI event
 
@@ -57,11 +61,11 @@ An event can be canceled with the `cancel()` method on `eventDetails`:
 This lets you leave the component uncontrolled as its internal state is prevented from updating.
 This is an alternative to controlling the component with external state and guarding the state updates conditionally.
 
+<a id="allowing-propagation-of-the-dom-event"></a>
+
 ### Allowing propagation of the DOM event
 
-In most components, pressing the Esc
-
- key stops the propagation of the event so parent popups don't close simultaneously.
+In most components, pressing the <kbd>Esc</kbd> key stops the propagation of the event so parent popups don't close simultaneously.
 This can also be customized with the `allowPropagation()` method:
 
 ```tsx
@@ -77,6 +81,8 @@ This can also be customized with the `allowPropagation()` method:
 </Tooltip.Root>;
 ```
 
+<a id="preventing-base-ui-from-handling-a-react-event"></a>
+
 ## Preventing Base UI from handling a native event
 
 To prevent Base UI from handling a native event like `onClick`, you can use the `preventBaseUIHandler()` method on the event object:
@@ -91,6 +97,8 @@ To prevent Base UI from handling a native event like `onClick`, you can use the
 
 This should be used as an escape hatch in cases where there isn't a prop yet to customize the behavior.
 This method applies to native DOM events passed through Base UI handlers; it does not cancel a change event or prevent the browser default.
+
+<a id="controlling-components-with-state"></a>
 
 ## Controlling components with state
 

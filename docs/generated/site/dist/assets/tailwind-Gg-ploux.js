@@ -1,0 +1,154 @@
+var e=`// Adapted from Base UI (MIT), 19511bb171f3b360b006c94cf6d07e53cb446505.
+import { createSignal, onCleanup, onSettled, untrack, For } from 'solid-js';
+import type { JSX } from '@solidjs/web';
+import { Autocomplete } from 'baseui-solid2/autocomplete';
+import { createVirtualizer, type DemoVirtualizer } from '../../virtualizer';
+
+export default function ExampleVirtualizedAutocomplete() {
+  const virtualizerRef: { current: DemoVirtualizer | null } = { current: null };
+
+  return (
+    <Autocomplete.Root
+      virtualized
+      items={virtualizedItems}
+      openOnInputClick
+      itemToStringValue={getItemLabel}
+      onItemHighlighted={(item, { reason, index }) => {
+        const virtualizer = virtualizerRef.current;
+
+        if (!item || !virtualizer) {
+          return;
+        }
+
+        const isStart = index === 0;
+        const isEnd = index === virtualizer.options.count - 1;
+        // \`imperative-action\` can jump anywhere in the list, so it always needs a scroll:
+        // unlike the arrow keys it can target an item that is not currently rendered.
+        const shouldScroll =
+          reason === 'none' ||
+          reason === 'imperative-action' ||
+          (reason === 'keyboard' && (isStart || isEnd));
+
+        if (shouldScroll) {
+          queueMicrotask(() => {
+            virtualizer.scrollToIndex(index, { align: isEnd ? 'start' : 'end' });
+          });
+        }
+      }}
+    >
+      <label class="flex flex-col gap-1 text-sm font-bold text-neutral-950 dark:text-white">
+        Search 10,000 items
+        <Autocomplete.Input class="h-8 w-[16rem] border border-neutral-950 bg-white dark:bg-neutral-950 px-2 text-sm any-pointer-coarse:text-base font-normal text-neutral-950 focus:outline-2 focus:-outline-offset-1 focus:outline-neutral-950 dark:focus:outline-white dark:border-white dark:text-white" />
+      </label>
+
+      <Autocomplete.Portal>
+        <Autocomplete.Positioner class="outline-hidden" sideOffset={4}>
+          <Autocomplete.Popup class="w-[var(--anchor-width)] max-w-[var(--available-width)] border border-neutral-950 bg-white text-neutral-950 shadow-[0.25rem_0.25rem_0] shadow-black/12 dark:border-white dark:bg-neutral-950 dark:text-white dark:shadow-none">
+            <Autocomplete.Empty>
+              <div class="py-3 px-2 text-sm leading-4 text-neutral-500 dark:text-neutral-400">
+                No items found.
+              </div>
+            </Autocomplete.Empty>
+            <Autocomplete.List class="p-0">
+              <VirtualizedList virtualizerRef={virtualizerRef} />
+            </Autocomplete.List>
+          </Autocomplete.Popup>
+        </Autocomplete.Positioner>
+      </Autocomplete.Portal>
+    </Autocomplete.Root>
+  );
+}
+
+function VirtualizedList({
+  virtualizerRef,
+}: {
+  virtualizerRef: { current: DemoVirtualizer | null };
+}) {
+  const filteredItems = Autocomplete.useFilteredItems<VirtualizedItem>();
+
+  const [scrollElement, setScrollElement] = createSignal<HTMLDivElement | null>(null);
+
+  const virtualizer = createVirtualizer({
+    count: () => filteredItems().length,
+    getScrollElement: scrollElement,
+    estimateSize: () => 32,
+    overscan: 20,
+    paddingStart: 4,
+    paddingEnd: 4,
+    scrollPaddingEnd: 4,
+    scrollPaddingStart: 4,
+  });
+
+  virtualizerRef.current = virtualizer;
+  onCleanup(() => { virtualizerRef.current = null; });
+
+  const handleScrollElementRef = (
+    (element: HTMLDivElement | null) => {
+      setScrollElement(element);
+    }
+  );
+
+  const totalSize = () => virtualizer.getTotalSize();
+
+
+  return (
+    <div
+      role="presentation"
+      hidden={filteredItems().length === 0}
+      ref={handleScrollElementRef}
+      class="h-[min(22.5rem,var(--total-size))] max-h-[var(--available-height)] overflow-auto overscroll-contain scroll-py-1"
+      style={{ '--total-size': \`\${totalSize()}px\` } as JSX.CSSProperties}
+    >
+      <div role="presentation" class="relative w-full" style={{ height: \`\${totalSize()}px\` }}>
+        <For each={virtualizer.getVirtualItems()} keyed={(row) => row.key}>{(virtualItem) => {
+          // Core's default key IS the index; this row owner cannot change index.
+          const index = untrack(() => virtualItem().index);
+          const item = () => filteredItems()[index];
+          let element: HTMLDivElement | undefined;
+          onSettled(() => {
+            if (element) virtualizer.measureElement(element);
+            return () => virtualizer.measureElement(null);
+          });
+          return <div role="presentation" style={{ display: 'contents' }}>
+            <Autocomplete.Item
+              index={index}
+              data-index={index}
+              ref={(node) => { element = node; }}
+              value={item()}
+              class="flex cursor-default py-2 pr-2 pl-2 text-sm leading-4 outline-hidden select-none data-highlighted:relative data-highlighted:z-0 data-highlighted:text-white data-highlighted:before:absolute data-highlighted:before:inset-x-0 data-highlighted:before:inset-y-0 data-highlighted:before:z-[-1] data-highlighted:before:bg-neutral-950 dark:data-highlighted:text-neutral-950 dark:data-highlighted:before:bg-white"
+              aria-setsize={filteredItems().length}
+              aria-posinset={index + 1}
+              style={{
+                'box-sizing': 'border-box',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: \`\${virtualItem().size}px\`,
+                transform: \`translateY(\${virtualItem().start}px)\`,
+              }}
+            >
+              {item()?.name}
+            </Autocomplete.Item>
+          </div>;
+        }}</For>
+      </div>
+    </div>
+  );
+}
+
+interface VirtualizedItem {
+  id: string;
+  name: string;
+}
+
+function getItemLabel(item: VirtualizedItem | null) {
+  return item ? item.name : '';
+}
+
+const virtualizedItems: VirtualizedItem[] = Array.from({ length: 10000 }, (_, index) => {
+  const id = String(index + 1);
+  const indexLabel = id.padStart(4, '0');
+  return { id, name: \`Item \${indexLabel}\` };
+});
+`;export{e as default};

@@ -10594,7 +10594,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/filter.d.ts",
-            "line": 1,
+            "line": 3,
             "url": null
           }
         }
@@ -28080,7 +28080,7 @@
       "name": "Menu.useFilter",
       "source": {
         "file": "packages/solid/build/types/internals/filter.d.ts",
-        "line": 1,
+        "line": 3,
         "url": null
       },
       "props": [
@@ -28090,7 +28090,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/filter.d.ts",
-            "line": 1,
+            "line": 3,
             "url": null
           }
         }
@@ -59115,7 +59115,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/filter.d.ts",
-            "line": 1,
+            "line": 3,
             "url": null
           }
         }
@@ -76403,10 +76403,53 @@
     },
     {
       "entrypoint": "./internals/filter",
+      "name": "createFilterMatcher",
+      "source": {
+        "file": "packages/solid/build/types/internals/filter.d.ts",
+        "line": 2,
+        "url": null
+      },
+      "props": [
+        {
+          "name": "filter",
+          "description": "unavailable",
+          "default": "unavailable",
+          "source": {
+            "file": "packages/solid/build/types/internals/filter.d.ts",
+            "line": 2,
+            "url": null
+          }
+        },
+        {
+          "name": "query",
+          "description": "unavailable",
+          "default": "unavailable",
+          "source": {
+            "file": "packages/solid/build/types/internals/filter.d.ts",
+            "line": 2,
+            "url": null
+          }
+        },
+        {
+          "name": "itemToString",
+          "description": "unavailable",
+          "default": "unavailable",
+          "source": {
+            "file": "packages/solid/build/types/internals/filter.d.ts",
+            "line": 2,
+            "url": null
+          }
+        }
+      ],
+      "dataAttributes": [],
+      "cssVariables": []
+    },
+    {
+      "entrypoint": "./internals/filter",
       "name": "getFilter",
       "source": {
         "file": "packages/solid/build/types/internals/filter.d.ts",
-        "line": 1,
+        "line": 3,
         "url": null
       },
       "props": [
@@ -76416,7 +76459,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/filter.d.ts",
-            "line": 1,
+            "line": 3,
             "url": null
           }
         }
@@ -81218,7 +81261,7 @@
       "name": "Menu.useFilter",
       "source": {
         "file": "packages/solid/build/types/internals/filter.d.ts",
-        "line": 1,
+        "line": 3,
         "url": null
       },
       "props": [
@@ -81228,7 +81271,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/filter.d.ts",
-            "line": 1,
+            "line": 3,
             "url": null
           }
         }

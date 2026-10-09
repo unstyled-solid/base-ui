@@ -1,8 +1,8 @@
+<a id="v1-0-0-beta-6"></a>
+
 # v1.0.0-beta.6
 
 Nov 17, 2025
-
-
 
 This is a hotfix release with the following changes:
 

@@ -1,16 +1,18 @@
+<a id="v1-0-0-beta-2"></a>
+
 # v1.0.0-beta.2
 
 Jul 30, 2025
 
-
+<a id="general-changes"></a>
 
 ## General changes
 
 - Fix navigator checks and ensure safe platform retrieval ([#2273](https://github.com/mui/base-ui/pull/2273))
-- Prevent Space
-
- key default on keydown ([#2295](https://github.com/mui/base-ui/pull/2295))
+- Prevent <kbd>Space</kbd> key default on keydown ([#2295](https://github.com/mui/base-ui/pull/2295))
 - Check for `performance` existence on server ([#2316](https://github.com/mui/base-ui/pull/2316))
+
+<a id="accordion"></a>
 
 ## Accordion
 
@@ -18,20 +20,28 @@ Jul 30, 2025
 - Fix keyboard interactions with elements in the panel ([#2321](https://github.com/mui/base-ui/pull/2321))
 - Fix open transitions in Safari/Firefox ([#2327](https://github.com/mui/base-ui/pull/2327))
 
+<a id="alert-dialog"></a>
+
 ## Alert Dialog
 
 - Support `ShadowRoot` containers ([#2236](https://github.com/mui/base-ui/pull/2236))
 - Add `forceRender` prop to `Backdrop` part ([#2037](https://github.com/mui/base-ui/pull/2037))
 - Improve outside press behavior with touch input ([#2334](https://github.com/mui/base-ui/pull/2334))
 
+<a id="checkbox"></a>
+
 ## Checkbox
 
 - Fix focusing form controls with `inputRef` ([#2252](https://github.com/mui/base-ui/pull/2252))
+
+<a id="collapsible"></a>
 
 ## Collapsible
 
 - Destructure render prop ([#2323](https://github.com/mui/base-ui/pull/2323))
 - Fix open transitions in Safari/Firefox ([#2327](https://github.com/mui/base-ui/pull/2327))
+
+<a id="dialog"></a>
 
 ## Dialog
 
@@ -40,13 +50,19 @@ Jul 30, 2025
 - Improve outside press behavior with touch input ([#2334](https://github.com/mui/base-ui/pull/2334))
 - Use `click` event for outside press dismissal ([#2275](https://github.com/mui/base-ui/pull/2275))
 
+<a id="field"></a>
+
 ## Field
 
 - Deregister fields from `Form` when unmounting ([#2231](https://github.com/mui/base-ui/pull/2231))
 
+<a id="form"></a>
+
 ## Form
 
 - Deregister fields from `Form` when unmounting ([#2231](https://github.com/mui/base-ui/pull/2231))
+
+<a id="menu"></a>
 
 ## Menu
 
@@ -55,27 +71,37 @@ Jul 30, 2025
 - Improve outside press behavior with touch input ([#2334](https://github.com/mui/base-ui/pull/2334))
 - Close submenus when focus is lost by shift-tabbing ([#2290](https://github.com/mui/base-ui/pull/2290))
 
+<a id="menubar"></a>
+
 ## Menubar
 
 - Fix triggers role ([#2317](https://github.com/mui/base-ui/pull/2317))
+
+<a id="meter"></a>
 
 ## Meter
 
 - Fix ARIA attributes and update docs ([#2267](https://github.com/mui/base-ui/pull/2267))
 
+<a id="navigation-menu"></a>
+
 ## Navigation Menu
 
 - **Breaking change:** Support inlined nesting.
-Ensure the popup's `width` is set to `var(--popup-width)` unconditionally (without the media query) on the `.Popup` class.
-([#2269](https://github.com/mui/base-ui/pull/2269))
+  Ensure the popup's `width` is set to `var(--popup-width)` unconditionally (without the media query) on the `.Popup` class.
+  ([#2269](https://github.com/mui/base-ui/pull/2269))
 - Avoid double `useRenderElement` passes ([#2256](https://github.com/mui/base-ui/pull/2256))
 - Add `useButton` integration to `Trigger` ([#2296](https://github.com/mui/base-ui/pull/2296))
 - Fix popup size transitions on iOS ([#2387](https://github.com/mui/base-ui/pull/2387))
+
+<a id="number-field"></a>
 
 ## Number Field
 
 - Remove `invalid` prop ([#2315](https://github.com/mui/base-ui/pull/2315))
 - Fix button disabled state only including root disabled state ([#2268](https://github.com/mui/base-ui/pull/2268))
+
+<a id="popover"></a>
 
 ## Popover
 
@@ -84,13 +110,19 @@ Ensure the popup's `width` is set to `var(--popup-width)` unconditionally (witho
 - Improve outside press behavior with touch input ([#2334](https://github.com/mui/base-ui/pull/2334))
 - Use `click` event for outside press dismissal ([#2275](https://github.com/mui/base-ui/pull/2275))
 
+<a id="preview-card"></a>
+
 ## Preview Card
 
 - Support `ShadowRoot` containers ([#2236](https://github.com/mui/base-ui/pull/2236))
 
+<a id="progress"></a>
+
 ## Progress
 
 - Fix ARIA attributes and update docs ([#2267](https://github.com/mui/base-ui/pull/2267))
+
+<a id="radio-group"></a>
 
 ## Radio Group
 
@@ -99,9 +131,13 @@ Ensure the popup's `width` is set to `var(--popup-width)` unconditionally (witho
 - Fix focusing form controls with `inputRef` ([#2252](https://github.com/mui/base-ui/pull/2252))
 - Avoid double `useRenderElement` passes ([#2256](https://github.com/mui/base-ui/pull/2256))
 
+<a id="scroll-area"></a>
+
 ## Scroll Area
 
 - Disable `user-select` on scrollbar and non-main button interactions ([#2338](https://github.com/mui/base-ui/pull/2338))
+
+<a id="select"></a>
 
 ## Select
 
@@ -115,26 +151,38 @@ Ensure the popup's `width` is set to `var(--popup-width)` unconditionally (witho
 - Fix multiple ARIA behavior on touch ([#2333](https://github.com/mui/base-ui/pull/2333))
 - Improve outside press behavior with touch input ([#2334](https://github.com/mui/base-ui/pull/2334))
 
+<a id="slider"></a>
+
 ## Slider
 
 - Fix focusing form controls with `inputRef` ([#2252](https://github.com/mui/base-ui/pull/2252))
+
+<a id="toast"></a>
 
 ## Toast
 
 - Fix `promise` method timeout option handling ([#2294](https://github.com/mui/base-ui/pull/2294))
 - Make `<Toast.Viewport>` an announce container ([#2246](https://github.com/mui/base-ui/pull/2246))
 
+<a id="toggle"></a>
+
 ## Toggle
 
 - Avoid double `useRenderElement` passes ([#2256](https://github.com/mui/base-ui/pull/2256))
+
+<a id="toggle-group"></a>
 
 ## Toggle Group
 
 - Avoid double `useRenderElement` passes ([#2256](https://github.com/mui/base-ui/pull/2256))
 
+<a id="toolbar"></a>
+
 ## Toolbar
 
 - Avoid double `useRenderElement` passes ([#2256](https://github.com/mui/base-ui/pull/2256))
+
+<a id="tooltip"></a>
 
 ## Tooltip
 

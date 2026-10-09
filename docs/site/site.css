@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 @layer all, base, theme, components, utilities;
+
+/* Open Google Fonts replacements for the upstream proprietary typography.
+   Unlayered tokens also override the source theme inside isolated demos. */
+:root, [data-demo] {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-sans-b: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
 
 @layer base {
   body { margin: 0; font-family: var(--font-sans); }

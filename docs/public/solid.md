@@ -1,119 +1,30 @@
-# Solid
+<a id="react"></a>
 
-- Overview - (Index, [Outline](#overview), [Contents](/solid/overview))
-- Handbook - (Index, [Outline](#handbook), [Contents](/solid/handbook))
-- Components - (Index, [Outline](#components), [Contents](/solid/components))
-- Utils - (Index, [Outline](#utils), [Contents](/solid/utils))
+# Documentation
+
+Guides, components, and utilities for Base UI for Solid.
+
+<a id="overview"></a>
 
 ## Overview
 
-No description available
+[Read Overview](/solid/overview)
 
-Outline
-
-
-
-- Sections:
-
-- Quick start
-- Accessibility
-- Releases
-- Community
-- About Base UI
-
-
-
-[Read more](/solid/overview)
+<a id="handbook"></a>
 
 ## Handbook
 
-No description available
+[Read Handbook](/solid/handbook)
 
-Outline
-
-
-
-- Sections:
-
-- Styling
-- Animation
-- Composition
-- Customization
-- Forms
-- TypeScript
-
-
-
-[Read more](/solid/handbook)
+<a id="components"></a>
 
 ## Components
 
-No description available
+[Read Components](/solid/components)
 
-Outline
-
-
-
-- Sections:
-
-- Accordion
-- Alert Dialog
-- Autocomplete
-- Avatar
-- Button
-- Checkbox
-- Checkbox Group
-- Collapsible
-- Combobox
-- Context Menu
-- Dialog
-- Drawer
-- Field
-- Fieldset
-- Form
-- Input
-- Menu
-- Menubar
-- Meter
-- Navigation Menu
-- Number Field
-- OTP Field
-- Popover
-- Preview Card
-- Progress
-- Radio Group
-- Scroll Area
-- Select
-- Separator
-- Slider
-- Switch
-- Tabs
-- Toast
-- Toggle
-- Toggle Group
-- Toolbar
-- Tooltip
-
-
-
-[Read more](/solid/components)
+<a id="utils"></a>
 
 ## Utils
 
-No description available
-
-Outline
-
-
-
-- Sections:
-
-- CSP Provider
-- Direction Provider
-- mergeProps
-- useRender
-
-
-
-[Read more](/solid/utils)
+[Read Utils](/solid/utils)
 

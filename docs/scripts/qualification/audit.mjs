@@ -10,6 +10,10 @@ import { markdown as apiMarkdown, extract } from '../api/engine.mjs';
 import { generateCatalog } from '../demos/catalog.mjs';
 import { hash, read, json, walk, unique, sameKeys, sourceSha, safe } from './io.mjs';
 import { checkExecution } from './execution.mjs';
+import { preparePublicPages } from '../site/generate.mjs';
+import { publicApiCatalog } from '../site/release.mjs';
+import { renderPage, handlers } from '../site/render.mjs';
+import { reviewReleasePage } from '../site/review.mjs';
 export { requiredChecks } from './execution.mjs';
 
 export const root = fileURLToPath(new URL('../../../', import.meta.url)).replace(/\/$/, '');
@@ -44,20 +48,27 @@ export async function binding(repository, { site = 'docs/generated/site', artifa
 export async function markdownInventory(repository, { site = 'docs/generated/site' } = {}) {
   const manifest = await json(repository, 'docs/upstream-manifest.json');
   const api = await json(repository, 'docs/generated/api/catalog.json');
+  const viewApi = publicApiCatalog(api);
   const demos = await json(repository, 'docs/generated/demos/catalog.json');
   for (const [name, data] of [['manifest',manifest],['API',api],['demos',demos]]) if (data.schemaVersion !== 1 || data.sourceSha !== sourceSha) throw new Error(`${name}: unsupported schema/pin`);
   unique(manifest.pages, 'route', 'pages'); unique(api.modules, 'entrypoint', 'API');
   const files = [];
+  const sources = [];
   for (const record of manifest.pages) {
     const raw = await read(repository,record.destination);
     if (hash(raw) !== record.sha256) throw new Error(`Imported page hash mismatch: ${record.destination}`);
-    const page = await formattedPage(adaptPage(JSON.parse(raw)));
+    const page = JSON.parse(raw);
     if (page.route !== record.route || page.source !== record.source || page.provenance?.sourceSha !== sourceSha) throw new Error(`Page provenance mismatch: ${record.destination}`);
+    sources.push(page);
+  }
+  const pages = preparePublicPages(sources);
+  for (const original of pages) {
+    const page = await formattedPage(original);
     const destination = `${page.route.slice(1)}.md`;
     safe(repository, destination);
     const source = `${site}/${destination}`;
     const bytes = await read(repository, source);
-    if (!bytes.length || bytes.toString('utf8') !== markdownPage(page, { api, demos: demos.entries, demoReferences: demos.references })) throw new Error(`Stale/empty page Markdown: ${source}`);
+    if (!bytes.length || bytes.toString('utf8') !== markdownPage(page, { api: viewApi, pages, demos: demos.entries, demoReferences: demos.references })) throw new Error(`Stale/empty page Markdown: ${source}`);
     files.push({ source, destination, sha256: hash(bytes), bytes: bytes.length, route: page.route });
   }
   for (const module of api.modules) {
@@ -78,16 +89,23 @@ export async function audit({ repository = root, site = 'docs/generated/site', a
   const api = await attempt('API', () => json(repository, 'docs/generated/api/catalog.json'));
   const report = await attempt('site report', () => json(repository, `${site}/report.json`));
   const contract = await attempt('exports', () => json(repository, 'distribution/exports.json'));
-  const identity = await attempt('package identity', () => json(repository,'packages/solid/package.json'));
+  const identity = await attempt('package identity', async () => {
+    const { identity: contract } = await json(repository, 'distribution/package-contract.json');
+    return { name: contract.publicationName, version: contract.version };
+  });
   if (!manifest || !catalog || !api || !report || !contract || !identity) return { schemaVersion: 1, sourceSha, complete: false, counts, failures };
   for (const [name, data] of [['manifest',manifest],['demos',catalog],['API',api],['site',report]]) if (data.sourceSha !== sourceSha || data.schemaVersion !== 1) failures.push(`${name}: unsupported schema/pin`);
   const pages = await attempt('pages', async () => unique(manifest.pages, 'route', 'pages'));
   const routes = await attempt('routes', async () => unique(report.routes, 'route', 'routes'));
   const modules = await attempt('modules', async () => unique(api.modules, 'entrypoint', 'API modules'));
   if (!pages || !routes || !modules) return { schemaVersion: 1, sourceSha, complete: false, counts, failures };
-  sameKeys(pages, routes, 'routes', failures);
+  const publicPages = await attempt('public overlays', async () => new Map(preparePublicPages(await Promise.all(manifest.pages.map(async record => JSON.parse(await read(repository, record.destination))))).map(page => [page.route, page])));
+  if (!publicPages) return { schemaVersion: 1, sourceSha, complete: false, counts, failures };
+  const viewApi = publicApiCatalog(api);
+  for (const [route, page] of publicPages) await attempt(`release review ${route}`, async () => publicPages.set(route, reviewReleasePage(page, { rendered: renderPage(page, { base: report.base, pages: [...publicPages.values()], api: viewApi, demos: catalog.entries, demoReferences: catalog.references }), handlers, api: viewApi })));
+  sameKeys(publicPages, routes, 'routes', failures);
   sameKeys(new Map(Object.keys(contract.exports).map(key => [key,true])), modules, 'API entrypoints', failures);
-  counts.pages = pages.size; counts.apiModules = modules.size;
+  counts.pages = publicPages.size; counts.apiModules = modules.size;
   await attempt('built MIT notice',async () => {
     if (!(await read(repository,`${artifact}/LICENSE.txt`)).equals(await read(repository,'upstream/base-ui/LICENSE'))) failures.push('Built docs MIT notice differs from the pinned original license');
   });
@@ -119,7 +137,7 @@ export async function audit({ repository = root, site = 'docs/generated/site', a
   for (const [route, record] of pages) await attempt(route, async () => {
     const raw = await read(repository, record.destination);
     if (hash(raw) !== record.sha256) failures.push(`${route}: imported page hash mismatch`);
-    const page = adaptPage(JSON.parse(raw));
+    const page = publicPages.get(route);
     if (page.route !== route || page.source !== record.source || page.provenance.sourceSha !== sourceSha) failures.push(`${route}: page provenance mismatch`);
     const source = await read(repository, `upstream/base-ui/${record.source}`);
     if (hash(source) !== page.provenance.sourceSha256) failures.push(`${route}: canonical source hash mismatch`);
@@ -140,7 +158,7 @@ export async function audit({ repository = root, site = 'docs/generated/site', a
     for (const heading of page.headings) if (!ids.has(heading.properties.id)) failures.push(`${route}: missing heading ${heading.properties.id}`);
     if (!doc.querySelector('main h1') || !doc.querySelector('head title') || !doc.querySelector('link[rel=canonical]')) failures.push(`${route}: incomplete static document`);
     if (doc.querySelector('[data-missing], [data-api-status]:not([data-api-status="generated"])')) failures.push(`${route}: placeholder integration`);
-    for (const node of page.sourceNodes ?? page.nodes ?? []) {
+    for (const node of page.nodes ?? []) {
       if (node.handler === 'demo') {
         const id = catalog.references?.[node.reference];
         if (id && ![...doc.querySelectorAll('[data-demo-id]')].some(host => host.dataset.demoId === id)) failures.push(`${route}: missing actual demo host ${id}`);
@@ -158,6 +176,19 @@ export async function audit({ repository = root, site = 'docs/generated/site', a
     }
     documents.set(route, { doc, dom });
   });
+  for (const [route, page] of publicPages) {
+    if (pages.has(route)) continue;
+    await attempt(route, async () => {
+      const entry = routes.get(route);
+      const expectedFile = `${route.slice(1)}/index.html`;
+      if (entry?.file !== expectedFile || entry.source !== page.source) failures.push(`${route}: authored route output/source mismatch`);
+      const dom = new JSDOM((await read(repository, `${artifact}/${expectedFile}`)).toString('utf8'));
+      const doc = dom.window.document;
+      for (const heading of page.headings) if (!doc.getElementById(heading.properties.id)) failures.push(`${route}: missing authored heading ${heading.properties.id}`);
+      if (!doc.querySelector('main h1') || !doc.querySelector('link[rel=canonical]') || doc.querySelector('[data-missing]')) failures.push(`${route}: incomplete authored release document`);
+      documents.set(route, { doc, dom });
+    });
+  }
   // Every local destination and anchor in every actual HTML page is inspected.
   for (const [route, {doc}] of documents) for (const node of doc.querySelectorAll('a[href],link[href],img[src],script[src]')) await attempt(`link ${route}`, async () => {
     const value = node.getAttribute('href') ?? node.getAttribute('src');

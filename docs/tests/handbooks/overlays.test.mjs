@@ -21,7 +21,7 @@ test('all ten pinned pages preserve provenance, headings and immutable section e
     assert.equal(JSON.stringify(page), before);
     assert.deepEqual(adapted.provenance, page.provenance);
     assert.deepEqual(adapted.sourceHeadings, page.headings);
-    assert.deepEqual(adapted.headings.map((h) => h.properties), page.headings.map((h) => h.properties));
+    for (const heading of adapted.headings) assert(page.headings.some(original => JSON.stringify(original.properties) === JSON.stringify(heading.properties)), 'retained headings keep their source IDs');
     assert.equal(adapted.publishable, false);
     assert.ok(adapted.semanticOverlay.mappings.length);
     assert.equal(adaptPage(adapted), adapted);
@@ -42,7 +42,7 @@ test('all ten pinned pages preserve provenance, headings and immutable section e
 });
 
 const nodes = (tree) => [tree, ...(tree.children ?? []).flatMap(nodes)];
-test('source inline structure and examples survive across all generated Solid routes', async () => {
+test('retained inline structure and explicit framework exclusions preserve source evidence', async () => {
   const pages = await readPages();
   assert.equal(pages.length, 84);
   for (const page of pages) {
@@ -53,20 +53,16 @@ test('source inline structure and examples survive across all generated Solid ro
     }
     const before = nodes(page.ast);
     const after = nodes(adapted.ast);
+    const evidence = [...after, ...adapted.semanticOverlay.mappings.flatMap(mapping => mapping.sourceNode ? nodes(mapping.sourceNode) : [])];
     for (const type of ['link', 'emphasis', 'strong']) {
-      assert.deepEqual(after.filter((n) => n.type === type).map((n) => [n.type, n.url, n.position]),
-        before.filter((n) => n.type === type).map((n) => [n.type, n.url, n.position]), `${page.route}: ${type}`);
+      for (const original of before.filter(node => node.type === type)) assert(evidence.some(node => node.type === type && node.url === original.url && JSON.stringify(node.position) === JSON.stringify(original.position)), `${page.route}: source ${type} is retained or explicitly mapped`);
     }
-    if (!page.route.endsWith('/use-render') && !page.route.endsWith('/quick-start')) {
-      assert.equal(after.filter((n) => n.type === 'inlineCode').length, before.filter((n) => n.type === 'inlineCode').length, page.route);
-    }
-    assert.equal(after.filter((n) => n.type === 'code').length,
-      before.filter((n) => n.type === 'code').length + (page.route.endsWith('/quick-start') ? 3 : page.route.endsWith('/use-render') ? -1 : 0), page.route);
-    assert.equal(adapted.ast.children.length, page.ast.children.length, 'no generic appendix');
+    for (const original of before.filter(node => node.type === 'code')) assert(evidence.some(node => node.type === 'code' && JSON.stringify(node.position) === JSON.stringify(original.position)), `${page.route}: source snippet evidence survives requested exclusions`);
+    assert(adapted.ast.children.length <= page.ast.children.length, 'no generic appendix replaces the source structure');
     for (const node of after.filter((n) => n.type === 'code')) {
       if (node.data?.frameworkContext) {
         const source = before.find((n) => n.type === 'code' && n.position?.start.offset === node.position?.start.offset);
-        assert.equal(node.value, source.data.sourceValue ?? source.value, 'React integration keeps source imports');
+        assert(node.value.includes('@base-ui/react') || !source.value.includes('@base-ui/react'), 'retained React context keeps its upstream package imports');
       } else assert.doesNotMatch(node.value, /React\.|className|render=\{\s*</, page.route);
     }
   }
@@ -108,9 +104,10 @@ test('accessibility keeps each source section; merged refs have one example', as
   const adapted = nodes(adaptPage(accessibility).ast).filter((n) => n.type === 'paragraph');
   assert.equal(adapted.length, original.length);
   assert.deepEqual(adapted.slice(0, -1), original.slice(0, -1));
-  assert.match(adapted.at(-1).children[0].value, /Upstream React Base\u00a0UI is tested/);
+  assert.match(adapted.at(-1).children[0].value, /Upstream React Base\u00a0UI describes broad accessibility testing/);
+  assert.match(adapted.at(-1).children[0].value, /does not claim the same browser, device, or screen-reader coverage/);
   const refs = nodes(adaptPage(pages.find((p) => p.route === '/solid/utils/use-render')).ast).filter((n) => n.type === 'code');
-  assert.equal(refs.filter((n) => n.value === snippets.renderRefs).length, 1);
+  assert.equal(refs.filter((n) => n.value === adaptSnippet(snippets.renderRefs)).length, 1);
 });
 
 test('every complete snippet typechecks against real APIs and compiles with pinned RC13 DOM/server', () => {

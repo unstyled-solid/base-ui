@@ -1,19 +1,25 @@
+<a id="quick-start"></a>
+
 # Quick start
 
 A quick guide to getting started with Base UI.
 
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.1. [Project repository](https://github.com/unstyled-solid/base-ui).
 
+This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
+
+<a id="install-the-library"></a>
 
 ## Install the library
 
 Install Base UI using a package manager.
 
-In this pnpm workspace, install the private `baseui-solid2` package and its pinned Solid 2 peers:
+Install `@unstyled-solid/base-ui` and its pinned Solid 2 peers:
 
 ```sh
-rtk pnpm add baseui-solid2@workspace:*
-rtk pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
-rtk pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.13 @solidjs/babel-plugin@2.0.0-rc.13
+pnpm add @unstyled-solid/base-ui@0.0.1
+pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
+pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.13 @solidjs/babel-plugin@2.0.0-rc.13
 ```
 
 Configure the Solid Vite plugin and TypeScript JSX source:
@@ -33,9 +39,13 @@ export default defineConfig({ plugins: [solid({ compiler: 'babel' })] });
 }
 ```
 
-All components are included in a single workspace package. Tree-shaking is checked against packed consumers during distribution qualification.
+All components are included in a single package. Import individual component subpaths to use the components you need.
+
+<a id="set-up"></a>
 
 ## Set up
+
+<a id="portals"></a>
 
 ### Portals
 
@@ -57,6 +67,8 @@ To make portaled components always appear on top of the entire page, add the fol
 This style creates a separate stacking context for your application's `.root` element.
 This way, popups always appear above the page contents, and any `z-index` property in your styles won't interfere with them.
 
+<a id="ios-26-safari"></a>
+
 ### iOS 26+ Safari
 
 Starting with iOS 26, Safari allows content beneath the UI chrome to be visible. Backdrops such as those used by dialogs must use `position: absolute` instead of `position: fixed` to cover the entire visual viewport. For this to work after the page is scrolled, the following style must be added to your global styles:
@@ -67,24 +79,32 @@ body {
 }
 ```
 
+<a id="assemble-a-component"></a>
+
 ## Assemble a component
 
 This demo shows you how to import a [Popover](/solid/components/popover) component, assemble its parts, and apply styles.
 There are examples for both Tailwind and CSS Modules below, but since Base UI is unstyled, you can use CSS-in-JS, plain CSS, or any other styling solution you prefer.
 
-[Interactive example](/solid/overview/quick-start)
+[Open mounted Solid demo: popover/hero](/solid/overview/quick-start)
+
+<a id="pre-styled-components"></a>
 
 ## Pre-styled components
 
-[shadcn/ui](https://ui.shadcn.com/) provides pre-styled Solid components with higher-level abstractions built on upstream Base UI.
+[shadcn/ui](https://ui.shadcn.com/) provides pre-styled React components with higher-level abstractions built on upstream Base UI.
 
 Take a look at the [Community](/solid/overview/community) page to see more styled libraries in the upstream ecosystem.
+
+<a id="working-with-llms"></a>
 
 ## Working with LLMs
 
 For those of you working with LLMs, each docs page has a "View as Markdown" link at the top, which can be shared with AI chat assistants to help them understand Base UI concepts and component APIs.
 
 Additionally, there is an ["llms.txt"](/llms.txt) link in the "Handbook" section of the navigation sidebar, which you can feed to AI chat assistants to help them navigate the docs.
+
+<a id="next-steps"></a>
 
 ## Next steps
 

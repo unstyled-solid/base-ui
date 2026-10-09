@@ -1,6 +1,6 @@
 {
   "name": "baseui-solid2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "type": "module",
   "description": "Unstyled, accessible UI components for Solid 2, based on Base UI.",
@@ -8,85 +8,315 @@
   "sideEffects": false,
   "imports": {
     "#test-utils": "./test/index.ts",
-    "#prehydration/tabs/indicator": { "browser": "./src/tabs/indicator/prehydrationScript.stub.ts", "default": "./src/tabs/indicator/prehydrationScript.ts" },
-    "#prehydration/slider/thumb": { "browser": "./src/internals/prehydrationScript.stub.ts", "default": "./src/slider/thumb/prehydrationScript.ts" }
+    "#prehydration/tabs/indicator": {
+      "browser": "./src/tabs/indicator/prehydrationScript.stub.ts",
+      "default": "./src/tabs/indicator/prehydrationScript.ts"
+    },
+    "#prehydration/slider/thumb": {
+      "browser": "./src/internals/prehydrationScript.stub.ts",
+      "default": "./src/slider/thumb/prehydrationScript.ts"
+    }
   },
   "exports": {
-    ".": { "types": "./src/index.ts", "default": "./src/index.ts" },
-    "./accordion": { "types": "./src/accordion/index.ts", "default": "./src/accordion/index.ts" },
-    "./alert-dialog": { "types": "./src/alert-dialog/index.ts", "default": "./src/alert-dialog/index.ts" },
-    "./autocomplete": { "types": "./src/autocomplete/index.ts", "default": "./src/autocomplete/index.ts" },
-    "./avatar": { "types": "./src/avatar/index.ts", "default": "./src/avatar/index.ts" },
-    "./button": { "types": "./src/button/index.ts", "default": "./src/button/index.ts" },
-    "./checkbox": { "types": "./src/checkbox/index.ts", "default": "./src/checkbox/index.ts" },
-    "./checkbox-group": { "types": "./src/checkbox-group/index.ts", "default": "./src/checkbox-group/index.ts" },
-    "./collapsible": { "types": "./src/collapsible/index.ts", "default": "./src/collapsible/index.ts" },
-    "./combobox": { "types": "./src/combobox/index.ts", "default": "./src/combobox/index.ts" },
-    "./context-menu": { "types": "./src/context-menu/index.ts", "default": "./src/context-menu/index.ts" },
-    "./csp-provider": { "types": "./src/csp-provider/index.ts", "default": "./src/csp-provider/index.ts" },
-    "./dialog": { "types": "./src/dialog/index.ts", "default": "./src/dialog/index.ts" },
-    "./direction-provider": { "types": "./src/direction-provider/index.ts", "default": "./src/direction-provider/index.ts" },
-    "./drawer": { "types": "./src/drawer/index.ts", "default": "./src/drawer/index.ts" },
-    "./field": { "types": "./src/field/index.ts", "default": "./src/field/index.ts" },
-    "./fieldset": { "types": "./src/fieldset/index.ts", "default": "./src/fieldset/index.ts" },
-    "./form": { "types": "./src/form/index.ts", "default": "./src/form/index.ts" },
-    "./input": { "types": "./src/input/index.ts", "default": "./src/input/index.ts" },
-    "./menu": { "types": "./src/menu/index.ts", "default": "./src/menu/index.ts" },
-    "./menubar": { "types": "./src/menubar/index.ts", "default": "./src/menubar/index.ts" },
-    "./merge-props": { "types": "./src/merge-props/index.ts", "default": "./src/merge-props/index.ts" },
-    "./meter": { "types": "./src/meter/index.ts", "default": "./src/meter/index.ts" },
-    "./navigation-menu": { "types": "./src/navigation-menu/index.ts", "default": "./src/navigation-menu/index.ts" },
-    "./number-field": { "types": "./src/number-field/index.ts", "default": "./src/number-field/index.ts" },
-    "./otp-field": { "types": "./src/otp-field/index.ts", "default": "./src/otp-field/index.ts" },
-    "./popover": { "types": "./src/popover/index.ts", "default": "./src/popover/index.ts" },
-    "./preview-card": { "types": "./src/preview-card/index.ts", "default": "./src/preview-card/index.ts" },
-    "./progress": { "types": "./src/progress/index.ts", "default": "./src/progress/index.ts" },
-    "./radio": { "types": "./src/radio/index.ts", "default": "./src/radio/index.ts" },
-    "./radio-group": { "types": "./src/radio-group/index.ts", "default": "./src/radio-group/index.ts" },
-    "./scroll-area": { "types": "./src/scroll-area/index.ts", "default": "./src/scroll-area/index.ts" },
-    "./select": { "types": "./src/select/index.ts", "default": "./src/select/index.ts" },
-    "./separator": { "types": "./src/separator/index.ts", "default": "./src/separator/index.ts" },
-    "./slider": { "types": "./src/slider/index.ts", "default": "./src/slider/index.ts" },
-    "./switch": { "types": "./src/switch/index.ts", "default": "./src/switch/index.ts" },
-    "./tabs": { "types": "./src/tabs/index.ts", "default": "./src/tabs/index.ts" },
-    "./toast": { "types": "./src/toast/index.ts", "default": "./src/toast/index.ts" },
-    "./toggle": { "types": "./src/toggle/index.ts", "default": "./src/toggle/index.ts" },
-    "./toggle-group": { "types": "./src/toggle-group/index.ts", "default": "./src/toggle-group/index.ts" },
-    "./toolbar": { "types": "./src/toolbar/index.ts", "default": "./src/toolbar/index.ts" },
-    "./tooltip": { "types": "./src/tooltip/index.ts", "default": "./src/tooltip/index.ts" },
-    "./types": { "types": "./src/types/index.ts" },
-    "./unstable-use-media-query": { "types": "./src/unstable-use-media-query/index.ts", "default": "./src/unstable-use-media-query/index.ts" },
-    "./use-render": { "types": "./src/use-render/index.ts", "default": "./src/use-render/index.ts" },
-    "./internals/composite": { "types": "./src/internals/composite/index.ts", "default": "./src/internals/composite/index.ts" },
-    "./internals/csp-context": { "types": "./src/internals/csp-context/index.ts", "default": "./src/internals/csp-context/index.ts" },
-    "./internals/direction-context": { "types": "./src/internals/direction-context/index.ts", "default": "./src/internals/direction-context/index.ts" },
-    "./internals/field-constants": { "types": "./src/internals/field-constants/index.ts", "default": "./src/internals/field-constants/index.ts" },
-    "./internals/field-register-control": { "types": "./src/internals/field-register-control/index.ts", "default": "./src/internals/field-register-control/index.ts" },
-    "./internals/field-root-context": { "types": "./src/internals/field-root-context/index.ts", "default": "./src/internals/field-root-context/index.ts" },
-    "./internals/form-context": { "types": "./src/internals/form-context/index.ts", "default": "./src/internals/form-context/index.ts" },
-    "./internals/labelable-provider": { "types": "./src/internals/labelable-provider/index.ts", "default": "./src/internals/labelable-provider/index.ts" },
-    "./internals/use-button": { "types": "./src/internals/use-button/index.ts", "default": "./src/internals/use-button/index.ts" },
-    "./internals/constants": { "types": "./src/internals/constants.ts", "default": "./src/internals/constants.ts" },
-    "./internals/createBaseUIEventDetails": { "types": "./src/internals/createBaseUIEventDetails.ts", "default": "./src/internals/createBaseUIEventDetails.ts" },
-    "./internals/filter": { "types": "./src/internals/filter.ts", "default": "./src/internals/filter.ts" },
-    "./internals/itemEquality": { "types": "./src/internals/itemEquality.ts", "default": "./src/internals/itemEquality.ts" },
-    "./internals/getDisabledMountTransitionStyles": { "types": "./src/internals/getDisabledMountTransitionStyles.ts", "default": "./src/internals/getDisabledMountTransitionStyles.ts" },
-    "./internals/getStateAttributesProps": { "types": "./src/internals/getStateAttributesProps.ts", "default": "./src/internals/getStateAttributesProps.ts" },
-    "./internals/noop": { "types": "./src/internals/noop.ts", "default": "./src/internals/noop.ts" },
-    "./internals/reasons": { "types": "./src/internals/reasons.ts", "default": "./src/internals/reasons.ts" },
-    "./internals/resolveValueLabel": { "types": "./src/internals/resolveValueLabel.ts", "default": "./src/internals/resolveValueLabel.ts" },
-    "./internals/RequestQueue": { "types": "./src/internals/RequestQueue.ts", "default": "./src/internals/RequestQueue.ts" },
-    "./internals/serializeValue": { "types": "./src/internals/serializeValue.ts", "default": "./src/internals/serializeValue.ts" },
-    "./internals/stateAttributesMapping": { "types": "./src/internals/stateAttributesMapping.ts", "default": "./src/internals/stateAttributesMapping.ts" },
-    "./internals/TimeoutManager": { "types": "./src/internals/TimeoutManager.ts", "default": "./src/internals/TimeoutManager.ts" },
-    "./internals/useBaseUiId": { "types": "./src/internals/createBaseUiId.ts", "default": "./src/internals/createBaseUiId.ts" },
-    "./internals/useAnchorPositioning": { "types": "./src/internals/createAnchorPositioning.ts", "default": "./src/internals/createAnchorPositioning.ts" },
-    "./internals/useAnimationsFinished": { "types": "./src/internals/createAnimationsFinished.ts", "default": "./src/internals/createAnimationsFinished.ts" },
-    "./internals/useOpenChangeComplete": { "types": "./src/internals/createOpenChangeComplete.ts", "default": "./src/internals/createOpenChangeComplete.ts" },
-    "./internals/usePressAndHold": { "types": "./src/internals/createPressAndHold.ts", "default": "./src/internals/createPressAndHold.ts" },
-    "./internals/useRenderElement": { "types": "./src/internals/createRenderElement.tsx", "default": "./src/internals/createRenderElement.tsx" },
-    "./internals/useValueChanged": { "types": "./src/internals/createValueChanged.ts", "default": "./src/internals/createValueChanged.ts" },
-    "./internals/useTransitionStatus": { "types": "./src/internals/createTransitionStatus.ts", "default": "./src/internals/createTransitionStatus.ts" },
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./accordion": {
+      "types": "./src/accordion/index.ts",
+      "default": "./src/accordion/index.ts"
+    },
+    "./alert-dialog": {
+      "types": "./src/alert-dialog/index.ts",
+      "default": "./src/alert-dialog/index.ts"
+    },
+    "./autocomplete": {
+      "types": "./src/autocomplete/index.ts",
+      "default": "./src/autocomplete/index.ts"
+    },
+    "./avatar": {
+      "types": "./src/avatar/index.ts",
+      "default": "./src/avatar/index.ts"
+    },
+    "./button": {
+      "types": "./src/button/index.ts",
+      "default": "./src/button/index.ts"
+    },
+    "./checkbox": {
+      "types": "./src/checkbox/index.ts",
+      "default": "./src/checkbox/index.ts"
+    },
+    "./checkbox-group": {
+      "types": "./src/checkbox-group/index.ts",
+      "default": "./src/checkbox-group/index.ts"
+    },
+    "./collapsible": {
+      "types": "./src/collapsible/index.ts",
+      "default": "./src/collapsible/index.ts"
+    },
+    "./combobox": {
+      "types": "./src/combobox/index.ts",
+      "default": "./src/combobox/index.ts"
+    },
+    "./context-menu": {
+      "types": "./src/context-menu/index.ts",
+      "default": "./src/context-menu/index.ts"
+    },
+    "./csp-provider": {
+      "types": "./src/csp-provider/index.ts",
+      "default": "./src/csp-provider/index.ts"
+    },
+    "./dialog": {
+      "types": "./src/dialog/index.ts",
+      "default": "./src/dialog/index.ts"
+    },
+    "./direction-provider": {
+      "types": "./src/direction-provider/index.ts",
+      "default": "./src/direction-provider/index.ts"
+    },
+    "./drawer": {
+      "types": "./src/drawer/index.ts",
+      "default": "./src/drawer/index.ts"
+    },
+    "./field": {
+      "types": "./src/field/index.ts",
+      "default": "./src/field/index.ts"
+    },
+    "./fieldset": {
+      "types": "./src/fieldset/index.ts",
+      "default": "./src/fieldset/index.ts"
+    },
+    "./form": {
+      "types": "./src/form/index.ts",
+      "default": "./src/form/index.ts"
+    },
+    "./input": {
+      "types": "./src/input/index.ts",
+      "default": "./src/input/index.ts"
+    },
+    "./menu": {
+      "types": "./src/menu/index.ts",
+      "default": "./src/menu/index.ts"
+    },
+    "./menubar": {
+      "types": "./src/menubar/index.ts",
+      "default": "./src/menubar/index.ts"
+    },
+    "./merge-props": {
+      "types": "./src/merge-props/index.ts",
+      "default": "./src/merge-props/index.ts"
+    },
+    "./meter": {
+      "types": "./src/meter/index.ts",
+      "default": "./src/meter/index.ts"
+    },
+    "./navigation-menu": {
+      "types": "./src/navigation-menu/index.ts",
+      "default": "./src/navigation-menu/index.ts"
+    },
+    "./number-field": {
+      "types": "./src/number-field/index.ts",
+      "default": "./src/number-field/index.ts"
+    },
+    "./otp-field": {
+      "types": "./src/otp-field/index.ts",
+      "default": "./src/otp-field/index.ts"
+    },
+    "./popover": {
+      "types": "./src/popover/index.ts",
+      "default": "./src/popover/index.ts"
+    },
+    "./preview-card": {
+      "types": "./src/preview-card/index.ts",
+      "default": "./src/preview-card/index.ts"
+    },
+    "./progress": {
+      "types": "./src/progress/index.ts",
+      "default": "./src/progress/index.ts"
+    },
+    "./radio": {
+      "types": "./src/radio/index.ts",
+      "default": "./src/radio/index.ts"
+    },
+    "./radio-group": {
+      "types": "./src/radio-group/index.ts",
+      "default": "./src/radio-group/index.ts"
+    },
+    "./scroll-area": {
+      "types": "./src/scroll-area/index.ts",
+      "default": "./src/scroll-area/index.ts"
+    },
+    "./select": {
+      "types": "./src/select/index.ts",
+      "default": "./src/select/index.ts"
+    },
+    "./separator": {
+      "types": "./src/separator/index.ts",
+      "default": "./src/separator/index.ts"
+    },
+    "./slider": {
+      "types": "./src/slider/index.ts",
+      "default": "./src/slider/index.ts"
+    },
+    "./switch": {
+      "types": "./src/switch/index.ts",
+      "default": "./src/switch/index.ts"
+    },
+    "./tabs": {
+      "types": "./src/tabs/index.ts",
+      "default": "./src/tabs/index.ts"
+    },
+    "./toast": {
+      "types": "./src/toast/index.ts",
+      "default": "./src/toast/index.ts"
+    },
+    "./toggle": {
+      "types": "./src/toggle/index.ts",
+      "default": "./src/toggle/index.ts"
+    },
+    "./toggle-group": {
+      "types": "./src/toggle-group/index.ts",
+      "default": "./src/toggle-group/index.ts"
+    },
+    "./toolbar": {
+      "types": "./src/toolbar/index.ts",
+      "default": "./src/toolbar/index.ts"
+    },
+    "./tooltip": {
+      "types": "./src/tooltip/index.ts",
+      "default": "./src/tooltip/index.ts"
+    },
+    "./types": {
+      "types": "./src/types/index.ts"
+    },
+    "./unstable-use-media-query": {
+      "types": "./src/unstable-use-media-query/index.ts",
+      "default": "./src/unstable-use-media-query/index.ts"
+    },
+    "./use-render": {
+      "types": "./src/use-render/index.ts",
+      "default": "./src/use-render/index.ts"
+    },
+    "./internals/composite": {
+      "types": "./src/internals/composite/index.ts",
+      "default": "./src/internals/composite/index.ts"
+    },
+    "./internals/csp-context": {
+      "types": "./src/internals/csp-context/index.ts",
+      "default": "./src/internals/csp-context/index.ts"
+    },
+    "./internals/direction-context": {
+      "types": "./src/internals/direction-context/index.ts",
+      "default": "./src/internals/direction-context/index.ts"
+    },
+    "./internals/field-constants": {
+      "types": "./src/internals/field-constants/index.ts",
+      "default": "./src/internals/field-constants/index.ts"
+    },
+    "./internals/field-register-control": {
+      "types": "./src/internals/field-register-control/index.ts",
+      "default": "./src/internals/field-register-control/index.ts"
+    },
+    "./internals/field-root-context": {
+      "types": "./src/internals/field-root-context/index.ts",
+      "default": "./src/internals/field-root-context/index.ts"
+    },
+    "./internals/form-context": {
+      "types": "./src/internals/form-context/index.ts",
+      "default": "./src/internals/form-context/index.ts"
+    },
+    "./internals/labelable-provider": {
+      "types": "./src/internals/labelable-provider/index.ts",
+      "default": "./src/internals/labelable-provider/index.ts"
+    },
+    "./internals/use-button": {
+      "types": "./src/internals/use-button/index.ts",
+      "default": "./src/internals/use-button/index.ts"
+    },
+    "./internals/constants": {
+      "types": "./src/internals/constants.ts",
+      "default": "./src/internals/constants.ts"
+    },
+    "./internals/createBaseUIEventDetails": {
+      "types": "./src/internals/createBaseUIEventDetails.ts",
+      "default": "./src/internals/createBaseUIEventDetails.ts"
+    },
+    "./internals/filter": {
+      "types": "./src/internals/filter.ts",
+      "default": "./src/internals/filter.ts"
+    },
+    "./internals/itemEquality": {
+      "types": "./src/internals/itemEquality.ts",
+      "default": "./src/internals/itemEquality.ts"
+    },
+    "./internals/getDisabledMountTransitionStyles": {
+      "types": "./src/internals/getDisabledMountTransitionStyles.ts",
+      "default": "./src/internals/getDisabledMountTransitionStyles.ts"
+    },
+    "./internals/getStateAttributesProps": {
+      "types": "./src/internals/getStateAttributesProps.ts",
+      "default": "./src/internals/getStateAttributesProps.ts"
+    },
+    "./internals/noop": {
+      "types": "./src/internals/noop.ts",
+      "default": "./src/internals/noop.ts"
+    },
+    "./internals/reasons": {
+      "types": "./src/internals/reasons.ts",
+      "default": "./src/internals/reasons.ts"
+    },
+    "./internals/resolveValueLabel": {
+      "types": "./src/internals/resolveValueLabel.ts",
+      "default": "./src/internals/resolveValueLabel.ts"
+    },
+    "./internals/RequestQueue": {
+      "types": "./src/internals/RequestQueue.ts",
+      "default": "./src/internals/RequestQueue.ts"
+    },
+    "./internals/serializeValue": {
+      "types": "./src/internals/serializeValue.ts",
+      "default": "./src/internals/serializeValue.ts"
+    },
+    "./internals/stateAttributesMapping": {
+      "types": "./src/internals/stateAttributesMapping.ts",
+      "default": "./src/internals/stateAttributesMapping.ts"
+    },
+    "./internals/TimeoutManager": {
+      "types": "./src/internals/TimeoutManager.ts",
+      "default": "./src/internals/TimeoutManager.ts"
+    },
+    "./internals/useBaseUiId": {
+      "types": "./src/internals/createBaseUiId.ts",
+      "default": "./src/internals/createBaseUiId.ts"
+    },
+    "./internals/useAnchorPositioning": {
+      "types": "./src/internals/createAnchorPositioning.ts",
+      "default": "./src/internals/createAnchorPositioning.ts"
+    },
+    "./internals/useAnimationsFinished": {
+      "types": "./src/internals/createAnimationsFinished.ts",
+      "default": "./src/internals/createAnimationsFinished.ts"
+    },
+    "./internals/useOpenChangeComplete": {
+      "types": "./src/internals/createOpenChangeComplete.ts",
+      "default": "./src/internals/createOpenChangeComplete.ts"
+    },
+    "./internals/usePressAndHold": {
+      "types": "./src/internals/createPressAndHold.ts",
+      "default": "./src/internals/createPressAndHold.ts"
+    },
+    "./internals/useRenderElement": {
+      "types": "./src/internals/createRenderElement.tsx",
+      "default": "./src/internals/createRenderElement.tsx"
+    },
+    "./internals/useValueChanged": {
+      "types": "./src/internals/createValueChanged.ts",
+      "default": "./src/internals/createValueChanged.ts"
+    },
+    "./internals/useTransitionStatus": {
+      "types": "./src/internals/createTransitionStatus.ts",
+      "default": "./src/internals/createTransitionStatus.ts"
+    },
     "./internals/types": {
       "types": "./src/internals/types.ts"
     },

@@ -47,7 +47,9 @@ test('base paths, navigation and canonical metadata retain source order and sour
   assert.equal(doc.querySelector('link[rel=canonical]').href, 'https://docs.example.test/preview/solid/components/button');
   assert.equal(doc.querySelector('a[aria-current=page]').getAttribute('href'), '/preview/solid/components/button');
   assert.ok(doc.getElementById('anatomy'));
-  assert.equal(doc.querySelector('meta[name=robots]').content, 'noindex, nofollow');
+  assert.equal(doc.querySelector('meta[name=robots]'), null, 'release origin makes primary docs indexable');
+  const preview = new JSDOM(shell(button, '', { base: '/preview/', nav: navigation(pages), identity: { name: '@unstyled-solid/base-ui', version: '0.0.1' }, origin: 'https://docs.example.test', indexable: false })).window.document;
+  assert.equal(preview.querySelector('meta[name=robots]').content, 'noindex, follow');
 });
 test('compiler-token highlighting preserves source bytes as text and escapes executable HTML', () => {
   const raw = 'const s = "<script>alert(1)</script>"; // comment\n';

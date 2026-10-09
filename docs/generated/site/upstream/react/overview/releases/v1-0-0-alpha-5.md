@@ -1,93 +1,109 @@
+<a id="v1-0-0-alpha-5"></a>
+
 # v1.0.0-alpha.5
 
 Jan 10, 2025
 
-
+<a id="alertdialog"></a>
 
 ## AlertDialog
 
 - **Breaking change:** Require `Portal` part.
-The AlertDialog must explicitly include the Portal part wrapping the Popup.
-The `keepMounted` prop was removed from the Popup.
-It's only present on the Portal part.
-[#1222](https://github.com/mui/base-ui/pull/1222)
+  The AlertDialog must explicitly include the Portal part wrapping the Popup.
+  The `keepMounted` prop was removed from the Popup.
+  It's only present on the Portal part.
+  [#1222](https://github.com/mui/base-ui/pull/1222)
 - Don't call `onNestedDialogOpen` when unmounting a closed nested dialog [#1280](https://github.com/mui/base-ui/pull/1280)
 - Fix the nesting of different dialogs [#1167](https://github.com/mui/base-ui/pull/1167)
 - Remove `useFloating` call from the Popup [#1300](https://github.com/mui/base-ui/pull/1300)
 - Set `pointer-events` on `InternalBackdrop` based on `open` state [#1221](https://github.com/mui/base-ui/pull/1221)
 - Use internal backdrop for pointer modality [#1161](https://github.com/mui/base-ui/pull/1161)
+
+<a id="dialog"></a>
 
 ## Dialog
 
 - **Breaking change:** Require `Portal` part.
-The Dialog must explicitly include the Portal part wrapping the Popup.
-The `keepMounted` prop was removed from the Popup.
-It's only present on the Portal part.
-[#1222](https://github.com/mui/base-ui/pull/1222)
+  The Dialog must explicitly include the Portal part wrapping the Popup.
+  The `keepMounted` prop was removed from the Popup.
+  It's only present on the Portal part.
+  [#1222](https://github.com/mui/base-ui/pull/1222)
 - Don't call `onNestedDialogOpen` when unmounting a closed nested dialog [#1280](https://github.com/mui/base-ui/pull/1280)
 - Fix the nesting of different dialogs [#1167](https://github.com/mui/base-ui/pull/1167)
 - Remove `useFloating` call from the Popup [#1300](https://github.com/mui/base-ui/pull/1300)
 - Set `pointer-events` on `InternalBackdrop` based on `open` state [#1221](https://github.com/mui/base-ui/pull/1221)
 - Use internal backdrop for pointer modality [#1161](https://github.com/mui/base-ui/pull/1161)
 
+<a id="menu"></a>
+
 ## Menu
 
 - **Breaking change:** Require `Portal` part.
-The Menu must explicitly include the Portal part wrapping the Positioner.
-The `keepMounted` prop was removed from the Positioner.
-It's only present on the Portal part.
-[#1222](https://github.com/mui/base-ui/pull/1222)
+  The Menu must explicitly include the Portal part wrapping the Positioner.
+  The `keepMounted` prop was removed from the Positioner.
+  It's only present on the Portal part.
+  [#1222](https://github.com/mui/base-ui/pull/1222)
 - Apply `aria-hidden` to `Arrow` parts [#1196](https://github.com/mui/base-ui/pull/1196)
 - Fix `focusableWhenDisabled` components [#1313](https://github.com/mui/base-ui/pull/1313)
 - Fix `openOnHover` issues [#1191](https://github.com/mui/base-ui/pull/1191)
 - Fix closing the menu when clicking on checkboxitem/radioitem [#1301](https://github.com/mui/base-ui/pull/1301)
-- Fix Enter
-
- key preventDefault when rendering links [#1251](https://github.com/mui/base-ui/pull/1251)
+- Fix <kbd>Enter</kbd> key preventDefault when rendering links [#1251](https://github.com/mui/base-ui/pull/1251)
 - Handle pseudo-element bounds in mouseup detection [#1250](https://github.com/mui/base-ui/pull/1250)
 - Set `pointer-events` on `InternalBackdrop` based on `open` state [#1221](https://github.com/mui/base-ui/pull/1221)
 - Use internal backdrop for pointer modality [#1161](https://github.com/mui/base-ui/pull/1161)
+
+<a id="numberfield"></a>
 
 ## NumberField
 
 - Correctly handle quick touches [#1294](https://github.com/mui/base-ui/pull/1294)
 
+<a id="popover"></a>
+
 ## Popover
 
 - **Breaking change:** Require `Portal` part.
-The Popover must explicitly include the Portal part wrapping the Positioner.
-The `keepMounted` prop was removed from the Positioner.
-It's only present on the Portal part.
-[#1222](https://github.com/mui/base-ui/pull/1222)
+  The Popover must explicitly include the Portal part wrapping the Positioner.
+  The `keepMounted` prop was removed from the Positioner.
+  It's only present on the Portal part.
+  [#1222](https://github.com/mui/base-ui/pull/1222)
 - Apply `aria-hidden` to `Arrow` parts [#1196](https://github.com/mui/base-ui/pull/1196)
 - Fix PopoverTrigger and TooltipTrigger prop types [#1209](https://github.com/mui/base-ui/pull/1209)
+
+<a id="previewcard"></a>
 
 ## PreviewCard
 
 - **Breaking change:** Require `Portal` part.
-The PreviewCard must explicitly include the Portal part wrapping the Positioner.
-The `keepMounted` prop was removed from the Positioner.
-It's only present on the Portal part.
-[#1222](https://github.com/mui/base-ui/pull/1222)
+  The PreviewCard must explicitly include the Portal part wrapping the Positioner.
+  The `keepMounted` prop was removed from the Positioner.
+  It's only present on the Portal part.
+  [#1222](https://github.com/mui/base-ui/pull/1222)
 - Apply `aria-hidden` to `Arrow` parts [#1196](https://github.com/mui/base-ui/pull/1196)
 - Use `FloatingPortalLite` [#1278](https://github.com/mui/base-ui/pull/1278)
+
+<a id="progress"></a>
 
 ## Progress
 
 - Set zero width when value is zero [#1204](https://github.com/mui/base-ui/pull/1204)
+
+<a id="scrollarea"></a>
 
 ## ScrollArea
 
 - Differentiate `x`/`y` orientation `data-scrolling` [#1188](https://github.com/mui/base-ui/pull/1188)
 - Read `DirectionProvider` and use logical positioning CSS props [#1194](https://github.com/mui/base-ui/pull/1194)
 
+<a id="select"></a>
+
 ## Select
 
 - **Breaking change:** Require `Portal` part.
-The Select must explicitly include the Portal part wrapping the Positioner.
-The `keepMounted` prop was removed from the Positioner.
-It's only present on the Portal part.
-[#1222](https://github.com/mui/base-ui/pull/1222)
+  The Select must explicitly include the Portal part wrapping the Positioner.
+  The `keepMounted` prop was removed from the Positioner.
+  It's only present on the Portal part.
+  [#1222](https://github.com/mui/base-ui/pull/1222)
 - Allow `id` to be passed to trigger [#1174](https://github.com/mui/base-ui/pull/1174)
 - Fallback to standard positioning when pinch-zoomed in Safari [#1139](https://github.com/mui/base-ui/pull/1139)
 - Fix `focusableWhenDisabled` components [#1313](https://github.com/mui/base-ui/pull/1313)
@@ -95,9 +111,13 @@ It's only present on the Portal part.
 - Handle pseudo-element bounds in mouseup detection [#1250](https://github.com/mui/base-ui/pull/1250)
 - Use internal backdrop for pointer modality [#1161](https://github.com/mui/base-ui/pull/1161)
 
+<a id="separator"></a>
+
 ## Separator
 
 - Support vertical orientation [#1304](https://github.com/mui/base-ui/pull/1304)
+
+<a id="slider"></a>
 
 ## Slider
 
@@ -106,17 +126,21 @@ It's only present on the Portal part.
 - Set `position: relative` on range slider indicator [#1175](https://github.com/mui/base-ui/pull/1175)
 - Use un-rounded values to position thumbs [#1219](https://github.com/mui/base-ui/pull/1219)
 
+<a id="tabs"></a>
+
 ## Tabs
 
 - Expose width/height state in tabs indicator [#1288](https://github.com/mui/base-ui/pull/1288)
 
+<a id="tooltip"></a>
+
 ## Tooltip
 
 - **Breaking change:** Require `Portal` part.
-The Tooltip must explicitly include the Portal part wrapping the Positioner.
-The `keepMounted` prop was removed from the Positioner.
-It's only present on the Portal part.
-[#1222](https://github.com/mui/base-ui/pull/1222)
+  The Tooltip must explicitly include the Portal part wrapping the Positioner.
+  The `keepMounted` prop was removed from the Positioner.
+  It's only present on the Portal part.
+  [#1222](https://github.com/mui/base-ui/pull/1222)
 - Apply `aria-hidden` to `Arrow` parts [#1196](https://github.com/mui/base-ui/pull/1196)
 - Fix PopoverTrigger and TooltipTrigger prop types [#1209](https://github.com/mui/base-ui/pull/1209)
 - Use `FloatingPortalLite` [#1278](https://github.com/mui/base-ui/pull/1278)

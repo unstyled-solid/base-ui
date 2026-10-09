@@ -1,110 +1,142 @@
+<a id="v1-0-0-beta-3"></a>
+
 # v1.0.0-beta.3
 
 Sep 3, 2025
 
-
+<a id="general-changes"></a>
 
 ## General changes
 
 - **Breaking change:** Base UI event details.
-Custom event callbacks provide BaseUIChangeEventDetails object as their second parameter.
-This object contains the source event, reason and methods to customize the behavior (where applicable).
-For example, `onOpenChange(open, event, reason)` becomes `onOpenChange(open, eventDetails)`, where `eventDetails` contains `event` and `reason` properties.
-([#2382](https://github.com/mui/base-ui/pull/2382))
+  Custom event callbacks provide BaseUIChangeEventDetails object as their second parameter.
+  This object contains the source event, reason and methods to customize the behavior (where applicable).
+  For example, `onOpenChange(open, event, reason)` becomes `onOpenChange(open, eventDetails)`, where `eventDetails` contains `event` and `reason` properties.
+  ([#2382](https://github.com/mui/base-ui/pull/2382))
+
+<a id="alert-dialog"></a>
 
 ## Alert Dialog
 
 - **Breaking change:** Support `initialFocus` and `finalFocus` functions.
-The `initialFocus` and `finalFocus` props can be functions that return DOM elements to focus.
-This is a new feature for `finalFocus` and a breaking change for `initialFocus` as the element must be returned directly (not as a ref).
-([#2536](https://github.com/mui/base-ui/pull/2536))
+  The `initialFocus` and `finalFocus` props can be functions that return DOM elements to focus.
+  This is a new feature for `finalFocus` and a breaking change for `initialFocus` as the element must be returned directly (not as a ref).
+  ([#2536](https://github.com/mui/base-ui/pull/2536))
+
+<a id="autocomplete"></a>
 
 ## Autocomplete
 
 - New Autocomplete component ([#2105](https://github.com/mui/base-ui/pull/2105))
 
+<a id="checkbox"></a>
+
 ## Checkbox
 
 - Fix missing validity attributes when wrapped in `<Field>` ([#2572](https://github.com/mui/base-ui/pull/2572))
+
+<a id="combobox"></a>
 
 ## Combobox
 
 - New Combobox component ([#2105](https://github.com/mui/base-ui/pull/2105))
 
+<a id="context-menu"></a>
+
 ## Context Menu
 
 - Fix default offsets when `align="center"` or `side` differs ([#2601](https://github.com/mui/base-ui/pull/2601))
 
+<a id="dialog"></a>
+
 ## Dialog
 
 - **Breaking change:** Support `initialFocus` and `finalFocus` functions.
-The `initialFocus` and `finalFocus` props can be functions that return DOM elements to focus.
-This is a new feature for `finalFocus` and a breaking change for `initialFocus` as the element must be returned directly (not as a ref).
-([#2536](https://github.com/mui/base-ui/pull/2536))
+  The `initialFocus` and `finalFocus` props can be functions that return DOM elements to focus.
+  This is a new feature for `finalFocus` and a breaking change for `initialFocus` as the element must be returned directly (not as a ref).
+  ([#2536](https://github.com/mui/base-ui/pull/2536))
 - Restore focus to popup when focused element is removed ([#2479](https://github.com/mui/base-ui/pull/2479))
+
+<a id="field"></a>
 
 ## Field
 
 - Prevent defaultValue reset on focus for uncontrolled inputs ([#2543](https://github.com/mui/base-ui/pull/2543))
 - Allow `onValueChange` to fire when `defaultValue`/`value` are not set ([#2600](https://github.com/mui/base-ui/pull/2600))
 
+<a id="input"></a>
+
 ## Input
 
 - Allow `onValueChange` to fire when `defaultValue`/`value` are not set ([#2600](https://github.com/mui/base-ui/pull/2600))
 
+<a id="menu"></a>
+
 ## Menu
 
 - **Breaking change:** Fix `closeParentOnEsc` default value.
-The default value of `closeParentOnEsc` in Menu.SubmenuRoot is now false.
-When the Esc
-
- key is pressed in a Submenu, the Submenu closes, and the focus correctly moves to the SubmenuTrigger.
-([#2493](https://github.com/mui/base-ui/pull/2493))
+  The default value of `closeParentOnEsc` in Menu.SubmenuRoot is now false.
+  When the <kbd>Esc</kbd> key is pressed in a Submenu, the Submenu closes, and the focus correctly moves to the SubmenuTrigger.
+  ([#2493](https://github.com/mui/base-ui/pull/2493))
 - **Breaking change:** Support `initialFocus` and `finalFocus` functions.
-The `initialFocus` and `finalFocus` props can be functions that return DOM elements to focus.
-This is a new feature for `finalFocus` and a breaking change for `initialFocus` as the element must be returned directly (not as a ref).
-([#2536](https://github.com/mui/base-ui/pull/2536))
+  The `initialFocus` and `finalFocus` props can be functions that return DOM elements to focus.
+  This is a new feature for `finalFocus` and a breaking change for `initialFocus` as the element must be returned directly (not as a ref).
+  ([#2536](https://github.com/mui/base-ui/pull/2536))
 - Fix menu not opening when inside context menu trigger ([#2506](https://github.com/mui/base-ui/pull/2506))
 - Fix `transform-origin` variable calculation when Positioner `sideOffset` is a function ([#2511](https://github.com/mui/base-ui/pull/2511))
 - Fix submenu events ([#2483](https://github.com/mui/base-ui/pull/2483))
 - Fix `limitShift` offset based on arrow size ([#2571](https://github.com/mui/base-ui/pull/2571))
 
+<a id="navigation-menu"></a>
+
 ## Navigation Menu
 
 - **Breaking change:** Semantic element structure and `active` page prop.
-`<NavigationMenu.List>` renders `<ul>` and `<NavigationMenu.Item>` renders `<li>` by default.
-([#2526](https://github.com/mui/base-ui/pull/2526))
+  `<NavigationMenu.List>` renders `<ul>` and `<NavigationMenu.Item>` renders `<li>` by default.
+  ([#2526](https://github.com/mui/base-ui/pull/2526))
 - Unshare `AbortController` instance ([#2441](https://github.com/mui/base-ui/pull/2441))
 - Close on link click by default ([#2535](https://github.com/mui/base-ui/pull/2535))
+
+<a id="number-field"></a>
 
 ## Number Field
 
 - Fix duplicate `onValueChange` calls ([#2591](https://github.com/mui/base-ui/pull/2591))
 
+<a id="popover"></a>
+
 ## Popover
 
 - **Breaking change:** Support `initialFocus` and `finalFocus` functions.
-The `initialFocus` and `finalFocus` props can be functions that return DOM elements to focus.
-This is a new feature for `finalFocus` and a breaking change for `initialFocus` as the element must be returned directly (not as a ref).
-([#2536](https://github.com/mui/base-ui/pull/2536))
+  The `initialFocus` and `finalFocus` props can be functions that return DOM elements to focus.
+  This is a new feature for `finalFocus` and a breaking change for `initialFocus` as the element must be returned directly (not as a ref).
+  ([#2536](https://github.com/mui/base-ui/pull/2536))
 - Fix outside click after right clicking in popup ([#2508](https://github.com/mui/base-ui/pull/2508))
 - Fix unexpected close when nested inside two popovers ([#2481](https://github.com/mui/base-ui/pull/2481))
 - Fix `transform-origin` variable calculation when Positioner `sideOffset` is a function ([#2511](https://github.com/mui/base-ui/pull/2511))
 - Restore focus to popup when focused element is removed ([#2479](https://github.com/mui/base-ui/pull/2479))
 - Fix `limitShift` offset based on arrow size ([#2571](https://github.com/mui/base-ui/pull/2571))
 
+<a id="preview-card"></a>
+
 ## Preview Card
 
 - Fix `transform-origin` variable calculation when Positioner `sideOffset` is a function ([#2511](https://github.com/mui/base-ui/pull/2511))
 - Fix `limitShift` offset based on arrow size ([#2571](https://github.com/mui/base-ui/pull/2571))
 
+<a id="radio-group"></a>
+
 ## Radio Group
 
 - Return null in form data when no option selected ([#2473](https://github.com/mui/base-ui/pull/2473))
 
+<a id="scroll-area"></a>
+
 ## Scroll Area
 
 - Prevent pointer events from sibling portals triggering hover ([#2542](https://github.com/mui/base-ui/pull/2542))
+
+<a id="select"></a>
 
 ## Select
 
@@ -118,26 +150,34 @@ This is a new feature for `finalFocus` and a breaking change for `initialFocus` 
 - Fix scroll arrows not propagating scroll fully to start/end of list ([#2523](https://github.com/mui/base-ui/pull/2523))
 - Fix `limitShift` offset based on arrow size ([#2571](https://github.com/mui/base-ui/pull/2571))
 
+<a id="slider"></a>
+
 ## Slider
 
 - **Breaking change:** Instead of the thumb div, the `input type="range"` element receives focus. Focus styles that were targeting the thumb, should be updated.
-For example `.Thumb:focus-visible` should be replaced with `.Thumb:has(:focus-visible)`.
-The `tabIndex` prop is moved from Root to Thumb where it gets forwarded to the input.
-The thumb's `render` prop no longer contains the third `inputProps` argument; the input element is instead merged with children.
-([#2578](https://github.com/mui/base-ui/pull/2578))
+  For example `.Thumb:focus-visible` should be replaced with `.Thumb:has(:focus-visible)`.
+  The `tabIndex` prop is moved from Root to Thumb where it gets forwarded to the input.
+  The thumb's `render` prop no longer contains the third `inputProps` argument; the input element is instead merged with children.
+  ([#2578](https://github.com/mui/base-ui/pull/2578))
 - Reduce bundle size ([#2551](https://github.com/mui/base-ui/pull/2551))
 - Fix thumb `:focus-visible` with mixed keyboard and pointer modality ([#2584](https://github.com/mui/base-ui/pull/2584))
 - Add `index` prop to `<Slider.Thumb>` ([#2593](https://github.com/mui/base-ui/pull/2593))
+
+<a id="tabs"></a>
 
 ## Tabs
 
 - Fix tab size rounding ([#2488](https://github.com/mui/base-ui/pull/2488))
 - Fix highlight sync when focus is inside list ([#2487](https://github.com/mui/base-ui/pull/2487))
 
+<a id="tooltip"></a>
+
 ## Tooltip
 
 - Fix `transform-origin` variable calculation when Positioner `sideOffset` is a function ([#2511](https://github.com/mui/base-ui/pull/2511))
 - Fix `limitShift` offset based on arrow size ([#2571](https://github.com/mui/base-ui/pull/2571))
+
+<a id="userender"></a>
 
 ## useRender
 

@@ -15,6 +15,9 @@ test('source graph tracks package edges without traversing library internals and
   assert.equal(graph.files.length, 3);
   assert.equal(graph.files[0].bytes, (await fs.readFile(new URL('./fixtures/state.tsx', import.meta.url))).length);
   assert.equal(graph.files[0].sha256.length, 64);
+  assert.equal(graph.files[0].publicSource.sha256, graph.files[0].sha256);
+  assert.equal(graph.files[0].publicSource.bytes, graph.files[0].bytes);
+  assert.deepEqual(graph.files[0].publicSource.edits, []);
   await assert.rejects(sourceGraph(root, ['packages/solid/src/index.ts']), /boundary/);
   await assert.rejects(readSafe(root, '../outside'), /Unsafe/);
 });

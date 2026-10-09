@@ -9,8 +9,8 @@ import { json, read, safe, sourceSha, hash, walk, noSymlinks } from './io.mjs';
 // Copy already-generated Markdown; do not invent a second prose/API generator.
 export async function markdownLedger(repository = root, site = 'docs/generated/site') {
   const files = await markdownInventory(repository,{site});
-  const identity = await json(repository,'packages/solid/package.json');
-  return { schemaVersion: 1, stagingVersion: 'bsolid-markdown-stage/1', sourceSha, package: { name: identity.name, version: identity.version, private: identity.private }, inventorySha256: hash(JSON.stringify(files)), files };
+  const { identity } = await json(repository,'distribution/package-contract.json');
+  return { schemaVersion: 1, stagingVersion: 'bsolid-markdown-stage/1', sourceSha, package: { name: identity.publicationName, version: identity.version, private: false }, inventorySha256: hash(JSON.stringify(files)), files };
 }
 export async function stageMarkdown({ repository = root, site = 'docs/generated/site', destination = 'docs/public', check = false } = {}) {
   if (destination !== 'docs/public') throw new Error('Markdown staging destination must be docs/public (existing build contract)');

@@ -1,12 +1,16 @@
+<a id="v1-0-0-alpha-7"></a>
+
 # v1.0.0-alpha.7
 
 Mar 20, 2025
 
-
+<a id="accordion"></a>
 
 ## Accordion
 
 - Fix `aria-labelledby` on accordion panel ([#1544](https://github.com/mui/base-ui/pull/1544/))
+
+<a id="alertdialog"></a>
 
 ## AlertDialog
 
@@ -14,14 +18,20 @@ Mar 20, 2025
 - Fix non-interactive button disabled state ([#1473](https://github.com/mui/base-ui/pull/1473/))
 - `actionsRef` prop ([#1236](https://github.com/mui/base-ui/pull/1236/))
 
+<a id="avatar"></a>
+
 ## Avatar
 
 - Support cross origin in useImageLoadingStatus ([#1433](https://github.com/mui/base-ui/pull/1433/))
 - Add missing Avatar export ([#1428](https://github.com/mui/base-ui/pull/1428/))
 
+<a id="collapsible"></a>
+
 ## Collapsible
 
 - Update props destructuring to fix Trigger disabled state ([#1469](https://github.com/mui/base-ui/pull/1469/))
+
+<a id="dialog"></a>
 
 ## Dialog
 
@@ -29,9 +39,13 @@ Mar 20, 2025
 - Fix non-interactive button disabled state ([#1473](https://github.com/mui/base-ui/pull/1473/))
 - `actionsRef` prop ([#1236](https://github.com/mui/base-ui/pull/1236/))
 
+<a id="field"></a>
+
 ## Field
 
 - Fix `FieldControl` [data-filled] not reacting to external value changes ([#1565](https://github.com/mui/base-ui/pull/1565/))
+
+<a id="menu"></a>
 
 ## Menu
 
@@ -42,6 +56,8 @@ Mar 20, 2025
 - Fix prop merging issues ([#1445](https://github.com/mui/base-ui/pull/1445/))
 - Set `pointer-events: none` style on backdrops when hoverable ([#1351](https://github.com/mui/base-ui/pull/1351/))
 - `actionsRef` prop ([#1236](https://github.com/mui/base-ui/pull/1236/))
+
+<a id="numberfield"></a>
 
 ## NumberField
 
@@ -54,6 +70,8 @@ Mar 20, 2025
 - Add `locale` prop ([#1488](https://github.com/mui/base-ui/pull/1488/))
 - Improve virtual cursor perf ([#1485](https://github.com/mui/base-ui/pull/1485/))
 
+<a id="popover"></a>
+
 ## Popover
 
 - Ensure `stickIfOpen` is reset to `true` correctly ([#1548](https://github.com/mui/base-ui/pull/1548/))
@@ -63,15 +81,21 @@ Mar 20, 2025
 - `modal` prop ([#1459](https://github.com/mui/base-ui/pull/1459/))
 - `actionsRef` prop ([#1236](https://github.com/mui/base-ui/pull/1236/))
 
+<a id="previewcard"></a>
+
 ## PreviewCard
 
 - Set `pointer-events: none` style on backdrops when hoverable ([#1351](https://github.com/mui/base-ui/pull/1351/))
 - `actionsRef` prop ([#1236](https://github.com/mui/base-ui/pull/1236/))
 
+<a id="radiogroup"></a>
+
 ## RadioGroup
 
 - Fix `Form`/`Field` validation integration ([#1448](https://github.com/mui/base-ui/pull/1448/))
 - Handle modifier keys ([#1529](https://github.com/mui/base-ui/pull/1529/))
+
+<a id="select"></a>
 
 ## Select
 
@@ -83,25 +107,35 @@ Mar 20, 2025
 - Fix focus jump while hovering while navigating with keyboard ([#1563](https://github.com/mui/base-ui/pull/1563/))
 - Fix disabled state changing ([#1526](https://github.com/mui/base-ui/pull/1526/))
 
+<a id="slider"></a>
+
 ## Slider
 
 - Fix thumb positioning when controlled value violates min/max/step ([#1541](https://github.com/mui/base-ui/pull/1541/))
 - Warn when `min` is not less than `max` ([#1475](https://github.com/mui/base-ui/pull/1475/))
 - Narrow the type of `value` in callbacks ([#1241](https://github.com/mui/base-ui/pull/1241/))
 
+<a id="tabs"></a>
+
 ## Tabs
 
 - Fix keyboard navigation involving disabled Tabs ([#1449](https://github.com/mui/base-ui/pull/1449/))
 - Handle modifier keys ([#1529](https://github.com/mui/base-ui/pull/1529/))
 
+<a id="toolbar"></a>
+
 ## Toolbar
 
 - Add Toolbar components ([#1349](https://github.com/mui/base-ui/pull/1349/))
+
+<a id="tooltip"></a>
 
 ## Tooltip
 
 - `actionsRef` prop ([#1236](https://github.com/mui/base-ui/pull/1236/))
 - Fix `Provider` `delay=0` not being respected ([#1416](https://github.com/mui/base-ui/pull/1416/))
+
+<a id="userender"></a>
 
 ## useRender
 

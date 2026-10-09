@@ -1,0 +1,1 @@
+import{t as e}from"./os-BpXr-DAN.js";import{t}from"./createEnhancedClickHandler-BYdCctAn.js";function n(n,r){return t(()=>(t,i)=>{(typeof n==`function`?n():n)||r(i||(e.ios?`touch`:``))})}export{n as t};

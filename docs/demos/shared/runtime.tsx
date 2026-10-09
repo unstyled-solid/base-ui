@@ -10,8 +10,9 @@ export interface DemoRuntimeOptions {
 }
 const mounts = new WeakMap<HTMLElement, () => void>();
 const activeMounts = new Set<() => void>();
-const message = (error: unknown) =>
-  error instanceof Error ? error.message : String(error);
+// Verified GitHub HEAD containing every adapted catalog source file.
+const repositorySource = 'https://github.com/unstyled-solid/base-ui/blob/241d7cba64c63356e77128068a1f223352403c2a/';
+const supportURL = 'https://github.com/unstyled-solid/base-ui';
 
 // The site owns page navigation; module replacement must also release Solid roots.
 if (import.meta.hot)
@@ -113,9 +114,14 @@ export function mountDemo(
   mounts.set(host, dispose);
   activeMounts.add(dispose);
   const diagnostic = (error: unknown) => {
+    console.error('Documentation demo failed', error);
     const alert = doc.createElement('p');
     alert.setAttribute('role', 'alert');
-    alert.textContent = `Demo ${id} failed: ${message(error)}`;
+    alert.textContent = 'This demo could not load. Please try again or ';
+    const support = doc.createElement('a');
+    support.href = supportURL;
+    support.textContent = 'get support on GitHub';
+    alert.append(support, '.');
     return alert;
   };
   root.textContent = 'Loading demo…';
@@ -230,6 +236,12 @@ export function mountDemo(
       const pre = doc.createElement('pre');
       pre.className = 'DemoCode';
       pre.id = `${root.id}-source`;
+      const sourceLabel = doc.createElement('small');
+      sourceLabel.className = 'DemoStatus';
+      sourceLabel.id = `${root.id}-source-imports`;
+      sourceLabel.textContent = 'Public package imports';
+      sourceLabel.title = 'Displayed and copied TypeScript uses public npm package imports. Repository source uses workspace imports.';
+      sourceLabel.hidden = true;
       const code = doc.createElement('code');
       pre.append(code);
       pre.addEventListener('keydown', (event) => {
@@ -246,10 +258,11 @@ export function mountDemo(
       const sourceLink = doc.createElement('a');
       sourceLink.append(
         icon(doc, 'github'),
-        ' View source on GitHub ',
+        ' View repository source on GitHub ',
         icon(doc, 'external'),
       );
       sourceLink.className = 'DemoSourceLink';
+      sourceLink.title = 'Repository source uses workspace imports';
       sourceLink.target = '_blank';
       sourceLink.rel = 'noopener noreferrer';
       let selectedSource: string | undefined;
@@ -263,6 +276,8 @@ export function mountDemo(
         timers.delete(node);
         node.replaceChildren(icon(doc, 'copy'));
         if (node !== copyButton) node.append(' Copy link to source');
+        node.setAttribute('aria-label', node === copyButton ? 'Copy code' : 'Copy link to source');
+        node.title = node === copyButton ? 'Copy code' : 'Copy link to source';
       };
       cleanups.push(() => {
         for (const timer of timers.values())
@@ -287,16 +302,22 @@ export function mountDemo(
               resetFeedback(node);
               node.replaceChildren(icon(doc, 'check'));
               if (node !== copyButton) node.append(' Copy link to source');
+              node.setAttribute('aria-label', success);
+              node.title = success;
               status.textContent = success;
               const timer = doc.defaultView?.setTimeout(
-                () => resetFeedback(node),
+                () => {
+                  resetFeedback(node);
+                  if (status.textContent === success) status.textContent = '';
+                },
                 2000,
               );
               if (timer !== undefined) timers.set(node, timer);
             },
             (error) => {
+              console.error('Documentation copy failed', error);
               if (!disposed && token === sourceEpoch)
-                status.textContent = `Copy failed: ${message(error)}`;
+                status.textContent = 'Copy unavailable. Select the code to copy it manually.';
             },
           );
       };
@@ -452,13 +473,16 @@ export function mountDemo(
       desktop?.addEventListener('change', placeActions);
       cleanups.push(() => desktop?.removeEventListener('change', placeActions));
       placeActions();
-      codePanel.append(pre, copyButton, assetLink, reveal);
+      codePanel.append(sourceLabel, pre, copyButton, assetLink, reveal);
       root.append(playground, controls, codePanel, status);
       function choose(variantId: string) {
         if (disposed) return;
         const token = ++epoch;
         sourceEpoch++;
         selectedSource = undefined;
+        sourceLabel.hidden = true;
+        pre.removeAttribute('aria-describedby');
+        copyButton.removeAttribute('aria-describedby');
         copyButton.disabled = true;
         resetFeedback(copyButton);
         resetFeedback(copyLink);
@@ -480,16 +504,12 @@ export function mountDemo(
         }
         const Component = variant.component;
         preview.dataset.demo = variant.id;
-        sourceLink.href = `https://github.com/mui/base-ui/tree/19511bb171f3b360b006c94cf6d07e53cb446505/${entry.upstream.replace(/^(?:docs\/)?upstream\/base-ui\//, '').replace(/\/[^/]+$/, '')}/${variant.id === 'default' ? '' : variant.id}`;
+        sourceLink.removeAttribute('href');
         try {
           disposePreview = render(
             () => (
               <Errored
-                fallback={(error) => (
-                  <p role="alert">
-                    Demo {id} failed: {message(error())}
-                  </p>
-                )}
+                fallback={(error) => diagnostic(error())}
               >
                 <Component />
               </Errored>
@@ -565,6 +585,13 @@ export function mountDemo(
             tab.toggleAttribute('data-active', i === index);
           });
           const path = variant!.files[index];
+          const publicImports = /\.tsx?$/i.test(path);
+          sourceLabel.hidden = !publicImports;
+          for (const node of [pre, copyButton]) {
+            if (publicImports) node.setAttribute('aria-describedby', sourceLabel.id);
+            else node.removeAttribute('aria-describedby');
+          }
+          sourceLink.href = repositorySource + path.split('/').map(encodeURIComponent).join('/');
           pre.setAttribute('aria-label', path);
           if (tabs.length > 1)
             pre.setAttribute('aria-labelledby', tabs[index].id);
@@ -595,7 +622,13 @@ export function mountDemo(
             updateExpanded();
           } catch (error) {
             if (!disposed && token === epoch && sourceToken === sourceEpoch) {
-              code.textContent = `Source failed: ${message(error)}`;
+              console.error('Documentation source failed', error);
+              code.textContent = 'Source could not load. Please try again.';
+              status.replaceChildren('Need help? ');
+              const support = doc.createElement('a');
+              support.href = supportURL;
+              support.textContent = 'Get support on GitHub';
+              status.append(support, '.');
               collapsible = false;
               updateExpanded();
             }

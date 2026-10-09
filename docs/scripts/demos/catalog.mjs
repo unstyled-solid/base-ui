@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import ts from 'typescript';
 import { demoDispositions } from '../../content/demo-dispositions.mjs';
+import { applyPublicSource, publicModuleSpecifier, publicSourceAdaptation } from '../../demos/shared/public-source.mjs';
 
 export const sourceSha = '19511bb171f3b360b006c94cf6d07e53cb446505';
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
@@ -25,7 +26,33 @@ export async function readSafe(root, relative) {
   if (real !== target) throw new Error(`Symlink source: ${relative}`);
   return fs.readFile(target);
 }
-function parse(source, file) { return ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, file.endsWith('tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.TS); }
+function parse(source, file) { return ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, file.endsWith('tsx') ? ts.ScriptKind.TSX : file.endsWith('jsx') ? ts.ScriptKind.JSX : ts.ScriptKind.TS); }
+export function describePublicSource(source, file) {
+  const edits = [];
+  if (/\.[cm]?[jt]sx?$/.test(file)) {
+    const ast = parse(source, file);
+    function visit(node) {
+      let literal;
+      if (ts.isImportDeclaration(node) || ts.isExportDeclaration(node)) literal = node.moduleSpecifier;
+      else if (ts.isCallExpression(node) && node.expression.kind === ts.SyntaxKind.ImportKeyword) literal = node.arguments[0];
+      else if (ts.isExternalModuleReference(node)) literal = node.expression;
+      else if (ts.isImportTypeNode(node) && ts.isLiteralTypeNode(node.argument)) literal = node.argument.literal;
+      if (literal && ts.isStringLiteralLike(literal)) {
+        const replacement = publicModuleSpecifier(literal.text);
+        if (replacement !== literal.text) {
+          const start = literal.getStart(ast) + 1;
+          const end = literal.getEnd() - 1;
+          edits.push({ start, end, original: source.slice(start, end), specifier: literal.text, replacement });
+        }
+      }
+      ts.forEachChild(node, visit);
+    }
+    visit(ast);
+  }
+  edits.sort((a, b) => a.start - b.start);
+  const text = applyPublicSource(source, edits);
+  return { sha256: hash(text), bytes: Buffer.byteLength(text), adaptation: publicSourceAdaptation, edits };
+}
 function unwrap(node) {
   while (node && (ts.isAsExpression(node) || ts.isSatisfiesExpression(node) || ts.isParenthesizedExpression(node))) node = node.expression;
   return node;
@@ -66,6 +93,7 @@ export async function sourceGraph(root, files) {
       for (const match of text.matchAll(/(?:@import\s+["']([^"']+)["']|url\(\s*["']?([^"')\s]+))/g)) imports.push(match[1] ?? match[2]);
     }
     const record = { path: file, sha256: hash(bytes), bytes: bytes.length, imports: [], assets: !/\.(tsx?|jsx?|css|json|svg)$/.test(file) };
+    if (!record.assets) record.publicSource = describePublicSource(text, file);
     records.set(file, record);
     for (const specifier of imports) {
       if (/^(https?:|data:|#)/.test(specifier)) { record.imports.push({ specifier, external: true }); continue; }
@@ -147,5 +175,5 @@ export async function generateCatalog(root) {
       }
     }
   }
-  return { schemaVersion: 1, sourceSha, package: 'baseui-solid2', runtime: { 'solid-js': '2.0.0-rc.13', '@solidjs/web': '2.0.0-rc.13' }, entries, references, exclusions, missing: [...new Set(missing)].sort() };
+  return { schemaVersion: 1, sourceSha, package: 'baseui-solid2', publicPackage: { name: '@unstyled-solid/base-ui', version: '0.0.1' }, runtime: { 'solid-js': '2.0.0-rc.13', '@solidjs/web': '2.0.0-rc.13' }, entries, references, exclusions, missing: [...new Set(missing)].sort() };
 }

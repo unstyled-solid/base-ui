@@ -4967,7 +4967,7 @@ ComboboxEmptyState
 
 Kind: type.
 
-[Declaration](../../../packages/solid/build/types/internals/filter.d.ts#L6)
+[Declaration](../../../packages/solid/build/types/internals/filter.d.ts#L8)
 
 ```ts
 Filter
@@ -8232,6 +8232,7 @@ Kind: component.
 
 - <a id="api-436f6c6c61707369626c65526f6f7444617461417474726962757465732e6f70656e"></a>data-open: Present when open is true.
 - <a id="api-436f6c6c61707369626c65526f6f7444617461417474726962757465732e636c6f736564"></a>data-closed: Present when open is false.
+- <a id="api-436f6c6c61707369626c652e526f6f742e64617461417474726962757465732e646174612d64697361626c6564"></a>data-disabled: Present when disabled is truthy.
 - <a id="api-436f6c6c61707369626c65526f6f7444617461417474726962757465732e7374617274696e675374796c65"></a>data-starting-style: Present when transitionStatus is 'starting'.
 - <a id="api-436f6c6c61707369626c65526f6f7444617461417474726962757465732e656e64696e675374796c65"></a>data-ending-style: Present when transitionStatus is 'ending'.
 
@@ -8447,7 +8448,8 @@ Kind: component.
 
 - <a id="api-436f6c6c61707369626c6550616e656c44617461417474726962757465732e6f70656e"></a>data-open: Present when open is true.
 - <a id="api-436f6c6c61707369626c6550616e656c44617461417474726962757465732e636c6f736564"></a>data-closed: Present when open is false.
-- <a id="api-436f6c6c61707369626c6550616e656c44617461417474726962757465732e7374617274696e675374796c65"></a>data-starting-style: Present when transitionStatus is 'starting'.
+- <a id="api-436f6c6c61707369626c652e50616e656c2e64617461417474726962757465732e646174612d64697361626c6564"></a>data-disabled: Present when disabled is truthy.
+- <a id="api-436f6c6c61707369626c6550616e656c44617461417474726962757465732e7374617274696e675374796c65"></a>data-starting-style: Present when transitionStatus is 'starting'. Also retained when hiddenUntilFound is true and open is false and mounted is false and animationType() is not 'css-animation'.
 - <a id="api-436f6c6c61707369626c6550616e656c44617461417474726962757465732e656e64696e675374796c65"></a>data-ending-style: Present when transitionStatus is 'ending'.
 
 ### cssVariables
@@ -8514,6 +8516,7 @@ Alias of [Collapsible.Panel](#api-436f6c6c61707369626c652e50616e656c).
 <a id="api-436f6c6c61707369626c6550616e656c2e2470726f70732e72656e646572"></a>
 
 
+<a id="api-436f6c6c61707369626c6550616e656c2e64617461417474726962757465732e646174612d64697361626c6564"></a>
 
 
 
@@ -8672,6 +8675,7 @@ Alias of [Collapsible.Root](#api-436f6c6c61707369626c652e526f6f74).
 <a id="api-436f6c6c61707369626c65526f6f742e2470726f70732e72656e646572"></a>
 
 
+<a id="api-436f6c6c61707369626c65526f6f742e64617461417474726962757465732e646174612d64697361626c6564"></a>
 
 
 <a id="api-436f6c6c61707369626c65526f6f742e2470726f70732e70726f703a616c69676e"></a>
@@ -24736,7 +24740,7 @@ MenuHandle<Payload>
 
 Kind: helper.
 
-[Declaration](../../../packages/solid/build/types/internals/filter.d.ts#L1)
+[Declaration](../../../packages/solid/build/types/internals/filter.d.ts#L3)
 
 ```ts
 (options?: GetFilterParameters): Filter

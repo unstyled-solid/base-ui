@@ -1,0 +1,11 @@
+# Netlify supplies URL and CONTEXT; no account credentials belong in this file.
+[build]
+  command = "pnpm docs:build"
+  publish = "docs/generated/site/dist"
+
+[build.environment]
+  NODE_VERSION = "25.8.1"
+  PNPM_VERSION = "11.8.0"
+
+# This is a static, multi-page site. Netlify's directory-index handling serves
+# extensionless documentation routes; do not add an SPA /* -> /index.html rule.

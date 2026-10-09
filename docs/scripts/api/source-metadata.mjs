@@ -151,6 +151,128 @@ export async function sourceMetadata(root, declarationFiles) {
       }
     }
     for (const expr of mappings) await mapping(record, expr);
+    // Bounded Collapsible correction. Other families keep their existing
+    // extraction until their renderer/forwarded-props paths are verified.
+    const component = path.relative(sourceRoot, record.ast.fileName).split(path.sep).join('/');
+    if (['collapsible/root/CollapsibleRoot.tsx', 'collapsible/panel/CollapsiblePanel.tsx'].includes(component)) {
+      const calls = [];
+      function callsIn(n) { if (ts.isCallExpression(n)) calls.push(n); ts.forEachChild(n, callsIn); }
+      callsIn(fn);
+      const renderCall = calls.find(call => ts.isIdentifier(call.expression) && record.imports.get(call.expression.text)?.name === 'createRenderElement');
+      const options = unwrap(renderCall?.arguments[2]);
+      const stateProp = options && ts.isObjectLiteralExpression(options) && options.properties.find(p => p.name?.getText(record.ast) === 'state');
+      const stateExpression = stateProp && (ts.isShorthandPropertyAssignment(stateProp) ? stateProp.name : stateProp.initializer);
+      const stateObject = stateExpression && await resolveExpression(record, stateExpression);
+      // Resolve all mapping keys, including spreads. A null/custom/unknown
+      // mapping must never accidentally fall through to the default emitter.
+      const mappedKeys = new Set();
+      async function keys(rec, expr, seen = new Set()) {
+        const resolved = await resolveExpression(rec, expr);
+        expr = resolved.expression; rec = resolved.record;
+        if (!expr || seen.has(expr) || !ts.isObjectLiteralExpression(expr)) return false;
+        seen.add(expr);
+        for (const p of expr.properties) {
+          if (ts.isSpreadAssignment(p)) { if (!await keys(rec, p.expression, seen)) return false; }
+          else if (ts.isPropertyAssignment(p) && !ts.isComputedPropertyName(p.name)) mappedKeys.add(p.name.text);
+          else return false;
+        }
+        return true;
+      }
+      const mappingProp = options && ts.isObjectLiteralExpression(options) && options.properties.find(p => p.name?.getText(record.ast) === 'stateAttributesMapping');
+      const mappingKnown = mappingProp && await keys(record, mappingProp.initializer);
+      // Inspect the actual imported renderer and its default-state emitter.
+      // Derive the attribute spelling from its template, not from prop names.
+      async function importedFunction(rec, name) {
+        const imported = rec.imports.get(name);
+        if (!imported) return null;
+        const next = await load(imported.file + '.ts') ?? await load(imported.file + '.tsx');
+        const fn = next?.functions.get(imported.name);
+        return fn ? { record: next, fn } : null;
+      }
+      const renderer = renderCall && await importedFunction(record, renderCall.expression.text);
+      let emitter;
+      if (renderer) {
+        const rendererCalls = [];
+        function scan(n) { if (ts.isCallExpression(n)) rendererCalls.push(n); ts.forEachChild(n, scan); }
+        scan(renderer.fn);
+        const call = rendererCalls.find(call => ts.isIdentifier(call.expression) && renderer.record.imports.get(call.expression.text)?.name === 'getStateAttributesProps');
+        if (call && unwrap(call.arguments[0])?.getText(renderer.record.ast) === 'state' && unwrap(call.arguments[1])?.getText(renderer.record.ast) === 'params.stateAttributesMapping') emitter = await importedFunction(renderer.record, call.expression.text);
+      }
+      let template, emission;
+      if (emitter) {
+        const sf = emitter.record.ast;
+        // Only accept the existing paired true/truthy branches. This fails
+        // closed if the implementation's omission/serialization policy changes.
+        function scan(n) {
+          if (ts.isIfStatement(n) && ts.isBinaryExpression(n.expression) && n.expression.operatorToken.kind === ts.SyntaxKind.EqualsEqualsEqualsToken && n.expression.left.getText(sf) === 'value' && n.expression.right.kind === ts.SyntaxKind.TrueKeyword) {
+            let loop = n.parent;
+            while (loop && !ts.isForInStatement(loop) && loop !== emitter.fn) loop = loop.parent;
+            const stateLoop = loop && ts.isForInStatement(loop) && loop.expression.getText(sf) === 'state' && ts.isVariableDeclarationList(loop.initializer) && loop.initializer.declarations[0]?.name.getText(sf) === 'key' && ts.isBlock(loop.statement) && loop.statement.statements.some(stmt => ts.isVariableStatement(stmt) && stmt.declarationList.declarations.some(d => d.name.getText(sf) === 'value' && d.initializer?.getText(sf) === 'state[key]'));
+            const assignment = n.thenStatement && ts.isExpressionStatement(n.thenStatement) && n.thenStatement.expression;
+            const fallback = n.elseStatement;
+            const serialized = fallback && ts.isIfStatement(fallback) && ts.isExpressionStatement(fallback.thenStatement) && fallback.thenStatement.expression;
+            if (stateLoop && assignment && ts.isBinaryExpression(assignment) && assignment.operatorToken.kind === ts.SyntaxKind.EqualsToken && ts.isElementAccessExpression(assignment.left) && ts.isStringLiteral(assignment.right) && assignment.right.text === '' && fallback && ts.isIfStatement(fallback) && fallback.expression.getText(sf) === 'value' && serialized && ts.isBinaryExpression(serialized) && serialized.operatorToken.kind === ts.SyntaxKind.EqualsToken && serialized.left.getText(sf) === assignment.left.getText(sf) && serialized.right.getText(sf) === 'String(value)') {
+              const key = assignment.left.argumentExpression;
+              if (ts.isTemplateExpression(key) && key.templateSpans.length === 1 && key.templateSpans[0].expression.getText(sf) === 'key.toLowerCase()' && key.templateSpans[0].literal.text === '') { template = key.head.text; emission = assignment; }
+            }
+          }
+          ts.forEachChild(n, scan);
+        }
+        scan(emitter.fn);
+      }
+      if (mappingKnown && template?.startsWith('data-') && stateObject && ts.isObjectLiteralExpression(stateObject.expression)) {
+        for (const member of stateObject.expression.properties) {
+          if (!ts.isGetAccessorDeclaration(member) || ts.isComputedPropertyName(member.name)) continue;
+          const key = member.name.text;
+          if (mappedKeys.has(key)) continue;
+          rows.push({ name: template + key.toLowerCase(), description: `Present when ${key} is truthy.`, source: source(member), emissionSource: source(emission) });
+        }
+      }
+      if (component === 'collapsible/panel/CollapsiblePanel.tsx') {
+        // Follow the actual panel helper's props into this renderer. Its Proxy
+        // getter supplies a conditional attribute after state mapping, so the
+        // mapped transition condition alone is not the complete explanation.
+        const panelCall = calls.find(call => ts.isIdentifier(call.expression) && record.imports.get(call.expression.text)?.name === 'createCollapsiblePanel');
+        const panelVariable = panelCall?.parent;
+        const propsProp = options && ts.isObjectLiteralExpression(options) && options.properties.find(p => p.name?.getText(record.ast) === 'props');
+        const forwarded = panelVariable && ts.isVariableDeclaration(panelVariable) && propsProp?.initializer && ts.isArrayLiteralExpression(propsProp.initializer) && propsProp.initializer.elements.some(element => ts.isPropertyAccessExpression(element) && element.expression.getText(record.ast) === panelVariable.name.getText(record.ast) && element.name.text === 'props');
+        const helper = forwarded && await importedFunction(record, panelCall.expression.text);
+        if (helper) {
+          const sf = helper.record.ast;
+          const conditions = expr => {
+            expr = unwrap(expr);
+            if (ts.isBinaryExpression(expr) && expr.operatorToken.kind === ts.SyntaxKind.AmpersandAmpersandToken) {
+              const a = conditions(expr.left), b = conditions(expr.right);
+              return a && b ? [...a, ...b] : null;
+            }
+            if (ts.isPrefixUnaryExpression(expr) && expr.operator === ts.SyntaxKind.ExclamationToken && ts.isPropertyAccessExpression(expr.operand) && expr.operand.expression.getText(sf) === 'p') return [`${expr.operand.name.text} is false`];
+            if (ts.isPropertyAccessExpression(expr) && expr.expression.getText(sf) === 'p') return [`${expr.name.text} is true`];
+            if (ts.isCallExpression(expr) && !expr.arguments.length && ts.isIdentifier(expr.expression)) {
+              const initializer = unwrap(helper.record.declarations.get(expr.expression.text)?.initializer);
+              return initializer && ts.isArrowFunction(initializer) ? conditions(initializer.body) : null;
+            }
+            if (ts.isBinaryExpression(expr) && expr.operatorToken.kind === ts.SyntaxKind.ExclamationEqualsEqualsToken && ts.isCallExpression(expr.left) && !expr.left.arguments.length && ts.isIdentifier(expr.left.expression) && ts.isStringLiteral(expr.right)) return [`${expr.left.getText(sf)} is not ${expr.right.getText(sf)}`];
+            return null;
+          };
+          const returnsProps = helper.fn.body.statements.some(stmt => ts.isReturnStatement(stmt) && stmt.expression && ts.isObjectLiteralExpression(stmt.expression) && stmt.expression.properties.some(p => ts.isPropertyAssignment(p) && p.name.getText(sf) === 'props' && p.initializer.getText(sf) === 'panelProps'));
+          const proxy = unwrap(helper.record.declarations.get('panelProps')?.initializer);
+          const handlers = proxy && ts.isNewExpression(proxy) && proxy.expression.getText(sf) === 'Proxy' && proxy.arguments?.[1];
+          const getter = handlers && ts.isObjectLiteralExpression(handlers) && handlers.properties.find(p => ts.isMethodDeclaration(p) && p.name.getText(sf) === 'get');
+          if (returnsProps && getter) for (const stmt of getter.body.statements) {
+            if (!ts.isIfStatement(stmt) || !ts.isBinaryExpression(stmt.expression) || stmt.expression.operatorToken.kind !== ts.SyntaxKind.EqualsEqualsEqualsToken || stmt.expression.left.getText(sf) !== 'key' || !ts.isStringLiteral(stmt.expression.right)) continue;
+            const returned = ts.isReturnStatement(stmt.thenStatement) && unwrap(stmt.thenStatement.expression);
+            if (!returned || !ts.isConditionalExpression(returned) || !ts.isStringLiteral(returned.whenTrue) || returned.whenTrue.text !== '' || returned.whenFalse.getText(sf) !== 'undefined') continue;
+            const extra = conditions(returned.condition);
+            const row = rows.find(row => row.name === stmt.expression.right.text);
+            if (row && extra) {
+              row.description += ` Also retained when ${extra.join(' and ')}.`;
+              row.mappingSource = row.source;
+              row.source = source(stmt);
+            }
+          }
+        }
+      }
+    }
     return rows;
   }
   async function defaults(node) {

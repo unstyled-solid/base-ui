@@ -22,7 +22,7 @@ function ShellControls() {
       const response = await fetch(`${import.meta.env.BASE_URL}search-index.json`);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       setPages(await response.json()); setStatus('');
-    } catch (error) { setStatus(`Search index unavailable: ${String(error)}. Use documentation navigation.`); }
+    } catch (error) { console.error('Documentation search failed', error); setStatus('Search is unavailable. Use documentation navigation or get support on GitHub.'); }
   }
   const shortcut = (event: KeyboardEvent) => {
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
@@ -32,8 +32,9 @@ function ShellControls() {
   };
   document.addEventListener('keydown', shortcut);
   onCleanup(() => document.removeEventListener('keydown', shortcut));
+  const apple = /Mac|iPhone|iPad|iPod/.test(navigator.platform);
   return <>
-    <button ref={(el) => { opener = el; }} type="button" onClick={() => { void open(); }} aria-haspopup="dialog" aria-label="Search docs">Search (⌘k)</button>
+    <button ref={(el) => { opener = el; }} type="button" onClick={() => { void open(); }} aria-haspopup="dialog" aria-label="Search docs" aria-keyshortcuts={apple ? 'Meta+K' : 'Control+K'}>Search ({apple ? '⌘K' : 'Ctrl+K'})</button>
     <dialog class="SiteSearch" ref={(el) => { dialog = el; }} onClose={() => opener.focus()} aria-label="Search documentation"
       onClick={(event) => { if (event.target === dialog) { const box=dialog.getBoundingClientRect(); if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom) dialog.close(); } }}
       onKeyDown={(event) => {
@@ -45,13 +46,14 @@ function ShellControls() {
         } else if (event.key === 'Enter' && event.target === input && results()[selected()]) { event.preventDefault(); location.href=results()[selected()].url; }
       }}>
       <div class="SiteSearchInput"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="m11 11 4 4"/></svg>
-        <input id="search-query" aria-label="Search terms" placeholder="Search" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="search-results" aria-activedescendant={`search-option-${selected()}`} ref={(el) => { input = el; }} value={query()} onInput={(event) => { setQuery(event.currentTarget.value); setSelected(0); }} type="search"/>
+        <input id="search-query" aria-label="Search terms" placeholder="Search" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="search-results" aria-activedescendant={results()[selected()] ? `search-option-${selected()}` : undefined} ref={(el) => { input = el; }} value={query()} onInput={(event) => { setQuery(event.currentTarget.value); setSelected(0); }} type="search"/>
       </div>
       <ul id="search-results" role="listbox">{results().map((page,index) => <>
         {(index===0 || results()[index-1].section!==page.section) && <li class="SiteSearchGroup" role="presentation">{page.section}</li>}
         <li role="presentation"><a id={`search-option-${index}`} role="option" aria-selected={selected()===index ? 'true' : 'false'} href={page.url} onPointerMove={()=>{ setSelected(index); }}>{page.title}</a></li>
       </>)}</ul>
       <p class="SiteSearchStatus" role="status">{status() || (query() && !results().length ? 'No results' : '↵　Go to page')}</p>
+      {status() && <a href="https://github.com/unstyled-solid/base-ui">Get support on GitHub</a>}
     </dialog>
   </>;
 }
@@ -70,16 +72,48 @@ if (navigationViewport) {
   }
   navigationViewport.addEventListener('scroll', () => sessionStorage.setItem('docs-navigation-scroll', String(navigationViewport.scrollTop)), {passive:true});
 }
+const codeCopyDisposals: (() => void)[] = [];
 for (const button of document.querySelectorAll<HTMLButtonElement>('.CodeCopy')) {
-  button.addEventListener('click', async () => {
+  const original = button.innerHTML;
+  const label = button.getAttribute('aria-label') ?? 'Copy code';
+  const title = button.title;
+  const status = document.createElement('span');
+  status.className = 'SiteSearchStatus';
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  button.after(status);
+  let timer: number | undefined;
+  let disposed = false;
+  const reset = () => {
+    if (timer !== undefined) window.clearTimeout(timer);
+    timer = undefined;
+    button.innerHTML = original;
+    button.setAttribute('aria-label', label);
+    button.title = title;
+    status.textContent = '';
+  };
+  const copy = async () => {
     const code = button.closest('figure')?.querySelector('pre code')?.textContent;
     if (code == null) return;
     try {
       await navigator.clipboard.writeText(code);
+      if (disposed) return;
+      reset();
+      button.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true"><path d="m2.5 8.5 4 4 7-9"/></svg>';
       button.setAttribute('aria-label', 'Code copied');
       button.title = 'Code copied';
-    } catch { button.title = 'Clipboard unavailable'; }
-  });
+      status.textContent = 'Code copied.';
+    } catch (error) {
+      console.error('Documentation code copy failed', error);
+      if (disposed) return;
+      reset();
+      button.title = 'Clipboard unavailable';
+      status.textContent = 'Copy unavailable. Select the code to copy it manually.';
+    }
+    timer = window.setTimeout(reset, 2000);
+  };
+  button.addEventListener('click', copy);
+  codeCopyDisposals.push(() => { disposed = true; reset(); button.removeEventListener('click', copy); status.remove(); });
 }
 
 // Vite virtual module selects the owned runtime only when it exists.
@@ -92,8 +126,12 @@ for (const host of document.querySelectorAll<HTMLElement>('[data-demo-id]')) {
     const cleanup = await mountDemo(host, id);
     if (typeof cleanup === 'function') demoDisposals.push(cleanup as () => void);
   }).catch((error: unknown) => {
-    host.textContent = `Demo ${id} could not mount: ${String(error)}. See bsolid-docs-demos.`;
+    console.error('Documentation demo could not mount', error);
+    const support = document.createElement('a');
+    support.href = 'https://github.com/unstyled-solid/base-ui';
+    support.textContent = 'get support on GitHub';
+    host.replaceChildren('This demo could not load. Please try again or ', support, '.');
     host.dataset.missing = 'demo-runtime';
   });
 }
-window.addEventListener('pagehide', () => { for (const dispose of demoDisposals.splice(0)) dispose(); });
+window.addEventListener('pagehide', () => { for (const dispose of codeCopyDisposals.splice(0)) dispose(); for (const dispose of demoDisposals.splice(0)) dispose(); });

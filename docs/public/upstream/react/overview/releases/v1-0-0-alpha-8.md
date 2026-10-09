@@ -1,13 +1,17 @@
+<a id="v1-0-0-alpha-8"></a>
+
 # v1.0.0-alpha.8
 
 Apr 17, 2025
 
-
+<a id="accordion"></a>
 
 ## Accordion
 
 - Recalculate panel dimensions on layout resize ([#1704](https://github.com/mui/base-ui/pull/1704))
 - Rework animations and transitions ([#1601](https://github.com/mui/base-ui/pull/1601))
+
+<a id="alertdialog"></a>
 
 ## AlertDialog
 
@@ -16,9 +20,13 @@ Apr 17, 2025
 - Use consistent `inert` attr and map `[data-popup-open]` back to `open` ([#1650](https://github.com/mui/base-ui/pull/1650))
 - Fix text selection & right-clicks ([#1702](https://github.com/mui/base-ui/pull/1702))
 
+<a id="checkboxgroup"></a>
+
 ## CheckboxGroup
 
 - Parent checkbox/nested demos ([#1610](https://github.com/mui/base-ui/pull/1610))
+
+<a id="collapsible"></a>
 
 ## Collapsible
 
@@ -26,20 +34,26 @@ Apr 17, 2025
 - Recalculate panel dimensions on layout resize ([#1704](https://github.com/mui/base-ui/pull/1704))
 - Rework animations and transitions ([#1601](https://github.com/mui/base-ui/pull/1601))
 
+<a id="dialog"></a>
+
 ## Dialog
 
 - **Breaking change:** Rename `data-has-nested-dialogs` to `data-nested-dialog-open` ([#1686](https://github.com/mui/base-ui/pull/1686))
 - **Breaking change:** Add new `trap-focus` value to `modal` prop.
-Dialogs with `modal=false` no longer trap focus.
-([#1571](https://github.com/mui/base-ui/pull/1571))
+  Dialogs with `modal=false` no longer trap focus.
+  ([#1571](https://github.com/mui/base-ui/pull/1571))
 - Fix `onOpenChange` types for `event`/`reason` passing ([#1721](https://github.com/mui/base-ui/pull/1721))
 - Use consistent `inert` attr and map `[data-popup-open]` back to `open` ([#1650](https://github.com/mui/base-ui/pull/1650))
 - Fix text selection & right-clicks ([#1702](https://github.com/mui/base-ui/pull/1702))
 - Allow document to slide input into view on iOS when keyboard opens ([#1735](https://github.com/mui/base-ui/pull/1735))
 
+<a id="field"></a>
+
 ## Field
 
 - Fix forwarding of `name` and `disabled` props ([#1616](https://github.com/mui/base-ui/pull/1616))
+
+<a id="menu"></a>
 
 ## Menu
 
@@ -50,14 +64,20 @@ Dialogs with `modal=false` no longer trap focus.
 - Use consistent `inert` attr and map `[data-popup-open]` back to `open` ([#1650](https://github.com/mui/base-ui/pull/1650))
 - Fix text selection & right-clicks ([#1702](https://github.com/mui/base-ui/pull/1702))
 
+<a id="meter"></a>
+
 ## Meter
 
 - New Meter component ([#1435](https://github.com/mui/base-ui/pull/1435))
+
+<a id="numberfield"></a>
 
 ## NumberField
 
 - Correct percentage parse handling ([#1676](https://github.com/mui/base-ui/pull/1676))
 - New `snapOnStep` prop ([#1560](https://github.com/mui/base-ui/pull/1560))
+
+<a id="popover"></a>
 
 ## Popover
 
@@ -67,35 +87,45 @@ Dialogs with `modal=false` no longer trap focus.
 - Use consistent `inert` attr and map `[data-popup-open]` back to `open` ([#1650](https://github.com/mui/base-ui/pull/1650))
 - Fix text selection & right-clicks ([#1702](https://github.com/mui/base-ui/pull/1702))
 
+<a id="progress"></a>
+
 ## Progress
 
 - **Breaking change:** Add `Progress.Label` and `locale` prop.
-The `getAriaLabel` prop was removed as `<Progress.Label>` should be used to provide an accessible name.
-([#1666](https://github.com/mui/base-ui/pull/1666))
+  The `getAriaLabel` prop was removed as `<Progress.Label>` should be used to provide an accessible name.
+  ([#1666](https://github.com/mui/base-ui/pull/1666))
+
+<a id="radio"></a>
 
 ## Radio
 
 - Fix value forwarding and null handling ([#1697](https://github.com/mui/base-ui/pull/1697))
 
+<a id="scrollarea"></a>
+
 ## ScrollArea
 
 - **Breaking change:** Add `Content` part.
-It is now required to include the `<ScrollArea.Content>` within `<ScrollArea.Viewport>` part when the content is horizontally scrollable.
-([#1607](https://github.com/mui/base-ui/pull/1607))
+  It is now required to include the `<ScrollArea.Content>` within `<ScrollArea.Viewport>` part when the content is horizontally scrollable.
+  ([#1607](https://github.com/mui/base-ui/pull/1607))
 - Handle visibility change and nesting ([#1598](https://github.com/mui/base-ui/pull/1598))
 - Correct thumb sizing with scrollbar margins ([#1606](https://github.com/mui/base-ui/pull/1606))
+
+<a id="select"></a>
 
 ## Select
 
 - **Breaking change:** Improve item highlight performance.
-The highlighted state is now removed. It's not possible to customize the `data-highlighted` attribute anymore.
-([#1570](https://github.com/mui/base-ui/pull/1570))
+  The highlighted state is now removed. It's not possible to customize the `data-highlighted` attribute anymore.
+  ([#1570](https://github.com/mui/base-ui/pull/1570))
 - Avoid double commit on value change ([#1597](https://github.com/mui/base-ui/pull/1597))
 - Reset `selectedIndex` when set to `null` ([#1596](https://github.com/mui/base-ui/pull/1596))
 - Add missing item data attributes docs ([#1691](https://github.com/mui/base-ui/pull/1691))
 - Fix `onOpenChange` types for `event`/`reason` passing ([#1721](https://github.com/mui/base-ui/pull/1721))
 - Use consistent `inert` attr and map `[data-popup-open]` back to `open` ([#1650](https://github.com/mui/base-ui/pull/1650))
 - Fix text selection & right-clicks ([#1702](https://github.com/mui/base-ui/pull/1702))
+
+<a id="slider"></a>
 
 ## Slider
 
@@ -104,9 +134,13 @@ The highlighted state is now removed. It's not possible to customize the `data-h
 - Fix incorrect CSS position on vertical slider indicator ([#1599](https://github.com/mui/base-ui/pull/1599))
 - Fix overlapping slider thumbs stuck at min or max ([#1732](https://github.com/mui/base-ui/pull/1732/))
 
+<a id="toast"></a>
+
 ## Toast
 
 - New Toast component ([#1467](https://github.com/mui/base-ui/pull/1467))
+
+<a id="tooltip"></a>
 
 ## Tooltip
 

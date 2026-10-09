@@ -1,13 +1,17 @@
+<a id="styling"></a>
+
 # Styling
 
 A guide to styling Base UI components with your preferred styling engine.
 
-
-
-Base UI components are unstyled, don't bundle CSS, and are compatible with Tailwind, CSS Modules, CSS-in-JS, or any other styling solution you prefer.
+Base UI components are unstyled, don't bundle CSS, and expose classes, native styles, data attributes, and CSS variables for your styling solution.
 You retain total control of your styling layer.
 
+<a id="style-hooks"></a>
+
 ## Style hooks
+
+<a id="css-classes"></a>
 
 ### CSS classes
 
@@ -23,6 +27,8 @@ The prop can also be passed a function that takes the component's state as an ar
 <Switch.Thumb class={(state) => (state.checked ? 'checked' : 'unchecked')} />;
 ```
 
+<a id="data-attributes"></a>
+
 ### Data attributes
 
 Components provide data attributes designed for styling their states. For example, [Switch](/solid/components/switch) can be styled using its `[data-checked]` and `[data-unchecked]` attributes, among others.
@@ -32,6 +38,8 @@ Components provide data attributes designed for styling their states. For exampl
   background-color: green;
 }
 ```
+
+<a id="css-variables"></a>
 
 ### CSS variables
 
@@ -44,6 +52,8 @@ Components expose CSS variables to aid in styling, often containing dynamic nume
 ```
 
 Check out each component's API reference for a complete list of available data attributes and CSS variables.
+
+<a id="style-prop"></a>
 
 ### Style prop
 
@@ -59,12 +69,14 @@ The prop also accepts a function that takes the component's state as an argument
 <Switch.Thumb style={(state) => ({ color: state.checked ? 'red' : 'blue' })} />;
 ```
 
+<a id="tailwind-css"></a>
+
 ## Tailwind CSS
 
 Apply Tailwind CSS classes to each part via the `class` prop.
 
 ```tsx
-import { Menu } from 'baseui-solid2/menu';
+import { Menu } from '@unstyled-solid/base-ui/menu';
 export default function ExampleMenu() {
   return (
     <Menu.Root>
@@ -88,13 +100,15 @@ export default function ExampleMenu() {
 }
 ```
 
+<a id="css-modules"></a>
+
 ## CSS Modules
 
 Apply custom CSS classes to each part via the `class` prop.
 Then style those classes in a CSS Modules file.
 
 ```tsx
-import { Menu } from 'baseui-solid2/menu';
+import { Menu } from '@unstyled-solid/base-ui/menu';
 import styles from './menu.module.css';
 export default function ExampleMenu() {
   return (
@@ -113,50 +127,9 @@ export default function ExampleMenu() {
 }
 ```
 
+<a id="css-in-js"></a>
+
 ## CSS-in-JS
 
-In upstream React Base UI, wrap each component part and apply styles, then assemble your styled components.
-
-```tsx
-import {
-  Menu,
-  MenuItemDataAttributes,
-  MenuPositionerCssVariables,
-} from '@base-ui/react/menu';
-import styled from '@emotion/styled';
-
-const StyledMenuTrigger = styled(Menu.Trigger)`
-  // Button styles
-`;
-
-const StyledMenuPositioner = styled(Menu.Positioner)`
-  // Positioner styles
-`;
-
-const StyledMenuPopup = styled(Menu.Popup)`
-  max-height: var(${MenuPositionerCssVariables.availableHeight});
-`;
-
-const StyledMenuItem = styled(Menu.Item)`
-  &[${MenuItemDataAttributes.highlighted}] {
-    outline: 1px solid currentColor;
-  }
-`;
-
-const MenuExample = () => (
-  <Menu.Root>
-    <StyledMenuTrigger>Song</StyledMenuTrigger>
-    <Menu.Portal>
-      <StyledMenuPositioner>
-        <StyledMenuPopup>
-          <StyledMenuItem>Add to Library</StyledMenuItem>
-          <StyledMenuItem>Add to Playlist</StyledMenuItem>
-        </StyledMenuPopup>
-      </StyledMenuPositioner>
-    </Menu.Portal>
-  </Menu.Root>
-);
-
-export default MenuExample;
-```
+Use generated CSS classes or native style objects with Base UI parts. A CSS-in-JS library must support Solid 2 and forward live props and refs correctly; React styled-component recipes are not compatible examples, and no adapter compatibility is claimed here.
 

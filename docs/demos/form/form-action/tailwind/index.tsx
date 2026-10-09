@@ -24,7 +24,7 @@ export default function ActionStateForm() {
         try {
           const nextState = await submitForm(state(), formData);
           setState(nextState);
-          // React function actions reset uncontrolled fields after resolving.
+          // Explicitly reset native form fields after the simulated response resolves.
           form.reset();
         } finally {
           pending = false;
@@ -60,9 +60,9 @@ export default function ActionStateForm() {
   );
 }
 
-// Mark this as a Server Function with `'use server'` in a supporting framework like Next.js
+// Called by the native submit handler; validation runs locally, without a network request.
 async function submitForm(_previousState: FormState, formData: FormData) {
-  // Mimic a server response
+  // Simulate an asynchronous server response with a one-second delay.
   await new Promise((resolve) => {
     setTimeout(resolve, 1000);
   });

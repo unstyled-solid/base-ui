@@ -22,6 +22,7 @@ async function fixture(t) {
   await put('docs/upstream-manifest.json',manifest);await put('docs/generated/api/catalog.json',api);await put('docs/generated/api/button-api.md',markdown(module));
   await put('docs/generated/demos/catalog.json',{schemaVersion:1,sourceSha,entries:[],references:{}});
   await put('packages/solid/package.json',{name:'baseui-solid2',version:'0.0.0',private:true});
+  await put('distribution/package-contract.json',{identity:{publicationName:'@unstyled-solid/base-ui',version:'0.0.1'}});
   await put('docs/generated/site/solid/components/button.md',markdownPage(await formattedPage(structuredClone(page)),{api,demos:[],demoReferences:{}}));
   return {root,put,manifest};
 }
@@ -40,7 +41,7 @@ test('refuses missing/stale page and API output instead of staging one preview',
 });
 test('identity/version drift and unexpected staging files fail closed without cleanup',async t=>{
   const f=await fixture(t);await stageMarkdown({repository:f.root});
-  await f.put('packages/solid/package.json',{name:'baseui-solid2',version:'0.1.0',private:true});
+  await f.put('distribution/package-contract.json',{identity:{publicationName:'@unstyled-solid/base-ui',version:'0.1.0'}});
   await assert.rejects(stageMarkdown({repository:f.root,check:true}),/staged Markdown: docs\/public\/markdown-manifest.json/);
   await f.put('docs/public/user-work.md','Retain me\n');
   await assert.rejects(stageMarkdown({repository:f.root}),/Unowned\/stale staging files/);

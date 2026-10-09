@@ -34,6 +34,7 @@ const cleanup: (() => void)[] = [];
 afterEach(() => {
   cleanup.splice(0).forEach((dispose) => dispose());
   document.body.replaceChildren();
+  vi.restoreAllMocks();
 });
 async function mount(value = entry) {
   const host = document.createElement('div');
@@ -158,6 +159,7 @@ it('disposes listeners and portals on variant changes, remounts and unmount unde
   }
 });
 it('cancels lazy loads after disposal and reports missing families', async () => {
+  const diagnostics = vi.spyOn(console, 'error');
   const loader = createRegistry({});
   await expect(loader('missing/hero')).rejects.toThrow(
     'missing docs/demos/missing/entry.ts',
@@ -178,10 +180,13 @@ it('cancels lazy loads after disposal and reports missing families', async () =>
   await Promise.resolve();
   await Promise.resolve();
   expect(host.querySelector('[role=alert]')!.textContent).toContain(
-    'missing/hero',
+    'This demo could not load',
   );
+  expect(host.querySelector('[role=alert] a')!.getAttribute('href')).toBe('https://github.com/unstyled-solid/base-ui');
+  expect(diagnostics).toHaveBeenCalledWith('Documentation demo failed', expect.objectContaining({ message: 'Demo missing/hero: missing docs/demos/missing/entry.ts' }));
 });
 it('replaces a host root and shows component failure diagnostics', async () => {
+  const diagnostics = vi.spyOn(console, 'error');
   const { host } = await mount();
   function Broken() {
     throw new Error('fixture exploded');
@@ -200,8 +205,9 @@ it('replaces a host root and shows component failure diagnostics', async () => {
   flush();
   expect(host.querySelectorAll('section')).toHaveLength(1);
   expect(host.querySelector('[role=alert]')!.textContent).toContain(
-    'fixture exploded',
+    'This demo could not load',
   );
+  expect(diagnostics).toHaveBeenCalledWith('Documentation demo failed', expect.objectContaining({ message: 'fixture exploded' }));
   cleanup.push(
     mountDemo(host, entry.id, {
       loadDemo: async () => entry,
@@ -215,6 +221,7 @@ it('replaces a host root and shows component failure diagnostics', async () => {
   expect(host.querySelector('[data-demo]')!.textContent).toContain('Count 0');
 });
 it('ignores stale source loads after variant changes and reports source failures', async () => {
+  const diagnostics = vi.spyOn(console, 'error');
   const host = document.createElement('div');
   document.body.append(host);
   let resolve!: (text: string) => void;
@@ -237,8 +244,9 @@ it('ignores stale source loads after variant changes and reports source failures
   resolve('stale source');
   await Promise.resolve();
   expect(host.querySelector('code')!.textContent).toContain(
-    'Source failed: missing fixture source',
+    'Source could not load. Please try again.',
   );
+  expect(diagnostics).toHaveBeenCalledWith('Documentation source failed', expect.objectContaining({ message: 'missing fixture source' }));
   expect(host.querySelector('code')!.textContent).not.toContain('stale source');
   expect(
     (host.querySelector('[aria-label="Copy code"]') as HTMLButtonElement)
@@ -422,6 +430,7 @@ it('keeps the latest file when raw loads resolve out of order and ignores late c
 });
 
 it('provides pinned variant source actions, menu keyboard dismissal, outside dismissal and clipboard failures', async () => {
+  const diagnostics = vi.spyOn(console, 'error');
   const { host, copy } = await mount();
   const summary = host.querySelector('summary')!;
   summary.focus();
@@ -436,7 +445,7 @@ it('provides pinned variant source actions, menu keyboard dismissal, outside dis
   expect(items).toHaveLength(2);
   expect(document.activeElement).toBe(items[0]);
   expect((items[0] as HTMLAnchorElement).href).toBe(
-    'https://github.com/mui/base-ui/tree/19511bb171f3b360b006c94cf6d07e53cb446505/docs/example/state',
+    'https://github.com/unstyled-solid/base-ui/blob/241d7cba64c63356e77128068a1f223352403c2a/docs/tests/demos/fixtures/state.tsx',
   );
   items[0].dispatchEvent(
     new KeyboardEvent('keydown', { key: 'End', bubbles: true }),
@@ -470,9 +479,10 @@ it('provides pinned variant source actions, menu keyboard dismissal, outside dis
   click(host, 'Copy code');
   await vi.waitFor(() =>
     expect(host.querySelector('[role=status]')!.textContent).toContain(
-      'Copy failed: permission denied',
+      'Copy unavailable. Select the code to copy it manually.',
     ),
   );
+  expect(diagnostics).toHaveBeenCalledWith('Documentation copy failed', expect.objectContaining({ message: 'permission denied' }));
 });
 
 it('invalidates queued clipboard work and detached controls after disposal', async () => {

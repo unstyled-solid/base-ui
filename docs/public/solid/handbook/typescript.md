@@ -1,8 +1,10 @@
+<a id="typescript"></a>
+
 # TypeScript
 
 A guide to using TypeScript with Base UI.
 
-
+<a id="namespaces"></a>
 
 ## Namespaces
 
@@ -11,16 +13,20 @@ Base UI uses namespaces to organize types. Every component has two core interfa
 - `Props` (such as `Tooltip.Root.Props`)
 - `State` (such as `Tooltip.Root.State`)
 
+<a id="props"></a>
+
 ### Props
 
 When creating wrapping components, you can use the `Props` type to accept all of the underlying Base UI props for the component.
 
 ```tsx
-import { Tooltip } from 'baseui-solid2/tooltip';
+import { Tooltip } from '@unstyled-solid/base-ui/tooltip';
 function MyTooltip(props: Tooltip.Root.Props) {
   return <Tooltip.Root {...props} />;
 }
 ```
+
+<a id="state"></a>
 
 ### State
 
@@ -47,6 +53,8 @@ function renderPositioner(
 <Popover.Positioner render={renderPositioner} />;
 ```
 
+<a id="events"></a>
+
 ### Events
 
 Types relating to custom Base UI events are also exported on component parts' namespaces.
@@ -69,6 +77,8 @@ function onOpenChange(
   console.log(open, eventDetails);
 }
 ```
+
+<a id="other-accessible-types"></a>
 
 ### Other accessible types
 

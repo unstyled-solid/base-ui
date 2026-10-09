@@ -40,6 +40,19 @@ function sitePlugin(): Plugin {
         res.end(content);
       });
     },
+    configurePreviewServer(server) {
+      // Match Netlify's multi-page serving: never return the homepage with 200
+      // for an unknown documentation route. Existing files are served by Vite.
+      return () => server.middlewares.use(async (req, res, next) => {
+        if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+        const url = new URL(req.url ?? '/', 'http://localhost');
+        if (!url.pathname.startsWith(base)) return next();
+        const content = await fs.promises.readFile(path.join(output, 'dist/404.html'));
+        res.statusCode = 404;
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.end(req.method === 'HEAD' ? undefined : content);
+      });
+    },
     generateBundle(_options, bundle) {
       for (const file of JSON.parse(fs.readFileSync(path.join(output, 'files.json'), 'utf8')) as string[]) {
         // Build reports contain source locations, not public deployable content.
@@ -58,7 +71,7 @@ function sitePlugin(): Plugin {
   };
 }
 export default defineConfig({
-  root: path.join(root, 'docs/site'), base,
+  root: path.join(root, 'docs/site'), base, appType: 'mpa',
   // Match the library's verified RC13 harness compiler backend.
   plugins: [solid({ compiler: 'babel' }), tailwind(), sitePlugin()],
   css: { postcss: { plugins: [] } },
