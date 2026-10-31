@@ -153,7 +153,9 @@ export function createAnchorPositioning(params: UseAnchorPositioningParameters):
     setOpen: (next, details) => root().setOpen(next, details), dispatchOpenChange: (next, details) => root().dispatchOpenChange(next, details),
   };
   const floating = createBaseUIFloating({
-    rootContext: geometryRoot, get open() { return params.mounted && (params.keepMounted || (params.open ?? true)); }, get nodeId() { return params.nodeId; },
+    // Geometry stays active through exit animations, including manual retention.
+    // Logical open still comes from rootContext for interaction consumers.
+    rootContext: geometryRoot, get open() { return params.mounted; }, get nodeId() { return params.nodeId; },
     get placement() { return settings().placement; }, get middleware() { return settings().middleware; },
     get strategy() { return params.positionMethod ?? 'absolute'; },
     get whileElementsMounted() {

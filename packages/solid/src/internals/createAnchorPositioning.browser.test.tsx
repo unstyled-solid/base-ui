@@ -98,26 +98,28 @@ browserCase({ source: 'packages/react/src/internals/useAnchorPositioning.ts', ca
   expect(node.style.getPropertyValue('--transform-origin')).toBe(openOrigin);
 });
 
-browserCase({ source: 'packages/react/src/internals/useAnchorPositioning.ts', case: 'retained exit stays positioned until unmounted and preserves measured origin on close', environment: 'browser', issue: 'bsolid-positioning' }, async () => {
-  const view = await createRenderer().renderProps((props: { mounted: boolean; open: boolean }) => {
-    const [reference, setReference] = createSignal<HTMLElement | null>(null);
-    const [floating, setFloating] = createSignal<HTMLElement | null>(null);
-    const root = createFloatingRoot({ state: { get open() { return props.open; }, transitionStatus: undefined,
-      get referenceElement() { return reference(); }, get domReferenceElement() { return reference(); },
-      positionReference: null, get floatingElement() { return floating(); }, floatingId: 'exit' } });
-    const position = createAnchorPositioning({ rootContext: root, keepMounted: true,
-      get mounted() { return props.mounted; }, get open() { return props.open; },
-      collisionAvoidance: { side: 'none', align: 'none' } });
-    return <><div ref={setReference} style={{ position: 'fixed', top: '100px', left: '100px', width: '80px', height: '20px' }} />
-      <div ref={setFloating} data-testid="floating" hidden={!props.mounted} data-positioned={String(position.isPositioned)}
-        style={{ ...position.positionerStyles, width: '100px', height: '20px' }} /></>;
-  }, { mounted: true, open: true });
-  const node = view.getByTestId('floating');
-  await waitFor(() => expect(node).toHaveAttribute('data-positioned', 'true'));
-  await waitFor(() => expect(node.style.getPropertyValue('--transform-origin')).toBe('50px 0px'));
-  await view.setProps({ open: false });
-  expect(node).toHaveAttribute('data-positioned', 'true');
-  await view.setProps({ mounted: false });
-  expect(node).toHaveAttribute('data-positioned', 'false');
-  expect(node.style.getPropertyValue('--transform-origin')).toBe('50px 0px');
-});
+for (const keepMounted of [false, true]) {
+  browserCase({ source: 'packages/react/src/internals/useAnchorPositioning.ts', case: `retained exit stays positioned until unmounted and preserves measured origin on close keepMounted=${keepMounted}`, environment: 'browser', issue: 'bsolid-positioning' }, async () => {
+    const view = await createRenderer().renderProps((props: { mounted: boolean; open: boolean }) => {
+      const [reference, setReference] = createSignal<HTMLElement | null>(null);
+      const [floating, setFloating] = createSignal<HTMLElement | null>(null);
+      const root = createFloatingRoot({ state: { get open() { return props.open; }, transitionStatus: undefined,
+        get referenceElement() { return reference(); }, get domReferenceElement() { return reference(); },
+        positionReference: null, get floatingElement() { return floating(); }, floatingId: 'exit' } });
+      const position = createAnchorPositioning({ rootContext: root, keepMounted,
+        get mounted() { return props.mounted; }, get open() { return props.open; },
+        collisionAvoidance: { side: 'none', align: 'none' } });
+      return <><div ref={setReference} style={{ position: 'fixed', top: '100px', left: '100px', width: '80px', height: '20px' }} />
+        <div ref={setFloating} data-testid="floating" hidden={!props.mounted} data-positioned={String(position.isPositioned)}
+          style={{ ...position.positionerStyles, width: '100px', height: '20px' }} /></>;
+    }, { mounted: true, open: true });
+    const node = view.getByTestId('floating');
+    await waitFor(() => expect(node).toHaveAttribute('data-positioned', 'true'));
+    await waitFor(() => expect(node.style.getPropertyValue('--transform-origin')).toBe('50px 0px'));
+    await view.setProps({ open: false });
+    expect(node).toHaveAttribute('data-positioned', 'true');
+    await view.setProps({ mounted: false });
+    expect(node).toHaveAttribute('data-positioned', 'false');
+    expect(node.style.getPropertyValue('--transform-origin')).toBe('50px 0px');
+  });
+}
