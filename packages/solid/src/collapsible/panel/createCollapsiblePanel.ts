@@ -35,6 +35,9 @@ export function createCollapsiblePanel(p: UseCollapsiblePanelParameters): UseCol
   const panelRef = (node: HTMLDivElement | null) => { setElement(node); };
   const ref = createMergedRefsN<HTMLDivElement>(() => [p.externalRef, panelRef]);
   const hidden = () => !p.open && !p.mounted;
+  // Renderer identity and prop/style readers share this presence policy. A
+  // retained exit changes the transition snapshot without changing presence.
+  const shouldRender = createMemo(() => p.keepMounted || p.hiddenUntilFound || p.mounted || p.open);
   const status = () => p.open && forceIdle() ? 'idle' : p.transitionStatus;
   // This shared policy usually stays false across open/close. Keep those
   // transitions out of consumers that only need animation suppression.
@@ -192,7 +195,7 @@ export function createCollapsiblePanel(p: UseCollapsiblePanelParameters): UseCol
   });
   return {
     ref,
-    get shouldRender() { return p.keepMounted || p.hiddenUntilFound || p.mounted || p.open; },
+    get shouldRender() { return shouldRender(); },
     get shouldPreventOpenAnimation() { return preventAnimation(); },
     get transitionStatus() { return status(); },
     get height() { return renderedDimensions().height; },

@@ -9,6 +9,23 @@ import { collapsibleStateAttributesMapping } from '../root/stateAttributesMappin
 
 describe('Collapsible.Panel', () => {
   const { render, renderProps } = createRenderer();
+  it('does not republish retained render presence when logical open changes', async () => {
+    let reads = 0;
+    const view = await renderProps((props: { open: boolean }) => {
+      const root = createCollapsibleRoot(props);
+      const panel = createCollapsiblePanel({
+        get open() { return root.open; }, get mounted() { return root.mounted; },
+        get transitionStatus() { return root.transitionStatus; },
+        hiddenUntilFound: false, keepMounted: false, id: undefined,
+        setMounted: root.setMounted, setOpen: root.setOpen, onOpenChange() {},
+      });
+      createEffect(() => { reads++; return panel.shouldRender; }, () => {});
+      return <div />;
+    }, { open: true });
+    const initialReads = reads;
+    await view.setProps({ open: false });
+    expect(reads).toBe(initialReads);
+  });
   it('does not republish false animation suppression when open changes', async () => {
     let reads = 0;
     const values: boolean[] = [];
