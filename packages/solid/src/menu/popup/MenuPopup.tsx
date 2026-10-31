@@ -1,4 +1,4 @@
-import { useContext, untrack } from 'solid-js';
+import { createMemo, useContext, untrack } from 'solid-js';
 import { FloatingFocusManager, type FloatingFocusManagerProps } from '../../floating-ui-react/components/FloatingFocusManager';
 import { createRenderElement } from '../../internals/createRenderElement';
 import type { BaseUIComponentProps } from '../../internals/types';
@@ -56,9 +56,12 @@ export function MenuPopupPlain(props: MenuPopupPlainProps) {
     get side() { return position.side; }, get align() { return position.align; },
     get nested() { return store.state.parent.type === 'menu'; }, get instant() { return store.state.instantType; },
   };
+  // Transition snapshots can change while mounted stays true. Preserve the
+  // source's primitive disabled dependency so initial focus is not replayed.
+  const focusManagerDisabled = createMemo(() => !store.state.mounted);
   const focus: MenuFocusManagerParameters = {
     context: store.state.floatingRootContext,
-    get disabled() { return !store.state.mounted; }, get modal() { return store.state.parent.type === 'context-menu'; }, restoreFocus: true,
+    get disabled() { return focusManagerDisabled(); }, get modal() { return store.state.parent.type === 'context-menu'; }, restoreFocus: true,
     get initialFocus() {
       if (props.initialFocus !== undefined) return props.initialFocus;
       if (store.state.parent.type === 'menu') return false;
