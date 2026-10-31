@@ -8,7 +8,9 @@ import { runIsolatedBrowserFiles } from './browser-batch.mjs';
 const require = createRequire(import.meta.url);
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const [command, ...raw] = process.argv.slice(2);
-const args = raw.filter((arg) => arg !== '--no-watch');
+const grouped = raw.includes('--grouped');
+if (grouped && command !== 'chromium') throw new Error('--grouped is supported only for chromium');
+const args = raw.filter((arg) => arg !== '--no-watch' && arg !== '--grouped');
 const vitest = join(dirname(require.resolve('vitest/package.json')), 'vitest.mjs');
 let artifactDirectory;
 function run(entry, extra = [], env = {}) {
@@ -30,6 +32,7 @@ function tests(target) {
     HARNESS_NATIVE_DOCUMENT: native ? '1' : '',
     HARNESS_CACHE_DIR: join(artifactDirectory, 'vite'),
     HARNESS_SSR_ARTIFACT: join(artifactDirectory, 'html.json'),
+    ...(grouped ? { HARNESS_GROUPED_BROWSER: '1' } : {}),
   });
 }
 function types() { run(require.resolve('typescript/bin/tsc'), ['--noEmit', '-p', 'test/contracts/tsconfig.json', ...args]); }
@@ -46,7 +49,7 @@ switch (command) {
   case 'jsdom': prepareSSR(); tests('jsdom'); break;
   case 'ssr': prepareSSR(); tests('ssr'); break;
   case 'browsers': case 'chromium': case 'chromium-native':
-    if (process.env.HARNESS_BATCH_FILE) { prepareSSR(); tests(command); }
+    if (process.env.HARNESS_BATCH_FILE || grouped) { prepareSSR(); tests(command); }
     else process.exitCode = runIsolatedBrowserFiles(command, args);
     break;
   case 'contracts':

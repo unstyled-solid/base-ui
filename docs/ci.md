@@ -1,5 +1,18 @@
 # Continuous integration
 
+## Chromium batching experiment
+
+The targeted Chromium gate uses `test:chromium --grouped` to execute its
+unchanged file selection in one Vitest invocation, preparing the isolated SSR
+fixture once and reusing the browser provider and compilation cache. Files run
+serially with one worker; assertions, diagnostics, and completion reporting stay
+enabled. Ordinary `test:chromium` still uses per-file process isolation for
+qualification and troubleshooting. Native capability tests are not grouped.
+
+This is an unqualified experiment: runtime checks and before/after execution
+coverage comparison are still required before adopting it. No timing claim is
+made, and no PR monitoring or timing scripts are added.
+
 GitHub Actions runs **CI / Build and test** on every pull request and push to
 `main`. Branch pushes are checked through their PR, avoiding duplicate expensive
 runs for the same update. Manual runs are available after the workflow reaches `main`.
