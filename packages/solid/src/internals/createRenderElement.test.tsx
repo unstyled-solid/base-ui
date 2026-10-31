@@ -14,6 +14,79 @@ import type { FieldRootContextValue } from './field-root-context';
 
 describe('createRenderElement', () => {
   const { renderProps } = createRenderer();
+  it.each(['functional prop', 'propGetter'] as const)('retains state-derived refs from a %s', async (mode) => {
+    const closedRef = vi.fn();
+    const openRef = vi.fn();
+    const deriveRef = (previous: Record<string, any>) => mergePropsN([previous, {
+      get ref() { return previous['data-open'] === '' ? openRef : closedRef; },
+    }]);
+    const view = await renderProps((props: { open: boolean }) => createRenderElement('button', {}, {
+      state: { get open() { return props.open; } },
+      props: mode === 'functional prop' ? [{ children: 'Target' }, deriveRef] : { children: 'Target' },
+      propGetter: mode === 'propGetter' ? deriveRef : undefined,
+    }), { open: false });
+    const host = view.getByRole('button');
+    expect(closedRef.mock.calls).toEqual([[host]]);
+    expect(openRef).not.toHaveBeenCalled();
+    await view.setProps({ open: true });
+    expect(closedRef.mock.calls).toEqual([[host], [null]]);
+    expect(openRef.mock.calls).toEqual([[host]]);
+    expect(view.getByRole('button')).toBe(host);
+    view.unmount();
+    expect(openRef.mock.calls).toEqual([[host], [null]]);
+  });
+  it('updates native input values without rereading unrelated attributes', async () => {
+    let titleReads = 0;
+    const view = await renderProps((props: { value: string }) => createRenderElement('input', {}, {
+      props: {
+        get value() { return props.value; },
+        get title() { titleReads++; return 'stable'; },
+      },
+    }), { value: '1' });
+    const input = view.getByRole('textbox') as HTMLInputElement;
+    const initialReads = titleReads;
+    expect(initialReads).toBeGreaterThan(0);
+    await view.setProps({ value: '2' });
+    expect(input.value).toBe('2');
+    expect(input.defaultValue).toBe('2');
+    expect(input).toHaveAttribute('value', '2');
+    expect(titleReads).toBe(initialReads);
+    expect(view.getByRole('textbox')).toBe(input);
+  });
+  it('does not subscribe native styles to unrelated state-attribute membership probes', async () => {
+    let styleReads = 0;
+    const view = await renderProps((props: { open: boolean }) => createRenderElement('div', {}, {
+      state: { get open() { return props.open; } },
+      props: { 'data-testid': 'host', get style() { styleReads++; return { '--height': '80px' }; } },
+    }), { open: false });
+    const host = view.getByTestId('host');
+    const initial = styleReads;
+    expect(initial).toBeGreaterThan(0);
+    await view.setProps({ open: true });
+    expect(host).toHaveAttribute('data-open');
+    expect(styleReads).toBe(initial);
+    expect(host.style.getPropertyValue('--height')).toBe('80px');
+    await view.setProps({ open: false });
+    expect(host).not.toHaveAttribute('data-open');
+    expect(styleReads).toBe(initial);
+  });
+
+  it('retains dynamic state-mapped style membership and value changes', async () => {
+    const view = await renderProps<{ color: string | undefined }>((props) => createRenderElement('div', {}, {
+      state: { get color() { return props.color; } },
+      stateAttributesMapping: { color: value => value === undefined ? {} : { style: `color:${value}` } },
+      props: { 'data-testid': 'host', style: { '--height': '80px' } },
+    }), { color: undefined });
+    const host = view.getByTestId('host');
+    await view.setProps({ color: 'red' });
+    expect(host.style.color).toBe('red');
+    await view.setProps({ color: 'blue' });
+    expect(host.style.color).toBe('blue');
+    await view.setProps({ color: undefined });
+    expect(host.style.color).toBe('');
+    expect(host.style.getPropertyValue('--height')).toBe('80px');
+    expect(view.getByTestId('host')).toBe(host);
+  });
   it('publishes Field state keys through real description and validation composition without replacing the host or refs', async () => {
     let field!: FieldRootContextValue;
     const ref = vi.fn();

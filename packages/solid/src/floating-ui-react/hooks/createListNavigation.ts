@@ -38,6 +38,8 @@ export function createListNavigation(input: FloatingRootContext | Accessor<Float
   let cursor = untrack(() => options.selectedIndex ?? -1), key: string | null = null, pointer = true, inferredFocus: boolean | 'auto' = 'auto';
   let previousOpen = false, previousMounted = false, generation = 0;
   let previousSelected: number | null = null, previousFloating: HTMLElement | null = null, previousEnabled = false;
+  // Preserve upstream forceSyncFocusRef across the staged active-index commit.
+  let forceSyncFocus = false;
   let cancelFocus = () => {};
   const floatingFocus = () => getFloatingFocusElement(root().state.floatingElement);
   const parentOrientation = () => options.parentOrientation ?? tree()?.nodes.find((node) => node.id === parentId())?.context?.data.orientation;
@@ -56,6 +58,7 @@ export function createListNavigation(input: FloatingRootContext | Accessor<Float
   };
   const notify = (next: number, event?: Event, source?: ListNavigationSource, sync = false, scroll = false) => {
     cursor = next;
+    forceSyncFocus = sync;
     options.onNavigate?.(next === -1 ? null : next, event, source);
     if (next >= 0 && root().state.open) focus(next, sync, scroll);
     // Reconcile a rejected controlled proposal after this turn, while several
@@ -89,11 +92,13 @@ export function createListNavigation(input: FloatingRootContext | Accessor<Float
   // focus. Tracking activeIndex in the proposing effect writes its own source.
   createEffect(() => ({ open: root().state.open, floating: root().state.floatingElement,
     enabled: options.enabled ?? true, active: options.activeIndex }), (next) => {
-    if (!next.enabled || !next.open || !next.floating) return;
+    if (!next.enabled) return;
+    if (!next.open) { forceSyncFocus = false; return; }
+    if (!next.floating) return;
     if (next.active !== null && !isIndexOutOfListBounds(options.listRef.current, next.active)) {
       cursor = next.active;
-      untrack(() => focus(cursor, false, false));
-    } else if (next.active === null) cursor = -1;
+      untrack(() => focus(cursor, forceSyncFocus, false));
+    } else if (next.active === null) { cursor = -1; forceSyncFocus = false; }
   });
   onCleanup(() => { generation++; cancelFocus(); });
   const stop = (event: KeyboardEvent) => { event.preventDefault(); event.stopPropagation(); };
@@ -101,6 +106,7 @@ export function createListNavigation(input: FloatingRootContext | Accessor<Float
   const commonKey = (event: KeyboardEvent) => {
     if (options.enabled === false || event.which === 229 || event.isComposing) return;
     pointer = false;
+    forceSyncFocus = true;
     const context = root(), open = context.state.open, mainOrientation = orientation(), rtl = options.rtl ?? false;
     if (!open && event.currentTarget === floatingFocus()) return;
     if (options.nested && isCrossOrientationCloseKey(event.key, mainOrientation, rtl, !!options.grid)) {
@@ -129,6 +135,7 @@ export function createListNavigation(input: FloatingRootContext | Accessor<Float
   };
   const stationary = (event: MouseEvent) => platform.engine.webkit && event.movementX === 0 && event.movementY === 0;
   const syncTarget = (event: Event) => {
+    forceSyncFocus = true;
     if (!root().state.open) return;
     const index = options.listRef.current.indexOf(event.currentTarget as HTMLElement);
     // Synchronous focus follows the explicit navigation cursor before the

@@ -23,6 +23,7 @@ Propose bug fixes and improvements through [GitHub issues and pull requests](htt
 - [Architecture and scope](docs/architecture.md)
 - [Solid 2 implementation contract](docs/solid2-contract.md)
 - [Toolchain and shared contracts](docs/contracts.md)
+- [Continuous integration and local CI checks](docs/ci.md)
 - [Parallel execution and ownership](docs/parallel-execution.md)
 - [Weekly upstream workflow](docs/upstream-workflow.md)
 

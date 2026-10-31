@@ -1,5 +1,5 @@
 import { children, createEffect, createMemo, createSignal, merge, omit, onCleanup, onSettled, untrack } from 'solid-js';
-import { dynamic, isServer, type JSX } from '@solidjs/web';
+import { dynamic, isServer, spread, type JSX } from '@solidjs/web';
 import { mergePropsN, mergeClassNames, mergeStyles, isNativeEvent } from '../merge-props';
 import { createMergedRefsN, type InputRef } from '../utils/createMergedRefs';
 import { resolveClass } from '../utils/resolveClass';
@@ -39,7 +39,7 @@ export function createRenderElement<State extends object = {}, E extends Element
   });
   const tag = () => typeof element === 'function' ? element() : element;
   const valueProperty = () => !isServer && componentProps.render === undefined && (tag() === 'input' || tag() === 'textarea');
-  const controlledDefault = () => valueProperty() && tag() === 'input' && resolved().value != null;
+  const controlledDefault = () => valueProperty() && tag() === 'input' && hasValue();
   // Resolve children independently of state attributes. A state change must
   // not re-evaluate a caller's JSX-producing children getter via a broad memo.
   const readChildrenProps = () => {
@@ -66,14 +66,26 @@ export function createRenderElement<State extends object = {}, E extends Element
     equals: (previous, next) => Object.keys(previous).length === Object.keys(next).length
       && Object.keys(previous).every((key) => Object.hasOwn(next, key) && previous[key] === next[key]),
   });
+  // Style fallback probes must not subscribe the independent native style
+  // binding to every data-state change. Preserve both dynamic key presence and
+  // its string value; an explicitly present undefined still differs from absence.
+  const readStateStyle = () => {
+    const attributes = stateAttributes();
+    return { present: Object.hasOwn(attributes, 'style'), value: attributes.style };
+  };
+  const stateStyle = isServer ? readStateStyle : createMemo(readStateStyle, {
+    transparent: true,
+    equals: (before, next) => before.present === next.present && before.value === next.value,
+  });
+  const hasStateAttribute = (key: PropertyKey) => key === 'style' ? stateStyle().present : key in stateAttributes();
   // A merged prop read evaluates attributes only when it actually falls through
   // to them. Functional inputs/propGetter retain that same preceding live view.
   const attributeProps: Props = new Proxy({}, {
     ownKeys: () => Object.keys(stateAttributes()),
-    has: (_, key) => key in stateAttributes(),
-    getOwnPropertyDescriptor: (_, key) => key in stateAttributes()
-      ? { configurable: true, enumerable: true, get: () => stateAttributes()[key as string] } : undefined,
-    get: (_, key) => typeof key === 'string' ? stateAttributes()[key] : undefined,
+    has: (_, key) => hasStateAttribute(key),
+    getOwnPropertyDescriptor: (_, key) => hasStateAttribute(key)
+      ? { configurable: true, enumerable: true, get: () => key === 'style' ? stateStyle().value : stateAttributes()[key as string] } : undefined,
+    get: (_, key) => key === 'style' ? stateStyle().value : typeof key === 'string' ? stateAttributes()[key] : undefined,
   });
   const readResolved = () => {
     if (params.enabled === false) return EMPTY_PROPS;
@@ -85,21 +97,30 @@ export function createRenderElement<State extends object = {}, E extends Element
   // Cache merge construction (including functional inputs), not attribute/value
   // evaluation. Source getters retain their per-property subscriptions.
   const resolved = isServer ? readResolved : createMemo(readResolved, { transparent: true });
+  // Membership and input-handler policy depend on presence, not each text edit.
+  // Share this equality boundary so value updates do not enumerate every prop.
+  const readHasValue = () => resolved().value != null;
+  const hasValue = isServer ? readHasValue : createMemo(readHasValue, { transparent: true });
   const [node, setNode] = createSignal<E | null>(null, { ownedWrite: true });
   const report = (element: E | null) => { setNode(() => element); };
-  const ref = createMergedRefsN<E>(() => {
-    const external = params.ref;
-    let propRef;
+  const readPropRef = () => {
     if (params.enabled !== false) {
       const inputs = params.props;
       const sources = Array.isArray(inputs) ? inputs : [inputs];
       // String-valued state attributes and tag defaults cannot supply native
       // refs. Ordinary bags need only their ordered ref projection. Functions
       // can derive refs from any preceding prop, so retain that full live view.
-      propRef = params.propGetter || sources.some((source) => typeof source === 'function')
+      return params.propGetter || sources.some((source) => typeof source === 'function')
         ? resolved().ref : mergePropsN<any>(sources).ref;
     }
-    return [report, propRef, ...(Array.isArray(external) ? external : [external])];
+    return undefined;
+  };
+  // Functional prop stages can read changing state without changing their ref.
+  // Gate that projection before normalizing and publishing the merged ref list.
+  const propRef = isServer ? readPropRef : createMemo(readPropRef, { transparent: true });
+  const ref = createMergedRefsN<E>(() => {
+    const external = params.ref;
+    return [report, propRef(), ...(Array.isArray(external) ? external : [external])];
   });
   let projectedValue: { element: E; value: string } | undefined;
   if (!isServer) {
@@ -162,8 +183,8 @@ export function createRenderElement<State extends object = {}, E extends Element
   }, { transparent: true });
   const handlers = new Map<string, (...args: unknown[]) => unknown>();
   const live: Props = new Proxy({}, {
-    ownKeys: () => [...new Set([...Object.keys(resolved()).filter((key) => !(valueProperty() && key === 'value')), ...(controlledDefault() ? ['defaultValue'] : []), ...(resolved().value != null ? ['onInput'] : []), 'class', 'style', 'ref'])],
-    has: (_, key) => typeof key === 'string' && (key === 'class' || key === 'style' || key === 'ref' || (key === 'defaultValue' && controlledDefault()) || (key === 'onInput' && resolved().value != null) || (key === 'children' ? key in childrenProps() : key in resolved())),
+    ownKeys: () => [...new Set([...Object.keys(resolved()).filter((key) => !(valueProperty() && key === 'value')), ...(controlledDefault() ? ['defaultValue'] : []), ...(hasValue() ? ['onInput'] : []), 'class', 'style', 'ref'])],
+    has: (_, key) => typeof key === 'string' && (key === 'class' || key === 'style' || key === 'ref' || (key === 'defaultValue' && controlledDefault()) || (key === 'onInput' && hasValue()) || (key === 'children' ? key in childrenProps() : key in resolved())),
     // Native spread inspects the children descriptor during host creation.
     // A live getter both retains lazy children and avoids subscribing identity
     // to the current resolved-prop record while inspecting that descriptor.
@@ -185,7 +206,7 @@ export function createRenderElement<State extends object = {}, E extends Element
       if (key === 'defaultValue' && controlledDefault()) return resolved().value;
       const value = resolved()[key as string];
       if (key.startsWith('aria-') && typeof value === 'boolean') return String(value);
-      if (/^on[A-Z]/.test(key) && (typeof value === 'function' || (key === 'onInput' && resolved().value != null))) {
+      if (/^on[A-Z]/.test(key) && (typeof value === 'function' || (key === 'onInput' && hasValue()))) {
         if (!handlers.has(key)) handlers.set(key, (...args) => {
           const dispatch = () => {
             const result = resolved()[key]?.(...args);
@@ -248,13 +269,26 @@ export function createRenderElement<State extends object = {}, E extends Element
         // Keep this view outside JSX: a call-expression spread is compiled to
         // a lazy merge source, whose server evaluation consumes hydration slots
         // before the native host that the client claims first.
-        const hostAttributes = omit(attributes, 'ref');
+        // Layout observations can update styles independently of logical-state
+        // attributes. Separate native bindings avoid reprojecting the latter
+        // with stale measurements and then again after the layout effect.
+        // SSR still emits the complete style on this same native host.
+        const hostAttributes = isServer ? omit(attributes, 'ref') : name === 'input'
+          ? omit(attributes, 'ref', 'style', 'defaultValue') : omit(attributes, 'ref', 'style');
+        const styleProps = { get style() { return attributes.style; } };
+        // Controlled reset defaults follow every text edit. Keep their native
+        // binding independent from unrelated attributes and event handlers.
+        const defaultValueProps = { get defaultValue() { return attributes.defaultValue; } };
         const target = () => {
           // Native dynamic returns the actual element. Deliver its ref in this
           // setup scope, outside spread's prop-reading effect: a consumer may
           // derive those very props from its registered element.
           const host = <NativeHost {...hostAttributes} />;
-          if (!isServer) props.ref(host as E);
+          if (!isServer) {
+            spread(host as E, [styleProps], true);
+            if (name === 'input') spread(host as E, [defaultValueProps], true);
+            props.ref(host as E);
+          }
           return host;
         };
         // Status is read in this logical-owner computation rather than only
