@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, 'ci/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Build and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      CI: 'true'
+      TZ: UTC
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          submodules: true
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: package.json
+          package-manager-cache: false
+
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        with:
+          cache: true
+
+      # Existing test/build scripts invoke RTK internally. Verify the pinned
+      # release instead of running an unpinned installer from the network.
+      - name: Install RTK
+        shell: bash
+        run: |
+          curl --fail --silent --show-error --location --retry 3 \
+            https://github.com/rtk-ai/rtk/releases/download/v0.51.0/rtk-x86_64-unknown-linux-musl.tar.gz \
+            --output "$RUNNER_TEMP/rtk.tar.gz"
+          echo "5028d3b19a8f0990d30fec9fbb07e32782bc5698e618fb1861aad8a9ccba4eb5  $RUNNER_TEMP/rtk.tar.gz" | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/rtk-bin"
+          tar -xzf "$RUNNER_TEMP/rtk.tar.gz" -C "$RUNNER_TEMP/rtk-bin"
+          echo "$RUNNER_TEMP/rtk-bin" >> "$GITHUB_PATH"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Chromium and system dependencies
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Build package
+        run: pnpm build:package
+
+      - name: Build documentation
+        run: pnpm docs:build
+
+      - name: Check public type contracts
+        run: pnpm test:types
+
+      - name: Run full unit, SSR, and interaction gates
+        id: gate
+        run: |
+          # Do not upload historical evidence tracked in the repository.
+          rm -f docs/generated/browser/runtime-gate/*.log \
+            docs/generated/browser/runtime-gate/summary.json \
+            docs/generated/browser/click-diagnostics.json
+          pnpm test:interactions --full-unit
+
+      - name: Retain failure diagnostics
+        if: failure() && steps.gate.outcome == 'failure'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ci-diagnostics
+          path: |
+            docs/generated/browser/runtime-gate/*.log
+            docs/generated/browser/runtime-gate/summary.json
+            docs/generated/browser/click-diagnostics.json
+          if-no-files-found: ignore
+          retention-days: 3

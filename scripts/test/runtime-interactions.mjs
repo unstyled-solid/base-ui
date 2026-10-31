@@ -4,6 +4,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const args = process.argv.slice(2);
+if (args.some(arg => arg !== '--full-unit')) throw new Error('Usage: runtime-interactions.mjs [--full-unit]');
+const fullUnit = args.includes('--full-unit');
 const evidence = path.join(root, 'docs/generated/browser/runtime-gate');
 await fs.mkdir(evidence, { recursive: true });
 const results = [];
@@ -35,14 +38,14 @@ if (!types.passed) {
 }
 await run('catalog', ['pnpm', 'docs:generate:demos']);
 await run('docs', ['pnpm', 'docs:check']);
-await run('jsdom', ['pnpm', 'test:jsdom', 'merge-props', 'getStateAttributesProps', 'createRenderElement', 'useButton',
+await run('jsdom', ['pnpm', 'test:jsdom', ...(fullUnit ? [] : ['merge-props', 'getStateAttributesProps', 'createRenderElement', 'useButton',
   'number-field', 'tabs', 'accordion', 'collapsible', 'radio', 'tooltip', 'popover', 'menu', 'select', 'slider',
-  'otp-field', 'avatar', 'combobox', 'createPopup.test', '--no-watch']);
-await run('ssr', ['pnpm', 'test:ssr', 'createRenderElement', 'NumberField', 'Tabs', 'Tooltip', 'Avatar', 'Accordion',
-  'Collapsible', 'Select', 'Slider', 'OTPField', 'Combobox', '--no-watch']);
+  'otp-field', 'avatar', 'combobox', 'createPopup.test']), '--no-watch']);
+await run('ssr', ['pnpm', 'test:ssr', ...(fullUnit ? [] : ['createRenderElement', 'NumberField', 'Tabs', 'Tooltip', 'Avatar', 'Accordion',
+  'Collapsible', 'Select', 'Slider', 'OTPField', 'Combobox']), '--no-watch']);
 await run('chromium', ['pnpm', 'test:chromium', 'createRenderElement', 'Events.test', 'getStateAttributesProps',
   'NumberField.reactivity', 'RadioIndicator.test', 'RadioGroup.field', 'SelectField.test', 'TabsActivation.browser',
-  'createPopup.test', '--no-watch']);
+  'createPopup.test', 'CheckboxRoot.teardown', 'FieldRegistration.teardown', 'PopoverPositioner.browser', '--no-watch']);
 
 let server;
 let serverOutput = '';
