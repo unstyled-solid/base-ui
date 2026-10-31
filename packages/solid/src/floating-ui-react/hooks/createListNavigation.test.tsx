@@ -1,8 +1,43 @@
 import { expect, it, vi } from 'vitest';
-import { createSignal } from 'solid-js';
-import { createRenderer, advanceTimers, waitFor } from '../../../test';
+import { createSignal, flush } from 'solid-js';
+import { createRenderer, advanceTimers, fireEvent, waitFor } from '../../../test';
 import { createFloatingRoot } from '../components/createFloatingRoot';
 import { createListNavigation, type UseListNavigationReturn } from './createListNavigation';
+
+// useListNavigation.ts: forceSyncFocusRef must survive active-index synchronization.
+// Supplement MenuPopup.test.tsx's custom-content boundary case with an explicit RAF drain.
+it('does not queue a stale keyboard focus after the active index commits', async () => {
+  vi.useFakeTimers();
+  const view = await createRenderer().render(() => {
+    const [floating, setFloating] = createSignal<HTMLElement | null>(null);
+    const [index, setIndex] = createSignal<number | null>(null);
+    const listRef = { current: [] as (HTMLElement | null)[] };
+    const root = createFloatingRoot({ state: { open: true, transitionStatus: undefined,
+      domReferenceElement: null, referenceElement: null, positionReference: null,
+      get floatingElement() { return floating(); }, floatingId: undefined } });
+    const navigation = createListNavigation(root, { listRef, get activeIndex() { return index(); },
+      focusItemOnOpen: false, onNavigate(next) { setIndex(next); } });
+    return <div ref={setFloating} {...navigation.floating}>
+      <button>Custom</button>
+      <button ref={node => { listRef.current[0] = node; }} {...navigation.item}>First</button>
+      <button ref={node => { listRef.current[1] = node; }} {...navigation.item}>Second</button>
+    </div>;
+  });
+  view.getByText('First').focus();
+  flush();
+  fireEvent.keyDown(view.getByText('First'), { key: 'ArrowDown' });
+  flush();
+  expect(view.getByText('Second')).toHaveFocus();
+  view.getByText('Custom').focus();
+  vi.advanceTimersToNextFrame();
+  flush();
+  expect(view.getByText('Custom')).toHaveFocus();
+  fireEvent.keyDown(view.getByText('Custom'), { key: 'ArrowDown' });
+  flush();
+  expect(view.getByText('First')).toHaveFocus();
+  view.unmount();
+  await advanceTimers(0);
+});
 it('createListNavigation drops closed imperative requests and carries same-turn navigation proposals', async () => {
   vi.useFakeTimers();
   let api!: UseListNavigationReturn;

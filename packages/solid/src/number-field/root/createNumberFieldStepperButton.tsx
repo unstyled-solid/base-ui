@@ -1,4 +1,4 @@
-import { omit } from 'solid-js';
+import { createMemo, omit } from 'solid-js';
 import { createButton } from '../../internals/use-button';
 import { createPressAndHold, isTouchLikePointerType } from '../../internals/createPressAndHold';
 import { createRenderElement } from '../../internals/createRenderElement';
@@ -18,7 +18,11 @@ export function createNumberFieldStepperButton(props: StepperButtonProps, increm
   const direction = increment ? 1 : -1;
   const atBoundary = () => context.state.value !== null && (increment
     ? context.state.value >= context.maxWithDefault : context.state.value <= context.minWithDefault);
-  const disabled = () => Boolean(props.disabled || context.state.disabled || atBoundary());
+  // Share the primitive boundary result across the native props, button and
+  // hold consumers. Numeric changes within the range must not reproject them.
+  const disabled = createMemo(() => Boolean(props.disabled || context.state.disabled || atBoundary()), {
+    name: 'NumberField.stepperDisabled',
+  });
   let seed: number | null | undefined;
   let lastTick: number | null | undefined;
 

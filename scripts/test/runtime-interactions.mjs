@@ -22,7 +22,7 @@ async function run(name, args, env = {}) {
   });
   const log = path.join(evidence, `${name}.log`);
   await fs.writeFile(log, output);
-  const summary = stripVTControlCharacters(output).split('\n').filter(line => /HARNESS_FINAL|Test Files|Tests |PASS:|Demo catalog:|Evidence:|FAIL |Error:/.test(line));
+  const summary = stripVTControlCharacters(output).split('\n').filter(line => /HARNESS_FINAL|Test Files|Tests |PASS:|Demo catalog:|Evidence:|FAIL |Error:|"passed":false/.test(line));
   const result = { name, passed: code === 0, code, command: `rtk ${args.join(' ')}`, log, summary };
   results.push(result);
   console.log(JSON.stringify(result));

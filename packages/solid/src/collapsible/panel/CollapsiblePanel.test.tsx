@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { flush, untrack } from 'solid-js';
+import { createEffect, flush, untrack } from 'solid-js';
 import { createRenderer, describeConformance, fireEvent, waitFor, expectDiagnostic } from '../../../test';
 import { Collapsible } from '../index';
 import { createCollapsibleRoot } from '../root/createCollapsibleRoot';
@@ -9,6 +9,53 @@ import { collapsibleStateAttributesMapping } from '../root/stateAttributesMappin
 
 describe('Collapsible.Panel', () => {
   const { render, renderProps } = createRenderer();
+  it('does not republish false animation suppression when open changes', async () => {
+    let reads = 0;
+    const values: boolean[] = [];
+    const view = await renderProps((props: { open: boolean }) => {
+      const panel = createCollapsiblePanel({
+        get open() { return props.open; }, mounted: true,
+        transitionStatus: 'idle', hiddenUntilFound: false, keepMounted: true, id: undefined,
+        setMounted() {}, setOpen() {}, onOpenChange() {},
+      });
+      createEffect(() => { reads++; return panel.shouldPreventOpenAnimation; }, value => { values.push(value); });
+      return <div />;
+    }, { open: false });
+    const initialReads = reads;
+    await view.setProps({ open: true });
+    await view.setProps({ open: false });
+    expect(values.every(value => value === false)).toBe(true);
+    expect(reads).toBe(initialReads);
+  });
+  it('does not reproject static attributes when only measured dimensions change', async () => {
+    let attributeReads = 0;
+    let height = 80;
+    const view = await renderProps((props: { transitionStatus: 'idle' | 'ending' }) => {
+      const panel = createCollapsiblePanel({
+        open: false, mounted: true,
+        get transitionStatus() { return props.transitionStatus; },
+        hiddenUntilFound: false, keepMounted: true, id: undefined,
+        setMounted() {}, setOpen() {}, onOpenChange() {},
+        externalRef(node) {
+          if (!node) return;
+          Object.defineProperty(node, 'scrollHeight', { get: () => height });
+          Object.defineProperty(node, 'scrollWidth', { value: 120 });
+        },
+      });
+      return createRenderElement('div', {}, { ref: panel.ref, props: [panel.props, {
+        children: 'Projection probe',
+        get 'data-probe'() { attributeReads++; return 'static'; },
+        get style() { return { 'transition-duration': '10s', '--height': `${panel.height}px` }; },
+      }] });
+    }, { transitionStatus: 'idle' });
+    const element = view.getByText('Projection probe');
+    expect(element.style.getPropertyValue('--height')).toBe('80px');
+    const initialReads = attributeReads;
+    height = 140;
+    await view.setProps({ transitionStatus: 'ending' });
+    expect(element.style.getPropertyValue('--height')).toBe('140px');
+    expect(attributeReads).toBe(initialReads);
+  });
   describeConformance((props) => <Collapsible.Root defaultOpen><Collapsible.Panel {...props} /></Collapsible.Root>, {
     initialProps: {}, refInstanceof: HTMLDivElement,
   });

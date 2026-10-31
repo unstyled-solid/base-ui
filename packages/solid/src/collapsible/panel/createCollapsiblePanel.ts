@@ -36,7 +36,11 @@ export function createCollapsiblePanel(p: UseCollapsiblePanelParameters): UseCol
   const ref = createMergedRefsN<HTMLDivElement>(() => [p.externalRef, panelRef]);
   const hidden = () => !p.open && !p.mounted;
   const status = () => p.open && forceIdle() ? 'idle' : p.transitionStatus;
-  const preventAnimation = () => p.open && preventMountAnimation();
+  // This shared policy usually stays false across open/close. Keep those
+  // transitions out of consumers that only need animation suppression.
+  const preventAnimation = createMemo(() => p.open && preventMountAnimation(), {
+    name: 'createCollapsiblePanel.preventAnimation',
+  });
   const measure = (panel: HTMLElement) => {
     measured = { height: panel.scrollHeight, width: panel.scrollWidth };
     setDimensions(measured);

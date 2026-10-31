@@ -1,5 +1,5 @@
 import { children, createEffect, createMemo, createSignal, merge, omit, onCleanup, onSettled, untrack } from 'solid-js';
-import { dynamic, isServer, type JSX } from '@solidjs/web';
+import { dynamic, isServer, spread, type JSX } from '@solidjs/web';
 import { mergePropsN, mergeClassNames, mergeStyles, isNativeEvent } from '../merge-props';
 import { createMergedRefsN, type InputRef } from '../utils/createMergedRefs';
 import { resolveClass } from '../utils/resolveClass';
@@ -248,13 +248,21 @@ export function createRenderElement<State extends object = {}, E extends Element
         // Keep this view outside JSX: a call-expression spread is compiled to
         // a lazy merge source, whose server evaluation consumes hydration slots
         // before the native host that the client claims first.
-        const hostAttributes = omit(attributes, 'ref');
+        // Layout observations can update styles independently of logical-state
+        // attributes. Separate native bindings avoid reprojecting the latter
+        // with stale measurements and then again after the layout effect.
+        // SSR still emits the complete style on this same native host.
+        const hostAttributes = isServer ? omit(attributes, 'ref') : omit(attributes, 'ref', 'style');
+        const styleProps = { get style() { return attributes.style; } };
         const target = () => {
           // Native dynamic returns the actual element. Deliver its ref in this
           // setup scope, outside spread's prop-reading effect: a consumer may
           // derive those very props from its registered element.
           const host = <NativeHost {...hostAttributes} />;
-          if (!isServer) props.ref(host as E);
+          if (!isServer) {
+            spread(host as E, [styleProps], true);
+            props.ref(host as E);
+          }
           return host;
         };
         // Status is read in this logical-owner computation rather than only
