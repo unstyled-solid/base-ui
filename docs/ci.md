@@ -39,5 +39,6 @@ pnpm test:interactions --full-unit
 
 Normal runs upload no artifacts. Failures retain only gate logs and JSON
 diagnostics for three days; no videos, browser caches, or built sites are uploaded.
+Failing test summaries also appear directly as GitHub check annotations.
 The workflow needs only read access to repository contents and no project secrets,
 including for fork pull requests. New runs cancel older runs for the same PR/ref.
