@@ -3,6 +3,25 @@ import { attribution } from 'solid-js/attribution';
 import { createRenderer } from '../../test';
 import { NumberField } from './index';
 
+it('updates input text without reprojecting unrelated native input props', async () => {
+  let titleReads = 0;
+  const view = await createRenderer().renderProps((props: { value: number }) => {
+    const inputProps = { get title() { titleReads++; return 'stable'; } };
+    return <NumberField.Root value={props.value}>
+      <NumberField.Group><NumberField.Input {...inputProps} /></NumberField.Group>
+    </NumberField.Root>;
+  }, { value: 1 });
+  const input = view.getByRole('textbox') as HTMLInputElement;
+  const initialReads = titleReads;
+  expect(initialReads).toBeGreaterThan(0);
+  for (let value = 2; value <= 54; value++) await view.setProps({ value });
+  expect(titleReads).toBe(initialReads);
+  expect(input.value).toBe('54');
+  expect(input.defaultValue).toBe('54');
+  expect(view.getByRole('textbox')).toBe(input);
+  expect(input).toHaveAttribute('title', 'stable');
+});
+
 it('does not reproject stepper host props while their disabled state is unchanged', async () => {
   const reads = { increment: 0, decrement: 0 };
   const incrementProps = { get 'data-probe'() { reads.increment++; return 'increment'; } };

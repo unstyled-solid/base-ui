@@ -14,6 +14,45 @@ import type { FieldRootContextValue } from './field-root-context';
 
 describe('createRenderElement', () => {
   const { renderProps } = createRenderer();
+  it.each(['functional prop', 'propGetter'] as const)('retains state-derived refs from a %s', async (mode) => {
+    const closedRef = vi.fn();
+    const openRef = vi.fn();
+    const deriveRef = (previous: Record<string, any>) => mergePropsN([previous, {
+      get ref() { return previous['data-open'] === '' ? openRef : closedRef; },
+    }]);
+    const view = await renderProps((props: { open: boolean }) => createRenderElement('button', {}, {
+      state: { get open() { return props.open; } },
+      props: mode === 'functional prop' ? [{ children: 'Target' }, deriveRef] : { children: 'Target' },
+      propGetter: mode === 'propGetter' ? deriveRef : undefined,
+    }), { open: false });
+    const host = view.getByRole('button');
+    expect(closedRef.mock.calls).toEqual([[host]]);
+    expect(openRef).not.toHaveBeenCalled();
+    await view.setProps({ open: true });
+    expect(closedRef.mock.calls).toEqual([[host], [null]]);
+    expect(openRef.mock.calls).toEqual([[host]]);
+    expect(view.getByRole('button')).toBe(host);
+    view.unmount();
+    expect(openRef.mock.calls).toEqual([[host], [null]]);
+  });
+  it('updates native input values without rereading unrelated attributes', async () => {
+    let titleReads = 0;
+    const view = await renderProps((props: { value: string }) => createRenderElement('input', {}, {
+      props: {
+        get value() { return props.value; },
+        get title() { titleReads++; return 'stable'; },
+      },
+    }), { value: '1' });
+    const input = view.getByRole('textbox') as HTMLInputElement;
+    const initialReads = titleReads;
+    expect(initialReads).toBeGreaterThan(0);
+    await view.setProps({ value: '2' });
+    expect(input.value).toBe('2');
+    expect(input.defaultValue).toBe('2');
+    expect(input).toHaveAttribute('value', '2');
+    expect(titleReads).toBe(initialReads);
+    expect(view.getByRole('textbox')).toBe(input);
+  });
   it('does not subscribe native styles to unrelated state-attribute membership probes', async () => {
     let styleReads = 0;
     const view = await renderProps((props: { open: boolean }) => createRenderElement('div', {}, {
