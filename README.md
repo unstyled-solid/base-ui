@@ -1,44 +1,59 @@
 # Base UI for Solid 2
 
-Base UI for Solid 2 is an unstyled UI component library for building accessible user interfaces, adapted from [React Base UI](https://github.com/mui/base-ui).
+[![CI](https://github.com/unstyled-solid/base-ui/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/unstyled-solid/base-ui/actions/workflows/ci.yml?query=branch%3Amain+event%3Apush)
 
-An independent, unofficial port by [Unstyled Solid](https://github.com/unstyled-solid/base-ui), not maintained by MUI or the upstream Base UI team. The public package is [`@unstyled-solid/base-ui`](https://www.npmjs.com/package/@unstyled-solid/base-ui); version **0.0.2 is an alpha** targeting **Solid 2.0.0-rc.13**, not Solid 1.
+Unstyled components for building accessible user interfaces with Solid. Bring your own styles and retain full control over your application's design.
+
+Adapted from [Base UI](https://github.com/mui/base-ui), with native Solid reactivity, events, and composition. Maintained independently by [Unstyled Solid](https://github.com/unstyled-solid).
 
 ---
 
-## Documentation
+## Getting started
 
-To get started, check out the [installation and usage guide](packages/solid/README.md) and the [local documentation website](docs/site/README.md). A hosted documentation website is forthcoming.
+Install the library and its Solid 2 runtime dependencies:
 
 ```sh
 npm install @unstyled-solid/base-ui solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
 ```
 
-Use a Solid 2 compiler with `jsxImportSource: "@solidjs/web"`. Components use `class`, native events, and a live `(props, state) => JSX` render callback instead of React element cloning. See the [Solid 2 contract](docs/solid2-contract.md) for framework details.
+```tsx
+import { Button } from '@unstyled-solid/base-ui/button';
+
+export function Example() {
+  return <Button class="my-button">Click me</Button>;
+}
+```
+
+**Compatibility:** The current release is an alpha targeting **Solid 2.0.0-rc.13**. Use a compatible Solid 2 compiler with `jsxImportSource: "@solidjs/web"`; Solid 1 is not supported. See the [installation guide](packages/solid/README.md) for toolchain configuration.
+
+## Documentation
+
+- [Installation and usage](packages/solid/README.md)
+- [Run the documentation website locally](docs/site/README.md) — hosted documentation is forthcoming.
+- [Solid 2 conventions and composition](docs/solid2-contract.md) — `class`, native events, callback refs, and live render callbacks.
+
+The package provides component-level imports, tree-shakeable ESM browser and server modules, and TypeScript declarations.
 
 ## Contributing
 
-Propose bug fixes and improvements through [GitHub issues and pull requests](https://github.com/unstyled-solid/base-ui). For the development process and testing contracts, see:
+Bug reports, improvements, and pull requests are welcome. Start with the [architecture guide](docs/architecture.md) and [toolchain contracts](docs/contracts.md) for the development process.
 
-- [Architecture and scope](docs/architecture.md)
-- [Solid 2 implementation contract](docs/solid2-contract.md)
-- [Toolchain and shared contracts](docs/contracts.md)
-- [Continuous integration and local CI checks](docs/ci.md)
-- [Parallel execution and ownership](docs/parallel-execution.md)
-- [Weekly upstream workflow](docs/upstream-workflow.md)
+The [CI guide](docs/ci.md) explains how to run the build, type, unit, SSR, browser, and documentation checks locally. The badge above tracks the latest push-triggered CI run on `main`.
+
+For maintenance, see the [upstream update workflow](docs/upstream-workflow.md) and [contribution ownership guide](docs/parallel-execution.md).
 
 ## Releases
 
-To see the latest updates, check out the [releases](https://github.com/unstyled-solid/base-ui/releases).
+See [GitHub releases](https://github.com/unstyled-solid/base-ui/releases) for updates and [npm](https://www.npmjs.com/package/@unstyled-solid/base-ui) for published versions.
 
 ## Community
 
-For support, questions, and tips, use the [project on GitHub](https://github.com/unstyled-solid/base-ui).
+For questions, feedback, and bug reports, visit [GitHub Discussions](https://github.com/unstyled-solid/base-ui/discussions) or [open an issue](https://github.com/unstyled-solid/base-ui/issues).
 
-## Team
+## Acknowledgments
 
-This Solid port is maintained independently by [Unstyled Solid](https://github.com/unstyled-solid/base-ui). Credit for the original React library belongs to the [upstream Base UI contributors](https://github.com/mui/base-ui/graphs/contributors).
+This library builds on the work of the [Base UI contributors](https://github.com/mui/base-ui/graphs/contributors). It is an independent, unofficial Solid port and is not maintained by MUI or the upstream Base UI team.
 
 ## License
 
-This project is licensed under the terms of the [MIT license](LICENSE). Adapted from React Base UI **1.8.0**, pinned at `19511bb171f3b360b006c94cf6d07e53cb446505`. See [NOTICE](NOTICE) and [third-party notices](THIRD-PARTY-NOTICES.md) for attribution.
+Licensed under [MIT](LICENSE). Adapted from React Base UI **1.8.0**; see [NOTICE](NOTICE) and [third-party notices](THIRD-PARTY-NOTICES.md) for attribution and source provenance.
