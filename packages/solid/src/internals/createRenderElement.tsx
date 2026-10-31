@@ -66,14 +66,26 @@ export function createRenderElement<State extends object = {}, E extends Element
     equals: (previous, next) => Object.keys(previous).length === Object.keys(next).length
       && Object.keys(previous).every((key) => Object.hasOwn(next, key) && previous[key] === next[key]),
   });
+  // Style fallback probes must not subscribe the independent native style
+  // binding to every data-state change. Preserve both dynamic key presence and
+  // its string value; an explicitly present undefined still differs from absence.
+  const readStateStyle = () => {
+    const attributes = stateAttributes();
+    return { present: Object.hasOwn(attributes, 'style'), value: attributes.style };
+  };
+  const stateStyle = isServer ? readStateStyle : createMemo(readStateStyle, {
+    transparent: true,
+    equals: (before, next) => before.present === next.present && before.value === next.value,
+  });
+  const hasStateAttribute = (key: PropertyKey) => key === 'style' ? stateStyle().present : key in stateAttributes();
   // A merged prop read evaluates attributes only when it actually falls through
   // to them. Functional inputs/propGetter retain that same preceding live view.
   const attributeProps: Props = new Proxy({}, {
     ownKeys: () => Object.keys(stateAttributes()),
-    has: (_, key) => key in stateAttributes(),
-    getOwnPropertyDescriptor: (_, key) => key in stateAttributes()
-      ? { configurable: true, enumerable: true, get: () => stateAttributes()[key as string] } : undefined,
-    get: (_, key) => typeof key === 'string' ? stateAttributes()[key] : undefined,
+    has: (_, key) => hasStateAttribute(key),
+    getOwnPropertyDescriptor: (_, key) => hasStateAttribute(key)
+      ? { configurable: true, enumerable: true, get: () => key === 'style' ? stateStyle().value : stateAttributes()[key as string] } : undefined,
+    get: (_, key) => key === 'style' ? stateStyle().value : typeof key === 'string' ? stateAttributes()[key] : undefined,
   });
   const readResolved = () => {
     if (params.enabled === false) return EMPTY_PROPS;

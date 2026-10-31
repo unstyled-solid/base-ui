@@ -14,6 +14,40 @@ import type { FieldRootContextValue } from './field-root-context';
 
 describe('createRenderElement', () => {
   const { renderProps } = createRenderer();
+  it('does not subscribe native styles to unrelated state-attribute membership probes', async () => {
+    let styleReads = 0;
+    const view = await renderProps((props: { open: boolean }) => createRenderElement('div', {}, {
+      state: { get open() { return props.open; } },
+      props: { 'data-testid': 'host', get style() { styleReads++; return { '--height': '80px' }; } },
+    }), { open: false });
+    const host = view.getByTestId('host');
+    const initial = styleReads;
+    expect(initial).toBeGreaterThan(0);
+    await view.setProps({ open: true });
+    expect(host).toHaveAttribute('data-open');
+    expect(styleReads).toBe(initial);
+    expect(host.style.getPropertyValue('--height')).toBe('80px');
+    await view.setProps({ open: false });
+    expect(host).not.toHaveAttribute('data-open');
+    expect(styleReads).toBe(initial);
+  });
+
+  it('retains dynamic state-mapped style membership and value changes', async () => {
+    const view = await renderProps<{ color: string | undefined }>((props) => createRenderElement('div', {}, {
+      state: { get color() { return props.color; } },
+      stateAttributesMapping: { color: value => value === undefined ? {} : { style: `color:${value}` } },
+      props: { 'data-testid': 'host', style: { '--height': '80px' } },
+    }), { color: undefined });
+    const host = view.getByTestId('host');
+    await view.setProps({ color: 'red' });
+    expect(host.style.color).toBe('red');
+    await view.setProps({ color: 'blue' });
+    expect(host.style.color).toBe('blue');
+    await view.setProps({ color: undefined });
+    expect(host.style.color).toBe('');
+    expect(host.style.getPropertyValue('--height')).toBe('80px');
+    expect(view.getByTestId('host')).toBe(host);
+  });
   it('publishes Field state keys through real description and validation composition without replacing the host or refs', async () => {
     let field!: FieldRootContextValue;
     const ref = vi.fn();

@@ -1,8 +1,8 @@
 # Continuous integration
 
 GitHub Actions runs **CI / Build and test** on every pull request and push to
-`main`. Pushes to `ci/**` branches also run it so workflow changes can be checked
-before opening a PR. Manual runs are available after the workflow reaches `main`.
+`main`. Branch pushes are checked through their PR, avoiding duplicate expensive
+runs for the same update. Manual runs are available after the workflow reaches `main`.
 
 The workflow uses a standard `ubuntu-latest` runner, the exact Node and pnpm
 versions from `package.json`, frozen dependencies, and the pinned upstream
