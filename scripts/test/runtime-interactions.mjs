@@ -51,7 +51,7 @@ await run('jsdom', ['pnpm', 'test:jsdom', ...(fullUnit ? [] : ['merge-props', 'g
   'otp-field', 'avatar', 'combobox', 'createPopup.test']), '--no-watch']);
 await run('ssr', ['pnpm', 'test:ssr', ...(fullUnit ? [] : ['createRenderElement', 'NumberField', 'Tabs', 'Tooltip', 'Avatar', 'Accordion',
   'Collapsible', 'Select', 'Slider', 'OTPField', 'Combobox']), '--no-watch']);
-await run('chromium', ['pnpm', 'test:chromium', 'createRenderElement', 'Events.test', 'getStateAttributesProps',
+await run('chromium', ['pnpm', 'test:chromium', '--grouped', 'createRenderElement', 'Events.test', 'getStateAttributesProps',
   'NumberField.reactivity', 'RadioIndicator.test', 'RadioGroup.field', 'SelectField.test', 'TabsActivation.browser',
   'createPopup.test', 'CheckboxRoot.teardown', 'FieldRegistration.teardown', 'PopoverPositioner.browser', '--no-watch']);
 

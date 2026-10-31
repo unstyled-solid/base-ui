@@ -19,8 +19,8 @@ export default defineConfig({
   test: {
     ...shared.test,
     name: 'solid2-real-browser-development',
-    maxWorkers: nativeDocument || process.env.HARNESS_BATCH_FILE ? 1 : shared.test?.maxWorkers,
-    fileParallelism: nativeDocument || process.env.HARNESS_BATCH_FILE ? false : shared.test?.fileParallelism,
+    maxWorkers: nativeDocument || process.env.HARNESS_BATCH_FILE || process.env.HARNESS_GROUPED_BROWSER ? 1 : shared.test?.maxWorkers,
+    fileParallelism: nativeDocument || process.env.HARNESS_BATCH_FILE || process.env.HARNESS_GROUPED_BROWSER ? false : shared.test?.fileParallelism,
     provide: { harnessNativeDocument: nativeDocument },
     include: process.env.HARNESS_BATCH_FILE ? [process.env.HARNESS_BATCH_FILE] : [...shared.test?.include ?? [], ...(nativeDocument ? ['test/native-harness/**/*.browser.test.{ts,tsx}'] : [])],
     // Replace, rather than append, the jsdom exclusions: browserCase also lives in ordinary suites.
