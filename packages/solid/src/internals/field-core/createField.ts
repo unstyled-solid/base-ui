@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onCleanup, untrack, type Setter } from 'solid-js';
+import { createEffect, createSignal, onCleanup, runWithOwner, untrack, type Setter } from 'solid-js';
 import { useFormContext } from '../form-context';
 import { useLabelableContext } from '../labelable-provider';
 import type { FieldRootContextValue, FieldRootState } from '../field-root-context';
@@ -81,7 +81,10 @@ export function createField(options: FieldOptions): FieldRootContextValue {
       untrack(() => {
         if (!next) {
           if (source !== currentSource) return;
-          validation.change(undefined, true); remove(); current = undefined; currentSource = undefined; setRegisteredName(undefined);
+          validation.change(undefined, true); remove(); current = undefined; currentSource = undefined;
+          // List reconciliation can run disposal inside an owned computation.
+          // Releasing the control's name is imperative teardown, like ref detach.
+          runWithOwner(null, () => setRegisteredName(undefined));
           return;
         }
         if (currentSource && source !== currentSource) validation.change(undefined, true);

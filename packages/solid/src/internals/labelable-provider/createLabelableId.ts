@@ -1,4 +1,4 @@
-import { createEffect, onCleanup, type Accessor } from 'solid-js';
+import { createEffect, onCleanup, runWithOwner, type Accessor } from 'solid-js';
 import { isServer } from '@solidjs/web';
 import { createBaseUiId } from '../createBaseUiId';
 import { useLabelableContext } from './LabelableContext';
@@ -29,7 +29,7 @@ export function createLabelableId(params: UseLabelableIdParameters = {}): Access
       } else if (hadExplicitId) { registered = true; context.registerControlId(source, next.fallback); }
       else context.resetControlId();
     }, { transparent: true });
-    onCleanup(unregister);
+    onCleanup(() => runWithOwner(null, unregister));
   }
   return () => (enabled() ? context?.controlId : undefined) ?? id() ?? fallback();
 }

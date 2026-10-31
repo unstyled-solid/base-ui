@@ -1,10 +1,40 @@
 import { expect, it } from 'vitest';
-import { flush, untrack } from 'solid-js';
-import { createRenderer } from '../../../test';
+import { flush, getOwner, runWithOwner, untrack } from 'solid-js';
+import { createRenderer, flushMicrotasks } from '../../../test';
 import { createField } from './createField';
 import { FormContext } from '../form-context';
 import type { FormContext as FormValue } from '../contracts/field';
 import type { FieldRootContextValue } from '../field-root-context';
+
+it('releases a registered name and cancels pending validation during owned teardown', async () => {
+  let field!: FieldRootContextValue;
+  let owner: ReturnType<typeof getOwner> = null;
+  let resolve!: (value: string) => void;
+  const form: FormValue = { errors: {}, clearErrors() {}, elementRef: () => null, fields: new Map(), validationMode: 'onSubmit', submitCount: 0 };
+  function Probe() {
+    owner = getOwner();
+    field = createField({ validate: () => new Promise<string>((done) => { resolve = done; }) });
+    return <output>{field.name}:{field.validityData.error}</output>;
+  }
+  const view = await createRenderer().render(() => <FormContext value={form}><Probe /></FormContext>);
+  const first = Symbol(), replacement = Symbol();
+  field.registerFieldControl(first, { controlRef: () => null, id: 'first', name: 'old', value: 'initial' });
+  field.registerFieldControl(replacement, { controlRef: () => null, id: 'replacement', name: 'current', value: 'next' });
+  await flushMicrotasks();
+  runWithOwner(owner, () => field.registerFieldControl(first, undefined));
+  expect(form.fields.has('replacement')).toBe(true);
+  expect(untrack(() => field.name)).toBe('current');
+  const pending = field.validation.commit('next');
+  runWithOwner(owner, () => field.registerFieldControl(replacement, undefined));
+  await flushMicrotasks();
+  expect(form.fields.size).toBe(0);
+  expect(untrack(() => field.name)).toBeUndefined();
+  resolve('stale error');
+  await pending;
+  await flushMicrotasks();
+  expect(view.getByRole('status').textContent).toBe(':');
+  expect(form.fields.size).toBe(0);
+});
 
 it('createField clears visible dirty without forgetting native required validation or its replacement baseline', async () => {
   let field!: FieldRootContextValue, input!: HTMLInputElement;
