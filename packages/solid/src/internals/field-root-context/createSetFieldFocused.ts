@@ -1,4 +1,4 @@
-import { createEffect, onCleanup, untrack, type Accessor } from 'solid-js';
+import { createEffect, onCleanup, runWithOwner, untrack, type Accessor } from 'solid-js';
 import { useFieldRootContext } from './FieldRootContext';
 import type { MutableCell } from '../contracts/core';
 /** Allocate once in an input-less group root when it is outside Field.Root. */
@@ -27,7 +27,7 @@ export function createSetFieldFocused(disabled: Accessor<boolean | undefined>, e
   createEffect(() => ({ disabled: disabled(), node: element() }), (next) => {
     const root = next.node?.getRootNode() as Document | ShadowRoot | undefined;
     if (!next.disabled && root?.activeElement === next.node) set(true);
-    return () => set(false);
+    return () => runWithOwner(null, () => set(false));
   });
   return set;
 }

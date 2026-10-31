@@ -1,4 +1,4 @@
-import { createEffect, omit } from 'solid-js';
+import { createEffect, omit, runWithOwner } from 'solid-js';
 import type { JSX } from '@solidjs/web';
 import { createBaseUiId } from '../../internals/createBaseUiId';
 import { createRenderElement } from '../../internals/createRenderElement';
@@ -20,7 +20,9 @@ export function FieldDescription(props: FieldDescriptionProps) {
   createEffect(id, (value) => {
     if (!value || !labelable) return;
     labelable.setMessageIds((ids) => ids.concat(value));
-    return () => labelable.setMessageIds((ids) => ids.filter((entry) => entry !== value));
+    return () => {
+      runWithOwner(null, () => labelable.setMessageIds((ids) => ids.filter((entry) => entry !== value)));
+    };
   });
   return createRenderElement('p', props, { state, get ref() { return props.ref; }, props: [{ get id() { return id(); } }, elementProps], stateAttributesMapping: fieldValidityMapping });
 }
