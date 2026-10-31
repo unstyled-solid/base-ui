@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, expect } from 'vitest';
-import { browserCase, createRenderer, screen, waitFor, waitForPositioned, waitSingleFrame } from '../../../test';
+import { browserCase, createRenderer, flushMicrotasks, screen, waitFor, waitForPositioned, waitSingleFrame } from '../../../test';
 import { Popover } from '../index';
 import type { Side, Align } from '../../internals/createAnchorPositioning';
 
@@ -29,6 +29,63 @@ for (const functional of [false, true]) {
 }
 
 for (const keepMounted of [false, true]) {
+  browserCase({ source, case: `retains visible geometry for manual exit keepMounted=${keepMounted} (GitHub #2)`, environment: 'browser', issue: 'bsolid-7hko' }, async () => {
+    let actions: Popover.Root.Actions | null = null;
+    const view = await renderProps((props: { top: number }) => (
+      <Popover.Root actionsRef={(value) => { actions = value; }}
+        onOpenChange={(open, details) => { if (!open) details.preventUnmountOnClose(); }}>
+        <Popover.Trigger style={{ position: 'fixed', left: '200px', top: `${props.top}px`, width: '72px', height: '36px' }}>Toggle</Popover.Trigger>
+        <Popover.Portal keepMounted={keepMounted}>
+          <Popover.Positioner data-testid="positioner" side="bottom" align="start" collisionAvoidance={{ side: 'none', align: 'none' }}>
+            <Popover.Popup style={{ width: '100px', height: '40px' }}>Content</Popover.Popup>
+          </Popover.Positioner>
+        </Popover.Portal>
+      </Popover.Root>
+    ), { top: 200 });
+    if (keepMounted) {
+      expect(screen.getByTestId('positioner')).toHaveAttribute('hidden');
+      expect(getComputedStyle(screen.getByTestId('positioner')).opacity).toBe('0');
+    } else {
+      expect(screen.queryByTestId('positioner')).toBeNull();
+    }
+    const trigger = screen.getByRole('button', { name: 'Toggle' });
+    await view.user.click(trigger);
+    const positioner = screen.getByTestId('positioner');
+    await waitForPositioned(positioner);
+    await waitFor(() => expect(Math.round(positioner.getBoundingClientRect().top)).toBe(236));
+    const before = positioner.getBoundingClientRect();
+    const transform = positioner.style.transform;
+    await view.user.click(trigger);
+    expect(positioner).not.toHaveAttribute('hidden');
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+    expect(positioner.style.pointerEvents).toBe('none');
+    expect(getComputedStyle(positioner).opacity).toBe('1');
+    expect(positioner.getBoundingClientRect().top).toBe(before.top);
+    expect(positioner.getBoundingClientRect().left).toBe(before.left);
+    expect(positioner.style.transform).toBe(transform);
+    // Retention must survive frame-driven animation work, not just the close turn.
+    await waitSingleFrame();
+    await waitSingleFrame();
+    expect(screen.getByTestId('positioner')).toBe(positioner);
+    expect(getComputedStyle(positioner).opacity).toBe('1');
+    expect(positioner.getBoundingClientRect().top).toBe(before.top);
+    actions!.unmount();
+    await flushMicrotasks();
+    if (keepMounted) {
+      expect(positioner).toHaveAttribute('hidden');
+      expect(getComputedStyle(positioner).opacity).toBe('0');
+    } else {
+      expect(screen.queryByTestId('positioner')).toBeNull();
+    }
+    await view.setProps({ top: 300 });
+    await view.user.click(trigger);
+    const reopened = screen.getByTestId('positioner');
+    await waitForPositioned(reopened);
+    await waitFor(() => expect(Math.round(reopened.getBoundingClientRect().top)).toBe(336));
+    expect(getComputedStyle(reopened).opacity).toBe('1');
+    expect(reopened.style.pointerEvents).not.toBe('none');
+  });
+
   browserCase({ source, case: `tracks live anchor geometry keepMounted=${keepMounted}`, environment: 'browser', issue: 'bsolid-browser' }, async () => {
     const view = await renderProps((props: { top: number }) => <Popover.Root open>
       <Popover.Trigger style={{ position: 'fixed', left: '200px', top: `${props.top}px`, width: '100px', height: '100px' }}>Toggle</Popover.Trigger>
