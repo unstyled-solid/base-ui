@@ -1,4 +1,4 @@
-import { createEffect, createSignal, untrack } from 'solid-js';
+import { createEffect, createSignal, runWithOwner, untrack } from 'solid-js';
 import { ownerWindow } from '../utils/owner';
 interface ResolveRenderedIdProps { id?: string | undefined; render?: unknown }
 /** The component id falls back when omitted/undefined; an empty id suppresses it. */
@@ -27,7 +27,12 @@ export function createRenderedId(props: ResolveRenderedIdProps, defaultId: strin
     const Observer = ownerWindow(node).MutationObserver;
     const observer = new Observer(publish);
     observer.observe(node, { attributes: true, attributeFilter: ['id'] });
-    return () => { observer.disconnect(); untrack(() => setId?.(undefined)); };
+    return () => {
+      observer.disconnect();
+      // Reconciliation can dispose this effect inside an owned computation.
+      // Like native ref detach, ID release must be ownerless as well as untracked.
+      untrack(() => runWithOwner(null, () => setId?.(undefined)));
+    };
   });
   return [id, (next: HTMLElement | null) => setElement(next)] as const;
 }

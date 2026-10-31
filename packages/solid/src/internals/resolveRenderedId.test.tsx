@@ -1,8 +1,37 @@
 import { expect, it, vi } from 'vitest';
-import { createRenderer } from '../../test';
+import { createRenderer, flushMicrotasks } from '../../test';
 import { createRenderedId, resolveRenderedId } from './resolveRenderedId';
 import { createRenderElement } from './createRenderElement';
-import { runWithOwner } from 'solid-js';
+import { createSignal, runWithOwner, Show, untrack } from 'solid-js';
+
+it('releases an ordinary signal owner-safely after fallback changes and disconnects its observer', async () => {
+  let readOverride!: () => string | undefined;
+  const published = vi.fn();
+  const Host = (props: { fallback: string }) => {
+    const [override, setOverride] = createSignal<string | undefined>(undefined);
+    readOverride = override;
+    const [, ref] = createRenderedId({}, () => props.fallback, (value) => {
+      published(value);
+      setOverride(value);
+    });
+    return <div ref={ref} id="rendered" data-testid="observed" />;
+  };
+  const view = await createRenderer().renderProps((props: { fallback: string; visible: boolean }) => (
+    <Show when={props.visible}><Host fallback={props.fallback} /></Show>
+  ), { fallback: 'initial', visible: true });
+  const node = view.getByTestId('observed');
+  expect(untrack(readOverride)).toBe('rendered');
+  await view.setProps({ fallback: 'rendered' });
+  expect(untrack(readOverride)).toBeUndefined();
+  await view.setProps({ fallback: 'changed' });
+  expect(untrack(readOverride)).toBe('rendered');
+  await view.setProps({ visible: false });
+  expect(untrack(readOverride)).toBeUndefined();
+  const count = published.mock.calls.length;
+  node.id = 'detached';
+  await flushMicrotasks();
+  expect(published).toHaveBeenCalledTimes(count);
+});
 
 it('falls back to the generated id when nothing else is given', () => {
   expect(resolveRenderedId({}, 'fallback')).toBe('fallback');
