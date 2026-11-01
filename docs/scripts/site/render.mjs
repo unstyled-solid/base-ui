@@ -107,7 +107,7 @@ export function renderPage(page, { base = '/', pages = [], demos = [], demoRefer
             if (!entry) return missing('api', node, `Generate Solid declarations for ${record.name} (${record.reference}) using bsolid-docs-api; no React tables are substituted.`);
             return renderApi(entry, attrs, renderedApi);
           }
-          case 'private-install-instructions': return `<p>Install the published alpha package: <code>pnpm add ${escape(publicIdentity.name)} solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13</code>. See the <a href="${escape(localUrl('/solid/overview/quick-start', base))}">quick start</a> for compiler configuration.</p>`;
+          case 'private-install-instructions': return `<p>Install the alpha package: <code>pnpm add ${escape(publicIdentity.name)} solid-js@2.0.0-rc.20 @solidjs/web@2.0.0-rc.20</code>. See the <a href="${escape(localUrl('/solid/overview/quick-start', base))}">quick start</a> for compiler configuration.</p>`;
           case 'react-release-history': return `<p>Upstream React release history; these are not Solid releases.</p><ul>${pages.filter((p) => p.route.startsWith('/upstream/react/overview/releases/')).sort((a, b) => b.title.localeCompare(a.title, undefined, { numeric: true })).map((p) => `<li><a href="${escape(localUrl(p.route, base))}">${escape(p.title)}</a></li>`).join('')}</ul>`;
           case 'react-production-error': return node.name === 'ErrorCode' ? '<span>upstream React error</span>' : '<p>Consult the pinned upstream React error reference. This is not a Solid error-code catalog.</p>';
           default: fail(`unsupported MDX handler ${record.handler}`);

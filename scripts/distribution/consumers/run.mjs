@@ -25,7 +25,7 @@ async function main(argv) {
   const report = { schemaVersion: 1, owner: 'bsolid-dist-pack', status: 'running', started: new Date().toISOString(),
     tarball: args.tarball, output, stages: {}, consumers: {}, blockers: [], commands: [],
     acceptance: 'complete archive gate; any unexecuted mandatory obligation blocks; no reduced acceptance',
-    runtimeProvenance: { consumer: 'independent stock registry RC13', workspacePatch: 'absent in consumers', workspace: 'not used for consumer runtime resolution' } };
+    runtimeProvenance: { consumer: 'independent stock registry RC20', workspacePatch: 'absent in consumers', workspace: 'not used for consumer runtime resolution' } };
   let work;
   const persist = () => fs.writeFile(path.join(output, 'report.json'), JSON.stringify(report, null, 2));
   async function stage(owner, name, run) {
@@ -102,11 +102,11 @@ async function main(argv) {
     report.runtimeProvenance.workspacePatchDeclaration = patchLines;
     report.runtimeProvenance.workspaceConfigSha256 = sha256(workspaceConfig);
     // This reads patch provenance only, never installs or applies it to consumers.
-    report.runtimeProvenance.workspaceSignalsPatchSha256 = await fs.readFile(path.join(root, 'docs/patches/@solidjs__signals@2.0.0-rc.13.patch')).then(sha256).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
+    report.runtimeProvenance.workspaceSignalsPatchSha256 = await fs.readFile(path.join(root, 'docs/patches/@solidjs__signals@2.0.0-rc.20.patch')).then(sha256).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
     const browserMasks = conditionSets().map((conditions, mask) => ({ conditions, mask })).filter(({ conditions }) => conditions.includes('browser') && !conditions.includes('worker') && !conditions.includes('types')).map(({ mask }) => mask);
     const workerMasks = conditionSets().map((conditions, mask) => ({ conditions, mask })).filter(({ conditions }) => conditions.includes('browser') && conditions.includes('worker') && !conditions.includes('types')).map(({ mask }) => mask);
     for (const [kind, peers] of Object.entries(peerSets)) {
-      const consumer = report.consumers[kind] = { kind, stages: {}, peerSet: peers, runtimeProvenance: 'stock RC13; workspace patch absent' };
+      const consumer = report.consumers[kind] = { kind, stages: {}, peerSet: peers, runtimeProvenance: 'stock RC20; workspace patch absent' };
       const directory = await fs.mkdtemp(path.join(work, `${kind}-`));
       await fs.mkdir(path.join(directory, 'home'));
       await fs.writeFile(path.join(directory, 'empty.npmrc'), '');
@@ -173,7 +173,7 @@ async function main(argv) {
             await execute(directory, `${kind}-worker-server-build-${mask}`, node, ['bundle.mjs', 'server', String(mask)]);
             await execute(directory, `${kind}-worker-ssr-${mask}`, node, [...conditionSets()[mask].map(condition => `--conditions=${condition}`), 'bundles/server/server.mjs'], { strictDiagnostics: true });
           }
-          return { sets: workerMasks.length, masks: workerMasks, stockRC13: true };
+          return { sets: workerMasks.length, masks: workerMasks, stockRC20: true };
         });
         if (serverBuilt) await stage(consumer, 'browser', async () => {
           await execute(directory, `${kind}-chromium-install`, node, ['node_modules/playwright/cli.js', 'install', 'chromium'], { timeout: 600_000 });
@@ -185,7 +185,7 @@ async function main(argv) {
             } catch (error) { failures.push(error.message); }
           }
           assert.deepEqual(failures, [], 'Production browser matrix failures; all attempted builds/diagnostics retained');
-          return { sets: browserMasks.length, masks: browserMasks, stockRC13: true };
+          return { sets: browserMasks.length, masks: browserMasks, stockRC20: true };
         });
         else consumer.stages.browser = { status: 'blocked', reason: 'Independent Node SSR failed' };
         if (consumer.stages.shaking.status === 'passed' && serverBuilt && consumer.stages.browser.status === 'passed') {

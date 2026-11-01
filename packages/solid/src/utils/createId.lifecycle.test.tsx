@@ -31,7 +31,7 @@ describe('Lifecycle IDs and hydration', () => {
     const artifact = JSON.parse(execFileSync(process.execPath, ['packages/solid/src/utils/createId.proof.mjs'], { encoding: 'utf8' })) as {
       isServer: boolean; version: string; bootstrap: string; records: { html: string; renderId: string }[]; repeat: string; concurrent: string[];
     };
-    expect(artifact.isServer).toBe(true); expect(artifact.version).toBe('2.0.0-rc.13');
+    expect(artifact.isServer).toBe(true); expect(artifact.version).toBe('2.0.0-rc.20');
     expect(artifact.repeat).toBe(artifact.records[0]!.html);
     const asyncIds = artifact.concurrent.map((html) => /<output[^>]*id="([^"]+)"/.exec(html)?.[1]);
     expect(asyncIds.every(Boolean)).toBe(true); expect(new Set(asyncIds).size).toBe(2);

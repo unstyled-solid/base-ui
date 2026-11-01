@@ -72,7 +72,7 @@ test('packed inventory refuses metadata/peer leaks, omitted notices/docs and non
     ['NOTICE', Buffer.from('retained adopted-source notices')], ['README.md', Buffer.from('usage')], ['docs/v0.0.0/button.md', Buffer.from('current Markdown')]]);
   assert.doesNotThrow(() => assertInventory({ files }, manifest, contract));
   for (const mutate of [value => value.dependencies = { react: '19.3.0' }, value => value.dependencies = { example: 'workspace:*' },
-    value => value.peerDependencies['solid-js'] = '^2.0.0-rc.13', value => value.dependencies = { luxon: '3.7.2' },
+    value => value.peerDependencies['solid-js'] = '^2.0.0-rc.20', value => value.dependencies = { luxon: '3.7.2' },
     value => value.peerDependenciesMeta.luxon.optional = false, value => value.scripts = { postinstall: 'build' }]) {
     const altered = structuredClone(manifest); mutate(altered); assert.throws(() => assertInventory({ files }, altered, contract));
   }
@@ -94,7 +94,7 @@ test('external directory containment does not accept sibling-prefix tricks', () 
 });
 test('exact supported backend/tool pins and independent optional peer sets', () => {
   assert.equal(pins['@babel/core'], '7.29.7'); assert.equal(pins.vite, '8.3.2');
-  assert.equal(pins.typescript, '5.9.3'); assert.equal(pins['@solidjs/compiler'], '2.0.0-rc.13');
+  assert.equal(pins.typescript, '5.9.3'); assert.equal(pins['@solidjs/compiler'], '2.0.0-rc.20');
   assert.deepEqual(peerSets.ordinary, []);
   assert.deepEqual(peerSets['date-fns'], ['date-fns', '@date-fns/tz']);
   assert.deepEqual(peerSets.luxon, ['luxon', '@types/luxon']);

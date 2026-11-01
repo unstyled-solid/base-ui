@@ -23,6 +23,6 @@ const b = renderToStream(() => <AsyncField value="request-B" ready={readyB} />, 
 releaseB(); releaseA();
 const concurrent = await Promise.all([a, b]);
 process.stdout.write(JSON.stringify({
-  isServer, version: '2.0.0-rc.13', bootstrap: generateHydrationScript({ eventNames: [] }), records, concurrent,
+  isServer, version: '2.0.0-rc.20', bootstrap: generateHydrationScript({ eventNames: [] }), records, concurrent,
   repeat: renderToString(() => <LifecycleIdFixture />, { renderId: 'lifecycle-a-' }),
 }));

@@ -4,7 +4,7 @@
 - React Base UI: `https://github.com/mui/base-ui`, branch `master`, SHA `19511bb171f3b360b006c94cf6d07e53cb446505`, package version `1.8.0`. Remote HEAD and the research checkout matched when inspected.
 - Research checkout: `../ref/base-ui`; its pre-existing `pnpm-lock.yaml` modification is user work. Do not reset, install into, or otherwise modify it.
 - Old Solid checkout was examined only as prior art: Separator/Toggle and Dialog/Select pairs. It is not a baseline or implementation source. Its issue #5 describes beta.1 parity and missing APIs; our export inventory comes from current React instead.
-- Runtime/renderer/compiler: `solid-js`, `@solidjs/web`, `@solidjs/compiler`, `@solidjs/babel-plugin` exact `2.0.0-rc.13`. Vite integration verified: `@solidjs/vite-plugin@3.0.0-next.47`; Solid testing library: `@solidjs/testing-library@1.0.0-beta.3` (`next`, not its Solid-1-oriented `latest`). Bootstrap verifies their entire peer/engine set and locks tool versions.
+- Runtime/renderer/compiler: `solid-js`, `@solidjs/web`, `@solidjs/compiler`, `@solidjs/babel-plugin` exact `2.0.0-rc.20`. Vite integration: `@solidjs/vite-plugin@3.0.0-next.47`; Solid testing library: `@solidjs/testing-library@1.0.0-beta.3` (`next`, not its Solid-1-oriented `latest`). The coordinated pins prevent mixed release candidates; see the RC20 upgrade report for validation.
 
 ## Repository
 ```text

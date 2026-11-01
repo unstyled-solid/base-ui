@@ -117,7 +117,7 @@ export function markdownPage(page, context = {}) {
           const url = entry.url ?? (entry.anchor ? `${page.route}#${entry.anchor}` : page.route);
           return `[Open mounted Solid demo: ${entry.title ?? entry.id}](${url})\n\n`;
         }
-        if (handler === 'private-install-instructions') return fence('npm install @unstyled-solid/base-ui@0.0.1 solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13', 'sh');
+        if (handler === 'private-install-instructions') return fence('npm install @unstyled-solid/base-ui@0.0.1 solid-js@2.0.0-rc.20 @solidjs/web@2.0.0-rc.20', 'sh');
         if (handler === 'react-release-history') return 'Upstream React release history; these are not Solid releases.\n\n' + (context.pages ?? []).filter(p => p.route.startsWith('/upstream/react/overview/releases/')).sort((a, b) => b.title.localeCompare(a.title, undefined, { numeric: true })).map(p => `- [${p.title}](${p.route})\n`).join('') + '\n';
         if (handler === 'react-production-error') return 'Upstream React error reference; this is not a Solid error-code catalog.\n\n';
         if (handler === 'html' && n.name === 'br') return '  \n';

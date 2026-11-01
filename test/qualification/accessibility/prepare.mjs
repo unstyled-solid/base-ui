@@ -82,7 +82,7 @@ export async function prepare(args) {
     const path = await realpath(resolve(peerRoot, name));
     const text = await readFile(resolve(path, 'package.json'));
     const pkg = JSON.parse(text);
-    if (pkg.version !== '2.0.0-rc.13') throw new Error(`Expected RC13 ${name}, got ${pkg.version}`);
+    if (pkg.version !== '2.0.0-rc.20') throw new Error(`Expected RC20 ${name}, got ${pkg.version}`);
     await mkdir(dirname(resolve(host, 'node_modules', name)), { recursive: true });
     await symlink(path, resolve(host, 'node_modules', name), 'dir');
     peers.push({ name, path, version: pkg.version, manifestSha256: digest(text) });

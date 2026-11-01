@@ -139,7 +139,7 @@ export function createReleasePages(template) {
     make('/solid/overview/releases', 'Base UI for Solid releases', [introduction(), paragraph(words(alphaLimitations)), paragraph(link('Alpha 0.0.1', '/solid/overview/releases/v0-0-1')), updates()]),
     make('/solid/overview/releases/v0-0-1', '0.0.1 — Alpha', [introduction(),
       heading('Installation', 2, 'installation'),
-      paragraph(words(`Public package: ${releaseMetadata.package}@${releaseMetadata.version}. Requires solid-js and @solidjs/web ${contract.toolchain['solid-js']}. Use the matching RC13 compiler packages.`)),
+      paragraph(words(`Public package: ${releaseMetadata.package}@${releaseMetadata.version}. Requires solid-js and @solidjs/web ${contract.toolchain['solid-js']}. Use the matching compiler packages.`)),
       { type: 'code', lang: 'sh', value: installation.commands },
       heading('Alpha limitations', 2, 'alpha-limitations'), paragraph(words(alphaLimitations)), support(), updates()]),
   ];

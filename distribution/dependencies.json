@@ -37,11 +37,11 @@
   "transitivePins": {
     "@floating-ui/core": { "version": "1.8.0", "via": "@floating-ui/dom", "license": "MIT", "directDependency": false },
     "@floating-ui/utils": { "version": "0.2.12", "via": ["@floating-ui/dom", "@floating-ui/core"], "directDependency": true },
-    "@solidjs/signals": { "version": "2.0.0-rc.13", "via": "solid-js", "directDevelopmentDependency": true }
+    "@solidjs/signals": { "version": "2.0.0-rc.20", "via": "solid-js", "directDevelopmentDependency": true }
   },
   "requiredPeers": {
-    "solid-js": { "range": "2.0.0-rc.13", "developmentPin": "2.0.0-rc.13", "role": "reactivity and owned state", "bundled": false },
-    "@solidjs/web": { "range": "2.0.0-rc.13", "developmentPin": "2.0.0-rc.13", "role": "matching DOM/server renderer, JSX and native event types", "bundled": false }
+    "solid-js": { "range": "2.0.0-rc.20", "developmentPin": "2.0.0-rc.20", "role": "reactivity and owned state", "bundled": false },
+    "@solidjs/web": { "range": "2.0.0-rc.20", "developmentPin": "2.0.0-rc.20", "role": "matching DOM/server renderer, JSX and native event types", "bundled": false }
   },
   "optionalPeers": {
     "date-fns": {

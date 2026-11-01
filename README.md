@@ -13,7 +13,7 @@ Adapted from [Base UI](https://github.com/mui/base-ui), with native Solid reacti
 Install the library and its Solid 2 runtime dependencies:
 
 ```sh
-npm install @unstyled-solid/base-ui solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
+npm install @unstyled-solid/base-ui solid-js@2.0.0-rc.20 @solidjs/web@2.0.0-rc.20
 ```
 
 ```tsx
@@ -24,7 +24,7 @@ export function Example() {
 }
 ```
 
-**Compatibility:** The current release is an alpha targeting **Solid 2.0.0-rc.13**. Use a compatible Solid 2 compiler with `jsxImportSource: "@solidjs/web"`; Solid 1 is not supported. See the [installation guide](packages/solid/README.md) for toolchain configuration.
+**Compatibility:** This branch targets **Solid 2.0.0-rc.20**. Use a compatible Solid 2 compiler with `jsxImportSource: "@solidjs/web"`; Solid 1 is not supported. See the [installation guide](packages/solid/README.md) for toolchain configuration and published-version compatibility.
 
 ## Documentation
 

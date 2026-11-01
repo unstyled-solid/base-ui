@@ -38,7 +38,7 @@ async function fixture(t) {
   const report={schemaVersion:1,sourceSha,base:'/',routes:[{route:page.route,source,file:'solid/components/button/index.html',publishable:true}],issues:[],blockers:[]};
   await put('docs/generated/site/report.json',report);
   await put('docs/generated/site/solid/components/button.md', markdownPage(await formattedPage(structuredClone(page)), { api, demos: [], demoReferences: {} }));
-  await put('docs/generated/site/dist/solid/components/button/index.html',`<!doctype html><html><head><title>Button</title><link rel="canonical" href="https://example.org/solid/components/button"></head><body><main><h1 id="button">Button</h1><a href="#button">Button</a><footer class="SiteFooter">@unstyled-solid/base-ui 0.0.1 · Solid 2.0.0-rc.13<a href="https://github.com/mui/base-ui/tree/${sourceSha}">Upstream</a></footer></main></body></html>`);
+  await put('docs/generated/site/dist/solid/components/button/index.html',`<!doctype html><html><head><title>Button</title><link rel="canonical" href="https://example.org/solid/components/button"></head><body><main><h1 id="button">Button</h1><a href="#button">Button</a><footer class="SiteFooter">@unstyled-solid/base-ui 0.0.1 · Solid 2.0.0-rc.20<a href="https://github.com/mui/base-ui/tree/${sourceSha}">Upstream</a></footer></main></body></html>`);
   return {root,put,manifest,report,api};
 }
 test('complete inventory/output fixture still fails without execution, never treating build success as coverage',async t=>{

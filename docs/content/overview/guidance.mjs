@@ -35,7 +35,7 @@ export function overviewText(value, topic) {
     .replace('Base\u00a0UI supports all modern browsers', 'Upstream React Base\u00a0UI supports all modern browsers')
     .replace('For the full list of supported browsers, refer to our ', 'For the upstream browser targets, refer to its ')
     .replace('React versions', 'Solid version')
-    .replace('Base\u00a0UI supports React 17 and newer versions.', 'This port targets Solid 2.0.0-rc.13 and @solidjs/web 2.0.0-rc.13.')
+    .replace('Base\u00a0UI supports React 17 and newer versions.', `This port targets Solid ${contract.toolchain['solid-js']} and @solidjs/web ${contract.toolchain['@solidjs/web']}.`)
     .replace('Base\u00a0UI works with maintained versions of all popular bundlers, including Vite, webpack, Turbopack and Parcel.', 'The docs and port harness use Vite with @solidjs/vite-plugin.');
   if (topic === 'overview') return value
     .replace('An open-source React component library for building accessible user interfaces.', 'A Solid 2 port of the open-source Base\u00a0UI component library for building accessible user interfaces.')

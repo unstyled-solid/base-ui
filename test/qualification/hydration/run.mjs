@@ -38,7 +38,7 @@ export async function run(args) {
         else directory = path.dirname(directory);
       }
       if (!manifest || !within(consumer, directory) || within(repository, directory)) throw new Error(`Toolchain outside independent consumer: ${name}`);
-      const expected = name === '@solidjs/vite-plugin' ? '3.0.0-next.47' : name === 'vite' ? '8.3.2' : name === 'typescript' ? '5.9.3' : '2.0.0-rc.13';
+      const expected = name === '@solidjs/vite-plugin' ? '3.0.0-next.47' : name === 'vite' ? '8.3.2' : name === 'typescript' ? '5.9.3' : '2.0.0-rc.20';
       if (manifest.version !== expected) throw new Error(`Pinned tool mismatch: ${name}@${manifest.version}; expected ${expected}`);
       pinned[name] = { version: manifest.version, directory };
     }

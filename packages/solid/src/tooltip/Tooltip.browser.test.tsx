@@ -240,9 +240,10 @@ describe('Tooltip browser geometry and interrupted transitions', () => {
   });
   for (const kind of ['sideOffset', 'alignOffset'] as const) for (const functional of [false, true]) {
     check('positioner/TooltipPositioner.test.tsx', `${kind}/${functional ? 'function' : 'number'}`, async () => {
+      const offset = functional ? (data: { anchor: { width: number }; positioner: { width: number } }) => kind === 'sideOffset' ? data.positioner.width + data.anchor.width : data.positioner.width : 7;
       await render(() => <div style={{ position: 'fixed', top: '200px', left: '200px' }}><Fixture root={{ open: true }}
         trigger={{ style: { width: '72px', height: '36px' } }} popup={{ style: { width: '52px', height: '24px' } }}
-        positioner={{ side: 'bottom', [kind]: functional ? (data: { anchor: { width: number }; positioner: { width: number } }) => kind === 'sideOffset' ? data.positioner.width + data.anchor.width : data.positioner.width : 7 }} /></div>);
+        positioner={{ side: 'bottom', ...(kind === 'sideOffset' ? { sideOffset: offset } : { alignOffset: offset }) }} /></div>);
       await waitFor(() => {
         const anchor = screen.getByText('Toggle').getBoundingClientRect(); const popup = screen.getByTestId('positioner').getBoundingClientRect();
         const amount = functional ? kind === 'sideOffset' ? anchor.width + popup.width : popup.width : 7;
@@ -257,8 +258,9 @@ describe('Tooltip browser geometry and interrupted transitions', () => {
   for (const kind of ['sideOffset', 'alignOffset'] as const) for (const side of ['left', 'right', 'inline-start'] as const) {
     check('positioner/TooltipPositioner.test.tsx', `latest resolved side and align in ${kind}/side=${side}`, async () => {
       let resolvedSide: string | undefined; let resolvedAlign: string | undefined;
+      const observePosition = (data: { side: string; align: string }) => { resolvedSide = data.side; resolvedAlign = data.align; return 0; };
       await render(() => <Fixture root={{ open: true }} trigger={{ style: { width: '72px', height: '36px' } }} popup={{ style: { width: '52px', height: '24px' } }}
-        positioner={{ side, align: side === 'right' ? 'start' : 'center', [kind]: (data: { side: string; align: string }) => { resolvedSide = data.side; resolvedAlign = data.align; return 0; } }} />);
+        positioner={{ side, align: side === 'right' ? 'start' : 'center', ...(kind === 'sideOffset' ? { sideOffset: observePosition } : { alignOffset: observePosition }) }} />);
       await waitFor(() => expect(resolvedSide).toBe(side === 'left' ? 'right' : side === 'inline-start' ? 'inline-end' : 'right'));
       if (side === 'right') expect(resolvedAlign).toBe('end');
     });

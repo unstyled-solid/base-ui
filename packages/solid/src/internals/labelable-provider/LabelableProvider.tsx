@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import { createSignal } from 'solid-js';
+import { createSignal, onSettled, runWithOwner, untrack } from 'solid-js';
 import { LabelableContext, useLabelableContext, type LabelableContextValue } from './LabelableContext';
 import { createBaseUiId } from '../createBaseUiId';
 import { merge } from 'solid-js';
@@ -10,6 +10,8 @@ export function LabelableProvider(props: LabelableProviderProps): JSX.Element {
   const parent = useLabelableContext();
   const [selection, setSelection] = createSignal<string | null | undefined>(undefined);
   const [labelId, setLabelId] = createSignal<string | undefined>(undefined);
+  const [fieldLabelId, setFieldLabelId] = createSignal<string | undefined>(undefined);
+  const [fieldLabels, setFieldLabels] = createSignal<{ token: symbol; id: string }[]>([]);
   const [messageIds, setMessageIds] = createSignal<string[]>([]);
   const registrations = new Map<symbol, string | null>();
   const value: LabelableContextValue = {
@@ -25,8 +27,21 @@ export function LabelableProvider(props: LabelableProviderProps): JSX.Element {
       });
     },
     resetControlId() { if (!registrations.size) setSelection(undefined); },
-    get labelId() { return labelId(); },
+    get labelId() { return labelId() ?? fieldLabelId(); },
     setLabelId,
+    setFieldLabelId,
+    registerFieldLabel(candidate) {
+      // Capture this owner's candidate, not a previous owner's published ID.
+      // RC20 can construct a keyed replacement before disposing its predecessor.
+      const registration = { token: Symbol(), id: untrack(candidate) };
+      onSettled(() => {
+        setFieldLabels((current) => [...current, registration]);
+        return () => runWithOwner(null, () => {
+          setFieldLabels((current) => current.filter((entry) => entry.token !== registration.token));
+        });
+      });
+      return () => labelId() ?? fieldLabels()[0]?.id ?? registration.id;
+    },
     get messageIds() { return messageIds(); },
     setMessageIds,
     getDescriptionProps<P extends object>(external: P): P & { 'aria-describedby'?: string | undefined } {

@@ -151,7 +151,7 @@ export async function audit({ repository = root, site = 'docs/generated/site', a
     const dom = new JSDOM(bytes.toString('utf8'));
     const doc = dom.window.document;
     const footer=doc.querySelector('.SiteFooter');
-    if (!footer?.textContent.includes(`${identity.name} ${identity.version}`) || !footer.textContent.includes('Solid 2.0.0-rc.13') || ![...footer.querySelectorAll('a[href]')].some(link=>link.href===`https://github.com/mui/base-ui/tree/${sourceSha}`)) failures.push(`${route}: version/package/runtime/source footer mismatch`);
+    if (!footer?.textContent.includes(`${identity.name} ${identity.version}`) || !footer.textContent.includes('Solid 2.0.0-rc.20') || ![...footer.querySelectorAll('a[href]')].some(link=>link.href===`https://github.com/mui/base-ui/tree/${sourceSha}`)) failures.push(`${route}: version/package/runtime/source footer mismatch`);
     if (referenceOnly && !/upstream React/i.test(doc.body.textContent)) failures.push(`${route}: reference-only disposition lacks actual upstream React context notice`);
     const ids = new Set();
     for (const node of doc.querySelectorAll('[id]')) { if (ids.has(node.id)) failures.push(`${route}: duplicate anchor ${node.id}`); ids.add(node.id); }

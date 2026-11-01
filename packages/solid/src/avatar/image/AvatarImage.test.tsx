@@ -209,7 +209,7 @@ describe('Avatar.Image', () => {
   });
   it('projects Root and Image from the same source commit without a status relay', async () => {
     pending();
-    const snapshots: string[][] = [];
+    const snapshots: (readonly string[])[] = [];
     const release = attribution.enable();
     try {
       const view = await mount({ src: 'avatar.png', render: (props, state) => {

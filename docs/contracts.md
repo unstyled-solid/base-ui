@@ -27,13 +27,13 @@ shared contracts require coordinator approval rather than competing definitions.
 |---|---|---|
 | Node | `25.8.1` | Installed runtime; satisfies every engine below; pinned in root `engines` |
 | pnpm | `11.8.0` | Installed manager, Node `>=22.13`; exact `packageManager` and engine |
-| solid-js, @solidjs/web | `2.0.0-rc.13` | Node `>=22.12.0`; web peers on RC.13 |
-| @solidjs/signals | `2.0.0-rc.13` | Pin the otherwise caret-selected reactive core too |
-| @solidjs/compiler, @solidjs/babel-plugin | `2.0.0-rc.13` | Both compile DOM/SSR; Babel peer `^7.20.12` |
+| solid-js, @solidjs/web | `2.0.0-rc.20` | Matching runtime and renderer release candidates |
+| @solidjs/signals | `2.0.0-rc.20` | Pin the otherwise caret-selected reactive core too |
+| @solidjs/compiler, @solidjs/babel-plugin | `2.0.0-rc.20` | Both compile DOM/SSR; retain the tested Babel backend |
 | @solidjs/vite-plugin | `3.0.0-next.47` | Node `>=22.12.0`, peers Vite `^8 || ^9` and RC.13 |
 | Vite | `8.3.2` | Node `^20.19.0 || >=22.12.0` |
 | Vitest | `4.1.11` | Vite `^6 || ^7 || ^8`, Node `^20 || ^22 || >=24` |
-| TypeScript | `5.9.3` | Node `>=14.17`; strict check of RC.13 declarations passes |
+| TypeScript | `5.9.3` | Node `>=14.17`; strict check of RC.20 declarations |
 | @types/node | `25.9.9` | Node 25 declaration line |
 | jsdom | `27.4.0` | Node `^20.19.0 || ^22.12.0 || >=24` |
 | @solidjs/testing-library | `1.0.0-beta.3` | Solid/web peers `>=2.0.0-0`, DOM testing library `^10.4.1` |
@@ -80,7 +80,7 @@ Indexed `solidjs@2` references consulted:
 - **Live props/state:** readonly describes the consumer view, not frozen values. Keep stable
   getter-backed objects and their original getter receivers. Ordinary updates cannot recreate
   a host. `render(props, state)` is a Solid JSX callback, never a cloned JSX instance. `class`
-  accepts the complete RC.13 `JSX.ClassValue` union, including arrays/objects, or a state callback.
+  accepts the complete pinned `JSX.ClassValue` union, including arrays/objects, or a state callback.
 - **Events:** `defaultPrevented`, `preventBaseUIHandler` and change-details `cancel()` remain
   independent. `WithBaseUIEvent` retains native `currentTarget` typing, bound handlers and
   non-event value callbacks. The events owner defines the canonical reason-to-event map and
@@ -99,7 +99,7 @@ Indexed `solidjs@2` references consulted:
 - **Refs/resources:** native ref callbacks are untracked and ownerless, with ignored returns.
   Allocate effects/cleanup in setup, use split `createEffect(compute, effect)` and returned
   cleanup, and report elements from refs. `MutableCell` is an internal imperative cell, not
-  a public React ref API. Public `NativeRef` follows RC.13 assignment/callback/array typing.
+  a public React ref API. Public `NativeRef` follows the pinned assignment/callback/array typing.
 - **Popup/floating:** effective state is getter-backed. `mounted` is distinct from `open`;
   transition status is exactly `'starting' | 'ending' | 'idle' | undefined`. Dispatch receives
   explicit next values after cancellation. DOM and virtual references stay distinct. Trigger
@@ -123,7 +123,7 @@ Indexed `solidjs@2` references consulted:
 ### Required and optional contexts
 
 Use `createContext<T>()` and `<Context value={liveValue}>` for required part/root contexts.
-Missing providers throw through RC.13; never swallow that exception. For optional nesting,
+Missing providers throw through Solid's native context API; never swallow that exception. For optional nesting,
 field/form adapters, floating trees or portals use `createContext<T | null>(null)` explicitly.
 A required consumer of an optional seam checks null and gives a component-specific error.
 Direction may default to `'ltr'`; CSP may use immutable static configuration. Never use a

@@ -23,7 +23,8 @@ describe('Switch.Thumb', () => {
     </Errored>);
     // Required contexts use RC13's native missing-provider error, rather than
     // replacing it with the React context wrapper's custom exception.
-    expect(view.container).toHaveTextContent('Context must either be created with a default value or a value must be provided before accessing it.');
+    expect(view.container).toHaveTextContent('Context "SwitchRootContext" has no provider above this read');
+    expect(view.container).toHaveTextContent('Mount a provider above this read');
   });
   it('renders a persistent span and forwards live context, refs, props, classes and styles', async () => {
     let node: HTMLSpanElement | undefined;
