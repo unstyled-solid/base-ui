@@ -1,1 +1,0 @@
-import{o as e}from"./DialogPortal-f5BS21wu.js";function t(t){return e(`dialog`,t)}export{t};

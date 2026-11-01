@@ -1,1 +1,0 @@
-import{o as e}from"./DialogPortal-DMtV22pE.js";function t(t){return e(`dialog`,t)}export{t};

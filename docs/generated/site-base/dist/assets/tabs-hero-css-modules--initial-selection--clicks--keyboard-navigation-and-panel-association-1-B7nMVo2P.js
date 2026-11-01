@@ -1,1 +1,0 @@
-var e=`/qualification/assets/tabs-hero-css-modules--initial-selection--clicks--keyboard-navigation-and-panel-association-1-CRktoY__.png`;export{e as default};
