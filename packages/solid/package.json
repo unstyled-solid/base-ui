@@ -337,11 +337,11 @@
   },
   "peerDependencies": {
     "@date-fns/tz": "^1.2.0",
-    "@solidjs/web": "2.0.0-rc.13",
+    "@solidjs/web": "2.0.0-rc.20",
     "@types/luxon": "^3.7.6",
     "date-fns": "^4.0.0",
     "luxon": "^3.7.2",
-    "solid-js": "2.0.0-rc.13"
+    "solid-js": "2.0.0-rc.20"
   },
   "peerDependenciesMeta": {
     "date-fns": {
@@ -364,10 +364,10 @@
   },
   "devDependencies": {
     "@date-fns/tz": "1.5.0",
-    "@solidjs/web": "2.0.0-rc.13",
+    "@solidjs/web": "2.0.0-rc.20",
     "@types/luxon": "3.7.6",
     "date-fns": "4.4.0",
     "luxon": "3.7.2",
-    "solid-js": "2.0.0-rc.13"
+    "solid-js": "2.0.0-rc.20"
   }
 }

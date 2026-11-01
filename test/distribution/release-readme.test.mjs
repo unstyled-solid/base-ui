@@ -17,7 +17,7 @@ test('consumer READMEs retain upstream structure with truthful Solid identities'
       'https://github.com/unstyled-solid/base-ui',
       'https://www.npmjs.com/package/@unstyled-solid/base-ui',
       'https://github.com/unstyled-solid/base-ui/releases',
-      'npm install @unstyled-solid/base-ui solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13',
+      'npm install @unstyled-solid/base-ui solid-js@2.0.0-rc.20 @solidjs/web@2.0.0-rc.20',
       '0.0.1 is an alpha', 'not maintained by MUI', '@solidjs/web',
       '(props, state) => JSX', 'MIT license',
       '19511bb171f3b360b006c94cf6d07e53cb446505',
@@ -32,7 +32,7 @@ test('registry README source is package-local and documents a real public subpat
   assert.ok(manifest.exports['./button']);
   assert.match(text, /import \{ Button \} from '@unstyled-solid\/base-ui\/button'/);
   for (const peer of ['solid-js', '@solidjs/web']) {
-    assert.equal(manifest.peerDependencies[peer], '2.0.0-rc.13');
+    assert.equal(manifest.peerDependencies[peer], '2.0.0-rc.20');
   }
   const stage = await read('scripts/distribution/build/index.mjs');
   assert.match(stage, /path\.join\(packageDirectory, name\)/);

@@ -25,7 +25,7 @@ check, **not** an archive typecheck, SSR pass, or hydration pass.
 The tarball lane must supply an independent, retained consumer directory installed
 from the exact archive. Set `CONSUMER` and `TARBALL` to its absolute paths. The
 consumer must contain stock `solid-js`, `@solidjs/signals`, `@solidjs/web`,
-`@solidjs/compiler`, `@solidjs/babel-plugin` at `2.0.0-rc.13`,
+`@solidjs/compiler`, `@solidjs/babel-plugin` at `2.0.0-rc.20`,
 `@solidjs/vite-plugin@3.0.0-next.47`, `vite@8.3.2`, `typescript@5.9.3`, Node types,
 and `playwright@1.63.0` for browser execution. The runner performs no installation
 and writes no manifests. `--output` must be a **new** directory inside the supplied

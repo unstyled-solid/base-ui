@@ -1,4 +1,4 @@
-import { createContext, useContext, type Setter } from 'solid-js';
+import { createContext, useContext, type Accessor, type Setter } from 'solid-js';
 import type { HTMLProps } from '../types';
 export interface LabelableContextValue {
   readonly controlId: string | null | undefined;
@@ -6,6 +6,8 @@ export interface LabelableContextValue {
   resetControlId(): void;
   readonly labelId: string | undefined;
   setLabelId: Setter<string | undefined>;
+  setFieldLabelId: Setter<string | undefined>;
+  registerFieldLabel(candidate: Accessor<string>): Accessor<string>;
   readonly messageIds: string[];
   setMessageIds: Setter<string[]>;
   getDescriptionProps<P extends object>(externalProps: P): P & { 'aria-describedby'?: string | undefined };

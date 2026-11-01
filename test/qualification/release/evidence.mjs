@@ -47,7 +47,7 @@ async function main() {
     const target = await fingerprint();
     const report = { schemaVersion: 1, status: 'incomplete', startedAt: new Date().toISOString(), root, target,
       canonicalSha: '19511bb171f3b360b006c94cf6d07e53cb446505', toolchain: { node: process.versions.node,
-        typescript: '5.9.3', solid: '2.0.0-rc.13', vite: '8.3.2', vitePlugin: '3.0.0-next.47' },
+        typescript: '5.9.3', solid: '2.0.0-rc.20', vite: '8.3.2', vitePlugin: '3.0.0-next.47' },
       stages: [], artifacts: {}, browsers: {}, exclusions: [], skips: [], blockers: [], publicationAuthorized: false };
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2));
     console.log(`Frozen ${target.sha256}; ${target.files.length} inputs; ${reportFile}`);

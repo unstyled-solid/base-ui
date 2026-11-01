@@ -4,7 +4,7 @@
 - State the result directly. Add caveats only when they change the user's decision; when corrected, fix the mistake without defending it.
 
 ## Authority and scope
-- Fresh port of React Base UI to Solid **2.0.0-rc.13**. React upstream is the only behavioral source of truth. Never implement from `../ref/base-ui-solid`.
+- Fresh port of React Base UI to Solid **2.0.0-rc.20**. React upstream is the only behavioral source of truth. Never implement from `../ref/base-ui-solid`.
 - Current research reference: `../ref/base-ui`, commit `19511bb171f3b360b006c94cf6d07e53cb446505`. Bootstrap creates the independent pinned checkout at `upstream/base-ui`. Both upstream and reference code are read-only to port workers.
 - Read `docs/architecture.md`, `docs/solid2-contract.md`, `docs/parallel-execution.md`, then your Beads ticket and its exact source files.
 
@@ -44,7 +44,8 @@
 - React outcomes and test assertions are canonical; React lifecycle machinery is not.
 - Use Solid 2 accessors/memos, draft stores, direct context providers, split effects and setup-owned resources. No React hook emulation or Solid 1 imports.
 - Native events retain Base UI cancellation, reason and callback-order contracts. `preventDefault`, `preventBaseUIHandler` and `details.cancel` are different operations.
+- Do not assume keyed replacement disposes the prior owner before constructing its replacement. Keep a mounted label's candidate identity separate from the shared registered ID; preserve retained/shared-label precedence and token-guard cleanup. Identity must not depend on observing an intermediate cleanup write.
 - Browser tests are authored/retained during porting but their full execution belongs to final qualification. A green jsdom suite does not close deferred browser coverage.
 - Record source-to-target and test mappings, exact checks, adaptations and outstanding browser cases in the ticket-owned tracking files. Never assert bug-free parity from a type check alone.
 - Before closing a ticket, run its available checks and verify its acceptance criteria. New findings become blocked child tickets, not silent omissions.
-- Additional donor source authorized by the developer: `https://github.com/lxsmnsyc/solid-floating-ui`. Pin and track its immutable source separately and reconcile updates on developer request, alongside Base UI. Owned adaptations must satisfy Solid 2 RC13 and Base UI behavior; donor APIs do not override either contract. Preserve license/provenance. Assess other small React-only dependencies individually: tracked donor for substantial maintained logic, licensed one-time adaptation for genuinely tiny helpers. Coordinate all shared foundation changes with their owners.
+- Additional donor source authorized by the developer: `https://github.com/lxsmnsyc/solid-floating-ui`. Pin and track its immutable source separately and reconcile updates on developer request, alongside Base UI. Owned adaptations must satisfy Solid 2 RC20 and Base UI behavior; donor APIs do not override either contract. Preserve license/provenance. Assess other small React-only dependencies individually: tracked donor for substantial maintained logic, licensed one-time adaptation for genuinely tiny helpers. Coordinate all shared foundation changes with their owners.

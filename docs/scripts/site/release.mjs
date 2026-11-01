@@ -63,7 +63,7 @@ export function releaseErrorPage(source) {
   page.metadata = { description: page.subtitle, robots: { index: false } };
   page.ast = { type: 'root', children: [
     heading(page.title, 1, 'troubleshooting', 1),
-    paragraph('Use a development build to read the full error message and identify the component involved. Verify that solid-js and @solidjs/web both use the supported Solid 2.0.0-rc.13 version.'),
+    paragraph('Use a development build to read the full error message and identify the component involved. Verify that solid-js and @solidjs/web both use the supported Solid 2.0.0-rc.20 version.'),
     paragraph('This Solid port does not use the upstream React production error-code catalog. Include the complete error, package versions, and a minimal reproduction when reporting a problem.'),
     { type: 'paragraph', children: [link('Report an issue on GitHub', repository)] },
   ] };

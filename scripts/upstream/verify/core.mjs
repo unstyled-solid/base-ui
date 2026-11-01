@@ -15,7 +15,7 @@ import { readBeads, auditBeads } from './beads.mjs';
 function runtimeVersions() {
   const result = spawnSync('rtk', ['proxy', 'pnpm', '--version'], { encoding: 'utf8' });
   check(!result.error && result.status === 0, 'TOOLCHAIN_MISMATCH', 'Cannot establish pnpm version.');
-  return { node: process.version, pnpm: result.stdout.trim(), solid: '2.0.0-rc.13' };
+  return { node: process.version, pnpm: result.stdout.trim(), solid: '2.0.0-rc.20' };
 }
 
 function tree(checkout, sha) {

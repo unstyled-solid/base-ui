@@ -108,8 +108,7 @@ export function SliderThumb(props: SliderThumbProps) {
     type: 'range' as const, get value() { return value() ?? ''; },
     // Solid's value binding updates the property, whereas React also projects
     // the current value to the attribute/defaultValue used by reset and cloning.
-    // SSR already serializes `value`; avoid emitting the same attribute twice.
-    get defaultValue() { return isServer ? undefined : value() ?? ''; },
+    get defaultValue() { return value() ?? ''; },
     get style() { return { ...visuallyHidden, width: '100%', height: '100%', 'writing-mode': vertical() ? (direction() === 'rtl' ? 'vertical-rl' : 'vertical-lr') : undefined } as JSX.CSSProperties; },
     onInput: inputChange,
     onChange: inputChange,
@@ -154,7 +153,9 @@ export function SliderThumb(props: SliderThumbProps) {
   };
   const Input = () => createRenderElement('input', {}, {
     ref: inputRef,
-    props: [inputDefaults,
+    // RC20 gives defaultValue key presence precedence during SSR. Omit that
+    // key without spreading its getter (which would read value during setup).
+    props: [isServer ? omit(inputDefaults, 'defaultValue') : inputDefaults,
       (p) => context.field?.validation.getValidationProps(disabled(), p) ?? p,
       { get onFocus() { return restoringFocus ? undefined : props.onFocus; }, get onBlur() { return restoringFocus ? undefined : props.onBlur; }, get onKeyDown() { return props.onKeyDown; } }],
   });

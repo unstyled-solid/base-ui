@@ -5,9 +5,9 @@ import { gunzipSync } from 'node:zlib';
 
 export const temporaryRoot = '/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode';
 export const pins = Object.freeze({
-  'solid-js': '2.0.0-rc.13', '@solidjs/web': '2.0.0-rc.13',
-  '@solidjs/signals': '2.0.0-rc.13', '@solidjs/compiler': '2.0.0-rc.13',
-  '@solidjs/babel-plugin': '2.0.0-rc.13', '@solidjs/vite-plugin': '3.0.0-next.47',
+  'solid-js': '2.0.0-rc.20', '@solidjs/web': '2.0.0-rc.20',
+  '@solidjs/signals': '2.0.0-rc.20', '@solidjs/compiler': '2.0.0-rc.20',
+  '@solidjs/babel-plugin': '2.0.0-rc.20', '@solidjs/vite-plugin': '3.0.0-next.47',
   '@babel/core': '7.29.7', vite: '8.3.2', typescript: '5.9.3',
   playwright: '1.63.0', publint: '0.3.25', '@arethetypeswrong/core': '0.18.5',
 });

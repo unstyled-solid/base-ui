@@ -1,0 +1,39 @@
+diff --git a/dist/dev.attribution.js b/dist/dev.attribution.js
+--- a/dist/dev.attribution.js
++++ b/dist/dev.attribution.js
+@@ -867,14 +867,24 @@
+ }
+ /** Shallow structural equivalence, capped so hot paths stay cheap. */
+ const UNSTABLE_KEY_CAP = 64;
++// Diagnostic inspection must not evaluate application accessors outside their owner.
++function equivalentDataProperty(a, b, key) {
++  const left = Object.getOwnPropertyDescriptor(a, key);
++  const right = Object.getOwnPropertyDescriptor(b, key);
++  if (!left || !right) return !left && !right;
++  return "value" in left && "value" in right && left.value === right.value;
++}
+ function shallowEquivalent(a, b) {
+   const aArr = Array.isArray(a);
+   if (aArr !== Array.isArray(b)) return false;
+   if (aArr) {
+     const arrA = a;
+     const arrB = b;
+-    if (arrA.length !== arrB.length || arrA.length > UNSTABLE_KEY_CAP) return false;
+-    for (let i = 0; i < arrA.length; i++) if (arrA[i] !== arrB[i]) return false;
++    const lengthA = Object.getOwnPropertyDescriptor(arrA, "length");
++    const lengthB = Object.getOwnPropertyDescriptor(arrB, "length");
++    if (!lengthA || !lengthB || !("value" in lengthA) || !("value" in lengthB)) return false;
++    if (lengthA.value !== lengthB.value || lengthA.value > UNSTABLE_KEY_CAP) return false;
++    for (let i = 0; i < lengthA.value; i++) if (!equivalentDataProperty(arrA, arrB, String(i))) return false;
+     return true;
+   }
+   // Every own key, symbols included: a symbol-keyed box holding a fresh value
+@@ -882,7 +892,7 @@
+   const keys = Reflect.ownKeys(a);
+   if (keys.length > UNSTABLE_KEY_CAP || keys.length !== Reflect.ownKeys(b).length) return false;
+   for (const key of keys) {
+-    if (!(key in b) || a[key] !== b[key]) return false;
++    if (!equivalentDataProperty(a, b, key)) return false;
+   }
+   return true;
+ }

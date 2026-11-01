@@ -46,7 +46,7 @@ falls through to default ESM. Modern Node's ability to require ESM is not a CJS
 distribution promise. A normal runtime import of a types-only subpath fails;
 `types` is a declaration-resolution condition, not a JavaScript execution mode.
 
-**Known RC13 integration gap:** the pinned `solid-js` and `@solidjs/web` maps put
+**Condition-order boundary (retained in RC20):** the pinned `solid-js` and `@solidjs/web` maps put
 `worker` before `browser`. A library DOM target selected with both conditions can
 therefore receive server helpers from its peers. `bsolid-dist-mixed-conditions`
 blocks `bsolid-dist-pack` and `bsolid-hydration`, following `bsolid-dist-build`.
@@ -63,7 +63,7 @@ dependencies are audited. The canonical source is read via immutable Git blobs.
 - Direct geometry dependencies: `@floating-ui/dom@1.8.0` and
   `@floating-ui/utils@0.2.12`, matching actual upstream runtime/type use and its
   lock. Workspace overrides pin transitive `@floating-ui/core@1.8.0` and utils.
-- Matching exact Solid/web peers are `2.0.0-rc.13`; compiler/Babel are RC13,
+- Matching exact Solid/web peers are `2.0.0-rc.20`; compiler/Babel are RC20,
   Vite plugin is `3.0.0-next.47`. Build/test tooling stays development-only.
   Strict engines/peers and exact direct pins remain enabled.
 - Date-fns adapter requires `date-fns` **and** `@date-fns/tz`; TZDate is imported

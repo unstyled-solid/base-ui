@@ -182,6 +182,9 @@ export function CheckboxRoot(props: CheckboxRootProps): JSX.Element {
   let clickEvent: MouseEvent | undefined;
   const nativeProps = createMemo(() => mergeProps<'input'>(
     {
+      // Establish the checkbox value mode before the native value binding.
+      // Changing text -> checkbox afterward can normalize an empty value to "on".
+      type: 'checkbox',
       get checked() { return checked(); },
       get disabled() { return disabled(); },
       get form() { return props.form; },
@@ -191,7 +194,7 @@ export function CheckboxRoot(props: CheckboxRootProps): JSX.Element {
       get value() { return props.value === undefined ? 'on' : (group && !checked() ? '' : props.value); },
       ref: inputRef,
       get style() { return name() ? visuallyHiddenInput : visuallyHidden; },
-      tabindex: -1, type: 'checkbox', 'aria-hidden': 'true',
+      tabindex: -1, 'aria-hidden': 'true',
       onClick(event) {
         // Only the original root click bubbles. Label activation still uses this native input.
         event.stopPropagation();
@@ -206,7 +209,20 @@ export function CheckboxRoot(props: CheckboxRootProps): JSX.Element {
         const details = createChangeEventDetails('none', nativeEvent);
         const result = checkedState.request(next, details);
         if (!result.accepted) restoreInput();
-        else event.currentTarget.indeterminate = indeterminate();
+        else if (props.parent && group?.allValues) {
+          // A mixed parent can accept a request without accepting the browser's
+          // toggled boolean. Reconcile from the accepted group transaction now,
+          // before a spread replays an unchanged checked value in the next flush.
+          const selected = group.getRequestValue();
+          event.currentTarget.checked = selected.length === group.allValues.length;
+          event.currentTarget.indeterminate = selected.length > 0 && selected.length !== group.allValues.length;
+        }
+        else {
+          // Duplicate group values can keep a child selected after one accepted
+          // occurrence was removed. The requested boolean is not the final state.
+          if (group && value() !== undefined) event.currentTarget.checked = group.getRequestValue().includes(value()!);
+          event.currentTarget.indeterminate = indeterminate();
+        }
         // Controlled proposals are not acknowledgements; restore from committed props after RC13 stages them.
         queueMicrotask(restoreInput);
       },

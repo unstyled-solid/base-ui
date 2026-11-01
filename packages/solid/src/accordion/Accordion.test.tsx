@@ -454,7 +454,7 @@ describe('Accordion labels, registration, and state attributes', () => {
   });
 
   it.each(['defaultValue', 'value'] as const)('%s selects a custom item value initially', async (prop) => {
-    const view = await render(() => <Items root={{ [prop]: ['a'] }} />);
+    const view = await render(() => <Items root={prop === 'defaultValue' ? { defaultValue: ['a'] } : { value: ['a'] }} />);
     expect(view.getByText('First content')).toBeVisible();
     expect(view.getByText('First content')).toHaveAttribute('data-open');
     expect(view.queryByText('Second content')).toBeNull();

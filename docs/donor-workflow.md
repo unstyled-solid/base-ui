@@ -8,7 +8,7 @@
 The gitlink and `.gitmodules` were staged by submodule addition; no commit was
 created. The donor supplies owned adaptation material. Base UI
 `19511bb171f3b360b006c94cf6d07e53cb446505` remains the behavioral oracle and
-Solid **2.0.0-rc.13** remains the runtime contract.
+Solid **2.0.0-rc.20** is the current runtime contract.
 
 Do not install/import donor `solid-floating-ui`: its Solid peer is ^1.8 and its
 source needs explicit RC13 adaptation. Read the [source assessment](../tracking/donors/solid-floating-ui/assessment.md)

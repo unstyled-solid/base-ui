@@ -17,11 +17,12 @@ export function FieldLabel<E extends HTMLElement = HTMLLabelElement>(props: Fiel
   const item = useFieldItemContext();
   const labelable = useLabelableContext();
   const state = fieldState(() => root.state, () => Boolean(root.disabled || item?.disabled));
-  // Registration publishes this same ID back into context. Memoize the resolved
-  // ID so publishing an unchanged ID does not dispose/re-register the label.
+  // Keep the mounted owner's candidate separate from the scope's shared ID.
+  // Memoize the shared primitive so unchanged registrations do not re-register.
   const candidateId = createBaseUiId(() => typeof props.id === 'string' ? props.id : undefined);
-  const labelId = createMemo(() => labelable?.labelId ?? candidateId());
-  const labelProps = createLabel({ get id() { return labelId(); }, get native() { return props.nativeLabel ?? true; } });
+  const registeredId = labelable?.registerFieldLabel(candidateId);
+  const labelId = createMemo(() => registeredId?.() ?? candidateId());
+  const labelProps = createLabel({ field: true, get id() { return labelId(); }, get native() { return props.nativeLabel ?? true; } });
   const [element, setElement] = createSignal<HTMLElement | null>(null);
   createEffect(() => ({ element: element(), native: props.nativeLabel ?? true }), ({ element: node, native }) => {
     if (process.env.NODE_ENV === 'production' || !node) return;

@@ -12,9 +12,9 @@ const links = (node) => [...(node.type === 'link' ? [node.url] : []), ...(node.c
 
 test('public plain pnpm installation retains runtime and compiler pins', () => {
   assert.equal(installation.package, '@unstyled-solid/base-ui');
-  assert.match(installation.commands, /^pnpm add @unstyled-solid\/base-ui@0\.0\.1\n/);
+  assert.match(installation.commands, /^pnpm add @unstyled-solid\/base-ui@0\.0\.2\n/);
   assert.doesNotMatch(installation.commands, /rtk|workspace|baseui-solid2/);
-  for (const name of ['solid-js', '@solidjs/web', '@solidjs/compiler', '@solidjs/babel-plugin']) assert.ok(installation.commands.includes(`${name}@2.0.0-rc.13`));
+  for (const name of ['solid-js', '@solidjs/web', '@solidjs/compiler', '@solidjs/babel-plugin']) assert.ok(installation.commands.includes(`${name}@2.0.0-rc.20`));
 });
 
 test('emitted shadcn phrase stays React ecosystem context', () => {
@@ -61,7 +61,7 @@ test('about distinguishes upstream contributors and preserves heading IDs', () =
 test('post-adaptPage private installation prose is replaced', () => {
   const result = applyOverviewReleaseContent(page('quick-start', [paragraph('In this pnpm workspace, install the private @unstyled-solid/base-ui package and its pinned Solid 2 peers:'), { type: 'code', value: installation.commands, meta: 'title="Workspace installation"' }]));
   assert.doesNotMatch(JSON.stringify(result.ast), /workspace|private|rtk|qualification/i);
-  assert.match(flatten(result.ast), /alpha 0.0.1/);
+  assert.match(flatten(result.ast), /alpha 0.0.2/);
 });
 
 test('about labels browser guidance as upstream targets without changing its ID or caveat', () => {
@@ -73,12 +73,12 @@ test('about labels browser guidance as upstream targets without changing its ID 
   assert.match(flatten(result.ast), /does not claim equivalent browser, device, or screen-reader coverage/);
 });
 
-test('release routes contain verified identity, RC13 requirement and alpha limits', () => {
+test('release routes contain verified identity, RC20 requirement and alpha limits', () => {
   const pages = createReleasePages(page('about', []));
   assert.deepEqual(pages.map((p) => p.route), ['/solid/overview/releases', '/solid/overview/releases/v0-0-1']);
   const notes = flatten(pages[1].ast);
-  assert.match(notes, /@unstyled-solid\/base-ui@0.0.1/);
-  assert.match(notes, /2.0.0-rc.13/);
+  assert.match(notes, /@unstyled-solid\/base-ui@0.0.2/);
+  assert.match(notes, /2.0.0-rc.20/);
   assert.match(notes, /APIs and behavior may change/);
   assert.match(notes, /does not claim equivalent browser, device, or screen-reader coverage/);
   assert.doesNotMatch(notes, /qualification|workspace|rtk|2026/);

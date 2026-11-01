@@ -15,7 +15,7 @@
       "workspace": "rtk pnpm add {workspaceName}@workspace:*",
       "tarball": "rtk pnpm add ./artifacts/{workspaceName}-{version}.tgz",
       "registry": "npm install @unstyled-solid/base-ui",
-      "runtimePeers": "rtk pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13",
+      "runtimePeers": "rtk pnpm add solid-js@2.0.0-rc.20 @solidjs/web@2.0.0-rc.20",
       "generationRule": "Publish the compiled staged package under publicationName at version. Workspace source remains private. Registry examples use the user-selected name; publication status is established by npm receipts."
     }
   },
@@ -47,11 +47,11 @@
   "toolchain": {
     "node": "25.8.1",
     "pnpm": "11.8.0",
-    "solid-js": "2.0.0-rc.13",
-    "@solidjs/web": "2.0.0-rc.13",
-    "@solidjs/signals": "2.0.0-rc.13",
-    "@solidjs/compiler": "2.0.0-rc.13",
-    "@solidjs/babel-plugin": "2.0.0-rc.13",
+    "solid-js": "2.0.0-rc.20",
+    "@solidjs/web": "2.0.0-rc.20",
+    "@solidjs/signals": "2.0.0-rc.20",
+    "@solidjs/compiler": "2.0.0-rc.20",
+    "@solidjs/babel-plugin": "2.0.0-rc.20",
     "@solidjs/vite-plugin": "3.0.0-next.47",
     "vite": "8.3.2",
     "typescript": "5.9.3",
@@ -163,7 +163,7 @@
         "typesOnly": "types"
       }
     ],
-    "matrixExpansion": "Validate every subset of types/browser/node/worker/deno/development (64 sets). types wins; otherwise worker selects server before browser, matching stock RC13; otherwise browser selects DOM; otherwise server. Resolver condition-list order cannot override export-object key order.",
+    "matrixExpansion": "Validate every subset of types/browser/node/worker/deno/development (64 sets). types wins; otherwise worker selects server before browser, matching stock RC20; otherwise browser selects DOM; otherwise server. Resolver condition-list order cannot override export-object key order.",
     "requirePolicy": "No require branch and no CJS artifact. Modern Node may synchronously require ESM; that does not constitute a supported CommonJS build.",
     "solidPolicy": "No solid branch. A supplied solid condition falls through to ordinary ESM default.",
     "typeConsumers": [

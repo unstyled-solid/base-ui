@@ -16,7 +16,7 @@ Use the immutable source SHA recorded for the current update episode. At the rev
 
 - React Base UI: `upstream/base-ui`, `19511bb171f3b360b006c94cf6d07e53cb446505`.
 - Solid donor: `upstream/solid-floating-ui`, `0492e49b746deed543dbc167a9a58ed1210c2393`.
-- Port runtime/compiler: coordinated Solid `2.0.0-rc.13`.
+- Port runtime/compiler: coordinated Solid `2.0.0-rc.20`.
 
 These are historical anchors, not permission to overwrite newer pins. Upstream checkouts are read-only. Never use `../ref/base-ui-solid` as implementation source. For an authorized update, use the project's existing upstream workflow and retain its separation of baseline, candidate, and verified parity; do not invent a replacement update process or advance verification on partial evidence.
 
@@ -50,7 +50,7 @@ search_docs({ library: "solidjs", version: "2", query: "createSignal writable de
 search_docs({ library: "solidjs", version: "2", query: "ref ownerless onSettled ownership" })
 ```
 
-Check version-specific compiler/runtime behavior against installed RC13 source/declarations. Relevant documentation:
+Check version-specific compiler/runtime behavior against installed RC20 source/declarations. Relevant documentation:
 
 - https://v2.solidjs.com/concepts/reactivity
 - https://v2.solidjs.com/guides/avoid-unnecessary-effects

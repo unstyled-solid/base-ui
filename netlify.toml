@@ -1,11 +1,14 @@
 # Netlify supplies URL and CONTEXT; no account credentials belong in this file.
 [build]
-  command = "pnpm docs:build"
+  base = "."
+  command = "git submodule update --init --recursive && pnpm docs:build && pnpm docs:check"
   publish = "docs/generated/site/dist"
 
 [build.environment]
-  NODE_VERSION = "25.8.1"
+  NODE_VERSION = "24.22.2"
   PNPM_VERSION = "11.8.0"
+  PNPM_FLAGS = "--frozen-lockfile"
+  DOCS_BASE = "/"
 
 # This is a static, multi-page site. Netlify's directory-index handling serves
 # extensionless documentation routes; do not add an SPA /* -> /index.html rule.

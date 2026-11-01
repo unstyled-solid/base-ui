@@ -146,17 +146,19 @@ describe('PreviewCard browser qualification (retained assertions)', () => {
     for (const offset of ['sideOffset', 'alignOffset'] as const) {
       browser(positionSource, `${offset} receives the latest ${side === 'left' ? 'physical' : 'logical'} collision-flipped side`, async () => {
         let observed = '';
+        const observeSide = (data: { side: string }) => { observed = data.side; return 0; };
         await render(() => <CardFixture variant="contained" root={{ open: true }}
           trigger={{ style: { display: 'block', position: 'fixed', left: '0', top: '100px', width: '72px', height: '36px' } }}
-          positioner={{ side, collisionPadding: 5, collisionAvoidance: { side: 'flip', align: 'flip', fallbackAxisSide: 'none' }, [offset]: (data: { side: string }) => { observed = data.side; return 0; } }}
+          positioner={{ side, collisionPadding: 5, collisionAvoidance: { side: 'flip', align: 'flip', fallbackAxisSide: 'none' }, ...(offset === 'sideOffset' ? { sideOffset: observeSide } : { alignOffset: observeSide }) }}
           popup={{ style: { width: '52px', height: '24px' } }} />);
         await waitFor(() => expect(observed).toBe(side === 'left' ? 'right' : 'inline-end'));
       });
       browser(positionSource, `${offset} receives collision-flipped alignment`, async () => {
         let observed = '';
+        const observeAlign = (data: { align: string }) => { observed = data.align; return 0; };
         await render(() => <CardFixture variant="contained" root={{ open: true }}
           trigger={{ style: { display: 'block', position: 'fixed', left: '100px', bottom: '0', width: '72px', height: '36px' } }}
-          positioner={{ side: 'right', align: 'start', collisionPadding: 5, [offset]: (data: { align: string }) => { observed = data.align; return 0; } }}
+          positioner={{ side: 'right', align: 'start', collisionPadding: 5, ...(offset === 'sideOffset' ? { sideOffset: observeAlign } : { alignOffset: observeAlign }) }}
           popup={{ style: { width: '52px', height: '60px' } }} />);
         await waitFor(() => expect(observed).toBe('end'));
       });

@@ -10,7 +10,7 @@ for (const name of versions) {
   // This local check checks fixture compiler syntax only, never executes a
   // workspace component graph and never counts as archive qualification.
   const entry = require.resolve(name);
-  if (!entry.includes('2.0.0-rc.13')) throw new Error(`Unexpected local compiler pin: ${entry}`);
+  if (!entry.includes('2.0.0-rc.20')) throw new Error(`Unexpected local compiler pin: ${entry}`);
 }
 for (const name of ['fixtures.tsx', 'client.tsx', 'server.tsx']) {
   const filename = new URL(name, import.meta.url).pathname;

@@ -6,6 +6,7 @@ export interface UseLabelParameters {
   id?: string | undefined;
   fallbackControlId?: string | undefined;
   native?: boolean | undefined;
+  field?: boolean | undefined;
   setLabelId?: Setter<string | undefined> | undefined;
   focusControl?: ((event: MouseEvent, controlId: string | undefined) => void) | undefined;
 }
@@ -13,7 +14,8 @@ export type UseLabelReturnValue = JSX.LabelHTMLAttributes<HTMLLabelElement>;
 export function createLabel(params: UseLabelParameters = {}): UseLabelReturnValue {
   const context = useLabelableContext();
   const sync = ((next: string | undefined | ((current: string | undefined) => string | undefined)) => {
-    context?.setLabelId(next);
+    if (params.field) context?.setFieldLabelId(next);
+    else context?.setLabelId(next);
     return params.setLabelId?.(next);
   }) as Setter<string | undefined>;
   const id = createRegisteredLabelId(() => params.id, sync);

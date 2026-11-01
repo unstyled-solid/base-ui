@@ -175,5 +175,5 @@ export async function generateCatalog(root) {
       }
     }
   }
-  return { schemaVersion: 1, sourceSha, package: 'baseui-solid2', publicPackage: { name: '@unstyled-solid/base-ui', version: '0.0.1' }, runtime: { 'solid-js': '2.0.0-rc.13', '@solidjs/web': '2.0.0-rc.13' }, entries, references, exclusions, missing: [...new Set(missing)].sort() };
+  return { schemaVersion: 1, sourceSha, package: 'baseui-solid2', publicPackage: { name: '@unstyled-solid/base-ui', version: '0.0.1' }, runtime: { 'solid-js': '2.0.0-rc.20', '@solidjs/web': '2.0.0-rc.20' }, entries, references, exclusions, missing: [...new Set(missing)].sort() };
 }
