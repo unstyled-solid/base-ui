@@ -1,1 +1,0 @@
-import{D as e,z as t}from"../islands.js";function n(n,r){let i=t(n);e(n,e=>{i!==e&&t(()=>r(i)),i=e})}export{n as t};

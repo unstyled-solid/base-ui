@@ -8,6 +8,8 @@ test-results/
 test/harness/__screenshots__/
 packages/*/build/
 docs/dist/
+# Documentation build output, including DOCS_OUTPUT variants.
+docs/**/dist/
 *.tsbuildinfo
 
 # Beads / Dolt local storage (preserved from bd init)

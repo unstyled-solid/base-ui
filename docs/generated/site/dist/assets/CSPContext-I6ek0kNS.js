@@ -1,1 +1,0 @@
-import{E as e,M as t}from"../islands.js";var n=e(null);function r(){return t(n)}export{r as t};
