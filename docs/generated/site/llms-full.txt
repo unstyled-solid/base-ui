@@ -1,6 +1,6 @@
 # Base UI for Solid — full documentation
 
-@unstyled-solid/base-ui 0.0.2 (alpha), Solid 2.0.0-rc.13.
+@unstyled-solid/base-ui 0.0.3 (alpha), Solid 2.0.0-rc.20.
 Support: https://github.com/unstyled-solid/base-ui
 
 <!-- /solid/components/accordion -->
@@ -65314,7 +65314,7 @@ Upstream Base UI, from the creators of Radix, Material UI, and Floating UI, i
 The upstream project focuses on accessibility, performance, and developer experience.
 Its goal is to provide a complete set of open-source UI components, with a delightful developer experience, in a sustainable way.
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
 
@@ -65369,7 +65369,7 @@ For the upstream browser targets, refer to its [.browserslistrc](https://github.
 
 ## Solid version
 
-This port targets Solid 2.0.0-rc.13 and @solidjs/web 2.0.0-rc.13.
+This port targets Solid 2.0.0-rc.20 and @solidjs/web 2.0.0-rc.20.
 
 <a id="bundler-support"></a>
 
@@ -65398,7 +65398,7 @@ The goal is to provide an accessible user experience out of the box, with intuit
 
 This page highlights some of the key accessibility features of Base UI, as well as some ways you need to augment the library, to ensure that your application is accessible to everyone.
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
 
@@ -65453,7 +65453,7 @@ Upstream React Base UI describes broad accessibility testing. This alpha Solid 
 
 The Base UI ecosystem, support channels, and ways to stay up to date.
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
 
@@ -65526,7 +65526,7 @@ Learn how to make the most of Base UI's accessibility features and guidelines.
 
 ## Base UI for Solid releases
 
-An independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2.
+An independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3.
 
 [Read Base UI for Solid releases](/solid/overview/releases)
 
@@ -65555,7 +65555,7 @@ A Solid 2 port of the open-source Base UI component library for building access
 
 A quick guide to getting started with Base UI.
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
 
@@ -65568,9 +65568,9 @@ Install Base UI using a package manager.
 Install `@unstyled-solid/base-ui` and its pinned Solid 2 peers:
 
 ```sh
-pnpm add @unstyled-solid/base-ui@0.0.2
-pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
-pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.13 @solidjs/babel-plugin@2.0.0-rc.13
+pnpm add @unstyled-solid/base-ui@0.0.3
+pnpm add solid-js@2.0.0-rc.20 @solidjs/web@2.0.0-rc.20
+pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.20 @solidjs/babel-plugin@2.0.0-rc.20
 ```
 
 Configure the Solid Vite plugin and TypeScript JSX source:
@@ -66800,7 +66800,7 @@ Metadata status: unavailable.
 
 # Base UI for Solid releases
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
 
@@ -66815,18 +66815,18 @@ Follow [project GitHub releases](https://github.com/unstyled-solid/base-ui/relea
 
 # 0.0.1 — Alpha
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 <a id="installation"></a>
 
 ## Installation
 
-Public package: @unstyled-solid/base-ui@0.0.2. Requires solid-js and @solidjs/web 2.0.0-rc.13. Use the matching RC13 compiler packages.
+Public package: @unstyled-solid/base-ui@0.0.3. Requires solid-js and @solidjs/web 2.0.0-rc.20. Use the matching compiler packages.
 
 ```sh
-pnpm add @unstyled-solid/base-ui@0.0.2
-pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
-pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.13 @solidjs/babel-plugin@2.0.0-rc.13
+pnpm add @unstyled-solid/base-ui@0.0.3
+pnpm add solid-js@2.0.0-rc.20 @solidjs/web@2.0.0-rc.20
+pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.20 @solidjs/babel-plugin@2.0.0-rc.20
 ```
 
 <a id="alpha-limitations"></a>

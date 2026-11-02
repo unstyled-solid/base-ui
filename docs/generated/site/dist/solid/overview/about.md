@@ -8,7 +8,7 @@ Upstream Base UI, from the creators of Radix, Material UI, and Floating UI, i
 The upstream project focuses on accessibility, performance, and developer experience.
 Its goal is to provide a complete set of open-source UI components, with a delightful developer experience, in a sustainable way.
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
 
@@ -63,7 +63,7 @@ For the upstream browser targets, refer to its [.browserslistrc](https://github.
 
 ## Solid version
 
-This port targets Solid 2.0.0-rc.13 and @solidjs/web 2.0.0-rc.13.
+This port targets Solid 2.0.0-rc.20 and @solidjs/web 2.0.0-rc.20.
 
 <a id="bundler-support"></a>
 

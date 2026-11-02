@@ -1,6 +1,6 @@
 # Base UI for Solid
 
-@unstyled-solid/base-ui 0.0.2 (alpha). Requires Solid 2.0.0-rc.13.
+@unstyled-solid/base-ui 0.0.3 (alpha). Requires Solid 2.0.0-rc.20.
 An independent port of Base UI; upstream React integrations do not establish Solid compatibility.
 Support and contributions: https://github.com/unstyled-solid/base-ui
 
@@ -62,5 +62,5 @@ Full documentation, including examples and API references: /llms-full.txt
 - [mergeProps](/solid/utils/merge-props.md): A utility to merge multiple sets of Solid props.
 - [Utils](/solid/utils.md): Explore the utils documentation for Base UI for Solid.
 - [useRender](/solid/utils/use-render.md): Utility for enabling a render prop in custom components.
-- [Base UI for Solid releases](/solid/overview/releases.md): An independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2.
-- [0.0.1 — Alpha](/solid/overview/releases/v0-0-1.md): An independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2.
+- [Base UI for Solid releases](/solid/overview/releases.md): An independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3.
+- [0.0.1 — Alpha](/solid/overview/releases/v0-0-1.md): An independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3.

@@ -1,0 +1,1 @@
+import{c as e,h as t,u as n,y as r}from"../islands.js";import{n as i}from"./hydration-Dw9VV7pi.js";import{t as a}from"./CSPContext-I6ek0kNS.js";var o=r(`<script>`);function s(r){let s=a(),c=i();return n(()=>n(()=>!!c())()?(()=>{var n=o();return e(()=>({e:s?.nonce,t:void 0}),({e,t:r},i)=>{e!==i?.e&&t(n,`nonce`,e),r!==i?.t&&(n.innerHTML=r)}),n})():c())}export{s as t};

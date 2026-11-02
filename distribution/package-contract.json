@@ -9,7 +9,7 @@
     "publicationDecision": "user-selected",
     "publicationOwner": "bsolid-dist-publish",
     "previousBootstrapName": "@base-ui-solid/solid",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "homepage": "https://github.com/unstyled-solid",
     "installation": {
       "workspace": "rtk pnpm add {workspaceName}@workspace:*",

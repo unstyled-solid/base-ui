@@ -24,7 +24,7 @@ Learn how to make the most of Base UI's accessibility features and guidelines.
 
 ## Base UI for Solid releases
 
-An independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2.
+An independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3.
 
 [Read Base UI for Solid releases](/solid/overview/releases)
 

@@ -2,7 +2,7 @@
 
 Base UI for Solid 2 is a library of unstyled Solid components for building accessible user interfaces. You gain complete control over your app's CSS.
 
-[`@unstyled-solid/base-ui`](https://www.npmjs.com/package/@unstyled-solid/base-ui) is an independent, unofficial port of [React Base UI](https://github.com/mui/base-ui), not maintained by MUI or the upstream Base UI team. This development branch targets **Solid 2.0.0-rc.20**, not Solid 1. Published **0.0.2** remains an RC13 alpha until a new release is published.
+[`@unstyled-solid/base-ui`](https://www.npmjs.com/package/@unstyled-solid/base-ui) is an independent, unofficial port of [React Base UI](https://github.com/mui/base-ui), not maintained by MUI or the upstream Base UI team. This development branch targets **Solid 2.0.0-rc.20**, not Solid 1. Published **0.0.3** remains an RC13 alpha until a new release is published.
 
 ## Installation
 

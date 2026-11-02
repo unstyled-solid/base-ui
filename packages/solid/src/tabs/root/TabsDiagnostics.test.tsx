@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest';
 import { createEffect, OBSERVE } from 'solid-js';
-import { attribution } from 'solid-js/attribution';
+import { attribution, costs } from 'solid-js/attribution';
 import { createRenderer, waitFor } from '../../../test';
 import { Tabs } from '../test/TabsFixture';
 import { useTabsRootContext } from './TabsRootContext';
@@ -48,6 +48,7 @@ it.each([false, true])('selection, history and panel IDs derive together under a
         expect(observations.every((next) => next.value === value && next.direction === direction && next.id === panel.id)).toBe(true);
         previous = value;
       }
+      console.log('TABS_PROFILE', keepMounted, JSON.stringify(costs()));
       expect(diagnostics).toEqual([]);
     } finally { view.unmount(); }
   } finally { unsubscribe(); release(); }

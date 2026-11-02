@@ -2,7 +2,7 @@
 
 # Base UI for Solid releases
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.3. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
 

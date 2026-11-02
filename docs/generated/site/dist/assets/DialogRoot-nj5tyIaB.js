@@ -1,0 +1,1 @@
+import{o as e}from"./DialogPortal-DSxEDO1S.js";function t(t){return e(`dialog`,t)}export{t};

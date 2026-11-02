@@ -1,6 +1,6 @@
 {
   "name": "baseui-solid2",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "type": "module",
   "description": "Unstyled, accessible UI components for Solid 2, based on Base UI.",
