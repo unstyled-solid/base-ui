@@ -8,6 +8,12 @@ type PropsOf<T extends ElementType> = WithBaseUIEvent<ComponentProps<T>>;
 export type InputProps<T extends ElementType> = PropsOf<T> | ((previous: PropsOf<T>) => PropsOf<T>) | undefined;
 type RecordProps = Record<string, any>;
 
+// Our merged views expose only enumerable string keys. Reuse their key walk
+// rather than asking Object.keys to recheck every descriptor at every layer.
+// Foreign objects still use Object.keys, preserving non-enumerable exclusions.
+const mergedKeys = new WeakMap<RecordProps, () => string[]>();
+export const getEnumerableKeys = (source: RecordProps): string[] => mergedKeys.get(source)?.() ?? Object.keys(source);
+
 /** Native Event brand check works for iframe events and never brands value callbacks. */
 export function isNativeEvent(value: unknown): value is Event {
   if (value == null || typeof value !== 'object' || typeof Event === 'undefined') return false;
@@ -114,8 +120,9 @@ function mergeSources(previous: RecordProps, sources: readonly RecordProps[]): R
     }
     return previous[key];
   }
+  const keys = () => [...new Set([getEnumerableKeys(previous), ...sources.map(getEnumerableKeys)].flat())];
   const result: RecordProps = new Proxy({}, {
-    ownKeys: () => [...new Set([Object.keys(previous), ...sources.map((source) => Object.keys(source))].flat())],
+    ownKeys: keys,
     has: (_, key) => key === $PROXY || (typeof key === 'string' && has(key)),
     getOwnPropertyDescriptor: (_, key) => typeof key === 'string' && has(key) ? { configurable: true, enumerable: true, get: () => result[key] } : undefined,
     get(_, key) {
@@ -127,6 +134,7 @@ function mergeSources(previous: RecordProps, sources: readonly RecordProps[]): R
       return read(key);
     },
   });
+  mergedKeys.set(result, keys);
   return result;
 }
 

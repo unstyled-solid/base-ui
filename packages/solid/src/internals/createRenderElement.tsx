@@ -1,6 +1,7 @@
-import { children, createEffect, createMemo, createSignal, merge, omit, onCleanup, onSettled, untrack } from 'solid-js';
+import { $PROXY, children, createEffect, createMemo, createSignal, merge, omit, onCleanup, onSettled, untrack } from 'solid-js';
 import { dynamic, isServer, spread, type JSX } from '@solidjs/web';
 import { mergePropsN, mergeClassNames, mergeStyles, isNativeEvent } from '../merge-props';
+import { getEnumerableKeys } from '../merge-props/mergeProps';
 import { createMergedRefsN, type InputRef } from '../utils/createMergedRefs';
 import { resolveClass } from '../utils/resolveClass';
 import { resolveStyle } from '../utils/resolveStyle';
@@ -183,15 +184,17 @@ export function createRenderElement<State extends object = {}, E extends Element
   }, { transparent: true });
   const handlers = new Map<string, (...args: unknown[]) => unknown>();
   const live: Props = new Proxy({}, {
-    ownKeys: () => [...new Set([...Object.keys(resolved()).filter((key) => !(valueProperty() && key === 'value')), ...(controlledDefault() ? ['defaultValue'] : []), ...(hasValue() ? ['onInput'] : []), 'class', 'style', 'ref'])],
-    has: (_, key) => typeof key === 'string' && (key === 'class' || key === 'style' || key === 'ref' || (key === 'defaultValue' && controlledDefault()) || (key === 'onInput' && hasValue()) || (key === 'children' ? key in childrenProps() : key in resolved())),
+    ownKeys: () => [...new Set([...getEnumerableKeys(resolved()).filter((key) => !(valueProperty() && key === 'value')), ...(controlledDefault() ? ['defaultValue'] : []), ...(hasValue() ? ['onInput'] : []), 'class', 'style', 'ref'])],
+    has: (_, key) => key === $PROXY || typeof key === 'string' && (key === 'class' || key === 'style' || key === 'ref' || (key === 'defaultValue' && controlledDefault()) || (key === 'onInput' && hasValue()) || (key === 'children' ? key in childrenProps() : key in resolved())),
     // Native spread inspects the children descriptor during host creation.
     // A live getter both retains lazy children and avoids subscribing identity
     // to the current resolved-prop record while inspecting that descriptor.
     getOwnPropertyDescriptor: (_, key) => typeof key === 'string' && untrack(() => key in live) ? { configurable: true, enumerable: true, get: () => live[key] } : undefined,
     get(_, key) {
-      // This facade is not its input's Solid store/merge view. Forwarding its
-      // private symbol brands lets native spread unwrap past our merged props.
+      // Brand only this facade. RC20 spread can enumerate its live keys without
+      // probing every descriptor again. Never forward a source's private view:
+      // that would let native spread unwrap past our Base UI merge rules.
+      if (key === $PROXY) return live;
       if (typeof key !== 'string') return undefined;
       if (key === 'ref') return ref;
       if (key === 'children') return childrenProps().children;

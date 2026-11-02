@@ -2,6 +2,7 @@
 
 - Missing records aren't failed work. Don't reopen completed work or call it blocked without identifying a specific defect or unmet requirement in the user's current request.
 - State the result directly. Add caveats only when they change the user's decision; when corrected, fix the mistake without defending it.
+- A supplied CI failure is evidence to investigate, even when a local rerun is green. A local pass means "not reproduced locally", not "fixed". For performance diagnostics, identify the costly path, demonstrate a bounded improvement with a regression, and distinguish local validation from a passing CI rerun. Do not close the reported defect merely because unrelated requested cleanup is complete.
 
 ## Authority and scope
 - Fresh port of React Base UI to Solid **2.0.0-rc.20**. React upstream is the only behavioral source of truth. Never implement from `../ref/base-ui-solid`.

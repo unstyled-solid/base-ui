@@ -14,6 +14,25 @@ import type { FieldRootContextValue } from './field-root-context';
 
 describe('createRenderElement', () => {
   const { renderProps } = createRenderer();
+  it('does not repeat native prop descriptor probes through the renderer facade', async () => {
+    let titleProbes = 0;
+    const source = new Proxy({ title: 'stable', 'data-testid': 'host' }, {
+      has(target, key) { if (key === 'title') titleProbes++; return Reflect.has(target, key); },
+    });
+    const view = await renderProps((props: { active: boolean }) => createRenderElement('button', {}, {
+      state: { get active() { return props.active; } },
+      props: [source, (previous) => mergePropsN([previous, { role: 'tab' }])],
+    }), { active: false });
+    const host = view.getByTestId('host');
+    titleProbes = 0;
+    await view.setProps({ active: true });
+    // One native facade membership check and one per Base UI merge layer.
+    // Descriptor enumeration used to add three more probes to this update.
+    expect(titleProbes).toBe(3);
+    expect(host).toHaveAttribute('data-active');
+    expect(host).toHaveAttribute('title', 'stable');
+    expect(view.getByTestId('host')).toBe(host);
+  });
   it.each(['functional prop', 'propGetter'] as const)('retains state-derived refs from a %s', async (mode) => {
     const closedRef = vi.fn();
     const openRef = vi.fn();
