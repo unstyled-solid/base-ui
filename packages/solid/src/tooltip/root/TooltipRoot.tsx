@@ -1,4 +1,4 @@
-import { createEffect, createMemo } from 'solid-js';
+import { children as resolveChildren, createEffect } from 'solid-js';
 import { isServer, type JSX } from '@solidjs/web';
 import type { HTMLProps } from '../../internals/types';
 import { createDismiss } from '../../floating-ui-react/hooks/createDismiss';
@@ -52,14 +52,12 @@ export function TooltipRoot<Payload = unknown>(props: TooltipRootProps<Payload>)
     // A JSX-producing getter owns a subtree each time it is evaluated. Resolve
     // it once in this owned scope; a typeof check followed by a second props
     // read would create invisible triggers/portals and leave their resources live.
-    const content = createMemo(() => {
+    const content = resolveChildren(() => {
       const children = props.children;
-      // Context providers return Solid's public ChildrenReturn accessor. It is
-      // renderer-owned JSX, not a payload callback: dereferencing it here would
-      // subscribe this memo to its portal refs and recreate the entire subtree.
-      const resolvedChildren = typeof children === 'function' && 'toArray' in children
-        && typeof children.toArray === 'function';
-      return typeof children === 'function' && !resolvedChildren ? children(payload) : children;
+      // Stable providers return bare accessors too. Native child resolution
+      // must evaluate these separately from the computation constructing JSX.
+      const resolved = typeof children === 'function' && 'toArray' in children && typeof children.toArray === 'function';
+      return typeof children === 'function' && !resolved ? <>{children(payload)}</> : <>{children}</>;
     });
     return <>{content()}</>;
   }

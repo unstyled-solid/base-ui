@@ -79,7 +79,7 @@ rebuilds. Do not run it before the fresh-build freeze.
   `--legacy-peer-deps` disables peer auto-installation, not the explicit peer
   contract checks. `--ignore-scripts` avoids package lifecycle execution.
 - Install exact stock RC13 core/renderer/signals/compiler/Babel plugin, Vite
-  integration `3.0.0-next.47`, Babel `7.29.7`, Vite `8.3.2`, TypeScript `5.9.3`,
+  integration `3.0.1`, Babel `7.29.7`, Vite `8.3.2`, TypeScript `5.9.3`,
   Playwright `1.63.0`, publint `0.3.25`, ATTW core `0.18.5`; exact independent
   temporal pins. Consumer-only overrides prevent RC/tool drift. Verify nested
   installations, reject package symlinks/React, and byte-compare installed

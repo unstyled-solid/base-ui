@@ -17,7 +17,7 @@ description: Use for all Solid V2 component, primitive, reactive demo, renderer,
    - [createMemo](https://v2.solidjs.com/reference/solid-js/reactivity/create-memo)
    - [Async reactivity](https://v2.solidjs.com/concepts/async-reactivity)
    - [Rendering and SSR](https://v2.solidjs.com/concepts/rendering-and-ssr)
-3. Verify the APIs against **installed declarations and runtime**, not remembered Solid 1 conventions. The current project targets `2.0.0-rc.20`; inspect manifests/lockfile when a task changes the toolchain. Current online V2 docs can be newer than the pin. Document a mismatch rather than assuming an unavailable API exists.
+3. Verify the APIs against **installed declarations and runtime**, not remembered Solid 1 conventions. The current project targets stable `2.0.3` with compiler/Babel `2.0.2`; inspect manifests/lockfile when a task changes the toolchain. Current online V2 docs can be newer than the pin. Document a mismatch rather than assuming an unavailable API exists.
 4. React `upstream/base-ui` is the behavioral oracle: observable outcomes, callback order, cancellation, attributes, focus, selection, layout, and source tests. Its hooks/lifecycle are not a Solid implementation recipe. Keep source/reference repositories read-only and never implement from the old Solid port.
 5. Use RTK for every shell command and Beads for live work tracking. No indexing/initialization/refresh, commits, pushes, or publishing under this skill. Preserve concurrent work and ownership allowlists.
 6. For porting, re-porting, upstream reconciliation, or source-fidelity review, also load the mandatory user-level **`react-to-solid-v2-port`** skill (fallback: `~/.config/opencode/skills/react-to-solid-v2-port/SKILL.md`). Its copy-first/minimal-adaptation method complements this skill's native runtime rules. Preserve original source organization, framework-independent algorithms/types/JSDoc and individual test assertions; do not invent replacement engines or representative suites under the guise of Solid adaptation. Existing Solid files receive scoped deltas, not destructive recopying. Pass both requirements to delegated workers.
@@ -58,7 +58,7 @@ Classify each value **before** choosing a primitive:
 - Use **`createEffect(compute, effect)`**. Track all inputs in the compute half. The effect half performs terminal imperative work and returns cleanup or `undefined`, not a setter's return value.
 - Do not maintain `derived = f(source)` through a signal-writing effect. Readers otherwise see the new source with an old copy before the effect's write lands. Derive it directly or use a justified memo.
 - Do not hide a real dependency with `untrack` to remove a diagnostic. `untrack` is for an intentional snapshot or an imperative read whose dependency is not supposed to subscribe.
-- Allocate signals, memos, effects, and resources during owned setup. Ref callbacks are **untracked and ownerless**; their return values are ignored. They may record the node, but must not allocate primitives or register cleanup.
+- Allocate signals, memos, effects, and resources during owned setup. Stable 2.0.3 ref callbacks are **untracked in the creating context**, with primitive creation forbidden; their return values are ignored. They may record the node, but must not allocate primitives or register cleanup. Earlier RC20 proofs assumed a null owner; inspect installed `runRefCallback` rather than relying on that historical detail.
 - `onSettled` performs one-time settled DOM work and returns owned cleanup. Do not allocate primitives inside its callback. Use a split effect when work must follow a changing element or policy, and return cleanup for replacement and removal.
 - Register ownership once when a consumer supplies a live policy. Let readers derive from that policy rather than repeatedly publishing its current result into another signal. Identity-checked cleanup must not erase a newer registration. Preserve duplicate-owner and replacement semantics from source tests.
 - A keyed replacement may be constructed before its predecessor is disposed. Keep each mounted label's candidate ID separate from the scope's shared registered ID. For Field labels, retain the owner's initial candidate, register it through owned settled lifecycle, derive shared precedence from active owner registrations, and remove only that owner's token. Do not feed an inherited shared ID back as the replacement's own candidate.
@@ -111,6 +111,44 @@ For a multi-component or recurring defect:
 5. **One bounded correction pass:** correct the observed set together, then verify the changed behavior. If blockers remain, retain a red gate, record the exact findings and ownership in Beads, and report the incomplete scope. Do not claim completion or silently start an unlimited patch/test loop.
 
 For a simple local change, use the smallest meaningful check instead of invoking the whole gate.
+
+### Prevent speculative debugging loops
+
+- Before each experiment, state the causal hypothesis, smallest reproducer,
+  changed variable, predicted result and acceptance criterion. Reuse existing
+  evidence. A new wrapper around the same failing callback is not a new hypothesis.
+- After two failed targeted fixes, stop implementation and give the coordinator
+  the evidence: what was disproved, remaining hypotheses and the next decisive
+  experiment. Reassess before another patch; do not silently extend the correction
+  pass. Solo workers perform the same explicit reassessment. This does not mean
+  abandon the task or hide its failure.
+- Keep integration runs after a demonstrated local correction. Do not repeatedly
+  run expensive suites while the smallest case still fails, or rerun unchanged
+  green checks without a new concern. Revert failed experiments, not user work.
+- Old dependency versions may be isolated experimental controls, never a silent
+  downgrade of the active checkout. Compare identical workloads and memory limits.
+
+### Stable 2.0.3 upgrade lessons
+
+Context providers can return bare lazy accessors without `.toArray`. The Menu,
+MenuFilter, Tooltip and Dialog root adapters previously treated those as payload
+callbacks and evaluated them in the subtree-construction memo. Descendant portal
+status then invalidated construction, recreating owners until OOM. Use native
+owned `children` normalization with lazy JSX boundaries to separate construction
+from resolution; preserve payload arguments and explicit native-child conventions.
+Do not classify using private brands or function arity. See the four root adapters
+and `docs/engineering/solid-stable-upgrade.md` for the measured control and repair.
+
+The ContextMenu host fixture used to read live props and dispatch a synthetic event
+inside a native ref callback, which stable strict-read diagnostics reject. Its
+contract is **a gesture before staged ref registration commits**, not dispatch
+inside that callback. `web.render` flushes before returning, so simply moving the
+event after render weakens the test. The corrected `ContextMenu.host.test.tsx`
+uses owned `createRoot`/`insert`, captures the node in ref, then forwards the real
+ref and dispatches the event imperatively before flushing. Sentinel assertions
+prove the ref-written signal is uncommitted before the event and committed after
+flush. Keep original iframe realm/release assertions and root disposal. Do not
+change production event ownership or suppress diagnostics to fix this fixture.
 
 ### Required evidence
 

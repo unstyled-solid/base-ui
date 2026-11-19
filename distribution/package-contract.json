@@ -15,7 +15,7 @@
       "workspace": "rtk pnpm add {workspaceName}@workspace:*",
       "tarball": "rtk pnpm add ./artifacts/{workspaceName}-{version}.tgz",
       "registry": "npm install @unstyled-solid/base-ui",
-      "runtimePeers": "rtk pnpm add solid-js@2.0.0-rc.20 @solidjs/web@2.0.0-rc.20",
+      "runtimePeers": "rtk pnpm add solid-js@2.0.3 @solidjs/web@2.0.3",
       "generationRule": "Publish the compiled staged package under publicationName at version. Workspace source remains private. Registry examples use the user-selected name; publication status is established by npm receipts."
     }
   },
@@ -47,16 +47,16 @@
   "toolchain": {
     "node": "25.8.1",
     "pnpm": "11.8.0",
-    "solid-js": "2.0.0-rc.20",
-    "@solidjs/web": "2.0.0-rc.20",
-    "@solidjs/signals": "2.0.0-rc.20",
-    "@solidjs/compiler": "2.0.0-rc.20",
-    "@solidjs/babel-plugin": "2.0.0-rc.20",
-    "@solidjs/vite-plugin": "3.0.0-next.47",
+    "solid-js": "2.0.3",
+    "@solidjs/web": "2.0.3",
+    "@solidjs/signals": "2.0.3",
+    "@solidjs/compiler": "2.0.2",
+    "@solidjs/babel-plugin": "2.0.2",
+    "@solidjs/vite-plugin": "3.0.1",
     "vite": "8.3.2",
     "typescript": "5.9.3",
     "vitest": "4.1.11",
-    "@solidjs/testing-library": "1.0.0-beta.3"
+    "@solidjs/testing-library": "1.0.0-rc.2"
   },
   "resolution": {
     "exportContract": "distribution/exports.json",

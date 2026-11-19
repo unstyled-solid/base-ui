@@ -3,7 +3,8 @@
 // and SSR -> browser hydration by scripts/distribution/build/smoke.mjs.
 export default Object.freeze({
   compiler: 'babel',
-  compilerVersion: '2.0.0-rc.20',
+  compilerVersion: '2.0.2',
+  runtimeVersion: '2.0.3',
   babelVersion: '7.29.7',
   moduleName: '@solidjs/web',
   hydratable: true,

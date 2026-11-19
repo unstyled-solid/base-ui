@@ -1,4 +1,4 @@
-import { createEffect, createMemo, onCleanup, onSettled, useContext, untrack, type Accessor } from 'solid-js';
+import { children as resolveChildren, createEffect, createMemo, onCleanup, onSettled, useContext, untrack, type Accessor } from 'solid-js';
 import type { JSX } from '@solidjs/web';
 import { createBaseUiId } from '../../internals/createBaseUiId';
 import { createChangeEventDetails, type BaseUIChangeEventDetails, type BaseUIHighlightEventDetails } from '../../internals/createBaseUIEventDetails';
@@ -197,14 +197,13 @@ export function MenuRootInternal<Payload>(props: MenuRootInternalProps<Payload>)
   const currentPayload = createMemo(() => store.state.payload);
   const payload = { get payload() { return currentPayload(); } };
   function Content(): JSX.Element {
-    const content = createMemo(() => {
+    const content = resolveChildren(() => {
       const children = props.children;
-      // Providers can forward Solid's public ChildrenReturn accessor. It is
-      // renderer-owned JSX, not a payload callback. Calling it here would make
-      // this owner depend on descendant portal refs and recreate its subtree.
-      const resolvedChildren = typeof children === 'function' && 'toArray' in children
-        && typeof children.toArray === 'function';
-      return typeof children === 'function' && !resolvedChildren ? children(payload) : children;
+      // Native provider output can be a bare accessor, not a ChildrenReturn.
+      // Defer evaluation to native child resolution so descendant status cannot
+      // invalidate the computation that constructs its providers and portals.
+      const resolved = typeof children === 'function' && 'toArray' in children && typeof children.toArray === 'function';
+      return typeof children === 'function' && !resolved ? <>{children(payload)}</> : <>{children}</>;
     });
     return <>{content()}</>;
   }

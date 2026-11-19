@@ -8,7 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const args = process.argv.slice(2);
 if (args.some(arg => arg !== '--full-unit')) throw new Error('Usage: runtime-interactions.mjs [--full-unit]');
 const fullUnit = args.includes('--full-unit');
-const evidence = path.join(root, 'docs/generated/browser/runtime-gate');
+const evidence = process.env.BASEUI_RUNTIME_GATE_OUTPUT ?? path.join(root, 'docs/generated/browser/runtime-gate');
 await fs.mkdir(evidence, { recursive: true });
 const results = [];
 async function run(name, args, env = {}) {

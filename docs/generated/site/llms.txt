@@ -1,6 +1,6 @@
 # Base UI for Solid
 
-@unstyled-solid/base-ui 0.0.2 (alpha). Requires Solid 2.0.0-rc.13.
+@unstyled-solid/base-ui 0.0.2 (alpha). Requires Solid 2.0.3.
 An independent port of Base UI; upstream React integrations do not establish Solid compatibility.
 Support and contributions: https://github.com/unstyled-solid/base-ui
 

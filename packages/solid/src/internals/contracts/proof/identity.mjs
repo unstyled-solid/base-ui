@@ -16,10 +16,10 @@ function metadata(name) {
   throw new Error(`No package metadata for ${name}`);
 }
 const pins = {
-  'solid-js': '2.0.0-rc.20', '@solidjs/signals': '2.0.0-rc.20',
-  '@solidjs/web': '2.0.0-rc.20', '@solidjs/compiler': '2.0.0-rc.20',
-  '@solidjs/babel-plugin': '2.0.0-rc.20', '@solidjs/vite-plugin': '3.0.0-next.47',
-  '@solidjs/testing-library': '1.0.0-beta.3',
+  'solid-js': '2.0.3', '@solidjs/signals': '2.0.3',
+  '@solidjs/web': '2.0.3', '@solidjs/compiler': '2.0.2',
+  '@solidjs/babel-plugin': '2.0.2', '@solidjs/vite-plugin': '3.0.1',
+  '@solidjs/testing-library': '1.0.0-rc.2',
 };
 for (const [name, version] of Object.entries(pins)) assert.equal(metadata(name).version, version, name);
 for (const consumer of ['@solidjs/web', '@solidjs/testing-library']) {
@@ -28,4 +28,4 @@ for (const consumer of ['@solidjs/web', '@solidjs/testing-library']) {
 }
 const fromSolid = createRequire(require.resolve('solid-js'));
 assert.equal(realpathSync(fromSolid.resolve('@solidjs/signals')), realpathSync(require.resolve('@solidjs/signals')));
-console.log('PASS: coordinated RC.20 packages resolve one Solid runtime and one signals runtime', pins);
+console.log('PASS: coordinated stable packages resolve one Solid runtime and one signals runtime', pins);

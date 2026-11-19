@@ -16,8 +16,8 @@ export function verifyToolchain() {
     '@solidjs/compiler': config.compilerVersion,
     '@solidjs/babel-plugin': config.compilerVersion,
     '@babel/core': config.babelVersion,
-    'solid-js': config.compilerVersion,
-    '@solidjs/web': config.compilerVersion,
+    'solid-js': config.runtimeVersion,
+    '@solidjs/web': config.runtimeVersion,
     typescript: '5.9.3',
   })) {
     let directory = path.dirname(require.resolve(name));

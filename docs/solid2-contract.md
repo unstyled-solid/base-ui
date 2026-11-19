@@ -1,4 +1,4 @@
-# Solid 2 contract — RC.20
+# Solid 2 contract — stable 2.0.3
 
 Read the indexed `solidjs@2` docs through the docs MCP and pinned package declarations. Before runtime work, load the mandatory project skill [`solid-v2-runtime`](../.opencode/skills/solid-v2-runtime/SKILL.md). This contract is for a **React-to-Solid 2 implementation**, not an old Solid port migration.
 
@@ -13,7 +13,7 @@ Read the indexed `solidjs@2` docs through the docs MCP and pinned package declar
 | Effects | `createEffect(compute, effect)`: all tracked inputs extracted in compute, terminal imperative work in effect, cleanup returned. Effect callback must return cleanup or undefined, not a setter value. |
 | Lifecycle | Setup allocates primitives; `onSettled` performs one-time settled DOM work and returns cleanup. Neither its callback nor ref callbacks are places to create primitives. |
 | Label ownership | A mounted label's candidate ID is distinct from the shared registered ID. Preserve retained/shared-label precedence; derive selection from active owner registrations with token-guarded cleanup. Keyed setup/cleanup ordering and intermediate staged clears must not decide identity. |
-| Refs | Ref callbacks are untracked and ownerless; their return values are ignored. Own attachment/disposal in setup; handle replacement and removal explicitly. |
+| Refs | Ref callbacks are untracked and retain creating context in stable 2.0.3; primitive creation there is forbidden and return values are ignored. Own attachment/disposal in setup; handle replacement and removal explicitly. |
 | Context | `<Context value={...}>`. Missing defaultless context throws. Optional nesting context uses a deliberate null default, never swallowed errors. |
 | Composition | Render callback receives live prop/state objects. Preserve source getter receivers; no descriptor transplant. Prop/state changes must not recreate the host or lose focus/selection. |
 | Merging | Solid `merge` is not Base UI `mergeProps`: implement event/class/style ordering and cancellation explicitly. An explicitly present undefined masks ordinary defaults. |
