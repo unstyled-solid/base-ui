@@ -7,7 +7,7 @@ import { createMenuItem } from '../item/createMenuItem';
 import { elementProps } from '../utils/props';
 import { itemMapping } from '../utils/stateAttributesMapping';
 import { MenuCheckboxItemContext } from './MenuCheckboxItemContext';
-import { onCleanup } from 'solid-js';
+import { children, merge, onCleanup, onSettled } from 'solid-js';
 export interface MenuCheckboxItemState { disabled: boolean; highlighted: boolean; checked: boolean }
 export interface MenuCheckboxItemProps extends BaseUIComponentProps<'div', MenuCheckboxItemState> {
   checked?: boolean; defaultChecked?: boolean; disabled?: boolean; nativeButton?: boolean; closeOnClick?: boolean; label?: string;
@@ -16,7 +16,7 @@ export interface MenuCheckboxItemProps extends BaseUIComponentProps<'div', MenuC
 export function MenuCheckboxItem(props: MenuCheckboxItemProps) {
   const checked = createControlled<boolean, MenuRoot.ChangeEventDetails>({ value: () => props.checked,
     get defaultValue() { return props.defaultChecked ?? false; }, onChange: () => props.onCheckedChange, name: 'MenuCheckboxItem', state: 'checked' });
-  const item = createMenuItem(props, { closeOnClick: false });
+  let item: ReturnType<typeof createMenuItem>;
   let pendingToggle: boolean | undefined;
   let toggleVersion = 0;
   onCleanup(() => { toggleVersion += 1; pendingToggle = undefined; });
@@ -27,20 +27,28 @@ export function MenuCheckboxItem(props: MenuCheckboxItemProps) {
     if (result.accepted && !checked.controlled) {
       pendingToggle = next;
       const version = ++toggleVersion;
-      queueMicrotask(() => { if (version === toggleVersion) pendingToggle = undefined; });
+      onSettled(() => { if (version === toggleVersion) pendingToggle = undefined; });
     }
   }
   const state: MenuCheckboxItemState = {
     get checked() { return checked.value(); }, get disabled() { return item.disabled(); }, get highlighted() { return item.highlighted(); },
   };
-  const nativeProps = elementProps(props, ['checked', 'defaultChecked', 'onCheckedChange', 'disabled', 'nativeButton', 'closeOnClick', 'label']);
-  return <MenuCheckboxItemContext value={state}>{createRenderElement('div', props, {
+  function Content() {
+  // Resolve once under the indicator provider, shared by text metadata and host.
+  let content: (() => import('@solidjs/web').JSX.Element) | undefined;
+  const resolved = merge(props, { get children() { return content?.(); } });
+  item = createMenuItem(resolved, { closeOnClick: false });
+  content = children(() => props.children);
+  const nativeProps = elementProps(resolved, ['checked', 'defaultChecked', 'onCheckedChange', 'disabled', 'nativeButton', 'closeOnClick', 'label']);
+  return createRenderElement('div', props, {
     state, stateAttributesMapping: itemMapping, get enabled() { return item.filter.visible; }, get ref() { return [props.ref, item.ref]; },
     get props() { return [item.store.state.itemProps, { role: 'menuitemcheckbox', get 'aria-checked'() { return checked.value(); },
       onClick: toggle,
     }, nativeProps]; },
     propGetter: item.getItemProps,
-  })}</MenuCheckboxItemContext>;
+  });
+  }
+  return <MenuCheckboxItemContext value={state}><Content /></MenuCheckboxItemContext>;
 }
 export type MenuCheckboxItemChangeEventReason = MenuRoot.ChangeEventReason;
 export type MenuCheckboxItemChangeEventDetails = MenuRoot.ChangeEventDetails;

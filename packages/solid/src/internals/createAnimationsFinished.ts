@@ -11,7 +11,7 @@ export interface AnimationsFinishedParameters {
 export type RunAnimationsFinished = (callback: () => void, signal?: AbortSignal | null) => void;
 const pendingCompletions: (() => void)[] = [];
 let completionScheduled = false;
-/** Default source completions commit separately. RC13 stages ordinary writes,
+/** Default source completions commit separately. Solid 2.0.3 stages ordinary writes,
  * so let its commit checkpoint run before delivering the next ready callback. */
 function enqueueCompletion(callback: () => void) {
   pendingCompletions.push(callback);

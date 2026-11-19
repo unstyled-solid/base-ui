@@ -40,6 +40,9 @@ try {
     // the successfully evaluated namespace set from the diagnostic artifact.
     await fs.writeFile('browser-entry.mjs', `import { imports, namespaces } from './all-runtime.mjs'; import { startClient } from './client.js';\nwindow.allImports = imports(); window.runtimeNamespaces = namespaces; startClient();`);
     await compile(`client-${mask}`, 'browser-entry.mjs');
+  } else if (mode === 'diagnostics') {
+    await compile('diagnostics-production', 'diagnostics.tsx', false, ['browser']);
+    await compile('diagnostics-development', 'diagnostics.tsx', false, ['browser', 'development']);
   } else if (mode === 'shaking') {
     const fixtures = {
       empty: 'window.packedEmpty = true;',

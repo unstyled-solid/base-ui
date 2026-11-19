@@ -4,6 +4,10 @@ import { root } from './audit.mjs';
 import { hash, read } from '../../../docs/scripts/qualification/io.mjs';
 
 export const remoteTexts = [
+  { file:'floating-ui-MIT.txt', url:'https://raw.githubusercontent.com/floating-ui/floating-ui/38f8b5acc419a286538ce8d7f78c28d58edf6900/LICENSE' },
+  { file:'floating-arrow.ts', local:'scripts/distribution/notices/sources/floating-arrow.ts', url:'https://raw.githubusercontent.com/floating-ui/floating-ui/38f8b5acc419a286538ce8d7f78c28d58edf6900/packages/core/src/middleware/arrow.ts' },
+  { file:'aria-hidden.ts', local:'scripts/distribution/notices/sources/aria-hidden.ts', url:'https://raw.githubusercontent.com/theKashey/aria-hidden/9220c8f4a4fd35f63bee5510a9f41a37264382d4/src/index.ts' },
+  { file:'adobe-isVirtualEvent.ts', local:'scripts/distribution/notices/sources/adobe-isVirtualEvent.ts', url:'https://raw.githubusercontent.com/adobe/react-spectrum/b35d5c02fe900badccd0cf1a8f23bb593419f238/packages/@react-aria/utils/src/isVirtualEvent.ts' },
   { file:'react-spectrum-Apache-2.0.txt', url:'https://raw.githubusercontent.com/adobe/react-spectrum/b35d5c02fe900badccd0cf1a8f23bb593419f238/LICENSE' },
   { file:'aria-hidden-MIT.txt', url:'https://raw.githubusercontent.com/theKashey/aria-hidden/9220c8f4a4fd35f63bee5510a9f41a37264382d4/LICENSE' },
   { file:'react-spectrum-React-NOTICE.txt', url:'https://raw.githubusercontent.com/adobe/react-spectrum/b35d5c02fe900badccd0cf1a8f23bb593419f238/NOTICE.txt', start:'-------------------------------------------------------------------------------\nThis codebase contains a portion of code from react', end:'-------------------------------------------------------------------------------\nThis codebase contains a modified portion of code from Modernizr' },
@@ -22,7 +26,7 @@ export async function verifyRemote() {
       if (text.slice(end-2,end)!=='\n\n') throw new Error('Pinned NOTICE separator padding changed');
       scoped=Buffer.from(text.slice(start,end-1));
     }
-    const local=await read(root,`scripts/distribution/notices/licenses/${entry.file}`);
+    const local=await read(root,entry.local ?? `scripts/distribution/notices/licenses/${entry.file}`);
     results.push({file:entry.file,url:entry.url,upstreamSha256:hash(remote),sha256:hash(local),byteIdentical:local.equals(scoped),expectedSha256:hash(scoped),expectedBytes:scoped.length,actualBytes:local.length,scope:entry.start?'React subsection only':'whole file'});
   }
   const local=await read(root,'scripts/distribution/notices/licenses/solid-floating-ui-MIT.txt');

@@ -22,7 +22,7 @@ export function ContextMenuTrigger(componentProps: ContextMenuTriggerProps) {
   const host = useContextMenuRootContext(false);
   const { store } = useMenuRootContext(false);
   const [trigger, setTrigger] = createSignal<HTMLDivElement | null>(null);
-  // Ref writes are staged in RC13. A native gesture can arrive from the
+  // Ref writes are staged in Solid 2.0.3. A native gesture can arrive from the
   // forwarded ref before the signal commits, so keep the raw host for realms.
   let triggerElement: HTMLDivElement | null = null;
   function attachTrigger(element: HTMLDivElement | null) {

@@ -10,7 +10,7 @@ export function registerPart(context: ScrollAreaRootContextValue, part: () => Pa
   }
   createEffect(() => ({ part: part(), enabled: enabled() }), (next) => {
     if (next.part !== key) { detach(); key = next.part; }
-    // RC13 does not send a null ref when an enabled host disappears. The part's
+    // Solid 2.0.3 does not send a null ref when an enabled host disappears. The part's
     // setup can outlive that host, so explicitly remove its registration here.
     if (!next.enabled) detach();
     else if (node?.isConnected) context.register(key, node);

@@ -28,7 +28,7 @@ export function makeEventPreventable<T extends Event>(event: T): BaseUIEvent<T> 
     enhancedEvents.add(event);
     const preventDefault = event.preventDefault;
     const descriptor = Object.getOwnPropertyDescriptor(event, 'preventDefault');
-    // user-event and RC13 can supply a readonly own method. Cancelable keyboard
+    // user-event can supply a readonly own method. Cancelable keyboard
     // events already expose native defaultPrevented, so leave that method intact.
     if (!descriptor || descriptor.writable || descriptor.set) {
       event.preventDefault = function () { preventionAttempts.add(event); preventDefault.call(this); };
@@ -119,7 +119,7 @@ function mergeSources(previous: RecordProps, sources: readonly RecordProps[]): R
     has: (_, key) => key === $PROXY || (typeof key === 'string' && has(key)),
     getOwnPropertyDescriptor: (_, key) => typeof key === 'string' && has(key) ? { configurable: true, enumerable: true, get: () => result[key] } : undefined,
     get(_, key) {
-      // Identify this foreign reactive view so RC13 merge/omit do not cache
+      // Identify this foreign reactive view so Solid 2.0.3 merge/omit do not cache
       // its changing keys as a plain object. Never expose a source's private
       // record/target: native spread must still read through our merge rules.
       if (key === $PROXY) return result;

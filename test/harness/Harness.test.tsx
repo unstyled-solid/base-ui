@@ -172,6 +172,13 @@ describe('Harness runtime contract', () => {
       await renderProps((props: { value: number }) => <DiagnosticSnapshot {...props} />, { value: 1 });
     });
   });
+  it('permits an exact local hydration-warning expectation for intentional mismatch tests', async () => {
+    // Hydration warnings have no DiagnosticCode. The existing exact-count
+    // console expectation is the optout; normal hydration cases use none.
+    await expectDiagnostic({ message: /^Hydration key miss for "expected-policy-probe"$/ }, () => {
+      console.warn('Hydration key miss for "expected-policy-probe"');
+    });
+  });
   it('native preventDefault changes dispatch result independently of handler execution', async () => {
     const called = vi.fn();
     const view = await render(() => <button onClick={(event) => { event.preventDefault(); called(event.defaultPrevented); }}>Cancel</button>);

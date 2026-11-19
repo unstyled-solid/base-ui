@@ -19,7 +19,6 @@ import { createFloatingNodeId, createFloatingParentNodeId, useFloatingTree } fro
 import { createFloatingTree } from '../../floating-ui-react/components/createFloatingTree';
 import type { MenuTriggerData, MenuStoreContext } from '../store/MenuStore';
 import type { MenuTree } from '../utils/MenuTreeEvents';
-import { Show } from 'solid-js';
 import { FocusGuard } from '../../utils/FocusGuard';
 import { createTriggerFocusGuards } from '../../utils/popups/createTriggerFocusGuards';
 import { contains, getTarget } from '../../utils/shadowDom';
@@ -122,13 +121,16 @@ export function MenuTrigger<Payload = unknown>(props: MenuTriggerProps<Payload>)
   if (menubar) return <CompositeItem tag="button" render={props.render} class={props.class} style={props.style}
     state={state} stateAttributesMapping={pressableTriggerMapping} refs={parameters.ref} props={parameters.props} />;
   const host = createRenderElement('button', props, parameters);
+  // Keep these boolean-only guards as JSX conditions. Babel 2.0.2 lowers Show
+  // in production but retains its three-slot runtime graph in development;
+  // mixing those graphs shifts the following inline positioner's hydration IDs.
   return <>
-    <Show when={open()}><MenuTriggerFocusGuard context={() => store().context} slot="beforeTriggerFocusGuardRef" onFocus={guards.handlePreFocusGuardFocus} /></Show>
+    {open() && <MenuTriggerFocusGuard context={() => store().context} slot="beforeTriggerFocusGuardRef" onFocus={guards.handlePreFocusGuardFocus} />}
     {host}
-    <Show when={open()}><MenuTriggerFocusGuard context={() => store().context} slot="triggerFocusTargetRef" onFocus={guards.handleFocusTargetFocus} /></Show>
+    {open() && <MenuTriggerFocusGuard context={() => store().context} slot="triggerFocusTargetRef" onFocus={guards.handleFocusTargetFocus} />}
   </>;
 }
-/** Direct native guard refs have no null-on-disposal notification in RC13.
+/** Direct native guard refs have no null-on-disposal notification in Solid 2.0.3.
  * Keep cell ownership in setup, and follow detached handle migrations without
  * changing the native guard or reading reactive stores from a ref callback. */
 function MenuTriggerFocusGuard(props: {

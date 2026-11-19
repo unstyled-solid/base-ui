@@ -153,7 +153,7 @@ export function SliderThumb(props: SliderThumbProps) {
   };
   const Input = () => createRenderElement('input', {}, {
     ref: inputRef,
-    // RC20 gives defaultValue key presence precedence during SSR. Omit that
+    // Solid 2.0.3 gives defaultValue key presence precedence during SSR. Omit that
     // key without spreading its getter (which would read value during setup).
     props: [isServer ? omit(inputDefaults, 'defaultValue') : inputDefaults,
       (p) => context.field?.validation.getValidationProps(disabled(), p) ?? p,

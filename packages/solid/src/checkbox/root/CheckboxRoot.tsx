@@ -223,7 +223,7 @@ export function CheckboxRoot(props: CheckboxRootProps): JSX.Element {
           if (group && value() !== undefined) event.currentTarget.checked = group.getRequestValue().includes(value()!);
           event.currentTarget.indeterminate = indeterminate();
         }
-        // Controlled proposals are not acknowledgements; restore from committed props after RC13 stages them.
+        // Controlled proposals are not acknowledgements; Solid 2.0.3 stages prop updates.
         queueMicrotask(restoreInput);
       },
       onFocus() { control()?.focus(); },

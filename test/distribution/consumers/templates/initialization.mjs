@@ -6,7 +6,7 @@ import ts from 'typescript';
 const input = JSON.parse(await fs.readFile('input.json', 'utf8'));
 const records = [], failures = [];
 const root = path.resolve('node_modules', input.name);
-for (const entry of input.inventory.filter(entry => /^(dom|server)\/.*\.js$/.test(entry.file))) {
+for (const entry of input.inventory.filter(entry => /^(dom|server)(-dev)?\/.*\.js$/.test(entry.file))) {
   const file = entry.file;
   const text = await fs.readFile(path.join(root, file), 'utf8');
   const ast = ts.createSourceFile(file, text, ts.ScriptTarget.Latest, true, ts.ScriptKind.JS);

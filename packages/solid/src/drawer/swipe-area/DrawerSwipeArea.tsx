@@ -1,5 +1,6 @@
 // Adapted from pinned Base UI DrawerSwipeArea (MIT).
-import { createEffect, createSignal, merge, onCleanup, omit, untrack } from 'solid-js';
+import { createEffect, createSignal, merge, onCleanup, onSettled, omit, untrack } from 'solid-js';
+import { isServer } from '@solidjs/web';
 import { useDialogRootContext } from '../../dialog/root/DialogRootContext';
 import { createRenderElement } from '../../internals/createRenderElement';
 import { createBaseUiId } from '../../internals/createBaseUiId';
@@ -93,7 +94,7 @@ export function DrawerSwipeArea(props: DrawerSwipeAreaProps) {
     const details = createChangeEventDetails('swipe', event, element() ?? undefined);
     store.setOpen(true, details);
     pendingOpen = !details.isCanceled && store.state.openProp === undefined;
-    queueMicrotask(() => { pendingOpen = false; });
+    onSettled(() => { pendingOpen = false; });
     if (details.isCanceled) drawer.swipeAreaActiveRef.current = false;
   }
   function finish() { start = null; opened = false; closedOffset = null; swipeActive = false; setActive(false); restoreDismissAfterRelease(); delta = { x: 0, y: 0 }; clearStyles(); }
@@ -116,7 +117,13 @@ export function DrawerSwipeArea(props: DrawerSwipeAreaProps) {
       const velocity = getDisplacement(direction(), releaseVelocityX, releaseVelocityY);
       const shouldOpen = releaseDirection === direction() && (distance >= (extent === null ? 40 : extent * 0.5) || velocity >= 0.1) && !props.disabled;
       if (shouldOpen) { if (!store.state.open && !pendingOpen) requestOpen(event); }
-      else if (opened && store.state.open) store.setOpen(false, createChangeEventDetails('swipe', event, element() ?? undefined));
+      else if (opened && (store.state.open || pendingOpen)) {
+        // A short swipe must also reverse an accepted uncontrolled opening whose
+        // batch is still held. A controlled request is not an acknowledgment.
+        const details = createChangeEventDetails('swipe', event, element() ?? undefined);
+        store.setOpen(false, details);
+        if (!details.isCanceled) pendingOpen = false;
+      }
       finish(); return false;
     },
     onCancel: finish,
@@ -124,7 +131,7 @@ export function DrawerSwipeArea(props: DrawerSwipeAreaProps) {
   const pointer = () => swipe.getPointerProps();
   createEffect(() => ({ active: active(), open: store.state.open, mounted: store.state.mounted, popup: store.state.popupElement, height: drawer.frontmostHeight }), value => { if (value.active && start) untrack(applyMovement); });
   createEffect(enabled, value => { if (!value) untrack(() => { if (swipeActive) restoreDismissAfterRelease(); swipe.reset(); clearStyles(); start = null; opened = false; closedOffset = null; delta = { x: 0, y: 0 }; swipeActive = false; setActive(false); }); });
-  onCleanup(() => { releaseCleanup(); swipe.reset(); clearStyles(); store.context.outsidePressEnabledRef.current = true; });
+  onCleanup(() => { if (isServer) return; releaseCleanup(); swipe.reset(); clearStyles(); store.context.outsidePressEnabledRef.current = true; });
   const state: DrawerSwipeAreaState = { get open() { return store.state.open; }, get swiping() { return swipe.swiping; }, get disabled() { return props.disabled ?? false; }, get swipeDirection() { return direction(); } };
   return createRenderElement<DrawerSwipeAreaState, HTMLDivElement>('div', props, {
     state, ref: setElement,

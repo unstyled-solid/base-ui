@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { gzipSync } from 'node:zlib';
 import { readArchive } from '../../../scripts/distribution/notices/archive.mjs';
-import { requiredFiles, checkNotices, root, auditTarball } from '../../../scripts/distribution/notices/audit.mjs';
+import { requiredFiles, checkNotices, checkReviewedInputs, root, auditTarball } from '../../../scripts/distribution/notices/audit.mjs';
 import { read, json, hash } from '../../../docs/scripts/qualification/io.mjs';
 
 function tar(entries) {
@@ -44,7 +44,7 @@ test('supports local PAX long paths without extracting; rejects PAX link metadat
   assert.equal(archive.get(name).toString(),'license');
   assert.throws(()=>readArchive(tar([['package/PaxHeader',pax('linkpath','../NOTICE'),'x'],['package/short','license']])),/Unsupported PAX metadata/);
 });
-test('full packed-notice audit cannot green unresolved adoption mapping or a missing module',async()=>{
+test('full packed-notice audit checks public identity, all variants, and missing exports',async()=>{
   const {files,ledger}=await requiredFiles();
   const identity=await json(root,'packages/solid/package.json');
   const entries=[...files].map(([name,bytes])=>[`package/${name}`,bytes]);
@@ -55,8 +55,17 @@ test('full packed-notice audit cannot green unresolved adoption mapping or a mis
   }
   const bytes=tar(entries),report=await auditTarball({bytes});
   assert.equal(report.tarballSha256,hash(bytes));assert.equal(report.complete,false);
-  assert.ok(report.failures.some(message=>message.includes('Unresolved donor source mapping: root-tree')));
+  assert.ok(report.failures.includes('Packed identity/version mismatch'));
   assert.ok(report.failures.includes('Missing/unsafe packed export: ./dom/missing.js'));
   assert.ok(!report.failures.some(message=>message.includes('Missing packed notice:')));
-  assert.ok(report.failures.some(message=>message.includes('Missing prominent file-local change notice:')));
+  assert.ok(report.failures.some(message=>message.includes('Missing adopted packed module: package/dom-dev/')));
+});
+test('unresolved reviews and missing modified-file notices fail even after the real ledger is completed', async () => {
+  const ledger = await json(root, 'tracking/distribution/donor-notices.json');
+  ledger.groupReviews.find(review => review.id === 'root-tree').status = 'unresolved';
+  const target = 'packages/solid/src/utils/empty.ts';
+  ledger.adoptions.push({ ...ledger.adoptions.find(a => a.requiresProminentChangeNotice), target, targetSha256: hash(await read(root, target)) });
+  const failures = await checkReviewedInputs(root, ledger, await json(root, 'tracking/donors/solid-floating-ui/source-map.json'));
+  assert(failures.some(message => message.includes('Unresolved donor source mapping: root-tree')));
+  assert(failures.some(message => message.includes(`Missing prominent file-local change notice: ${target}`)));
 });

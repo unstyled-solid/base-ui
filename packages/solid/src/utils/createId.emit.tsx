@@ -3,7 +3,7 @@ import { createMemo, createUniqueId, Loading } from 'solid-js';
 import { createBaseUiId } from '../internals/createBaseUiId';
 import { LifecycleIdFixture } from './createId.fixture';
 
-if (!isServer || typeof createUniqueId !== 'function') throw new Error('Expected RC13 server ID export');
+if (!isServer || typeof createUniqueId !== 'function') throw new Error('Expected pinned Solid 2 server ID export');
 const records = ['lifecycle-a-', 'lifecycle-b-'].map((renderId) => ({
   renderId, html: renderToString(() => <LifecycleIdFixture />, { renderId }),
 }));

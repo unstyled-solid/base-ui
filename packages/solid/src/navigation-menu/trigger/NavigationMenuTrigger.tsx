@@ -126,13 +126,16 @@ export function NavigationMenuTrigger(props: NavigationMenuTrigger.Props) {
     onBlur(event) { if (root.positionerElement && root.popupElement && isOutsideMenuEvent(event, root)) root.setValue(null, createChangeEventDetails('focus-out', event)); },
   };
   const state = { get open() { return active(); }, get disabled() { return props.disabled ?? false; } };
-  const rest = omit(props, 'nativeButton', 'disabled', 'class', 'style', 'render', 'ref');
+  const rest = omit(props, 'nativeButton', 'disabled', 'class', 'style', 'render', 'ref', 'children');
+  // Interaction bags change when the portaled viewport attaches. They must not
+  // reconstruct the trigger's already-hydrated icon/children.
+  const content = <>{props.children}</>;
   return <>
     <CompositeItem tag="button" render={props.render} class={props.class} style={props.style}
       state={state} stateAttributesMapping={pressableTriggerOpenStateMapping}
       refs={[props.ref, setElement, button.buttonRef]}
-      props={[click.reference, hover, dismiss?.reference, defaults, { tabIndex: undefined, [NAVIGATION_MENU_TRIGGER_IDENTIFIER]: '' }, rest, button.getButtonProps]} />
-    <Show when={active()}>
+      props={[click.reference, hover, dismiss?.reference, defaults, { tabIndex: undefined, [NAVIGATION_MENU_TRIGGER_IDENTIFIER]: '' }, rest, button.getButtonProps, { children: content }]} />
+    {active() && <>
       <NavigationMenuFocusGuard slot="beforeOutside" onFocus={(event) => {
         const popup = floating();
         if (popup && isOutsideEvent(event, popup)) root.guards.beforeInside?.focus();
@@ -153,7 +156,7 @@ export function NavigationMenuTrigger(props: NavigationMenuTrigger.Props) {
           if ((!root.nested || root.positionerElement) && !contains(root.rootElement, next)) root.setValue(null, createChangeEventDetails('focus-out', event));
         }
       }} />
-    </Show>
+    </>}
   </>;
 }
 export interface NavigationMenuTriggerState { open: boolean; disabled: boolean }

@@ -9,6 +9,7 @@ export type MenuFilterRootProps<Payload = unknown> = MenuRootProps<Payload> & Me
 export function MenuFilterRoot<Payload = unknown>(props: MenuFilterRootProps<Payload>) {
   const focusOwner = { current: null as HTMLElement | null };
   const hydrating = createIsHydrating();
+  const webkitItemSelected = () => !hydrating() && platform.engine.webkit;
   function Content(contentProps: { payload: { payload: Payload | undefined } }): JSX.Element {
     const content = resolveChildren(() => {
       const children = props.children;
@@ -19,7 +20,7 @@ export function MenuFilterRoot<Payload = unknown>(props: MenuFilterRootProps<Pay
     return <>{content()}</>;
   }
   return <MenuRootInternal {...props} virtualFocus virtualFocusRef={focusOwner}
-    allowEscape={!props.autoHighlight} resetOnPointerLeave={props.autoHighlight !== 'always'} webkitItemSelected={!hydrating() && platform.engine.webkit}>
+    allowEscape={!props.autoHighlight} resetOnPointerLeave={props.autoHighlight !== 'always'} webkitItemSelected={webkitItemSelected()}>
     {payload => <MenuFilterDropdown {...props}><Content payload={payload} /></MenuFilterDropdown>}
   </MenuRootInternal>;
 }

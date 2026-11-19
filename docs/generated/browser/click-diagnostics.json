@@ -66,6 +66,17 @@
     "family": "accordion",
     "style": "tailwind",
     "interactionPassed": true,
+    "diagnostics": [
+      "Failed to load resource: net::ERR_NETWORK_CHANGED"
+    ],
+    "errors": [],
+    "passed": false,
+    "layoutMeasurements": []
+  },
+  {
+    "family": "collapsible",
+    "style": "css-modules",
+    "interactionPassed": true,
     "diagnostics": [],
     "errors": [],
     "passed": true,
@@ -73,29 +84,12 @@
   },
   {
     "family": "collapsible",
-    "style": "css-modules",
-    "interactionPassed": true,
-    "diagnostics": [
-      "[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Collapsible.Root> › <CollapsibleRootContext> › computed › <Host> › computed › computed › <Collapsible.Panel> › <Host> › computed › <Ready> › computed › <NativeHost> › effect\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md JSHandle@node"
-    ],
-    "errors": [],
-    "passed": false,
-    "layoutMeasurements": [
-      "[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Collapsible.Root> › <CollapsibleRootContext> › computed › <Host> › computed › computed › <Collapsible.Panel> › <Host> › computed › <Ready> › computed › <NativeHost> › effect\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md JSHandle@node"
-    ]
-  },
-  {
-    "family": "collapsible",
     "style": "tailwind",
     "interactionPassed": true,
-    "diagnostics": [
-      "[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Collapsible.Root> › <CollapsibleRootContext> › computed › <Host> › computed › computed › <Collapsible.Panel> › <Host> › computed › <Ready> › computed › <NativeHost> › effect\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md JSHandle@node"
-    ],
+    "diagnostics": [],
     "errors": [],
-    "passed": false,
-    "layoutMeasurements": [
-      "[EFFECT_RELAY_TEAR] effect \"effect\" ran twice for one write of \"createControlled.local\": once in the flush where \"createControlled.local\" changed, and again after effect \"effect\" relayed it by writing \"createCollapsiblePanel.dimensions\" — the first frame showed the new \"createControlled.local\" with the stale \"createCollapsiblePanel.dimensions\" (3 times so far). Nothing else writes \"createCollapsiblePanel.dimensions\" — it is derived state: make it a memo over what the effect reads and every reader gets it in the same flush.\n  in <Errored> › children › <Component> › <Collapsible.Root> › <CollapsibleRootContext> › computed › <Host> › computed › computed › <Collapsible.Panel> › <Host> › computed › <Ready> › computed › <NativeHost> › effect\n[EFFECT_RELAY_TEAR] repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/solid/skills/reactivity-diagnostics/SKILL.md#effect_relay_tear\n[EFFECT_RELAY_TEAR] deeper evidence: import { attribution } from \"solid-js/attribution\"; attribution.enable() explains every re-run — why-chains, costs(), feedback(), history(\"hold\" | \"waterfall\") — agent loop: node_modules/@solidjs/diagnostics/skills/agent-loops/SKILL.md — https://github.com/solidjs/solid/blob/main/packages/diagnostics/skills/agent-loops/SKILL.md JSHandle@node"
-    ]
+    "passed": true,
+    "layoutMeasurements": []
   },
   {
     "family": "checkbox",
@@ -155,9 +149,11 @@
     "family": "radio-group",
     "style": "css-modules",
     "interactionPassed": true,
-    "diagnostics": [],
+    "diagnostics": [
+      "Failed to load resource: net::ERR_NETWORK_CHANGED"
+    ],
     "errors": [],
-    "passed": true,
+    "passed": false,
     "layoutMeasurements": []
   },
   {
@@ -321,142 +317,126 @@
     "errors": [],
     "profile": [
       {
-        "frame": "createEffect.transparent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:119",
-        "ms": 10.369
+        "frame": "createEffect.transparent http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:147",
+        "ms": 15.253
       },
       {
-        "frame": "ownKeys http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:174",
-        "ms": 1.302
+        "frame": "getFormatParts http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:54",
+        "ms": 2.327
       },
       {
-        "frame": "setValue http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:190",
-        "ms": 1.192
+        "frame": "setValue http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:202",
+        "ms": 1.395
       },
       {
-        "frame": "getFormatParts http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:54",
-        "ms": 0.905
+        "frame": "call http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:75",
+        "ms": 0.793
       },
       {
-        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:90",
-        "ms": 0.792
+        "frame": "onKeyDown http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/input/NumberFieldInput.tsx:145",
+        "ms": 0.629
       },
       {
-        "frame": "read http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:96",
-        "ms": 0.556
+        "frame": "getNumberLocaleDetails http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:57",
+        "ms": 0.629
       },
       {
-        "frame": " http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:125",
-        "ms": 0.518
+        "frame": "onInput http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/input/NumberFieldInput.tsx:121",
+        "ms": 0.608
       },
       {
-        "frame": "formatNumber http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/formatNumber.ts:16",
-        "ms": 0.512
+        "frame": "read http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:96",
+        "ms": 0.477
       },
       {
-        "frame": "get http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:191",
-        "ms": 0.504
+        "frame": "removeFloatingPointErrors http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/validate.ts:9",
+        "ms": 0.475
       },
       {
-        "frame": "dispatch http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:210",
-        "ms": 0.398
+        "frame": "parseNumber http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:71",
+        "ms": 0.471
       },
       {
-        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:182",
-        "ms": 0.395
+        "frame": "makeEventPreventable http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:18",
+        "ms": 0.319
       },
       {
-        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:126",
-        "ms": 0.385
+        "frame": "getAllowedNonNumericKeys http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:181",
+        "ms": 0.318
       },
       {
-        "frame": "call http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:75",
-        "ms": 0.383
+        "frame": "get http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:219",
+        "ms": 0.316
       },
       {
-        "frame": "readRawData http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/platform/shared.ts:1",
-        "ms": 0.382
+        "frame": "start http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createPressAndHold.ts:21",
+        "ms": 0.315
       },
       {
-        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:56",
-        "ms": 0.371
+        "frame": "isNativeEvent http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:2",
+        "ms": 0.313
       },
       {
-        "frame": "isNativeEvent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:2",
-        "ms": 0.268
+        "frame": "createChangeEventDetails http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createBaseUIEventDetails.ts:0",
+        "ms": 0.312
       },
       {
-        "frame": "get http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:132",
-        "ms": 0.262
+        "frame": "get value http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:313",
+        "ms": 0.309
       },
       {
-        "frame": "makeEventPreventable http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:18",
-        "ms": 0.261
+        "frame": "toValidatedNumber http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/validate.ts:34",
+        "ms": 0.302
       },
       {
-        "frame": "parseNumber http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:71",
-        "ms": 0.256
+        "frame": " http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:186",
+        "ms": 0.163
       },
       {
-        "frame": "get http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:13",
-        "ms": 0.255
+        "frame": "dispatch http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:238",
+        "ms": 0.162
       }
     ],
     "costs": {
       "scopes": [
         {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 4.5000001192092896,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 3.2999998927116394,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 3.1999998092651367,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 2.600000023841858,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "computed",
-          "kind": "memo",
-          "runs": 54,
-          "selfMs": 0.9000000357627869,
-          "wastedMs": 0.9000000357627869,
-          "overlayMs": 0
-        },
-        {
           "name": "text",
           "kind": "memo",
           "runs": 54,
-          "selfMs": 0.6999998688697815,
+          "selfMs": 1.3000001907348633,
           "wastedMs": 0,
           "overlayMs": 0
         },
         {
-          "name": "Button.disabled",
-          "kind": "memo",
+          "name": "effect",
+          "kind": "effect",
           "runs": 54,
-          "selfMs": 0.30000001192092896,
-          "wastedMs": 0.30000001192092896,
+          "selfMs": 1.2000001668930054,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 55,
+          "selfMs": 0.7000000476837158,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 55,
+          "selfMs": 0.40000009536743164,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.3999999761581421,
+          "wastedMs": 0,
           "overlayMs": 0
         },
         {
@@ -468,23 +448,23 @@
           "overlayMs": 0
         },
         {
-          "name": "createRenderElement.projection",
-          "kind": "memo",
-          "runs": 55,
-          "selfMs": 0.20000004768371582,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
           "name": "effect",
           "kind": "effect",
           "runs": 54,
-          "selfMs": 0.20000004768371582,
+          "selfMs": 0.2999999523162842,
           "wastedMs": 0,
           "overlayMs": 0
         },
         {
-          "name": "Button.disabled",
+          "name": "NumberField.stepperDisabled",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.29999983310699463,
+          "wastedMs": 0.29999983310699463,
+          "overlayMs": 0
+        },
+        {
+          "name": "computed",
           "kind": "memo",
           "runs": 54,
           "selfMs": 0.20000004768371582,
@@ -492,82 +472,50 @@
           "overlayMs": 0
         },
         {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 1,
-          "selfMs": 0.10000002384185791,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 55,
-          "selfMs": 0.10000002384185791,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
           "name": "onSettled",
           "kind": "effect",
           "runs": 1,
-          "selfMs": 0.10000002384185791,
-          "wastedMs": 0.10000002384185791,
-          "overlayMs": 0
-        },
-        {
-          "name": "onSettled",
-          "kind": "effect",
-          "runs": 1,
-          "selfMs": 0.10000002384185791,
-          "wastedMs": 0.10000002384185791,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 0.10000002384185791,
+          "selfMs": 0.19999992847442627,
           "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 0.10000002384185791,
-          "wastedMs": 0.10000002384185791,
-          "overlayMs": 0
-        },
-        {
-          "name": "createRenderElement.projection",
-          "kind": "memo",
-          "runs": 55,
-          "selfMs": 0.09999996423721313,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 0.09999996423721313,
-          "wastedMs": 0.09999996423721313,
           "overlayMs": 0
         },
         {
           "name": "computed",
           "kind": "memo",
           "runs": 54,
-          "selfMs": 0.09999996423721313,
-          "wastedMs": 0.09999996423721313,
+          "selfMs": 0.19999992847442627,
+          "wastedMs": 0.19999992847442627,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 55,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
           "overlayMs": 0
         },
         {
           "name": "effect",
           "kind": "effect",
           "runs": 1,
-          "selfMs": 0,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.09999990463256836,
           "wastedMs": 0,
           "overlayMs": 0
         },
@@ -612,16 +560,16 @@
           "overlayMs": 0
         },
         {
-          "name": "createRenderElement.projection",
-          "kind": "memo",
+          "name": "effect",
+          "kind": "effect",
           "runs": 1,
           "selfMs": 0,
           "wastedMs": 0,
           "overlayMs": 0
         },
         {
-          "name": "effect",
-          "kind": "effect",
+          "name": "createRenderElement.projection",
+          "kind": "memo",
           "runs": 1,
           "selfMs": 0,
           "wastedMs": 0,
@@ -855,6 +803,22 @@
           "name": "onSettled",
           "kind": "effect",
           "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "onSettled",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "NumberField.stepperDisabled",
+          "kind": "memo",
+          "runs": 54,
           "selfMs": 0,
           "wastedMs": 0,
           "overlayMs": 0
@@ -863,13 +827,13 @@
       "writes": [
         {
           "name": "createControlled.local",
-          "runs": 972,
-          "downstreamMs": 16.999999821186066
+          "runs": 756,
+          "downstreamMs": 5.500000238418579
         },
         {
           "name": "draft",
-          "runs": 10,
-          "downstreamMs": 0.2999999523162842
+          "runs": 12,
+          "downstreamMs": 0.20000004768371582
         },
         {
           "name": "createRenderElement.node",
@@ -879,7 +843,7 @@
         {
           "name": "input",
           "runs": 3,
-          "downstreamMs": 0
+          "downstreamMs": 0.09999990463256836
         },
         {
           "name": "element",
@@ -904,238 +868,238 @@
     "errors": [],
     "profile": [
       {
-        "frame": "createEffect.transparent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:119",
-        "ms": 10.698
+        "frame": "createEffect.transparent http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:147",
+        "ms": 11.658
       },
       {
-        "frame": "ownKeys http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:174",
-        "ms": 1.032
+        "frame": "getFormatParts http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:54",
+        "ms": 1.316
       },
       {
-        "frame": "readRawData http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/platform/shared.ts:1",
-        "ms": 0.837
+        "frame": "setValue http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:202",
+        "ms": 1.212
       },
       {
-        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:126",
-        "ms": 0.829
+        "frame": "removeFloatingPointErrors http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/validate.ts:9",
+        "ms": 0.778
       },
       {
-        "frame": "setValue http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:190",
-        "ms": 0.797
+        "frame": "onInput http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/input/NumberFieldInput.tsx:121",
+        "ms": 0.464
       },
       {
-        "frame": "getFormatParts http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:54",
-        "ms": 0.787
+        "frame": "has http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:71",
+        "ms": 0.456
       },
       {
-        "frame": "has http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:182",
-        "ms": 0.771
+        "frame": "getAllowedNonNumericKeys http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:181",
+        "ms": 0.327
       },
       {
-        "frame": "ownKeys http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:125",
-        "ms": 0.769
+        "frame": "request http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/createControlled.ts:37",
+        "ms": 0.322
       },
       {
-        "frame": "read http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:96",
-        "ms": 0.765
+        "frame": "increment http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:235",
+        "ms": 0.32
       },
       {
-        "frame": "onKeyDown http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/input/NumberFieldInput.tsx:145",
-        "ms": 0.646
+        "frame": "read http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:96",
+        "ms": 0.317
       },
       {
-        "frame": " http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:125",
-        "ms": 0.64
+        "frame": "formatNumber http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/utils/formatNumber.ts:16",
+        "ms": 0.308
       },
       {
-        "frame": "get http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:191",
-        "ms": 0.5
+        "frame": "parseNumber http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:71",
+        "ms": 0.305
       },
       {
-        "frame": "removeFloatingPointErrors http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/validate.ts:9",
-        "ms": 0.416
+        "frame": "onKeyDown http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/input/NumberFieldInput.tsx:145",
+        "ms": 0.299
       },
       {
-        "frame": "createMemo.transparent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createRenderElement.tsx:104",
-        "ms": 0.401
+        "frame": " http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:110",
+        "ms": 0.162
       },
       {
-        "frame": "toValidatedNumber http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/validate.ts:34",
-        "ms": 0.376
+        "frame": "get http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:132",
+        "ms": 0.159
       },
       {
-        "frame": "parseNumber http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/parse.ts:71",
-        "ms": 0.268
+        "frame": "call http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:75",
+        "ms": 0.157
       },
       {
-        "frame": " http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:110",
-        "ms": 0.265
+        "frame": " http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/NumberFieldRoot.tsx:184",
+        "ms": 0.157
       },
       {
-        "frame": "onInput http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/input/NumberFieldInput.tsx:121",
-        "ms": 0.26
+        "frame": "onPointerDown http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/root/createNumberFieldStepperButton.tsx:88",
+        "ms": 0.156
       },
       {
-        "frame": "isNativeEvent http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:2",
-        "ms": 0.257
+        "frame": "toValidatedNumber http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/number-field/utils/validate.ts:34",
+        "ms": 0.154
       },
       {
-        "frame": "createChangeEventDetails http://127.0.0.1:5173/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/createBaseUIEventDetails.ts:0",
-        "ms": 0.255
+        "frame": "makeEventPreventable http://127.0.0.1:5187/@fs/Users/avi/avir-oss/baseui-solid2/packages/solid/src/merge-props/mergeProps.ts:18",
+        "ms": 0.154
       }
     ],
     "costs": {
       "scopes": [
         {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 4.100000083446503,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 3.5999999046325684,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 3.199999988079071,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 2.099999964237213,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
           "name": "text",
           "kind": "memo",
-          "runs": 54,
-          "selfMs": 0.8000000715255737,
+          "runs": 53,
+          "selfMs": 1,
           "wastedMs": 0,
           "overlayMs": 0
         },
         {
-          "name": "computed",
-          "kind": "memo",
-          "runs": 54,
-          "selfMs": 0.800000011920929,
-          "wastedMs": 0.800000011920929,
+          "name": "effect",
+          "kind": "effect",
+          "runs": 53,
+          "selfMs": 0.49999988079071045,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 53,
+          "selfMs": 0.40000009536743164,
+          "wastedMs": 0,
           "overlayMs": 0
         },
         {
           "name": "createRenderElement.projection",
           "kind": "memo",
-          "runs": 55,
-          "selfMs": 0.5999999642372131,
+          "runs": 54,
+          "selfMs": 0.3999999761581421,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 54,
+          "selfMs": 0.30000007152557373,
           "wastedMs": 0,
           "overlayMs": 0
         },
         {
           "name": "computed",
           "kind": "memo",
-          "runs": 54,
-          "selfMs": 0.30000001192092896,
-          "wastedMs": 0.30000001192092896,
+          "runs": 53,
+          "selfMs": 0.30000007152557373,
+          "wastedMs": 0.30000007152557373,
           "overlayMs": 0
         },
         {
-          "name": "Button.disabled",
-          "kind": "memo",
+          "name": "effect",
+          "kind": "effect",
+          "runs": 53,
+          "selfMs": 0.2999999523162842,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
           "runs": 54,
           "selfMs": 0.20000004768371582,
-          "wastedMs": 0.20000004768371582,
+          "wastedMs": 0,
           "overlayMs": 0
         },
         {
           "name": "effect",
           "kind": "effect",
-          "runs": 55,
-          "selfMs": 0.19999998807907104,
+          "runs": 53,
+          "selfMs": 0.19999992847442627,
           "wastedMs": 0,
           "overlayMs": 0
         },
         {
-          "name": "onSettled",
+          "name": "effect",
           "kind": "effect",
           "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 54,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0.10000002384185791,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "computed",
+          "kind": "memo",
+          "runs": 53,
           "selfMs": 0.10000002384185791,
           "wastedMs": 0.10000002384185791,
           "overlayMs": 0
         },
         {
-          "name": "effect",
+          "name": "onSettled",
           "kind": "effect",
           "runs": 1,
-          "selfMs": 0.10000002384185791,
+          "selfMs": 0.09999990463256836,
           "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 0.10000002384185791,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 0.10000002384185791,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "Button.disabled",
-          "kind": "memo",
-          "runs": 54,
-          "selfMs": 0.10000002384185791,
-          "wastedMs": 0.10000002384185791,
           "overlayMs": 0
         },
         {
           "name": "effect",
           "kind": "effect",
           "runs": 1,
-          "selfMs": 0.09999996423721313,
+          "selfMs": 0.09999990463256836,
           "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "createRenderElement.projection",
-          "kind": "memo",
-          "runs": 1,
-          "selfMs": 0.09999996423721313,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "createRenderElement.projection",
-          "kind": "memo",
-          "runs": 55,
-          "selfMs": 0.09999996423721313,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
-          "selfMs": 0.09999996423721313,
-          "wastedMs": 0.09999996423721313,
           "overlayMs": 0
         },
         {
@@ -1307,8 +1271,8 @@
           "overlayMs": 0
         },
         {
-          "name": "effect",
-          "kind": "effect",
+          "name": "createRenderElement.projection",
+          "kind": "memo",
           "runs": 1,
           "selfMs": 0,
           "wastedMs": 0,
@@ -1467,62 +1431,6 @@
           "overlayMs": 0
         },
         {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 1,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "createRenderElement.projection",
-          "kind": "memo",
-          "runs": 1,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 1,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 1,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 1,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 1,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 55,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
           "name": "createRenderElement.projection",
           "kind": "memo",
           "runs": 1,
@@ -1635,6 +1543,38 @@
           "overlayMs": 0
         },
         {
+          "name": "createRenderElement.projection",
+          "kind": "memo",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "effect",
+          "kind": "effect",
+          "runs": 1,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
           "name": "effect",
           "kind": "effect",
           "runs": 1,
@@ -1693,14 +1633,6 @@
         {
           "name": "effect",
           "kind": "effect",
-          "runs": 55,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
-          "name": "effect",
-          "kind": "effect",
           "runs": 1,
           "selfMs": 0,
           "wastedMs": 0,
@@ -1723,14 +1655,6 @@
           "overlayMs": 0
         },
         {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 1,
-          "selfMs": 0,
-          "wastedMs": 0,
-          "overlayMs": 0
-        },
-        {
           "name": "onSettled",
           "kind": "effect",
           "runs": 1,
@@ -1787,9 +1711,17 @@
           "overlayMs": 0
         },
         {
-          "name": "effect",
-          "kind": "effect",
-          "runs": 54,
+          "name": "NumberField.stepperDisabled",
+          "kind": "memo",
+          "runs": 53,
+          "selfMs": 0,
+          "wastedMs": 0,
+          "overlayMs": 0
+        },
+        {
+          "name": "NumberField.stepperDisabled",
+          "kind": "memo",
+          "runs": 53,
           "selfMs": 0,
           "wastedMs": 0,
           "overlayMs": 0
@@ -1798,23 +1730,23 @@
       "writes": [
         {
           "name": "createControlled.local",
-          "runs": 972,
-          "downstreamMs": 16.400000035762787
-        },
-        {
-          "name": "draft",
-          "runs": 10,
-          "downstreamMs": 0.2999999523162842
+          "runs": 742,
+          "downstreamMs": 3.9000000953674316
         },
         {
           "name": "createRenderElement.node",
           "runs": 56,
-          "downstreamMs": 0.19999998807907104
+          "downstreamMs": 0.40000009536743164
+        },
+        {
+          "name": "draft",
+          "runs": 12,
+          "downstreamMs": 0.20000004768371582
         },
         {
           "name": "input",
           "runs": 6,
-          "downstreamMs": 0.09999996423721313
+          "downstreamMs": 0.19999992847442627
         },
         {
           "name": "element",
@@ -1835,9 +1767,11 @@
     "family": "slider",
     "style": "css-modules",
     "interactionPassed": true,
-    "diagnostics": [],
+    "diagnostics": [
+      "Failed to load resource: net::ERR_NETWORK_CHANGED"
+    ],
     "errors": [],
-    "passed": true,
+    "passed": false,
     "layoutMeasurements": []
   },
   {
@@ -1925,9 +1859,11 @@
     "family": "toolbar",
     "style": "css-modules",
     "interactionPassed": true,
-    "diagnostics": [],
+    "diagnostics": [
+      "Failed to load resource: net::ERR_NETWORK_CHANGED"
+    ],
     "errors": [],
-    "passed": true,
+    "passed": false,
     "layoutMeasurements": []
   },
   {

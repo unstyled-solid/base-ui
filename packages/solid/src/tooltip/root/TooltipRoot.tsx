@@ -1,5 +1,5 @@
 import { children as resolveChildren, createEffect } from 'solid-js';
-import { isServer, type JSX } from '@solidjs/web';
+import type { JSX } from '@solidjs/web';
 import type { HTMLProps } from '../../internals/types';
 import { createDismiss } from '../../floating-ui-react/hooks/createDismiss';
 import { createClientPoint } from '../../floating-ui-react/hooks/createClientPoint';
@@ -30,7 +30,7 @@ export function TooltipRoot<Payload = unknown>(props: TooltipRootProps<Payload>)
     }
   });
 
-  if (!isServer) {
+  {
     const context = () => store.state.floatingRootContext;
     const dismiss = createDismiss(context, {
       get enabled() { return !store.disabled; },

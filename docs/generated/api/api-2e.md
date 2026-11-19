@@ -3554,7 +3554,7 @@ ComboboxClearState
 
 Kind: component.
 
-[Declaration](../../../packages/solid/build/types/combobox/list/ComboboxList.d.ts#L9)
+[Declaration](../../../packages/solid/build/types/combobox/list/ComboboxList.d.ts#L11)
 
 ```ts
 (props: ComboboxListProps): JSX.Element
@@ -3565,7 +3565,7 @@ Kind: component.
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| <a id="api-4175746f636f6d706c6574652e4c6973742e2470726f70732e6368696c6472656e"></a>children | JSX.Element &#124; ((item: any, index: number) => JSX.Element) | false | Unavailable |   |
+| <a id="api-4175746f636f6d706c6574652e4c6973742e2470726f70732e6368696c6472656e"></a>children | JSX.Element &#124; ((item: any, index: number) => JSX.Element) | false | Unavailable | Native JSX, or an implicit item template with at least one declared parameter.&lt;br>Use Combobox.Collection for zero-arity/default/rest-parameter templates.  |
 | <a id="api-4175746f636f6d706c6574652e4c6973742e2470726f70732e636c617373"></a>class | JSX.ClassValue &#124; ((state: Readonly&lt;import("./index").AutocompleteListState>) => ClassValue) | false | Unavailable |  [AutocompleteListState](#api-4175746f636f6d706c6574654c6973745374617465) |
 | <a id="api-4175746f636f6d706c6574652e4c6973742e2470726f70732e7374796c65"></a>style | string &#124; JSX.CSSProperties &#124; JSX.RemoveAttribute &#124; ((state: Readonly&lt;import("./index").AutocompleteListState>) => StyleValue) | false | Unavailable |  [AutocompleteListState](#api-4175746f636f6d706c6574654c6973745374617465) |
 | <a id="api-4175746f636f6d706c6574652e4c6973742e2470726f70732e72656e646572"></a>render | ComponentRenderFn&lt;WithBaseUIEvent&lt;JSX.HTMLAttributes&lt;HTMLElement>>, import("./index").AutocompleteListState> &#124; undefined | false | Unavailable | Solid-native callback, not a cloneable pre-created JSX value. [AutocompleteListState](#api-4175746f636f6d706c6574654c6973745374617465) |
@@ -3579,7 +3579,7 @@ Related: [Autocomplete.List.Props](#api-4175746f636f6d706c6574652e4c6973742e5072
 
 Kind: type.
 
-[Declaration](../../../packages/solid/build/types/combobox/list/ComboboxList.d.ts#L11)
+[Declaration](../../../packages/solid/build/types/combobox/list/ComboboxList.d.ts#L13)
 
 ```ts
 ComboboxListProps
@@ -3590,7 +3590,7 @@ ComboboxListProps
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| <a id="api-4175746f636f6d706c6574652e4c6973742e50726f70732e6368696c6472656e"></a>children | JSX.Element &#124; ((item: any, index: number) => JSX.Element) | false | Unavailable |   |
+| <a id="api-4175746f636f6d706c6574652e4c6973742e50726f70732e6368696c6472656e"></a>children | JSX.Element &#124; ((item: any, index: number) => JSX.Element) | false | Unavailable | Native JSX, or an implicit item template with at least one declared parameter.&lt;br>Use Combobox.Collection for zero-arity/default/rest-parameter templates.  |
 | <a id="api-4175746f636f6d706c6574652e4c6973742e50726f70732e636c617373"></a>class | JSX.ClassValue &#124; ((state: Readonly&lt;import("./index").AutocompleteListState>) => ClassValue) | false | Unavailable |  [AutocompleteListState](#api-4175746f636f6d706c6574654c6973745374617465) |
 | <a id="api-4175746f636f6d706c6574652e4c6973742e50726f70732e7374796c65"></a>style | string &#124; JSX.CSSProperties &#124; JSX.RemoveAttribute &#124; ((state: Readonly&lt;import("./index").AutocompleteListState>) => StyleValue) | false | Unavailable |  [AutocompleteListState](#api-4175746f636f6d706c6574654c6973745374617465) |
 | <a id="api-4175746f636f6d706c6574652e4c6973742e50726f70732e72656e646572"></a>render | ComponentRenderFn&lt;WithBaseUIEvent&lt;JSX.HTMLAttributes&lt;HTMLElement>>, import("./index").AutocompleteListState> &#124; undefined | false | Unavailable | Solid-native callback, not a cloneable pre-created JSX value. [AutocompleteListState](#api-4175746f636f6d706c6574654c6973745374617465) |
@@ -3602,7 +3602,7 @@ ComboboxListProps
 
 Kind: type.
 
-[Declaration](../../../packages/solid/build/types/combobox/list/ComboboxList.d.ts#L12)
+[Declaration](../../../packages/solid/build/types/combobox/list/ComboboxList.d.ts#L14)
 
 ```ts
 ComboboxListState
@@ -3780,7 +3780,7 @@ Kind: component.
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | { side: 'flip', align: 'shift', fallbackAxisSide: 'none' } |   |
-| <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -3833,7 +3833,7 @@ ComboboxPositionerProps
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-4175746f636f6d706c6574652e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -13470,7 +13470,7 @@ Kind: component.
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-436f6e746578744d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-436f6e746578744d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -13524,7 +13524,7 @@ ContextMenuPositionerProps
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable | Root context menus always use 0; submenus default to 5.  |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | import("./internals/types").ReferenceType &#124; (() => import("./internals/types").ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-436f6e746578744d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-436f6e746578744d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -14453,7 +14453,7 @@ Kind: component.
 | <a id="api-436f6e746578744d656e752e436865636b626f784974656d2e2470726f70732e636865636b6564"></a>checked | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e436865636b626f784974656d2e2470726f70732e6f6e436865636b65644368616e6765"></a>onCheckedChange | ((checked: boolean, details: MenuRoot.ChangeEventDetails) => void) &#124; undefined | false | Unavailable |  [MenuRoot.ChangeEventDetails](#api-4d656e75526f6f742e4368616e67654576656e7444657461696c73) |
 | <a id="api-436f6e746578744d656e752e436865636b626f784974656d2e2470726f70732e636c6f73654f6e436c69636b"></a>closeOnClick | boolean &#124; undefined | false | Unavailable |   |
-| <a id="api-436f6e746578744d656e752e436865636b626f784974656d2e2470726f70732e6e6174697665427574746f6e"></a>nativeButton | boolean &#124; undefined | false | false |   |
+| <a id="api-436f6e746578744d656e752e436865636b626f784974656d2e2470726f70732e6e6174697665427574746f6e"></a>nativeButton | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e436865636b626f784974656d2e2470726f70732e64697361626c6564"></a>disabled | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-436f6e746578744d656e752e436865636b626f784974656d2e2470726f70732e636c617373"></a>class | JSX.ClassValue &#124; ((state: Readonly&lt;import("./index").ContextMenuCheckboxItemState>) => ClassValue) | false | Unavailable |  [ContextMenuCheckboxItemState](#api-436f6e746578744d656e75436865636b626f784974656d5374617465) |
 | <a id="api-436f6e746578744d656e752e436865636b626f784974656d2e2470726f70732e7374796c65"></a>style | string &#124; JSX.CSSProperties &#124; JSX.RemoveAttribute &#124; ((state: Readonly&lt;import("./index").ContextMenuCheckboxItemState>) => StyleValue) | false | Unavailable |  [ContextMenuCheckboxItemState](#api-436f6e746578744d656e75436865636b626f784974656d5374617465) |
@@ -23714,7 +23714,7 @@ Kind: component.
 | <a id="api-4d656e752e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | 5 |   |
 | <a id="api-4d656e752e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | { fallbackAxisSide: 'none' } |   |
-| <a id="api-4d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | 'clipping-ancestors' |   |
+| <a id="api-4d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | 'clipping-ancestors' |   |
 | <a id="api-4d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | 5 |   |
 | <a id="api-4d656e752e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | false |   |
 | <a id="api-4d656e752e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | 'absolute' |   |
@@ -23768,7 +23768,7 @@ MenuPositionerProps
 | <a id="api-4d656e752e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-4d656e752e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-4d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-4d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-4d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-4d656e752e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-4d656e752e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -28339,7 +28339,7 @@ Kind: component.
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e2470726f70732e64656661756c7456616c7565"></a>defaultValue | Value &#124; null &#124; undefined | false | null |   |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e2470726f70732e76616c7565"></a>value | Value &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e2470726f70732e6f6e56616c75654368616e6765"></a>onValueChange | ((value: Value &#124; null, details: NavigationMenuRootChangeEventDetails) => void) &#124; undefined | false | Unavailable |  [NavigationMenuRootChangeEventDetails](#api-4e617669676174696f6e4d656e75526f6f744368616e67654576656e7444657461696c73) |
-| <a id="api-4e617669676174696f6e4d656e752e526f6f742e2470726f70732e616374696f6e73526566"></a>actionsRef | { current: NavigationMenuRootActions &#124; null; } &#124; ((actions: NavigationMenuRootActions &#124; null) => void) &#124; undefined | false | Unavailable |  [NavigationMenuRootActions](#api-4e617669676174696f6e4d656e75526f6f74416374696f6e73) |
+| <a id="api-4e617669676174696f6e4d656e752e526f6f742e2470726f70732e616374696f6e73526566"></a>actionsRef | ((actions: NavigationMenuRootActions &#124; null) => void) &#124; { current: NavigationMenuRootActions &#124; null; } &#124; undefined | false | Unavailable |  [NavigationMenuRootActions](#api-4e617669676174696f6e4d656e75526f6f74416374696f6e73) |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e2470726f70732e6f6e4f70656e4368616e6765436f6d706c657465"></a>onOpenChangeComplete | ((open: boolean) => void) &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e2470726f70732e64656c6179"></a>delay | number &#124; undefined | false | 50 |   |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e2470726f70732e636c6f736544656c6179"></a>closeDelay | number &#124; undefined | false | 50 |   |
@@ -28442,7 +28442,7 @@ Props<T>
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e50726f70732e64656661756c7456616c7565"></a>defaultValue | T &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e50726f70732e76616c7565"></a>value | T &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e50726f70732e6f6e56616c75654368616e6765"></a>onValueChange | ((value: T &#124; null, details: NavigationMenuRootChangeEventDetails) => void) &#124; undefined | false | Unavailable |  [NavigationMenuRootChangeEventDetails](#api-4e617669676174696f6e4d656e75526f6f744368616e67654576656e7444657461696c73) |
-| <a id="api-4e617669676174696f6e4d656e752e526f6f742e50726f70732e616374696f6e73526566"></a>actionsRef | { current: NavigationMenuRootActions &#124; null; } &#124; ((actions: NavigationMenuRootActions &#124; null) => void) &#124; undefined | false | Unavailable |  [NavigationMenuRootActions](#api-4e617669676174696f6e4d656e75526f6f74416374696f6e73) |
+| <a id="api-4e617669676174696f6e4d656e752e526f6f742e50726f70732e616374696f6e73526566"></a>actionsRef | ((actions: NavigationMenuRootActions &#124; null) => void) &#124; { current: NavigationMenuRootActions &#124; null; } &#124; undefined | false | Unavailable |  [NavigationMenuRootActions](#api-4e617669676174696f6e4d656e75526f6f74416374696f6e73) |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e50726f70732e6f6e4f70656e4368616e6765436f6d706c657465"></a>onOpenChangeComplete | ((open: boolean) => void) &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e50726f70732e64656c6179"></a>delay | number &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e526f6f742e50726f70732e636c6f736544656c6179"></a>closeDelay | number &#124; undefined | false | Unavailable |   |
@@ -28864,7 +28864,7 @@ Kind: component.
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | 5 |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | 'clipping-ancestors' |   |
+| <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | 'clipping-ancestors' |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | 5 |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | false |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | 'absolute' |   |
@@ -28919,7 +28919,7 @@ NavigationMenuPositionerProps
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e752e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -30762,7 +30762,7 @@ NavigationMenuRootProps<Value>
 | <a id="api-4e617669676174696f6e4d656e75526f6f7450726f70732e64656661756c7456616c7565"></a>defaultValue | Value &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e75526f6f7450726f70732e76616c7565"></a>value | Value &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e75526f6f7450726f70732e6f6e56616c75654368616e6765"></a>onValueChange | ((value: Value &#124; null, details: NavigationMenuRootChangeEventDetails) => void) &#124; undefined | false | Unavailable |  [NavigationMenuRootChangeEventDetails](#api-4e617669676174696f6e4d656e75526f6f744368616e67654576656e7444657461696c73) |
-| <a id="api-4e617669676174696f6e4d656e75526f6f7450726f70732e616374696f6e73526566"></a>actionsRef | { current: NavigationMenuRootActions &#124; null; } &#124; ((actions: NavigationMenuRootActions &#124; null) => void) &#124; undefined | false | Unavailable |  [NavigationMenuRootActions](#api-4e617669676174696f6e4d656e75526f6f74416374696f6e73) |
+| <a id="api-4e617669676174696f6e4d656e75526f6f7450726f70732e616374696f6e73526566"></a>actionsRef | ((actions: NavigationMenuRootActions &#124; null) => void) &#124; { current: NavigationMenuRootActions &#124; null; } &#124; undefined | false | Unavailable |  [NavigationMenuRootActions](#api-4e617669676174696f6e4d656e75526f6f74416374696f6e73) |
 | <a id="api-4e617669676174696f6e4d656e75526f6f7450726f70732e6f6e4f70656e4368616e6765436f6d706c657465"></a>onOpenChangeComplete | ((open: boolean) => void) &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e75526f6f7450726f70732e64656c6179"></a>delay | number &#124; undefined | false | Unavailable |   |
 | <a id="api-4e617669676174696f6e4d656e75526f6f7450726f70732e636c6f736544656c6179"></a>closeDelay | number &#124; undefined | false | Unavailable |   |
@@ -34809,7 +34809,7 @@ Kind: component.
 | <a id="api-506f706f7665722e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | { fallbackAxisSide: 'end' } |   |
-| <a id="api-506f706f7665722e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | 'clipping-ancestors' |   |
+| <a id="api-506f706f7665722e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | 'clipping-ancestors' |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -34863,7 +34863,7 @@ PopoverPositionerProps
 | <a id="api-506f706f7665722e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-506f706f7665722e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-506f706f7665722e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-506f706f7665722e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -37281,7 +37281,7 @@ Kind: component.
 | <a id="api-50726576696577436172642e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | 5 |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | { fallbackAxisSide: 'end' } |   |
-| <a id="api-50726576696577436172642e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | 'clipping-ancestors' |   |
+| <a id="api-50726576696577436172642e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | 'clipping-ancestors' |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | 5 |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | false |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | 'absolute' |   |
@@ -37335,7 +37335,7 @@ PreviewCardPositionerProps
 | <a id="api-50726576696577436172642e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-50726576696577436172642e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-50726576696577436172642e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-50726576696577436172642e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -42479,7 +42479,7 @@ Kind: component.
 | <a id="api-53656c6563742e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | { fallbackAxisSide: 'none' } |   |
-| <a id="api-53656c6563742e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | 'clipping-ancestors' |   |
+| <a id="api-53656c6563742e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | 'clipping-ancestors' |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -42532,7 +42532,7 @@ SelectPositionerProps
 | <a id="api-53656c6563742e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-53656c6563742e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-53656c6563742e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-53656c6563742e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -49563,7 +49563,7 @@ Kind: component.
 | <a id="api-546f6173742e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | Element &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-546f6173742e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-546f6173742e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -49614,7 +49614,7 @@ ToastPositionerProps
 | <a id="api-546f6173742e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | Element &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-546f6173742e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-546f6173742e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173742e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -50782,7 +50782,7 @@ ToastManagerPositionerProps
 | <a id="api-546f6173744d616e61676572506f736974696f6e657250726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173744d616e61676572506f736974696f6e657250726f70732e616e63686f72"></a>anchor | Element &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173744d616e61676572506f736974696f6e657250726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-546f6173744d616e61676572506f736974696f6e657250726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-546f6173744d616e61676572506f736974696f6e657250726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173744d616e61676572506f736974696f6e657250726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173744d616e61676572506f736974696f6e657250726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6173744d616e61676572506f736974696f6e657250726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -53897,7 +53897,7 @@ Kind: component.
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e2470726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | 5 |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e2470726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | { fallbackAxisSide: 'end' } |   |
-| <a id="api-546f6f6c7469702e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | 'clipping-ancestors' |   |
+| <a id="api-546f6f6c7469702e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | 'clipping-ancestors' |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e2470726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | 5 |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e2470726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | false |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e2470726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | 'absolute' |   |
@@ -53951,7 +53951,7 @@ TooltipPositionerProps
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e50726f70732e6172726f7750616464696e67"></a>arrowPadding | number &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e50726f70732e616e63686f72"></a>anchor | ReferenceType &#124; (() => ReferenceType &#124; null) &#124; null &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e41766f6964616e6365"></a>collisionAvoidance | { side?: "flip" &#124; "shift" &#124; "none"; align?: "flip" &#124; "shift" &#124; "none"; fallbackAxisSide?: "start" &#124; "end" &#124; "none"; } &#124; undefined | false | Unavailable |   |
-| <a id="api-546f6f6c7469702e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; "clipping-ancestors" &#124; undefined | false | Unavailable |   |
+| <a id="api-546f6f6c7469702e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e426f756e64617279"></a>collisionBoundary | Boundary &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e50726f70732e636f6c6c6973696f6e50616464696e67"></a>collisionPadding | Padding &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e50726f70732e737469636b79"></a>sticky | boolean &#124; undefined | false | Unavailable |   |
 | <a id="api-546f6f6c7469702e506f736974696f6e65722e50726f70732e706f736974696f6e4d6574686f64"></a>positionMethod | "fixed" &#124; "absolute" &#124; undefined | false | Unavailable |   |
@@ -55471,7 +55471,7 @@ UseRenderParameters<State, E, Enabled>
 | <a id="api-55736552656e646572506172616d65746572732e64656661756c745461674e616d65"></a>defaultTagName | keyof JSX.IntrinsicElements &#124; undefined | false | Unavailable |   |
 | <a id="api-55736552656e646572506172616d65746572732e656e61626c6564"></a>enabled | Enabled &#124; undefined | false | Unavailable |   |
 | <a id="api-55736552656e646572506172616d65746572732e70726f70476574746572"></a>propGetter | ((props: Props) => Props) &#124; undefined | false | Unavailable |   |
-| <a id="api-55736552656e646572506172616d65746572732e70726f7073"></a>props | Props &#124; readonly (Props &#124; ((previous: Props) => Props) &#124; undefined)[] &#124; undefined | false | Unavailable |   |
+| <a id="api-55736552656e646572506172616d65746572732e70726f7073"></a>props | Props &#124; readonly (Props &#124; ((previous: Props) => Props) &#124; undefined)[] &#124; undefined | false | Unavailable | Functional stages are pure live-view transformations. Allocate owned&lt;br>primitives (including function-source merge) in setup, never in a stage or&lt;br>its property getters: the server may call them again in each reader's owner.  |
 | <a id="api-55736552656e646572506172616d65746572732e726566"></a>ref | InputRef&lt;E> &#124; readonly InputRef&lt;E>[] | false | Unavailable |   |
 | <a id="api-55736552656e646572506172616d65746572732e7374617465"></a>state | State &#124; undefined | false | Unavailable |   |
 | <a id="api-55736552656e646572506172616d65746572732e7374617465417474726962757465734d617070696e67"></a>stateAttributesMapping | StateAttributesMapping&lt;State> &#124; undefined | false | Unavailable |   |
@@ -55567,7 +55567,7 @@ Kind: helper.
 | <a id="api-63726561746552656e6465722e2470726f70732e64656661756c745461674e616d65"></a>defaultTagName | keyof JSX.IntrinsicElements &#124; undefined | false | 'div' |   |
 | <a id="api-63726561746552656e6465722e2470726f70732e656e61626c6564"></a>enabled | Enabled &#124; undefined | false | Unavailable |   |
 | <a id="api-63726561746552656e6465722e2470726f70732e70726f70476574746572"></a>propGetter | ((props: Props) => Props) &#124; undefined | false | Unavailable |   |
-| <a id="api-63726561746552656e6465722e2470726f70732e70726f7073"></a>props | Props &#124; readonly (Props &#124; ((previous: Props) => Props) &#124; undefined)[] &#124; undefined | false | Unavailable |   |
+| <a id="api-63726561746552656e6465722e2470726f70732e70726f7073"></a>props | Props &#124; readonly (Props &#124; ((previous: Props) => Props) &#124; undefined)[] &#124; undefined | false | Unavailable | Functional stages are pure live-view transformations. Allocate owned&lt;br>primitives (including function-source merge) in setup, never in a stage or&lt;br>its property getters: the server may call them again in each reader's owner.  |
 | <a id="api-63726561746552656e6465722e2470726f70732e726566"></a>ref | InputRef&lt;E> &#124; readonly InputRef&lt;E>[] | false | Unavailable |   |
 | <a id="api-63726561746552656e6465722e2470726f70732e7374617465"></a>state | State &#124; undefined | false | Unavailable |   |
 | <a id="api-63726561746552656e6465722e2470726f70732e7374617465417474726962757465734d617070696e67"></a>stateAttributesMapping | StateAttributesMapping&lt;State> &#124; undefined | false | Unavailable |   |
@@ -55641,7 +55641,7 @@ Parameters<S, E, Enabled>
 | <a id="api-63726561746552656e6465722e506172616d65746572732e64656661756c745461674e616d65"></a>defaultTagName | keyof JSX.IntrinsicElements &#124; undefined | false | Unavailable |   |
 | <a id="api-63726561746552656e6465722e506172616d65746572732e656e61626c6564"></a>enabled | Enabled &#124; undefined | false | Unavailable |   |
 | <a id="api-63726561746552656e6465722e506172616d65746572732e70726f70476574746572"></a>propGetter | ((props: Props) => Props) &#124; undefined | false | Unavailable |   |
-| <a id="api-63726561746552656e6465722e506172616d65746572732e70726f7073"></a>props | Props &#124; readonly (Props &#124; ((previous: Props) => Props) &#124; undefined)[] &#124; undefined | false | Unavailable |   |
+| <a id="api-63726561746552656e6465722e506172616d65746572732e70726f7073"></a>props | Props &#124; readonly (Props &#124; ((previous: Props) => Props) &#124; undefined)[] &#124; undefined | false | Unavailable | Functional stages are pure live-view transformations. Allocate owned&lt;br>primitives (including function-source merge) in setup, never in a stage or&lt;br>its property getters: the server may call them again in each reader's owner.  |
 | <a id="api-63726561746552656e6465722e506172616d65746572732e726566"></a>ref | InputRef&lt;E> &#124; readonly InputRef&lt;E>[] | false | Unavailable |   |
 | <a id="api-63726561746552656e6465722e506172616d65746572732e7374617465"></a>state | S &#124; undefined | false | Unavailable |   |
 | <a id="api-63726561746552656e6465722e506172616d65746572732e7374617465417474726962757465734d617070696e67"></a>stateAttributesMapping | StateAttributesMapping&lt;S> &#124; undefined | false | Unavailable |   |

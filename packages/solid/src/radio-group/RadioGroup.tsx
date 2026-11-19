@@ -1,4 +1,4 @@
-import { createEffect, createSignal, omit, onCleanup, untrack } from 'solid-js';
+import { createEffect, createSignal, omit, onCleanup, onSettled, untrack } from 'solid-js';
 import type { JSX } from '@solidjs/web';
 import type { BaseUIComponentProps, HTMLProps } from '../internals/types';
 import { createControlled } from '../utils/createControlled';
@@ -65,7 +65,7 @@ export function RadioGroup<Value = any>(props: RadioGroupProps<Value>) {
       if (result.accepted && !result.controlled) {
         const accepted = { value: result.nextValue };
         transaction = accepted;
-        queueMicrotask(() => { if (transaction === accepted) transaction = undefined; });
+        onSettled(() => { if (transaction === accepted) transaction = undefined; });
       }
       syncInputs(next);
       return result.accepted;

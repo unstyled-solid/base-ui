@@ -1,0 +1,1491 @@
+{
+  "generatedBy": "scripts/test/composition-inventory.mjs",
+  "parts": [
+    {
+      "id": "Accordion.Header",
+      "source": "packages/solid/src/accordion/header/AccordionHeader.tsx",
+      "exports": [
+        "Accordion.Header"
+      ]
+    },
+    {
+      "id": "Accordion.Item",
+      "source": "packages/solid/src/accordion/item/AccordionItem.tsx",
+      "exports": [
+        "Accordion.Item"
+      ]
+    },
+    {
+      "id": "Accordion.Panel",
+      "source": "packages/solid/src/accordion/panel/AccordionPanel.tsx",
+      "exports": [
+        "Accordion.Panel"
+      ]
+    },
+    {
+      "id": "Accordion.Root",
+      "source": "packages/solid/src/accordion/root/AccordionRoot.tsx",
+      "exports": [
+        "Accordion.Root"
+      ]
+    },
+    {
+      "id": "Accordion.Trigger",
+      "source": "packages/solid/src/accordion/trigger/AccordionTrigger.tsx",
+      "exports": [
+        "Accordion.Trigger"
+      ]
+    },
+    {
+      "id": "AlertDialog.Trigger",
+      "source": "packages/solid/src/alert-dialog/trigger/AlertDialogTrigger.tsx",
+      "exports": [
+        "AlertDialog.Trigger"
+      ]
+    },
+    {
+      "id": "Autocomplete.InputGroup",
+      "source": "packages/solid/src/autocomplete/input-group/AutocompleteInputGroup.tsx",
+      "exports": [
+        "Autocomplete.InputGroup"
+      ]
+    },
+    {
+      "id": "Autocomplete.Item",
+      "source": "packages/solid/src/autocomplete/item/AutocompleteItem.tsx",
+      "exports": [
+        "Autocomplete.Item"
+      ]
+    },
+    {
+      "id": "Autocomplete.Separator",
+      "source": "packages/solid/src/autocomplete/separator/AutocompleteSeparator.tsx",
+      "exports": [
+        "Autocomplete.Separator"
+      ]
+    },
+    {
+      "id": "Autocomplete.Trigger",
+      "source": "packages/solid/src/autocomplete/trigger/AutocompleteTrigger.tsx",
+      "exports": [
+        "Autocomplete.Trigger"
+      ]
+    },
+    {
+      "id": "Avatar.Fallback",
+      "source": "packages/solid/src/avatar/fallback/AvatarFallback.tsx",
+      "exports": [
+        "Avatar.Fallback"
+      ]
+    },
+    {
+      "id": "Avatar.Image",
+      "source": "packages/solid/src/avatar/image/AvatarImage.tsx",
+      "exports": [
+        "Avatar.Image"
+      ]
+    },
+    {
+      "id": "Avatar.Root",
+      "source": "packages/solid/src/avatar/root/AvatarRoot.tsx",
+      "exports": [
+        "Avatar.Root"
+      ]
+    },
+    {
+      "id": "Button",
+      "source": "packages/solid/src/button/Button.tsx",
+      "exports": [
+        "Button"
+      ]
+    },
+    {
+      "id": "Checkbox.Indicator",
+      "source": "packages/solid/src/checkbox/indicator/CheckboxIndicator.tsx",
+      "exports": [
+        "Checkbox.Indicator"
+      ]
+    },
+    {
+      "id": "Checkbox.Root",
+      "source": "packages/solid/src/checkbox/root/CheckboxRoot.tsx",
+      "exports": [
+        "Checkbox.Root"
+      ]
+    },
+    {
+      "id": "CheckboxGroup",
+      "source": "packages/solid/src/checkbox-group/CheckboxGroup.tsx",
+      "exports": [
+        "CheckboxGroup"
+      ]
+    },
+    {
+      "id": "Collapsible.Panel",
+      "source": "packages/solid/src/collapsible/panel/CollapsiblePanel.tsx",
+      "exports": [
+        "Collapsible.Panel"
+      ]
+    },
+    {
+      "id": "Collapsible.Root",
+      "source": "packages/solid/src/collapsible/root/CollapsibleRoot.tsx",
+      "exports": [
+        "Collapsible.Root"
+      ]
+    },
+    {
+      "id": "Collapsible.Trigger",
+      "source": "packages/solid/src/collapsible/trigger/CollapsibleTrigger.tsx",
+      "exports": [
+        "Collapsible.Trigger"
+      ]
+    },
+    {
+      "id": "Combobox.Arrow",
+      "source": "packages/solid/src/combobox/arrow/ComboboxArrow.tsx",
+      "exports": [
+        "Autocomplete.Arrow",
+        "Combobox.Arrow"
+      ]
+    },
+    {
+      "id": "Combobox.Backdrop",
+      "source": "packages/solid/src/combobox/backdrop/ComboboxBackdrop.tsx",
+      "exports": [
+        "Autocomplete.Backdrop",
+        "Combobox.Backdrop"
+      ]
+    },
+    {
+      "id": "Combobox.Chip",
+      "source": "packages/solid/src/combobox/chip/ComboboxChip.tsx",
+      "exports": [
+        "Combobox.Chip"
+      ]
+    },
+    {
+      "id": "Combobox.ChipRemove",
+      "source": "packages/solid/src/combobox/chip-remove/ComboboxChipRemove.tsx",
+      "exports": [
+        "Combobox.ChipRemove"
+      ]
+    },
+    {
+      "id": "Combobox.Chips",
+      "source": "packages/solid/src/combobox/chips/ComboboxChips.tsx",
+      "exports": [
+        "Combobox.Chips"
+      ]
+    },
+    {
+      "id": "Combobox.Clear",
+      "source": "packages/solid/src/combobox/clear/ComboboxClear.tsx",
+      "exports": [
+        "Autocomplete.Clear",
+        "Combobox.Clear"
+      ]
+    },
+    {
+      "id": "Combobox.Empty",
+      "source": "packages/solid/src/combobox/empty/ComboboxEmpty.tsx",
+      "exports": [
+        "Autocomplete.Empty",
+        "Combobox.Empty"
+      ]
+    },
+    {
+      "id": "Combobox.Group",
+      "source": "packages/solid/src/combobox/group/ComboboxGroup.tsx",
+      "exports": [
+        "Autocomplete.Group",
+        "Combobox.Group"
+      ]
+    },
+    {
+      "id": "Combobox.GroupLabel",
+      "source": "packages/solid/src/combobox/group-label/ComboboxGroupLabel.tsx",
+      "exports": [
+        "Autocomplete.GroupLabel",
+        "Combobox.GroupLabel"
+      ]
+    },
+    {
+      "id": "Combobox.Icon",
+      "source": "packages/solid/src/combobox/icon/ComboboxIcon.tsx",
+      "exports": [
+        "Autocomplete.Icon",
+        "Combobox.Icon"
+      ]
+    },
+    {
+      "id": "Combobox.Input",
+      "source": "packages/solid/src/combobox/input/ComboboxInput.tsx",
+      "exports": [
+        "Autocomplete.Input",
+        "Combobox.Input"
+      ]
+    },
+    {
+      "id": "Combobox.InputGroup",
+      "source": "packages/solid/src/combobox/input-group/ComboboxInputGroup.tsx",
+      "exports": [
+        "Combobox.InputGroup"
+      ]
+    },
+    {
+      "id": "Combobox.Item",
+      "source": "packages/solid/src/combobox/item/ComboboxItem.tsx",
+      "exports": [
+        "Combobox.Item"
+      ]
+    },
+    {
+      "id": "Combobox.ItemIndicator",
+      "source": "packages/solid/src/combobox/item-indicator/ComboboxItemIndicator.tsx",
+      "exports": [
+        "Combobox.ItemIndicator"
+      ]
+    },
+    {
+      "id": "Combobox.Label",
+      "source": "packages/solid/src/combobox/label/ComboboxLabel.tsx",
+      "exports": [
+        "Combobox.Label"
+      ]
+    },
+    {
+      "id": "Combobox.List",
+      "source": "packages/solid/src/combobox/list/ComboboxList.tsx",
+      "exports": [
+        "Autocomplete.List",
+        "Combobox.List"
+      ]
+    },
+    {
+      "id": "Combobox.Popup",
+      "source": "packages/solid/src/combobox/popup/ComboboxPopup.tsx",
+      "exports": [
+        "Autocomplete.Popup",
+        "Combobox.Popup"
+      ]
+    },
+    {
+      "id": "Combobox.Portal",
+      "source": "packages/solid/src/combobox/portal/ComboboxPortal.tsx",
+      "exports": [
+        "Autocomplete.Portal",
+        "Combobox.Portal"
+      ]
+    },
+    {
+      "id": "Combobox.Positioner",
+      "source": "packages/solid/src/combobox/positioner/ComboboxPositioner.tsx",
+      "exports": [
+        "Autocomplete.Positioner",
+        "Combobox.Positioner"
+      ]
+    },
+    {
+      "id": "Combobox.Row",
+      "source": "packages/solid/src/combobox/row/ComboboxRow.tsx",
+      "exports": [
+        "Autocomplete.Row",
+        "Combobox.Row"
+      ]
+    },
+    {
+      "id": "Combobox.Separator",
+      "source": "packages/solid/src/utils/listbox-separator/ListboxSeparator.tsx",
+      "exports": [
+        "Combobox.Separator",
+        "Select.Separator"
+      ]
+    },
+    {
+      "id": "Combobox.Status",
+      "source": "packages/solid/src/combobox/status/ComboboxStatus.tsx",
+      "exports": [
+        "Autocomplete.Status",
+        "Combobox.Status"
+      ]
+    },
+    {
+      "id": "Combobox.Trigger",
+      "source": "packages/solid/src/combobox/trigger/ComboboxTrigger.tsx",
+      "exports": [
+        "Combobox.Trigger"
+      ]
+    },
+    {
+      "id": "ContextMenu.Separator",
+      "source": "packages/solid/src/separator/Separator.tsx",
+      "exports": [
+        "ContextMenu.Separator",
+        "Menu.Separator",
+        "OTPField.Separator",
+        "Separator"
+      ]
+    },
+    {
+      "id": "ContextMenu.Trigger",
+      "source": "packages/solid/src/context-menu/trigger/ContextMenuTrigger.tsx",
+      "exports": [
+        "ContextMenu.Trigger"
+      ]
+    },
+    {
+      "id": "Dialog.Backdrop",
+      "source": "packages/solid/src/dialog/backdrop/DialogBackdrop.tsx",
+      "exports": [
+        "AlertDialog.Backdrop",
+        "Dialog.Backdrop"
+      ]
+    },
+    {
+      "id": "Dialog.Close",
+      "source": "packages/solid/src/dialog/close/DialogClose.tsx",
+      "exports": [
+        "AlertDialog.Close",
+        "Dialog.Close",
+        "Drawer.Close"
+      ]
+    },
+    {
+      "id": "Dialog.Description",
+      "source": "packages/solid/src/dialog/description/DialogDescription.tsx",
+      "exports": [
+        "AlertDialog.Description",
+        "Dialog.Description",
+        "Drawer.Description"
+      ]
+    },
+    {
+      "id": "Dialog.Popup",
+      "source": "packages/solid/src/dialog/popup/DialogPopup.tsx",
+      "exports": [
+        "AlertDialog.Popup",
+        "Dialog.Popup"
+      ]
+    },
+    {
+      "id": "Dialog.Portal",
+      "source": "packages/solid/src/dialog/portal/DialogPortal.tsx",
+      "exports": [
+        "AlertDialog.Portal",
+        "Dialog.Portal",
+        "Drawer.Portal"
+      ]
+    },
+    {
+      "id": "Dialog.Title",
+      "source": "packages/solid/src/dialog/title/DialogTitle.tsx",
+      "exports": [
+        "AlertDialog.Title",
+        "Dialog.Title",
+        "Drawer.Title"
+      ]
+    },
+    {
+      "id": "Dialog.Trigger",
+      "source": "packages/solid/src/dialog/trigger/DialogTrigger.tsx",
+      "exports": [
+        "Dialog.Trigger"
+      ]
+    },
+    {
+      "id": "Dialog.Viewport",
+      "source": "packages/solid/src/dialog/viewport/DialogViewport.tsx",
+      "exports": [
+        "AlertDialog.Viewport",
+        "Dialog.Viewport"
+      ]
+    },
+    {
+      "id": "Drawer.Backdrop",
+      "source": "packages/solid/src/drawer/backdrop/DrawerBackdrop.tsx",
+      "exports": [
+        "Drawer.Backdrop"
+      ]
+    },
+    {
+      "id": "Drawer.Content",
+      "source": "packages/solid/src/drawer/content/DrawerContent.tsx",
+      "exports": [
+        "Drawer.Content"
+      ]
+    },
+    {
+      "id": "Drawer.Indent",
+      "source": "packages/solid/src/drawer/indent/DrawerIndent.tsx",
+      "exports": [
+        "Drawer.Indent"
+      ]
+    },
+    {
+      "id": "Drawer.IndentBackground",
+      "source": "packages/solid/src/drawer/indent-background/DrawerIndentBackground.tsx",
+      "exports": [
+        "Drawer.IndentBackground"
+      ]
+    },
+    {
+      "id": "Drawer.Popup",
+      "source": "packages/solid/src/drawer/popup/DrawerPopup.tsx",
+      "exports": [
+        "Drawer.Popup"
+      ]
+    },
+    {
+      "id": "Drawer.SwipeArea",
+      "source": "packages/solid/src/drawer/swipe-area/DrawerSwipeArea.tsx",
+      "exports": [
+        "Drawer.SwipeArea"
+      ]
+    },
+    {
+      "id": "Drawer.Trigger",
+      "source": "packages/solid/src/drawer/trigger/DrawerTrigger.tsx",
+      "exports": [
+        "Drawer.Trigger"
+      ]
+    },
+    {
+      "id": "Drawer.Viewport",
+      "source": "packages/solid/src/drawer/viewport/DrawerViewport.tsx",
+      "exports": [
+        "Drawer.Viewport"
+      ]
+    },
+    {
+      "id": "Field.Control",
+      "source": "packages/solid/src/field/control/FieldControl.tsx",
+      "exports": [
+        "Field.Control"
+      ]
+    },
+    {
+      "id": "Field.Description",
+      "source": "packages/solid/src/field/description/FieldDescription.tsx",
+      "exports": [
+        "Field.Description"
+      ]
+    },
+    {
+      "id": "Field.Error",
+      "source": "packages/solid/src/field/error/FieldError.tsx",
+      "exports": [
+        "Field.Error"
+      ]
+    },
+    {
+      "id": "Field.Item",
+      "source": "packages/solid/src/field/item/FieldItem.tsx",
+      "exports": [
+        "Field.Item"
+      ]
+    },
+    {
+      "id": "Field.Label",
+      "source": "packages/solid/src/field/label/FieldLabel.tsx",
+      "exports": [
+        "Field.Label"
+      ]
+    },
+    {
+      "id": "Field.Root",
+      "source": "packages/solid/src/field/root/FieldRoot.tsx",
+      "exports": [
+        "Field.Root"
+      ]
+    },
+    {
+      "id": "Fieldset.Legend",
+      "source": "packages/solid/src/fieldset/legend/FieldsetLegend.tsx",
+      "exports": [
+        "Fieldset.Legend"
+      ]
+    },
+    {
+      "id": "Fieldset.Root",
+      "source": "packages/solid/src/fieldset/root/FieldsetRoot.tsx",
+      "exports": [
+        "Fieldset.Root"
+      ]
+    },
+    {
+      "id": "Form",
+      "source": "packages/solid/src/form/Form.tsx",
+      "exports": [
+        "Form"
+      ]
+    },
+    {
+      "id": "Input",
+      "source": "packages/solid/src/input/Input.tsx",
+      "exports": [
+        "Input"
+      ]
+    },
+    {
+      "id": "Menu.Arrow",
+      "source": "packages/solid/src/menu/arrow/MenuArrow.tsx",
+      "exports": [
+        "ContextMenu.Arrow",
+        "Menu.Arrow"
+      ]
+    },
+    {
+      "id": "Menu.Backdrop",
+      "source": "packages/solid/src/menu/backdrop/MenuBackdrop.tsx",
+      "exports": [
+        "ContextMenu.Backdrop",
+        "Menu.Backdrop"
+      ]
+    },
+    {
+      "id": "Menu.CheckboxItem",
+      "source": "packages/solid/src/menu/checkbox-item/MenuCheckboxItem.tsx",
+      "exports": [
+        "ContextMenu.CheckboxItem",
+        "Menu.CheckboxItem"
+      ]
+    },
+    {
+      "id": "Menu.CheckboxItemIndicator",
+      "source": "packages/solid/src/menu/checkbox-item-indicator/MenuCheckboxItemIndicator.tsx",
+      "exports": [
+        "ContextMenu.CheckboxItemIndicator",
+        "Menu.CheckboxItemIndicator"
+      ]
+    },
+    {
+      "id": "Menu.Clear",
+      "source": "packages/solid/src/menu/clear/MenuClear.tsx",
+      "exports": [
+        "Menu.Clear"
+      ]
+    },
+    {
+      "id": "Menu.Empty",
+      "source": "packages/solid/src/menu/empty/MenuEmpty.tsx",
+      "exports": [
+        "Menu.Empty"
+      ]
+    },
+    {
+      "id": "Menu.Group",
+      "source": "packages/solid/src/menu/group/MenuGroup.tsx",
+      "exports": [
+        "ContextMenu.Group",
+        "Menu.Group"
+      ]
+    },
+    {
+      "id": "Menu.GroupLabel",
+      "source": "packages/solid/src/menu/group-label/MenuGroupLabel.tsx",
+      "exports": [
+        "ContextMenu.GroupLabel",
+        "Menu.GroupLabel"
+      ]
+    },
+    {
+      "id": "Menu.Input",
+      "source": "packages/solid/src/menu/input/MenuInput.tsx",
+      "exports": [
+        "Menu.Input"
+      ]
+    },
+    {
+      "id": "Menu.Item",
+      "source": "packages/solid/src/menu/item/MenuItem.tsx",
+      "exports": [
+        "ContextMenu.Item",
+        "Menu.Item"
+      ]
+    },
+    {
+      "id": "Menu.LinkItem",
+      "source": "packages/solid/src/menu/link-item/MenuLinkItem.tsx",
+      "exports": [
+        "ContextMenu.LinkItem",
+        "Menu.LinkItem"
+      ]
+    },
+    {
+      "id": "Menu.List",
+      "source": "packages/solid/src/menu/list/MenuList.tsx",
+      "exports": [
+        "Menu.List"
+      ]
+    },
+    {
+      "id": "Menu.Popup",
+      "source": "packages/solid/src/menu/popup/MenuPopup.tsx",
+      "exports": [
+        "ContextMenu.Popup",
+        "Menu.Popup"
+      ]
+    },
+    {
+      "id": "Menu.Portal",
+      "source": "packages/solid/src/menu/portal/MenuPortal.tsx",
+      "exports": [
+        "ContextMenu.Portal",
+        "Menu.Portal"
+      ]
+    },
+    {
+      "id": "Menu.Positioner",
+      "source": "packages/solid/src/menu/positioner/MenuPositioner.tsx",
+      "exports": [
+        "ContextMenu.Positioner",
+        "Menu.Positioner"
+      ]
+    },
+    {
+      "id": "Menu.RadioGroup",
+      "source": "packages/solid/src/menu/radio-group/MenuRadioGroup.tsx",
+      "exports": [
+        "ContextMenu.RadioGroup",
+        "Menu.RadioGroup"
+      ]
+    },
+    {
+      "id": "Menu.RadioItem",
+      "source": "packages/solid/src/menu/radio-item/MenuRadioItem.tsx",
+      "exports": [
+        "ContextMenu.RadioItem",
+        "Menu.RadioItem"
+      ]
+    },
+    {
+      "id": "Menu.RadioItemIndicator",
+      "source": "packages/solid/src/menu/radio-item-indicator/MenuRadioItemIndicator.tsx",
+      "exports": [
+        "ContextMenu.RadioItemIndicator",
+        "Menu.RadioItemIndicator"
+      ]
+    },
+    {
+      "id": "Menu.SubmenuTrigger",
+      "source": "packages/solid/src/menu/submenu-trigger/MenuSubmenuTrigger.tsx",
+      "exports": [
+        "ContextMenu.SubmenuTrigger",
+        "Menu.SubmenuTrigger"
+      ]
+    },
+    {
+      "id": "Menu.Trigger",
+      "source": "packages/solid/src/menu/trigger/MenuTrigger.tsx",
+      "exports": [
+        "Menu.Trigger"
+      ]
+    },
+    {
+      "id": "Menu.Viewport",
+      "source": "packages/solid/src/menu/viewport/MenuViewport.tsx",
+      "exports": [
+        "Menu.Viewport"
+      ]
+    },
+    {
+      "id": "Menubar",
+      "source": "packages/solid/src/menubar/Menubar.tsx",
+      "exports": [
+        "Menubar"
+      ]
+    },
+    {
+      "id": "Meter.Indicator",
+      "source": "packages/solid/src/meter/indicator/MeterIndicator.tsx",
+      "exports": [
+        "Meter.Indicator"
+      ]
+    },
+    {
+      "id": "Meter.Label",
+      "source": "packages/solid/src/meter/label/MeterLabel.tsx",
+      "exports": [
+        "Meter.Label"
+      ]
+    },
+    {
+      "id": "Meter.Root",
+      "source": "packages/solid/src/meter/root/MeterRoot.tsx",
+      "exports": [
+        "Meter.Root"
+      ]
+    },
+    {
+      "id": "Meter.Track",
+      "source": "packages/solid/src/meter/track/MeterTrack.tsx",
+      "exports": [
+        "Meter.Track"
+      ]
+    },
+    {
+      "id": "Meter.Value",
+      "source": "packages/solid/src/meter/value/MeterValue.tsx",
+      "exports": [
+        "Meter.Value"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Arrow",
+      "source": "packages/solid/src/navigation-menu/arrow/NavigationMenuArrow.tsx",
+      "exports": [
+        "NavigationMenu.Arrow"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Backdrop",
+      "source": "packages/solid/src/navigation-menu/backdrop/NavigationMenuBackdrop.tsx",
+      "exports": [
+        "NavigationMenu.Backdrop"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Content",
+      "source": "packages/solid/src/navigation-menu/content/NavigationMenuContent.tsx",
+      "exports": [
+        "NavigationMenu.Content"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Icon",
+      "source": "packages/solid/src/navigation-menu/icon/NavigationMenuIcon.tsx",
+      "exports": [
+        "NavigationMenu.Icon"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Item",
+      "source": "packages/solid/src/navigation-menu/item/NavigationMenuItem.tsx",
+      "exports": [
+        "NavigationMenu.Item"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Link",
+      "source": "packages/solid/src/navigation-menu/link/NavigationMenuLink.tsx",
+      "exports": [
+        "NavigationMenu.Link"
+      ]
+    },
+    {
+      "id": "NavigationMenu.List",
+      "source": "packages/solid/src/navigation-menu/list/NavigationMenuList.tsx",
+      "exports": [
+        "NavigationMenu.List"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Popup",
+      "source": "packages/solid/src/navigation-menu/popup/NavigationMenuPopup.tsx",
+      "exports": [
+        "NavigationMenu.Popup"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Portal",
+      "source": "packages/solid/src/navigation-menu/portal/NavigationMenuPortal.tsx",
+      "exports": [
+        "NavigationMenu.Portal"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Positioner",
+      "source": "packages/solid/src/navigation-menu/positioner/NavigationMenuPositioner.tsx",
+      "exports": [
+        "NavigationMenu.Positioner"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Root",
+      "source": "packages/solid/src/navigation-menu/root/NavigationMenuRoot.tsx",
+      "exports": [
+        "NavigationMenu.Root"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Trigger",
+      "source": "packages/solid/src/navigation-menu/trigger/NavigationMenuTrigger.tsx",
+      "exports": [
+        "NavigationMenu.Trigger"
+      ]
+    },
+    {
+      "id": "NavigationMenu.Viewport",
+      "source": "packages/solid/src/navigation-menu/viewport/NavigationMenuViewport.tsx",
+      "exports": [
+        "NavigationMenu.Viewport"
+      ]
+    },
+    {
+      "id": "NumberField.Decrement",
+      "source": "packages/solid/src/number-field/decrement/NumberFieldDecrement.tsx",
+      "exports": [
+        "NumberField.Decrement"
+      ]
+    },
+    {
+      "id": "NumberField.Group",
+      "source": "packages/solid/src/number-field/group/NumberFieldGroup.tsx",
+      "exports": [
+        "NumberField.Group"
+      ]
+    },
+    {
+      "id": "NumberField.Increment",
+      "source": "packages/solid/src/number-field/increment/NumberFieldIncrement.tsx",
+      "exports": [
+        "NumberField.Increment"
+      ]
+    },
+    {
+      "id": "NumberField.Input",
+      "source": "packages/solid/src/number-field/input/NumberFieldInput.tsx",
+      "exports": [
+        "NumberField.Input"
+      ]
+    },
+    {
+      "id": "NumberField.Root",
+      "source": "packages/solid/src/number-field/root/NumberFieldRoot.tsx",
+      "exports": [
+        "NumberField.Root"
+      ]
+    },
+    {
+      "id": "NumberField.ScrubArea",
+      "source": "packages/solid/src/number-field/scrub-area/NumberFieldScrubArea.tsx",
+      "exports": [
+        "NumberField.ScrubArea"
+      ]
+    },
+    {
+      "id": "NumberField.ScrubAreaCursor",
+      "source": "packages/solid/src/number-field/scrub-area-cursor/NumberFieldScrubAreaCursor.tsx",
+      "exports": [
+        "NumberField.ScrubAreaCursor"
+      ]
+    },
+    {
+      "id": "OTPField.Input",
+      "source": "packages/solid/src/otp-field/input/OTPFieldInput.tsx",
+      "exports": [
+        "OTPField.Input"
+      ]
+    },
+    {
+      "id": "OTPField.Root",
+      "source": "packages/solid/src/otp-field/root/OTPFieldRoot.tsx",
+      "exports": [
+        "OTPField.Root"
+      ]
+    },
+    {
+      "id": "Popover.Arrow",
+      "source": "packages/solid/src/popover/arrow/PopoverArrow.tsx",
+      "exports": [
+        "Popover.Arrow"
+      ]
+    },
+    {
+      "id": "Popover.Backdrop",
+      "source": "packages/solid/src/popover/backdrop/PopoverBackdrop.tsx",
+      "exports": [
+        "Popover.Backdrop"
+      ]
+    },
+    {
+      "id": "Popover.Close",
+      "source": "packages/solid/src/popover/close/PopoverClose.tsx",
+      "exports": [
+        "Popover.Close"
+      ]
+    },
+    {
+      "id": "Popover.Description",
+      "source": "packages/solid/src/popover/description/PopoverDescription.tsx",
+      "exports": [
+        "Popover.Description"
+      ]
+    },
+    {
+      "id": "Popover.Popup",
+      "source": "packages/solid/src/popover/popup/PopoverPopup.tsx",
+      "exports": [
+        "Popover.Popup"
+      ]
+    },
+    {
+      "id": "Popover.Portal",
+      "source": "packages/solid/src/popover/portal/PopoverPortal.tsx",
+      "exports": [
+        "Popover.Portal"
+      ]
+    },
+    {
+      "id": "Popover.Positioner",
+      "source": "packages/solid/src/popover/positioner/PopoverPositioner.tsx",
+      "exports": [
+        "Popover.Positioner"
+      ]
+    },
+    {
+      "id": "Popover.Title",
+      "source": "packages/solid/src/popover/title/PopoverTitle.tsx",
+      "exports": [
+        "Popover.Title"
+      ]
+    },
+    {
+      "id": "Popover.Trigger",
+      "source": "packages/solid/src/popover/trigger/PopoverTrigger.tsx",
+      "exports": [
+        "Popover.Trigger"
+      ]
+    },
+    {
+      "id": "Popover.Viewport",
+      "source": "packages/solid/src/popover/viewport/PopoverViewport.tsx",
+      "exports": [
+        "Popover.Viewport"
+      ]
+    },
+    {
+      "id": "PreviewCard.Arrow",
+      "source": "packages/solid/src/preview-card/arrow/PreviewCardArrow.tsx",
+      "exports": [
+        "PreviewCard.Arrow"
+      ]
+    },
+    {
+      "id": "PreviewCard.Backdrop",
+      "source": "packages/solid/src/preview-card/backdrop/PreviewCardBackdrop.tsx",
+      "exports": [
+        "PreviewCard.Backdrop"
+      ]
+    },
+    {
+      "id": "PreviewCard.Popup",
+      "source": "packages/solid/src/preview-card/popup/PreviewCardPopup.tsx",
+      "exports": [
+        "PreviewCard.Popup"
+      ]
+    },
+    {
+      "id": "PreviewCard.Portal",
+      "source": "packages/solid/src/preview-card/portal/PreviewCardPortal.tsx",
+      "exports": [
+        "PreviewCard.Portal"
+      ]
+    },
+    {
+      "id": "PreviewCard.Positioner",
+      "source": "packages/solid/src/preview-card/positioner/PreviewCardPositioner.tsx",
+      "exports": [
+        "PreviewCard.Positioner"
+      ]
+    },
+    {
+      "id": "PreviewCard.Trigger",
+      "source": "packages/solid/src/preview-card/trigger/PreviewCardTrigger.tsx",
+      "exports": [
+        "PreviewCard.Trigger"
+      ]
+    },
+    {
+      "id": "PreviewCard.Viewport",
+      "source": "packages/solid/src/preview-card/viewport/PreviewCardViewport.tsx",
+      "exports": [
+        "PreviewCard.Viewport"
+      ]
+    },
+    {
+      "id": "Progress.Indicator",
+      "source": "packages/solid/src/progress/indicator/ProgressIndicator.tsx",
+      "exports": [
+        "Progress.Indicator"
+      ]
+    },
+    {
+      "id": "Progress.Label",
+      "source": "packages/solid/src/progress/label/ProgressLabel.tsx",
+      "exports": [
+        "Progress.Label"
+      ]
+    },
+    {
+      "id": "Progress.Root",
+      "source": "packages/solid/src/progress/root/ProgressRoot.tsx",
+      "exports": [
+        "Progress.Root"
+      ]
+    },
+    {
+      "id": "Progress.Track",
+      "source": "packages/solid/src/progress/track/ProgressTrack.tsx",
+      "exports": [
+        "Progress.Track"
+      ]
+    },
+    {
+      "id": "Progress.Value",
+      "source": "packages/solid/src/progress/value/ProgressValue.tsx",
+      "exports": [
+        "Progress.Value"
+      ]
+    },
+    {
+      "id": "Radio.Indicator",
+      "source": "packages/solid/src/radio/indicator/RadioIndicator.tsx",
+      "exports": [
+        "Radio.Indicator"
+      ]
+    },
+    {
+      "id": "Radio.Root",
+      "source": "packages/solid/src/radio/root/RadioRoot.tsx",
+      "exports": [
+        "Radio.Root"
+      ]
+    },
+    {
+      "id": "RadioGroup",
+      "source": "packages/solid/src/radio-group/RadioGroup.tsx",
+      "exports": [
+        "RadioGroup"
+      ]
+    },
+    {
+      "id": "ScrollArea.Content",
+      "source": "packages/solid/src/scroll-area/content/ScrollAreaContent.tsx",
+      "exports": [
+        "ScrollArea.Content"
+      ]
+    },
+    {
+      "id": "ScrollArea.Corner",
+      "source": "packages/solid/src/scroll-area/corner/ScrollAreaCorner.tsx",
+      "exports": [
+        "ScrollArea.Corner"
+      ]
+    },
+    {
+      "id": "ScrollArea.Root",
+      "source": "packages/solid/src/scroll-area/root/ScrollAreaRoot.tsx",
+      "exports": [
+        "ScrollArea.Root"
+      ]
+    },
+    {
+      "id": "ScrollArea.Scrollbar",
+      "source": "packages/solid/src/scroll-area/scrollbar/ScrollAreaScrollbar.tsx",
+      "exports": [
+        "ScrollArea.Scrollbar"
+      ]
+    },
+    {
+      "id": "ScrollArea.Thumb",
+      "source": "packages/solid/src/scroll-area/thumb/ScrollAreaThumb.tsx",
+      "exports": [
+        "ScrollArea.Thumb"
+      ]
+    },
+    {
+      "id": "ScrollArea.Viewport",
+      "source": "packages/solid/src/scroll-area/viewport/ScrollAreaViewport.tsx",
+      "exports": [
+        "ScrollArea.Viewport"
+      ]
+    },
+    {
+      "id": "Select.Arrow",
+      "source": "packages/solid/src/select/arrow/SelectArrow.tsx",
+      "exports": [
+        "Select.Arrow"
+      ]
+    },
+    {
+      "id": "Select.Backdrop",
+      "source": "packages/solid/src/select/backdrop/SelectBackdrop.tsx",
+      "exports": [
+        "Select.Backdrop"
+      ]
+    },
+    {
+      "id": "Select.Group",
+      "source": "packages/solid/src/select/group/SelectGroup.tsx",
+      "exports": [
+        "Select.Group"
+      ]
+    },
+    {
+      "id": "Select.GroupLabel",
+      "source": "packages/solid/src/select/group-label/SelectGroupLabel.tsx",
+      "exports": [
+        "Select.GroupLabel"
+      ]
+    },
+    {
+      "id": "Select.Icon",
+      "source": "packages/solid/src/select/icon/SelectIcon.tsx",
+      "exports": [
+        "Select.Icon"
+      ]
+    },
+    {
+      "id": "Select.Item",
+      "source": "packages/solid/src/select/item/SelectItem.tsx",
+      "exports": [
+        "Select.Item"
+      ]
+    },
+    {
+      "id": "Select.ItemIndicator",
+      "source": "packages/solid/src/select/item-indicator/SelectItemIndicator.tsx",
+      "exports": [
+        "Select.ItemIndicator"
+      ]
+    },
+    {
+      "id": "Select.ItemText",
+      "source": "packages/solid/src/select/item-text/SelectItemText.tsx",
+      "exports": [
+        "Select.ItemText"
+      ]
+    },
+    {
+      "id": "Select.Label",
+      "source": "packages/solid/src/select/label/SelectLabel.tsx",
+      "exports": [
+        "Select.Label"
+      ]
+    },
+    {
+      "id": "Select.List",
+      "source": "packages/solid/src/select/list/SelectList.tsx",
+      "exports": [
+        "Select.List"
+      ]
+    },
+    {
+      "id": "Select.Popup",
+      "source": "packages/solid/src/select/popup/SelectPopup.tsx",
+      "exports": [
+        "Select.Popup"
+      ]
+    },
+    {
+      "id": "Select.Portal",
+      "source": "packages/solid/src/select/portal/SelectPortal.tsx",
+      "exports": [
+        "Select.Portal"
+      ]
+    },
+    {
+      "id": "Select.Positioner",
+      "source": "packages/solid/src/select/positioner/SelectPositioner.tsx",
+      "exports": [
+        "Select.Positioner"
+      ]
+    },
+    {
+      "id": "Select.ScrollDownArrow",
+      "source": "packages/solid/src/select/scroll-down-arrow/SelectScrollDownArrow.tsx",
+      "exports": [
+        "Select.ScrollDownArrow"
+      ]
+    },
+    {
+      "id": "Select.ScrollUpArrow",
+      "source": "packages/solid/src/select/scroll-up-arrow/SelectScrollUpArrow.tsx",
+      "exports": [
+        "Select.ScrollUpArrow"
+      ]
+    },
+    {
+      "id": "Select.Trigger",
+      "source": "packages/solid/src/select/trigger/SelectTrigger.tsx",
+      "exports": [
+        "Select.Trigger"
+      ]
+    },
+    {
+      "id": "Select.Value",
+      "source": "packages/solid/src/select/value/SelectValue.tsx",
+      "exports": [
+        "Select.Value"
+      ]
+    },
+    {
+      "id": "Slider.Control",
+      "source": "packages/solid/src/slider/control/SliderControl.tsx",
+      "exports": [
+        "Slider.Control"
+      ]
+    },
+    {
+      "id": "Slider.Indicator",
+      "source": "packages/solid/src/slider/indicator/SliderIndicator.tsx",
+      "exports": [
+        "Slider.Indicator"
+      ]
+    },
+    {
+      "id": "Slider.Label",
+      "source": "packages/solid/src/slider/label/SliderLabel.tsx",
+      "exports": [
+        "Slider.Label"
+      ]
+    },
+    {
+      "id": "Slider.Root",
+      "source": "packages/solid/src/slider/root/SliderRoot.tsx",
+      "exports": [
+        "Slider.Root"
+      ]
+    },
+    {
+      "id": "Slider.Thumb",
+      "source": "packages/solid/src/slider/thumb/SliderThumb.tsx",
+      "exports": [
+        "Slider.Thumb"
+      ]
+    },
+    {
+      "id": "Slider.Track",
+      "source": "packages/solid/src/slider/track/SliderTrack.tsx",
+      "exports": [
+        "Slider.Track"
+      ]
+    },
+    {
+      "id": "Slider.Value",
+      "source": "packages/solid/src/slider/value/SliderValue.tsx",
+      "exports": [
+        "Slider.Value"
+      ]
+    },
+    {
+      "id": "Switch.Root",
+      "source": "packages/solid/src/switch/root/SwitchRoot.tsx",
+      "exports": [
+        "Switch.Root"
+      ]
+    },
+    {
+      "id": "Switch.Thumb",
+      "source": "packages/solid/src/switch/thumb/SwitchThumb.tsx",
+      "exports": [
+        "Switch.Thumb"
+      ]
+    },
+    {
+      "id": "Tabs.Indicator",
+      "source": "packages/solid/src/tabs/indicator/TabsIndicator.tsx",
+      "exports": [
+        "Tabs.Indicator"
+      ]
+    },
+    {
+      "id": "Tabs.List",
+      "source": "packages/solid/src/tabs/list/TabsList.tsx",
+      "exports": [
+        "Tabs.List"
+      ]
+    },
+    {
+      "id": "Tabs.Panel",
+      "source": "packages/solid/src/tabs/panel/TabsPanel.tsx",
+      "exports": [
+        "Tabs.Panel"
+      ]
+    },
+    {
+      "id": "Tabs.Root",
+      "source": "packages/solid/src/tabs/root/TabsRoot.tsx",
+      "exports": [
+        "Tabs.Root"
+      ]
+    },
+    {
+      "id": "Tabs.Tab",
+      "source": "packages/solid/src/tabs/tab/TabsTab.tsx",
+      "exports": [
+        "Tabs.Tab"
+      ]
+    },
+    {
+      "id": "Toast.Action",
+      "source": "packages/solid/src/toast/action/ToastAction.tsx",
+      "exports": [
+        "Toast.Action"
+      ]
+    },
+    {
+      "id": "Toast.Arrow",
+      "source": "packages/solid/src/toast/arrow/ToastArrow.tsx",
+      "exports": [
+        "Toast.Arrow"
+      ]
+    },
+    {
+      "id": "Toast.Close",
+      "source": "packages/solid/src/toast/close/ToastClose.tsx",
+      "exports": [
+        "Toast.Close"
+      ]
+    },
+    {
+      "id": "Toast.Content",
+      "source": "packages/solid/src/toast/content/ToastContent.tsx",
+      "exports": [
+        "Toast.Content"
+      ]
+    },
+    {
+      "id": "Toast.Description",
+      "source": "packages/solid/src/toast/description/ToastDescription.tsx",
+      "exports": [
+        "Toast.Description"
+      ]
+    },
+    {
+      "id": "Toast.Portal",
+      "source": "packages/solid/src/toast/portal/ToastPortal.tsx",
+      "exports": [
+        "Toast.Portal"
+      ]
+    },
+    {
+      "id": "Toast.Positioner",
+      "source": "packages/solid/src/toast/positioner/ToastPositioner.tsx",
+      "exports": [
+        "Toast.Positioner"
+      ]
+    },
+    {
+      "id": "Toast.Root",
+      "source": "packages/solid/src/toast/root/ToastRoot.tsx",
+      "exports": [
+        "Toast.Root"
+      ]
+    },
+    {
+      "id": "Toast.Title",
+      "source": "packages/solid/src/toast/title/ToastTitle.tsx",
+      "exports": [
+        "Toast.Title"
+      ]
+    },
+    {
+      "id": "Toast.Viewport",
+      "source": "packages/solid/src/toast/viewport/ToastViewport.tsx",
+      "exports": [
+        "Toast.Viewport"
+      ]
+    },
+    {
+      "id": "Toggle",
+      "source": "packages/solid/src/toggle/Toggle.tsx",
+      "exports": [
+        "Toggle"
+      ]
+    },
+    {
+      "id": "ToggleGroup",
+      "source": "packages/solid/src/toggle-group/ToggleGroup.tsx",
+      "exports": [
+        "ToggleGroup"
+      ]
+    },
+    {
+      "id": "Toolbar.Button",
+      "source": "packages/solid/src/toolbar/button/ToolbarButton.tsx",
+      "exports": [
+        "Toolbar.Button"
+      ]
+    },
+    {
+      "id": "Toolbar.Group",
+      "source": "packages/solid/src/toolbar/group/ToolbarGroup.tsx",
+      "exports": [
+        "Toolbar.Group"
+      ]
+    },
+    {
+      "id": "Toolbar.Input",
+      "source": "packages/solid/src/toolbar/input/ToolbarInput.tsx",
+      "exports": [
+        "Toolbar.Input"
+      ]
+    },
+    {
+      "id": "Toolbar.Link",
+      "source": "packages/solid/src/toolbar/link/ToolbarLink.tsx",
+      "exports": [
+        "Toolbar.Link"
+      ]
+    },
+    {
+      "id": "Toolbar.Root",
+      "source": "packages/solid/src/toolbar/root/ToolbarRoot.tsx",
+      "exports": [
+        "Toolbar.Root"
+      ]
+    },
+    {
+      "id": "Toolbar.Separator",
+      "source": "packages/solid/src/toolbar/separator/ToolbarSeparator.tsx",
+      "exports": [
+        "Toolbar.Separator"
+      ]
+    },
+    {
+      "id": "Tooltip.Arrow",
+      "source": "packages/solid/src/tooltip/arrow/TooltipArrow.tsx",
+      "exports": [
+        "Tooltip.Arrow"
+      ]
+    },
+    {
+      "id": "Tooltip.Popup",
+      "source": "packages/solid/src/tooltip/popup/TooltipPopup.tsx",
+      "exports": [
+        "Tooltip.Popup"
+      ]
+    },
+    {
+      "id": "Tooltip.Portal",
+      "source": "packages/solid/src/tooltip/portal/TooltipPortal.tsx",
+      "exports": [
+        "Tooltip.Portal"
+      ]
+    },
+    {
+      "id": "Tooltip.Positioner",
+      "source": "packages/solid/src/tooltip/positioner/TooltipPositioner.tsx",
+      "exports": [
+        "Tooltip.Positioner"
+      ]
+    },
+    {
+      "id": "Tooltip.Trigger",
+      "source": "packages/solid/src/tooltip/trigger/TooltipTrigger.tsx",
+      "exports": [
+        "Tooltip.Trigger"
+      ]
+    },
+    {
+      "id": "Tooltip.Viewport",
+      "source": "packages/solid/src/tooltip/viewport/TooltipViewport.tsx",
+      "exports": [
+        "Tooltip.Viewport"
+      ]
+    }
+  ]
+}

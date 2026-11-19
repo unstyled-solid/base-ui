@@ -250,7 +250,7 @@ export function OTPFieldRoot(props: OTPFieldRootProps) {
       if (!Number.isInteger(length) || length <= 0) {
         warn(`<OTPField.Root> \`length\` must be a positive integer. Received \`length={${String(length)}}\`.`);
       } else if (count !== 0 && count !== length) {
-        // Length and the shared DOM-ordered map can publish in separate RC13
+        // Length and the shared DOM-ordered map can publish in separate Solid 2.0.3
         // turns. Diagnose the settled registry, not a removed slot's old count.
         queueMicrotask(() => {
           if (disposed || generation !== warningGeneration) return;

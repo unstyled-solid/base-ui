@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { contracts, assertExportMap } from '../types/shared.mjs';
+import { contracts, assertExportMap, targetLeaves } from '../types/shared.mjs';
 import { command } from './process.mjs';
 import { pins, optionalPins, peerSets, temporaryRoot, sha256, parseArgs, inside, inspectArchive, assertInventory,
   conditionSets, validateQualification, assertCoverage, requiredQualifications } from './policy.mjs';
@@ -11,7 +11,7 @@ const root = fileURLToPath(new URL('../../../', import.meta.url));
 const templates = path.join(root, 'test/distribution/consumers/templates');
 const readJson = async file => JSON.parse(await fs.readFile(file, 'utf8'));
 const node = process.execPath;
-const templateNames = ['installation.mjs', 'initialization.mjs', 'types.mjs', 'resolution.mjs', 'analysis.mjs', 'import-audit.mjs', 'temporal.mjs', 'runtime-accounting.mjs', 'fixture-types.mjs', 'bundle.mjs', 'browser.mjs', 'shaking-browser.mjs', 'app.tsx', 'client.tsx', 'server.tsx'];
+const templateNames = ['installation.mjs', 'initialization.mjs', 'types.mjs', 'resolution.mjs', 'analysis.mjs', 'import-audit.mjs', 'temporal.mjs', 'runtime-accounting.mjs', 'fixture-types.mjs', 'bundle.mjs', 'browser.mjs', 'shaking-browser.mjs', 'app.tsx', 'client.tsx', 'server.tsx', 'diagnostics.tsx', 'diagnostics.mjs'];
 
 async function main(argv) {
   const args = parseArgs(argv);
@@ -69,7 +69,7 @@ async function main(argv) {
     const valid = await stage(report, 'inventory', async () => {
       assertExportMap(manifest.exports, exportContract, packageContract);
       assertInventory(archive, manifest, packageContract);
-      for (const entry of Object.values(manifest.exports)) for (const target of Object.values(entry)) assert(archive.files.has(target.slice(2)), `Export target absent in archive: ${target}`);
+      for (const target of targetLeaves(manifest.exports)) assert(archive.files.has(target.slice(2)), `Export target absent in archive: ${target}`);
       return { files: archive.inventory.length, runtimeKeys: Object.values(exportContract.exports).filter(entry => entry.kind === 'runtime').length,
         typeOnlyKeys: Object.keys(exportContract.exports).filter(key => exportContract.exports[key].kind === 'types-only') };
     });
@@ -166,8 +166,11 @@ async function main(argv) {
         await stage(consumer, 'temporal', () => execute(directory, `${kind}-temporal-runtime`, node, ['temporal.mjs'], { strictDiagnostics: true }));
         await stage(consumer, 'shaking', () => execute(directory, `${kind}-tree-shaking`, node, ['bundle.mjs', 'shaking']));
         const serverBuilt = await stage(consumer, 'ssr', async () => {
-          await execute(directory, `${kind}-server-build`, node, ['bundle.mjs', 'server']);
-          await execute(directory, `${kind}-node-ssr`, node, ['bundles/server/server.mjs'], { strictDiagnostics: true });
+          for (const [environment, mask] of [['production', 0], ['development', 32]]) {
+            await execute(directory, `${kind}-${environment}-server-build`, node, ['bundle.mjs', 'server', String(mask)]);
+            await execute(directory, `${kind}-${environment}-node-ssr`, node, [...(mask ? ['--conditions=development'] : []), 'bundles/server/server.mjs'], { strictDiagnostics: true });
+            await fs.copyFile(path.join(directory, 'ssr-result.json'), path.join(directory, `ssr-result-${environment}.json`));
+          }
         });
         if (serverBuilt) await stage(consumer, 'worker-ssr', async () => {
           for (const mask of workerMasks) {
@@ -189,6 +192,10 @@ async function main(argv) {
           return { sets: browserMasks.length, masks: browserMasks, stockStable: '2.0.3' };
         });
         else consumer.stages.browser = { status: 'blocked', reason: 'Independent Node SSR failed' };
+        await stage(consumer, 'diagnostics', async () => {
+          await execute(directory, `${kind}-diagnostics-build`, node, ['bundle.mjs', 'diagnostics']);
+          await execute(directory, `${kind}-diagnostics`, node, ['diagnostics.mjs']);
+        });
         if (consumer.stages.shaking.status === 'passed' && serverBuilt && consumer.stages.browser.status === 'passed') {
           await stage(consumer, 'optimized-behavior', async () => {
             await execute(directory, `${kind}-optimized-events`, node, ['shaking-browser.mjs']);
@@ -229,7 +236,7 @@ async function main(argv) {
     report.blockers.push({ stage: 'runner', message: error.message, stack: error.stack });
   } finally {
     report.status = report.blockers.length || report.stages['complete-accounting']?.status !== 'passed' ? 'blocked' : 'passed';
-    const consumerStages = ['installation', 'import-audit', 'initialization', 'types', 'fixture-types', 'resolution', 'runtime', 'temporal', 'ssr', 'worker-ssr', 'browser', 'shaking', 'optimized-behavior'];
+    const consumerStages = ['installation', 'import-audit', 'initialization', 'types', 'fixture-types', 'resolution', 'runtime', 'temporal', 'ssr', 'worker-ssr', 'browser', 'shaking', 'optimized-behavior', 'diagnostics'];
     report.packageVerificationStatus = Object.keys(report.consumers).length === 4 &&
       ['inventory', 'analysis', 'immutable-archive'].every(name => report.stages[name]?.status === 'passed') &&
       Object.values(report.consumers).every(consumer => consumerStages.every(name => consumer.stages[name]?.status === 'passed')) ? 'passed' : 'blocked';

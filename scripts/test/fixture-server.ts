@@ -4,6 +4,7 @@ import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build, type Plugin } from 'vite';
 import solid from '@solidjs/vite-plugin';
+import { allocationTracePlugin } from './allocation-trace';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const allowedRoots = ['packages/solid/src/', 'test/harness/', 'test/ssr-harness/'];
@@ -24,7 +25,12 @@ import defaultAssets from 'virtual:solid-manifest';
 import * as fixtures from ${JSON.stringify(module)};
 if (!isServer || typeof document !== 'undefined') throw new Error('HARNESS_SERVER_CONDITIONS');
 let input = ''; for await (const chunk of process.stdin) input += chunk;
-const { exportName, props, renderId, mode, assetBridge } = JSON.parse(input);
+const { exportName, props, renderId, mode, assetBridge, traceAllocations } = JSON.parse(input);
+const allocations = [];
+if (traceAllocations) {
+  Error.stackTraceLimit = 60;
+  globalThis.__baseUIAllocationTrace = point => allocations.push(point);
+}
 const Component = fixtures[exportName];
 if (typeof Component !== 'function') throw new Error('Missing callable SSR fixture export: ' + exportName);
 const render = () => <Component {...props} />;
@@ -49,7 +55,7 @@ const manifest = {
 };
 const options = { renderId, manifest, onHead(value) { head = value; } };
 const html = mode === 'stream' ? await renderToStream(render, options) : renderToString(render, options);
-process.stdout.write(generateHydrationScript() + head + '<main data-harness-ssr="true">' + html + '</main>');`;
+process.stdout.write(generateHydrationScript() + head + '<main data-harness-ssr="true">' + html + '</main>' + (traceAllocations ? '<script type="application/json" data-allocation-trace>' + JSON.stringify(allocations).replaceAll('<', '\\\\u003c') + '</script>' : ''));`;
 }
 
 /** Independent production server compilation + fresh server-condition process per request. */
@@ -71,7 +77,8 @@ export function fixtureServer(): Plugin {
         const bundle = join(output, 'bundle');
         await build({
           root, configFile: false, logLevel: 'warn',
-          plugins: [solid({ compiler: 'babel', ssr: true, solid: { hydratable: true } })],
+          plugins: [allocationTracePlugin(), solid({ compiler: 'babel', ssr: true, solid: { hydratable: true } })],
+          ssr: { noExternal: ['solid-js', '@solidjs/signals', '@solidjs/web'] },
           build: { ssr: entry, outDir: bundle, emptyOutDir: true, minify: false,
             rollupOptions: { output: { entryFileNames: 'server.mjs' } } },
         });
@@ -130,7 +137,7 @@ export function fixtureServer(): Plugin {
               });
               const protocol = server.config.server.https ? 'https' : 'http';
               const assetBridge = `${protocol}://${request.headers.host}/@solidjs/vite-plugin/dev-manifest`;
-              child.stdin.end(JSON.stringify({ exportName, props, renderId, mode, assetBridge }));
+              child.stdin.end(JSON.stringify({ exportName, props, renderId, mode, assetBridge, traceAllocations: url.searchParams.get('traceAllocations') === '1' }));
             });
             response.setHeader('Content-Type', 'text/html; charset=utf-8');
             response.setHeader('Cache-Control', 'no-store');

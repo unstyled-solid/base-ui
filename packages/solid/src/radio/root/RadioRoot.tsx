@@ -39,11 +39,6 @@ export function RadioRoot<Value = any>(props: RadioRootProps<Value>) {
   );
   const source = Symbol('RadioRoot');
   const inputRef = createMergedRefsN<HTMLInputElement>(() => [props.inputRef, setInput]);
-  createEffect(() => ({ input: input(), value: props.value }), (next) => {
-    // RC13's native value removal sets the property to '', which creates a
-    // value attribute on radios. Source omission must preserve native 'on'.
-    if (next.value === undefined) next.input?.removeAttribute('value');
-  });
   onSettled(() => { if (input()?.checked) field?.setFilled(true); });
   createEffect(input, (element) => {
     if (!element) return;

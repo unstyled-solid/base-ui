@@ -1,4 +1,4 @@
-// Owned RC13 adaptation. Geometry lifecycle informed by solid-floating-ui
+// Owned Solid 2 adaptation. Geometry lifecycle informed by solid-floating-ui
 // 0492e49 (MIT); Base UI 19511bb remains the behavioral oracle.
 import { createEffect, createMemo, createSignal, onCleanup, untrack } from 'solid-js';
 import type { JSX } from '@solidjs/web';

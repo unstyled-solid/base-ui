@@ -24,7 +24,7 @@ export function OTPFieldInput(props: OTPFieldInputProps) {
   const direction = useDirection();
   const [composition, setComposition] = createSignal<string | null>(null);
   // IME events may arrive in one turn. This imperative flag owns the transaction;
-  // the signal only publishes its displayed text (RC13 getters are staged).
+  // the signal only publishes its displayed text (Solid 2.0.3 getters are staged).
   let composing = false;
   const slotValue = () => root.value[index()] ?? '';
   const state: OTPFieldInputState = {

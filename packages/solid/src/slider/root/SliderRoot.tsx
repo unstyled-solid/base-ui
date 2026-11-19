@@ -1,4 +1,4 @@
-import { createEffect, createSignal, omit, untrack } from 'solid-js';
+import { createEffect, createSignal, onSettled, omit, untrack } from 'solid-js';
 import type { JSX } from '@solidjs/web';
 import type { BaseUIComponentProps } from '../../internals/types';
 import { createBaseUiId } from '../../internals/createBaseUiId';
@@ -88,7 +88,7 @@ export function SliderRoot<Value extends number | readonly number[] = number | r
       field?.setTouched(true);
       if (accepted) {
         pendingInput = next;
-        queueMicrotask(() => { if (pendingInput === next) pendingInput = undefined; });
+        onSettled(() => { if (pendingInput === next) pendingInput = undefined; });
         commit(next, createGenericEventDetails(details.reason, details.event));
       }
     },

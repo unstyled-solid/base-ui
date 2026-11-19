@@ -24,83 +24,97 @@
     "command": "rtk pnpm docs:check",
     "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/docs.log",
     "summary": [
-      "Demo catalog: 137 entries; 0 unresolved upstream references",
-      "PASS: 84 static routes, metadata, anchors, local links and deployment base"
+      "PASS: 86 static routes, metadata, anchors, local links and deployment base, Vite artifacts"
     ]
+  },
+  {
+    "name": "composition-inventory",
+    "passed": true,
+    "code": 0,
+    "command": "rtk proxy node scripts/test/composition-inventory.mjs --check",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/composition-inventory.log",
+    "summary": []
   },
   {
     "name": "jsdom",
     "passed": true,
     "code": 0,
-    "command": "rtk pnpm test:jsdom merge-props getStateAttributesProps createRenderElement useButton number-field tabs accordion collapsible radio tooltip popover menu select slider otp-field avatar combobox createPopup.test --no-watch",
+    "command": "rtk pnpm test:jsdom --no-watch",
     "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/jsdom.log",
     "summary": [
       "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  127 passed | 1 skipped (128)",
-      "      Tests  3412 passed | 110 skipped (3522)",
-      "[HARNESS_FINAL] passed; files=128 failedFiles=0; passed=3412 failed=0 skipped=110 pending=0 unhandled=0 unfinishedModules=0"
+      " Test Files  318 passed | 3 skipped (321)",
+      "      Tests  6482 passed | 272 skipped (6754)",
+      "[HARNESS_FINAL] passed; files=321 failedFiles=0; passed=6482 failed=0 skipped=272 pending=0 unhandled=0 unfinishedModules=0"
     ]
   },
   {
     "name": "ssr",
     "passed": true,
     "code": 0,
-    "command": "rtk pnpm test:ssr createRenderElement NumberField Tabs Tooltip Avatar Accordion Collapsible Select Slider OTPField Combobox --no-watch",
+    "command": "rtk pnpm test:ssr --no-watch",
     "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/ssr.log",
     "summary": [
       "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  14 passed (14)",
-      "      Tests  42 passed (42)",
-      "[HARNESS_FINAL] passed; files=14 failedFiles=0; passed=42 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0"
+      " Test Files  51 passed (51)",
+      "      Tests  377 passed (377)",
+      "[HARNESS_FINAL] passed; files=51 failedFiles=0; passed=377 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0"
     ]
   },
   {
     "name": "chromium",
     "passed": true,
     "code": 0,
-    "command": "rtk pnpm test:chromium createRenderElement Events.test getStateAttributesProps NumberField.reactivity RadioIndicator.test RadioGroup.field SelectField.test TabsActivation.browser createPopup.test --no-watch",
+    "command": "rtk pnpm test:chromium --grouped createRenderElement Events.test getStateAttributesProps NumberField.reactivity RadioIndicator.test RadioGroup.field SelectField.test TabsActivation.browser createPopup.test CheckboxRoot.teardown FieldRegistration.teardown PopoverPositioner.browser --no-watch",
     "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/chromium.log",
     "summary": [
       "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  1 passed (1)",
-      "      Tests  4 passed (4)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=4 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      " Test Files  13 passed (13)",
+      "      Tests  181 passed (181)",
+      "[HARNESS_FINAL] passed; files=13 failedFiles=0; passed=181 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0"
+    ]
+  },
+  {
+    "name": "composition-ssr",
+    "passed": true,
+    "code": 0,
+    "command": "rtk pnpm test:ssr compositionInventory --no-watch",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/composition-ssr.log",
+    "summary": [
       "PASS: isolated production SSR compilation and HTML artifact",
       " Test Files  1 passed (1)",
-      "      Tests  25 passed (25)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=25 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "      Tests  208 passed (208)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=208 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0"
+    ]
+  },
+  {
+    "name": "composition-browser",
+    "passed": true,
+    "code": 0,
+    "command": "rtk pnpm test:chromium compositionInventory.hydration --no-watch",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/composition-browser.log",
+    "summary": [
       "PASS: isolated production SSR compilation and HTML artifact",
       " Test Files  1 passed (1)",
-      "      Tests  12 passed (12)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=12 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
+      "      Tests  205 passed | 1 skipped (206)",
+      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=205 failed=0 skipped=1 pending=0 unhandled=0 unfinishedModules=0"
+    ]
+  },
+  {
+    "name": "composition-native",
+    "passed": false,
+    "code": 1,
+    "command": "rtk proxy node scripts/test/run.mjs chromium-native compositionInventory.hydration --testNamePattern inventory NumberField.ScrubAreaCursor  --no-watch",
+    "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/composition-native.log",
+    "summary": [
       "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  1 passed (1)",
-      "      Tests  42 passed (42)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=42 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
-      "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  1 passed (1)",
-      "      Tests  1 passed (1)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=1 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
-      "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  1 passed (1)",
-      "      Tests  28 passed (28)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=28 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
-      "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  1 passed (1)",
-      "      Tests  16 passed (16)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=16 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
-      "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  1 passed (1)",
-      "      Tests  9 passed (9)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=9 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
-      "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  1 passed (1)",
-      "      Tests  2 passed (2)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=2 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0",
-      "PASS: isolated production SSR compilation and HTML artifact",
-      " Test Files  1 passed (1)",
-      "      Tests  10 passed (10)",
-      "[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=10 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0"
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  |solid2-real-browser-development (chromium)| packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx:14:3 > [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.ScrubAreaCursor component composition]",
+      "AssertionError: expected null not to be null",
+      "Caused by: Error: Matcher did not succeed in time.",
+      " Test Files  1 failed (1)",
+      "      Tests  1 failed | 205 skipped (206)",
+      "[HARNESS_FINAL] failed; files=1 failedFiles=1; passed=0 failed=1 skipped=205 pending=0 unhandled=0 unfinishedModules=0"
     ]
   },
   {
@@ -110,6 +124,10 @@
     "command": "rtk pnpm docs:test:interactions",
     "log": "/Users/avi/avir-oss/baseui-solid2/docs/generated/browser/runtime-gate/interactions.log",
     "summary": [
+      "{\"family\":\"accordion\",\"style\":\"tailwind\",\"passed\":false,\"interactionPassed\":true,\"diagnostics\":[\"Failed to load resource: net::ERR_NETWORK_CHANGED\"],\"errors\":[]}",
+      "{\"family\":\"radio-group\",\"style\":\"css-modules\",\"passed\":false,\"interactionPassed\":true,\"diagnostics\":[\"Failed to load resource: net::ERR_NETWORK_CHANGED\"],\"errors\":[]}",
+      "{\"family\":\"slider\",\"style\":\"css-modules\",\"passed\":false,\"interactionPassed\":true,\"diagnostics\":[\"Failed to load resource: net::ERR_NETWORK_CHANGED\"],\"errors\":[]}",
+      "{\"family\":\"toolbar\",\"style\":\"css-modules\",\"passed\":false,\"interactionPassed\":true,\"diagnostics\":[\"Failed to load resource: net::ERR_NETWORK_CHANGED\"],\"errors\":[]}",
       "Evidence: /Users/avi/avir-oss/baseui-solid2/docs/generated/browser/click-diagnostics.json"
     ]
   }

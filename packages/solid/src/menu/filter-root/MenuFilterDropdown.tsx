@@ -37,11 +37,12 @@ export function MenuFilterDropdown(props: MenuFilterDropdownProps) {
       else if (event.key.length === 1 && event.key !== ' ' && !event.ctrlKey && !event.metaKey && !event.altKey) owner.focus({ preventScroll: true });
     },
   });
+  const triggerId = () => store.state.activeTriggerElement ? store.state.activeTriggerElement.id || null : store.state.activeTriggerId;
   return <MenuFilterImplContext value={MENU_FILTER_IMPL}><FilterDropdownRoot
     open={store.state.open} disabled={store.state.disabled} openedByKeyboard={store.state.keyboardOpen}
     value={value.value()} query={query.query()} filter={props.filter} autoHighlight={props.autoHighlight} locale={props.locale}
     onValueChange={(next, details) => { value.request(next, details); }}
-    triggerId={store.state.activeTriggerElement ? store.state.activeTriggerElement.id || null : store.state.activeTriggerId}
+    triggerId={triggerId()}
     listRef={store.context.itemDomElements} getActiveIndex={() => store.state.activeIndex}
     setActiveIndex={index => store.setActiveIndex(index, 'none')} focusOwnerRef={store.context.virtualFocusRef}>
     {props.children}

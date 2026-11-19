@@ -25,7 +25,7 @@ export function FieldControl<E extends HTMLElement = HTMLInputElement>(props: Fi
   const name = () => field?.name ?? (typeof local.name === 'string' ? local.name : undefined);
   const controlled = () => local.value !== undefined;
   const serializedValue = () => local.value == null ? undefined : String(local.value);
-  // RC13 has native defaultValue setters. Never project an uncontrolled default
+  // Solid 2.0.3 has native defaultValue setters. Never project an uncontrolled default
   // through `value`: state-attribute updates would overwrite DOM edits.
   const valueProps = createMemo(() => {
     if (controlled()) {

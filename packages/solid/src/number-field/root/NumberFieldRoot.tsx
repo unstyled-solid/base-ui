@@ -1,5 +1,5 @@
 // Adapted from Base UI (MIT), 19511bb171f3b360b006c94cf6d07e53cb446505.
-import { createEffect, createMemo, createSignal, onCleanup, omit } from 'solid-js';
+import { createEffect, createMemo, createSignal, onCleanup, onSettled, omit } from 'solid-js';
 import type { JSX } from '@solidjs/web';
 import type { BaseUIComponentProps } from '../../internals/types';
 import { createControlled } from '../../utils/createControlled';
@@ -77,7 +77,7 @@ export function NumberFieldRoot(props: NumberFieldRoot.Props) {
     setText(nextText, numeric = context.numericValue()) {
       pendingText = nextText;
       setDraft({ text: nextText, numeric, locale: props.locale, format: props.format });
-      queueMicrotask(() => { if (pendingText === nextText) pendingText = undefined; });
+      onSettled(() => { if (pendingText === nextText) pendingText = undefined; });
     },
     syncText() { pendingText = undefined; setDraft(null); },
     setScrubbing(source, active) {
@@ -115,8 +115,8 @@ export function NumberFieldRoot(props: NumberFieldRoot.Props) {
         if (!control.controlled) {
           const transaction = { value: candidate };
           pendingNumeric = transaction;
-          queueMicrotask(() => { if (pendingNumeric === transaction) pendingNumeric = undefined; });
-          // Native constraints/form reads can run before RC13's staged render commits.
+          onSettled(() => { if (pendingNumeric === transaction) pendingNumeric = undefined; });
+          // Native constraints/form reads can run before Solid 2.0.3's staged render commits.
           if (hiddenElement) hiddenElement.value = candidate === null ? '' : String(candidate);
         }
         field?.setDirty(candidate !== field.validityData.initialValue);

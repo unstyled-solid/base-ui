@@ -146,7 +146,7 @@ test('hashed self-reports cannot hide failed, interrupted, skipped or diagnostic
 });
 function completeReport() {
   const contract = { exports: { '.': { kind: 'runtime' }, './types': { kind: 'types-only' }, './internals/temporal-adapter-date-fns': { kind: 'runtime' }, './internals/temporal-adapter-luxon': { kind: 'runtime' } } };
-  const stages = Object.fromEntries(['installation', 'import-audit', 'initialization', 'types', 'fixture-types', 'resolution', 'runtime', 'temporal', 'ssr', 'worker-ssr', 'browser', 'shaking', 'optimized-behavior'].map(stage => [stage, { status: 'passed', ...(['browser', 'worker-ssr'].includes(stage) ? { sets: 8 } : {}) }]));
+  const stages = Object.fromEntries(['installation', 'import-audit', 'initialization', 'types', 'fixture-types', 'resolution', 'runtime', 'temporal', 'ssr', 'worker-ssr', 'browser', 'shaking', 'optimized-behavior', 'diagnostics'].map(stage => [stage, { status: 'passed', ...(['browser', 'worker-ssr'].includes(stage) ? { sets: 8 } : {}) }]));
   const report = { archiveSha256: sha256('archive'), blockers: [], stages: Object.fromEntries(['inventory', 'analysis', 'production-browser', 'tree-shaking', 'qualifications'].map(stage => [stage, { status: 'passed' }])),
     consumers: Object.fromEntries(Object.keys(peerSets).map(kind => [kind, { stages: structuredClone(stages), resolutionSets: 64, typeModes: ['Bundler', 'NodeNext'],
       typeKeys: Object.keys(contract.exports).filter(key => !key.includes('temporal-adapter-') || kind === 'both' || key.endsWith(`temporal-adapter-${kind}`)) }])) };

@@ -8,14 +8,25 @@ import { ComboboxCollection } from '../collection/ComboboxCollection';
 import { clickHighlightedItem } from '../utils/parts';
 import { useComboboxPositionerContext } from '../positioner/ComboboxPositionerContext';
 export interface ComboboxListState { empty: boolean }
-export interface ComboboxListProps extends Omit<BaseUIComponentProps<'div', ComboboxListState>, 'children'> { children?: JSX.Element | ((item: any, index: number) => JSX.Element) }
+export interface ComboboxListProps extends Omit<BaseUIComponentProps<'div', ComboboxListState>, 'children'> {
+  /** Native JSX, or an implicit item template with at least one declared parameter.
+   * Use Combobox.Collection for zero-arity/default/rest-parameter templates. */
+  children?: JSX.Element | ((item: any, index: number) => JSX.Element);
+}
 export function ComboboxList(props: ComboboxListProps) {
   const model = useComboboxRootContext();
   const positioning = useComboboxPositionerContext(true);
   const state = { get empty() { return model.derived.filteredItems.length === 0; } };
-  // RC13 represents lazy JSX nodes with zero-arity thunks; item templates
-  // receive the item/index and must not swallow an ordinary JSX subtree.
-  function Content() { return <>{typeof props.children === 'function' && props.children.length > 0 ? <ComboboxCollection>{props.children}</ComboboxCollection> : props.children}</>; }
+  // Solid 2.0.3 provider children can be unbranded zero-arity accessors.
+  // Preserve this API's nonzero-arity implicit-template convention; arity is
+  // not a complete runtime discriminator. Explicit Collection accepts any
+  // template signature without mistaking native JSX for an item callback.
+  function Content() { return <>{(() => {
+    // A JSX-producing getter constructs owned descendants. Classify the value
+    // from one read; repeated typeof/arity reads would construct duplicate trees.
+    const content = props.children;
+    return typeof content === 'function' && content.length > 0 ? <ComboboxCollection>{content}</ComboboxCollection> : content;
+  })()}</>; }
   function Element() {
     // Resolve children inside the CompositeList owner once, independently of highlight props.
     const children = <Content />;

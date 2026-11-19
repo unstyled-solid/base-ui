@@ -1,7 +1,7 @@
 import ts from 'typescript';
 import { resolve } from 'node:path';
 
-// Uses the repository's real RC13 contract; reports owned and dependency errors
+// Uses the repository's pinned Solid 2 contract; reports owned and dependency errors
 // separately without muting either category or changing shared configuration.
 const root = resolve('.');
 const config = ts.readConfigFile(resolve(root, 'tsconfig.json'), ts.sys.readFile);

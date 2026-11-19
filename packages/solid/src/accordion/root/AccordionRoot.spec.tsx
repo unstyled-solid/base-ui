@@ -1,7 +1,7 @@
 import { expectType } from '../../../test';
 import { Accordion } from '../index';
 
-// Source generic inference fixtures, adapted only from React JSX to RC13 JSX.
+// Source generic inference fixtures, adapted only from React JSX to Solid 2 JSX.
 <Accordion.Root value={['a']} onValueChange={(value) => { expectType<string[], typeof value>(value); }} />;
 <Accordion.Root defaultValue={[1]} onValueChange={(value) => { expectType<number[], typeof value>(value); }} />;
 <Accordion.Root<'a' | 'b'> value={['a']} />;

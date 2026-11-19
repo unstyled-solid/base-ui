@@ -1,5 +1,5 @@
 import type { JSX } from '@solidjs/web';
-import type { Boundary, Padding, Middleware } from '@floating-ui/dom';
+import type { Boundary as FloatingBoundary, Padding, Middleware } from '@floating-ui/dom';
 import type { FloatingRootContext, ReferenceType } from './contracts/floating';
 import { createEffect, createMemo, createSignal, untrack } from 'solid-js';
 import { autoUpdate, flip, limitShift, offset, shift, size, type Placement } from '@floating-ui/dom';
@@ -13,6 +13,11 @@ import * as css from '../utils/CommonPositionerCssVars';
 import { isPositioningRequestCurrent } from '../utils/positioningRequest';
 export type Side = 'top' | 'bottom' | 'left' | 'right' | 'inline-start' | 'inline-end';
 export type Align = 'start' | 'center' | 'end';
+export type Boundary = FloatingBoundary | 'clipping-ancestors';
+export type CollisionAvoidance =
+  | { side?: 'flip' | 'none' | undefined; align?: 'flip' | 'shift' | 'none' | undefined; fallbackAxisSide?: 'start' | 'end' | 'none' | undefined }
+  | { side?: 'shift' | 'none' | undefined; align?: 'shift' | 'none' | undefined; fallbackAxisSide?: 'start' | 'end' | 'none' | undefined };
+export type UseAnchorPositioningReturnValue = AnchorPositioningResult;
 export type OffsetFunction = (data: { anchor: { width: number; height: number }; positioner: { width: number; height: number }; side: Side; align: Align }) => number;
 export interface UseAnchorPositioningSharedParameters {
   anchor?: ReferenceType | null | (() => ReferenceType | null); positionMethod?: 'absolute' | 'fixed';

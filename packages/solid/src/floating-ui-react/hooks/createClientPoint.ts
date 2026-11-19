@@ -49,7 +49,7 @@ export function createClientPoint(input: FloatingRootContext | Accessor<Floating
     win.addEventListener('mousemove', move); listening = true;
     remove = () => { listening = false; win.removeEventListener('mousemove', move); };
     return remove;
-  });
+  }, { transparent: true });
   onCleanup(() => { remove(); untrack(() => context().setPositionReference?.(null)); });
   const reference: NonNullable<InteractionProps['reference']> = {
     onPointerDown(event) { setPointer(event.pointerType); }, onPointerEnter(event) { setPointer(event.pointerType); },

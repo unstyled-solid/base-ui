@@ -1,5 +1,32 @@
 # Solid 2 RC13 test harness
 
+## Exhaustive composition qualification (stable 2.0.3)
+
+`scripts/test/composition-inventory.mjs --check` verifies the checked-in runtime
+export inventory: 206 render-bearing signatures, 250 public export spellings.
+Erased type exports and imperative render helpers are not component hosts.
+`compositionInventory.ssr` checks aliases, deterministic markup, and five extra
+reads of every scalar prop (excluding executable JSX children). Per-key owner
+counter probes reject allocations; a deliberately allocating getter is a negative
+control. `compositionInventory.hydration` uses independently compiled SSR, captures
+the first native ref claim, and checks live updates and retained interaction hosts.
+
+Portal descendants intentionally mount on the client. NavigationMenu Content's
+upstream inline crawler fallback hydrates first, then remounts in its viewport
+portal; its Content/Link tests assert both phases rather than requiring identity
+across this intentional replacement. The scrub cursor executes in chromium-native
+with real pointer lock. All other inventory cases execute in Chromium.
+
+The test-only Vite transform instruments pinned `nextChildIdFor`/`childId` calls,
+observing owner/counter positions and stacks without changing counters or installed
+packages. Independent server traces travel in escaped JSON; capture restores the
+previous observer and stack limit. Button requires exact allocation sequence
+equality. Other fixtures retain first-divergence stack evidence while asserting
+actual hydration claims: intentional client-only allocations are not server slots.
+The SSR negative controls test slot sensitivity, first divergence, and capture
+restoration. `pnpm test:interactions --full-unit` explicitly executes inventory
+freshness, exhaustive SSR/browser, and the native cursor stages.
+
 Run from the repository root; family tests import `#test-utils` (Vitest alias), or a
 relative `packages/solid/test` path. Import the family-local implementation, not a
 future root barrel. All shell commands use RTK.
@@ -93,6 +120,12 @@ animation bodies for real browsers (including the upstream unconditional skip).
 in source order; it is not a replacement production interaction engine.
 
 ## SSR / hydration
+
+All hydration console warnings/errors are fatal through the shared diagnostics
+harness, including warnings without a structured Solid diagnostic code. An
+intentional mismatch test can use `expectDiagnostic({ message, count }, run)` with
+an exact local expectation; ordinary hydration fixtures must not opt out. The
+`hydration` negative probe verifies that an unapproved key-miss warning fails.
 
 `ssr-fixture.mjs` compiles a production SSR entry with Vite and executes it in a
 fresh Node process. Only serialized HTML crosses to jsdom. The client hydrates the

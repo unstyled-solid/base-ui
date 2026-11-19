@@ -682,7 +682,7 @@ Declaration: `packages/solid/build/types/autocomplete/root/AutocompleteRoot.d.ts
 AriaCombobox.ChangeEventReason
 ```
 
-Inherited DOM attributes: `__@iterator@106`, `anchor`, `at`, `big`, `blink`, `bold`, `charAt`, `charCodeAt`, `codePointAt`, `concat`, `endsWith`, `fixed`, `fontcolor`, `fontsize`, `includes`, `indexOf`, `isWellFormed`, `italics`, `lastIndexOf`, `length`, `link`, `localeCompare`, `match`, `matchAll`, `normalize`, `padEnd`, `padStart`, `repeat`, `replace`, `replaceAll`, `search`, `slice`, `small`, `split`, `startsWith`, `strike`, `sub`, `substr`, `substring`, `sup`, `toLocaleLowerCase`, `toLocaleUpperCase`, `toLowerCase`, `toString`, `toUpperCase`, `toWellFormed`, `trim`, `trimEnd`, `trimLeft`, `trimRight`, `trimStart`, `valueOf`
+Inherited DOM attributes: `[Symbol.iterator]`, `anchor`, `at`, `big`, `blink`, `bold`, `charAt`, `charCodeAt`, `codePointAt`, `concat`, `endsWith`, `fixed`, `fontcolor`, `fontsize`, `includes`, `indexOf`, `isWellFormed`, `italics`, `lastIndexOf`, `length`, `link`, `localeCompare`, `match`, `matchAll`, `normalize`, `padEnd`, `padStart`, `repeat`, `replace`, `replaceAll`, `search`, `slice`, `small`, `split`, `startsWith`, `strike`, `sub`, `substr`, `substring`, `sup`, `toLocaleLowerCase`, `toLocaleUpperCase`, `toLowerCase`, `toString`, `toUpperCase`, `toWellFormed`, `trim`, `trimEnd`, `trimLeft`, `trimRight`, `trimStart`, `valueOf`
 
 #### Data attributes
 
@@ -768,7 +768,7 @@ Declaration: `packages/solid/build/types/autocomplete/root/AutocompleteRoot.d.ts
 AriaCombobox.HighlightEventReason
 ```
 
-Inherited DOM attributes: `__@iterator@106`, `anchor`, `at`, `big`, `blink`, `bold`, `charAt`, `charCodeAt`, `codePointAt`, `concat`, `endsWith`, `fixed`, `fontcolor`, `fontsize`, `includes`, `indexOf`, `isWellFormed`, `italics`, `lastIndexOf`, `length`, `link`, `localeCompare`, `match`, `matchAll`, `normalize`, `padEnd`, `padStart`, `repeat`, `replace`, `replaceAll`, `search`, `slice`, `small`, `split`, `startsWith`, `strike`, `sub`, `substr`, `substring`, `sup`, `toLocaleLowerCase`, `toLocaleUpperCase`, `toLowerCase`, `toString`, `toUpperCase`, `toWellFormed`, `trim`, `trimEnd`, `trimLeft`, `trimRight`, `trimStart`, `valueOf`
+Inherited DOM attributes: `[Symbol.iterator]`, `anchor`, `at`, `big`, `blink`, `bold`, `charAt`, `charCodeAt`, `codePointAt`, `concat`, `endsWith`, `fixed`, `fontcolor`, `fontsize`, `includes`, `indexOf`, `isWellFormed`, `italics`, `lastIndexOf`, `length`, `link`, `localeCompare`, `match`, `matchAll`, `normalize`, `padEnd`, `padStart`, `repeat`, `replace`, `replaceAll`, `search`, `slice`, `small`, `split`, `startsWith`, `strike`, `sub`, `substr`, `substring`, `sup`, `toLocaleLowerCase`, `toLocaleUpperCase`, `toLowerCase`, `toString`, `toUpperCase`, `toWellFormed`, `trim`, `trimEnd`, `trimLeft`, `trimRight`, `trimStart`, `valueOf`
 
 #### Data attributes
 
@@ -834,7 +834,7 @@ Declaration: `packages/solid/build/types/autocomplete/root/AutocompleteRoot.d.ts
 AriaComboboxHighlightItemTarget
 ```
 
-Inherited DOM attributes: `__@iterator@106`, `anchor`, `at`, `big`, `blink`, `bold`, `charAt`, `charCodeAt`, `codePointAt`, `concat`, `endsWith`, `fixed`, `fontcolor`, `fontsize`, `includes`, `indexOf`, `isWellFormed`, `italics`, `lastIndexOf`, `length`, `link`, `localeCompare`, `match`, `matchAll`, `normalize`, `padEnd`, `padStart`, `repeat`, `replace`, `replaceAll`, `search`, `slice`, `small`, `split`, `startsWith`, `strike`, `sub`, `substr`, `substring`, `sup`, `toLocaleLowerCase`, `toLocaleUpperCase`, `toLowerCase`, `toString`, `toUpperCase`, `toWellFormed`, `trim`, `trimEnd`, `trimLeft`, `trimRight`, `trimStart`, `valueOf`
+Inherited DOM attributes: `[Symbol.iterator]`, `anchor`, `at`, `big`, `blink`, `bold`, `charAt`, `charCodeAt`, `codePointAt`, `concat`, `endsWith`, `fixed`, `fontcolor`, `fontsize`, `includes`, `indexOf`, `isWellFormed`, `italics`, `lastIndexOf`, `length`, `link`, `localeCompare`, `match`, `matchAll`, `normalize`, `padEnd`, `padStart`, `repeat`, `replace`, `replaceAll`, `search`, `slice`, `small`, `split`, `startsWith`, `strike`, `sub`, `substr`, `substring`, `sup`, `toLocaleLowerCase`, `toLocaleUpperCase`, `toLowerCase`, `toString`, `toUpperCase`, `toWellFormed`, `trim`, `trimEnd`, `trimLeft`, `trimRight`, `trimStart`, `valueOf`
 
 #### Data attributes
 
@@ -2212,7 +2212,7 @@ Metadata status: unavailable.
 
 ### Autocomplete.List
 
-Declaration: `packages/solid/build/types/combobox/list/ComboboxList.d.ts:9`
+Declaration: `packages/solid/build/types/combobox/list/ComboboxList.d.ts:11`
 
 #### Declaration
 
@@ -2240,7 +2240,7 @@ Declaration: `packages/solid/build/types/combobox/list/ComboboxList.d.ts:9`
 
 | Prop | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| children | `JSX.Element \| ((item: any, index: number) => JSX.Element)` | No | Unavailable |  |
+| children | `JSX.Element \| ((item: any, index: number) => JSX.Element)` | No | Unavailable | Native JSX, or an implicit item template with at least one declared parameter.<br>Use Combobox.Collection for zero-arity/default/rest-parameter templates. |
 | class | `JSX.ClassValue \| ((state: Readonly<AutocompleteListState>) => ClassValue)` | No | Unavailable | CSS classes for the rendered element. A callback receives the live component state and returns a Solid class value; the result is merged with the component’s classes. |
 | style | `string \| JSX.CSSProperties \| JSX.RemoveAttribute \| ((state: Readonly<AutocompleteListState>) => StyleValue)` | No | Unavailable | Inline styles for the rendered element. A callback receives the live component state and returns a Solid style value; the result is merged with the component’s styles. |
 | render | `ComponentRenderFn<WithBaseUIEvent<JSX.HTMLAttributes<HTMLElement>>, AutocompleteListState> \| undefined` | No | Unavailable | Solid-native callback, not a cloneable pre-created JSX value. |
@@ -2263,7 +2263,7 @@ Metadata status: unavailable.
 
 ### Related exported type: Autocomplete.List.Props
 
-Declaration: `packages/solid/build/types/combobox/list/ComboboxList.d.ts:11`
+Declaration: `packages/solid/build/types/combobox/list/ComboboxList.d.ts:13`
 
 #### Declaration
 
@@ -2291,7 +2291,7 @@ ComboboxListProps
 
 | Property | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| children | `JSX.Element \| ((item: any, index: number) => JSX.Element)` | No | Unavailable |  |
+| children | `JSX.Element \| ((item: any, index: number) => JSX.Element)` | No | Unavailable | Native JSX, or an implicit item template with at least one declared parameter.<br>Use Combobox.Collection for zero-arity/default/rest-parameter templates. |
 | class | `JSX.ClassValue \| ((state: Readonly<AutocompleteListState>) => ClassValue)` | No | Unavailable | CSS classes for the rendered element. A callback receives the live component state and returns a Solid class value; the result is merged with the component’s classes. |
 | style | `string \| JSX.CSSProperties \| JSX.RemoveAttribute \| ((state: Readonly<AutocompleteListState>) => StyleValue)` | No | Unavailable | Inline styles for the rendered element. A callback receives the live component state and returns a Solid style value; the result is merged with the component’s styles. |
 | render | `ComponentRenderFn<WithBaseUIEvent<JSX.HTMLAttributes<HTMLElement>>, AutocompleteListState> \| undefined` | No | Unavailable | Solid-native callback, not a cloneable pre-created JSX value. |
@@ -2312,7 +2312,7 @@ Metadata status: unavailable.
 
 ### Related exported type: Autocomplete.List.State
 
-Declaration: `packages/solid/build/types/combobox/list/ComboboxList.d.ts:12`
+Declaration: `packages/solid/build/types/combobox/list/ComboboxList.d.ts:14`
 
 #### Declaration
 
@@ -2734,7 +2734,7 @@ Declaration: `packages/solid/build/types/combobox/positioner/ComboboxPositioner.
 | arrowPadding | `number \| undefined` | No | Unavailable | Minimum padding in pixels between the arrow and the floating element’s edges. |
 | anchor | `ReferenceType \| (() => ReferenceType \| null) \| null \| undefined` | No | Unavailable | Positioning reference: an element or virtual reference, or an accessor returning one. A nullish reference falls back to the root’s reference. |
 | collisionAvoidance | `{ side?: "flip" \| "shift" \| "none"; align?: "flip" \| "shift" \| "none"; fallbackAxisSide?: "start" \| "end" \| "none"; } \| undefined` | No | { side: 'flip', align: 'shift', fallbackAxisSide: 'none' } | Controls flipping or shifting along the side and alignment axes, including fallback placement on the perpendicular axis. |
-| collisionBoundary | `Boundary \| "clipping-ancestors" \| undefined` | No | Unavailable | Boundary used to detect overflow. The clipping-ancestors value uses clipping ancestors as the overflow boundary. |
+| collisionBoundary | `Boundary \| undefined` | No | Unavailable | Boundary used to detect overflow. The clipping-ancestors value uses clipping ancestors as the overflow boundary. |
 | collisionPadding | `Padding \| undefined` | No | Unavailable | Space in pixels reserved inside the collision boundary, either for all edges or per edge. |
 | sticky | `boolean \| undefined` | No | Unavailable | Allows shifting along the side axis without the usual limitShift limiter. |
 | positionMethod | `"fixed" \| "absolute" \| undefined` | No | Unavailable | CSS positioning strategy used by the floating element: absolute or fixed. |
@@ -2875,7 +2875,7 @@ ComboboxPositionerProps
 | arrowPadding | `number \| undefined` | No | Unavailable | Minimum padding in pixels between the arrow and the floating element’s edges. |
 | anchor | `ReferenceType \| (() => ReferenceType \| null) \| null \| undefined` | No | Unavailable | Positioning reference: an element or virtual reference, or an accessor returning one. A nullish reference falls back to the root’s reference. |
 | collisionAvoidance | `{ side?: "flip" \| "shift" \| "none"; align?: "flip" \| "shift" \| "none"; fallbackAxisSide?: "start" \| "end" \| "none"; } \| undefined` | No | Unavailable | Controls flipping or shifting along the side and alignment axes, including fallback placement on the perpendicular axis. |
-| collisionBoundary | `Boundary \| "clipping-ancestors" \| undefined` | No | Unavailable | Boundary used to detect overflow. The clipping-ancestors value uses clipping ancestors as the overflow boundary. |
+| collisionBoundary | `Boundary \| undefined` | No | Unavailable | Boundary used to detect overflow. The clipping-ancestors value uses clipping ancestors as the overflow boundary. |
 | collisionPadding | `Padding \| undefined` | No | Unavailable | Space in pixels reserved inside the collision boundary, either for all edges or per edge. |
 | sticky | `boolean \| undefined` | No | Unavailable | Allows shifting along the side axis without the usual limitShift limiter. |
 | positionMethod | `"fixed" \| "absolute" \| undefined` | No | Unavailable | CSS positioning strategy used by the floating element: absolute or fixed. |
