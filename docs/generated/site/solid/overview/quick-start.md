@@ -4,7 +4,7 @@
 
 A quick guide to getting started with Base UI.
 
-Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.2. [Project repository](https://github.com/unstyled-solid/base-ui).
+Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha release 0.0.4. [Project repository](https://github.com/unstyled-solid/base-ui).
 
 This is an alpha release. APIs and behavior may change. This independent, unofficial port is not maintained by the upstream Base UI team and does not claim equivalent browser, device, or screen-reader coverage. Test it in your application before relying on it.
 
@@ -17,7 +17,7 @@ Install Base UI using a package manager.
 Install `@unstyled-solid/base-ui` and its pinned Solid 2 peers:
 
 ```sh
-pnpm add @unstyled-solid/base-ui@0.0.2
+pnpm add @unstyled-solid/base-ui@0.0.4
 pnpm add solid-js@2.0.3 @solidjs/web@2.0.3
 pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.1 @solidjs/compiler@2.0.2 @solidjs/babel-plugin@2.0.2
 ```
