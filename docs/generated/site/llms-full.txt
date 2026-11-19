@@ -1,6 +1,6 @@
 # Base UI for Solid — full documentation
 
-@unstyled-solid/base-ui 0.0.2 (alpha), Solid 2.0.0-rc.13.
+@unstyled-solid/base-ui 0.0.2 (alpha), Solid 2.0.3.
 Support: https://github.com/unstyled-solid/base-ui
 
 <!-- /solid/components/accordion -->
@@ -65369,7 +65369,7 @@ For the upstream browser targets, refer to its [.browserslistrc](https://github.
 
 ## Solid version
 
-This port targets Solid 2.0.0-rc.13 and @solidjs/web 2.0.0-rc.13.
+This port targets Solid 2.0.3 and @solidjs/web 2.0.3.
 
 <a id="bundler-support"></a>
 
@@ -65569,8 +65569,8 @@ Install `@unstyled-solid/base-ui` and its pinned Solid 2 peers:
 
 ```sh
 pnpm add @unstyled-solid/base-ui@0.0.2
-pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
-pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.13 @solidjs/babel-plugin@2.0.0-rc.13
+pnpm add solid-js@2.0.3 @solidjs/web@2.0.3
+pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.1 @solidjs/compiler@2.0.2 @solidjs/babel-plugin@2.0.2
 ```
 
 Configure the Solid Vite plugin and TypeScript JSX source:
@@ -66821,12 +66821,12 @@ Base UI for Solid is an independent, unofficial Solid 2 port of Base UI. Alpha r
 
 ## Installation
 
-Public package: @unstyled-solid/base-ui@0.0.2. Requires solid-js and @solidjs/web 2.0.0-rc.13. Use the matching RC13 compiler packages.
+Public package: @unstyled-solid/base-ui@0.0.2. Requires solid-js and @solidjs/web 2.0.3. Use the matching compiler packages.
 
 ```sh
 pnpm add @unstyled-solid/base-ui@0.0.2
-pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
-pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.13 @solidjs/babel-plugin@2.0.0-rc.13
+pnpm add solid-js@2.0.3 @solidjs/web@2.0.3
+pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.1 @solidjs/compiler@2.0.2 @solidjs/babel-plugin@2.0.2
 ```
 
 <a id="alpha-limitations"></a>

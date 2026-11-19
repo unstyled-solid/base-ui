@@ -5,7 +5,9 @@ import { TemporalAdapterLuxon } from '../temporal-adapter-luxon';
 
 it('temporal core has no runtime exports and both adapters operate without a DOM', () => {
   expect(typeof document).toBe('undefined');
-  expect(Object.keys(temporal)).toEqual([]);
+  // Vite's Solid 3 plugin adds SSR lazy-module metadata to source modules.
+  // It is not an export of the packed, type-only temporal entry.
+  expect(Object.keys(temporal).filter(key => key !== '$$moduleUrl')).toEqual([]);
   const dates = new TemporalAdapterDateFns();
   const luxon = new TemporalAdapterLuxon();
   const d = dates.date('2024-10-27T00:00', 'Europe/Paris');

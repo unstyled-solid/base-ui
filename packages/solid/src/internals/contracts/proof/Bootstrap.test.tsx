@@ -40,7 +40,8 @@ test('Bootstrap: staged updates, current callbacks and live render state retain 
   });
   const button = view.getByRole('button');
   expect(button.textContent).toBe('Count: 0');
-  expect(refOwner).toBeNull();
+  // Stable refs run untracked in their creating context, not under null owner.
+  expect(refOwner).not.toBeNull();
   expect(effects).toEqual([0]);
   expect(settled).toHaveBeenCalledTimes(1);
   change();

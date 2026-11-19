@@ -8,6 +8,7 @@ import { build } from 'vite';
 import { chromium } from 'playwright';
 import { compile, moduleImports, verifyToolchain } from './compiler.mjs';
 import { root } from './index.mjs';
+import contract from '../../../distribution/package-contract.json' with { type: 'json' };
 
 export async function smoke({ compilerControl = false } = {}) {
   verifyToolchain();
@@ -16,12 +17,15 @@ export async function smoke({ compilerControl = false } = {}) {
   try {
     const staged = path.join(root, 'packages/solid/build');
     const manifest = JSON.parse(await fs.readFile(path.join(staged, 'package.json'), 'utf8'));
-    assert.equal(manifest.private, true);
+    assert.equal(manifest.private, !contract.identity.publicationName);
+    assert.equal(manifest.name, contract.identity.publicationName ?? contract.identity.workspaceName);
     assert.equal(Object.keys(manifest.exports).length, 79);
     const source = await fs.readFile(new URL('./fixture.tsx', import.meta.url), 'utf8');
+    const isPackage = specifier => [manifest.name, contract.identity.workspaceName].some(name => specifier === name || specifier.startsWith(`${name}/`));
     const resolvePackage = (specifier, target) => {
-      if (specifier !== manifest.name && !specifier.startsWith(`${manifest.name}/`)) return specifier;
-      const key = specifier === manifest.name ? '.' : `.${specifier.slice(manifest.name.length)}`;
+      if (!isPackage(specifier)) return specifier;
+      const name = [manifest.name, contract.identity.workspaceName].find(name => specifier === name || specifier.startsWith(`${name}/`));
+      const key = specifier === name ? '.' : `.${specifier.slice(name.length)}`;
       const entry = manifest.exports[key]?.[target];
       if (!entry) throw new Error(`No runtime export ${specifier}`);
       return path.join(staged, entry);
@@ -31,7 +35,7 @@ export async function smoke({ compilerControl = false } = {}) {
     for (const [target, generate] of [['default', 'ssr'], ['browser', 'dom']]) {
       const output = compile(source, 'fixture.tsx', generate);
       for (const specifier of moduleImports(output.code, 'fixture.js')) {
-        if (specifier === manifest.name) output.code = output.code.replaceAll(JSON.stringify(specifier), JSON.stringify(resolvePackage(specifier, target)));
+        if (isPackage(specifier)) output.code = output.code.replaceAll(JSON.stringify(specifier), JSON.stringify(resolvePackage(specifier, target)));
       }
       await fs.writeFile(path.join(directory, `${generate}.mjs`), output.code);
     }

@@ -63,7 +63,7 @@ For the upstream browser targets, refer to its [.browserslistrc](https://github.
 
 ## Solid version
 
-This port targets Solid 2.0.0-rc.13 and @solidjs/web 2.0.0-rc.13.
+This port targets Solid 2.0.3 and @solidjs/web 2.0.3.
 
 <a id="bundler-support"></a>
 

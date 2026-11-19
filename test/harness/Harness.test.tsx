@@ -79,7 +79,7 @@ describe('Harness runtime contract', () => {
     expect(view.getByRole('textbox')).toBe(input);
     expect(document.activeElement).toBe(input);
   });
-  it('owns setup resources; ref callbacks are ownerless and their returns are ignored', async () => {
+  it('owns setup resources; refs retain creating context and their returns are ignored', async () => {
     const ignored = vi.fn();
     const disposed = vi.fn();
     let owner: ReturnType<typeof getOwner>;
@@ -90,12 +90,15 @@ describe('Harness runtime contract', () => {
       onSettled(() => { expect(node?.isConnected).toBe(true); return disposed; });
       return <input ref={(element) => { node = element; refOwner = getOwner(); return ignored; }} />;
     });
-    expect(refOwner).toBeNull();
+    // Stable runRefCallback retains context for held-node staging, but forbids
+    // primitive creation; getOwner() is no longer null as it was in RC20.
+    expect(refOwner).not.toBeNull();
     view.unmount();
     view.unmount();
     expect(disposed).toHaveBeenCalledTimes(1);
     expect(ignored).not.toHaveBeenCalled();
     expect(isDisposed(owner!)).toBe(true);
+    expect(isDisposed(refOwner!)).toBe(true);
   });
   it('cleans attached resources on conditional removal and replacement, including detached nodes', async () => {
     const calls = vi.fn();

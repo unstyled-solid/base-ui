@@ -18,8 +18,8 @@ Install `@unstyled-solid/base-ui` and its pinned Solid 2 peers:
 
 ```sh
 pnpm add @unstyled-solid/base-ui@0.0.2
-pnpm add solid-js@2.0.0-rc.13 @solidjs/web@2.0.0-rc.13
-pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.0-next.47 @solidjs/compiler@2.0.0-rc.13 @solidjs/babel-plugin@2.0.0-rc.13
+pnpm add solid-js@2.0.3 @solidjs/web@2.0.3
+pnpm add -D vite@8.3.2 @solidjs/vite-plugin@3.0.1 @solidjs/compiler@2.0.2 @solidjs/babel-plugin@2.0.2
 ```
 
 Configure the Solid Vite plugin and TypeScript JSX source:

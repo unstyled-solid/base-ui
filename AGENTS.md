@@ -4,7 +4,7 @@
 - State the result directly. Add caveats only when they change the user's decision; when corrected, fix the mistake without defending it.
 
 ## Authority and scope
-- Fresh port of React Base UI to Solid **2.0.0-rc.20**. React upstream is the only behavioral source of truth. Never implement from `../ref/base-ui-solid`.
+- Fresh port of React Base UI to Solid **2.0.3** (compiler/Babel **2.0.2**). React upstream is the only behavioral source of truth. Never implement from `../ref/base-ui-solid`.
 - Current research reference: `../ref/base-ui`, commit `19511bb171f3b360b006c94cf6d07e53cb446505`. Bootstrap creates the independent pinned checkout at `upstream/base-ui`. Both upstream and reference code are read-only to port workers.
 - Read `docs/architecture.md`, `docs/solid2-contract.md`, `docs/parallel-execution.md`, then your Beads ticket and its exact source files.
 

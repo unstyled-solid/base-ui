@@ -14,7 +14,7 @@ test('public plain pnpm installation retains runtime and compiler pins', () => {
   assert.equal(installation.package, '@unstyled-solid/base-ui');
   assert.match(installation.commands, /^pnpm add @unstyled-solid\/base-ui@0\.0\.2\n/);
   assert.doesNotMatch(installation.commands, /rtk|workspace|baseui-solid2/);
-  for (const name of ['solid-js', '@solidjs/web', '@solidjs/compiler', '@solidjs/babel-plugin']) assert.ok(installation.commands.includes(`${name}@2.0.0-rc.20`));
+  for (const name of ['solid-js', '@solidjs/web', '@solidjs/compiler', '@solidjs/babel-plugin']) assert.ok(installation.commands.includes(`${name}@${name.includes('compiler') || name.includes('babel') ? '2.0.2' : '2.0.3'}`));
 });
 
 test('emitted shadcn phrase stays React ecosystem context', () => {
@@ -73,12 +73,12 @@ test('about labels browser guidance as upstream targets without changing its ID 
   assert.match(flatten(result.ast), /does not claim equivalent browser, device, or screen-reader coverage/);
 });
 
-test('release routes contain verified identity, RC20 requirement and alpha limits', () => {
+test('release routes contain verified identity, stable requirement and alpha limits', () => {
   const pages = createReleasePages(page('about', []));
   assert.deepEqual(pages.map((p) => p.route), ['/solid/overview/releases', '/solid/overview/releases/v0-0-1']);
   const notes = flatten(pages[1].ast);
   assert.match(notes, /@unstyled-solid\/base-ui@0.0.2/);
-  assert.match(notes, /2.0.0-rc.20/);
+  assert.match(notes, /2\.0\.3/);
   assert.match(notes, /APIs and behavior may change/);
   assert.match(notes, /does not claim equivalent browser, device, or screen-reader coverage/);
   assert.doesNotMatch(notes, /qualification|workspace|rtk|2026/);

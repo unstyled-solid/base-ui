@@ -27,22 +27,22 @@ shared contracts require coordinator approval rather than competing definitions.
 |---|---|---|
 | Node | `25.8.1` | Installed runtime; satisfies every engine below; pinned in root `engines` |
 | pnpm | `11.8.0` | Installed manager, Node `>=22.13`; exact `packageManager` and engine |
-| solid-js, @solidjs/web | `2.0.0-rc.20` | Matching runtime and renderer release candidates |
-| @solidjs/signals | `2.0.0-rc.20` | Pin the otherwise caret-selected reactive core too |
-| @solidjs/compiler, @solidjs/babel-plugin | `2.0.0-rc.20` | Both compile DOM/SSR; retain the tested Babel backend |
-| @solidjs/vite-plugin | `3.0.0-next.47` | Node `>=22.12.0`, peers Vite `^8 || ^9` and RC.13 |
+| solid-js, @solidjs/web | `2.0.3` | Matching stable runtime and renderer |
+| @solidjs/signals | `2.0.3` | Pin the otherwise caret-selected reactive core too; stock diagnostics fix |
+| @solidjs/compiler, @solidjs/babel-plugin | `2.0.2` | Both compile DOM/SSR; retain the tested Babel backend |
+| @solidjs/vite-plugin | `3.0.1` | Peers Vite `^8 || ^9` and Solid/web/Babel `^2.0.0` |
 | Vite | `8.3.2` | Node `^20.19.0 || >=22.12.0` |
 | Vitest | `4.1.11` | Vite `^6 || ^7 || ^8`, Node `^20 || ^22 || >=24` |
-| TypeScript | `5.9.3` | Node `>=14.17`; strict check of RC.20 declarations |
+| TypeScript | `5.9.3` | Node `>=14.17`; strict check of stable declarations |
 | @types/node | `25.9.9` | Node 25 declaration line |
 | jsdom | `27.4.0` | Node `^20.19.0 || ^22.12.0 || >=24` |
-| @solidjs/testing-library | `1.0.0-beta.3` | Solid/web peers `>=2.0.0-0`, DOM testing library `^10.4.1` |
+| @solidjs/testing-library | `1.0.0-rc.2` | Solid/web peers `>=2.0.0-0`, DOM testing library `^10.4.2` |
 | @testing-library/dom | `10.4.2` | Node `>=18` |
 | @testing-library/user-event | `14.6.7` | DOM testing library `>=7.21.4`, Node `>=12` |
 | @babel/core | `7.29.7` | Satisfies compiler plugin's Babel 7 peer |
 
 Registry metadata was checked before installation; strict peers and engines remain enabled.
-All direct versions are exact; workspace overrides keep the coordinated RC packages from
+All direct versions are exact; workspace overrides keep the coordinated Solid packages from
 drifting independently. The Node pin records this verified bootstrap environment, rather than
 copying React upstream's unrelated pnpm 12/TypeScript 6 requirements. Distribution support
 matrices belong to distribution qualification. No optional React/tooling peers were installed.
