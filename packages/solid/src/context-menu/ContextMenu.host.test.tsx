@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { createSignal, flush, onCleanup, untrack, useContext } from 'solid-js';
-import type { JSX } from '@solidjs/web';
+import { createRoot, createSignal, flush, onCleanup, untrack, useContext } from 'solid-js';
+import { insert, type JSX } from '@solidjs/web';
 import { advanceTimers, cleanup, createRenderer, fireEvent, screen } from '../../test';
 import { ContextMenuRoot } from './root/ContextMenuRoot';
 import type { ContextMenuRootProps } from './root/ContextMenuRoot';
@@ -290,18 +290,31 @@ describe('ContextMenu host source regressions (Menu seam)', () => {
     const win = ownerWindow(doc.documentElement);
     let host!: ContextMenuRootContext;
     const changed = vi.fn();
-    const view = await render(() => <ContextMenuRoot><Host capture={value => { host = value; }} changed={changed} trigger={{
-      render: props => <div ref={element => {
-        // Native renderer refs normally precede listener attachment. This
-        // custom host installs the actual merged handler before reporting its
-        // ref, making the same-turn owner-realm check deterministic.
-        doc.adoptNode(element);
-        element.addEventListener('contextmenu', props.onContextMenu as EventListener);
-        props.ref?.(element);
-        element.dispatchEvent(new win.MouseEvent('contextmenu', { bubbles: true, cancelable: true, clientX: 30, clientY: 40 }));
-      }} />,
-    }} /></ContextMenuRoot>, { container: doc.body, baseElement: doc.body });
+    let dispose!: () => void;
+    let element!: HTMLDivElement;
+    let committedRef!: () => HTMLDivElement | null;
+    let triggerProps!: Parameters<NonNullable<ContextMenuTriggerProps['render']>>[0];
+    // web.render flushes before returning. Mount with insert instead so the
+    // gesture can run outside a ref callback, before staged ref writes commit.
+    createRoot(stop => {
+      dispose = stop;
+      const [node, setNode] = createSignal<HTMLDivElement | null>(null);
+      committedRef = node;
+      insert(doc.body, () => <ContextMenuRoot><Host capture={value => { host = value; }} changed={changed} trigger={{
+        ref: setNode,
+        render: props => {
+          triggerProps = props;
+          return <div ref={node => { doc.adoptNode(node); element = node; }} />;
+        },
+      }} /></ContextMenuRoot>);
+    });
     try {
+      element.addEventListener('contextmenu', triggerProps.onContextMenu as EventListener);
+      triggerProps.ref?.(element);
+      expect(committedRef()).toBeNull();
+      element.dispatchEvent(new win.MouseEvent('contextmenu', { bubbles: true, cancelable: true, clientX: 30, clientY: 40 }));
+      flush();
+      expect(committedRef()).toBe(element);
       expect(changed).toHaveBeenCalledTimes(1);
       expect(untrack(() => host.anchor.getBoundingClientRect())).toBeInstanceOf(win.DOMRect);
       await advanceTimers(500);
@@ -309,6 +322,6 @@ describe('ContextMenu host source regressions (Menu seam)', () => {
       expect(changed).toHaveBeenCalledTimes(1);
       doc.body.dispatchEvent(new win.MouseEvent('mouseup', { bubbles: true }));
       expect(changed).toHaveBeenCalledTimes(2);
-    } finally { view.unmount(); frame.remove(); }
+    } finally { dispose(); frame.remove(); }
   });
 });

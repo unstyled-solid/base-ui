@@ -112,6 +112,44 @@ For a multi-component or recurring defect:
 
 For a simple local change, use the smallest meaningful check instead of invoking the whole gate.
 
+### Prevent speculative debugging loops
+
+- Before each experiment, state the causal hypothesis, smallest reproducer,
+  changed variable, predicted result and acceptance criterion. Reuse existing
+  evidence. A new wrapper around the same failing callback is not a new hypothesis.
+- After two failed targeted fixes, stop implementation and give the coordinator
+  the evidence: what was disproved, remaining hypotheses and the next decisive
+  experiment. Reassess before another patch; do not silently extend the correction
+  pass. Solo workers perform the same explicit reassessment. This does not mean
+  abandon the task or hide its failure.
+- Keep integration runs after a demonstrated local correction. Do not repeatedly
+  run expensive suites while the smallest case still fails, or rerun unchanged
+  green checks without a new concern. Revert failed experiments, not user work.
+- Old dependency versions may be isolated experimental controls, never a silent
+  downgrade of the active checkout. Compare identical workloads and memory limits.
+
+### Stable 2.0.3 upgrade lessons
+
+Context providers can return bare lazy accessors without `.toArray`. The Menu,
+MenuFilter, Tooltip and Dialog root adapters previously treated those as payload
+callbacks and evaluated them in the subtree-construction memo. Descendant portal
+status then invalidated construction, recreating owners until OOM. Use native
+owned `children` normalization with lazy JSX boundaries to separate construction
+from resolution; preserve payload arguments and explicit native-child conventions.
+Do not classify using private brands or function arity. See the four root adapters
+and `docs/engineering/solid-stable-upgrade.md` for the measured control and repair.
+
+The ContextMenu host fixture used to read live props and dispatch a synthetic event
+inside a native ref callback, which stable strict-read diagnostics reject. Its
+contract is **a gesture before staged ref registration commits**, not dispatch
+inside that callback. `web.render` flushes before returning, so simply moving the
+event after render weakens the test. The corrected `ContextMenu.host.test.tsx`
+uses owned `createRoot`/`insert`, captures the node in ref, then forwards the real
+ref and dispatches the event imperatively before flushing. Sentinel assertions
+prove the ref-written signal is uncommitted before the event and committed after
+flush. Keep original iframe realm/release assertions and root disposal. Do not
+change production event ownership or suppress diagnostics to fix this fixture.
+
 ### Required evidence
 
 - Keep diagnostics enabled. Read `node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md` for observed codes. Use attribution `why`, `costs`, and owner/cause records when needed; import folds before the interaction being measured.

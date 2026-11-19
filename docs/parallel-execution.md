@@ -24,6 +24,23 @@ The coordinator checks all selected tickets' `owns` metadata before dispatch. Gi
 - Coverage files: each worker writes only its own family/foundation file; central tooling generates aggregate reports.
 - A completed task hands off APIs, files, source/test mappings, checks and deferred final-browser cases. Follow-up stages do not silently change a published interface while consumers run.
 
+## Coordinating a regression investigation
+
+- Assign one owner to a shared regression. Give it the exact failing workload,
+  relevant prior attempts, file allowlist, hypothesis and observable finish line.
+- Require new causal evidence in progress reports, not a list of commands run.
+  After two failed targeted fixes, review the worker's hypothesis/experiment/result
+  summary before authorizing another implementation attempt. Do not repeatedly
+  send "continue fixing" instructions without inspecting why progress stalled.
+- Separate actual product defects from invalid fixture assumptions using the
+  pinned runtime and original behavioral contract. A fixture adaptation must keep
+  the timing/identity/behavior assertions and prove the property it is testing.
+- Use focused tests during diagnosis, then the scoped integrated gate after a
+  demonstrated repair. Preserve completed evidence and avoid duplicate concurrent
+  suites, overlapping writers, or delegating the same investigation repeatedly.
+- Label isolated old-version controls as comparisons; never silently downgrade
+  the active checkout. Keep unknown causality explicit until the control proves it.
+
 ## Qualification policy
 Source test inventory includes test/spec files, parameterized cases, generated conformance suites, skipped/todo cases and environment restrictions. Every case has a target, explicit framework-only adaptation, or open blocker. Contract fixtures permit independent development but never substitute for final tests using real components.
 
