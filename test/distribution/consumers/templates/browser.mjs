@@ -8,7 +8,8 @@ import { namespaceOracle, assertRuntimeAccounting } from './runtime-accounting.m
 const input = JSON.parse(await fs.readFile('input.json', 'utf8'));
 const mask = Number(process.argv[2]);
 const optimized = process.argv.includes('--optimized');
-const artifact = JSON.parse(await fs.readFile('ssr-result.json', 'utf8'));
+const environment = !optimized && input.conditionSets[mask].includes('development') ? 'development' : 'production';
+const artifact = JSON.parse(await fs.readFile(`ssr-result-${environment}.json`, 'utf8'));
 const oracle = optimized ? undefined : namespaceOracle(input, JSON.parse(await fs.readFile('resolution-0.json', 'utf8')));
 const clientRoot = path.resolve(optimized ? 'bundles/shake-optimized' : `bundles/client-${mask}`);
 const diagnostics = [], evidence = { mask, optimized, conditions: optimized ? ['browser'] : input.conditionSets[mask], diagnostics, assertions: [] };
@@ -40,7 +41,12 @@ try {
   // the module would deadlock the prehydration test.
   await page.goto(`http://127.0.0.1:${server.address().port}/`, { waitUntil: 'commit' });
   await page.locator('#package-toggle').waitFor();
-  await page.evaluate(() => { window.originalButton = document.querySelector('#package-toggle'); window.originalSeparator = document.querySelector('#package-separator'); });
+  await page.evaluate(() => {
+    window.originalButton = document.querySelector('#package-toggle'); window.originalSeparator = document.querySelector('#package-separator');
+    window.originalComposed = document.querySelector('[data-component-host]');
+    window.originalComposedId = window.originalComposed.id;
+    window.originalIds = [...document.querySelectorAll('main [id]')].map(node => node.id);
+  });
   await page.click('#package-toggle');
   release();
   await page.waitForFunction(() => window.ready === true, null, { timeout: 15_000 });
@@ -51,6 +57,11 @@ try {
     evidence.runtimeNamespaces = imports;
   }
   assert.equal(await page.evaluate(() => window.originalButton === document.querySelector('#package-toggle') && window.originalSeparator === document.querySelector('#package-separator')), true);
+  assert.equal(await page.evaluate(() => window.originalComposed === document.querySelector('[data-component-host]') && window.originalComposedId === window.originalComposed.id), true);
+  assert.deepEqual(await page.evaluate(() => [...document.querySelectorAll('main [id]')].map(node => node.id)), await page.evaluate(() => window.originalIds));
+  await page.click('[data-component-host]');
+  await page.waitForFunction(() => document.querySelector('#package-composed-value').textContent === 'on');
+  evidence.assertions.push('component render host reads props before creation; original SSR node and IDs retained; native click updates state');
   await page.waitForFunction(() => window.check().value === 'on');
   assert.equal((await page.evaluate(() => window.check())).pressed, 'true');
   evidence.assertions.push(optimized ? 'optimized real-family fixture executed' : 'all runtime exports executed', 'SSR original button/separator retained', 'prehydration native click replayed');

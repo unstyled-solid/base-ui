@@ -10,8 +10,9 @@ function flatten<T extends Element>(refs: readonly InputRef<T>[]): InputRef<T>[]
   return refs.flatMap((ref) => Array.isArray(ref) ? flatten<T>(ref) : ref == null ? [] : [ref]);
 }
 
-/** Create during setup. The returned callback is safe in an ownerless renderer ref.
- * Callback returns follow RC13 (ignored). Composed callbacks must tolerate a null
+/** Create during setup. This adapter dispatches callbacks untracked and ownerless;
+ * capture context in setup rather than reading it from a composed callback.
+ * Callback returns follow Solid 2.0.3 (ignored). Composed callbacks must tolerate a null
  * detach notification, supplied by this owner because the renderer does not send it.
  */
 export function createMergedRefsN<T extends Element>(refs: readonly InputRef<T>[] | Accessor<readonly InputRef<T>[]>): MergedRef<T> {
@@ -24,8 +25,10 @@ export function createMergedRefsN<T extends Element>(refs: readonly InputRef<T>[
   let attached: InputRef<T>[] = [];
   let disposed = false;
   function apply(ref: InputRef<T>, element: T | null) {
-    // Every path (settled replacement and teardown included) follows native
-    // RC13 refs: untracked and ownerless, callback return deliberately ignored.
+    // Preserve this adapter's ownerless dispatch contract on every path,
+    // including settled replacement and teardown. Native Solid 2.0.3 refs
+    // instead retain creating context; this is not native ownership emulation.
+    // Callback returns are deliberately ignored, as with native Solid refs.
     untrack(() => runWithOwner(null, () => {
       if (typeof ref === 'function') (ref as (value: T | null) => void)(element);
       else if (ref != null && typeof ref === 'object' && 'current' in ref) ref.current = element;

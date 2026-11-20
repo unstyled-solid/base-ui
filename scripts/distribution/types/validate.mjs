@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { assertExportMap, contracts, packageRoot, readJson } from './shared.mjs';
+import { assertExportMap, contracts, packageRoot, readJson, targetLeaves } from './shared.mjs';
 import { classifyAnalysis } from './attw.mjs';
 
 async function tool(name) {
@@ -30,7 +30,7 @@ async function main() {
     const { exports: contract, pkg: contractPackage } = await contracts();
     assertExportMap(metadata.exports, contract, contractPackage);
     for (const entry of Object.values(metadata.exports)) {
-      for (const target of Object.values(entry)) await fs.access(path.join(directory, target));
+      for (const target of targetLeaves(entry)) await fs.access(path.join(directory, target));
     }
     const lint = await publint({ pkgDir: directory });
     console.log(JSON.stringify({ publint: lint.messages }, null, 2));

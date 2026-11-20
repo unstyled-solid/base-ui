@@ -23,6 +23,17 @@ for (const [key, entry] of Object.entries(input.contract)) {
     record.resolved = fileURLToPath(import.meta.resolve(name));
     assert(expected, `${name}: unexpected runtime target`);
     assert.equal(record.resolved, path.resolve('node_modules', input.name, expected));
+    if (entry.kind === 'runtime' && !conditions.includes('types')) {
+      const directory = (conditions.includes('worker') || !conditions.includes('browser') ? 'server' : 'dom') +
+        (conditions.includes('development') ? '-dev' : '');
+      assert(record.resolved.startsWith(path.resolve('node_modules', input.name, directory) + path.sep));
+      if (key === './button') {
+        // The barrel reexports Button; its actual diagnostic lives in useButton.
+        const code = await fs.readFile(path.resolve('node_modules', input.name, directory, 'internals/use-button/useButton.js'), 'utf8');
+        assert.equal(code.includes('a native <button>'), conditions.includes('development'));
+        assert(!code.includes('process.env.NODE_ENV'));
+      }
+    }
   } catch (error) {
     record.resolutionError = { code: error.code, message: error.message, stack: error.stack };
     if (expected || error.code !== 'ERR_PACKAGE_PATH_NOT_EXPORTED') failures.push(record);

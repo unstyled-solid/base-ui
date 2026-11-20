@@ -90,10 +90,15 @@ export async function extract({ root, entries, sourceBase = null, requiredMetada
         const roots = checker.getRootSymbols(p);
         const pd = location(p) ?? roots.map(location).find(Boolean) ?? d;
         const pt = checker.getTypeOfSymbolAtLocation(p, pd);
+        // TypeScript's __@iterator@123 spelling contains a process-local symbol
+        // ID. Publish the actual computed property name, so fresh extractions
+        // and different program creation orders produce identical inventories.
+        const propertyName = p.name.startsWith('__@') && pd.name && ts.isComputedPropertyName(pd.name)
+          ? pd.name.getText(pd.getSourceFile()) : p.name;
         const inheritedDOM = /^(?:prop|attr|on|oncapture|bind):/.test(p.name) || /(?:node_modules|typescript\/lib)\//.test(pd.getSourceFile().fileName);
-        if (inheritedDOM) return { name: p.name, anchor: anchor(`${parent}.${p.name}`), compatibilityAnchor: !location(p) || !/(?:node_modules|typescript\/lib)\//.test(location(p).getSourceFile().fileName), type: typeText(pt, pd), description: '', required: !(p.flags & ts.SymbolFlags.Optional), default: { status: 'unavailable', value: null }, inheritedDOM: true, source: source(p), links: [], tags: [] };
+        if (inheritedDOM) return { name: propertyName, anchor: anchor(`${parent}.${propertyName}`), compatibilityAnchor: !location(p) || !/(?:node_modules|typescript\/lib)\//.test(location(p).getSourceFile().fileName), type: typeText(pt, pd), description: '', required: !(p.flags & ts.SymbolFlags.Optional), default: { status: 'unavailable', value: null }, inheritedDOM: true, source: source(p), links: [], tags: [] };
         const defaults = tags(p).find((tag) => ['default', 'defaultValue'].includes(tag.name));
-        return { name: p.name, anchor: anchor(`${parent}.${p.name}`), type: typeText(pt, pd),
+        return { name: propertyName, anchor: anchor(`${parent}.${propertyName}`), type: typeText(pt, pd),
           description: text(p), required: !(p.flags & ts.SymbolFlags.Optional),
           default: defaults ? { status: 'documented', value: defaults.text } : sourceDefaults.get(p.name) ?? { status: 'unavailable', value: null },
           inheritedDOM: /(?:node_modules|typescript\/lib)\//.test(pd.getSourceFile().fileName),

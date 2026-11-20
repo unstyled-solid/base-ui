@@ -73,11 +73,6 @@ export function SwitchRoot(props: SwitchRootProps) {
     field?.setDirty(checked !== field.validityData.initialValue);
     field?.validation.change(checked);
   });
-  // RC13 clears an input's value property to "" when a spread key disappears.
-  // Checkboxes must instead regain their native "on" value by removing the attribute.
-  createEffect(() => ({ node: input(), value: props.value }), ({ node, value }) => {
-    if (node && value === undefined) node.removeAttribute('value');
-  });
   const restoreInput = () => {
     if (!disposed && inputNode) inputNode.checked = untrack(model.value);
   };

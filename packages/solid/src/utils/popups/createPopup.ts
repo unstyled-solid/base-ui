@@ -1,5 +1,5 @@
 import type { PopupState, PopupChangeEventDetails, PopupTriggerDataStore, PopupStoreContext, PopupTriggerMetadata } from '../../internals/contracts/popup';
-import { createEffect, createMemo, createSignal, onCleanup, untrack, type Accessor } from 'solid-js';
+import { createEffect, createMemo, createSignal, onCleanup, onSettled, untrack, type Accessor } from 'solid-js';
 import type { ChangeEventDetails } from '../../internals/contracts/events';
 import type { FloatingRootContext } from '../../internals/contracts/floating';
 import type { HTMLProps } from '../../internals/types';
@@ -168,10 +168,10 @@ export function createPopup<Payload = unknown>(options: PopupOptions<Payload>): 
       return selected !== null ? data.get(selected)?.element ?? transaction.element : transaction.element;
     }); },
     setInteractionProps(props) {
-      // Hosts publish a live getter-backed interaction bag during their setup.
-      // Deliver the attachment outside that owned compute scope, retaining the
-      // original object rather than copying derived handler props into signals.
-      queueMicrotask(() => { if (!disposed) setInteractions(() => props); });
+      if (disposed) return;
+      // Attach the live bag in the client's settled effect phase. Server setup
+      // must remain pure; retain getters rather than snapshotting their values.
+      onSettled(() => { if (!disposed) setInteractions(() => props); });
     },
     getTriggerData(id) { revision(); const entry = id !== null ? data.get(id) : undefined; return entry && { ...entry.metadata, element: entry.element, payload: id !== null ? triggerPayload(id) : undefined }; },
   };

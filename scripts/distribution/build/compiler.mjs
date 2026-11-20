@@ -29,7 +29,8 @@ export function verifyToolchain() {
 
 // Match the harness: Babel lowers typed JSX, then TypeScript erases types. No React presets,
 // transform-runtime, bundling, development instrumentation, or second JSX pass.
-export function compile(source, filename, generate, resolveImport = value => value, compiler = config.compiler) {
+export function compile(source, filename, generate, resolveImport = value => value, compiler = config.compiler, environment = 'production') {
+  if (!['production', 'development'].includes(environment)) throw new Error(`Unknown build environment: ${environment}`);
   const options = { moduleName: config.moduleName, generate, hydratable: config.hydratable, dev: config.dev };
   let lowered;
   if (compiler === 'babel') {
@@ -52,17 +53,90 @@ export function compile(source, filename, generate, resolveImport = value => val
     },
     reportDiagnostics: true,
     transformers: { before: [context => {
+      const environmentNodes = new WeakSet();
+      const terminatingGuards = new WeakSet();
+      const mark = node => { environmentNodes.add(node); return node; };
+      const terminates = statement => ts.isReturnStatement(statement) || ts.isThrowStatement(statement) ||
+        ts.isBlock(statement) && statement.statements.some(terminates);
+      // This is an environment-guard transform, not a general JS minifier.
+      // Refuse future guards whose removal would change hoisted bindings/TDZ.
+      const assertDiscardable = (node, tail = false) => {
+        if (ts.isFunctionDeclaration(node) || ts.isClassDeclaration(node) && tail ||
+            ts.isVariableDeclarationList(node) && (tail || !(node.flags & ts.NodeFlags.BlockScoped))) {
+          throw new Error(`${filename}: environment guard contains bindings requiring scope-aware dead-code elimination`);
+        }
+        if (!ts.isFunctionLike(node)) ts.forEachChild(node, child => assertDiscardable(child, tail));
+      };
       const visit = node => {
         if (ts.isStringLiteral(node) && (
           (ts.isImportDeclaration(node.parent) || ts.isExportDeclaration(node.parent)) && node.parent.moduleSpecifier === node ||
           ts.isCallExpression(node.parent) && node.parent.expression.kind === ts.SyntaxKind.ImportKeyword
         )) return context.factory.createStringLiteral(resolveImport(node.text));
         if (ts.isPropertyAccessExpression(node) && node.getText() === 'process.env.NODE_ENV') {
-          return context.factory.createStringLiteral('production');
+          return mark(context.factory.createStringLiteral(environment));
         }
         if (ts.isExpressionStatement(node) && ts.isStringLiteral(node.expression) &&
             ['use client', 'use server', 'use memo', 'use no memo'].includes(node.expression.text)) return undefined;
-        return ts.visitEachChild(node, visit, context);
+        node = ts.visitEachChild(node, visit, context);
+        // Fold only literal environment guards, preserving evaluation of any
+        // unknown operands. Do not minify names or change module boundaries.
+        const truth = expression => {
+          if (expression.kind === ts.SyntaxKind.TrueKeyword) return true;
+          if (expression.kind === ts.SyntaxKind.FalseKeyword) return false;
+          if (ts.isParenthesizedExpression(expression)) return truth(expression.expression);
+          if (ts.isBinaryExpression(expression)) {
+            const left = truth(expression.left), right = truth(expression.right);
+            if (expression.operatorToken.kind === ts.SyntaxKind.AmpersandAmpersandToken) {
+              if (left === false || right === false) return false;
+              if (left === true) return right;
+            }
+            if (expression.operatorToken.kind === ts.SyntaxKind.BarBarToken) {
+              if (left === true || right === true) return true;
+              if (left === false) return right;
+            }
+          }
+        };
+        if (ts.isParenthesizedExpression(node) && environmentNodes.has(node.expression)) mark(node);
+        if (ts.isBinaryExpression(node) && (environmentNodes.has(node.left) || environmentNodes.has(node.right))) {
+          mark(node);
+          const op = node.operatorToken.kind;
+          if (ts.isStringLiteral(node.left) && ts.isStringLiteral(node.right) &&
+              [ts.SyntaxKind.EqualsEqualsEqualsToken, ts.SyntaxKind.ExclamationEqualsEqualsToken].includes(op)) {
+            const equal = node.left.text === node.right.text;
+            return mark((op === ts.SyntaxKind.EqualsEqualsEqualsToken ? equal : !equal) ? context.factory.createTrue() : context.factory.createFalse());
+          }
+          // Only discard the left operand when it is a literal (not merely an
+          // expression whose result is known): getters/calls must still run.
+          if (node.left.kind === ts.SyntaxKind.TrueKeyword || node.left.kind === ts.SyntaxKind.FalseKeyword) {
+            const left = truth(node.left);
+            if (op === ts.SyntaxKind.AmpersandAmpersandToken) return mark(left ? node.right : node.left);
+            if (op === ts.SyntaxKind.BarBarToken) return mark(left ? node.left : node.right);
+          }
+        }
+        if (ts.isIfStatement(node) && environmentNodes.has(node.expression)) {
+          const value = truth(node.expression);
+          if (value !== undefined) {
+            const branch = value ? node.thenStatement : node.elseStatement;
+            const discarded = value ? node.elseStatement : node.thenStatement;
+            if (discarded) assertDiscardable(discarded);
+            if ([ts.SyntaxKind.TrueKeyword, ts.SyntaxKind.FalseKeyword].includes(node.expression.kind)) {
+              if (branch && terminates(branch)) terminatingGuards.add(branch);
+              return branch ?? context.factory.createEmptyStatement();
+            }
+            return context.factory.createBlock([
+              context.factory.createExpressionStatement(node.expression),
+              ...(branch ? [branch] : []),
+            ], true);
+          }
+        }
+        if (ts.isBlock(node)) {
+          const end = node.statements.findIndex(statement => terminatingGuards.has(statement));
+          if (end >= 0) {
+            node.statements.slice(end + 1).forEach(statement => assertDiscardable(statement, true));
+            return context.factory.updateBlock(node, node.statements.slice(0, end + 1));
+          }
+        }
+        return node;
       };
       return file => ts.visitNode(file, visit);
     }] },

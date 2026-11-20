@@ -9,6 +9,17 @@ import { renderReference } from '../../scripts/site/reference.mjs';
 const root = fileURLToPath(new URL('../../../', import.meta.url));
 const fixture = path.join(root, 'docs/tests/api/fixtures/index.d.ts');
 const options = { root, entries: [{ entrypoint: './fixture', file: fixture }] };
+test('computed inherited names use source spelling, not process-local TypeScript symbol IDs', async () => {
+  const input = { root, entries: [{ entrypoint: './computed', file: path.join(path.dirname(fixture), 'computed.d.ts') }] };
+  const first = await extract(input);
+  await extract(options);
+  const second = await extract(input);
+  assert.deepEqual(second, first);
+  const names = first.modules[0].exports.find(e => e.name === 'IterableList').inheritedDOM;
+  assert(names.includes('[Symbol.iterator]'));
+  assert(names.includes('[Symbol.unscopables]'));
+  assert(!names.some(name => /^__@/.test(name)));
+});
 test('checker resolves single, compound, generic, aliases, native events, namespaces and types-only exports', async () => {
   const a = await extract(options);
   const exports = a.modules[0].exports;

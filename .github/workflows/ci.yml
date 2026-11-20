@@ -71,7 +71,9 @@ jobs:
           rm -f docs/generated/browser/runtime-gate/*.log \
             docs/generated/browser/runtime-gate/summary.json \
             docs/generated/browser/click-diagnostics.json
-          pnpm test:interactions --full-unit
+          # The native cursor case requires headed Chromium and pointer lock.
+          # Hosted Linux runners have no display server by default.
+          xvfb-run --auto-servernum pnpm test:interactions --full-unit
 
       - name: Retain failure diagnostics
         if: failure() && steps.gate.outcome == 'failure'

@@ -1,25 +1,84 @@
-$ node scripts/test/run.mjs jsdom merge-props getStateAttributesProps createRenderElement useButton number-field tabs accordion collapsible radio tooltip popover menu select slider otp-field avatar combobox createPopup.test --no-watch
+$ node scripts/test/run.mjs jsdom --no-watch
 PASS: isolated production SSR compilation and HTML artifact
 
  RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
 
 [HARNESS_EXECUTION] pool=forks maxWorkers=2 TZ=UTC
- ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxReview.test.tsx (51 tests | 2 skipped) 1140ms
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > source detached calls are ignored with fresh attach/remount state, initiallyAttached=false
+Base UI: DialogHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+Base UI: DialogHandle.openWithPayload() was called while no root using this handle is mounted. The call and its payload were ignored; mount a root with this handle before opening it imperatively.
+Base UI: DialogHandle.close() was called while no root using this handle is mounted. The call was ignored.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > source detached calls are ignored with fresh attach/remount state, initiallyAttached=true
+Base UI: DialogHandle.openWithPayload() was called while no root using this handle is mounted. The call and its payload were ignored; mount a root with this handle before opening it imperatively.
+Base UI: DialogHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+Base UI: DialogHandle.close() was called while no root using this handle is mounted. The call was ignored.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > source handle attachment toggle diagnoses exactly the two detached opens
+Base UI: DialogHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > source handle attachment toggle diagnoses exactly the two detached opens
+Base UI: DialogHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > persistent overlap is diagnosed once and restores the older owner on replacement disposal
+Base UI: A handle is attached to more than one mounted root at the same time. The most recently mounted root takes over. A handle should be used by a single root that stays mounted for its lifetime.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > switching root handle removes old-handle trigger lookup
+Base UI: DialogHandle.open: No trigger found with id "a". The popup will open, but the trigger will not be associated with it.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > ignores detached imperative calls with precise development diagnostics
+Base UI: DialogHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > ignores detached imperative calls with precise development diagnostics
+Base UI: DialogHandle.close() was called while no root using this handle is mounted. The call was ignored.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > ignores detached imperative calls with precise development diagnostics
+Base UI: DialogHandle.openWithPayload() was called while no root using this handle is mounted. The call and its payload were ignored; mount a root with this handle before opening it imperatively.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > ignores detached imperative calls with precise development diagnostics
+Base UI: DialogHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+
+stderr | packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx > Dialog detached handle ownership > unknown trigger ID opens unassociated with a diagnostic
+Base UI: DialogHandle.open: No trigger found with id "missing". The popup will open, but the trigger will not be associated with it.
+
+ ✓ |solid2-browser-development| packages/solid/src/dialog/root/DialogRoot.detached-triggers.test.tsx (54 tests | 14 skipped) 859ms
+ ✓ |solid2-browser-development| packages/solid/src/scroll-area/ScrollArea.test.tsx (43 tests) 797ms
+ ✓ |solid2-browser-development| packages/solid/src/dialog/root/DialogRoot.test.tsx (146 tests | 41 skipped) 2881ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.review.test.tsx (364 tests | 20 skipped) 6755ms
+stderr | packages/solid/src/toggle-group/ToggleGroup.test.tsx > ToggleGroup > keeps a defined empty default initialized while preserving independent omitted item identities
+Base UI: A `<Toggle>` component rendered in a `<ToggleGroup>` has no explicit `value` prop. This will cause issues between the Toggle Group and Toggle values. Provide the `<Toggle>` with a `value` prop matching the `<ToggleGroup>` values prop type.
+
+stderr | packages/solid/src/toggle-group/ToggleGroup.test.tsx > ToggleGroup > does not reinitialize selection when defaultValue changes
+Base UI: A component is changing the default value state of an uncontrolled ToggleGroup after being initialized. To suppress this warning opt to use a controlled ToggleGroup.
+
+ ✓ |solid2-browser-development| packages/solid/src/toggle-group/ToggleGroup.test.tsx (62 tests | 14 skipped) 731ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxReview.test.tsx (51 tests | 2 skipped) 965ms
+stderr | packages/solid/src/checkbox-group/CheckboxGroup.test.tsx > CheckboxGroup > treats a controlled undefined value as empty
+Base UI: A component is changing the controlled value state of CheckboxGroup to be uncontrolled.
+Elements should not switch from uncontrolled to controlled (or vice versa).
+Decide between using a controlled or uncontrolled CheckboxGroup element for the lifetime of the component.
+The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.
+More info: https://fb.me/react-controlled-components
+
+ ✓ |solid2-browser-development| packages/solid/src/field/root/FieldValidation.test.tsx (67 tests | 3 skipped) 738ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox-group/CheckboxGroup.test.tsx (58 tests | 1 skipped) 961ms
 stderr | packages/solid/src/number-field/NumberField.review.test.tsx > NumberField source-first review: numeric/text and native DOM > retains the initial uncontrolled number and delegates live default-change diagnostics to the shared model
 Base UI: A component is changing the default value state of an uncontrolled NumberField after being initialized. To suppress this warning opt to use a controlled NumberField.
 
- ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.review.test.tsx (58 tests) 757ms
- ✓ |solid2-browser-development| packages/solid/src/internals/createRenderElement.test.tsx (25 tests | 1 skipped) 344ms
- ✓ |solid2-browser-development| packages/solid/src/radio-group/RadioGroup.field.test.tsx (28 tests | 2 skipped) 788ms
- ✓ |solid2-browser-development| packages/solid/src/menu/Menu.review.test.tsx (364 tests | 20 skipped) 6019ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.review.test.tsx (58 tests) 727ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/createRenderElement.test.tsx (30 tests | 1 skipped) 359ms
+ ✓ |solid2-browser-development| packages/solid/src/alert-dialog/AlertDialog.lifecycle.test.tsx (24 tests) 1001ms
+ ✓ |solid2-browser-development| packages/solid/src/switch/root/SwitchRoot.test.tsx (55 tests | 1 skipped) 821ms
+ ✓ |solid2-browser-development| packages/solid/src/radio-group/RadioGroup.field.test.tsx (28 tests | 2 skipped) 1303ms
+ ✓ |solid2-browser-development| packages/solid/src/accordion/Accordion.test.tsx (50 tests) 1673ms
 stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > projects Root and Image from the same source commit without a status relay
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.07ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.08ms, held)
     ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
 [why-run] effect "effect" ran (run 1, 0.02ms)
     ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
 [why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
+[why-run] effect "effect" ran (run 1, 0.02ms)
     ← memo "createRenderElement.projection" changed (#3)
       ← signal "createRenderElement.node" write (#2) null → [HTMLSpanElement]
 [why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
@@ -31,9 +90,9 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← memo "createRenderElement.projection" changed (#4)
       ← signal "createRenderElement.node" write (#1) null → [HTMLSpanElement]
-[why-run] effect "onSettled" ran (run 1, 0.01ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.02ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.01ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.01ms) — no tracked cause (pull or retry)
 [why-run] memo "createTransitionStatus.snapshot" ran (run 1, 0.01ms, unchanged)
     ← signal "createImageLoadingStatus.state" write (#5) "idle" → "loading" — effect "effect"
 [why-run] effect "effect" ran (run 1, 0.01ms)
@@ -44,21 +103,27 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
 [why-run] memo "computed" ran (run 1, 0.01ms, held)
     ← signal "imageSource" write (#6) null → [function] — effect "effect"
     deps changed: +"createImageLoadingStatus.state" (2 total)
-[why-run] memo "createMergedRefsN.inputs" ran (run 1, 0.01ms, unchanged)
+[why-run] memo "computed" ran (run 1, 0.00ms)
     ← signal "imageSource" write (#6) null → [function] — effect "effect"
     deps changed: +"createImageLoadingStatus.state" (2 total)
 [why-run] memo "computed" ran (run 1, 0.00ms, unchanged)
     ← signal "imageSource" write (#6) null → [function] — effect "effect"
     deps changed: +"createImageLoadingStatus.state" (2 total)
-[why-run] effect "effect" ran (run 1, 0.05ms)
+[why-run] memo "computed" ran (run 1, 0.01ms, unchanged)
     ← memo "computed" changed (#7)
       ← signal "imageSource" write (#6) null → [function] — effect "effect"
-[why-run] effect "effect" ran (run 1, 0.06ms)
+[why-run] effect "effect" ran (run 1, 0.04ms)
+    ← memo "computed" changed (#7)
+      ← signal "imageSource" write (#6) null → [function] — effect "effect"
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← memo "computed" changed (#7)
+      ← signal "imageSource" write (#6) null → [function] — effect "effect"
+[why-run] effect "effect" ran (run 1, 0.03ms)
     ← signal "imageSource" write (#6) null → [function] — effect "effect"
-    deps changed: +"createImageLoadingStatus.state" (5 total)
+    deps changed: +"createImageLoadingStatus.state" (8 total)
 
 stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > projects Root and Image from the same source commit without a status relay
-[why-run] memo "createTransitionStatus.snapshot" ran (run 2, 0.03ms, held)
+[why-run] memo "createTransitionStatus.snapshot" ran (run 2, 0.02ms, held)
     ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
 [why-run] effect "effect" ran (run 2, 0.01ms)
     ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
@@ -66,9 +131,9 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
     ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
 [why-run] memo "computed" ran (run 2, 0.01ms, held)
     ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] memo "createMergedRefsN.inputs" ran (run 2, 0.01ms, unchanged)
+[why-run] memo "computed" ran (run 2, 0.00ms)
     ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] memo "computed" ran (run 2, 0.00ms, held)
+[why-run] memo "computed" ran (run 2, 0.01ms, held)
     ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
 [why-run] memo "createTransitionStatus.frameState" ran (run 1, 0.01ms, held)
     ← memo "createTransitionStatus.snapshot" changed (#9)
@@ -79,15 +144,19 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
 [why-run] memo "computed" ran (run 1, 0.01ms, held)
     ← memo "createTransitionStatus.snapshot" changed (#9)
       ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.02ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#9)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.01ms)
+    ← memo "createTransitionStatus.snapshot" changed (#9)
+      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
 [why-run] memo "computed" ran (run 1, 0.01ms, held)
     ← memo "createTransitionStatus.snapshot" changed (#9)
       ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] memo "createMergedRefsN.inputs" ran (run 1, 0.01ms, unchanged)
-    ← memo "createTransitionStatus.snapshot" changed (#9)
+[why-run] memo "computed" ran (run 2, 0.00ms, unchanged)
+    ← memo "computed" changed (#11)
       ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] memo "computed" ran (run 1, 0.01ms, held)
-    ← memo "createTransitionStatus.snapshot" changed (#9)
-      ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+    deps changed: -"computed" (1 total)
 [why-run] memo "computed" ran (run 1, 0.00ms, held)
     ← memo "computed" changed (#12)
       ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
@@ -95,15 +164,24 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
     ← memo "createTransitionStatus.frameState" changed (#13)
       ← memo "createTransitionStatus.snapshot" changed (#9)
         ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.00ms, unchanged)
+    ← memo "computed" changed (#14)
+      ← memo "createTransitionStatus.snapshot" changed (#9)
+        ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+[why-run] memo "computed" ran (run 1, 0.01ms, unchanged)
+    ← memo "computed" changed (#15)
+      ← memo "createTransitionStatus.snapshot" changed (#9)
+        ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
+    deps changed: +"merge" +"computed" (3 total)
 [why-run] memo "computed" ran (run 1, 0.00ms, held)
     ← memo "computed" changed (#16)
       ← memo "createTransitionStatus.snapshot" changed (#9)
         ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] memo "computed" ran (run 1, 0.03ms, held)
+[why-run] memo "computed" ran (run 1, 0.02ms, held)
     ← memo "computed" changed (#17)
       ← memo "computed" changed (#12)
         ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] memo "computed" ran (run 1, 0.96ms, held)
+[why-run] memo "computed" ran (run 1, 0.57ms, held)
     ← memo "computed" changed (#18)
       ← memo "computed" changed (#16)
         ← memo "createTransitionStatus.snapshot" changed (#9)
@@ -146,9 +224,9 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
         ← memo "computed" changed (#17)
           ← memo "computed" changed (#12)
             ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] effect "effect" ran (run 2, 0.03ms)
+[why-run] effect "effect" ran (run 2, 0.09ms)
     ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] effect "effect" ran (run 1, 0.01ms)
+[why-run] effect "effect" ran (run 1, 0.02ms)
     ← memo "children" changed (#25)
       ← memo "computed" changed (#22)
         ← memo "computed" changed (#18)
@@ -159,46 +237,50 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
         ← memo "computed" changed (#17)
           ← memo "computed" changed (#12)
             ← signal "createImageLoadingStatus.state" write (#8) "loading" → "loaded"
-[why-run] memo "createRenderElement.projection" ran (run 2, 0.00ms, held)
+[why-run] effect "onSettled" ran (run 1, 0.01ms) — no tracked cause (pull or retry)
+[why-run] memo "createRenderElement.projection" ran (run 2, 0.01ms, held)
     ← signal "createRenderElement.node" write (#26) [HTMLSpanElement] → null
-[why-run] effect "effect" ran (run 2, 0.01ms)
+[why-run] effect "effect" ran (run 2, 0.00ms)
     ← signal "createRenderElement.node" write (#26) [HTMLSpanElement] → null
 [why-run] effect "effect" ran (run 2, 0.00ms)
     ← signal "createRenderElement.node" write (#26) [HTMLSpanElement] → null
 [why-run] effect "effect" ran (run 2, 0.00ms)
     ← memo "createRenderElement.projection" changed (#27)
       ← signal "createRenderElement.node" write (#26) [HTMLSpanElement] → null
-[why-run] effect "onSettled" ran (run 1, 0.01ms, unchanged) — no tracked cause (pull or retry)
 [why-run] memo "createTransitionStatus.snapshot" ran (run 3, 0.01ms, held)
     ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] effect "effect" ran (run 4, 0.00ms)
+[why-run] effect "effect" ran (run 4, 0.01ms)
     ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
 [why-run] memo "computed" ran (run 3, 0.01ms, held)
     ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
 [why-run] memo "computed" ran (run 3, 0.01ms, held)
     ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] memo "createMergedRefsN.inputs" ran (run 3, 0.01ms, unchanged)
+[why-run] memo "computed" ran (run 3, 0.01ms)
     ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] memo "computed" ran (run 3, 0.00ms, held)
+[why-run] memo "computed" ran (run 3, 0.01ms, held)
     ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] memo "createTransitionStatus.frameState" ran (run 2, 0.00ms, held)
+[why-run] memo "createTransitionStatus.frameState" ran (run 2, 0.01ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.02ms, unchanged)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.02ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.02ms, held)
+    ← memo "createTransitionStatus.snapshot" changed (#29)
+      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.02ms)
     ← memo "createTransitionStatus.snapshot" changed (#29)
       ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
 [why-run] memo "computed" ran (run 2, 0.01ms, unchanged)
     ← memo "createTransitionStatus.snapshot" changed (#29)
       ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] memo "computed" ran (run 2, 0.01ms, held)
-    ← memo "createTransitionStatus.snapshot" changed (#29)
+[why-run] memo "computed" ran (run 3, 0.00ms, unchanged)
+    ← memo "computed" changed (#31)
       ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] memo "computed" ran (run 2, 0.01ms, held)
-    ← memo "createTransitionStatus.snapshot" changed (#29)
-      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] memo "createMergedRefsN.inputs" ran (run 2, 0.01ms, unchanged)
-    ← memo "createTransitionStatus.snapshot" changed (#29)
-      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] memo "computed" ran (run 2, 0.00ms, unchanged)
-    ← memo "createTransitionStatus.snapshot" changed (#29)
-      ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+    deps changed: +"computed" (2 total)
 [why-run] memo "computed" ran (run 2, 0.01ms, held)
     ← memo "computed" changed (#32)
       ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
@@ -206,22 +288,33 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
     ← memo "createTransitionStatus.frameState" changed (#33)
       ← memo "createTransitionStatus.snapshot" changed (#29)
         ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.00ms, unchanged)
+    ← memo "computed" changed (#34)
+      ← memo "createTransitionStatus.snapshot" changed (#29)
+        ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+[why-run] memo "computed" ran (run 2, 0.01ms, unchanged)
+    ← memo "computed" changed (#35)
+      ← memo "createTransitionStatus.snapshot" changed (#29)
+        ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
+    ← memo "computed" changed (#34)
+      ← memo "createTransitionStatus.snapshot" changed (#29)
+        ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
 [why-run] memo "computed" ran (run 2, 0.05ms, held)
     ← memo "computed" changed (#36)
       ← memo "computed" changed (#32)
         ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] memo "createRenderElement.projection" ran (run 3, 0.00ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 3, 0.01ms, held)
     ← signal "createRenderElement.node" write (#37) null → [HTMLSpanElement]
 [why-run] effect "effect" ran (run 3, 0.00ms)
     ← signal "createRenderElement.node" write (#37) null → [HTMLSpanElement]
-[why-run] effect "effect" ran (run 3, 0.00ms)
+[why-run] effect "effect" ran (run 3, 0.01ms)
     ← signal "createRenderElement.node" write (#37) null → [HTMLSpanElement]
 [why-run] effect "effect" ran (run 3, 0.00ms)
     ← memo "createRenderElement.projection" changed (#39)
       ← signal "createRenderElement.node" write (#37) null → [HTMLSpanElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
+[why-run] effect "effect" ran (run 1, 0.01ms)
     ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] effect "img.spread" ran (run 1, 0.05ms)
+[why-run] effect "img.spread" ran (run 1, 0.06ms)
     ← memo "computed" changed (#35)
       ← memo "createTransitionStatus.snapshot" changed (#29)
         ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
@@ -240,25 +333,27 @@ stdout | packages/solid/src/avatar/image/AvatarImage.test.tsx > Avatar.Image > p
         ← memo "computed" changed (#36)
           ← memo "computed" changed (#32)
             ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] effect "effect" ran (run 3, 0.02ms)
+[why-run] effect "effect" ran (run 3, 0.03ms)
     ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] effect "effect" ran (run 2, 0.00ms)
+[why-run] effect "effect" ran (run 2, 0.01ms)
     ← memo "children" changed (#40)
       ← memo "computed" changed (#38)
         ← memo "computed" changed (#36)
           ← memo "computed" changed (#32)
             ← signal "createImageLoadingStatus.state" write (#28) "loaded" → "error"
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.01ms) — no tracked cause (pull or retry)
 
- ✓ |solid2-browser-development| packages/solid/src/avatar/image/AvatarImage.test.tsx (49 tests) 222ms
- ✓ |solid2-browser-development| packages/solid/src/accordion/Accordion.test.tsx (50 tests) 1198ms
- ✓ |solid2-browser-development| packages/solid/src/radio-group/RadioGroup.test.tsx (48 tests | 2 skipped) 1048ms
- ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.review.test.tsx (26 tests) 1036ms
+ ✓ |solid2-browser-development| packages/solid/src/avatar/image/AvatarImage.test.tsx (49 tests) 227ms
+ ✓ |solid2-browser-development| packages/solid/src/form/Form.field.test.tsx (24 tests | 1 skipped) 553ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox/root/CheckboxRoot.test.tsx (70 tests | 8 skipped) 1001ms
+ ✓ |solid2-browser-development| packages/solid/src/radio-group/RadioGroup.test.tsx (48 tests | 2 skipped) 955ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.review.test.tsx (26 tests) 953ms
+ ✓ |solid2-browser-development| packages/solid/src/button/Button.review.test.tsx (38 tests | 3 skipped) 374ms
 stderr | packages/solid/src/slider/Slider.test.tsx > Slider warns when max is not greater than min
 Base UI: Slider `max` must be greater than `min`.
 
- ✓ |solid2-browser-development| packages/solid/src/slider/Slider.parts.test.tsx (39 tests) 615ms
- ✓ |solid2-browser-development| packages/solid/src/slider/Slider.test.tsx (155 tests | 5 skipped) 3254ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.parts.test.tsx (39 tests) 694ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.test.tsx (155 tests | 5 skipped) 4364ms
 stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns and omits hidden native constraints for invalid length 0
 Base UI: <OTPField.Root> `length` must be a positive integer. Received `length={0}`.
 
@@ -280,32 +375,97 @@ Base UI: <OTPField.Root> `length` must match the number of rendered <OTPField.In
 stderr | packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx > OTPField.Root > warns for mismatched slot count 2
 Base UI: <OTPField.Root> `length` must match the number of rendered <OTPField.Input /> parts. Received `length={3}` but rendered 2 inputs.
 
- ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx (48 tests) 1053ms
- ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.test.tsx (107 tests | 24 skipped) 4317ms
- ✓ |solid2-browser-development| packages/solid/src/merge-props/Events.test.tsx (42 tests) 207ms
- ✓ |solid2-browser-development| packages/solid/src/context-menu/trigger/ContextMenuTrigger.test.tsx (40 tests) 732ms
- ✓ |solid2-browser-development| packages/solid/src/popover/root/PopoverRoot.test.tsx (63 tests | 2 skipped) 1931ms
- ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.test.tsx (141 tests | 2 skipped) 1626ms
- ✓ |solid2-browser-development| packages/solid/src/popover/Popover.review.test.tsx (21 tests) 1008ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldRoot.test.tsx (48 tests) 949ms
+ ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.test.tsx (107 tests | 24 skipped) 4549ms
+ ✓ |solid2-browser-development| packages/solid/src/merge-props/Events.test.tsx (42 tests) 169ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/trigger/ContextMenuTrigger.test.tsx (40 tests) 659ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/root/AutocompleteHighlight.test.tsx (27 tests) 2301ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/root/PopoverRoot.test.tsx (63 tests | 2 skipped) 3064ms
+ ✓ |solid2-browser-development| packages/solid/src/dialog/Dialog.review.test.tsx (28 tests) 741ms
+ ✓ |solid2-browser-development| packages/solid/src/toggle/Toggle.integration.test.tsx (23 tests | 4 skipped) 702ms
+stderr | packages/solid/src/preview-card/root/PreviewCardRoot.review.test.tsx > PreviewCard source-first regression checks > restores the previous living root when the newest handle attachment is disposed
+Base UI: A handle is attached to more than one mounted root at the same time. The most recently mounted root takes over. A handle should be used by a single root that stays mounted for its lifetime.
+
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.test.tsx (141 tests | 2 skipped) 1640ms
+ ✓ |solid2-browser-development| packages/solid/src/preview-card/root/PreviewCardRoot.review.test.tsx (12 tests) 367ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/Popover.review.test.tsx (21 tests) 807ms
 stderr | packages/solid/src/otp-field/input/OTPFieldInput.test.tsx > OTPField.Input > ignores unavailable clipboard data and warns on denied reads
 Base UI: <OTPField.Input> could not read clipboard text during paste handling.
 
 stderr | packages/solid/src/otp-field/input/OTPFieldInput.test.tsx > OTPField.Input > warns for an unlabeled first-slot aria-label
 Base UI: <OTPField.Input> ignores `aria-label` on the first input. Use a `<label>` or `<Field.Label>` to label the OTP field.
 
- ✓ |solid2-browser-development| packages/solid/src/otp-field/input/OTPFieldInput.test.tsx (39 tests) 1420ms
- ✓ |solid2-browser-development| packages/solid/src/context-menu/ContextMenu.host.test.tsx (23 tests) 76ms
- ✓ |solid2-browser-development| packages/solid/src/slider/Slider.field.test.tsx (26 tests | 5 skipped) 755ms
- ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.nested.test.tsx (25 tests) 537ms
- ✓ |solid2-browser-development| packages/solid/src/select/root/SelectRoot.test.tsx (25 tests) 1104ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/input/OTPFieldInput.test.tsx (39 tests) 1335ms
+ ✓ |solid2-browser-development| packages/solid/src/filter-dropdown/root/FilterDropdownRoot.test.tsx (23 tests | 2 skipped) 262ms
+ ✓ |solid2-browser-development| packages/solid/src/form/Form.test.tsx (29 tests | 2 skipped) 250ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.field.test.tsx (26 tests | 5 skipped) 980ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/root/AutocompleteRoot.test.tsx (32 tests) 2834ms
+     ✓ does not open on input click by default, but opens on typing  326ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/ContextMenu.host.test.tsx (23 tests) 78ms
+ ✓ |solid2-browser-development| packages/solid/src/field/control/FieldControl.test.tsx (31 tests | 3 skipped) 501ms
+ ✓ |solid2-browser-development| packages/solid/src/progress/root/ProgressRoot.test.tsx (37 tests | 1 skipped) 318ms
+ ✓ |solid2-browser-development| packages/solid/src/button/Button.test.tsx (31 tests | 3 skipped) 354ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/root/AutocompleteForms.test.tsx (30 tests) 1739ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.nested.test.tsx (25 tests) 530ms
+ ✓ |solid2-browser-development| packages/solid/src/preview-card/root/PreviewCardRoot.test.tsx (51 tests | 2 skipped) 1045ms
+ ✓ |solid2-browser-development| packages/solid/src/input/Input.test.tsx (24 tests | 1 skipped) 406ms
+stderr | packages/solid/src/preview-card/root/PreviewCardRoot.detached-triggers.test.tsx > PreviewCard detached handle ownership > [source:packages/react/src/preview-card/root/PreviewCardRoot.detached-triggers.test.tsx#ignores imperative handle calls made before a root is attached]
+Base UI: PreviewCardHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+Base UI: PreviewCardHandle.close() was called while no root using this handle is mounted. The call was ignored.
+
+stderr | packages/solid/src/preview-card/root/PreviewCardRoot.detached-triggers.test.tsx > PreviewCard detached handle ownership > [source:packages/react/src/preview-card/root/PreviewCardRoot.detached-triggers.test.tsx#ignores imperative handle calls made after the root is detached / fresh remount]
+Base UI: PreviewCardHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
+Base UI: PreviewCardHandle.close() was called while no root using this handle is mounted. The call was ignored.
+
+stderr | packages/solid/src/preview-card/root/PreviewCardRoot.detached-triggers.test.tsx > PreviewCard detached handle ownership > [source:packages/react/src/preview-card/root/PreviewCardRoot.detached-triggers.test.tsx#warns when a handle stays attached to more than one mounted root]
+Base UI: A handle is attached to more than one mounted root at the same time. The most recently mounted root takes over. A handle should be used by a single root that stays mounted for its lifetime.
+
+ ✓ |solid2-browser-development| packages/solid/src/preview-card/root/PreviewCardRoot.detached-triggers.test.tsx (28 tests) 1053ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectRoot.test.tsx (25 tests) 1556ms
+stderr | packages/solid/src/collapsible/panel/CollapsiblePanel.test.tsx > Collapsible.Panel > warns when hiddenUntilFound overrides explicit keepMounted=false
+Base UI: The `keepMounted={false}` prop on `Collapsible.Panel` is ignored when `hiddenUntilFound` is enabled, since the panel must remain mounted while closed.
+
+ ✓ |solid2-browser-development| packages/solid/src/collapsible/panel/CollapsiblePanel.test.tsx (24 tests) 317ms
 stderr | packages/solid/src/tabs/root/TabsRoot.test.tsx > Tabs.Root > warns on a live default change but keeps the initial disabled-default policy
 Base UI: A component is changing the default value state of an uncontrolled Tabs after being initialized. To suppress this warning opt to use a controlled Tabs.
 
- ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsRoot.test.tsx (27 tests) 578ms
- ✓ |solid2-browser-development| packages/solid/src/slider/control/SliderControl.review.test.tsx (16 tests) 251ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.test.tsx (32 tests) 421ms
- ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxDerivedItems.test.tsx (15 tests) 84ms
- ✓ |solid2-browser-development| packages/solid/src/menu/Menu.test.tsx (14 tests | 2 skipped) 1187ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsRoot.test.tsx (27 tests) 563ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/control/SliderControl.review.test.tsx (16 tests) 273ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox-group/CheckboxGroup.review.test.tsx (20 tests) 599ms
+stderr | packages/solid/src/toggle/Toggle.test.tsx > <Toggle /> > pressed state: uncontrolled default undefined is captured once
+Base UI: A component is changing the default pressed state of an uncontrolled Toggle after being initialized. To suppress this warning opt to use a controlled Toggle.
+
+stderr | packages/solid/src/toggle/Toggle.test.tsx > <Toggle /> > pressed state: uncontrolled default false is captured once
+Base UI: A component is changing the default pressed state of an uncontrolled Toggle after being initialized. To suppress this warning opt to use a controlled Toggle.
+
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastParts.test.tsx (15 tests) 237ms
+stderr | packages/solid/src/toggle/Toggle.test.tsx > <Toggle /> > pressed state: uncontrolled default true is captured once
+Base UI: A component is changing the default pressed state of an uncontrolled Toggle after being initialized. To suppress this warning opt to use a controlled Toggle.
+
+stderr | packages/solid/src/toggle/Toggle.test.tsx > <Toggle /> > warns once when initialized groups contain Toggles without explicit values
+Base UI: A `<Toggle>` component rendered in a `<ToggleGroup>` has no explicit `value` prop. This will cause issues between the Toggle Group and Toggle values. Provide the `<Toggle>` with a `value` prop matching the `<ToggleGroup>` values prop type.
+
+ ✓ |solid2-browser-development| packages/solid/src/toggle/Toggle.test.tsx (43 tests) 432ms
+ ✓ |solid2-browser-development| test/integration/proposal-windows.test.tsx (15 tests) 188ms
+ ✓ |solid2-browser-development| packages/solid/src/field/FieldIntegration.test.tsx (13 tests) 415ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.test.tsx (32 tests) 428ms
+ ✓ |solid2-browser-development| test/integration/RootCrossFamily.test.tsx (13 tests) 1412ms
+     ✓ preserves grouped cancellation inside a real RTL Toolbar without replacing hosts  353ms
+     ✓ dismisses nested real Menu/Select/Combobox popups without closing their Dialog  460ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.test.tsx (14 tests | 2 skipped) 1697ms
+     ✓ default-open is page-load content; keepMounted=false  407ms
+ ✓ |solid2-browser-development| test/integration/RootExports.test.ts (8 tests) 3520ms
+     ✓ retains the complete canonical value/type export set and namespace parts  2420ms
+     ✓ wires every pinned package key, keeping the public types facade type-only  398ms
+     ✓ has no React or legacy renderer imports anywhere in production sources  359ms
+ ✓ |solid2-browser-development| packages/solid/src/scroll-area/ScrollArea.lifecycle.test.tsx (13 tests) 461ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxDerivedItems.test.tsx (15 tests) 61ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastStore.test.ts (29 tests) 15ms
+ ✓ |solid2-browser-development| packages/solid/src/meter/root/MeterRoot.test.tsx (43 tests) 347ms
+ ✓ |solid2-browser-development| packages/solid/src/toolbar/root/ToolbarRoot.test.tsx (27 tests | 10 skipped) 348ms
+ ✓ |solid2-browser-development| packages/solid/src/dialog/Dialog.parts.test.tsx (93 tests) 777ms
+ ✓ |solid2-browser-development| packages/solid/src/toolbar/input/ToolbarInput.test.tsx (25 tests | 6 skipped) 442ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/list/TabsList.test.tsx (66 tests | 12 skipped) 971ms
 stderr | packages/solid/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx > Tooltip handle ownership > [source:packages/react/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx#ignores imperative handle calls before attach and after detach]
 Base UI: TooltipHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
 Base UI: TooltipHandle.close() was called while no root using this handle is mounted. The call was ignored.
@@ -317,23 +477,44 @@ Base UI: TooltipHandle.close() was called while no root using this handle is mou
 stderr | packages/solid/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx > Tooltip handle ownership > [source:packages/react/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx#warns for persistent overlap and restores the previous living root on cleanup]
 Base UI: A handle is attached to more than one mounted root at the same time. The most recently mounted root takes over. A handle should be used by a single root that stays mounted for its lifetime.
 
- ✓ |solid2-browser-development| packages/solid/src/tabs/list/TabsList.test.tsx (66 tests | 12 skipped) 1108ms
- ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx (16 tests) 280ms
- ✓ |solid2-browser-development| packages/solid/src/select/value/SelectValue.test.tsx (43 tests) 358ms
- ✓ |solid2-browser-development| packages/solid/src/radio/root/RadioRoot.test.tsx (31 tests) 554ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsIndicator.test.tsx (16 tests | 15 skipped) 90ms
-stderr | packages/solid/src/collapsible/panel/CollapsiblePanel.test.tsx > Collapsible.Panel > warns when hiddenUntilFound overrides explicit keepMounted=false
-Base UI: The `keepMounted={false}` prop on `Collapsible.Panel` is ignored when `hiddenUntilFound` is enabled, since the panel must remain mounted while closed.
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/root/TooltipRoot.detached-triggers.test.tsx (16 tests) 271ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastManager.test.tsx (44 tests) 52ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/filter.test.ts (18 tests) 398ms
+ ✓ |solid2-browser-development| packages/solid/src/select/value/SelectValue.test.tsx (43 tests) 855ms
+ ✓ |solid2-browser-development| packages/solid/src/field/Field.test.tsx (21 tests) 490ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastLayout.test.tsx (11 tests) 178ms
+ ✓ |solid2-browser-development| packages/solid/src/radio/root/RadioRoot.test.tsx (31 tests) 552ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/viewport/DrawerViewport.test.tsx (26 tests) 491ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/utils/tabbable.dom.test.ts (36 tests | 6 skipped) 421ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsIndicator.test.tsx (16 tests | 15 skipped) 87ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.test.tsx (18 tests) 1525ms
+ ✓ |solid2-browser-development| packages/solid/src/separator/Separator.test.tsx (23 tests | 1 skipped) 175ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/field-core/createField.test.tsx (11 tests) 113ms
+ ✓ |solid2-browser-development| packages/solid/src/alert-dialog/AlertDialog.test.tsx (17 tests | 4 skipped) 297ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectReview.test.tsx (13 tests) 385ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxRoot.test.tsx (12 tests | 2 skipped) 434ms
+ ✓ |solid2-browser-development| packages/solid/src/field/FieldReview.test.tsx (15 tests) 429ms
+ ✓ |solid2-browser-development| packages/solid/src/fieldset/root/FieldsetRoot.test.tsx (21 tests) 442ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/root/NavigationMenuRoot.transactions.test.tsx (15 tests) 369ms
+stderr | test/harness/Harness.test.tsx > Harness runtime contract > expects STRICT_READ_UNTRACKED only in this narrowly named diagnostic case
+[STRICT_READ_UNTRACKED] Reactive value "merge" read directly in <DiagnosticSnapshot> will not update. Move it into a tracking scope (JSX, a memo, or an effect's compute function).
+  in <DiagnosticSnapshot>
+  at http://localhost/test/harness/Harness.test.tsx:172:55
+[STRICT_READ_UNTRACKED] what it means and how to fix it: https://docs.solidjs.com/reference/solid-js/diagnostics/strict-read-untracked
+[STRICT_READ_UNTRACKED] agent repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md#strict_read_untracked — https://github.com/solidjs/solid/blob/next/packages/solid/skills/reactivity-diagnostics/SKILL.md#strict_read_untracked
 
- ✓ |solid2-browser-development| packages/solid/src/collapsible/panel/CollapsiblePanel.test.tsx (21 tests) 319ms
- ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.test.tsx (18 tests) 1313ms
- ✓ |solid2-browser-development| packages/solid/src/select/root/SelectReview.test.tsx (13 tests) 463ms
- ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxRoot.test.tsx (12 tests | 2 skipped) 463ms
- ✓ |solid2-browser-development| packages/solid/src/navigation-menu/root/NavigationMenuRoot.transactions.test.tsx (15 tests) 217ms
+stderr | test/harness/Harness.test.tsx > Harness runtime contract > permits an exact local hydration-warning expectation for intentional mismatch tests
+Hydration key miss for "expected-policy-probe"
+
+ ✓ |solid2-browser-development| test/harness/Harness.test.tsx (31 tests | 2 skipped) 188ms
+ ✓ |solid2-browser-development| packages/solid/src/dialog/popup/DialogPopup.test.tsx (25 tests) 1436ms
  ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.gecko.test.tsx (8 tests | 1 skipped) 169ms
- ✓ |solid2-browser-development| packages/solid/src/utils/popups/createPopup.test.tsx (10 tests) 131ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/panel/TabsPanel.test.tsx (11 tests | 2 skipped) 273ms
- ✓ |solid2-browser-development| packages/solid/src/select/root/SelectField.test.tsx (9 tests) 553ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/createTransitionStatus.test.tsx (12 tests) 142ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/popups/createPopup.test.tsx (10 tests) 141ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectField.test.tsx (9 tests) 686ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/panel/TabsPanel.test.tsx (11 tests | 2 skipped) 232ms
+ ✓ |solid2-browser-development| packages/solid/src/switch/Switch.integration.test.tsx (10 tests | 1 skipped) 302ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox/root/CheckboxRoot.field.test.tsx (18 tests) 395ms
 stderr | packages/solid/src/accordion/panel/AccordionPanel.test.tsx > Accordion.Panel disclosure composition > warns for conflicting root defaults and keeps searchable contents mounted
 Base UI: The `keepMounted={false}` prop on `Accordion.Root` is ignored when `hiddenUntilFound` is enabled, since panels must remain mounted while closed.
 
@@ -343,49 +524,91 @@ Base UI: The `keepMounted={false}` prop on an `Accordion.Panel` is ignored when 
 stderr | packages/solid/src/accordion/panel/AccordionPanel.test.tsx > Accordion.Panel disclosure composition > warns for panel keepMounted=false with root hiddenUntilFound=true
 Base UI: The `keepMounted={false}` prop on an `Accordion.Panel` is ignored when `hiddenUntilFound` is enabled on the panel or root, since the panel must remain mounted while closed.
 
- ✓ |solid2-browser-development| packages/solid/src/accordion/panel/AccordionPanel.test.tsx (13 tests) 263ms
- ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.parts.test.tsx (67 tests) 409ms
- ✓ |solid2-browser-development| packages/solid/src/slider/Slider.gestures.test.tsx (12 tests | 1 skipped) 198ms
- ✓ |solid2-browser-development| packages/solid/src/slider/Slider.review.test.tsx (9 tests) 226ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/utils/NumberField.validate.test.ts (66 tests) 24ms
- ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.host.test.tsx (11 tests) 373ms
- ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.review.test.tsx (11 tests) 82ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.gestures.test.tsx (7 tests | 3 skipped) 70ms
- ✓ |solid2-browser-development| packages/solid/src/popover/trigger/PopoverTrigger.test.tsx (14 tests) 525ms
- ✓ |solid2-browser-development| packages/solid/src/select/Select.parts.test.tsx (170 tests) 1253ms
+ ✓ |solid2-browser-development| packages/solid/src/accordion/panel/AccordionPanel.test.tsx (13 tests) 258ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/root/createAutocompleteInput.test.tsx (14 tests) 39ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/virtual-keyboard-provider/DrawerVirtualKeyboardProvider.test.tsx (26 tests | 5 skipped) 109ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.parts.test.tsx (67 tests) 407ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox/indicator/CheckboxIndicator.test.tsx (24 tests | 6 skipped) 149ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.gestures.test.tsx (12 tests | 1 skipped) 307ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.review.test.tsx (9 tests) 628ms
+ ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.host.test.tsx (11 tests) 635ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/root/DrawerRoot.test.tsx (10 tests) 613ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/DrawerReview.test.tsx (10 tests) 221ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/utils/NumberField.validate.test.ts (66 tests) 27ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.review.test.tsx (11 tests) 67ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastViewport.test.tsx (17 tests) 202ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/resolveValueLabel.test.ts (27 tests) 8ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.gestures.test.tsx (7 tests | 3 skipped) 90ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/getCssDimensions.dom.test.ts (10 tests | 3 skipped) 105ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/root/AutocompleteSeam.test.tsx (15 tests) 477ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox-group/useCheckboxGroupParent.test.tsx (16 tests) 299ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/root/AutocompleteLifecycle.test.tsx (11 tests) 558ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/temporal/TemporalAdapter.edges.test.ts (32 tests) 35ms
+ ✓ |solid2-browser-development| packages/solid/src/select/Select.parts.test.tsx (170 tests) 1107ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/trigger/PopoverTrigger.test.tsx (14 tests) 1172ms
 stderr | packages/solid/src/popover/root/PopoverRoot.detached-triggers.test.tsx > Popover detached handles > warns and ignores calls before attachment and after disposal
 Base UI: PopoverHandle.open() was called while no root using this handle is mounted. The call was ignored; mount a root with this handle before opening it imperatively.
 
 stderr | packages/solid/src/popover/root/PopoverRoot.detached-triggers.test.tsx > Popover detached handles > warns and ignores calls before attachment and after disposal
 Base UI: PopoverHandle.close() was called while no root using this handle is mounted. The call was ignored.
 
- ✓ |solid2-browser-development| packages/solid/src/popover/root/PopoverRoot.detached-triggers.test.tsx (12 tests) 449ms
- ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldField.test.tsx (13 tests) 433ms
- ✓ |solid2-browser-development| packages/solid/src/collapsible/root/CollapsibleRoot.test.tsx (16 tests) 211ms
- ✓ |solid2-browser-development| packages/solid/src/radio/indicator/RadioIndicator.test.tsx (16 tests | 4 skipped) 341ms
- ✓ |solid2-browser-development| packages/solid/src/combobox/ComboboxConformance.test.tsx (207 tests) 892ms
- ✓ |solid2-browser-development| packages/solid/src/popover/store/PopoverPolicy.test.tsx (12 tests) 84ms
- ✓ |solid2-browser-development| packages/solid/src/select/root/SelectKeyboard.test.tsx (11 tests) 986ms
- ✓ |solid2-browser-development| packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts (15 tests) 12ms
- ✓ |solid2-browser-development| packages/solid/src/popover/popup/PopoverPopup.test.tsx (16 tests) 844ms
- ✓ |solid2-browser-development| packages/solid/src/menu/Menu.lifetime.review.test.tsx (14 tests) 181ms
- ✓ |solid2-browser-development| packages/solid/src/collapsible/trigger/CollapsibleTrigger.test.tsx (29 tests) 300ms
- ✓ |solid2-browser-development| packages/solid/src/menu/store/MenuStore.test.tsx (3 tests) 140ms
- ✓ |solid2-browser-development| packages/solid/src/avatar/fallback/AvatarFallback.test.tsx (23 tests) 142ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.form.test.tsx (5 tests) 208ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/utils/NumberField.parse.test.ts (78 tests) 40ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.parts.test.tsx (58 tests) 200ms
- ✓ |solid2-browser-development| packages/solid/src/tooltip/provider/TooltipProvider.test.tsx (13 tests) 468ms
- ✓ |solid2-browser-development| packages/solid/src/context-menu/root/ContextMenuRoot.test.tsx (7 tests) 334ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsPrehydration.test.ts (10 tests) 102ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/test/TabsConformance.test.tsx (55 tests) 262ms
- ✓ |solid2-browser-development| packages/solid/src/select/Select.source-inventory.test.ts (2 tests) 113ms
- ✓ |solid2-browser-development| packages/solid/src/slider/utils/SliderMath.test.ts (31 tests) 5ms
- ✓ |solid2-browser-development| packages/solid/src/popover/PopoverSourceInventory.test.ts (2 tests) 4ms
- ✓ |solid2-browser-development| packages/solid/src/filter-dropdown/root/FilterDropdownMenu.integration.test.tsx (5 tests) 581ms
- ✓ |solid2-browser-development| packages/solid/src/select/item/SelectPointer.test.tsx (8 tests) 361ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/root/PopoverRoot.detached-triggers.test.tsx (12 tests) 1029ms
+     ✓ attaches before descendant settled work opens a registered trigger  377ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/utils/markOthers.dom.test.ts (17 tests) 31ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldField.test.tsx (13 tests) 653ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/itemEquality.test.ts (20 tests) 7ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/components/FloatingDelayGroup.test.tsx (5 tests) 24ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/DrawerParts.test.tsx (33 tests | 1 skipped) 288ms
+ ✓ |solid2-browser-development| packages/solid/src/filter-dropdown/input/FilterDropdownInput.test.tsx (9 tests) 144ms
+ ✓ |solid2-browser-development| packages/solid/src/collapsible/root/CollapsibleRoot.test.tsx (16 tests) 428ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/provider/DrawerProvider.test.tsx (7 tests) 201ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/components/FloatingFocusManager.test.tsx (7 tests) 305ms
+ ✓ |solid2-browser-development| packages/solid/src/form/Form.controls.test.tsx (8 tests) 301ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/virtual-keyboard-provider/DrawerKeyboardGeometry.test.tsx (9 tests) 280ms
+ ✓ |solid2-browser-development| packages/solid/src/radio/indicator/RadioIndicator.test.tsx (16 tests | 4 skipped) 382ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/ComboboxConformance.test.tsx (207 tests) 831ms
+ ✓ |solid2-browser-development| packages/solid/src/toolbar/Toolbar.review.test.tsx (7 tests) 765ms
+ ✓ |solid2-browser-development| packages/solid/src/select/root/SelectKeyboard.test.tsx (11 tests) 1551ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/store/PopoverPolicy.test.tsx (12 tests) 195ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/components/FloatingPortal.focus.test.tsx (4 tests) 771ms
+   ✓ the notifications popup keeps its portal guards and focus ownership across click reopening  447ms
+ ✓ |solid2-browser-development| packages/solid/src/fieldset/legend/FieldsetLegend.test.tsx (17 tests) 180ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/popup/PopoverPopup.test.tsx (16 tests) 934ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox-group/CheckboxGroup.field.test.tsx (8 tests) 468ms
+ ✓ |solid2-browser-development| packages/solid/src/use-render/useRender.test.tsx (14 tests) 30ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/utils/ComboboxFilter.test.ts (15 tests) 14ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.lifetime.review.test.tsx (14 tests) 186ms
+ ✓ |solid2-browser-development| packages/solid/src/collapsible/trigger/CollapsibleTrigger.test.tsx (29 tests) 332ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/store/MenuStore.test.tsx (3 tests) 111ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/RequestQueue.lifecycle.test.ts (9 tests) 58ms
+ ✓ |solid2-browser-development| packages/solid/src/avatar/fallback/AvatarFallback.test.tsx (23 tests) 140ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.form.test.tsx (5 tests) 204ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.parts.test.tsx (58 tests) 189ms
+ ✓ |solid2-browser-development| packages/solid/src/toolbar/button/ToolbarButton.test.tsx (23 tests | 1 skipped) 387ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/utils/NumberField.parse.test.ts (78 tests) 35ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/createTimeout.lifecycle.test.tsx (6 tests) 21ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/hooks/createFloating.test.tsx (3 tests) 191ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/provider/TooltipProvider.test.tsx (13 tests) 1098ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/hooks/createListNavigation.test.tsx (3 tests) 311ms
+ ✓ |solid2-browser-development| packages/solid/src/field/root/FieldRegistration.test.tsx (7 tests) 121ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/root/ContextMenuRoot.test.tsx (7 tests) 371ms
+ ✓ |solid2-browser-development| packages/solid/src/scroll-area/ScrollArea.conformance.test.tsx (66 tests) 506ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/temporal/TemporalAdapter.timezone.node.test.ts (11 tests) 33ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsPrehydration.test.ts (10 tests) 108ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/components/FloatingPortal.test.tsx (6 tests) 174ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/resolveRenderedId.test.tsx (8 tests) 26ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/test/TabsConformance.test.tsx (55 tests) 281ms
+ ✓ |solid2-browser-development| packages/solid/src/select/Select.source-inventory.test.ts (2 tests) 122ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/hooks/createFloating.api.test.tsx (3 tests) 90ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.reactivity.test.tsx (3 tests) 246ms
+ ✓ |solid2-browser-development| packages/solid/src/field/FieldParts.test.tsx (78 tests) 327ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/utils/SliderMath.test.ts (31 tests) 6ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/hooks/createDismiss.test.tsx (3 tests) 106ms
+ ✓ |solid2-browser-development| packages/solid/src/filter-dropdown/root/FilterDropdownMenu.integration.test.tsx (5 tests) 539ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/PopoverSourceInventory.test.ts (2 tests) 8ms
+ ✓ |solid2-browser-development| packages/solid/src/preview-card/PreviewCard.parts.review.test.tsx (2 tests) 272ms
 stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Collection row ownership > resolves grouped row output under its owner without provider-wide hidden subscriptions
-[why-run] effect "effect" ran (run 1, 0.05ms)
+[why-run] effect "effect" ran (run 1, 0.08ms)
     ← signal "createComboboxModel.hiddenInput" write (#2) null → [HTMLInputElement]
 [why-run] effect "effect" ran (run 1, 0.02ms)
     ← signal "createPopup.positioner" write (#47) null → [HTMLDivElement]
@@ -395,14 +618,14 @@ stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Co
     ← signal "createComboboxModel.hiddenInput" write (#2) null → [HTMLInputElement]
 [why-run] effect "effect" ran (run 1, 0.01ms)
     ← signal "createPopup.positioner" write (#47) null → [HTMLDivElement]
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.18ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.08ms, held)
     ← signal "createRenderElement.node" write (#1) null → [HTMLInputElement]
     deps changed: +"computed" +"createAutocompleteInput.inputValue" (3 total)
 [why-run] effect "effect" ran (run 1, 0.01ms)
     ← signal "createRenderElement.node" write (#1) null → [HTMLInputElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#1) null → [HTMLInputElement]
-[why-run] effect "effect" ran (run 1, 0.06ms)
+[why-run] effect "effect" ran (run 1, 0.08ms)
     ← signal "revision" write (#42) 9 → 10
     deps changed: +"computed" +"computed" -"computed" -"computed" (3 total)
 [why-run] effect "effect" ran (run 1, 0.02ms)
@@ -414,92 +637,92 @@ stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Co
     ← signal "createRenderElement.node" write (#45) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#45) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
+[why-run] effect "effect" ran (run 1, 0.01ms)
     ← memo "createRenderElement.projection" changed (#49)
       ← signal "createRenderElement.node" write (#45) null → [HTMLDivElement]
 [why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
     ← signal "createRenderElement.node" write (#44) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#44) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
+[why-run] effect "effect" ran (run 1, 0.01ms)
     ← signal "createRenderElement.node" write (#44) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← memo "createRenderElement.projection" changed (#50)
       ← signal "createRenderElement.node" write (#44) null → [HTMLDivElement]
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
     ← signal "createRenderElement.node" write (#3) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#3) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#3) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#7) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#7) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#11) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#11) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#15) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#15) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#19) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#19) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#23) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#23) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#27) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#27) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#31) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#31) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#35) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#35) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#39) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#39) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#43) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
-    ← signal "element" write (#43) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← memo "createRenderElement.projection" changed (#51)
       ← signal "createRenderElement.node" write (#3) null → [HTMLDivElement]
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "element" write (#7) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#7) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.01ms)
+    ← signal "element" write (#11) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#11) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#15) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#15) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#19) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#19) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#23) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#23) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#27) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#27) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#31) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#31) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#35) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#35) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#39) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#39) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#43) null → [HTMLDivElement]
+[why-run] effect "effect" ran (run 1, 0.00ms)
+    ← signal "element" write (#43) null → [HTMLDivElement]
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
     ← signal "createRenderElement.node" write (#4) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#4) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#4) null → [HTMLDivElement]
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
     ← signal "createRenderElement.node" write (#8) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#8) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#8) null → [HTMLDivElement]
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
     ← signal "createRenderElement.node" write (#12) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#12) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#12) null → [HTMLDivElement]
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
     ← signal "createRenderElement.node" write (#16) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#16) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#16) null → [HTMLDivElement]
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
     ← signal "createRenderElement.node" write (#20) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#20) null → [HTMLDivElement]
@@ -511,7 +734,7 @@ stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Co
     ← signal "createRenderElement.node" write (#24) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#24) null → [HTMLDivElement]
-[why-run] memo "createRenderElement.projection" ran (run 1, 0.00ms, held)
+[why-run] memo "createRenderElement.projection" ran (run 1, 0.01ms, held)
     ← signal "createRenderElement.node" write (#28) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createRenderElement.node" write (#28) null → [HTMLDivElement]
@@ -567,13 +790,13 @@ stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Co
       ← signal "createRenderElement.node" write (#40) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.01ms)
     ← signal "createButton.element" write (#5) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
+[why-run] effect "effect" ran (run 1, 0.01ms)
     ← signal "createButton.element" write (#9) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createButton.element" write (#13) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createButton.element" write (#17) null → [HTMLDivElement]
-[why-run] effect "effect" ran (run 1, 0.00ms)
+[why-run] effect "effect" ran (run 1, 0.01ms)
     ← signal "createButton.element" write (#21) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createButton.element" write (#25) null → [HTMLDivElement]
@@ -585,124 +808,262 @@ stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Co
     ← signal "createButton.element" write (#37) null → [HTMLDivElement]
 [why-run] effect "effect" ran (run 1, 0.00ms)
     ← signal "createButton.element" write (#41) null → [HTMLDivElement]
-[why-run] effect "onSettled" ran (run 1, 0.01ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "onSettled" ran (run 1, 0.00ms, unchanged) — no tracked cause (pull or retry)
-[why-run] effect "effect" ran (run 2, 0.05ms)
+[why-run] effect "onSettled" ran (run 1, 0.01ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "onSettled" ran (run 1, 0.00ms) — no tracked cause (pull or retry)
+[why-run] effect "effect" ran (run 2, 0.06ms)
     ← signal "revision" write (#72) 19 → 20 — effect "effect"
     deps changed: +"computed" +"computed" -"computed" -"computed" (3 total)
-[why-run] effect "effect" ran (run 1, 0.06ms)
+[why-run] effect "effect" ran (run 1, 0.05ms)
     ← signal "labelId" write (#62) — effect "effect"
 
 stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Collection row ownership > resolves grouped row output under its owner without provider-wide hidden subscriptions
-[why-run] memo "computed" ran (run 1, 0.03ms, held)
+[why-run] memo "merge" ran (run 1, 0.04ms, held)
     ← signal "renderProps.record" write (#73) [Object] → [Object]
-[why-run] effect "span.children" ran (run 1, 0.01ms)
-    ← memo "computed" changed (#74)
-      ← signal "renderProps.record" write (#73) [Object] → [Object]
-[why-run] effect "span.children" ran (run 1, 0.00ms)
-    ← memo "computed" changed (#74)
-      ← signal "renderProps.record" write (#73) [Object] → [Object]
-[why-run] effect "span.children" ran (run 1, 0.00ms)
-    ← memo "computed" changed (#74)
-      ← signal "renderProps.record" write (#73) [Object] → [Object]
-[why-run] effect "span.children" ran (run 1, 0.00ms)
-    ← memo "computed" changed (#74)
-      ← signal "renderProps.record" write (#73) [Object] → [Object]
-[why-run] effect "span.children" ran (run 1, 0.00ms)
-    ← memo "computed" changed (#74)
-      ← signal "renderProps.record" write (#73) [Object] → [Object]
-[why-run] effect "span.children" ran (run 1, 0.00ms)
-    ← memo "computed" changed (#74)
+[why-run] effect "span.children" ran (run 1, 0.03ms)
+    ← memo "merge" changed (#74)
       ← signal "renderProps.record" write (#73) [Object] → [Object]
 [why-run] effect "span.children" ran (run 1, 0.01ms)
-    ← memo "computed" changed (#74)
+    ← memo "merge" changed (#74)
       ← signal "renderProps.record" write (#73) [Object] → [Object]
 [why-run] effect "span.children" ran (run 1, 0.00ms)
-    ← memo "computed" changed (#74)
+    ← memo "merge" changed (#74)
       ← signal "renderProps.record" write (#73) [Object] → [Object]
 [why-run] effect "span.children" ran (run 1, 0.00ms)
-    ← memo "computed" changed (#74)
+    ← memo "merge" changed (#74)
       ← signal "renderProps.record" write (#73) [Object] → [Object]
 [why-run] effect "span.children" ran (run 1, 0.00ms)
-    ← memo "computed" changed (#74)
+    ← memo "merge" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.01ms)
+    ← memo "merge" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.01ms)
+    ← memo "merge" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "merge" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "merge" changed (#74)
+      ← signal "renderProps.record" write (#73) [Object] → [Object]
+[why-run] effect "span.children" ran (run 1, 0.00ms)
+    ← memo "merge" changed (#74)
       ← signal "renderProps.record" write (#73) [Object] → [Object]
 
 stdout | packages/solid/src/combobox/collection/ComboboxCollection.test.tsx > Collection row ownership > resolves grouped row output under its owner without provider-wide hidden subscriptions
-[why-run] effect "effect" ran (run 3, 0.04ms)
+[why-run] effect "effect" ran (run 3, 0.09ms)
     ← signal "revision" write (#75) 20 → 21
     deps changed: +"computed" +"computed" -"computed" -"computed" (3 total)
 
- ✓ |solid2-browser-development| packages/solid/src/combobox/collection/ComboboxCollection.test.tsx (4 tests) 169ms
- ✓ |solid2-browser-development| packages/solid/src/menu/group/MenuGroup.test.tsx (37 tests) 168ms
- ✓ |solid2-browser-development| packages/solid/src/slider/root/SliderModel.test.tsx (8 tests) 16ms
- ✓ |solid2-browser-development| packages/solid/src/menu/Menu.children.review.test.tsx (6 tests) 284ms
- ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.sizing.review.test.tsx (3 tests) 185ms
- ✓ |solid2-browser-development| packages/solid/src/otp-field/OTPField.conformance.test.tsx (22 tests) 219ms
- ✓ |solid2-browser-development| packages/solid/src/menu/Menu.voiceOver.review.test.tsx (4 tests) 529ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.field.test.tsx (4 tests) 129ms
- ✓ |solid2-browser-development| packages/solid/src/popover/PopoverParts.test.tsx (90 tests) 1127ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsIndicator.dom.test.tsx (1 test) 109ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/collection/ComboboxCollection.test.tsx (4 tests) 209ms
+ ✓ |solid2-browser-development| packages/solid/src/select/item/SelectPointer.test.tsx (8 tests) 582ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/utils/composite.test.ts (10 tests) 94ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastSource.test.ts (18 tests) 70ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/group/MenuGroup.test.tsx (37 tests) 191ms
+ ✓ |solid2-browser-development| packages/solid/src/preview-card/PreviewCard.parts.test.tsx (70 tests) 323ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.children.review.test.tsx (6 tests) 327ms
+ ✓ |solid2-browser-development| packages/solid/src/field/root/FieldRegistration.teardown.test.tsx (12 tests) 491ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastConformance.test.tsx (90 tests) 361ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/createId.lifecycle.test.tsx (3 tests) 323ms
+     ✓ hydrates independent production SSR with matching IDs, state and raw nodes across roots; isolates concurrent async requests  304ms
+ ✓ |solid2-browser-development| packages/solid/src/field/root/FieldRoot.children.test.tsx (2 tests) 179ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/root/SliderModel.test.tsx (8 tests) 21ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/OTPField.conformance.test.tsx (22 tests) 234ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/createAnimationsFinished.test.tsx (3 tests) 79ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.sizing.review.test.tsx (3 tests) 231ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/shadowDom.dom.test.ts (5 tests) 57ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/PopoverParts.test.tsx (90 tests) 2371ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.voiceOver.review.test.tsx (4 tests) 756ms
+   ✓ VoiceOver ArrowRight entry follows Tab and Enter root opening  380ms
+ ✓ |solid2-browser-development| packages/solid/src/meter/label/MeterLabel.test.tsx (13 tests) 170ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.field.test.tsx (4 tests) 148ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsIndicator.dom.test.tsx (1 test) 119ms
+ ✓ |solid2-browser-development| packages/solid/src/progress/label/ProgressLabel.test.tsx (13 tests) 196ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.conformance.test.tsx (108 tests) 787ms
+ ✓ |solid2-browser-development| packages/solid/src/filter-dropdown/root/FilterDropdownCloseQuery.test.tsx (3 tests) 112ms
 stderr | packages/solid/src/combobox/items/createItems.test.ts > Combobox.createItems lazy collection (upstream createItems.test.tsx) > diagnoses duplicate-derived values and always resolves the first label
 Base UI: Two items passed to createItems() derived the value 1, so selection and label resolution cannot tell them apart: the first item wins the label and every item carrying the value renders as selected. Return a unique value from `getValue`.
 
- ✓ |solid2-browser-development| packages/solid/src/combobox/items/createItems.test.ts (11 tests) 5ms
- ✓ |solid2-browser-development| packages/solid/src/navigation-menu/NavigationMenu.conformance.test.tsx (108 tests) 606ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/tab/TabsTab.test.tsx (9 tests) 234ms
- ✓ |solid2-browser-development| packages/solid/src/popover/viewport/PopoverViewport.test.tsx (14 tests) 432ms
- ✓ |solid2-browser-development| packages/solid/src/internals/getStateAttributesProps.test.tsx (12 tests) 91ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/items/createItems.test.ts (11 tests) 6ms
+ ✓ |solid2-browser-development| packages/solid/src/popover/viewport/PopoverViewport.test.tsx (14 tests) 476ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/tab/TabsTab.test.tsx (9 tests) 248ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/createMergedRefs.lifecycle.test.tsx (4 tests) 18ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/composite/list/CompositeList.test.tsx (5 tests) 95ms
+ ✓ |solid2-browser-development| packages/solid/src/toolbar/root/ToolbarRootContext.test.tsx (3 tests) 116ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/getStateAttributesProps.test.tsx (12 tests) 86ms
  ✓ |solid2-browser-development| packages/solid/src/otp-field/utils/OTPField.test.ts (19 tests) 6ms
- ✓ |solid2-browser-development| packages/solid/src/slider/Slider.conformance.test.tsx (63 tests) 246ms
- ✓ |solid2-browser-development| packages/solid/src/select/scroll-arrow/SelectScrollArrow.test.tsx (6 tests) 168ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/root/createMountedPanels.test.tsx (1 test) 13ms
- ✓ |solid2-browser-development| packages/solid/src/avatar/image/AvatarLoading.test.tsx (6 tests) 18ms
- ✓ |solid2-browser-development| packages/solid/src/menu/filter-root/useMenuFilterKeyDown.test.ts (30 tests) 4ms
- ✓ |solid2-browser-development| packages/solid/src/menu/Menu.platform.review.test.tsx (3 tests) 267ms
- ✓ |solid2-browser-development| packages/solid/src/menu/Menu.source-inventory.test.ts (2 tests) 11ms
- ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.docs-hover.test.tsx (2 tests) 267ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsDiagnostics.test.tsx (2 tests) 294ms
+ ✓ |solid2-browser-development| packages/solid/src/progress/value/ProgressValue.test.tsx (12 tests) 147ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/contracts/proof/Bootstrap.test.tsx (2 tests) 173ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/root/DrawerSnapPoints.test.ts (25 tests) 11ms
+ ✓ |solid2-browser-development| packages/solid/src/slider/Slider.conformance.test.tsx (63 tests) 467ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/root/DrawerCloseWatcher.test.tsx (3 tests) 38ms
+ ✓ |solid2-browser-development| packages/solid/src/filter-dropdown/clear/FilterDropdownClear.test.tsx (14 tests) 173ms
+ ✓ |solid2-browser-development| packages/solid/src/select/scroll-arrow/SelectScrollArrow.test.tsx (6 tests) 177ms
+ ✓ |solid2-browser-development| packages/solid/src/avatar/image/AvatarLoading.test.tsx (6 tests) 23ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/root/createMountedPanels.test.tsx (1 test) 18ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/filter-root/useMenuFilterKeyDown.test.ts (30 tests) 6ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.platform.review.test.tsx (3 tests) 295ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/popups/interactionSetup.test.tsx (4 tests) 86ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/createSwipeDismiss.test.tsx (2 tests) 96ms
+ ✓ |solid2-browser-development| packages/solid/src/tooltip/Tooltip.docs-hover.test.tsx (2 tests) 323ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/Menu.source-inventory.test.ts (2 tests) 13ms
+ ✓ |solid2-browser-development| packages/solid/src/dialog/root/DialogDismissPolicy.test.ts (8 tests) 6ms
+ ✓ |solid2-browser-development| packages/solid/src/switch/thumb/SwitchThumb.test.tsx (11 tests) 109ms
+stderr | packages/solid/src/utils/createControlled.test.tsx > createControlled > retains the initial default and emits the source default-change warning only once
+Base UI: A component is changing the default value state of an uncontrolled ReviewedDefault after being initialized. To suppress this warning opt to use a controlled ReviewedDefault.
+
+ ✓ |solid2-browser-development| packages/solid/src/utils/createControlled.test.tsx (3 tests) 93ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/labelable-provider/LabelableProvider.test.tsx (3 tests) 101ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/createAnchorPositioning.test.tsx (1 test) 144ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/viewport/DrawerArbitration.test.ts (9 tests) 5ms
+ ✓ |solid2-browser-development| packages/solid/src/unstable-use-media-query/MediaQuery.test.tsx (2 tests) 85ms
+ ✓ |solid2-browser-development| test/harness/Interactions.test.ts (6 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/hooks/createHoverReferenceInteraction.test.tsx (2 tests) 111ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsDiagnostics.test.tsx (2 tests) 313ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/utils/element.dom.test.ts (2 tests) 26ms
+ ✓ |solid2-browser-development| packages/solid/src/progress/indicator/ProgressIndicator.test.tsx (13 tests | 3 skipped) 275ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastRealm.test.tsx (1 test) 117ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/createPointerSession.test.tsx (2 tests) 21ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox-group/CheckboxGroup.proposal.test.tsx (3 tests) 29ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/formatNumber.test.ts (11 tests) 18ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/hooks/createTypeahead.test.tsx (2 tests) 101ms
  ✓ |solid2-browser-development| packages/solid/src/combobox/input/ComboboxAttributes.test.tsx (3 tests) 152ms
- ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxFilterVirtualizer.test.tsx (1 test) 17ms
+ ✓ |solid2-browser-development| test/harness/Pointer.test.tsx (4 tests) 18ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/root/ComboboxFilterVirtualizer.test.tsx (1 test) 21ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/areArraysEqual.dom.test.ts (10 tests) 5ms
  ✓ |solid2-browser-development| packages/solid/src/select/root/SelectAutofill.test.ts (6 tests) 4ms
- ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldAcceptedValue.test.ts (6 tests) 3ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsGeometry.test.ts (4 tests) 76ms
- ✓ |solid2-browser-development| packages/solid/src/select/scroll-arrow/SelectScrollTarget.test.ts (7 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/components/createFloatingRoot.test.tsx (2 tests) 14ms
+ ✓ |solid2-browser-development| packages/solid/src/meter/indicator/MeterIndicator.test.tsx (13 tests | 2 skipped) 143ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/root/OTPFieldAcceptedValue.test.ts (6 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/meter/value/MeterValue.test.tsx (10 tests) 151ms
+ ↓ |solid2-browser-development| packages/solid/src/field/error/FieldError.test.tsx (2 tests | 2 skipped)
+ ✓ |solid2-browser-development| packages/solid/src/tabs/indicator/TabsGeometry.test.ts (4 tests) 77ms
+ ✓ |solid2-browser-development| packages/solid/src/menu/trigger/MenuTrigger.refs.test.tsx (2 tests) 131ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/styles.test.tsx (5 tests) 29ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/Autocomplete.aliases.test.tsx (21 tests) 77ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/components/FloatingPortal.loading.test.tsx (4 tests) 162ms
+ ✓ |solid2-browser-development| test/harness/Hydration.test.tsx (1 test) 107ms
  ↓ |solid2-browser-development| packages/solid/src/menubar/Menubar.scroll-lock.test.tsx (3 tests | 3 skipped)
- ✓ |solid2-browser-development| packages/solid/src/menubar/MenubarContext.test.tsx (3 tests) 76ms
- ✓ |solid2-browser-development| packages/solid/src/accordion/Accordion.conformance.test.tsx (47 tests) 232ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/temporal-adapter-date-fns/TemporalAdapterDateFns.test.ts (98 tests | 1 skipped) 51ms
+ ✓ |solid2-browser-development| packages/solid/src/select/scroll-arrow/SelectScrollTarget.test.ts (7 tests) 9ms
+ ✓ |solid2-browser-development| packages/solid/src/toolbar/group/ToolbarGroup.test.tsx (11 tests) 319ms
+ ✓ |solid2-browser-development| packages/solid/src/dialog/root/DialogContext.test.tsx (3 tests) 24ms
+ ✓ |solid2-browser-development| packages/solid/src/accordion/Accordion.conformance.test.tsx (47 tests) 271ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/virtual-keyboard-provider/DrawerKeyboardTargets.test.ts (19 tests) 22ms
+ ✓ |solid2-browser-development| packages/solid/src/preview-card/viewport/PreviewCardViewport.test.tsx (2 tests) 130ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/value/AutocompleteValue.test.tsx (4 tests) 58ms
+ ✓ |solid2-browser-development| packages/solid/src/scroll-area/ScrollArea.measure.test.ts (3 tests) 67ms
+ ✓ |solid2-browser-development| packages/solid/src/menubar/MenubarContext.test.tsx (3 tests) 85ms
+ ✓ |solid2-browser-development| packages/solid/src/checkbox/root/CheckboxRoot.teardown.test.tsx (4 tests) 217ms
+stderr | packages/solid/src/floating-ui-react/components/NativePortalLoading.test.tsx > pins RC13 native Portal outer-Loading limitation independently of Base UI rendering
+[ASYNC_OUTSIDE_LOADING_BOUNDARY] An async value was read outside a Loading boundary. The root mount will be deferred until all pending async settles.
+  in <Loading> › children › <Portal> › effect › effect
+  at http://localhost/packages/solid/src/floating-ui-react/components/NativePortalLoading.test.tsx:12:89
+[ASYNC_OUTSIDE_LOADING_BOUNDARY] what it means and how to fix it: https://docs.solidjs.com/reference/solid-js/diagnostics/async-outside-loading-boundary
+[ASYNC_OUTSIDE_LOADING_BOUNDARY] agent repair guide: node_modules/solid-js/skills/reactivity-diagnostics/SKILL.md#async_outside_loading_boundary — https://github.com/solidjs/solid/blob/next/packages/solid/skills/reactivity-diagnostics/SKILL.md#async_outside_loading_boundary
+
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/components/NativePortalLoading.test.tsx (2 tests) 27ms
+ ✓ |solid2-browser-development| packages/solid/src/toolbar/separator/ToolbarSeparator.test.tsx (13 tests) 134ms
  ✓ |solid2-browser-development| packages/solid/src/slider/thumb/SliderPrehydration.test.ts (3 tests) 15ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.reactivity.test.tsx (1 test) 196ms
- ✓ |solid2-browser-development| packages/solid/src/navigation-menu/root/NavigationMenuRootContext.test.ts (5 tests) 3ms
- ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.filter.test.tsx (2 tests) 233ms
- ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsActivationDirection.test.ts (2 tests) 3ms
- ✓ |solid2-browser-development| packages/solid/src/otp-field/input/OTPFieldInput.android.test.tsx (1 test) 152ms
- ✓ |solid2-browser-development| packages/solid/src/combobox/status/ComboboxStatus.iOS.test.tsx (1 test) 88ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/hooks/createClientPoint.test.tsx (1 test) 83ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/resolveValueLabel.jsx.test.tsx (2 tests) 20ms
+ ✓ |solid2-browser-development| packages/solid/src/menubar/Menubar.filter.test.tsx (2 tests) 260ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/addEventListener.dom.test.ts (3 tests) 5ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/createPopupViewport.test.tsx (1 test) 83ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/utils/enqueueFocus.dom.test.ts (1 test) 14ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/platform/platform.dom.test.ts (7 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/temporal-adapter-luxon/TemporalAdapterLuxon.test.ts (96 tests) 37ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/components/FloatingPortal.review.test.tsx (1 test) 188ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/root/NavigationMenuRootContext.test.ts (5 tests) 8ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/content/DrawerContent.test.tsx (10 tests) 227ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/resolvePopupLabel.test.tsx (2 tests) 151ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/createScrollLock.test.tsx (1 test) 192ms
+ ✓ |solid2-browser-development| packages/solid/src/tabs/root/TabsActivationDirection.test.ts (2 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/hooks/createFocus.test.tsx (1 test) 91ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/temporal-adapter-date-fns/TemporalAdapterDateFns.timezone.node.test.ts (3 tests) 18ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/utils/isRenderableNode.test.ts (4 tests) 6ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/serializeValue.test.ts (13 tests) 10ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/test/DrawerSourceInventory.node.test.ts (2 tests) 17ms
+ ✓ |solid2-browser-development| packages/solid/src/otp-field/input/OTPFieldInput.android.test.tsx (1 test) 358ms
+     ✓ commits incrementally during always-composing input without a duplicate end commit  357ms
+stderr | packages/solid/src/utils/createLogOnce.dom.test.ts > source custom prefix, no prefix and joined messages; retains real console diagnostics
+My Library: message
+
+stderr | packages/solid/src/utils/createLogOnce.dom.test.ts > source custom prefix, no prefix and joined messages; retains real console diagnostics
+message
+
+stderr | packages/solid/src/utils/createLogOnce.dom.test.ts > source custom prefix, no prefix and joined messages; retains real console diagnostics
+first second
+
+stderr | packages/solid/src/utils/createLogOnce.dom.test.ts > source deduplicates severity independently, shares instances and logs again after reset
+message
+message
+
+stderr | packages/solid/src/utils/createLogOnce.dom.test.ts > source deduplicates severity independently, shares instances and logs again after reset
+message
+
+stderr | packages/solid/src/utils/createLogOnce.dom.test.ts > source deduplicates severity independently, shares instances and logs again after reset
+Base UI: message
+Base UI: message
+
+ ✓ |solid2-browser-development| packages/solid/src/utils/createLogOnce.dom.test.ts (2 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/field-root-context/createSetFieldFocused.test.tsx (2 tests) 96ms
+ ↓ |solid2-browser-development| packages/solid/src/utils/visuallyHidden.dom.test.ts (4 tests | 4 skipped)
+ ✓ |solid2-browser-development| packages/solid/src/utils/formatErrorMessage.dom.test.ts (2 tests) 3ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/status/ComboboxStatus.iOS.test.tsx (1 test) 86ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/root/ContextMenuRoot.non-mac.test.tsx (1 test) 126ms
+ ✓ |solid2-browser-development| packages/solid/src/autocomplete/item/AutocompleteItem.test.tsx (3 tests) 325ms
  ✓ |solid2-browser-development| packages/solid/src/tooltip/utils/TooltipInstant.test.ts (3 tests) 3ms
- ✓ |solid2-browser-development| packages/solid/src/context-menu/root/ContextMenuRoot.non-mac.test.tsx (1 test) 159ms
- ✓ |solid2-browser-development| packages/solid/src/navigation-menu/utils/NavigationMenuSizing.test.ts (2 tests) 3ms
- ✓ |solid2-browser-development| packages/solid/src/combobox/input/ComboboxInput.gecko.test.tsx (1 test) 98ms
- ✓ |solid2-browser-development| packages/solid/src/combobox/input/ComboboxInput.android.test.tsx (1 test) 98ms
- ✓ |solid2-browser-development| packages/solid/src/avatar/root/AvatarRoot.test.tsx (10 tests) 103ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/createPressAndHold.test.tsx (1 test) 82ms
+ ✓ |solid2-browser-development| packages/solid/src/toolbar/link/ToolbarLink.test.tsx (10 tests) 166ms
+stderr | packages/solid/src/field/label/FieldLabel.test.tsx > Field.Label diagnostics > reports a native label rendered as a div exactly once
+Base UI: <Field.Label> expected a <label> element because the `nativeLabel` prop is true. Rendering a non-<label> disables native label association, so `htmlFor` will not work. Use a real <label> in the `render` prop, or set `nativeLabel` to `false`.
+
+stderr | packages/solid/src/field/label/FieldLabel.test.tsx > Field.Label diagnostics > reports a non-native label rendered as a label exactly once
+Base UI: <Field.Label> expected a non-<label> element because the `nativeLabel` prop is false. Rendering a <label> assumes native label behavior while Base UI treats it as non-native, which can cause unexpected pointer behavior. Use a non-<label> in the `render` prop, or set `nativeLabel` to `true`.
+
+ ✓ |solid2-browser-development| packages/solid/src/field/label/FieldLabel.test.tsx (3 tests) 28ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/utils/NavigationMenuSizing.test.ts (2 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/input/ComboboxInput.gecko.test.tsx (1 test) 196ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/createItemRegistry.test.tsx (1 test) 157ms
+ ✓ |solid2-browser-development| packages/solid/src/dialog/portal/DialogPortal.test.tsx (1 test) 204ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/getDefaultFormSubmitter.dom.test.ts (6 tests) 27ms
+ ✓ |solid2-browser-development| packages/solid/src/avatar/root/AvatarRoot.test.tsx (10 tests) 123ms
+ ✓ |solid2-browser-development| packages/solid/src/combobox/input/ComboboxInput.android.test.tsx (1 test) 110ms
+ ✓ |solid2-browser-development| packages/solid/src/internals/TimeoutManager.lifecycle.test.ts (1 test) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/toast/ToastContext.test.ts (3 tests) 4ms
  ✓ |solid2-browser-development| packages/solid/src/number-field/utils/NumberField.viewport.test.ts (2 tests) 3ms
- ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.ios.test.tsx (3 tests) 104ms
- ✓ |solid2-browser-development| packages/solid/src/context-menu/ContextMenu.aliases.test.ts (1 test) 5ms
- ✓ |solid2-browser-development| packages/solid/src/navigation-menu/item/NavigationMenuItem.test.tsx (9 tests) 90ms
+ ✓ |solid2-browser-development| packages/solid/src/floating-ui-react/utils/visibility.dom.test.ts (1 test) 77ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/scrollEdges.dom.test.ts (14 tests) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/number-field/NumberField.ios.test.tsx (3 tests) 105ms
+ ✓ |solid2-browser-development| test/contracts/PackageResolution.test.tsx (1 test) 85ms
+ ✓ |solid2-browser-development| packages/solid/src/context-menu/ContextMenu.aliases.test.ts (1 test) 3ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/stringifyLocale.test.ts (2 tests) 3ms
+ ✓ |solid2-browser-development| test/harness/Timezone.test.ts (3 tests) 16ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/indent-background/DrawerIndentBackground.test.tsx (9 tests) 112ms
+ ✓ |solid2-browser-development| packages/solid/src/utils/state/lruMemoize.test.ts (1 test) 3ms
+ ✓ |solid2-browser-development| test/harness/MatcherRegistration.test.ts (1 test) 4ms
+ ✓ |solid2-browser-development| packages/solid/src/drawer/indent/DrawerIndent.test.tsx (9 tests) 105ms
+ ✓ |solid2-browser-development| packages/solid/src/progress/track/ProgressTrack.test.tsx (9 tests) 139ms
+ ✓ |solid2-browser-development| packages/solid/src/navigation-menu/item/NavigationMenuItem.test.tsx (9 tests) 106ms
+ ✓ |solid2-browser-development| packages/solid/src/meter/track/MeterTrack.test.tsx (9 tests) 132ms
 
- Test Files  127 passed | 1 skipped (128)
-      Tests  3412 passed | 110 skipped (3522)
-   Start at  18:53:24
-   Duration  61.71s (transform 7.79s, setup 10.27s, import 15.61s, tests 58.63s, environment 27.73s)
+ Test Files  318 passed | 3 skipped (321)
+      Tests  6482 passed | 272 skipped (6754)
+   Start at  15:37:26
+   Duration  159.27s (transform 11.62s, setup 34.46s, import 26.26s, tests 127.99s, environment 95.04s)
 
-[HARNESS_FINAL] passed; files=128 failedFiles=0; passed=3412 failed=0 skipped=110 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_FINAL] passed; files=321 failedFiles=0; passed=6482 failed=0 skipped=272 pending=0 unhandled=0 unfinishedModules=0

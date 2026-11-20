@@ -1,15 +1,27 @@
 # Isolated packed consumers
 
-## Current RC13 distribution policy
+## Current Solid 2 distribution policy
 
 Runtime exports now prioritize `worker` before `browser`, matching stock
-`solid-js` and `@solidjs/web` RC13. All 64 resolver subsets remain mandatory in
+`solid-js` and `@solidjs/web` 2.0.3. All 64 resolver subsets remain mandatory in
 each of the four independent peer installations. Every non-types subset that
 selects server output (24 sets, including browser+worker) executes actual imports.
 Of the 16 subsets containing browser and excluding types, eight without worker
 execute Chromium hydration; the eight with worker execute separately compiled
 SSR under their actual Node conditions. Mixed conditions are lane-routed, not
 omitted. Every corresponding execution must pass.
+
+Each runtime branch selects `dom-dev`/`server-dev` under `development`, otherwise
+`dom`/`server`. Browser hydration uses matching development or production SSR
+artifacts. The fixture includes both a default native host and a component render
+host that snapshots initial styling metadata before creating its button, while
+forwarding live props. It asserts original nodes, unchanged IDs and real clicks.
+
+The diagnostics stage executes the packed Button native-host error and Checkbox
+controlled-to-uncontrolled error in Chromium, plus the detached Popover handle
+warning in Node. Development must report the expected messages exactly once;
+production must be silent. Chromium has no `process` global. Resolution checks
+also inspect the selected transitive button module for the diagnostic text.
 
 Staged `sideEffects: false` follows the authored/compiler initialization audit in
 `docs/distribution-initialization-audit.md`. The packed initialization stage
@@ -78,10 +90,10 @@ rebuilds. Do not run it before the fresh-build freeze.
   date-fns + timezone only; Luxon + its declaration package only; both.
   `--legacy-peer-deps` disables peer auto-installation, not the explicit peer
   contract checks. `--ignore-scripts` avoids package lifecycle execution.
-- Install exact stock RC13 core/renderer/signals/compiler/Babel plugin, Vite
+- Install exact stock 2.0.3 core/renderer/signals and 2.0.2 compiler/Babel plugin, Vite
   integration `3.0.1`, Babel `7.29.7`, Vite `8.3.2`, TypeScript `5.9.3`,
   Playwright `1.63.0`, publint `0.3.25`, ATTW core `0.18.5`; exact independent
-  temporal pins. Consumer-only overrides prevent RC/tool drift. Verify nested
+  temporal pins. Consumer-only overrides prevent runtime/tool drift. Verify nested
   installations, reject package symlinks/React, and byte-compare installed
   library files with the input archive. Only npm executable `.bin` shims are
   excluded from package-link rejection.

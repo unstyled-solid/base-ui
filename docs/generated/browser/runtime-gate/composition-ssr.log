@@ -1,0 +1,14 @@
+$ node scripts/test/run.mjs ssr compositionInventory --no-watch
+PASS: isolated production SSR compilation and HTML artifact
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=forks maxWorkers=2 TZ=UTC
+ ✓ |solid2-server| packages/solid/src/internals/compositionInventory.ssr.test.tsx (208 tests) 1274ms
+
+ Test Files  1 passed (1)
+      Tests  208 passed (208)
+   Start at  15:40:37
+   Duration  5.96s (transform 4.07s, setup 96ms, import 4.47s, tests 1.27s, environment 0ms)
+
+[HARNESS_FINAL] passed; files=1 failedFiles=0; passed=208 failed=0 skipped=0 pending=0 unhandled=0 unfinishedModules=0

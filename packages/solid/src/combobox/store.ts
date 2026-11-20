@@ -1,4 +1,4 @@
-import { createEffect, createMemo, createSignal, onCleanup, untrack } from 'solid-js';
+import { createEffect, createMemo, createSignal, onCleanup, onSettled, untrack } from 'solid-js';
 import { createControlled } from '../utils/createControlled';
 import { createPopup } from '../utils/popups/createPopup';
 import { createFloatingRoot } from '../floating-ui-react/components/createFloatingRoot';
@@ -47,7 +47,7 @@ export function createComboboxModel(props: AriaComboboxProps<any, SelectionMode,
   const [active, setActive] = createSignal<{ index: number | null; reason: AriaCombobox.HighlightEventReason; event?: Event; query: string | null }>({ index: null, reason: 'none', query: null });
   const [selectedIndexRequest, setSelectedIndexRequest] = createSignal<{ index: number | null; value: any; values: readonly any[] } | null>(null);
   const [selectionAnchor, setSelectionAnchor] = createSignal<{ toggledValue?: any } | null>(null);
-  // Explicit same-turn uncontrolled selection snapshot. Controlled proposals never acknowledge
+  // Uncontrolled selection snapshot until the batch settles. Controlled proposals never acknowledge
   // selection; they continue reading the parent's actual value.
   let selectionProposal: { nextValue: any } | undefined;
   const [inputElement, setInputElement] = createSignal<HTMLInputElement | null>(null);
@@ -281,7 +281,7 @@ export function createComboboxModel(props: AriaComboboxProps<any, SelectionMode,
       if (!result.controlled) {
         const proposal = { nextValue: result.nextValue };
         selectionProposal = proposal;
-        queueMicrotask(() => { if (selectionProposal === proposal) selectionProposal = undefined; });
+        onSettled(() => { if (selectionProposal === proposal) selectionProposal = undefined; });
       }
       if ((props.selectionMode === 'single' && !inside()) || (props.selectionMode === 'none' && props.fillInputOnItemPress !== false && cells.popupRef.current)) {
         context.setInputValue(derived.label(next), createChangeEventDetails(details.reason, details.event));

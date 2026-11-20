@@ -6,7 +6,7 @@ export type Cleanup = () => void;
 export type Live<T> = Readonly<T>;
 /** Raw identity is retained. Allocate resources in setup, never in a ref callback. */
 export type ElementAccessor<T extends Element = HTMLElement> = Accessor<T | null>;
-/** Public RC.13 ref spelling, including assignment refs and ref arrays. */
+/** Public Solid 2.0.3 ref spelling, including assignment refs and ref arrays. */
 export type NativeRef<T extends Element> = JSX.Ref<T>;
 /** Imperative metadata only; do not use a cell to replace a reactive accessor. */
 export interface MutableCell<T> { current: T }

@@ -1,4 +1,4 @@
-import { createEffect, createMemo, createSignal, onCleanup, untrack } from 'solid-js';
+import { createEffect, createMemo, createSignal, onCleanup, onSettled, untrack } from 'solid-js';
 import { createAnimationsFinished } from '../../internals/createAnimationsFinished';
 import { createFloatingTree } from '../../floating-ui-react/components/createFloatingTree';
 import type { MenuTree } from '../utils/MenuTreeEvents';
@@ -12,7 +12,6 @@ import type { MenuParent, MenuRootProps, MenuRootHighlightEventReason } from '..
 import { isKeyboardClick, isKeyboardOpen } from '../utils/isKeyboardOpen';
 import { createTimeout } from '../../utils/createTimeout';
 import type { InteractionType } from '../../utils/createEnhancedClickHandler';
-import { isServer } from '@solidjs/web';
 
 export type MenuInstant = 'dismiss' | 'click' | 'group' | 'trigger-change' | undefined;
 export interface MenuTriggerData {
@@ -275,10 +274,11 @@ export function createMenuStore<Payload>(options: MenuStoreOptions<Payload>): Me
     setActiveIndex, setListElement, setListId, setHighlightedItem, setHoverEnabled,
     setFloatingId,
     setFilterTriggerProps(props) {
+      if (disposed) return;
       // Seed before contained triggers render, including SSR. Detached triggers
-      // subscribed earlier are notified at the ordinary commit checkpoint.
+      // subscribed earlier are notified in the client's settled effect phase.
       initialFilterTriggerProps = props;
-      if (!isServer) queueMicrotask(() => { if (!disposed) setFilterTriggerProps(() => props); });
+      onSettled(() => { if (!disposed) setFilterTriggerProps(() => props); });
     },
     installInteractions(props) { interactions = props; },
     setOpenMethod(value) { setMethodRequest({ value }); }, setInstantType: setInstant,

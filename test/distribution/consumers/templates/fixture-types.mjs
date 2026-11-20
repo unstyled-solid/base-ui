@@ -14,7 +14,7 @@ for (const mode of ['Bundler', 'NodeNext']) {
     moduleResolution: mode === 'NodeNext' ? ts.ModuleResolutionKind.NodeNext : ts.ModuleResolutionKind.Bundler,
     allowJs: true, checkJs: true, strict: true, skipLibCheck: false, noEmit: true,
     jsx: ts.JsxEmit.Preserve, jsxImportSource: '@solidjs/web', types: [], verbatimModuleSyntax: true };
-  const program = ts.createProgram(['all-runtime.mjs', 'client.tsx', 'app.tsx'].map(file => path.resolve(file)), options);
+  const program = ts.createProgram(['all-runtime.mjs', 'client.tsx', 'app.tsx', 'diagnostics.tsx'].map(file => path.resolve(file)), options);
   const diagnostics = ts.getPreEmitDiagnostics(program);
   const sources = program.getSourceFiles().map(source => source.fileName);
   assert(sources.every(file => file.startsWith(`${consumerRoot}/`)), 'New fixture types escaped retained consumer');

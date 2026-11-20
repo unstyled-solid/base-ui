@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "sourceSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
+  "exclusions": [
+    {
+      "entrypoint": "./internals/useAnchorPositioning",
+      "symbol": "useAnchorPositioningWithHook",
+      "source": "upstream/base-ui/packages/react/src/internals/useAnchorPositioning.ts",
+      "reason": "React-specific injection seam accepts a React useFloating hook/UseFloatingReturn. Solid uses the single setup-owned createBaseUIFloating implementation through createAnchorPositioning/useAnchorPositioning; it cannot execute an injected React hook. The positioning API remains exported."
+    },
+    {
+      "entrypoint": "./internals/useRenderElement",
+      "symbol": "unwrapLazyRenderProp",
+      "source": "upstream/base-ui/packages/react/src/internals/useRenderElement.tsx",
+      "reason": "Unwraps React lazy element payloads. Solid render props are native live callback functions, not React elements/lazy payloads, so the React element-unwrapping API is inapplicable. createRenderElement/useRenderElement owns native composition."
+    }
+  ],
+  "nativeTypeMappings": [
+    {
+      "entrypoint": "./internals/useAnchorPositioning",
+      "symbol": "Boundary",
+      "reason": "Names the existing @floating-ui/dom Boundary plus Base UI clipping-ancestors spelling. This export accounting does not claim support for React adapter Rect boundaries not implemented by the current native DOM adapter."
+    },
+    {
+      "entrypoint": "./internals/field-root-context",
+      "symbol": "FieldRootContextType",
+      "reason": "Alias of FieldRootContextValue, the existing native accessor/Setter field contract."
+    },
+    {
+      "entrypoint": "./internals/useAnchorPositioning",
+      "symbol": "UseAnchorPositioningReturnValue",
+      "reason": "Alias of AnchorPositioningResult, preserving the established native getter/ref/update contract."
+    }
+  ]
+}

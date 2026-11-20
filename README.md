@@ -26,6 +26,8 @@ export function Example() {
 
 **Compatibility:** This branch targets **Solid 2.0.3**. Use a compatible Solid 2 compiler with `jsxImportSource: "@solidjs/web"`; Solid 1 is not supported. See the [installation guide](packages/solid/README.md) for toolchain configuration and published-version compatibility.
 
+For Vite, Vitest jsdom and Solid-2-compatible Astro setups, see the [single-runtime setup notes](packages/solid/README.md#vite--vitest--astro-share-one-solid-runtime), including targeted dependency-optimization and externalization workarounds.
+
 ## Documentation
 
 - [Installation and usage](packages/solid/README.md)

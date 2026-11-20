@@ -89,10 +89,10 @@ function extendTooltipStore<Payload>(
     get lastOpenChangeReason() { return reason(); },
     get closeOnClick() {
       // Pointerdown chooses the clicked trigger before the lazy reference-press
-      // check runs. Carry that proposal immediately across RC13's staged writes.
+      // check runs. Carry that proposal immediately across Solid 2.0.3's staged writes.
       const trigger = model.getCurrentTrigger?.() ?? model.state.activeTriggerElement;
       if (pressSource && pressSource.trigger === trigger) return pressSource.data.closeOnClick;
-      // An accepted imperative handoff is visible before RC13 commits the
+      // An accepted imperative handoff is visible before Solid 2.0.3 commits the
       // selector. Resolve its registered metadata by raw node identity.
       if (trigger) {
         const entry = [...model.context.triggerElements.entries()].find(([, element]) => element === trigger);

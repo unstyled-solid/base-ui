@@ -46,6 +46,7 @@ if (!types.passed) {
 }
 await run('catalog', ['pnpm', 'docs:generate:demos']);
 await run('docs', ['pnpm', 'docs:check']);
+await run('composition-inventory', ['proxy', 'node', 'scripts/test/composition-inventory.mjs', '--check']);
 await run('jsdom', ['pnpm', 'test:jsdom', ...(fullUnit ? [] : ['merge-props', 'getStateAttributesProps', 'createRenderElement', 'useButton',
   'number-field', 'tabs', 'accordion', 'collapsible', 'radio', 'tooltip', 'popover', 'menu', 'select', 'slider',
   'otp-field', 'avatar', 'combobox', 'createPopup.test']), '--no-watch']);
@@ -54,6 +55,9 @@ await run('ssr', ['pnpm', 'test:ssr', ...(fullUnit ? [] : ['createRenderElement'
 await run('chromium', ['pnpm', 'test:chromium', '--grouped', 'createRenderElement', 'Events.test', 'getStateAttributesProps',
   'NumberField.reactivity', 'RadioIndicator.test', 'RadioGroup.field', 'SelectField.test', 'TabsActivation.browser',
   'createPopup.test', 'CheckboxRoot.teardown', 'FieldRegistration.teardown', 'PopoverPositioner.browser', '--no-watch']);
+await run('composition-ssr', ['pnpm', 'test:ssr', 'compositionInventory', '--no-watch']);
+await run('composition-browser', ['pnpm', 'test:chromium', 'compositionInventory.hydration', '--no-watch']);
+await run('composition-native', ['proxy', 'node', 'scripts/test/run.mjs', 'chromium-native', 'compositionInventory.hydration', '--testNamePattern', 'inventory NumberField.ScrubAreaCursor ', '--no-watch']);
 
 let server;
 let serverOutput = '';

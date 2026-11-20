@@ -1,4 +1,4 @@
-# Distribution initialization audit — Solid 2 RC13
+# Distribution initialization audit — Solid 2.0.3 / compiler 2.0.2
 
 The staged ESM package uses `sideEffects: false`: unused modules can be omitted
 without losing externally observable import-time work. This is module metadata,
@@ -12,7 +12,7 @@ fields execute when invoked/constructed, not when their module loads.
 The independent consumer's `initialization.mjs` checks the actual installed
 runtime files against these audited categories and rejects unknown initialization.
 
-- Context modules call RC13 `createContext`: installed `solid-js/dist/solid.js`
+- Context modules call stable `createContext`: installed `solid-js/dist/solid.js`
   creates a local Symbol and provider closure; ownership begins when the provider
   is called. No registration, listener or reactive computation runs at import.
 - Map/WeakMap/Set/WeakSet and Symbol initializers create module-local state.
@@ -35,7 +35,7 @@ runtime files against these audited categories and rejects unknown initializatio
 
 ## Compiler output
 
-Pinned Babel RC13 emits PURE-annotated DOM `template` factory calls. Installed
+Pinned Babel 2.0.2 emits PURE-annotated DOM `template` factory calls. Installed
 `@solidjs/web/dist/web.js` returns a closure and delays document/template creation
 until that closure runs. SSR symbols and assignments to compiler-local prototype
 constructors do not mutate external objects. No added blanket purity annotation
@@ -53,7 +53,13 @@ Use the packed consumer runner with stock registry peers. The unused-import
 bundle must contain zero library modules, root/subpath Toggle module graphs must
 match, and unrelated families/optional adapters must disappear. Execute optimized
 native events/disposal and optimized SSR/hydration/style/CSP checks. Resolution
-must agree with RC13's worker-before-browser behavior; mixed worker conditions
+must agree with stable 2.0.3's worker-before-browser behavior; mixed worker conditions
 execute SSR rather than a DOM hydration fixture.
 
 This audit does not complete the exhaustive upstream behavioral case inventory.
+
+The archive-bound qualification runner records the authored census and hashes
+the reviewed factory implementations above. Its independent installation audits
+all four emitted variants, runs the zero-retention/root-subpath bundle checks,
+and executes optimized ScrollArea/Select styles, CSP, overlapping Dialog locks,
+Tooltip listeners, shadow-root disposal, and Tabs/Slider prehydration handoff.

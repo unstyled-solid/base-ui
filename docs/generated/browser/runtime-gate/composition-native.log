@@ -1,0 +1,276 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./scripts/test/allocation-trace" without a file extension (vitest.browser.config.ts:7:39). Add the file extension
+  - import "./allocation-trace" without a file extension (scripts/test/fixture-server.ts:7:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+3:41:42 pm [vite] warning: `optimizeDeps.esbuildOptions` option was specified by "harness-solid-allocation-trace" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.
+[HARNESS_BATCH] 1/1 chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx
+PASS: isolated production SSR compilation and HTML artifact
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./scripts/test/allocation-trace" without a file extension (vitest.browser.config.ts:7:39). Add the file extension
+  - import "./allocation-trace" without a file extension (scripts/test/fixture-server.ts:7:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+3:41:43 pm [vite] warning: `optimizeDeps.esbuildOptions` option was specified by "harness-solid-allocation-trace" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.
+
+ RUN  v4.1.11 /Users/avi/avir-oss/baseui-solid2
+
+[HARNESS_EXECUTION] pool=browser maxWorkers=1 TZ=UTC
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./scripts/test/allocation-trace" without a file extension (vitest.browser.config.ts:7:39). Add the file extension
+  - import "./allocation-trace" without a file extension (scripts/test/fixture-server.ts:7:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+3:41:43 pm [vite] warning: `optimizeDeps.esbuildOptions` option was specified by "harness-solid-allocation-trace" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.
+You or a plugin you are using have set `optimizeDeps.esbuildOptions` but this option is now deprecated. Vite now uses Rolldown to optimize the dependencies. Please use `optimizeDeps.rolldownOptions` instead.
+3:41:45 pm [vite] (client) warning: 
+/Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-RaOPsS/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js
+1740 |  		if (hy.modules[key]) continue;
+1741 |  		const entryUrl = new URL(mapping[key], document.baseURI).href;
+1742 |  ...itest_browser_runner__"].wrapDynamicImport(() => import(entryUrl)).then((mod) => {
+     |                                                             ^^^^^^^^
+1743 |  			hy.modules[key] = mod;
+1744 |  		}, (err) => {
+The above dynamic import cannot be analyzed by Vite.
+See https://vite.dev/guide/features#dynamic-import for supported dynamic import formats. If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+
+  Plugin: vite:import-analysis
+  File: /Users/avi/avir-oss/baseui-solid2/test/ssr-harness/.generated/suite-RaOPsS/vite/vitest/6b8a3200d66c9f4a882f5a86d4923a80389f51eb/deps/@solidjs_web.js?v=2b2b4203
+3:41:47 pm [vite] warning: `optimizeDeps.esbuildOptions` option was specified by "harness-solid-allocation-trace" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.
+You or a plugin you are using have set `optimizeDeps.esbuildOptions` but this option is now deprecated. Vite now uses Rolldown to optimize the dependencies. Please use `optimizeDeps.rolldownOptions` instead.
+ ❯ |solid2-real-browser-development (chromium)| packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx (206 tests | 1 failed | 205 skipped) 3574ms
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Accordion.Header component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Accordion.Item component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Accordion.Panel component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Accordion.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Accordion.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory AlertDialog.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Autocomplete.InputGroup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Autocomplete.Item component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Autocomplete.Separator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Autocomplete.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Avatar.Fallback component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Avatar.Image component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Avatar.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Button component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Checkbox.Indicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Checkbox.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory CheckboxGroup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Collapsible.Panel component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Collapsible.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Collapsible.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Arrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Backdrop component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Chip component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.ChipRemove component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Chips component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Clear component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Empty component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Group component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.GroupLabel component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Icon component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Input component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.InputGroup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Item component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.ItemIndicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Label component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.List component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Positioner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Row component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Separator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Status component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Combobox.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ContextMenu.Separator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ContextMenu.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Dialog.Backdrop component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Dialog.Close component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Dialog.Description component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Dialog.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Dialog.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Dialog.Title component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Dialog.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Dialog.Viewport component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Drawer.Backdrop component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Drawer.Content component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Drawer.Indent component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Drawer.IndentBackground component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Drawer.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Drawer.SwipeArea component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Drawer.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Drawer.Viewport component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Field.Control component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Field.Description component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Field.Error component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Field.Item component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Field.Label component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Field.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Fieldset.Legend component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Fieldset.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Form component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Input component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Arrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Backdrop component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.CheckboxItem component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.CheckboxItemIndicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Clear component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Empty component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Group component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.GroupLabel component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Input component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Item component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.LinkItem component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.List component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Positioner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.RadioGroup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.RadioItem component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.RadioItemIndicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.SubmenuTrigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menu.Viewport component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Menubar component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Meter.Indicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Meter.Label component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Meter.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Meter.Track component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Meter.Value component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Arrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Backdrop component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Content component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Icon component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Item component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Link component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.List component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Positioner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NavigationMenu.Viewport component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.Decrement component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.Group component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.Increment component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.Input component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.ScrubArea component composition]
+   × [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.ScrubAreaCursor component composition] 3571ms
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory OTPField.Input component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory OTPField.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Arrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Backdrop component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Close component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Description component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Positioner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Title component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Popover.Viewport component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory PreviewCard.Arrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory PreviewCard.Backdrop component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory PreviewCard.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory PreviewCard.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory PreviewCard.Positioner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory PreviewCard.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory PreviewCard.Viewport component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Progress.Indicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Progress.Label component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Progress.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Progress.Track component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Progress.Value component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Radio.Indicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Radio.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory RadioGroup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ScrollArea.Content component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ScrollArea.Corner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ScrollArea.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ScrollArea.Scrollbar component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ScrollArea.Thumb component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ScrollArea.Viewport component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Arrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Backdrop component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Group component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.GroupLabel component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Icon component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Item component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.ItemIndicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.ItemText component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Label component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.List component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Positioner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.ScrollDownArrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.ScrollUpArrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Select.Value component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Slider.Control component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Slider.Indicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Slider.Label component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Slider.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Slider.Thumb component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Slider.Track component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Slider.Value component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Switch.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Switch.Thumb component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tabs.Indicator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tabs.List component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tabs.Panel component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tabs.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tabs.Tab component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Action component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Arrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Close component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Content component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Description component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Positioner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Title component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toast.Viewport component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toggle component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory ToggleGroup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toolbar.Button component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toolbar.Group component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toolbar.Input component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toolbar.Link component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toolbar.Root component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Toolbar.Separator component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tooltip.Arrow component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tooltip.Popup component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tooltip.Portal component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tooltip.Positioner component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tooltip.Trigger component composition]
+   ↓ [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory Tooltip.Viewport component composition]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |solid2-real-browser-development (chromium)| packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx:14:3 > [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.ScrubAreaCursor component composition]
+AssertionError: expected null not to be null
+
+Failure screenshot:
+  - test/harness/.cache/screenshots/packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx/-browser-https---github-com-unstyled-solid-base-ui-issues-15-64857eb7dcad4bae8030a0a1.png
+
+ ❯ toBeNull packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx:46:68
+     44|         await commands.compositionPointer('move', '[data-inventory-par…
+     45|       }
+     46|       await expect.poll(() => document.querySelector(selector)).not.to…
+       |                                                                    ^
+     47|       const host = document.querySelector(selector)!;
+     48|       if (!part.clientMounted) {
+
+Caused by: Error: Matcher did not succeed in time.
+ ❯ packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx:46:6
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 205 skipped (206)
+   Start at  15:41:43
+   Duration  7.40s (transform 0ms, setup 147ms, import 2.25s, tests 3.57s, environment 0ms)
+
+[HARNESS_FAILURE] solid2-real-browser-development (chromium) packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx:14 [browser:https://github.com/unstyled-solid/base-ui/issues/15] [source:packages/react/src/internals/useRenderElement.test.tsx#inventory NumberField.ScrubAreaCursor component composition]
+[HARNESS_FINAL] failed; files=1 failedFiles=1; passed=0 failed=1 skipped=205 pending=0 unhandled=0 unfinishedModules=0
+[HARNESS_BATCH_FAILURE] chromium /Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx status=1 signal=none receipt={"reason":"failed","files":["/Users/avi/avir-oss/baseui-solid2/packages/solid/src/internals/compositionInventory.hydration.browser.test.tsx"],"failedFiles":1,"passed":0,"failed":1,"skipped":205,"pending":0,"unhandled":0,"unfinishedModules":0}
+[HARNESS_BATCH_FINAL] {"intended":1,"executed":1,"resumed":0,"failedBatches":1,"engines":{"chromium":{"files":1,"passed":0,"failed":1,"skipped":205,"pending":0,"unhandled":0,"incomplete":0}}}

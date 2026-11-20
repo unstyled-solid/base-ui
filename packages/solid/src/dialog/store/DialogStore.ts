@@ -60,7 +60,7 @@ export function createDialogStore<Payload>(mode: DialogRootMode, props: DialogRo
     onOpenChange: () => (open, details) => {
       // Closing ownership must reach the public callback before it can veto the request.
       if (!open && details.trigger == null) {
-        // React's store writes trigger ownership synchronously. In RC13 the
+        // React's store writes trigger ownership synchronously. In Solid 2.0.3 the
         // mounted state/selector can still describe the pre-open checkpoint;
         // consume the shared transaction lookup for a same-turn close.
         const trigger = popup.getCurrentTrigger();

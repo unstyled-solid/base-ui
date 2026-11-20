@@ -19,7 +19,9 @@ export function getRenderedHost(value: unknown): HTMLElement | null {
  * and inspect the outer host's children while respecting quoted attribute `>`s. */
 export function hasServerRenderableChildren(value: JSX.Element): boolean {
   if (!isServer) return false;
-  const html: string = String(resolveSSRNode(value)).replace(/<!--[\s\S]*?-->/g, '');
+  // Stable 2.0.3 returns an SSR template record, not a serialized string.
+  const resolved = resolveSSRNode(value);
+  const html: string = (typeof resolved === 'string' ? resolved : resolved.t.join('')).replace(/<!--[\s\S]*?-->/g, '');
   if (html[0] !== '<' || !/^<[a-z]/i.test(html)) return false;
   let quote = '', start = -1;
   for (let index = 1; index < html.length; index++) {

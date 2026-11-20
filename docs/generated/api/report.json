@@ -9398,17 +9398,17 @@
       "name": "Autocomplete.List",
       "source": {
         "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-        "line": 9,
+        "line": 11,
         "url": null
       },
       "props": [
         {
           "name": "children",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-            "line": 7,
+            "line": 9,
             "url": null
           }
         },
@@ -9604,7 +9604,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -9614,7 +9614,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -9624,7 +9624,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -9634,7 +9634,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -9644,7 +9644,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -9654,7 +9654,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -9664,7 +9664,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -9674,7 +9674,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -9684,7 +9684,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -9694,7 +9694,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -9704,7 +9704,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -9714,7 +9714,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -14102,17 +14102,17 @@
       "name": "Combobox.List",
       "source": {
         "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-        "line": 9,
+        "line": 11,
         "url": null
       },
       "props": [
         {
           "name": "children",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-            "line": 7,
+            "line": 9,
             "url": null
           }
         },
@@ -14308,7 +14308,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -14318,7 +14318,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -14328,7 +14328,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -14338,7 +14338,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -14348,7 +14348,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -14358,7 +14358,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -14368,7 +14368,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -14378,7 +14378,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -14388,7 +14388,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -14398,7 +14398,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -14408,7 +14408,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -14418,7 +14418,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -16641,17 +16641,17 @@
       "name": "ComboboxList",
       "source": {
         "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-        "line": 9,
+        "line": 11,
         "url": null
       },
       "props": [
         {
           "name": "children",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-            "line": 7,
+            "line": 9,
             "url": null
           }
         },
@@ -16899,7 +16899,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -16909,7 +16909,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -16919,7 +16919,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -16929,7 +16929,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -16939,7 +16939,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -16949,7 +16949,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -16959,7 +16959,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -16969,7 +16969,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -16979,7 +16979,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -16989,7 +16989,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -16999,7 +16999,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -17009,7 +17009,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -18176,7 +18176,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -18186,7 +18186,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -18196,7 +18196,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -18206,7 +18206,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -18216,7 +18216,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -18226,7 +18226,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -18236,7 +18236,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -18246,7 +18246,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -18256,7 +18256,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -18266,7 +18266,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -18276,7 +18276,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -18286,7 +18286,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -19455,7 +19455,7 @@
         {
           "name": "nativeButton",
           "description": "unavailable",
-          "default": "source",
+          "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/menu/checkbox-item/MenuCheckboxItem.d.ts",
             "line": 12,
@@ -19704,7 +19704,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -19714,7 +19714,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -19724,7 +19724,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -19734,7 +19734,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -19744,7 +19744,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -19754,7 +19754,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -19764,7 +19764,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -19774,7 +19774,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -19784,7 +19784,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -19794,7 +19794,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -19804,7 +19804,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -19814,7 +19814,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -26335,7 +26335,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -26345,7 +26345,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -26355,7 +26355,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -26365,7 +26365,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -26375,7 +26375,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -26385,7 +26385,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -26395,7 +26395,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -26405,7 +26405,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -26415,7 +26415,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -26425,7 +26425,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -26435,7 +26435,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -26445,7 +26445,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -27758,7 +27758,7 @@
         {
           "name": "nativeButton",
           "description": "unavailable",
-          "default": "source",
+          "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/menu/checkbox-item/MenuCheckboxItem.d.ts",
             "line": 12,
@@ -28320,7 +28320,7 @@
         {
           "name": "nativeButton",
           "description": "unavailable",
-          "default": "source",
+          "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/menu/checkbox-item/MenuCheckboxItem.d.ts",
             "line": 12,
@@ -29380,7 +29380,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -29390,7 +29390,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -29400,7 +29400,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -29410,7 +29410,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -29420,7 +29420,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -29430,7 +29430,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -29440,7 +29440,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -29450,7 +29450,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -29460,7 +29460,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -29470,7 +29470,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -29480,7 +29480,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -29490,7 +29490,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -32066,7 +32066,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -32076,7 +32076,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -32086,7 +32086,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -32096,7 +32096,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -32106,7 +32106,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -32116,7 +32116,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -32126,7 +32126,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -32136,7 +32136,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -32146,7 +32146,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -32156,7 +32156,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -32166,7 +32166,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -32176,7 +32176,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -33298,7 +33298,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -33308,7 +33308,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -33318,7 +33318,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -33328,7 +33328,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -33338,7 +33338,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -33348,7 +33348,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -33358,7 +33358,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -33368,7 +33368,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -33378,7 +33378,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -33388,7 +33388,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -33398,7 +33398,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -33408,7 +33408,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -37353,7 +37353,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -37363,7 +37363,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -37373,7 +37373,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -37383,7 +37383,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -37393,7 +37393,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -37403,7 +37403,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -37413,7 +37413,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -37423,7 +37423,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -37433,7 +37433,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -37443,7 +37443,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -37453,7 +37453,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -37463,7 +37463,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -38482,7 +38482,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -38492,7 +38492,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -38502,7 +38502,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -38512,7 +38512,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -38522,7 +38522,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -38532,7 +38532,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -38542,7 +38542,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -38552,7 +38552,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -38562,7 +38562,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -38572,7 +38572,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -38582,7 +38582,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -38592,7 +38592,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -39430,7 +39430,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -39440,7 +39440,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -39450,7 +39450,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -39460,7 +39460,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -39470,7 +39470,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -39480,7 +39480,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -39490,7 +39490,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -39500,7 +39500,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -39510,7 +39510,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -39520,7 +39520,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -39530,7 +39530,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -39540,7 +39540,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -40130,7 +40130,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -40140,7 +40140,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -40150,7 +40150,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -40160,7 +40160,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -40170,7 +40170,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -40180,7 +40180,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -40190,7 +40190,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -40200,7 +40200,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -40210,7 +40210,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -40220,7 +40220,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -40230,7 +40230,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -40240,7 +40240,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -43947,7 +43947,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -43957,7 +43957,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -43967,7 +43967,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -43977,7 +43977,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -43987,7 +43987,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -43997,7 +43997,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -44007,7 +44007,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -44017,7 +44017,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -44027,7 +44027,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -44037,7 +44037,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -44047,7 +44047,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -44057,7 +44057,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -45601,7 +45601,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -45611,7 +45611,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -45621,7 +45621,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -45631,7 +45631,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -45641,7 +45641,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -45651,7 +45651,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -45661,7 +45661,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -45671,7 +45671,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -45681,7 +45681,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -45691,7 +45691,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -45701,7 +45701,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -45711,7 +45711,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -50618,7 +50618,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -50638,7 +50638,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -50648,7 +50648,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -50658,7 +50658,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -50668,7 +50668,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -50678,7 +50678,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -50698,7 +50698,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -50708,7 +50708,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -50718,7 +50718,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -50728,7 +50728,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -50738,7 +50738,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -51631,7 +51631,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -51651,7 +51651,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -51661,7 +51661,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -51671,7 +51671,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -51681,7 +51681,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -51691,7 +51691,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -51711,7 +51711,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -51721,7 +51721,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -51731,7 +51731,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -51741,7 +51741,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -51751,7 +51751,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -53462,7 +53462,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -53472,7 +53472,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -53482,7 +53482,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -53492,7 +53492,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -53502,7 +53502,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -53512,7 +53512,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -53522,7 +53522,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -53532,7 +53532,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -53542,7 +53542,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -53552,7 +53552,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -53562,7 +53562,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -53572,7 +53572,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -54175,7 +54175,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -54185,7 +54185,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -54195,7 +54195,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -54205,7 +54205,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -54215,7 +54215,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -54225,7 +54225,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -54235,7 +54235,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -54245,7 +54245,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -54255,7 +54255,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -54265,7 +54265,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -54275,7 +54275,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -54285,7 +54285,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -54878,17 +54878,17 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 18,
+            "line": 22,
             "url": null
           }
         },
         {
           "name": "props",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 16,
+            "line": 20,
             "url": null
           }
         },
@@ -54918,7 +54918,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 17,
+            "line": 21,
             "url": null
           }
         },
@@ -55235,17 +55235,17 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 18,
+            "line": 22,
             "url": null
           }
         },
         {
           "name": "props",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 16,
+            "line": 20,
             "url": null
           }
         },
@@ -55275,7 +55275,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 17,
+            "line": 21,
             "url": null
           }
         },
@@ -57919,17 +57919,17 @@
       "name": "Autocomplete.List",
       "source": {
         "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-        "line": 9,
+        "line": 11,
         "url": null
       },
       "props": [
         {
           "name": "children",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-            "line": 7,
+            "line": 9,
             "url": null
           }
         },
@@ -58125,7 +58125,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -58135,7 +58135,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -58145,7 +58145,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -58155,7 +58155,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -58165,7 +58165,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -58175,7 +58175,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -58185,7 +58185,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -58195,7 +58195,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -58205,7 +58205,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -58215,7 +58215,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -58225,7 +58225,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -58235,7 +58235,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -62580,17 +62580,17 @@
       "name": "Combobox.List",
       "source": {
         "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-        "line": 9,
+        "line": 11,
         "url": null
       },
       "props": [
         {
           "name": "children",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-            "line": 7,
+            "line": 9,
             "url": null
           }
         },
@@ -62786,7 +62786,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -62796,7 +62796,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -62806,7 +62806,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -62816,7 +62816,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -62826,7 +62826,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -62836,7 +62836,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -62846,7 +62846,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -62856,7 +62856,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -62866,7 +62866,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -62876,7 +62876,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -62886,7 +62886,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -62896,7 +62896,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -65119,17 +65119,17 @@
       "name": "ComboboxList",
       "source": {
         "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-        "line": 9,
+        "line": 11,
         "url": null
       },
       "props": [
         {
           "name": "children",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/combobox/list/ComboboxList.d.ts",
-            "line": 7,
+            "line": 9,
             "url": null
           }
         },
@@ -65377,7 +65377,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -65387,7 +65387,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -65397,7 +65397,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -65407,7 +65407,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -65417,7 +65417,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -65427,7 +65427,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -65437,7 +65437,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -65447,7 +65447,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -65457,7 +65457,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -65467,7 +65467,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -65477,7 +65477,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -65487,7 +65487,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -66654,7 +66654,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -66664,7 +66664,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -66674,7 +66674,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -66684,7 +66684,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -66694,7 +66694,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -66704,7 +66704,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -66714,7 +66714,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -66724,7 +66724,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -66734,7 +66734,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -66744,7 +66744,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -66754,7 +66754,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -66764,7 +66764,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -67933,7 +67933,7 @@
         {
           "name": "nativeButton",
           "description": "unavailable",
-          "default": "source",
+          "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/menu/checkbox-item/MenuCheckboxItem.d.ts",
             "line": 12,
@@ -68182,7 +68182,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -68192,7 +68192,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -68202,7 +68202,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -68212,7 +68212,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -68222,7 +68222,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -68232,7 +68232,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -68242,7 +68242,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -68252,7 +68252,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -68262,7 +68262,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -68272,7 +68272,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -68282,7 +68282,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -68292,7 +68292,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -77031,7 +77031,7 @@
       "name": "createLabel",
       "source": {
         "file": "packages/solid/build/types/internals/labelable-provider/createLabel.d.ts",
-        "line": 11,
+        "line": 12,
         "url": null
       },
       "props": [
@@ -77041,7 +77041,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/labelable-provider/createLabel.d.ts",
-            "line": 11,
+            "line": 12,
             "url": null
           }
         }
@@ -77077,7 +77077,7 @@
       "name": "focusElementWithVisible",
       "source": {
         "file": "packages/solid/build/types/internals/labelable-provider/createLabel.d.ts",
-        "line": 12,
+        "line": 13,
         "url": null
       },
       "props": [
@@ -77087,7 +77087,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/labelable-provider/createLabel.d.ts",
-            "line": 12,
+            "line": 13,
             "url": null
           }
         }
@@ -77173,7 +77173,7 @@
       "name": "useLabel",
       "source": {
         "file": "packages/solid/build/types/internals/labelable-provider/createLabel.d.ts",
-        "line": 11,
+        "line": 12,
         "url": null
       },
       "props": [
@@ -77183,7 +77183,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/labelable-provider/createLabel.d.ts",
-            "line": 11,
+            "line": 12,
             "url": null
           }
         }
@@ -77542,7 +77542,7 @@
       "name": "OffsetFunction",
       "source": {
         "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-        "line": 6,
+        "line": 17,
         "url": null
       },
       "props": [
@@ -77552,7 +77552,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 11,
+            "line": 22,
             "url": null
           }
         },
@@ -77562,7 +77562,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 16,
+            "line": 27,
             "url": null
           }
         },
@@ -77572,7 +77572,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 15,
+            "line": 26,
             "url": null
           }
         },
@@ -77582,7 +77582,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 7,
+            "line": 18,
             "url": null
           }
         }
@@ -77595,17 +77595,17 @@
       "name": "createAnchorPositioning",
       "source": {
         "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-        "line": 71,
+        "line": 82,
         "url": null
       },
       "props": [
         {
           "name": "open",
           "description": "unavailable",
-          "default": "source",
+          "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 40,
+            "line": 51,
             "url": null
           }
         },
@@ -77615,7 +77615,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 41,
+            "line": 52,
             "url": null
           }
         },
@@ -77625,7 +77625,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -77635,7 +77635,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 45,
+            "line": 56,
             "url": null
           }
         },
@@ -77645,7 +77645,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 46,
+            "line": 57,
             "url": null
           }
         },
@@ -77655,7 +77655,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 42,
+            "line": 53,
             "url": null
           }
         },
@@ -77665,7 +77665,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 43,
+            "line": 54,
             "url": null
           }
         },
@@ -77675,7 +77675,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 44,
+            "line": 55,
             "url": null
           }
         },
@@ -77685,7 +77685,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 38,
+            "line": 49,
             "url": null
           }
         },
@@ -77695,7 +77695,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 47,
+            "line": 58,
             "url": null
           }
         },
@@ -77705,7 +77705,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 37,
+            "line": 48,
             "url": null
           }
         },
@@ -77715,7 +77715,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 48,
+            "line": 59,
             "url": null
           }
         },
@@ -77725,7 +77725,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -77735,7 +77735,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -77745,7 +77745,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -77755,7 +77755,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -77765,7 +77765,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -77775,7 +77775,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -77785,7 +77785,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -77795,7 +77795,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -77805,7 +77805,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -77815,7 +77815,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -77825,7 +77825,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -77835,7 +77835,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 39,
+            "line": 50,
             "url": null
           }
         }
@@ -77848,17 +77848,17 @@
       "name": "useAnchorPositioning",
       "source": {
         "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-        "line": 71,
+        "line": 82,
         "url": null
       },
       "props": [
         {
           "name": "open",
           "description": "unavailable",
-          "default": "source",
+          "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 40,
+            "line": 51,
             "url": null
           }
         },
@@ -77868,7 +77868,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 41,
+            "line": 52,
             "url": null
           }
         },
@@ -77878,7 +77878,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -77888,7 +77888,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 45,
+            "line": 56,
             "url": null
           }
         },
@@ -77898,7 +77898,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 46,
+            "line": 57,
             "url": null
           }
         },
@@ -77908,7 +77908,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 42,
+            "line": 53,
             "url": null
           }
         },
@@ -77918,7 +77918,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 43,
+            "line": 54,
             "url": null
           }
         },
@@ -77928,7 +77928,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 44,
+            "line": 55,
             "url": null
           }
         },
@@ -77938,7 +77938,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 38,
+            "line": 49,
             "url": null
           }
         },
@@ -77948,7 +77948,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 47,
+            "line": 58,
             "url": null
           }
         },
@@ -77958,7 +77958,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 37,
+            "line": 48,
             "url": null
           }
         },
@@ -77968,7 +77968,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 48,
+            "line": 59,
             "url": null
           }
         },
@@ -77978,7 +77978,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -77988,7 +77988,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -77998,7 +77998,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -78008,7 +78008,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -78018,7 +78018,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -78028,7 +78028,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -78038,7 +78038,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -78048,7 +78048,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -78058,7 +78058,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -78068,7 +78068,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -78078,7 +78078,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -78088,7 +78088,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 39,
+            "line": 50,
             "url": null
           }
         }
@@ -78621,7 +78621,7 @@
       "name": "createRenderElement",
       "source": {
         "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-        "line": 23,
+        "line": 27,
         "url": null
       },
       "props": [
@@ -78631,7 +78631,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 23,
+            "line": 27,
             "url": null
           }
         },
@@ -78641,7 +78641,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 23,
+            "line": 27,
             "url": null
           }
         },
@@ -78651,7 +78651,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 23,
+            "line": 27,
             "url": null
           }
         }
@@ -78664,7 +78664,7 @@
       "name": "useRenderElement",
       "source": {
         "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-        "line": 23,
+        "line": 27,
         "url": null
       },
       "props": [
@@ -78674,7 +78674,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 23,
+            "line": 27,
             "url": null
           }
         },
@@ -78684,7 +78684,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 23,
+            "line": 27,
             "url": null
           }
         },
@@ -78694,7 +78694,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 23,
+            "line": 27,
             "url": null
           }
         }
@@ -79516,7 +79516,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -79526,7 +79526,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -79536,7 +79536,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -79546,7 +79546,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -79556,7 +79556,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -79566,7 +79566,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -79576,7 +79576,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -79586,7 +79586,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -79596,7 +79596,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -79606,7 +79606,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -79616,7 +79616,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -79626,7 +79626,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -80939,7 +80939,7 @@
         {
           "name": "nativeButton",
           "description": "unavailable",
-          "default": "source",
+          "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/menu/checkbox-item/MenuCheckboxItem.d.ts",
             "line": 12,
@@ -81501,7 +81501,7 @@
         {
           "name": "nativeButton",
           "description": "unavailable",
-          "default": "source",
+          "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/menu/checkbox-item/MenuCheckboxItem.d.ts",
             "line": 12,
@@ -82561,7 +82561,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -82571,7 +82571,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -82581,7 +82581,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -82591,7 +82591,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -82601,7 +82601,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -82611,7 +82611,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -82621,7 +82621,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -82631,7 +82631,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -82641,7 +82641,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -82651,7 +82651,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -82661,7 +82661,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -82671,7 +82671,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -85428,7 +85428,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -85438,7 +85438,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -85448,7 +85448,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -85458,7 +85458,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -85468,7 +85468,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -85478,7 +85478,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -85488,7 +85488,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -85498,7 +85498,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -85508,7 +85508,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -85518,7 +85518,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -85528,7 +85528,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -85538,7 +85538,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -86660,7 +86660,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -86670,7 +86670,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -86680,7 +86680,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -86690,7 +86690,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -86700,7 +86700,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -86710,7 +86710,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -86720,7 +86720,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -86730,7 +86730,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -86740,7 +86740,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -86750,7 +86750,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -86760,7 +86760,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -86770,7 +86770,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -90715,7 +90715,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -90725,7 +90725,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -90735,7 +90735,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -90745,7 +90745,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -90755,7 +90755,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -90765,7 +90765,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -90775,7 +90775,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -90785,7 +90785,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -90795,7 +90795,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -90805,7 +90805,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -90815,7 +90815,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -90825,7 +90825,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -91844,7 +91844,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -91854,7 +91854,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -91864,7 +91864,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -91874,7 +91874,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -91884,7 +91884,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -91894,7 +91894,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -91904,7 +91904,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -91914,7 +91914,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -91924,7 +91924,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -91934,7 +91934,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -91944,7 +91944,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -91954,7 +91954,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -92792,7 +92792,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -92802,7 +92802,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -92812,7 +92812,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -92822,7 +92822,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -92832,7 +92832,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -92842,7 +92842,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -92852,7 +92852,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -92862,7 +92862,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -92872,7 +92872,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -92882,7 +92882,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -92892,7 +92892,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -92902,7 +92902,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -93492,7 +93492,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -93502,7 +93502,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -93512,7 +93512,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -93522,7 +93522,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -93532,7 +93532,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -93542,7 +93542,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -93552,7 +93552,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -93562,7 +93562,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -93572,7 +93572,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -93582,7 +93582,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -93592,7 +93592,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -93602,7 +93602,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -97355,7 +97355,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -97365,7 +97365,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -97375,7 +97375,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -97385,7 +97385,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -97395,7 +97395,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -97405,7 +97405,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -97415,7 +97415,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -97425,7 +97425,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -97435,7 +97435,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -97445,7 +97445,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -97455,7 +97455,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -97465,7 +97465,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -99009,7 +99009,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -99019,7 +99019,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -99029,7 +99029,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -99039,7 +99039,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -99049,7 +99049,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -99059,7 +99059,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -99069,7 +99069,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -99079,7 +99079,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -99089,7 +99089,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -99099,7 +99099,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -99109,7 +99109,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -99119,7 +99119,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -104099,7 +104099,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -104119,7 +104119,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -104129,7 +104129,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -104139,7 +104139,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -104149,7 +104149,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -104159,7 +104159,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -104179,7 +104179,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -104189,7 +104189,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -104199,7 +104199,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -104209,7 +104209,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -104219,7 +104219,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -105112,7 +105112,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -105132,7 +105132,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -105142,7 +105142,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -105152,7 +105152,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -105162,7 +105162,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -105172,7 +105172,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -105192,7 +105192,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -105202,7 +105202,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -105212,7 +105212,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -105222,7 +105222,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -105232,7 +105232,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -106943,7 +106943,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -106953,7 +106953,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -106963,7 +106963,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -106973,7 +106973,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -106983,7 +106983,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -106993,7 +106993,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -107003,7 +107003,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -107013,7 +107013,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -107023,7 +107023,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -107033,7 +107033,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -107043,7 +107043,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -107053,7 +107053,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -107656,7 +107656,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 29,
+            "line": 40,
             "url": null
           }
         },
@@ -107666,7 +107666,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 23,
+            "line": 34,
             "url": null
           }
         },
@@ -107676,7 +107676,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 24,
+            "line": 35,
             "url": null
           }
         },
@@ -107686,7 +107686,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 21,
+            "line": 32,
             "url": null
           }
         },
@@ -107696,7 +107696,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 22,
+            "line": 33,
             "url": null
           }
         },
@@ -107706,7 +107706,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 28,
+            "line": 39,
             "url": null
           }
         },
@@ -107716,7 +107716,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 19,
+            "line": 30,
             "url": null
           }
         },
@@ -107726,7 +107726,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 30,
+            "line": 41,
             "url": null
           }
         },
@@ -107736,7 +107736,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 25,
+            "line": 36,
             "url": null
           }
         },
@@ -107746,7 +107746,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 26,
+            "line": 37,
             "url": null
           }
         },
@@ -107756,7 +107756,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 27,
+            "line": 38,
             "url": null
           }
         },
@@ -107766,7 +107766,7 @@
           "default": "source",
           "source": {
             "file": "packages/solid/build/types/internals/createAnchorPositioning.d.ts",
-            "line": 20,
+            "line": 31,
             "url": null
           }
         },
@@ -108425,17 +108425,17 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 18,
+            "line": 22,
             "url": null
           }
         },
         {
           "name": "props",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 16,
+            "line": 20,
             "url": null
           }
         },
@@ -108465,7 +108465,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 17,
+            "line": 21,
             "url": null
           }
         },
@@ -108561,17 +108561,17 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 18,
+            "line": 22,
             "url": null
           }
         },
         {
           "name": "props",
-          "description": "unavailable",
+          "description": "available",
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 16,
+            "line": 20,
             "url": null
           }
         },
@@ -108601,7 +108601,7 @@
           "default": "unavailable",
           "source": {
             "file": "packages/solid/build/types/internals/createRenderElement.d.ts",
-            "line": 17,
+            "line": 21,
             "url": null
           }
         },

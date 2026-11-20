@@ -1,4 +1,4 @@
-// Source: pinned Base UI CompositeList, MIT; native RC13 ownership/scheduling.
+// Source: pinned Base UI CompositeList, MIT; native Solid 2 ownership/scheduling.
 import { createContext, createEffect, createSignal, onCleanup, useContext, untrack } from 'solid-js';
 import { isServer, type JSX } from '@solidjs/web';
 import type { CompositeMetadata } from '../../contracts/items';

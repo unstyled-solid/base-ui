@@ -32,8 +32,16 @@ export function conditionalExports(contract, pkg) {
   return Object.fromEntries(Object.entries(contract.exports).map(([key, entry]) => {
     const stem = entry.target.slice(6).replace(/\.tsx?$/, '');
     const template = entry.kind === 'types-only' ? pkg.resolution.typeOnlyTemplate : pkg.resolution.runtimeTemplate;
-    return [key, Object.fromEntries(Object.entries(template).map(([condition, target]) => [condition, target.replace('{stem}', stem)]))];
+    return [key, mapTargets(template, target => target.replace('{stem}', stem))];
   }));
+}
+
+export function mapTargets(value, map) {
+  return typeof value === 'string' ? map(value) : Object.fromEntries(Object.entries(value).map(([key, child]) => [key, mapTargets(child, map)]));
+}
+
+export function targetLeaves(value) {
+  return typeof value === 'string' ? [value] : Object.values(value).flatMap(targetLeaves);
 }
 
 export function assertExportMap(actual, contract, pkg) {

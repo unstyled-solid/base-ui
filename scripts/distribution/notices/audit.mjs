@@ -30,15 +30,8 @@ export async function requiredFiles(repository=root) {
   result.set('notices/provenance.json',await read(repository,ledgerPath));
   return { ledger, files:result };
 }
-export async function reconcile(repository=root) {
-  const failures=[];
-  const { ledger, files } = await requiredFiles(repository);
-  for (const [checkout,sha] of [['base-ui',ledger.baseUiSha],['solid-floating-ui',ledger.donorSha]]) {
-    const git = (...args) => execFileSync('rtk',['proxy','git','-C',path.join(repository,'upstream',checkout),...args],{encoding:'utf8'}).trim();
-    if (git('rev-parse','HEAD') !== sha || git('status','--porcelain')) failures.push(`Dirty/unpinned canonical source: ${checkout}`);
-  }
-  const map = await json(repository,'tracking/donors/solid-floating-ui/source-map.json');
-  if (hash(await read(repository,'tracking/donors/solid-floating-ui/source-map.json')) !== ledger.sourceMapSha256) failures.push('Donor source map changed; reconcile provenance');
+export async function checkReviewedInputs(repository, ledger, map) {
+   const failures=[];
   const reviews = unique(ledger.groupReviews,'id','donor group reviews');
   for (const group of map.groups) {
     const review = reviews.get(group.id);
@@ -50,7 +43,7 @@ export async function reconcile(repository=root) {
   }
   for (const id of reviews.keys()) if (!map.groups.some(group => group.id === id)) failures.push(`Unknown donor group review: ${id}`);
   for (const gap of ledger.unresolved) failures.push(`Unresolved provenance: ${gap.id}: ${gap.reason}`);
-  const targets=unique(ledger.adoptions,'target','adopted targets');
+   unique(ledger.adoptions,'target','adopted targets');
   for (const adoption of ledger.adoptions) {
     const bytes=await read(repository,adoption.target);
     if (hash(bytes)!==adoption.targetSha256) failures.push(`Stale adopted-line mapping: ${adoption.target}`);
@@ -63,7 +56,19 @@ export async function reconcile(repository=root) {
     }
     if (adoption.requiresProminentChangeNotice && !/modified|adapt(?:ed|ation)|solid/i.test(bytes.toString('utf8').split('\n').slice(0,8).join('\n'))) failures.push(`Missing prominent file-local change notice: ${adoption.target}; request source owner`);
   }
-  // Detect inherited attribution on any production leaf not yet covered by the
+   return failures;
+}
+export async function reconcile(repository=root) {
+   const { ledger, files } = await requiredFiles(repository);
+   const map = await json(repository,'tracking/donors/solid-floating-ui/source-map.json');
+   const failures = await checkReviewedInputs(repository, ledger, map);
+   for (const [checkout,sha] of [['base-ui',ledger.baseUiSha],['solid-floating-ui',ledger.donorSha]]) {
+     const git = (...args) => execFileSync('rtk',['proxy','git','-C',path.join(repository,'upstream',checkout),...args],{encoding:'utf8'}).trim();
+     if (git('rev-parse','HEAD') !== sha || git('status','--porcelain')) failures.push(`Dirty/unpinned canonical source: ${checkout}`);
+   }
+   if (hash(await read(repository,'tracking/donors/solid-floating-ui/source-map.json')) !== ledger.sourceMapSha256) failures.push('Donor source map changed; reconcile provenance');
+   const targets=unique(ledger.adoptions,'target','adopted targets');
+   // Detect inherited attribution on any production leaf not yet covered by the
   // ledger; never silently treat root MIT as a waiver of source-local notices.
   for (const file of await walk(repository,'packages/solid/src')) {
     if (!/\.[jt]sx?$/.test(file) || /(?:test|spec|proof|fixtures|diagnostics)/i.test(file)) continue;
@@ -88,8 +93,8 @@ export async function auditTarball({ repository=root, tarball, bytes }={}) {
   const manifestBytes=archive.get('package/package.json');
   let manifest;
   try { manifest=JSON.parse(manifestBytes?.toString('utf8')); } catch { failures.push('Missing/invalid packed package.json'); }
-  const identity=await json(repository,'packages/solid/package.json');
-  if (manifest?.name!==identity.name || manifest?.version!==identity.version) failures.push('Packed identity/version mismatch');
+   const { identity }=await json(repository,'distribution/package-contract.json');
+   if (manifest?.name!==identity.publicationName || manifest?.version!==identity.version || manifest?.private!==false) failures.push('Packed identity/version mismatch');
   function targets(value) { return typeof value==='string' ? [value] : value && typeof value==='object' ? Object.values(value).flatMap(targets) : []; }
   if (!manifest?.exports || !Object.keys(manifest.exports).length) failures.push('Packed package has no exports');
   for (const target of targets(manifest?.exports)) {
@@ -97,7 +102,7 @@ export async function auditTarball({ repository=root, tarball, bytes }={}) {
   }
   for (const adoption of ledger.adoptions) {
     const stem=adoption.target.replace(/^packages\/solid\/src\//,'').replace(/\.[jt]sx?$/,'.js');
-    for (const mode of ['dom','server']) {
+     for (const mode of ['dom','server','dom-dev','server-dev']) {
       const name=`package/${mode}/${stem}`;
       if (!archive.has(name)) failures.push(`Missing adopted packed module: ${name}`);
       const mapBytes=archive.get(`${name}.map`);

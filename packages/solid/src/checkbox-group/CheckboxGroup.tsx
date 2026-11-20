@@ -40,8 +40,8 @@ export function CheckboxGroup(props: CheckboxGroupProps): JSX.Element {
     name: 'CheckboxGroup', state: 'value',
   });
   const value = () => selection.value() ?? [];
-  // RC13 getters remain committed during event dispatch. Carry accepted requests
-  // only until that turn commits; controlled requests never acknowledge props.
+  // Getters remain committed during event dispatch and async holds. Carry accepted
+  // requests until the batch settles; controlled requests never acknowledge props.
   let pendingValue: string[] | undefined;
   const getRequestValue = () => pendingValue ?? value();
   const disabled = () => Boolean(field?.disabled || props.disabled);
@@ -55,7 +55,7 @@ export function CheckboxGroup(props: CheckboxGroupProps): JSX.Element {
     props.onValueChange?.(next, details);
     if (!selection.request(next, details).accepted || selection.controlled) return;
     pendingValue = next;
-    queueMicrotask(() => { if (pendingValue === next) pendingValue = undefined; });
+    onSettled(() => { if (pendingValue === next) pendingValue = undefined; });
   }
   createLabelableId({ id: () => null });
   const id = createBaseUiId(() => typeof props.id === 'string' ? props.id : undefined);

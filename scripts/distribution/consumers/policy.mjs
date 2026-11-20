@@ -128,7 +128,7 @@ export function assertInventory(archive, manifest, contract) {
   assert.match(archive.files.get('LICENSE').toString(), /MIT|Permission is hereby granted/);
   assert([...archive.files.keys()].some(file => file.startsWith('docs/') && file.endsWith('.md')), 'Missing packed Markdown');
   for (const [file, content] of archive.files) {
-    const directories = [contract.format.domDirectory, contract.format.serverDirectory, contract.format.declarationsDirectory, 'docs', 'notices'];
+    const directories = [contract.format.domDirectory, contract.format.serverDirectory, 'dom-dev', 'server-dev', contract.format.declarationsDirectory, 'docs', 'notices'];
     const metadata = ['package.json', 'LICENSE', 'NOTICE', 'THIRD-PARTY-NOTICES.md', 'README.md', 'CHANGELOG.md'];
     assert(metadata.includes(file) || directories.some(directory => file.startsWith(`${directory}/`)), `Unexpected packed path ${file}`);
     assert(!/(?:^|\/)(?:node_modules|src|__tests__|tests?|specs?|fixtures?|__fixtures__|proof|negative|testUtils|test-utils|scripts?|\.cache|\.git|\.beads|coverage|\.generated)(?:\/|$)|\.(?:test|spec|probe|typecheck)\.|\.tsbuildinfo$|\.tsx$/.test(file), `Unpublishable archive file ${file}`);
@@ -183,7 +183,7 @@ export function assertCoverage(report, contract) {
   assert.match(report.archiveSha256 ?? '', /^[a-f0-9]{64}$/);
   assert.deepEqual(Object.keys(report.consumers).sort(), Object.keys(peerSets).sort());
   for (const [kind, consumer] of Object.entries(report.consumers)) {
-    for (const stage of ['installation', 'import-audit', 'initialization', 'types', 'fixture-types', 'resolution', 'runtime', 'temporal', 'ssr', 'browser', 'shaking', 'optimized-behavior']) assert.equal(consumer.stages[stage]?.status, 'passed', `${kind}: incomplete ${stage}`);
+    for (const stage of ['installation', 'import-audit', 'initialization', 'types', 'fixture-types', 'resolution', 'runtime', 'temporal', 'ssr', 'browser', 'shaking', 'optimized-behavior', 'diagnostics']) assert.equal(consumer.stages[stage]?.status, 'passed', `${kind}: incomplete ${stage}`);
     const expected = Object.keys(contract.exports).filter(key => {
       if (!key.includes('temporal-adapter-')) return true;
       return kind === 'both' || key.endsWith(`temporal-adapter-${kind}`);

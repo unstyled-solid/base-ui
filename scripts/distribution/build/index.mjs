@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import config from '../../../packages/solid/build.config.mjs';
-import { portableDeclaration } from '../types/shared.mjs';
+import { portableDeclaration, mapTargets, targetLeaves } from '../types/shared.mjs';
 import { compile, moduleImports, packageName, toPosix, verifyToolchain } from './compiler.mjs';
 
 export const root = fileURLToPath(new URL('../../../', import.meta.url));
@@ -41,15 +41,16 @@ export function stagedManifest(source, contract, policy) {
   for (const [key, entry] of Object.entries(contract.exports)) {
     if (key !== '.' && !/^\.\/[\w/-]+$/.test(key)) throw new Error(`Unsafe export key: ${key}`);
     const template = entry.kind === 'types-only' ? policy.resolution.typeOnlyTemplate : policy.resolution.runtimeTemplate;
-    exports[key] = Object.fromEntries(Object.entries(template).map(([condition, target]) => [condition, target.replace('{stem}', stem(entry.target))]));
+    exports[key] = mapTargets(template, target => target.replace('{stem}', stem(entry.target)));
   }
   return {
     name: policy.identity.publicationName ?? policy.identity.workspaceName,
     version: policy.identity.version, private: !policy.identity.publicationName,
     ...(policy.identity.publicationName ? { publishConfig: { access: 'public' }, homepage: policy.identity.homepage } : {}),
     type: 'module', description: source.description, license: source.license,
+    repository: source.repository, bugs: source.bugs,
     sideEffects: policy.format.sideEffects.qualified ? policy.format.sideEffects.workspaceValue : true,
-    main: exports['.'].default, types: exports['.'].types,
+    main: exports['.'].default.default, types: exports['.'].types,
     exports,
     imports: {
       '#formatErrorMessage': {
@@ -64,19 +65,19 @@ export function stagedManifest(source, contract, policy) {
     peerDependencies: source.peerDependencies,
     peerDependenciesMeta: source.peerDependenciesMeta,
     engines: { node: '>=22.12.0' },
-    files: ['dom', 'server', 'types', 'README.md', 'LICENSE', 'NOTICE', 'THIRD-PARTY-NOTICES.md', 'notices', 'CHANGELOG.md', 'docs'],
+    files: ['dom', 'dom-dev', 'server', 'server-dev', 'types', 'README.md', 'LICENSE', 'NOTICE', 'THIRD-PARTY-NOTICES.md', 'notices', 'CHANGELOG.md', 'docs'],
   };
 }
 
 export async function validateArtifacts(output, manifest) {
   const missing = [];
   for (const [key, branches] of Object.entries(manifest.exports)) {
-    for (const target of new Set(Object.values(branches))) {
+    for (const target of new Set(targetLeaves(branches))) {
       if (!await exists(path.join(output, target))) missing.push(`${key}: ${target}`);
     }
   }
   for (const [key, branches] of Object.entries(manifest.imports)) {
-    for (const target of new Set(Object.values(branches))) {
+    for (const target of new Set(targetLeaves(branches))) {
       if (!await exists(path.join(output, target))) missing.push(`${key}: ${target}`);
     }
   }
@@ -112,8 +113,8 @@ export async function buildPackage({ repository = root, packageDirectory = path.
   const prehydration = Object.fromEntries(Object.entries(manifest.imports).filter(([key]) => key.startsWith('#prehydration/')).map(([key]) => [key,
     `${key.slice('#prehydration/'.length)}/prehydrationScript.ts`,
   ]));
-  for (const generate of ['dom', 'ssr']) {
-    const directory = generate === 'dom' ? 'dom' : 'server';
+  for (const [generate, environment] of [['dom', 'production'], ['ssr', 'production'], ['dom', 'development'], ['ssr', 'development']]) {
+    const directory = (generate === 'dom' ? 'dom' : 'server') + (environment === 'development' ? '-dev' : '');
     const generated = new Map();
     for (const file of runtimeFiles) {
       const source = sourceContents.get(file);
@@ -138,9 +139,9 @@ export async function buildPackage({ repository = root, packageDirectory = path.
       };
       try {
         // Resolve only emitted imports: TS removes type-only dependencies first.
-        const erased = compile(source, `src/${file}`, generate);
+        const erased = compile(source, `src/${file}`, generate, undefined, undefined, environment);
         const replacements = new Map(moduleImports(erased.code, file).map(specifier => [specifier, resolveImport(specifier)]));
-        const result = compile(source, `src/${file}`, generate, specifier => replacements.get(specifier) ?? specifier);
+        const result = compile(source, `src/${file}`, generate, specifier => replacements.get(specifier) ?? specifier, undefined, environment);
         const imports = moduleImports(result.code, file);
         for (const specifier of imports) {
           if (!specifier.startsWith('.') && (specifier.startsWith('#') || !external.has(packageName(specifier)))) {

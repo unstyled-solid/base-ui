@@ -34,6 +34,9 @@ export function createButton(params: UseButtonParameters = {}): UseButtonReturnV
     }
     if (button && next.composite && next.disabled && next.nativeDisabled === undefined) (next.node as HTMLButtonElement).disabled = false;
   });
+  // Allocate this memo-backed source once in setup. Render hosts can rerun the
+  // prop stage on every server read; allocating there consumes their hydration IDs.
+  const semanticProps = merge(() => native() ? { type: 'button' } : { role: 'button' });
   function invoke(handler: unknown, event: Event) {
     if (Array.isArray(handler)) return handler[0](handler[1], event);
     if (handler !== null && typeof handler === 'object' && typeof Reflect.get(handler, '0') === 'function' && '1' in handler) return Reflect.get(handler, '0')(Reflect.get(handler, '1'), event);
@@ -84,7 +87,7 @@ export function createButton(params: UseButtonParameters = {}): UseButtonReturnV
             base.preventBaseUIHandler(); dispatchClickWithModifiers(event.currentTarget as Element, event);
           }
         },
-      }, merge(() => native() ? { type: 'button' } : { role: 'button' }), focusProps, other);
+      }, semanticProps, focusProps, other);
     },
   };
 }

@@ -1,5 +1,6 @@
 import { children, createMemo, Show } from 'solid-js';
-import { Portal, dynamic, isServer, type JSX } from '@solidjs/web';
+import { Portal, dynamic, type JSX } from '@solidjs/web';
+import { createIsHydrated } from './hydration';
 
 interface OwnedPortalContentProps { mount: HTMLElement | null; wait?: boolean | undefined; children?: JSX.Element }
 
@@ -8,6 +9,9 @@ interface OwnedPortalContentProps { mount: HTMLElement | null; wait?: boolean | 
  * delegated events and cleanup; the logical owner retains content across
  * container replacement and disposes it when the portal deliberately waits. */
 export function OwnedPortalContent(props: OwnedPortalContentProps): JSX.Element {
+  // Resolving JSX before the native Portal is safe only after hydration ends:
+  // server portals have no keys for these logical-owner descendants to claim.
+  const hydrated = createIsHydrated();
   function Projection(input: { mount: () => HTMLElement | null; source: () => JSX.Element }) {
     const source = createMemo(input.source);
     const content = children(source);
@@ -21,5 +25,5 @@ export function OwnedPortalContent(props: OwnedPortalContentProps): JSX.Element 
   // The first child status must be read before a deferred host ref settles,
   // otherwise Loading has already committed an empty first answer. Literal
   // null still deliberately waits, and server portals remain client-only.
-  return <Show when={!isServer && !props.wait}><Projection mount={() => props.mount} source={() => props.children} /></Show>;
+  return <>{hydrated() && !props.wait && <Projection mount={() => props.mount} source={() => props.children} />}</>;
 }

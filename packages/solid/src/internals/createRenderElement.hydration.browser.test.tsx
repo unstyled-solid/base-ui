@@ -5,7 +5,56 @@ import { AvatarHydrationFixture } from '../avatar/fixtures/AvatarHydrationFixtur
 import { AVATAR_IMAGE_URL } from '../avatar/fixtures/imageSource';
 import { FieldHydrationFixture } from '../field/FieldHydrationFixture';
 import { userEvent } from 'vitest/browser';
-import { RendererHydrationFixture } from './createRenderElement.hydration.fixture';
+import { ComponentHostHydrationFixture, RendererHydrationFixture } from './createRenderElement.hydration.fixture';
+
+browserCase({ source: 'packages/react/src/internals/useRenderElement.test.tsx', case: 'component button hosts can read props before claiming their server element', environment: 'browser', issue: 'https://github.com/unstyled-solid/base-ui/issues/14' }, async () => {
+  const renderId = 'foundation-component-hosts';
+  const query = new URLSearchParams({ module: 'packages/solid/src/internals/createRenderElement.hydration.fixture.tsx', export: 'ComponentHostHydrationFixture', renderId });
+  const response = await fetch(`/__harness__/ssr.html?${query}`);
+  const html = await response.text(); expect(response.ok, html).toBe(true);
+  expect(response.headers.get('X-Harness-Renderer')).toBe('independent-solid2-ssr');
+  const template = document.createElement('template'); template.innerHTML = html;
+  const previous = globalThis._$HY;
+  for (const script of template.content.querySelectorAll('script')) new Function(script.textContent ?? '')();
+  const root = template.content.querySelector('main')!; document.body.append(root);
+  const buttons = Array.from(root.querySelectorAll('button'));
+  const ids = buttons.map((button) => button.id);
+  const warn = vi.spyOn(console, 'warn');
+  const error = vi.spyOn(console, 'error');
+  let dispose: (() => void) | undefined;
+  try {
+    expect(buttons).toHaveLength(2);
+    expect(ids[1]).not.toBe('');
+    dispose = hydrate(() => <ComponentHostHydrationFixture />, root, { renderId });
+    await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+    const hydrationDiagnostics = () => [...warn.mock.calls, ...error.mock.calls]
+      .filter((args) => /Hydration (key miss|completed with|structure mismatch|tag mismatch|Mismatch)/i.test(args.join(' ')));
+    expect(hydrationDiagnostics()).toEqual([]);
+    const assertHosts = () => {
+      const current = Array.from(root.querySelectorAll('button'));
+      expect(current).toHaveLength(buttons.length);
+      current.forEach((button, index) => expect(button).toBe(buttons[index]));
+      expect(current.map((button) => button.id)).toEqual(ids);
+    };
+    assertHosts();
+    await userEvent.click(buttons[0]!);
+    expect(buttons[0]).toHaveAttribute('aria-pressed', 'true');
+    expect(root.querySelector('output')).toHaveTextContent('on');
+    await userEvent.click(buttons[1]!);
+    expect(buttons[1]).toHaveAttribute('aria-expanded', 'true');
+    const popup = document.getElementById(buttons[1]!.getAttribute('aria-controls')!);
+    expect(popup).toBeInTheDocument();
+    expect(popup).toHaveTextContent('Component popup');
+    await userEvent.click(popup!.querySelector('button')!);
+    expect(buttons[1]).toHaveAttribute('aria-expanded', 'false');
+    assertHosts();
+    expect(hydrationDiagnostics()).toEqual([]);
+  } finally {
+    await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+    dispose?.(); root.remove(); warn.mockRestore(); error.mockRestore();
+    if (previous === undefined) Reflect.deleteProperty(globalThis, '_$HY'); else globalThis._$HY = previous;
+  }
+});
 
 browserCase({ source: 'packages/react/src/internals/useRenderElement.test.tsx', case: 'default dynamic text host and sibling retain server ownership slots', environment: 'browser', issue: 'bsolid-itlx' }, async () => {
   const renderId = 'foundation-default-hosts';

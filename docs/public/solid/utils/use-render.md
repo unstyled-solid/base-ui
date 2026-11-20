@@ -210,7 +210,7 @@ Declaration: `packages/solid/build/types/use-render/useRender.d.ts:15`
 | defaultTagName | `keyof JSX.IntrinsicElements \| undefined` | No | 'div' | Host tag used when no render callback is supplied. |
 | enabled | `Enabled \| undefined` | No | Unavailable | Whether to render the host. When false, no host is rendered. |
 | propGetter | `((props: Props) => Props) \| undefined` | No | Unavailable | Transforms the merged host props before rendering. |
-| props | `Props \| readonly (Props \| ((previous: Props) => Props) \| undefined)[] \| undefined` | No | Unavailable | Props merged in order onto the host. A function in the array receives the preceding merged props. |
+| props | `Props \| readonly (Props \| ((previous: Props) => Props) \| undefined)[] \| undefined` | No | Unavailable | Functional stages are pure live-view transformations. Allocate owned<br>primitives (including function-source merge) in setup, never in a stage or<br>its property getters: the server may call them again in each reader's owner. |
 | ref | `InputRef<E> \| readonly InputRef<E>[]` | No | Unavailable | Host attachment refs, merged with the renderer’s own ref. Accepts a native input ref or an array of input refs, as declared. |
 | state | `State \| undefined` | No | Unavailable | Live component state supplied to the render, class and style callbacks and to state-attribute mapping. |
 | stateAttributesMapping | `StateAttributesMapping<State> \| undefined` | No | Unavailable | Custom mappings from state values to host attributes. A null mapping excludes that state property; a callback returning null emits no attributes for that value. |
@@ -381,7 +381,7 @@ Parameters<S, E, Enabled>
 | defaultTagName | `keyof JSX.IntrinsicElements \| undefined` | No | Unavailable | Host tag used when no render callback is supplied. |
 | enabled | `Enabled \| undefined` | No | Unavailable | Whether to render the host. When false, no host is rendered. |
 | propGetter | `((props: Props) => Props) \| undefined` | No | Unavailable | Transforms the merged host props before rendering. |
-| props | `Props \| readonly (Props \| ((previous: Props) => Props) \| undefined)[] \| undefined` | No | Unavailable | Props merged in order onto the host. A function in the array receives the preceding merged props. |
+| props | `Props \| readonly (Props \| ((previous: Props) => Props) \| undefined)[] \| undefined` | No | Unavailable | Functional stages are pure live-view transformations. Allocate owned<br>primitives (including function-source merge) in setup, never in a stage or<br>its property getters: the server may call them again in each reader's owner. |
 | ref | `InputRef<E> \| readonly InputRef<E>[]` | No | Unavailable | Host attachment refs, merged with the renderer’s own ref. Accepts a native input ref or an array of input refs, as declared. |
 | state | `S \| undefined` | No | Unavailable | Live component state supplied to the render, class and style callbacks and to state-attribute mapping. |
 | stateAttributesMapping | `StateAttributesMapping<S> \| undefined` | No | Unavailable | Custom mappings from state values to host attributes. A null mapping excludes that state property; a callback returning null emits no attributes for that value. |

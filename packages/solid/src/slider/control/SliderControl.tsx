@@ -1,5 +1,5 @@
 // Gesture policy adapted from Base UI (MIT), 19511bb171f3b360b006c94cf6d07e53cb446505.
-import { createEffect, createSignal, onCleanup, omit } from 'solid-js';
+import { createEffect, createSignal, onCleanup, onSettled, omit } from 'solid-js';
 import { isServer, type JSX } from '@solidjs/web';
 import type { BaseUIComponentProps } from '../../internals/types';
 import { createRenderElement } from '../../internals/createRenderElement';
@@ -106,12 +106,12 @@ export function SliderControl(props: SliderControlProps) {
     if (accepted) {
       interactionValue = finger.value;
       latestValues = Array.isArray(finger.value) ? finger.value : [finger.value];
-      // Carry proposals only across staged same-turn writes. An accepted controlled
+      // Carry proposals until the staged batch settles, including async holds. An accepted controlled
       // request is not an acknowledgment, and a published value replaces the
       // comparison baseline without discarding the last value owed at commit.
       pendingValue = finger.value;
       const version = ++proposalVersion;
-      queueMicrotask(() => { if (version === proposalVersion) pendingValue = undefined; });
+      onSettled(() => { if (version === proposalVersion) pendingValue = undefined; });
       if (finger.didSwap) { updatePressed(finger.thumbIndex); frame.cancel(); focus(finger.thumbIndex); }
     }
   }
@@ -170,7 +170,7 @@ export function SliderControl(props: SliderControlProps) {
     return () => { node.removeEventListener('touchstart', touchStart); frame.cancel(); stopListening(); };
   });
   createEffect(() => context.disabled, (disabled) => { if (disabled) stopListening(); });
-  // React's DOM effect cleanup never runs on the server. RC13 onCleanup does:
+  // React's DOM effect cleanup never runs on the server. Solid 2.0.3 onCleanup does:
   // null refs there mean no control was attached, not a registration to clear.
   if (!isServer) onCleanup(() => { stopListening(); frame.cancel(); if (control && context.controlRef.current === control) context.registerControl(null); });
   const reportControl = (node: HTMLElement | null) => {

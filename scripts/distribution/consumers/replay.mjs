@@ -8,7 +8,7 @@ import { parseReplayArgs, assertPriorReport, priorEvidence, verifyRetainedConsum
 
 const root = fileURLToPath(new URL('../../../', import.meta.url));
 const templates = path.join(root, 'test/distribution/consumers/templates');
-const names = ['runtime-accounting.mjs', 'fixture-types.mjs', 'bundle.mjs', 'browser.mjs', 'client.tsx', 'server.tsx', 'app.tsx'];
+const names = ['runtime-accounting.mjs', 'fixture-types.mjs', 'bundle.mjs', 'browser.mjs', 'client.tsx', 'server.tsx', 'app.tsx', 'diagnostics.tsx'];
 export async function replay(argv) {
   const args = parseReplayArgs(argv), approved = await fs.realpath(temporaryRoot);
   const parent = await fs.realpath(path.dirname(args.output));
@@ -61,7 +61,7 @@ export async function replay(argv) {
       if (name === 'app.tsx') assert.equal(sha256(bytes), original.fixtureHashes[name], 'SSR App changed: inherited SSR cannot be reused');
       await fs.writeFile(path.join(session, name), bytes.toString().replaceAll('baseui-solid2', retained.input.name));
     }
-    for (const name of ['ssr-result.json', 'resolution-0.json']) await fs.copyFile(path.join(consumerRoot, name), path.join(session, name));
+    for (const name of ['ssr-result.json', 'ssr-result-production.json', 'ssr-result-development.json', 'resolution-0.json']) await fs.copyFile(path.join(consumerRoot, name), path.join(session, name));
     const input = { ...retained.input, consumerRoot, replayArchiveSha256: archive.sha256, sourceReportSha256: sha256(sourceBytes) };
     await fs.writeFile(path.join(session, 'input.json'), JSON.stringify(input, null, 2));
     await fs.writeFile(path.join(output, 'frozen-fixtures.json'), JSON.stringify({ fixtureHashes: result.fixtureHashes, session, sourceReportSha256: sha256(sourceBytes) }, null, 2));

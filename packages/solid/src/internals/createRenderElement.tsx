@@ -20,6 +20,10 @@ export interface UseRenderElementParameters<State, E extends Element = HTMLEleme
   enabled?: Enabled;
   ref?: InputRef<E> | readonly InputRef<E>[];
   state?: State;
+  /** Functional stages are pure live-view transformations. Allocate owned
+   * primitives (including function-source merge) in setup, never in a stage or
+   * its property getters: the server may call them again in each reader's owner.
+   */
   props?: Props | readonly (Props | undefined | ((previous: Props) => Props))[];
   stateAttributesMapping?: StateAttributesMapping<State>;
   propGetter?: (props: Props) => Props;
@@ -94,6 +98,8 @@ export function createRenderElement<State extends object = {}, E extends Element
     const merged = mergePropsN<any>([defaults, attributeProps, ...(Array.isArray(inputs) ? inputs : [inputs])]);
     return params.propGetter ? params.propGetter(merged) : merged;
   };
+  // Pure stages make repeated server reads allocation-free with respect to
+  // Solid ownership/IDs. Client-only transparent caches need no server slots.
   // Cache merge construction (including functional inputs), not attribute/value
   // evaluation. Source getters retain their per-property subscriptions.
   const resolved = isServer ? readResolved : createMemo(readResolved, { transparent: true });
@@ -155,7 +161,7 @@ export function createRenderElement<State extends object = {}, E extends Element
   if (!isServer) createEffect(node, (element) => {
     if (!element) return;
     // A render callback can conditionally remove its native host while keeping
-    // this component owner alive. RC13 refs do not send null on that removal.
+    // this component owner alive. Solid 2.0.3 refs do not send null on that removal.
     const root = element.getRootNode();
     if (root === element) return;
     const Observer = element.ownerDocument.defaultView?.MutationObserver;
@@ -170,7 +176,7 @@ export function createRenderElement<State extends object = {}, E extends Element
   }, { transparent: true });
   if (!isServer) createEffect(node, (element) => {
     if (!element || !['INPUT', 'TEXTAREA'].includes(element.tagName)) return;
-    // RC13 delegation skips disabled nodes, while native editing handlers must
+    // Solid 2.0.3 delegation skips disabled nodes, while native editing handlers must
     // still receive synthetic input/autofill and restore controlled DOM state.
     const input = (event: Event) => {
       if ((element as unknown as HTMLInputElement).disabled) untrack(() => live.onInput?.(event));

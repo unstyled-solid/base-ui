@@ -1,8 +1,8 @@
 # Adopted-source notices and distribution evidence
 
-This is the readable scope companion to `NOTICE`, not a blanket declaration
-that all inherited attribution has been reconciled. The release gate consumes
-`tracking/distribution/donor-notices.json` and fails on unresolved mappings.
+This is the readable scope companion to `NOTICE`. The release gate consumes
+the source-hashed review in `tracking/distribution/donor-notices.json` and fails
+on changed or unresolved mappings.
 
 ## Source pins and adopted portions
 
@@ -11,7 +11,8 @@ that all inherited attribution has been reconciled. The release gate consumes
 | [Base UI](https://github.com/mui/base-ui/tree/19511bb171f3b360b006c94cf6d07e53cb446505) | `19511bb171f3b360b006c94cf6d07e53cb446505` | Source-derived Solid library; root `LICENSE` is the original full text, Copyright (c) 2019 Material-UI SAS | MIT plus applicable inherited notices |
 | [solid-floating-ui](https://github.com/lxsmnsyc/solid-floating-ui/tree/0492e49b746deed543dbc167a9a58ed1210c2393) | `0492e49b746deed543dbc167a9a58ed1210c2393` | `usePosition.ts` lifecycle/getter patterns, `useFloating.ts` virtual reference wrapper, `utils/dpr.ts` rounding; `floating-ui-react/hooks/createFloating.ts`. Informed adaptation, not byte identity or full donor API adoption | MIT, Copyright (c) 2021 Alexis Munsayac |
 | [aria-hidden](https://github.com/theKashey/aria-hidden/blob/9220c8f4a4fd35f63bee5510a9f41a37264382d4/src/index.ts) | `9220c8f4a4fd35f63bee5510a9f41a37264382d4` | `markOthers.ts` retains the source URL and modification marker; selective tree/attribute isolation adapted through pinned Base UI, with Solid-side overlapping locks | MIT, Copyright (c) 2017 Anton Korzunov |
-| [Adobe React Aria virtual events](https://github.com/adobe/react-spectrum/blob/b35d5c02fe900badccd0cf1a8f23bb593419f238/packages/@react-aria/utils/src/isVirtualEvent.ts) | `b35d5c02fe900badccd0cf1a8f23bb593419f238` (donor's attribution pin) | Virtual click/pointer predicates in `event.ts`, reached through Base UI. Base UI's source link is moving `main`, so exact Adobe-source identity remains unresolved | Apache-2.0, Copyright 2022 Adobe. All rights reserved.; inherited React MIT |
+| [Adobe React Aria virtual events](https://github.com/adobe/react-spectrum/blob/b35d5c02fe900badccd0cf1a8f23bb593419f238/packages/@react-aria/utils/src/isVirtualEvent.ts) | `b35d5c02fe900badccd0cf1a8f23bb593419f238` | Attributed ancestor of virtual click/pointer predicates, copied through pinned Base UI. Android click/buttons, detail/pointerType and zero/one-size pointer predicates remain; Base UI changed Firefox and added jsdom/desktop/fractional-touch branches. No identity to moving Adobe main is claimed | Apache-2.0, Copyright 2022 Adobe. All rights reserved.; inherited React MIT |
+| [Floating UI arrow](https://github.com/floating-ui/floating-ui/blob/38f8b5acc419a286538ce8d7f78c28d58edf6900/packages/core/src/middleware/arrow.ts) | `38f8b5acc419a286538ce8d7f78c28d58edf6900` | Arrow geometry inherited through pinned Base UI's floating-offset-parent fork | MIT, full original text in `notices/floating-ui-MIT.txt` |
 
 ## Exact retained texts
 
@@ -32,23 +33,20 @@ Adobe's `isVirtualEvent.ts:15–17` independently points to React
 revision in `NOTICE.txt` is retained literally, not silently normalized.
 No React runtime dependency is introduced by retaining inherited MIT text.
 
-## Changes and unresolved reconciliation
+## Reviewed changes
 
-The approved geometry adaptation uses RC13 owned split effects, checked
+The approved geometry adaptation uses Solid 2 owned split effects, checked
 promise generations, native references, and Base UI readiness/root/tree
 contracts. `markOthers` adds conditional ARIA, Base UI markers, shadow/realm
 handling, shared attribute locks and idempotent cleanup. Virtual events use
-the pinned Base UI branches and native types. These descriptions do not
-substitute for the Apache requirement for prominent modified-file notices:
-the events owner must review the current file-local header.
+the pinned Base UI branches and native types, with a prominent modified-file
+notice and Adobe/React attribution in the source and its packed source maps.
 
-The donor map describes **planned owner handoffs**, not a completed copy audit.
-Selective-reference groups require foundation-owner adoption/non-adoption
-evidence with immutable target hashes. Base UI's inherited Floating UI arrow
-fork also needs an exact source/license mapping; its MIT summary is not a
-complete original notice. The auditor reports every additional detected
-source-local attribution outside the ledger. Those findings remain release
-risks until resolved; extra license copies do not make them green.
+The historical donor map describes planned handoffs. The notice ledger now
+records the actual target review separately, including all donor groups,
+source/target fingerprints, specific non-adoption reasons and inherited source
+ranges. Retained ancestor copies are under `scripts/distribution/notices/sources`.
+The auditor rejects changed review inputs and unaccounted inherited attribution.
 
 ## Coordinator commands
 

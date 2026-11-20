@@ -24,7 +24,9 @@
     "runtime": "compiled-module-preserving-esm",
     "outputDirectory": "packages/solid/build",
     "domDirectory": "dom",
+    "developmentDomDirectory": "dom-dev",
     "serverDirectory": "server",
+    "developmentServerDirectory": "server-dev",
     "declarationsDirectory": "types",
     "commonjs": false,
     "preservedJsx": false,
@@ -70,11 +72,11 @@
     ],
     "runtimeTemplate": {
       "types": "./types/{stem}.d.ts",
-      "worker": "./server/{stem}.js",
-      "browser": "./dom/{stem}.js",
-      "deno": "./server/{stem}.js",
-      "node": "./server/{stem}.js",
-      "default": "./server/{stem}.js"
+      "worker": { "development": "./server-dev/{stem}.js", "default": "./server/{stem}.js" },
+      "browser": { "development": "./dom-dev/{stem}.js", "default": "./dom/{stem}.js" },
+      "deno": { "development": "./server-dev/{stem}.js", "default": "./server/{stem}.js" },
+      "node": { "development": "./server-dev/{stem}.js", "default": "./server/{stem}.js" },
+      "default": { "development": "./server-dev/{stem}.js", "default": "./server/{stem}.js" }
     },
     "typeOnlyTemplate": {
       "types": "./types/{stem}.d.ts"
@@ -133,7 +135,7 @@
         "conditions": [
           "development"
         ],
-        "runtime": "server",
+        "runtime": "server-dev",
         "typesOnly": "unexported"
       },
       {
@@ -141,7 +143,7 @@
           "browser",
           "development"
         ],
-        "runtime": "dom",
+        "runtime": "dom-dev",
         "typesOnly": "unexported"
       },
       {
@@ -163,7 +165,7 @@
         "typesOnly": "types"
       }
     ],
-    "matrixExpansion": "Validate every subset of types/browser/node/worker/deno/development (64 sets). types wins; otherwise worker selects server before browser, matching stock RC20; otherwise browser selects DOM; otherwise server. Resolver condition-list order cannot override export-object key order.",
+    "matrixExpansion": "Validate every subset of types/browser/node/worker/deno/development (64 sets). types wins; otherwise worker selects server before browser, matching stock Solid 2; otherwise browser selects DOM; otherwise server. Within each runtime branch development selects the -dev tree, otherwise production. Resolver condition-list order cannot override export-object key order.",
     "requirePolicy": "No require branch and no CJS artifact. Modern Node may synchronously require ESM; that does not constitute a supported CommonJS build.",
     "solidPolicy": "No solid branch. A supplied solid condition falls through to ordinary ESM default.",
     "typeConsumers": [

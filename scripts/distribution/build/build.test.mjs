@@ -44,21 +44,49 @@ const digest = async output => {
   return hash.digest('hex');
 };
 
+test('environment guards retain development diagnostics and remove production dead code without process', async () => {
+  const source = `export function probe(read, log) {
+    if (process.env.NODE_ENV !== 'production' && read()) log('first diagnostic');
+    if (read() && process.env.NODE_ENV !== 'production') log('second diagnostic');
+    if (process.env.NODE_ENV === 'production' || read()) return 'done';
+    log('third diagnostic');
+  }`;
+  for (const generate of ['dom', 'ssr']) for (const environment of ['production', 'development']) {
+    const { code } = compile(source, 'environment.ts', generate, undefined, undefined, environment);
+    assert(!code.includes('process.env'));
+    assert.equal(code.includes('diagnostic'), environment === 'development');
+    const { probe } = await import(`data:text/javascript,${encodeURIComponent(code)}`);
+    let reads = 0; const messages = [];
+    probe(() => { reads++; return false; }, message => messages.push(message));
+    assert.equal(reads, environment === 'development' ? 3 : 1, 'short-circuit evaluation preserved');
+    assert.deepEqual(messages, environment === 'development' ? ['third diagnostic'] : []);
+  }
+});
+
+test('environment folding refuses to silently change hoisted bindings or temporal dead zones', () => {
+  for (const source of [
+    `export function probe() { if (process.env.NODE_ENV !== 'production') { var value = 1; } return value; }`,
+    `export function probe() { helper(); if (process.env.NODE_ENV === 'production') return; function helper() {} }`,
+    `export function probe() { console.log(value); if (process.env.NODE_ENV === 'production') return; let value = 1; }`,
+  ]) assert.throws(() => compile(source, 'environment.ts', 'dom'), /scope-aware dead-code elimination/);
+});
+
 test('exact immutable 79-key map, ordered branches, publication identity, isolated optional peers', () => {
   const manifest = stagedManifest(source, contract, policy);
   assert.deepEqual(Object.keys(manifest.exports), Object.keys(contract.exports));
   assert.equal(Object.keys(manifest.exports).length, 79);
   assert.equal(manifest.name, '@unstyled-solid/base-ui'); assert.equal(manifest.private, false);
-  assert.equal(manifest.version, '0.0.1');
+  assert.equal(manifest.version, policy.identity.version);
   assert.equal(manifest.sideEffects, false); assert.equal(manifest.type, 'module');
   const unaudited = structuredClone(policy); unaudited.format.sideEffects.qualified = false;
   assert.equal(stagedManifest(source, contract, unaudited).sideEffects, true);
   assert.equal(manifest.devDependencies, undefined); assert.equal(manifest.scripts, undefined);
-  assert.deepEqual(manifest.publishConfig, { access: 'public' }); assert.equal(manifest.repository, undefined);
+  assert.deepEqual(manifest.publishConfig, { access: 'public' }); assert.deepEqual(manifest.repository, source.repository);
+  assert.equal(manifest.bugs.url, 'https://github.com/unstyled-solid/base-ui/issues');
   for (const [key, entry] of Object.entries(contract.exports)) {
     assert.deepEqual(Object.keys(manifest.exports[key]), entry.kind === 'types-only' ? ['types'] : ['types', 'worker', 'browser', 'deno', 'node', 'default']);
   }
-  assert.equal(manifest.exports['./internals/useBaseUiId'].browser, './dom/internals/createBaseUiId.js');
+  assert.deepEqual(manifest.exports['./internals/useBaseUiId'].browser, { development: './dom-dev/internals/createBaseUiId.js', default: './dom/internals/createBaseUiId.js' });
   for (const peer of ['date-fns', '@date-fns/tz', 'luxon', '@types/luxon']) {
     assert.equal(manifest.peerDependenciesMeta[peer].optional, true);
     assert.equal(manifest.dependencies[peer], undefined);
@@ -137,12 +165,12 @@ test('equivalent TS/TSX source spelling preserves exact artifact stems; collisio
   await fs.rename(file, file.replace(/\.tsx$/, '.ts'));
   const result = await buildPackage(options);
   assert.deepEqual(result.missing, []);
-  assert.equal(result.manifest.exports['./internals/resolveValueLabel'].browser, './dom/internals/resolveValueLabel.js');
+  assert.equal(result.manifest.exports['./internals/resolveValueLabel'].browser.default, './dom/internals/resolveValueLabel.js');
   await write(file, 'export const duplicate = 1;');
   await assert.rejects(buildPackage(options), /Multiple source modules emit internals\/resolveValueLabel\.js/);
 }));
 
-test('actual RC13 generic declaration probe proves native SSR defect and tested Babel fallback', async () => {
+test('pinned native and Babel compilers render typed generic SSR', async () => {
   const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'opencode', 'bsolid-compiler-'));
   try {
     await fs.symlink(path.join(root, 'node_modules'), path.join(directory, 'node_modules'), 'dir');
@@ -156,12 +184,12 @@ test('actual RC13 generic declaration probe proves native SSR defect and tested 
       import assert from 'node:assert/strict'; import {renderToString,isServer} from '@solidjs/web';
       const native=await import('./native.mjs'), babel=await import('./babel.mjs');
       assert.equal(isServer,true);
-      assert.throws(()=>renderToString(()=>native.GenericFixture({value:'native'}),{onError:e=>{throw e}}),/Value is not defined/);
+      assert(renderToString(()=>native.GenericFixture({value:'native'}),{onError:e=>{throw e}}).includes('native'));
       const html=renderToString(()=>babel.GenericFixture({value:'babel'}));assert(html.includes('babel'));
-      console.log('PASS: native type-only Value capture fails; Babel actual typed JSX SSR succeeds');
+      console.log('PASS: native and Babel typed JSX SSR succeed');
     `);
     const output = execFileSync('rtk', ['proxy', process.execPath, path.join(directory, 'probe.mjs')], { encoding: 'utf8' });
-    assert(output.includes('PASS: native type-only Value capture fails'));
+    assert(output.includes('PASS: native and Babel typed JSX SSR succeed'));
   } finally { await fs.rm(directory, { recursive: true, force: true }); }
 });
 
@@ -201,14 +229,15 @@ test('actual staged exports resolve all 64 condition sets, types-only remain une
       const values = JSON.parse(execFileSync('rtk', ['proxy', process.execPath, ...conditions.map(condition => `--conditions=${condition}`), path.join(directory, 'resolve.mjs')], { encoding: 'utf8' }));
       keys.forEach((key, index) => {
         const entry = manifest.exports[key];
-        const target = conditions.includes('types') ? entry.types : conditions.includes('worker') ? entry.worker : conditions.includes('browser') ? entry.browser : entry.default;
+        const branch = conditions.includes('types') ? entry.types : conditions.includes('worker') ? entry.worker : conditions.includes('browser') ? entry.browser : entry.default;
+        const target = typeof branch === 'object' ? branch[conditions.includes('development') ? 'development' : 'default'] : branch;
         assert.equal(values[index], target ? new URL(target, `file://${staged}/`).href : 'ERR_PACKAGE_PATH_NOT_EXPORTED', `${key}: ${conditions}`);
       });
     }
   } finally { await fs.rm(directory, { recursive: true, force: true }); }
 });
 
-test('production probe typechecks against actual emitted RC13 package declarations', async () => {
+test('production probe typechecks against actual emitted pinned Solid 2 package declarations', async () => {
   const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'opencode', 'bsolid-built-types-'));
   try {
     await fs.mkdir(path.join(directory, 'node_modules'), { recursive: true });

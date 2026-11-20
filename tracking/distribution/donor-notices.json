@@ -1,66 +1,660 @@
 {
   "schemaVersion": 1,
-  "status": "evidence-prepared-unresolved-source-mapping",
+  "status": "reviewed-source-and-notice-mapping",
   "ticket": "bsolid-donor-notices",
   "baseUiSha": "19511bb171f3b360b006c94cf6d07e53cb446505",
   "donorSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
   "sourceMapSha256": "c62d5e6126fb69898ad0de8c72a38bfab300df26096cbd872949fdf3fc95eddb",
-  "approvedOwnership": ["docs/scripts/qualification/**", "docs/tests/qualification/**", "scripts/distribution/notices/**", "test/distribution/notices/**", "NOTICE", "docs/third-party-notices.md", "tracking/distribution/donor-notices.json"],
+  "approvedOwnership": [
+    "docs/scripts/qualification/**",
+    "docs/tests/qualification/**",
+    "scripts/distribution/notices/**",
+    "test/distribution/notices/**",
+    "NOTICE",
+    "docs/third-party-notices.md",
+    "tracking/distribution/donor-notices.json"
+  ],
   "texts": [
-    { "file": "LICENSE", "destination": "LICENSE", "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a", "repository": "https://github.com/mui/base-ui", "revision": "19511bb171f3b360b006c94cf6d07e53cb446505", "source": "LICENSE", "scope": "whole file", "license": "MIT" },
-    { "file": "scripts/distribution/notices/licenses/solid-floating-ui-MIT.txt", "destination": "notices/solid-floating-ui-MIT.txt", "sha256": "9a4deecde3405cb33f532cf01b9f90957b63d8b946385e1d1d212db2e6ecb2bd", "repository": "https://github.com/lxsmnsyc/solid-floating-ui", "revision": "0492e49b746deed543dbc167a9a58ed1210c2393", "source": "LICENSE", "scope": "whole file", "license": "MIT" },
-    { "file": "scripts/distribution/notices/licenses/aria-hidden-MIT.txt", "destination": "notices/aria-hidden-MIT.txt", "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9", "repository": "https://github.com/theKashey/aria-hidden", "revision": "9220c8f4a4fd35f63bee5510a9f41a37264382d4", "source": "LICENSE", "scope": "whole file", "license": "MIT" },
-    { "file": "scripts/distribution/notices/licenses/react-spectrum-Apache-2.0.txt", "destination": "notices/react-spectrum-Apache-2.0.txt", "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84", "repository": "https://github.com/adobe/react-spectrum", "revision": "b35d5c02fe900badccd0cf1a8f23bb593419f238", "source": "LICENSE", "scope": "whole file", "license": "Apache-2.0" },
-    { "file": "scripts/distribution/notices/licenses/react-spectrum-React-NOTICE.txt", "destination": "notices/react-spectrum-React-NOTICE.txt", "sha256": "85bc9edafd1dcaa1760871a79226bf12738b0a31fb4f984b325f5d0c0304e49f", "repository": "https://github.com/adobe/react-spectrum", "revision": "b35d5c02fe900badccd0cf1a8f23bb593419f238", "source": "NOTICE.txt", "upstreamFileSha256": "ac436bba43d4366ec426e9f264ac430ea8f6556d8fd2cf867b08ac6656449cdb", "scope": "React subsection from preceding separator through SOFTWARE line terminator, excluding next separator padding blank line; literal cc7c1aece46a6b69b41958d731e0fd27c94bfc6c source URL retained", "license": "MIT", "appliesTo": "isVirtualClick inherited React portion" }
+    {
+      "file": "LICENSE",
+      "destination": "LICENSE",
+      "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a",
+      "repository": "https://github.com/mui/base-ui",
+      "revision": "19511bb171f3b360b006c94cf6d07e53cb446505",
+      "source": "LICENSE",
+      "scope": "whole file",
+      "license": "MIT"
+    },
+    {
+      "file": "scripts/distribution/notices/licenses/solid-floating-ui-MIT.txt",
+      "destination": "notices/solid-floating-ui-MIT.txt",
+      "sha256": "9a4deecde3405cb33f532cf01b9f90957b63d8b946385e1d1d212db2e6ecb2bd",
+      "repository": "https://github.com/lxsmnsyc/solid-floating-ui",
+      "revision": "0492e49b746deed543dbc167a9a58ed1210c2393",
+      "source": "LICENSE",
+      "scope": "whole file",
+      "license": "MIT"
+    },
+    {
+      "file": "scripts/distribution/notices/licenses/aria-hidden-MIT.txt",
+      "destination": "notices/aria-hidden-MIT.txt",
+      "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "repository": "https://github.com/theKashey/aria-hidden",
+      "revision": "9220c8f4a4fd35f63bee5510a9f41a37264382d4",
+      "source": "LICENSE",
+      "scope": "whole file",
+      "license": "MIT"
+    },
+    {
+      "file": "scripts/distribution/notices/licenses/react-spectrum-Apache-2.0.txt",
+      "destination": "notices/react-spectrum-Apache-2.0.txt",
+      "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84",
+      "repository": "https://github.com/adobe/react-spectrum",
+      "revision": "b35d5c02fe900badccd0cf1a8f23bb593419f238",
+      "source": "LICENSE",
+      "scope": "whole file",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "scripts/distribution/notices/licenses/react-spectrum-React-NOTICE.txt",
+      "destination": "notices/react-spectrum-React-NOTICE.txt",
+      "sha256": "85bc9edafd1dcaa1760871a79226bf12738b0a31fb4f984b325f5d0c0304e49f",
+      "repository": "https://github.com/adobe/react-spectrum",
+      "revision": "b35d5c02fe900badccd0cf1a8f23bb593419f238",
+      "source": "NOTICE.txt",
+      "upstreamFileSha256": "ac436bba43d4366ec426e9f264ac430ea8f6556d8fd2cf867b08ac6656449cdb",
+      "scope": "React subsection from preceding separator through SOFTWARE line terminator, excluding next separator padding blank line; literal cc7c1aece46a6b69b41958d731e0fd27c94bfc6c source URL retained",
+      "license": "MIT",
+      "appliesTo": "isVirtualClick inherited React portion"
+    },
+    {
+      "file": "scripts/distribution/notices/licenses/floating-ui-MIT.txt",
+      "destination": "notices/floating-ui-MIT.txt",
+      "sha256": "46c97b198a78dc0befc1a823ba7bcdf993726a887d0215edcce575a61b947115",
+      "repository": "https://github.com/floating-ui/floating-ui",
+      "revision": "38f8b5acc419a286538ce8d7f78c28d58edf6900",
+      "source": "LICENSE",
+      "scope": "whole file",
+      "license": "MIT"
+    }
   ],
   "adoptions": [
     {
       "target": "packages/solid/src/floating-ui-react/hooks/createFloating.ts",
-      "targetSha256": "c15e54f27922d0958dc41f64beed713d451b1e22fb7ea0e80d9440d5d74d27c2",
-      "owner": "bsolid-positioning", "requiresProminentChangeNotice": false,
+      "targetSha256": "ba92c8b6841e20355c9225159443b4494635e83bc22709a59b8a181e36c51f72",
+      "owner": "bsolid-positioning",
+      "requiresProminentChangeNotice": false,
       "changes": "RC13 split-effect ownership, checked promise generations, retained Base UI readiness, injected root/tree, native getter refs",
       "targetScope": "17-104 geometry, virtual-reference and DPR portions; source-informed, not identical",
       "portions": [
-        { "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/usePosition.ts", "revision": "0492e49b746deed543dbc167a9a58ed1210c2393", "startLine": 23, "endLine": 214, "sha256": "acbfad001348a032def47d756f4d0951cb8acb4e49a302eab6c1d0cdc0825d3d", "scope": "lifecycle/getter/config/observer patterns, selectively informed" },
-        { "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useFloating.ts", "revision": "0492e49b746deed543dbc167a9a58ed1210c2393", "startLine": 78, "endLine": 88, "sha256": "76e530298c3613d8f70f4cbd4877cc72f604e989ce9faf97135f0b840bc6eb5c", "scope": "virtual element wrapping" },
-        { "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/dpr.ts", "revision": "0492e49b746deed543dbc167a9a58ed1210c2393", "startLine": 1, "endLine": 13, "sha256": "f65624c6acd433d1dd7410d6d0e15116d9de62c87ef482fc169cddddd1015397", "scope": "DPR rounding; target uses ownerDocument, no copied global fallback" }
+        {
+          "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/usePosition.ts",
+          "revision": "0492e49b746deed543dbc167a9a58ed1210c2393",
+          "startLine": 23,
+          "endLine": 214,
+          "sha256": "acbfad001348a032def47d756f4d0951cb8acb4e49a302eab6c1d0cdc0825d3d",
+          "scope": "lifecycle/getter/config/observer patterns, selectively informed"
+        },
+        {
+          "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useFloating.ts",
+          "revision": "0492e49b746deed543dbc167a9a58ed1210c2393",
+          "startLine": 78,
+          "endLine": 88,
+          "sha256": "76e530298c3613d8f70f4cbd4877cc72f604e989ce9faf97135f0b840bc6eb5c",
+          "scope": "virtual element wrapping"
+        },
+        {
+          "source": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/dpr.ts",
+          "revision": "0492e49b746deed543dbc167a9a58ed1210c2393",
+          "startLine": 1,
+          "endLine": 13,
+          "sha256": "f65624c6acd433d1dd7410d6d0e15116d9de62c87ef482fc169cddddd1015397",
+          "scope": "DPR rounding; target uses ownerDocument, no copied global fallback"
+        }
       ]
     },
     {
-      "target": "packages/solid/src/floating-ui-react/utils/markOthers.ts", "targetSha256": "1878bd369904cee7face73d6500120270ecb23514ba6ac4055c8238bfb3a8299", "owner": "bsolid-dom", "requiresProminentChangeNotice": false,
+      "target": "packages/solid/src/floating-ui-react/utils/markOthers.ts",
+      "targetSha256": "1878bd369904cee7face73d6500120270ecb23514ba6ac4055c8238bfb3a8299",
+      "owner": "bsolid-dom",
+      "requiresProminentChangeNotice": false,
       "targetScope": "12-74 tree traversal, selective ARIA and restoration adapted via Base UI; exact aria-hidden commit retained in lines 1-2",
       "changes": "Conditional aria-hidden, Base UI inert marker, shadow/realm handling, overlap locks, idempotent cleanup",
-      "portions": [{ "source": "upstream/base-ui/packages/react/src/floating-ui-react/utils/markOthers.ts", "revision": "19511bb171f3b360b006c94cf6d07e53cb446505", "startLine": 1, "endLine": 2, "sha256": "a18e57e6cefd146969fdcf42d808510b8cf45e03d3f0e98bb47dcbf7138824d1", "scope": "immutable inherited aria-hidden attribution; finer original adopted-line map pending owner evidence" }]
+      "portions": [
+        {
+          "source": "upstream/base-ui/packages/react/src/floating-ui-react/utils/markOthers.ts",
+          "revision": "19511bb171f3b360b006c94cf6d07e53cb446505",
+          "startLine": 1,
+          "endLine": 2,
+          "sha256": "a18e57e6cefd146969fdcf42d808510b8cf45e03d3f0e98bb47dcbf7138824d1",
+          "scope": "Intermediate source attribution"
+        },
+        {
+          "source": "scripts/distribution/notices/sources/aria-hidden.ts",
+          "revision": "9220c8f4a4fd35f63bee5510a9f41a37264382d4",
+          "startLine": 18,
+          "endLine": 181,
+          "sha256": "11b92333928dcae83f95fe7d65f0cb0278234f6b567d973619a85d7dd8515d3e",
+          "scope": "Shadow-host correction, keep/stop ancestry traversal, reference-counted attribute restoration and aria-live exclusion. Target rewrites counters as per-attribute locks and idempotent cleanup."
+        }
+      ]
     },
     {
-      "target": "packages/solid/src/floating-ui-react/utils/event.ts", "targetSha256": "64f474985ecc6d9e5f86634b1e6043e4a20c5d573dd947fb3bd64c392e255933", "owner": "bsolid-events", "requiresProminentChangeNotice": true,
-      "targetScope": "4-15 virtual click/pointer predicates only; stopEvent and other helpers are not attributed to Adobe",
+      "target": "packages/solid/src/floating-ui-react/utils/event.ts",
+      "targetSha256": "6af2f9592f438ac13e84f8c00dd384e02c3b62674bfc56794bec33df807531e5",
+      "owner": "bsolid-events",
+      "requiresProminentChangeNotice": true,
+      "targetScope": "Virtual click and pointer predicates; stopEvent/mouse/click classification are Base UI helpers.",
       "changes": "Base UI Android/jsdom/fractional-pointer predicates retained; native event types and local platform import",
-      "portions": [{ "source": "upstream/base-ui/packages/react/src/floating-ui-react/utils/event.ts", "revision": "19511bb171f3b360b006c94cf6d07e53cb446505", "startLine": 12, "endLine": 48, "sha256": "3e962fbe323967ccb11f0bd56213f395f58efbcd9b1223e9ad16df06d37f764a", "scope": "exact intermediate source; Adobe main URL is not an immutable origin pin" }]
+      "portions": [
+        {
+          "source": "upstream/base-ui/packages/react/src/floating-ui-react/utils/event.ts",
+          "revision": "19511bb171f3b360b006c94cf6d07e53cb446505",
+          "startLine": 12,
+          "endLine": 48,
+          "sha256": "3e962fbe323967ccb11f0bd56213f395f58efbcd9b1223e9ad16df06d37f764a",
+          "scope": "exact intermediate source; Adobe main URL is not an immutable origin pin"
+        },
+        {
+          "source": "scripts/distribution/notices/sources/adobe-isVirtualEvent.ts",
+          "revision": "b35d5c02fe900badccd0cf1a8f23bb593419f238",
+          "startLine": 1,
+          "endLine": 58,
+          "sha256": "48190548d22e5822c09a77f73c0898928a43b9e73e9e9d0021939a4461160d1b",
+          "scope": "Reviewed attributed ancestor, not byte-identical origin: Android click/buttons branch, detail/pointerType fallback and zero/one-size pointer predicates. Base UI changed Firefox detection and added jsdom, desktop and fractional touch handling; modified-file notice retained."
+        }
+      ]
+    },
+    {
+      "target": "packages/solid/src/floating-ui-react/middleware/arrow.ts",
+      "targetSha256": "3b1185753cd46fd48832cc5e5ac94085584f42589cd9df83ec7ef325abba066f",
+      "owner": "bsolid-qaiu",
+      "requiresProminentChangeNotice": false,
+      "changes": "Base UI always uses floating element offset parent; native DOM types, null element handling, direct baseArrow alias instead of React dependency wrapper.",
+      "targetScope": "baseArrow geometry algorithm, lines 5-28",
+      "portions": [
+        {
+          "source": "upstream/base-ui/packages/react/src/floating-ui-react/middleware/arrow.ts",
+          "revision": "19511bb171f3b360b006c94cf6d07e53cb446505",
+          "startLine": 25,
+          "endLine": 97,
+          "sha256": "c8eacd4d1c09c56ae842d5967d979fdbff6de440f5f141dca5856b4777ce93c3",
+          "scope": "Exact intermediate Base UI fork"
+        },
+        {
+          "source": "scripts/distribution/notices/sources/floating-arrow.ts",
+          "revision": "38f8b5acc419a286538ce8d7f78c28d58edf6900",
+          "startLine": 33,
+          "endLine": 117,
+          "sha256": "c4984020abe29318a728b572e9079a192f0379d32cde56971d56f4fa817d7d6c",
+          "scope": "Inherited Floating UI MIT algorithm: axis selection, padding clamp, center offset and one-reset alignment correction; offset-parent branch changed by Base UI."
+        }
+      ]
     }
   ],
   "groupReviews": [
-    { "id": "geometry", "status": "adopted", "evidence": [{ "file": "packages/solid/src/floating-ui-react/hooks/createFloating.ts", "sha256": "c15e54f27922d0958dc41f64beed713d451b1e22fb7ea0e80d9440d5d74d27c2" }] },
-    { "id": "arrow", "status": "inspected-no-adoption", "reason": "Current arrow only exports baseArrow; element is Element|null, no donor accessor resolution or donor arrowCore wrapper", "evidence": [{ "file": "packages/solid/src/floating-ui-react/middleware/arrow.ts", "sha256": "3b1185753cd46fd48832cc5e5ac94085584f42589cd9df83ec7ef325abba066f" }] },
-    { "id": "root-tree", "status": "unresolved", "owner": "bsolid-floating-core" },
-    { "id": "dismiss-hover", "status": "unresolved", "owner": "bsolid-dismiss" },
-    { "id": "focus", "status": "unresolved", "owner": "bsolid-focus" },
-    { "id": "composite", "status": "unresolved", "owner": "bsolid-composite" },
-    { "id": "portal", "status": "unresolved", "owner": "bsolid-portal" },
-    { "id": "dom-helpers", "status": "unresolved", "owner": "bsolid-dom" },
-    { "id": "event-helpers", "status": "unresolved", "owner": "bsolid-events" },
-    { "id": "not-adopted", "status": "unresolved", "owner": "bsolid-donor-floating", "reason": "Planned no-copy inventory is not actual target non-adoption evidence" }
+    {
+      "id": "geometry",
+      "status": "adopted",
+      "reason": "Owned source-informed adaptation of donor usePosition/getter/virtual-reference/DPR patterns. Current Solid 2 split effects and request generations replace donor Solid 1 effects; Base UI supplies root/tree contracts.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/usePosition.ts",
+          "sha256": "acbfad001348a032def47d756f4d0951cb8acb4e49a302eab6c1d0cdc0825d3d"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useFloating.ts",
+          "sha256": "76e530298c3613d8f70f4cbd4877cc72f604e989ce9faf97135f0b840bc6eb5c"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/dpr.ts",
+          "sha256": "f65624c6acd433d1dd7410d6d0e15116d9de62c87ef482fc169cddddd1015397"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createFloating.ts",
+          "sha256": "ba92c8b6841e20355c9225159443b4494635e83bc22709a59b8a181e36c51f72"
+        }
+      ]
+    },
+    {
+      "id": "arrow",
+      "status": "inspected-no-adoption",
+      "reason": "No donor accessor wrapper or arrowCore call: target directly implements Base UI baseArrow. Floating UI inherited algorithm is mapped separately below.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/arrow.ts",
+          "sha256": "387f582f2533a1c8573ab9171940ef47b3ab08b1580dbc6dda28ac805de854f0"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/middleware/arrow.ts",
+          "sha256": "3b1185753cd46fd48832cc5e5ac94085584f42589cd9df83ec7ef325abba066f"
+        }
+      ]
+    },
+    {
+      "id": "root-tree",
+      "status": "inspected-no-adoption",
+      "reason": "Target uses Base UI cancellation-first transaction, mutable node registry, typed Map/Set emitter with explicit disposal. Donor signal-backed tree/emit-before-callback implementation is not copied.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useFloatingRootContext.ts",
+          "sha256": "b738e916a985b1fbaac5a7d9c3777ef001bfc3680db907139087d16e2dcf4d6d"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/FloatingTree.tsx",
+          "sha256": "21c4003cc620b955fd5cdfc6e2df84fb76bf979ccffcdbb745d0b0c7e18936de"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/createEventEmitter.ts",
+          "sha256": "21ff25efee7521bd78b3ef17256f3d443318812b739ef2d7158125326a06424d"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/nodes.ts",
+          "sha256": "3832e5f313c4f4cd6d79be6c3e7329887f3c3ac1bb1171c696983a1868b01c99"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/components/createFloatingRoot.ts",
+          "sha256": "871e1880bf95882ff9376176d30efc52d4638d25896d7be6c16b29337cd51368"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/components/createFloatingTree.ts",
+          "sha256": "7793f88dbc1bd34680c18caab59ac7086368e3a59bd45ab83bfd0d038b8010d5"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/components/FloatingTree.tsx",
+          "sha256": "0e6adf98020e110988b0e4ba9dc64624b9b7b4ee5a30903f6d947ba57e3a5156"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createFloatingRootContext.ts",
+          "sha256": "2c412e2ef315be378a44d8c105ad1083ac21a9272b703af986105133b19a18aa"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/createEventEmitter.ts",
+          "sha256": "2d58b6c5773ac1f47deaa5c42b951a90c33603321aa24414ce945b138363673d"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/nodes.ts",
+          "sha256": "237ace39e52399eb3f13328c0c57ae68f523004a64710d0f38de2509fe3be793"
+        }
+      ]
+    },
+    {
+      "id": "dismiss-hover",
+      "status": "inspected-no-adoption",
+      "reason": "Target preserves Base UI intentional/sloppy press policy, LogicalLayer and separate reference/floating/shared-hover leaves. Donor monolithic hover/useDismiss source is not transplanted; pure safePolygon derives from pinned Base UI.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useClick.ts",
+          "sha256": "8f1cc50f4ed288536b5e64e25a5660faa999559f121269b1333b4dee0b20c771"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useDismiss.ts",
+          "sha256": "371aea31580dcb3f18ca18032005bebc9a6bef8276fd449fbe1c67b5a8b31690"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useFocus.ts",
+          "sha256": "c603a5d5e69044ae50578da69410b4dd63e2a778c161323d99f4550129683e11"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useHover.ts",
+          "sha256": "dc042845b585cc6b4c4c0bb069be34a6eaadd0fe220bcfd3027a050585417274"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/FloatingDelayGroup.tsx",
+          "sha256": "339f39bc6e551c18b7bd646299015de7fa9d1395c608e0ea5051742efe0fe59b"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/safePolygon.ts",
+          "sha256": "62f36d89673bf411ae8a3e47ce49039e9e8f223adf2e08814e7ece44c017b6e1"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createClick.ts",
+          "sha256": "d0380c59e668916708c35908beb6121e42f4237a2b53e89ebea66b6c821fe87b"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createDismiss.ts",
+          "sha256": "9b6b574f4986c583a9cb9cd98516be94c882108c9ea5f98259f99e386cf853c4"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createFocus.ts",
+          "sha256": "09886068039b1a4f42e943353ace983eb9631d9833c69da3ee34f0b7e5d313b0"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createHoverReferenceInteraction.ts",
+          "sha256": "48800647db5c7a27979e254b4c6a7c3001a13cd65796f8d9d0681fd3493f87dd"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createHoverFloatingInteraction.ts",
+          "sha256": "c70ee39f0284013b61348f1c4080f4ca0a9000b0fc42fca9e7889c14ed915f46"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createHoverInteractionSharedState.ts",
+          "sha256": "10eebad27b8db7776dad5f99ba38090c0593471fe5bf1510616fc798d9d77648"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/hoverShared.ts",
+          "sha256": "b849ba299856054f26a05e6a6fc60ed5daa1393c40ccd2ab48d3eefaf416b9ff"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/components/FloatingDelayGroup.tsx",
+          "sha256": "a28d78a8b5aa5f578d271f117c9c1342338afb4b4181f955899378dda2f4fa98"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/safePolygon.ts",
+          "sha256": "7d6382cc3578c25744a4ec18d77e93352d5bba5c014643c526c7b89fb3aa2f74"
+        }
+      ]
+    },
+    {
+      "id": "focus",
+      "status": "inspected-no-adoption",
+      "reason": "Target uses Base UI focus-manager behavior with owned generation/timer resources and local tabbability/markOthers; donor Solid1 effect/onMount and third-party tabbable implementation are not adopted.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/FloatingFocusManager.tsx",
+          "sha256": "0fd0de9d4e72e1e1f5722a3fa4491b6ea655b10076659ecb6c9d80f27907696b"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/components/FloatingFocusManager.tsx",
+          "sha256": "b6f46acb10f08d1ebdf5375448156bd16eec45a1d3af7cd7ff4a0d547874a361"
+        }
+      ]
+    },
+    {
+      "id": "composite",
+      "status": "inspected-no-adoption",
+      "reason": "Target uses Base UI nullable-index and metadata registry with tokenized cleanup and DOM order invalidation; donor FloatingList default no-op context and signal Set/ref-owned registration are not adopted.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/Composite.tsx",
+          "sha256": "3fd43ad5d6b280ad3d1811fe030b93d3668c631342e4aaf7cc3588bb7147812d"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/FloatingList.tsx",
+          "sha256": "52f43fd88bf8b98b8c0ec6fe9097da93a01ea1ad14f485e00ee2dcec96a3b5d0"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useListNavigation.ts",
+          "sha256": "9e61683fd71bd9e8747b317924f615ad07652521b5cf8d369f47f5a2cd12f4e9"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useTypeahead.ts",
+          "sha256": "72b4dee81c8648c9f197970b602196d5a00cc70ae20bc06355d8ff32c867f1d6"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/composite.ts",
+          "sha256": "005a62266bfd2ab4bd5491af563309ea655954ba451ca4e5fbeb682b9ffb0ebb"
+        },
+        {
+          "file": "packages/solid/src/internals/composite/list/CompositeList.tsx",
+          "sha256": "7dc439b5af861750fed7b0339a6e9fec1d6d5d986d6a2d42c3253b88c92f6f81"
+        },
+        {
+          "file": "packages/solid/src/internals/composite/item/CompositeItem.tsx",
+          "sha256": "a335bc2013d01e716809e0c540c739955ed6c317545e063904d87ef23dd88585"
+        },
+        {
+          "file": "packages/solid/src/internals/createItemRegistry.ts",
+          "sha256": "062e1e6f4c82a637b737732f206f34fde8a9f64e607b5c4c554a187b5bbaa0b9"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createListNavigation.ts",
+          "sha256": "afda0d6dfaf468a152de6e0061968fc3ce3d119d266b7f153787bf4e7d32d599"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createTypeahead.ts",
+          "sha256": "f12fbbdb732c03aa83e734961a384e47bb34ae2d4e48fa92c3bee0ec7db72ce4"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/composite.ts",
+          "sha256": "41519879e55f39a47587207fbe526c6c7a578e61d442f8c77b2c8d2ceb218b7e"
+        }
+      ]
+    },
+    {
+      "id": "portal",
+      "status": "inspected-no-adoption",
+      "reason": "Target owns replacement-aware portal nodes and LogicalLayer, native Solid 2 Portal wrappers and Base UI tab-order guards. Donor global-document/created-once portal is not copied.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/FloatingPortal.tsx",
+          "sha256": "d67943368d1ae44d2c82b103ce472507a684d9e5857cae337411d9619a66c46e"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/FocusGuard.tsx",
+          "sha256": "00299225588c4bc17554d9c9fd2a067f6fb11334642aba9eadcf158716140b01"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/components/FloatingPortal.tsx",
+          "sha256": "a56b4a6ed483f0e25eacf671de8219075a864f05acc988b93bdd47acd51f311a"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/components/PortalContext.ts",
+          "sha256": "62a41f9bb7e829e40659af2a327ac6b790da5d5894f87710fe432ff5dbf6e322"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/hooks/createFloatingPortalNode.tsx",
+          "sha256": "930e1a4a7afbc203dcc475439e6a6f59951cce72172306047a9a6f5ebc852b68"
+        },
+        {
+          "file": "packages/solid/src/utils/FocusGuard.tsx",
+          "sha256": "250f9c90df2308dc1b54e8baabe6ff0fa2d9b89309bc794a81d06db40a5d274a"
+        }
+      ]
+    },
+    {
+      "id": "dom-helpers",
+      "status": "inspected-no-adoption",
+      "reason": "Target helpers follow Base UI. markOthers inheritance is mapped to aria-hidden through Base UI below; local tabbable implementation does not use donor dependency. Platform is lazy and realm-aware.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/constants.ts",
+          "sha256": "c4b6cae89983e4ed3a7783e1000af0a20b26981f9eead59e41536ad33e2dbbfd"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/element.ts",
+          "sha256": "887d07c3af40943a63edd56539e1f903df3b8706572c601f9c575a28e619cddd"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/log.ts",
+          "sha256": "2882f73a515c76c2ddc49db3d3593b3426afd627728860ffda2d8719eead20ed"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/markOthers.ts",
+          "sha256": "fddc577fffbe374f1f09ec85383f230ccb1344b5110ffc9c86dcd3d456543c3e"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/platform.ts",
+          "sha256": "b256e928958429eb2804005dabd266391f2d4f7dbbfb159a209bf4811cadc16d"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/schedule.ts",
+          "sha256": "7fe86c23821c8c7b9b4fb11a46cf647d38866c15230f199ae05455882a82705e"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/tabbable.ts",
+          "sha256": "2f62093c3b7d9f5c0afc8ce6c97b23dcd999b938b52e14c1e9a73e5a0b4e532c"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/constants.ts",
+          "sha256": "c235e526263286871590fe87c4c4df4f249d210247c91b7a262fa5af5e53d731"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/element.ts",
+          "sha256": "64e5cf7918055886a651caf5b64e0257c708156ae5b83563a4c9c9b4dcb81f74"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/markOthers.ts",
+          "sha256": "1878bd369904cee7face73d6500120270ecb23514ba6ac4055c8238bfb3a8299"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/enqueueFocus.ts",
+          "sha256": "1059d29df11afbe0146571414d1a9a53986ee44d7bc8e1f952ec6a5a13d4d138"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/tabbable.ts",
+          "sha256": "08cd38c588a84abf00673203a96b62c42587007cf9d902b8235de23af54f31b7"
+        },
+        {
+          "file": "packages/solid/src/utils/platform/index.ts",
+          "sha256": "441580e309c6a25dc50e6934ff59e22b9781ba37a70d48e2cbbe63bb10880690"
+        },
+        {
+          "file": "packages/solid/src/utils/error.ts",
+          "sha256": "f1a794c12fce06a5dab4a6539ac3c276f83fec6fb86b49c335732d3b6b652c2c"
+        }
+      ]
+    },
+    {
+      "id": "event-helpers",
+      "status": "inspected-no-adoption",
+      "reason": "Target predicates match Base UI empty pointerType, desktop assistive pointer and fractional touch branches, not donor mozInputSource predicate. mergeProps preserves Base UI prevention/order, not donor useInteractions fanout. Adobe inheritance is separately scoped below.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/event.ts",
+          "sha256": "28d7b0faac386154cbebe97c020787abc51f19fdb826ef0b41ed3baa315a7de9"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useInteractions.ts",
+          "sha256": "f7ce70d10b114ee3f1ba99c742ff4b6498d6302b6ccdbc947d6e23020a2644ca"
+        },
+        {
+          "file": "packages/solid/src/floating-ui-react/utils/event.ts",
+          "sha256": "6af2f9592f438ac13e84f8c00dd384e02c3b62674bfc56794bec33df807531e5"
+        },
+        {
+          "file": "packages/solid/src/merge-props/mergeProps.ts",
+          "sha256": "7f372d547a488a833c478654c1d80d35416296d3c1879888c62f1821da023231"
+        }
+      ]
+    },
+    {
+      "id": "not-adopted",
+      "status": "inspected-no-adoption",
+      "reason": "Donor-only FloatingArrow/FloatingOverlay/NextFloatingDelayGroup/useClientPoint/useRole/useTransition/inner and Solid1 reactivity helper are not exported/imported. Target family arrows/backdrops, gesture and presence owners use Base UI source; no donor package, index, types or utils facade is installed.",
+      "reviewedBy": "bsolid-qaiu",
+      "evidence": [
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/FloatingArrow.tsx",
+          "sha256": "ace5a8f8905d8cbb4cfdba3851a5abccb380c9ba64ed3147e6e49d4680d576b6"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/FloatingOverlay.tsx",
+          "sha256": "42928adf7000dfa5a60ee5cdbb39c66cf1feff30da3f4b77288a0795a53c78c3"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/components/NextFloatingDelayGroup.tsx",
+          "sha256": "b6ceda089fb0922c5f52e4c8d431c7803689282cf1ac6bdcd62c8e1883b8f7cb"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useClientPoint.ts",
+          "sha256": "48e779b55b64add25cfeb6c0661479167e81638837c63429f4b5586c10389251"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useMergeRefs.ts",
+          "sha256": "a710adab459480baeb4f28ccbc0e152d56d1db9aa1eb00b629bf17ff70eeb515"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useRole.ts",
+          "sha256": "af43a84ebeb9fa7a0fe78a43738c45c717e3c5ecc5996b3bfd7ca5c44b1308c5"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/hooks/useTransition.ts",
+          "sha256": "4fc7f6e6f4e8ad5ad9ff22c7e57cfeeec55285e38e25740537d9b5433719f701"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/inner.ts",
+          "sha256": "872356b67bcf508f14092ac67b7db134efade9444c8bc3d5533d065998f3340b"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils/reactivity.ts",
+          "sha256": "0c5edd40e349091f40f853fe9e9f43d9171f4205473e6fcf434bf44969cb99ba"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/index.ts",
+          "sha256": "64082e3ae12d758c5d55c59d3e4754850b17d251cc41d32b9f43f55937d41ca0"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/types.ts",
+          "sha256": "f6b1a2dac0ea959f8731c8e098a318c7d27d4d66fcb4c8d599d2a96f16134382"
+        },
+        {
+          "file": "upstream/solid-floating-ui/packages/solid-floating-ui/src/utils.ts",
+          "sha256": "fabcb4955cb92dcaf7a5295603e123fc8e9dfee6646c371a40d402e6d4f10496"
+        },
+        {
+          "file": "packages/solid/src/index.ts",
+          "sha256": "4174e9ea571155ff0f22173dbeb244b44914be31a2e090c4fa55726918e8283e"
+        },
+        {
+          "file": "packages/solid/package.json",
+          "sha256": "4a478a2a2055a0576e55ac0194e8018878a6991dbf7c817649a8273831a9f807"
+        }
+      ]
+    }
   ],
-  "unresolved": [
-    { "id": "adobe-moving-origin", "owner": "bsolid-events", "reason": "Base UI links Adobe main, whereas the donor pins b35d5c02. License texts collected at donor attribution pin are real, but no identical-origin assertion is justified. Pin actual adopted Adobe/React source ranges or record source-owner reconciliation." },
-    { "id": "aria-hidden-line-map", "owner": "bsolid-dom", "reason": "Exact aria-hidden source URL and original license are retained. Finer adopted source ranges versus target overlap-lock rewrite still require source-owner confirmation." },
-    { "id": "floating-ui-arrow-inheritance", "owner": "bsolid-positioning", "reason": "Target arrow header says Base UI Floating UI MIT fork; exact copied Floating UI source/license provenance remains unmapped. External DOM dependency licenses alone do not clear an inlined fork." }
-  ],
+  "unresolved": [],
   "preparationChecks": {
-    "nodeTests": { "command": "rtk proxy node --test docs/tests/qualification/*.test.mjs test/distribution/notices/*.test.mjs", "passed": 21, "failed": 0, "scope": "Node auditors/staging and synthetic archive/evidence fixtures, not release build/browser/pack execution" },
-    "licenseTexts": { "command": "rtk proxy node scripts/distribution/notices/provenance.mjs --verify-remote", "result": "all four copied texts byte-identical within recorded whole-file/subsection scopes" },
-    "docsAudit": { "command": "rtk proxy node docs/scripts/qualification/audit.mjs --summary", "complete": false, "pages": 84, "apiModules": 79, "demoVariants": 262, "markdown": 163, "findingsAtPreparation": 2533 },
-    "noticeReconciliation": { "command": "rtk proxy node scripts/distribution/notices/audit.mjs --reconcile", "complete": false, "findingsAtPreparation": 13 }
+    "nodeTests": {
+      "command": "rtk proxy node --test docs/tests/qualification/*.test.mjs test/distribution/notices/*.test.mjs",
+      "passed": 21,
+      "failed": 0,
+      "scope": "Node auditors/staging and synthetic archive/evidence fixtures, not release build/browser/pack execution"
+    },
+    "licenseTexts": {
+      "command": "rtk proxy node scripts/distribution/notices/provenance.mjs --verify-remote",
+      "result": "all four copied texts byte-identical within recorded whole-file/subsection scopes"
+    },
+    "docsAudit": {
+      "command": "rtk proxy node docs/scripts/qualification/audit.mjs --summary",
+      "complete": false,
+      "pages": 84,
+      "apiModules": 79,
+      "demoVariants": 262,
+      "markdown": 163,
+      "findingsAtPreparation": 2533
+    },
+    "noticeReconciliation": {
+      "command": "rtk proxy node scripts/distribution/notices/audit.mjs --reconcile",
+      "complete": false,
+      "findingsAtPreparation": 13
+    }
   },
-  "qualification": { "tarball": null, "tarballSha256": null, "packedAuditExecuted": false, "finalOwner": "coordinator", "noticeStageRequiredAfterBuild": true, "stagedManifestFilesSeam": ["notices", "THIRD-PARTY-NOTICES.md"] }
+  "qualification": {
+    "tarball": null,
+    "tarballSha256": null,
+    "packedAuditExecuted": false,
+    "finalOwner": "coordinator",
+    "noticeStageRequiredAfterBuild": true,
+    "stagedManifestFilesSeam": [
+      "notices",
+      "THIRD-PARTY-NOTICES.md"
+    ]
+  },
+  "resolutions": [
+    {
+      "id": "adobe-moving-origin",
+      "reviewedBy": "bsolid-qaiu",
+      "resolution": "Pinned Base UI is the actual copied source. Compared the preserved Adobe ancestor: shared expressions and explicit later differences are recorded, without asserting identity to a moving main URL. Apache/React texts and modified-file notice apply to those inherited predicates."
+    },
+    {
+      "id": "aria-hidden-line-map",
+      "reviewedBy": "bsolid-qaiu",
+      "resolution": "Original immutable source retained and lines 18-181 mapped to target traversal, overlapping locks and aria-live preservation."
+    },
+    {
+      "id": "floating-ui-arrow-inheritance",
+      "reviewedBy": "bsolid-qaiu",
+      "resolution": "Pinned Base UI fork and independently pinned Floating UI ancestor compared; full original Floating UI MIT license now included."
+    }
+  ]
 }

@@ -32,7 +32,7 @@ export function LabelableProvider(props: LabelableProviderProps): JSX.Element {
     setFieldLabelId,
     registerFieldLabel(candidate) {
       // Capture this owner's candidate, not a previous owner's published ID.
-      // RC20 can construct a keyed replacement before disposing its predecessor.
+      // Solid 2.0.3 can construct a keyed replacement before disposing its predecessor.
       const registration = { token: Symbol(), id: untrack(candidate) };
       onSettled(() => {
         setFieldLabels((current) => [...current, registration]);

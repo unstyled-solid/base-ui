@@ -1,4 +1,4 @@
-// Native RC13 translation of Base UI useSwipeDismiss (19511bb), MIT.
+// Native Solid 2 translation of Base UI useSwipeDismiss (19511bb), MIT.
 import { createEffect, createMemo, createSignal, onCleanup, untrack, type Accessor } from 'solid-js';
 import type { JSX } from '@solidjs/web';
 import { closest, contains, getTarget } from '../floating-ui-react/utils/element';

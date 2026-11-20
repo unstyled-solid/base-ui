@@ -95,7 +95,8 @@ export function ToastViewport(props: ToastViewportProps) {
     onPointerUp: pointerEnd, onPointerCancel: pointerEnd,
     get style() { const height = toasts()[0]?.height; return { '--toast-frontmost-height': height ? `${height}px` : undefined }; },
   };
-  const Guard = () => <Show when={guardVisible()}><FocusGuard onFocus={handleGuard} /></Show>;
+  // Boolean-only JSX guards have matching production/development owner graphs.
+  const Guard = () => <>{guardVisible() && <FocusGuard onFocus={handleGuard} />}</>;
   // Own the child composition once; state/style updates must not reconstruct it.
   const content = <><Guard />{props.children}<Guard /></>;
   // No ref attaches during SSR. A stale viewport cleanup cannot unregister a
@@ -103,13 +104,13 @@ export function ToastViewport(props: ToastViewportProps) {
   onCleanup(() => {
     if (attachedViewport && store.state.viewport === attachedViewport) store.setViewport(null);
   });
-  const Announcements = () => <Show when={!store.snapshot().focused && toasts().some((toast) => toast.priority === 'high')}>
+  const Announcements = () => <>{!store.snapshot().focused && toasts().some((toast) => toast.priority === 'high') &&
     <div style={visuallyHidden}>
       <For each={toasts().filter((toast) => toast.priority === 'high')} keyed={(toast) => toast.id}>
         {(toast) => <div role="alert" aria-atomic="true"><div>{toast().title}</div><div>{toast().description}</div></div>}
       </For>
     </div>
-  </Show>;
+  }</>;
   return <>
     <Guard />
     {createRenderElement('div', props, {

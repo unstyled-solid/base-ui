@@ -1,6 +1,6 @@
 import type { FloatingRootContext, FloatingRootState, TriggerLookup } from '../../internals/contracts/floating';
 import type { ChangeEventDetails } from '../../internals/contracts/events';
-import { createSignal, onCleanup, untrack } from 'solid-js';
+import { createSignal, onCleanup, onSettled, untrack } from 'solid-js';
 import { createEventEmitter } from '../utils/createEventEmitter';
 import type { FloatingUIOpenChangeDetails } from '../../internals/contracts/events';
 import { isClickLikeEvent } from '../utils/event';
@@ -49,9 +49,9 @@ export function createFloatingRoot(options: FloatingRootOptions): FloatingRootCo
         const generation = ++transactionGeneration;
         pendingOpen = { value: next, generation };
         // Popup publishes its accepted state after this dispatch. Expire the
-        // imperative proposal after that staged commit checkpoint, so an older
-        // hover completion cannot overwrite a same-turn click-open provenance.
-        queueMicrotask(() => queueMicrotask(() => { if (pendingOpen?.generation === generation) pendingOpen = undefined; }));
+        // imperative proposal only after the batch settles (including async holds),
+        // so an older hover completion cannot overwrite click-open provenance.
+        onSettled(() => { if (pendingOpen?.generation === generation) pendingOpen = undefined; });
         events.emit('openchange', { open: next, reason: details.reason, nativeEvent: details.event, nested: context.nested, triggerElement: details.trigger });
       });
     },
