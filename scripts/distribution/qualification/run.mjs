@@ -82,7 +82,7 @@ try {
     await receipt(name, [browserInstall, browser], assertions, [replayFile, path.join(directory, 'qualification-ssr.json'), path.join(output, 'fixture-hashes.json')]);
   }
   const ledger = JSON.parse(await fs.readFile(path.join(root, 'tracking/distribution/donor-notices.json')));
-  qualification.notices = ledger.texts.map(text => ({ sourceSha: text.revision, license: text.license, packedFile: text.destination, requiredText: [archive.files.get(text.destination).toString()] }));
+  qualification.notices = ledger.texts.map(text => ({ license: text.license, packedFile: text.destination, requiredText: [archive.files.get(text.destination).toString()] }));
   const artifacts = new Map();
   for (const obligation of Object.values(qualification.obligations)) for (const artifact of obligation.artifacts) artifacts.set(artifact.path, await fs.readFile(artifact.path));
   validateQualification(qualification, archive.sha256, artifacts);

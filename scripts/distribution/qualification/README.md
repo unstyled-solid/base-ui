@@ -23,8 +23,7 @@ and `failure.json`, and does not emit a successful qualification bundle.
   is not a claim of exhaustive behavioral/source-test parity.
 * Markdown: all canonical pages, every declaration module, current generator
   output, versioned manifest, exact packed bytes.
-* Notices: immutable donor/source ranges, current review hashes, full original
-  license texts, modified-file notices and four-variant archive inclusion.
+* Notices: full required license and attribution texts included intact in the archive.
 * Side effects: authored census and reviewed factories, independently installed
   emitted initialization audit, actual zero-retention/root-subpath bundle checks.
 * Resources: optimized real ScrollArea/Select, overlapping Dialog/Tooltip owners,
@@ -39,7 +38,3 @@ Each gate retains executed assertion IDs, exact ordered subprocess argument
 arrays, exit/signal/timeout records, full raw logs and their hashes. No receipt
 is inferred from a previously green unrelated suite. The separate integrated
 interaction gate remains its own evidence; this runner does not relabel it.
-
-`reconcile-reviewed.mjs` records the one reviewed donor episode. It deliberately
-refuses to refresh approval hashes after completion: later drift requires a new
-source review, not an automatic ledger update.

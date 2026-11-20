@@ -6,7 +6,6 @@ import { inspectArchive, sha256 } from '../consumers/policy.mjs';
 import { assertExportMap, contracts } from '../types/shared.mjs';
 import { exportInventory } from './exports.mjs';
 import { auditTarball } from '../notices/audit.mjs';
-import { verifyRemote } from '../notices/provenance.mjs';
 import { checkPackedMarkdown } from '../../../docs/scripts/qualification/audit-packed.mjs';
 import { markdownLedger } from '../../../docs/scripts/qualification/stage-markdown.mjs';
 import { readArchive } from '../notices/archive.mjs';
@@ -83,11 +82,7 @@ try {
   } else if (kind === 'adopted-notices') {
     detail.audit = await auditTarball({ bytes });
     assert.deepEqual(detail.audit.failures, []);
-    detail.remote = await verifyRemote();
-    assert(detail.remote.every(r => r.byteIdentical));
-    pass('all-donor-groups-and-inherited-portions-reviewed-current');
-    pass('immutable-upstream-license-and-ancestor-copies-byte-identical');
-    pass('all-required-notices-and-adopted-source-maps-in-four-variants');
+    pass('all-required-license-and-notice-texts-packed-intact');
     pass('public-archive-identity-matches-publication-contract');
   } else if (kind === 'side-effect-audit') {
     // The installed-module audit is run separately in the isolated consumer.

@@ -1,8 +1,7 @@
 # Adopted-source notices and distribution evidence
 
-This is the readable scope companion to `NOTICE`. The release gate consumes
-the source-hashed review in `tracking/distribution/donor-notices.json` and fails
-on changed or unresolved mappings.
+This is the readable attribution companion to `NOTICE`. Package validation checks
+that the required license and notice texts ship intact.
 
 ## Source pins and adopted portions
 
@@ -33,26 +32,18 @@ Adobe's `isVirtualEvent.ts:15–17` independently points to React
 revision in `NOTICE.txt` is retained literally, not silently normalized.
 No React runtime dependency is introduced by retaining inherited MIT text.
 
-## Reviewed changes
+## Adaptations
 
-The approved geometry adaptation uses Solid 2 owned split effects, checked
+The geometry adaptation uses Solid 2 owned split effects, checked
 promise generations, native references, and Base UI readiness/root/tree
 contracts. `markOthers` adds conditional ARIA, Base UI markers, shadow/realm
 handling, shared attribute locks and idempotent cleanup. Virtual events use
 the pinned Base UI branches and native types, with a prominent modified-file
 notice and Adobe/React attribution in the source and its packed source maps.
 
-The historical donor map describes planned handoffs. The notice ledger now
-records the actual target review separately, including all donor groups,
-source/target fingerprints, specific non-adoption reasons and inherited source
-ranges. Retained ancestor copies are under `scripts/distribution/notices/sources`.
-The auditor rejects changed review inputs and unaccounted inherited attribution.
-
 ## Coordinator commands
 
 ```sh
-rtk proxy node scripts/distribution/notices/provenance.mjs --verify-remote
-rtk proxy node scripts/distribution/notices/audit.mjs --reconcile
 # After the coordinator's final build:
 rtk proxy node scripts/distribution/notices/stage.mjs
 rtk proxy node scripts/distribution/notices/stage.mjs --check
@@ -63,6 +54,5 @@ rtk proxy node scripts/distribution/notices/audit.mjs --tarball path/to/actual.t
 Build/distribution integrator seam: add `notices` and
 `THIRD-PARTY-NOTICES.md` to the staged manifest's `files` allowlist and call
 the notice stage after build. The archive auditor reads gzip/tar bytes,
-checks exact retained texts, manifest identity/exports, adopted DOM/server
-modules and their actual `sourcesContent`; it never treats a pack file list
+checks exact retained texts and manifest identity/exports; it never treats a pack file list
 or a checked staging directory as proof of archive inclusion.

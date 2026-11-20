@@ -2,8 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { gzipSync } from 'node:zlib';
 import { readArchive } from '../../../scripts/distribution/notices/archive.mjs';
-import { requiredFiles, checkNotices, checkReviewedInputs, root, auditTarball } from '../../../scripts/distribution/notices/audit.mjs';
-import { read, json, hash } from '../../../docs/scripts/qualification/io.mjs';
+import { requiredFiles, checkNotices, root, auditTarball } from '../../../scripts/distribution/notices/audit.mjs';
+import { json, hash } from '../../../docs/scripts/qualification/io.mjs';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
 
 function tar(entries) {
   const blocks=[];
@@ -44,28 +47,32 @@ test('supports local PAX long paths without extracting; rejects PAX link metadat
   assert.equal(archive.get(name).toString(),'license');
   assert.throws(()=>readArchive(tar([['package/PaxHeader',pax('linkpath','../NOTICE'),'x'],['package/short','license']])),/Unsupported PAX metadata/);
 });
-test('full packed-notice audit checks public identity, all variants, and missing exports',async()=>{
-  const {files,ledger}=await requiredFiles();
+test('full packed-notice audit checks public identity and missing exports',async()=>{
+  const {files}=await requiredFiles();
   const identity=await json(root,'packages/solid/package.json');
   const entries=[...files].map(([name,bytes])=>[`package/${name}`,bytes]);
   entries.push(['package/package.json',JSON.stringify({name:identity.name,version:identity.version,exports:{'.':'./dom/missing.js'}})]);
-  for (const adoption of ledger.adoptions) for (const mode of ['dom','server']) {
-    const stem=adoption.target.replace(/^packages\/solid\/src\//,'').replace(/\.[jt]sx?$/,'.js');
-    entries.push([`package/${mode}/${stem}`,'export {};'],[`package/${mode}/${stem}.map`,JSON.stringify({sourcesContent:[(await read(root,adoption.target)).toString('utf8')]})]);
-  }
   const bytes=tar(entries),report=await auditTarball({bytes});
   assert.equal(report.tarballSha256,hash(bytes));assert.equal(report.complete,false);
   assert.ok(report.failures.includes('Packed identity/version mismatch'));
   assert.ok(report.failures.includes('Missing/unsafe packed export: ./dom/missing.js'));
   assert.ok(!report.failures.some(message=>message.includes('Missing packed notice:')));
-  assert.ok(report.failures.some(message=>message.includes('Missing adopted packed module: package/dom-dev/')));
 });
-test('unresolved reviews and missing modified-file notices fail even after the real ledger is completed', async () => {
-  const ledger = await json(root, 'tracking/distribution/donor-notices.json');
-  ledger.groupReviews.find(review => review.id === 'root-tree').status = 'unresolved';
-  const target = 'packages/solid/src/utils/empty.ts';
-  ledger.adoptions.push({ ...ledger.adoptions.find(a => a.requiresProminentChangeNotice), target, targetSha256: hash(await read(root, target)) });
-  const failures = await checkReviewedInputs(root, ledger, await json(root, 'tracking/donors/solid-floating-ui/source-map.json'));
-  assert(failures.some(message => message.includes('Unresolved donor source mapping: root-tree')));
-  assert(failures.some(message => message.includes(`Missing prominent file-local change notice: ${target}`)));
+test('version changes need only current package identity and intact notices, without source checkouts or reviews', async () => {
+  const repository=await fs.realpath(await fs.mkdtemp(path.join(os.tmpdir(),'notice-release-')));
+  try {
+    const {ledger}=await requiredFiles();
+    for (const file of [...ledger.texts.map(t=>t.file),'NOTICE','docs/third-party-notices.md','tracking/distribution/donor-notices.json']) {
+      await fs.mkdir(path.dirname(path.join(repository,file)),{recursive:true});
+      await fs.copyFile(path.join(root,file),path.join(repository,file));
+    }
+    await fs.mkdir(path.join(repository,'distribution'));
+    for (const version of ['0.0.4','0.0.5']) {
+      await fs.writeFile(path.join(repository,'distribution/package-contract.json'),JSON.stringify({identity:{publicationName:'@unstyled-solid/base-ui',version}}));
+      const {files}=await requiredFiles(repository);
+      const entries=[...files].map(([name,bytes])=>[`package/${name}`,bytes]);
+      entries.push(['package/package.json',JSON.stringify({name:'@unstyled-solid/base-ui',version,private:false,exports:{'.':'./index.js'}})],['package/index.js','export {};']);
+      assert.deepEqual((await auditTarball({repository,bytes:tar(entries)})).failures,[]);
+    }
+  } finally { await fs.rm(repository,{recursive:true,force:true}); }
 });

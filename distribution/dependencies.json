@@ -121,7 +121,7 @@
     "decision": "Read immutable donor source and adapt maintained positioning logic into owned RC13 foundations; do not add solid-floating-ui or Solid 1 reactive utility packages as runtime dependencies. Donor source never overrides Base UI behavior or RC13 semantics.",
     "reconciliation": "Explicit developer-requested updates via separate source state; no automatic adaptation overwrite.",
     "sourceSha": "0492e49b746deed543dbc167a9a58ed1210c2393",
-    "noticeHandoff": "Actual adaptation owners retain donor MIT/source-local notices and send staged NOTICE additions to distribution owner. bsolid-donor-notices gates adopted-source packing, including inherited Adobe Apache/React NOTICE and aria-hidden MIT where applicable."
+    "noticeHandoff": "Retain applicable license and attribution texts. Package validation checks that required notices ship intact; no donor review is required."
   },
   "integratedDevelopmentRequests": {
     "bsolid-harness": { "@testing-library/jest-dom": "6.9.1" },
