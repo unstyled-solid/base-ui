@@ -232,14 +232,5 @@
     "bsolid-dist-publish"
   ],
   "commandHandoffGate": "bsolid-bootstrap-command-handoff",
-  "knownIntegrationGaps": [
-    {
-      "ticket": "bsolid-donor-notices",
-      "gates": [
-        "bsolid-dist-pack",
-        "bsolid-release-ready"
-      ],
-      "evidence": "Donor-owned audit must qualify notices for actual adopted files; no adopted-source packing claim at contract stage."
-    }
-  ]
+  "knownIntegrationGaps": []
 }

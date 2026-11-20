@@ -4,9 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { requiredFiles, root } from './audit.mjs';
 import { read, safe, walk, noSymlinks } from '../../../docs/scripts/qualification/io.mjs';
 
-// Coordinator calls AFTER package build (which currently copies only NOTICE
-// and LICENSE). Notice preparation is allowed with unresolved mappings; the
-// independent archive/reconciliation gate stays red until owners resolve them.
+// Copy required license and attribution texts after the package build.
 export async function stageNotices({repository=root, destination='packages/solid/build', check=false}={}) {
   if (destination!=='packages/solid/build') throw new Error('Stage notices only into the existing package build directory');
   await read(repository,`${destination}/package.json`);

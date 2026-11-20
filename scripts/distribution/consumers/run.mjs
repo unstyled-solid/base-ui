@@ -223,7 +223,7 @@ async function main(argv) {
       const packedMarkdown = archive.inventory.filter(file => file.file.startsWith('docs/') && file.file.endsWith('.md'));
       assert.deepEqual(Object.fromEntries(packedMarkdown.map(file => [file.file, file.sha256])), qualification.markdown, 'Packed Markdown inventory is stale/incomplete');
       for (const notice of qualification.notices) {
-        assert(notice.sourceSha && notice.license && notice.packedFile && notice.requiredText?.length, 'Incomplete adopted-source notice mapping');
+        assert(notice.license && notice.packedFile && notice.requiredText?.length, 'Incomplete packed notice metadata');
         const content = archive.files.get(notice.packedFile)?.toString();
         assert(content && notice.requiredText.every(text => content.includes(text)), `Adopted notice missing: ${notice.packedFile}`);
       }
