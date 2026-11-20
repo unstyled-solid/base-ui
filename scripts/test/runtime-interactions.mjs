@@ -8,11 +8,11 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const args = process.argv.slice(2);
 if (args.some(arg => arg !== '--full-unit')) throw new Error('Usage: runtime-interactions.mjs [--full-unit]');
 const fullUnit = args.includes('--full-unit');
-const evidence = process.env.BASEUI_RUNTIME_GATE_OUTPUT ?? path.join(root, 'docs/generated/browser/runtime-gate');
+const evidence = process.env.BASEUI_RUNTIME_GATE_OUTPUT ?? path.join(root, '.artifacts/interactions');
 await fs.mkdir(evidence, { recursive: true });
 const results = [];
 async function run(name, args, env = {}) {
-  const child = spawn('rtk', args, { cwd: root, env: { ...process.env, ...env }, stdio: ['ignore', 'pipe', 'pipe'] });
+  const child = spawn('rtk', args, { cwd: root, env: { ...process.env, BASEUI_CLICK_DIAGNOSTICS_OUTPUT: path.join(evidence, 'click-diagnostics.json'), ...env }, stdio: ['ignore', 'pipe', 'pipe'] });
   let output = '';
   child.stdout.on('data', chunk => { output += chunk; });
   child.stderr.on('data', chunk => { output += chunk; });
@@ -86,8 +86,12 @@ try {
   results.push({ name: 'interactions', passed: false, error: String(error) });
 } finally {
   if (server) {
-    process.kill(-server.pid, 'SIGTERM');
-    await new Promise(resolve => server.once('close', resolve));
+    if (server.exitCode === null && server.signalCode === null) {
+      const closed = new Promise(resolve => server.once('close', resolve));
+      try { process.kill(-server.pid, 'SIGTERM'); }
+      catch (error) { if (error.code !== 'ESRCH') throw error; }
+      await closed;
+    }
     await fs.writeFile(path.join(evidence, 'server.log'), serverOutput);
   }
 }

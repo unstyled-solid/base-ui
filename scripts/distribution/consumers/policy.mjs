@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import path from 'node:path';
+import os from 'node:os';
 import { createHash } from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
 
-export const temporaryRoot = '/var/folders/k1/dqkw16gn09q6492v5jn1x_jc0000gn/T/opencode';
+export const temporaryRoot = path.resolve(process.env.BASEUI_VERIFY_TEMP ?? process.env.RUNNER_TEMP ?? path.join(os.tmpdir(), 'opencode'));
 export const pins = Object.freeze({
   'solid-js': '2.0.3', '@solidjs/web': '2.0.3',
   '@solidjs/signals': '2.0.3', '@solidjs/compiler': '2.0.2',

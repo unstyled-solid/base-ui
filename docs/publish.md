@@ -1,4 +1,7 @@
-# Publish @unstyled-solid/base-ui 0.0.1
+# Historical 0.0.1 publication notes
+
+For current commands, use the [maintainer guide](maintaining.md). The records
+below describe the historical 0.0.1 episode, not the supported release procedure.
 
 ## Latest: distribution fixes verified
 

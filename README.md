@@ -48,6 +48,8 @@ For maintenance, see the [upstream update workflow](docs/upstream-workflow.md) a
 
 See [GitHub releases](https://github.com/unstyled-solid/base-ui/releases) for updates and [npm](https://www.npmjs.com/package/@unstyled-solid/base-ui) for published versions.
 
+Contributor checks and release commands: [Maintainer guide](docs/maintaining.md).
+
 ## Community
 
 For questions, feedback, and bug reports, visit [GitHub Discussions](https://github.com/unstyled-solid/base-ui/discussions) or [open an issue](https://github.com/unstyled-solid/base-ui/issues).

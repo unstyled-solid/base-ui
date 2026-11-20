@@ -1,11 +1,8 @@
 # Archive-bound qualification
 
-Generate API Markdown **after** the package build's public-identity declaration
-rewrite, then build the docs site and stage Markdown. Run the existing runtime
-builder with `BASE_UI_PUBLISH_DOCS=true node scripts/distribution/build/index.mjs`
-to restage those docs without regenerating workspace-identity declarations;
-stage notices after that runtime build. Pack into a new evidence directory.
-Run:
+Use **`pnpm verify`** for the supported complete path; generation, packing and
+receipt paths are automatic. See the [maintainer guide](../../../docs/maintaining.md).
+The commands below are low-level diagnostics for an existing candidate:
 
 ```sh
 rtk proxy node scripts/distribution/qualification/run.mjs \
