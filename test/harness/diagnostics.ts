@@ -1,10 +1,55 @@
 import { DEV, OBSERVE, isDisposed } from 'solid-js';
 import type { DiagnosticCode, DiagnosticEvent, Owner } from 'solid-js';
 import { afterEach, beforeEach, expect, vi } from 'vitest';
+import { attribution } from 'solid-js/attribution';
 
 type Message = { level: 'warn' | 'error'; text: string; approved: boolean };
 let messages: Message[] = [];
 let findings: { event: DiagnosticEvent; approved: boolean }[] = [];
+
+/** Explicit structural-performance lane for a fixed workload on shared CI.
+ * Only HOT_SCOPE_TIME becomes report-only, and only after all count budgets pass.
+ * Runtime thresholds/output and every other diagnostic remain unchanged.
+ */
+export async function withAttributionBudget(
+  budget: { reason: string; maxCreates: number; maxReruns: number; maxRerunsPerScope: number },
+  run: () => Promise<void> | void,
+) {
+  if (!OBSERVE) throw new Error('Attribution budgets require the development runtime');
+  if (!budget.reason.trim() || [budget.maxCreates, budget.maxReruns, budget.maxRerunsPerScope]
+    .some(value => !Number.isInteger(value) || value < 0)) throw new Error('Invalid attribution budget');
+  const start = messages.length, diagnosticStart = findings.length;
+  const counts = new Map<number, number>();
+  let creates = 0, reruns = 0;
+  const release = attribution.enable({ log: false });
+  const stopCreate = OBSERVE.records.subscribe('create', () => { creates++; });
+  const stopRun = OBSERVE.records.subscribe('rerun', event => {
+    reruns++;
+    counts.set(event.nodeId, (counts.get(event.nodeId) ?? 0) + 1);
+  });
+  try {
+    await run();
+    const maxRerunsPerScope = Math.max(0, ...counts.values());
+    const measured = { creates, reruns, maxRerunsPerScope };
+    // Check graph work, not elapsed time. Excessive construction or reruns still
+    // fail; expensive individual computations remain visible in timing reports.
+    expect(creates, 'ATTRIBUTION_CREATE_BUDGET').toBeLessThanOrEqual(budget.maxCreates);
+    expect(reruns, 'ATTRIBUTION_RERUN_BUDGET').toBeLessThanOrEqual(budget.maxReruns);
+    expect(maxRerunsPerScope, 'ATTRIBUTION_SCOPE_BUDGET').toBeLessThanOrEqual(budget.maxRerunsPerScope);
+    const timings = findings.slice(diagnosticStart).filter(({ event }) => event.code === 'HOT_SCOPE_TIME');
+    for (const entry of timings) {
+      entry.approved = true;
+      // Approve only output paired with a captured structured event, never a
+      // regex-wide warning exemption or a diagnostic from outside this scope.
+      messages.slice(start).filter(message => message.text === entry.event.message ||
+        message.text.startsWith(`${entry.event.message}\n`)).forEach(message => { message.approved = true; });
+    }
+    if (timings.length) console.info('[HARNESS_ATTRIBUTION_TIMING]', JSON.stringify({
+      reason: budget.reason, measured, timings: timings.map(({ event }) => event),
+    }));
+    return { ...measured, timings: timings.map(({ event }) => event) };
+  } finally { stopRun(); stopCreate(); release(); }
+}
 
 /** A local, exact-count expectation; never a suite-wide warning allowlist. */
 export async function expectDiagnostic(

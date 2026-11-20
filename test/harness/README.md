@@ -153,3 +153,23 @@ cases in the family ledger; an executed harness fixture does not establish famil
 parity. Browser setup supplies `resetBrowserPointer` a real `unhover` driver.
 Temporal adapter semantic suites belong to the temporal lane rather than this
 framework runner; their source index entry is retained in the mapping ledger.
+# Count-budgeted attribution workloads
+
+`withAttributionBudget` is an explicit opt-in for fixed structural-regression
+workloads on shared CI, currently the Tabs selection/history/panel-ID test.
+Solid 2.0.3's `HOT_SCOPE_TIME` measures elapsed wall time, including scheduler/GC
+pauses, rather than CPU time. Identical PR/main trees have crossed its unchanged
+8ms threshold differently.
+
+Inside this helper only, `HOT_SCOPE_TIME` is report-only **after** creation,
+total-rerun and per-node-rerun budgets pass. Original warnings remain printed;
+`HARNESS_ATTRIBUTION_TIMING` additionally records full structured findings and
+measured counts. No runtime threshold changes. Every other diagnostic (including
+feedback cycles, relays, excessive reruns and unstable outputs), owner/timer leaks,
+and all unscoped timing warnings remain fatal. This is structural qualification,
+not an assertion that a workload meets an elapsed-time performance budget.
+
+Each adoption requires a fixed workload, measured baseline and reason; this is not
+a suite-wide allowlist. `AttributionBudget.test.tsx` verifies real runtime timing
+reporting and all three count failures. The negative runner verifies feedback
+cycles inside the helper and timing warnings outside it still fail.

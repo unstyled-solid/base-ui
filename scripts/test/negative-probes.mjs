@@ -10,6 +10,7 @@ for (const [probe, marker] of [
   ['reactivity', 'HARNESS_REACTIVITY_PROBE'], ['cleanup', 'HARNESS_CLEANUP_FAILURE'],
   ['owner', 'HARNESS_OWNER_LEAK'], ['diagnostic', 'HARNESS_DIAGNOSTICS'], ['conditions', 'HARNESS_SERVER_CONDITIONS'],
   ['hydration', 'HARNESS_DIAGNOSTICS'],
+  ['attribution-cycle', 'EFFECT_WRITES_OWN_SOURCE'], ['attribution-time', 'HOT_SCOPE_TIME'],
   ['identity', 'HARNESS_IDENTITY_PROBE'], ['event-order', 'HARNESS_EVENT_ORDER_PROBE'],
 ]) {
   const result = spawnSync(process.execPath, [vitest, 'run', '--config', 'vitest.config.ts'], {
