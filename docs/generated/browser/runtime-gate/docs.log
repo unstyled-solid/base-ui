@@ -1,2 +1,0 @@
-$ tsc --noEmit -p docs/tsconfig.demos.json && node docs/scripts/site/check.mjs --dist
-PASS: 86 static routes, metadata, anchors, local links and deployment base, Vite artifacts

@@ -8,6 +8,9 @@ test-results/
 test/harness/__screenshots__/
 packages/*/build/
 docs/dist/
+docs/generated/
+docs/public/
+.artifacts/
 # Documentation build output, including DOCS_OUTPUT variants.
 docs/**/dist/
 *.tsbuildinfo

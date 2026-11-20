@@ -17,7 +17,7 @@ const manifest = JSON.parse(archive.files.get('package.json'));
 const { exports: contract } = await contracts();
 const qualification = { schemaVersion: 1, archiveSha256: archive.sha256, obligations: {}, markdown: Object.fromEntries(archive.inventory.filter(f => f.file.startsWith('docs/') && f.file.endsWith('.md')).map(f => [f.file, f.sha256])), notices: [] };
 const records = [];
-const owner = 'bsolid-qaiu';
+const owner = 'archive-qualification';
 async function execute(cwd, name, executable, argv, options = {}) {
   const result = await command(cwd, path.join(output, 'logs'), name, executable, argv, { ...options, allowFailure: true });
   records.push(result);

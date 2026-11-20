@@ -5,7 +5,7 @@ import path from 'node:path';
 import { root } from './paths.mjs';
 
 const origin = process.env.DOCS_TEST_URL ?? 'http://127.0.0.1:5173';
-const output = process.env.BASEUI_CLICK_DIAGNOSTICS_OUTPUT ?? path.join(root, 'docs/generated/browser/click-diagnostics.json');
+const output = process.env.BASEUI_CLICK_DIAGNOSTICS_OUTPUT ?? path.join(root, '.artifacts/interactions/click-diagnostics.json');
 const selected = process.env.DOCS_TEST_FAMILIES?.split(',');
 const styles = process.env.DOCS_TEST_STYLES?.split(',') ?? ['css-modules', 'tailwind'];
 const results = [];
