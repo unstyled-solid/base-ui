@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest';
 import { createEffect, OBSERVE } from 'solid-js';
-import { attribution } from 'solid-js/attribution';
+import { withAttributionBudget } from '../../../../../test/harness/diagnostics';
 import { createRenderer, waitFor } from '../../../test';
 import { Tabs } from '../test/TabsFixture';
 import { useTabsRootContext } from './TabsRootContext';
@@ -8,7 +8,12 @@ import { useTabsRootContext } from './TabsRootContext';
 // Source: TabsRoot's first-render direction + mounted-panel ARIA cases, and
 // TabsPanel's [hidden, keepMounted, value, id] registration @19511bb.
 it.each([false, true])('selection, history and panel IDs derive together under attribution (keepMounted=%s)', async (keepMounted) => {
-  const release = attribution.enable({ log: false });
+  // Six selections, three tabs/panels, including setup/disposal. Baselines on
+  // Solid 2.0.3: 293/261 creates, 680/532 reruns, max 20 runs per scope.
+  // Modest count headroom permits normal animation/registration ordering;
+  // elapsed-time warnings remain visible without depending on CI scheduling.
+  await withAttributionBudget({ reason: 'Tabs selection/history/panel-ID structural regression',
+    maxCreates: keepMounted ? 290 : 330, maxReruns: keepMounted ? 650 : 800, maxRerunsPerScope: 24 }, async () => {
   const diagnostics: string[] = [];
   const unsubscribe = OBSERVE!.diagnostics.subscribe((event) => {
     if (event.code === 'EFFECT_RELAY_TEAR' || event.code === 'EFFECT_WRITES_OWN_SOURCE') diagnostics.push(event.message);
@@ -50,5 +55,6 @@ it.each([false, true])('selection, history and panel IDs derive together under a
       }
       expect(diagnostics).toEqual([]);
     } finally { view.unmount(); }
-  } finally { unsubscribe(); release(); }
+  } finally { unsubscribe(); }
+  });
 });
